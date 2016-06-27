@@ -1,0 +1,70 @@
+items:
+  - uid: MetricOperations~MetricOperations
+    id: MetricOperations
+    parent: MetricOperations
+    name: MetricOperations
+    type: Class
+    syntax:
+      content: MetricOperations
+    fullName: MetricOperations.MetricOperations
+    children:
+      - 'MetricOperations~MetricOperations#client'
+      - 'MetricOperations~MetricOperations#getMetrics'
+  - uid: 'MetricOperations~MetricOperations#client'
+    id: client
+    parent: MetricOperations~MetricOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: MetricOperations~MetricOperations.client
+  - uid: 'MetricOperations~MetricOperations#getMetrics'
+    id: getMetrics
+    parent: MetricOperations~MetricOperations
+    name: 'getMetrics(resourceUri, filterString, callback)'
+    summary: "The List Metric operation lists the metric value sets for the resource\rmetrics."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceUri
+          type: string
+          description: "The resource identifier of the target resource\rto get metrics for."
+        - id: filterString
+          type: string
+          description: "An OData $filter expression that supports\rquerying by the name, startTime, endTime and timeGrain of the metric\rvalue sets. For example, \"(name.value eq 'Percentage CPU') and startTime\req 2014-07-02T01:00Z and endTime eq 2014-08-21T01:00:00Z and timeGrain eq\rduration'PT1H'\". In the expression, startTime, endTime and timeGrain are\rrequired. Name is optional."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getMetrics(resourceUri, filterString, callback);'
+    fullName: >-
+      MetricOperations~MetricOperations.getMetrics(resourceUri, filterString,
+      callback)
+    children:
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~queryParameters'
+      - 'MetricOperations~MetricOperations#getMetrics~odataFilter'
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~baseUrl'
+      - 'MetricOperations~MetricOperations#getMetrics~baseUrl'
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~url2'
+      - 'MetricOperations~MetricOperations#getMetrics~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

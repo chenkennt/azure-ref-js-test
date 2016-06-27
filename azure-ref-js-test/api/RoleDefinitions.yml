@@ -1,0 +1,349 @@
+items:
+  - uid: RoleDefinitions
+    id: RoleDefinitions
+    name: RoleDefinitions
+    type: Class
+    syntax:
+      content: RoleDefinitions
+    fullName: RoleDefinitions
+    children:
+      - 'RoleDefinitions#client'
+      - 'RoleDefinitions#deleteMethod'
+      - 'RoleDefinitions#get'
+      - 'RoleDefinitions#createOrUpdate'
+      - 'RoleDefinitions#getById'
+      - 'RoleDefinitions#list'
+      - 'RoleDefinitions#listNext'
+  - uid: 'RoleDefinitions#client'
+    id: client
+    parent: RoleDefinitions
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: RoleDefinitions.client
+  - uid: 'RoleDefinitions#deleteMethod'
+    id: deleteMethod
+    parent: RoleDefinitions
+    name: >-
+      deleteMethod(scope, roleDefinitionId, options, options.customHeaders,
+      callback)
+    summary: Deletes the role definition.
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope
+        - id: roleDefinitionId
+          type: string
+          description: Role definition id.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleDefinition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(scope, roleDefinitionId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleDefinitions.deleteMethod(scope, roleDefinitionId, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleDefinitions#deleteMethod~client'
+      - 'RoleDefinitions#deleteMethod~callback'
+      - 'RoleDefinitions#deleteMethod~options'
+      - 'RoleDefinitions#deleteMethod~requestUrl'
+      - 'RoleDefinitions#deleteMethod~requestUrl'
+      - 'RoleDefinitions#deleteMethod~requestUrl'
+      - 'RoleDefinitions#deleteMethod~queryParameters'
+      - 'RoleDefinitions#deleteMethod~requestUrl'
+      - 'RoleDefinitions#deleteMethod~regex'
+      - 'RoleDefinitions#deleteMethod~requestUrl'
+      - 'RoleDefinitions#deleteMethod~httpRequest'
+      - 'RoleDefinitions#deleteMethod~headerName'
+  - uid: 'RoleDefinitions#get'
+    id: get
+    parent: RoleDefinitions
+    name: 'get(scope, roleDefinitionId, options, options.customHeaders, callback)'
+    summary: Get role definition by name (GUID).
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope
+        - id: roleDefinitionId
+          type: string
+          description: Role definition Id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleDefinition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(scope, roleDefinitionId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleDefinitions.get(scope, roleDefinitionId, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleDefinitions#get~client'
+      - 'RoleDefinitions#get~callback'
+      - 'RoleDefinitions#get~options'
+      - 'RoleDefinitions#get~requestUrl'
+      - 'RoleDefinitions#get~requestUrl'
+      - 'RoleDefinitions#get~requestUrl'
+      - 'RoleDefinitions#get~queryParameters'
+      - 'RoleDefinitions#get~requestUrl'
+      - 'RoleDefinitions#get~regex'
+      - 'RoleDefinitions#get~requestUrl'
+      - 'RoleDefinitions#get~httpRequest'
+      - 'RoleDefinitions#get~headerName'
+  - uid: 'RoleDefinitions#createOrUpdate'
+    id: createOrUpdate
+    parent: RoleDefinitions
+    name: >-
+      createOrUpdate(scope, roleDefinitionId, roleDefinition, roleDefinition.id,
+      roleDefinition.name, roleDefinition.type, roleDefinition.properties,
+      roleDefinition.properties.roleName, roleDefinition.properties.description,
+      roleDefinition.properties.type, roleDefinition.properties.permissions,
+      roleDefinition.properties.assignableScopes, options,
+      options.customHeaders, callback)
+    summary: Creates or updates a role definition.
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope
+        - id: roleDefinitionId
+          type: string
+          description: Role definition id.
+        - id: roleDefinition
+          type: object
+          description: Role definition.
+        - id: roleDefinition.id
+          type: string
+          description: Gets or sets role definition id.
+        - id: roleDefinition.name
+          type: string
+          description: Gets or sets role definition name.
+        - id: roleDefinition.type
+          type: string
+          description: Gets or sets role definition type.
+        - id: roleDefinition.properties
+          type: object
+          description: "Gets or sets role definition\rproperties."
+        - id: roleDefinition.properties.roleName
+          type: string
+          description: Gets or sets role name.
+        - id: roleDefinition.properties.description
+          type: string
+          description: "Gets or sets role\rdefinition description."
+        - id: roleDefinition.properties.type
+          type: string
+          description: Gets or sets role type.
+        - id: roleDefinition.properties.permissions
+          type: array
+          description: "Gets or sets role\rdefinition permissions."
+        - id: roleDefinition.properties.assignableScopes
+          type: array
+          description: "Gets or sets\rrole definition assignable scopes."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleDefinition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(scope, roleDefinitionId, roleDefinition,
+        roleDefinition.id, roleDefinition.name, roleDefinition.type,
+        roleDefinition.properties, roleDefinition.properties.roleName,
+        roleDefinition.properties.description, roleDefinition.properties.type,
+        roleDefinition.properties.permissions,
+        roleDefinition.properties.assignableScopes, options,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleDefinitions.createOrUpdate(scope, roleDefinitionId, roleDefinition,
+      roleDefinition.id, roleDefinition.name, roleDefinition.type,
+      roleDefinition.properties, roleDefinition.properties.roleName,
+      roleDefinition.properties.description, roleDefinition.properties.type,
+      roleDefinition.properties.permissions,
+      roleDefinition.properties.assignableScopes, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleDefinitions#createOrUpdate~client'
+      - 'RoleDefinitions#createOrUpdate~callback'
+      - 'RoleDefinitions#createOrUpdate~options'
+      - 'RoleDefinitions#createOrUpdate~requestUrl'
+      - 'RoleDefinitions#createOrUpdate~requestUrl'
+      - 'RoleDefinitions#createOrUpdate~requestUrl'
+      - 'RoleDefinitions#createOrUpdate~queryParameters'
+      - 'RoleDefinitions#createOrUpdate~requestUrl'
+      - 'RoleDefinitions#createOrUpdate~regex'
+      - 'RoleDefinitions#createOrUpdate~requestUrl'
+      - 'RoleDefinitions#createOrUpdate~httpRequest'
+      - 'RoleDefinitions#createOrUpdate~headerName'
+      - 'RoleDefinitions#createOrUpdate~requestContent'
+      - 'RoleDefinitions#createOrUpdate~requestModel'
+      - 'RoleDefinitions#createOrUpdate~requestModelMapper'
+      - 'RoleDefinitions#createOrUpdate~requestModel'
+      - 'RoleDefinitions#createOrUpdate~requestContent'
+      - 'RoleDefinitions#createOrUpdate~serializationError'
+  - uid: 'RoleDefinitions#getById'
+    id: getById
+    parent: RoleDefinitions
+    name: 'getById(roleDefinitionId, options, options.customHeaders, callback)'
+    summary: Get role definition by name (GUID).
+    type: Method
+    syntax:
+      parameters:
+        - id: roleDefinitionId
+          type: string
+          description: Fully qualified role definition Id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleDefinition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getById(roleDefinitionId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleDefinitions.getById(roleDefinitionId, options, options.customHeaders,
+      callback)
+    children:
+      - 'RoleDefinitions#getById~client'
+      - 'RoleDefinitions#getById~callback'
+      - 'RoleDefinitions#getById~options'
+      - 'RoleDefinitions#getById~requestUrl'
+      - 'RoleDefinitions#getById~requestUrl'
+      - 'RoleDefinitions#getById~queryParameters'
+      - 'RoleDefinitions#getById~requestUrl'
+      - 'RoleDefinitions#getById~regex'
+      - 'RoleDefinitions#getById~requestUrl'
+      - 'RoleDefinitions#getById~httpRequest'
+      - 'RoleDefinitions#getById~headerName'
+  - uid: 'RoleDefinitions#list'
+    id: list
+    parent: RoleDefinitions
+    name: 'list(scope, options, options.filter, options.customHeaders, callback)'
+    summary: "Get all role definitions that are applicable at scope and above. Use\ratScopeAndBelow filter to search below the given scope as well"
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleDefinitionListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(scope, options, options.filter, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleDefinitions.list(scope, options, options.filter,
+      options.customHeaders, callback)
+    children:
+      - 'RoleDefinitions#list~client'
+      - 'RoleDefinitions#list~callback'
+      - 'RoleDefinitions#list~options'
+      - 'RoleDefinitions#list~filter'
+      - 'RoleDefinitions#list~requestUrl'
+      - 'RoleDefinitions#list~requestUrl'
+      - 'RoleDefinitions#list~queryParameters'
+      - 'RoleDefinitions#list~requestUrl'
+      - 'RoleDefinitions#list~regex'
+      - 'RoleDefinitions#list~requestUrl'
+      - 'RoleDefinitions#list~httpRequest'
+      - 'RoleDefinitions#list~headerName'
+  - uid: 'RoleDefinitions#listNext'
+    id: listNext
+    parent: RoleDefinitions
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "Get all role definitions that are applicable at scope and above. Use\ratScopeAndBelow filter to search below the given scope as well"
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleDefinitionListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleDefinitions.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'RoleDefinitions#listNext~client'
+      - 'RoleDefinitions#listNext~callback'
+      - 'RoleDefinitions#listNext~options'
+      - 'RoleDefinitions#listNext~requestUrl'
+      - 'RoleDefinitions#listNext~requestUrl'
+      - 'RoleDefinitions#listNext~regex'
+      - 'RoleDefinitions#listNext~requestUrl'
+      - 'RoleDefinitions#listNext~httpRequest'
+      - 'RoleDefinitions#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

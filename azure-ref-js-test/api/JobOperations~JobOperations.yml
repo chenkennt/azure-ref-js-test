@@ -1,0 +1,1217 @@
+items:
+  - uid: JobOperations~JobOperations
+    id: JobOperations
+    parent: JobOperations
+    name: JobOperations
+    type: Class
+    syntax:
+      content: JobOperations
+    fullName: JobOperations.JobOperations
+    children:
+      - 'JobOperations~JobOperations#client'
+      - 'JobOperations~JobOperations#create'
+      - 'JobOperations~JobOperations#createOrUpdate'
+      - 'JobOperations~JobOperations#deleteMethod'
+      - 'JobOperations~JobOperations#get'
+      - 'JobOperations~JobOperations#getHistory'
+      - 'JobOperations~JobOperations#getHistoryWithFilter'
+      - 'JobOperations~JobOperations#list'
+      - 'JobOperations~JobOperations#listWithFilter'
+      - 'JobOperations~JobOperations#updateJobCollectionState'
+      - 'JobOperations~JobOperations#updateState'
+  - uid: 'JobOperations~JobOperations#client'
+    id: client
+    parent: JobOperations~JobOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: JobOperations~JobOperations.client
+  - uid: 'JobOperations~JobOperations#create'
+    id: create
+    parent: JobOperations~JobOperations
+    name: >-
+      create(parameters, parameters.startTime, parameters.action,
+      parameters.action.type, parameters.action.retryPolicy,
+      parameters.action.retryPolicy.retryType,
+      parameters.action.retryPolicy.retryInterval,
+      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
+      parameters.action.errorAction.type, parameters.action.errorAction.request,
+      parameters.action.errorAction.request.uri,
+      parameters.action.errorAction.request.method,
+      parameters.action.errorAction.request.headers,
+      parameters.action.errorAction.request.body,
+      parameters.action.errorAction.request.authentication,
+      parameters.action.errorAction.request.authentication.type,
+      parameters.action.errorAction.queueMessage,
+      parameters.action.errorAction.queueMessage.storageAccountName,
+      parameters.action.errorAction.queueMessage.queueName,
+      parameters.action.errorAction.queueMessage.sasToken,
+      parameters.action.errorAction.queueMessage.message,
+      parameters.action.request, parameters.action.request.uri,
+      parameters.action.request.method, parameters.action.request.headers,
+      parameters.action.request.body, parameters.action.request.authentication,
+      parameters.action.request.authentication.type,
+      parameters.action.queueMessage,
+      parameters.action.queueMessage.storageAccountName,
+      parameters.action.queueMessage.queueName,
+      parameters.action.queueMessage.sasToken,
+      parameters.action.queueMessage.message, parameters.recurrence,
+      parameters.recurrence.frequency, parameters.recurrence.interval,
+      parameters.recurrence.count, parameters.recurrence.endTime,
+      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
+      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
+      parameters.recurrence.schedule.months,
+      parameters.recurrence.schedule.monthDays,
+      parameters.recurrence.schedule.monthlyOccurrences, callback)
+    summary: "Creates a new Job, allowing the service to generate a job id. Use\rCreateOrUpdate if a user-chosen job id is required."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: JobCreateParameters
+          description: "Parameters specifying the job\rdefinition for a Create Job operation."
+        - id: parameters.startTime
+          type: date
+          description: "Start time for the job.  Defined as\rISO-8601."
+        - id: parameters.action
+          type: JobAction
+          description: Action to invoke for the job.
+        - id: parameters.action.type
+          type: JobActionType
+          description: "Type of action. Can be one\rof http, https, storageQueue."
+        - id: parameters.action.retryPolicy
+          type: RetryPolicy
+          description: "Retry Policy for the\rjob action."
+        - id: parameters.action.retryPolicy.retryType
+          type: RetryType
+          description: "The Retry\rType of the Retry Policy. Can be either 'fixed' or 'none'."
+        - id: parameters.action.retryPolicy.retryInterval
+          type: TimeSpan
+          description: "The\rinterval between retries."
+        - id: parameters.action.retryPolicy.retryCount
+          type: number
+          description: "Number of times\ra retry should be attempted."
+        - id: parameters.action.errorAction
+          type: JobErrorAction
+          description: "Error Action for\rthe job."
+        - id: parameters.action.errorAction.type
+          type: JobActionType
+          description: "Type of\raction. Can be one of http, https, storageQueue."
+        - id: parameters.action.errorAction.request
+          type: JobHttpRequest
+          description: "Request\rfor a http or https action type."
+        - id: parameters.action.errorAction.request.uri
+          type: string
+          description: "Gets or sets\rUri of the endpoint to invoke."
+        - id: parameters.action.errorAction.request.method
+          type: string
+          description: "Gets or\rsets Http method e.g. GET, PUT, POST, DELETE."
+        - id: parameters.action.errorAction.request.headers
+          type: object
+          description: "Gets or\rsets Header name value pairs to supply with the http/https action."
+        - id: parameters.action.errorAction.request.body
+          type: string
+          description: "Gets or sets\rthe request body."
+        - id: parameters.action.errorAction.request.authentication
+          type: HttpAuthentication
+          description: "Gets or sets the\rrequest authentication."
+        - id: parameters.action.errorAction.request.authentication.type
+          type: HttpAuthenticationType
+          description: "Specifies the\rauthentication type"
+        - id: parameters.action.errorAction.queueMessage
+          type: JobQueueMessage
+          description: Queue and content for a queue message action type.
+        - id: parameters.action.errorAction.queueMessage.storageAccountName
+          type: string
+          description: "Name of\rthe storage account for the queue."
+        - id: parameters.action.errorAction.queueMessage.queueName
+          type: string
+          description: Name of the queue to send to.
+        - id: parameters.action.errorAction.queueMessage.sasToken
+          type: string
+          description: "SAS\rkey for the storage account to send message to the queue."
+        - id: parameters.action.errorAction.queueMessage.message
+          type: string
+          description: Content of the message to send to the queue.
+        - id: parameters.action.request
+          type: JobHttpRequest
+          description: "Request for a http or\rhttps action type."
+        - id: parameters.action.request.uri
+          type: string
+          description: "Gets or sets Uri of the\rendpoint to invoke."
+        - id: parameters.action.request.method
+          type: string
+          description: "Gets or sets Http\rmethod e.g. GET, PUT, POST, DELETE."
+        - id: parameters.action.request.headers
+          type: object
+          description: "Gets or sets Header\rname value pairs to supply with the http/https action."
+        - id: parameters.action.request.body
+          type: string
+          description: "Gets or sets the request\rbody."
+        - id: parameters.action.request.authentication
+          type: HttpAuthentication
+          description: Gets or sets the request authentication.
+        - id: parameters.action.request.authentication.type
+          type: HttpAuthenticationType
+          description: "Specifies the\rauthentication type"
+        - id: parameters.action.queueMessage
+          type: JobQueueMessage
+          description: "Queue and\rcontent for a queue message action type."
+        - id: parameters.action.queueMessage.storageAccountName
+          type: string
+          description: "Name\rof the storage account for the queue."
+        - id: parameters.action.queueMessage.queueName
+          type: string
+          description: "Name of the\rqueue to send to."
+        - id: parameters.action.queueMessage.sasToken
+          type: string
+          description: "SAS key for the\rstorage account to send message to the queue."
+        - id: parameters.action.queueMessage.message
+          type: string
+          description: "Content of the\rmessage to send to the queue."
+        - id: parameters.recurrence
+          type: JobRecurrence
+          description: "Recurrence schedule for the\rjob."
+        - id: parameters.recurrence.frequency
+          type: JobRecurrenceFrequency
+          description: "The\rfrequency of recurrence."
+        - id: parameters.recurrence.interval
+          type: number
+          description: "Interval of the\rrecurrence at the given frequency."
+        - id: parameters.recurrence.count
+          type: number
+          description: "Count of occurrences that\rwill execute. Optional. Default will recur infinitely"
+        - id: parameters.recurrence.endTime
+          type: date
+          description: "Time in ISO-8601 format\rafter which no more occurrences will execute."
+        - id: parameters.recurrence.schedule
+          type: JobRecurrenceSchedule
+          description: "Recurrence\rschedule for the job."
+        - id: parameters.recurrence.schedule.minutes
+          type: array
+          description: "Minutes of the\rhour that the job should execute at."
+        - id: parameters.recurrence.schedule.hours
+          type: array
+          description: "Hours of the day\rthat the job should execute at."
+        - id: parameters.recurrence.schedule.days
+          type: array
+          description: "Days of the week that\rthe job should execute on."
+        - id: parameters.recurrence.schedule.months
+          type: array
+          description: "Months that the job\rshould execute in.  Must be between 1 and 12."
+        - id: parameters.recurrence.schedule.monthDays
+          type: array
+          description: "Days of the\rmonth that the job should execute on.  Must be between 1 and 31."
+        - id: parameters.recurrence.schedule.monthlyOccurrences
+          type: array
+          description: Occurrences of days within a month.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.startTime, parameters.action,
+        parameters.action.type, parameters.action.retryPolicy,
+        parameters.action.retryPolicy.retryType,
+        parameters.action.retryPolicy.retryInterval,
+        parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
+        parameters.action.errorAction.type,
+        parameters.action.errorAction.request,
+        parameters.action.errorAction.request.uri,
+        parameters.action.errorAction.request.method,
+        parameters.action.errorAction.request.headers,
+        parameters.action.errorAction.request.body,
+        parameters.action.errorAction.request.authentication,
+        parameters.action.errorAction.request.authentication.type,
+        parameters.action.errorAction.queueMessage,
+        parameters.action.errorAction.queueMessage.storageAccountName,
+        parameters.action.errorAction.queueMessage.queueName,
+        parameters.action.errorAction.queueMessage.sasToken,
+        parameters.action.errorAction.queueMessage.message,
+        parameters.action.request, parameters.action.request.uri,
+        parameters.action.request.method, parameters.action.request.headers,
+        parameters.action.request.body,
+        parameters.action.request.authentication,
+        parameters.action.request.authentication.type,
+        parameters.action.queueMessage,
+        parameters.action.queueMessage.storageAccountName,
+        parameters.action.queueMessage.queueName,
+        parameters.action.queueMessage.sasToken,
+        parameters.action.queueMessage.message, parameters.recurrence,
+        parameters.recurrence.frequency, parameters.recurrence.interval,
+        parameters.recurrence.count, parameters.recurrence.endTime,
+        parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
+        parameters.recurrence.schedule.hours,
+        parameters.recurrence.schedule.days,
+        parameters.recurrence.schedule.months,
+        parameters.recurrence.schedule.monthDays,
+        parameters.recurrence.schedule.monthlyOccurrences, callback);
+    fullName: >-
+      JobOperations~JobOperations.create(parameters, parameters.startTime,
+      parameters.action, parameters.action.type, parameters.action.retryPolicy,
+      parameters.action.retryPolicy.retryType,
+      parameters.action.retryPolicy.retryInterval,
+      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
+      parameters.action.errorAction.type, parameters.action.errorAction.request,
+      parameters.action.errorAction.request.uri,
+      parameters.action.errorAction.request.method,
+      parameters.action.errorAction.request.headers,
+      parameters.action.errorAction.request.body,
+      parameters.action.errorAction.request.authentication,
+      parameters.action.errorAction.request.authentication.type,
+      parameters.action.errorAction.queueMessage,
+      parameters.action.errorAction.queueMessage.storageAccountName,
+      parameters.action.errorAction.queueMessage.queueName,
+      parameters.action.errorAction.queueMessage.sasToken,
+      parameters.action.errorAction.queueMessage.message,
+      parameters.action.request, parameters.action.request.uri,
+      parameters.action.request.method, parameters.action.request.headers,
+      parameters.action.request.body, parameters.action.request.authentication,
+      parameters.action.request.authentication.type,
+      parameters.action.queueMessage,
+      parameters.action.queueMessage.storageAccountName,
+      parameters.action.queueMessage.queueName,
+      parameters.action.queueMessage.sasToken,
+      parameters.action.queueMessage.message, parameters.recurrence,
+      parameters.recurrence.frequency, parameters.recurrence.interval,
+      parameters.recurrence.count, parameters.recurrence.endTime,
+      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
+      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
+      parameters.recurrence.schedule.months,
+      parameters.recurrence.schedule.monthDays,
+      parameters.recurrence.schedule.monthlyOccurrences, callback)
+    children:
+      - 'JobOperations~JobOperations#create~loweredIndex1'
+      - 'JobOperations~JobOperations#create~loweredIndex1'
+      - 'JobOperations~JobOperations#create~monthlyOccurrencesParameterItem'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~queryParameters'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~baseUrl'
+      - 'JobOperations~JobOperations#create~baseUrl'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~url2'
+      - 'JobOperations~JobOperations#create~httpRequest'
+      - 'JobOperations~JobOperations#create~requestContent'
+      - 'JobOperations~JobOperations#create~requestDoc'
+      - 'JobOperations~JobOperations#create~jobCreateParametersValue'
+      - 'JobOperations~JobOperations#create~requestDoc'
+      - 'JobOperations~JobOperations#create~actionValue'
+      - 'JobOperations~JobOperations#create~retryPolicyValue'
+      - 'JobOperations~JobOperations#create~errorActionValue'
+      - 'JobOperations~JobOperations#create~requestValue'
+      - 'JobOperations~JobOperations#create~headersDictionary'
+      - 'JobOperations~JobOperations#create~headersKey'
+      - 'JobOperations~JobOperations#create~headersValue'
+      - 'JobOperations~JobOperations#create~authenticationValue'
+      - 'JobOperations~JobOperations#create~derived'
+      - 'JobOperations~JobOperations#create~derived2'
+      - 'JobOperations~JobOperations#create~derived3'
+      - 'JobOperations~JobOperations#create~queueMessageValue'
+      - 'JobOperations~JobOperations#create~requestValue2'
+      - 'JobOperations~JobOperations#create~headersDictionary2'
+      - 'JobOperations~JobOperations#create~headersKey2'
+      - 'JobOperations~JobOperations#create~headersValue2'
+      - 'JobOperations~JobOperations#create~authenticationValue2'
+      - 'JobOperations~JobOperations#create~derived4'
+      - 'JobOperations~JobOperations#create~derived5'
+      - 'JobOperations~JobOperations#create~derived6'
+      - 'JobOperations~JobOperations#create~queueMessageValue2'
+      - 'JobOperations~JobOperations#create~recurrenceValue'
+      - 'JobOperations~JobOperations#create~scheduleValue'
+      - 'JobOperations~JobOperations#create~minutesArray'
+      - 'JobOperations~JobOperations#create~loweredIndex2'
+      - 'JobOperations~JobOperations#create~loweredIndex2'
+      - 'JobOperations~JobOperations#create~minutesItem'
+      - 'JobOperations~JobOperations#create~hoursArray'
+      - 'JobOperations~JobOperations#create~loweredIndex3'
+      - 'JobOperations~JobOperations#create~loweredIndex3'
+      - 'JobOperations~JobOperations#create~hoursItem'
+      - 'JobOperations~JobOperations#create~weekDaysArray'
+      - 'JobOperations~JobOperations#create~loweredIndex4'
+      - 'JobOperations~JobOperations#create~loweredIndex4'
+      - 'JobOperations~JobOperations#create~weekDaysItem'
+      - 'JobOperations~JobOperations#create~monthsArray'
+      - 'JobOperations~JobOperations#create~loweredIndex5'
+      - 'JobOperations~JobOperations#create~loweredIndex5'
+      - 'JobOperations~JobOperations#create~monthsItem'
+      - 'JobOperations~JobOperations#create~monthDaysArray'
+      - 'JobOperations~JobOperations#create~loweredIndex6'
+      - 'JobOperations~JobOperations#create~loweredIndex6'
+      - 'JobOperations~JobOperations#create~monthDaysItem'
+      - 'JobOperations~JobOperations#create~monthlyOccurrencesArray'
+      - 'JobOperations~JobOperations#create~loweredIndex7'
+      - 'JobOperations~JobOperations#create~loweredIndex7'
+      - 'JobOperations~JobOperations#create~monthlyOccurrencesItem'
+      - 'JobOperations~JobOperations#create~jobScheduleMonthlyOccurrenceValue'
+      - 'JobOperations~JobOperations#create~requestContent'
+  - uid: 'JobOperations~JobOperations#createOrUpdate'
+    id: createOrUpdate
+    parent: JobOperations~JobOperations
+    name: >-
+      createOrUpdate(jobId, parameters, parameters.startTime, parameters.action,
+      parameters.action.type, parameters.action.retryPolicy,
+      parameters.action.retryPolicy.retryType,
+      parameters.action.retryPolicy.retryInterval,
+      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
+      parameters.action.errorAction.type, parameters.action.errorAction.request,
+      parameters.action.errorAction.request.uri,
+      parameters.action.errorAction.request.method,
+      parameters.action.errorAction.request.headers,
+      parameters.action.errorAction.request.body,
+      parameters.action.errorAction.request.authentication,
+      parameters.action.errorAction.request.authentication.type,
+      parameters.action.errorAction.queueMessage,
+      parameters.action.errorAction.queueMessage.storageAccountName,
+      parameters.action.errorAction.queueMessage.queueName,
+      parameters.action.errorAction.queueMessage.sasToken,
+      parameters.action.errorAction.queueMessage.message,
+      parameters.action.request, parameters.action.request.uri,
+      parameters.action.request.method, parameters.action.request.headers,
+      parameters.action.request.body, parameters.action.request.authentication,
+      parameters.action.request.authentication.type,
+      parameters.action.queueMessage,
+      parameters.action.queueMessage.storageAccountName,
+      parameters.action.queueMessage.queueName,
+      parameters.action.queueMessage.sasToken,
+      parameters.action.queueMessage.message, parameters.recurrence,
+      parameters.recurrence.frequency, parameters.recurrence.interval,
+      parameters.recurrence.count, parameters.recurrence.endTime,
+      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
+      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
+      parameters.recurrence.schedule.months,
+      parameters.recurrence.schedule.monthDays,
+      parameters.recurrence.schedule.monthlyOccurrences, callback)
+    summary: "Creates a new Job with a user-provided job id, or updates an existing job,\rreplacing its definition with that specified."
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: Id of the job to create or update.
+        - id: parameters
+          type: JobCreateOrUpdateParameters
+          description: "Parameters specifying the\rjob definition for a CreateOrUpdate Job operation."
+        - id: parameters.startTime
+          type: date
+          description: "Start time for the job. Defined as\rISO-8601."
+        - id: parameters.action
+          type: JobAction
+          description: Action to invoke for the job.
+        - id: parameters.action.type
+          type: JobActionType
+          description: "Type of action. Can be one\rof http, https, storageQueue."
+        - id: parameters.action.retryPolicy
+          type: RetryPolicy
+          description: "Retry Policy for the\rjob action."
+        - id: parameters.action.retryPolicy.retryType
+          type: RetryType
+          description: "The Retry\rType of the Retry Policy. Can be either 'fixed' or 'none'."
+        - id: parameters.action.retryPolicy.retryInterval
+          type: TimeSpan
+          description: "The\rinterval between retries."
+        - id: parameters.action.retryPolicy.retryCount
+          type: number
+          description: "Number of times\ra retry should be attempted."
+        - id: parameters.action.errorAction
+          type: JobErrorAction
+          description: "Error Action for\rthe job."
+        - id: parameters.action.errorAction.type
+          type: JobActionType
+          description: "Type of\raction. Can be one of http, https, storageQueue."
+        - id: parameters.action.errorAction.request
+          type: JobHttpRequest
+          description: "Request\rfor a http or https action type."
+        - id: parameters.action.errorAction.request.uri
+          type: string
+          description: "Gets or sets\rUri of the endpoint to invoke."
+        - id: parameters.action.errorAction.request.method
+          type: string
+          description: "Gets or\rsets Http method e.g. GET, PUT, POST, DELETE."
+        - id: parameters.action.errorAction.request.headers
+          type: object
+          description: "Gets or\rsets Header name value pairs to supply with the http/https action."
+        - id: parameters.action.errorAction.request.body
+          type: string
+          description: "Gets or sets\rthe request body."
+        - id: parameters.action.errorAction.request.authentication
+          type: HttpAuthentication
+          description: "Gets or sets the\rrequest authentication."
+        - id: parameters.action.errorAction.request.authentication.type
+          type: HttpAuthenticationType
+          description: "Specifies the\rauthentication type"
+        - id: parameters.action.errorAction.queueMessage
+          type: JobQueueMessage
+          description: Queue and content for a queue message action type.
+        - id: parameters.action.errorAction.queueMessage.storageAccountName
+          type: string
+          description: "Name of\rthe storage account for the queue."
+        - id: parameters.action.errorAction.queueMessage.queueName
+          type: string
+          description: Name of the queue to send to.
+        - id: parameters.action.errorAction.queueMessage.sasToken
+          type: string
+          description: "SAS\rkey for the storage account to send message to the queue."
+        - id: parameters.action.errorAction.queueMessage.message
+          type: string
+          description: Content of the message to send to the queue.
+        - id: parameters.action.request
+          type: JobHttpRequest
+          description: "Request for a http or\rhttps action type."
+        - id: parameters.action.request.uri
+          type: string
+          description: "Gets or sets Uri of the\rendpoint to invoke."
+        - id: parameters.action.request.method
+          type: string
+          description: "Gets or sets Http\rmethod e.g. GET, PUT, POST, DELETE."
+        - id: parameters.action.request.headers
+          type: object
+          description: "Gets or sets Header\rname value pairs to supply with the http/https action."
+        - id: parameters.action.request.body
+          type: string
+          description: "Gets or sets the request\rbody."
+        - id: parameters.action.request.authentication
+          type: HttpAuthentication
+          description: Gets or sets the request authentication.
+        - id: parameters.action.request.authentication.type
+          type: HttpAuthenticationType
+          description: "Specifies the\rauthentication type"
+        - id: parameters.action.queueMessage
+          type: JobQueueMessage
+          description: "Queue and\rcontent for a queue message action type."
+        - id: parameters.action.queueMessage.storageAccountName
+          type: string
+          description: "Name\rof the storage account for the queue."
+        - id: parameters.action.queueMessage.queueName
+          type: string
+          description: "Name of the\rqueue to send to."
+        - id: parameters.action.queueMessage.sasToken
+          type: string
+          description: "SAS key for the\rstorage account to send message to the queue."
+        - id: parameters.action.queueMessage.message
+          type: string
+          description: "Content of the\rmessage to send to the queue."
+        - id: parameters.recurrence
+          type: JobRecurrence
+          description: "Recurrence schedule for the\rjob."
+        - id: parameters.recurrence.frequency
+          type: JobRecurrenceFrequency
+          description: "The\rfrequency of recurrence."
+        - id: parameters.recurrence.interval
+          type: number
+          description: "Interval of the\rrecurrence at the given frequency."
+        - id: parameters.recurrence.count
+          type: number
+          description: "Count of occurrences that\rwill execute. Optional. Default will recur infinitely"
+        - id: parameters.recurrence.endTime
+          type: date
+          description: "Time in ISO-8601 format\rafter which no more occurrences will execute."
+        - id: parameters.recurrence.schedule
+          type: JobRecurrenceSchedule
+          description: "Recurrence\rschedule for the job."
+        - id: parameters.recurrence.schedule.minutes
+          type: array
+          description: "Minutes of the\rhour that the job should execute at."
+        - id: parameters.recurrence.schedule.hours
+          type: array
+          description: "Hours of the day\rthat the job should execute at."
+        - id: parameters.recurrence.schedule.days
+          type: array
+          description: "Days of the week that\rthe job should execute on."
+        - id: parameters.recurrence.schedule.months
+          type: array
+          description: "Months that the job\rshould execute in.  Must be between 1 and 12."
+        - id: parameters.recurrence.schedule.monthDays
+          type: array
+          description: "Days of the\rmonth that the job should execute on.  Must be between 1 and 31."
+        - id: parameters.recurrence.schedule.monthlyOccurrences
+          type: array
+          description: Occurrences of days within a month.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createOrUpdate(jobId, parameters, parameters.startTime,
+        parameters.action, parameters.action.type,
+        parameters.action.retryPolicy, parameters.action.retryPolicy.retryType,
+        parameters.action.retryPolicy.retryInterval,
+        parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
+        parameters.action.errorAction.type,
+        parameters.action.errorAction.request,
+        parameters.action.errorAction.request.uri,
+        parameters.action.errorAction.request.method,
+        parameters.action.errorAction.request.headers,
+        parameters.action.errorAction.request.body,
+        parameters.action.errorAction.request.authentication,
+        parameters.action.errorAction.request.authentication.type,
+        parameters.action.errorAction.queueMessage,
+        parameters.action.errorAction.queueMessage.storageAccountName,
+        parameters.action.errorAction.queueMessage.queueName,
+        parameters.action.errorAction.queueMessage.sasToken,
+        parameters.action.errorAction.queueMessage.message,
+        parameters.action.request, parameters.action.request.uri,
+        parameters.action.request.method, parameters.action.request.headers,
+        parameters.action.request.body,
+        parameters.action.request.authentication,
+        parameters.action.request.authentication.type,
+        parameters.action.queueMessage,
+        parameters.action.queueMessage.storageAccountName,
+        parameters.action.queueMessage.queueName,
+        parameters.action.queueMessage.sasToken,
+        parameters.action.queueMessage.message, parameters.recurrence,
+        parameters.recurrence.frequency, parameters.recurrence.interval,
+        parameters.recurrence.count, parameters.recurrence.endTime,
+        parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
+        parameters.recurrence.schedule.hours,
+        parameters.recurrence.schedule.days,
+        parameters.recurrence.schedule.months,
+        parameters.recurrence.schedule.monthDays,
+        parameters.recurrence.schedule.monthlyOccurrences, callback);
+    fullName: >-
+      JobOperations~JobOperations.createOrUpdate(jobId, parameters,
+      parameters.startTime, parameters.action, parameters.action.type,
+      parameters.action.retryPolicy, parameters.action.retryPolicy.retryType,
+      parameters.action.retryPolicy.retryInterval,
+      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
+      parameters.action.errorAction.type, parameters.action.errorAction.request,
+      parameters.action.errorAction.request.uri,
+      parameters.action.errorAction.request.method,
+      parameters.action.errorAction.request.headers,
+      parameters.action.errorAction.request.body,
+      parameters.action.errorAction.request.authentication,
+      parameters.action.errorAction.request.authentication.type,
+      parameters.action.errorAction.queueMessage,
+      parameters.action.errorAction.queueMessage.storageAccountName,
+      parameters.action.errorAction.queueMessage.queueName,
+      parameters.action.errorAction.queueMessage.sasToken,
+      parameters.action.errorAction.queueMessage.message,
+      parameters.action.request, parameters.action.request.uri,
+      parameters.action.request.method, parameters.action.request.headers,
+      parameters.action.request.body, parameters.action.request.authentication,
+      parameters.action.request.authentication.type,
+      parameters.action.queueMessage,
+      parameters.action.queueMessage.storageAccountName,
+      parameters.action.queueMessage.queueName,
+      parameters.action.queueMessage.sasToken,
+      parameters.action.queueMessage.message, parameters.recurrence,
+      parameters.recurrence.frequency, parameters.recurrence.interval,
+      parameters.recurrence.count, parameters.recurrence.endTime,
+      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
+      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
+      parameters.recurrence.schedule.months,
+      parameters.recurrence.schedule.monthDays,
+      parameters.recurrence.schedule.monthlyOccurrences, callback)
+    children:
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex1'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex1'
+      - >-
+        JobOperations~JobOperations#createOrUpdate~monthlyOccurrencesParameterItem
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~queryParameters'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~baseUrl'
+      - 'JobOperations~JobOperations#createOrUpdate~baseUrl'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~url2'
+      - 'JobOperations~JobOperations#createOrUpdate~httpRequest'
+      - 'JobOperations~JobOperations#createOrUpdate~requestContent'
+      - 'JobOperations~JobOperations#createOrUpdate~requestDoc'
+      - >-
+        JobOperations~JobOperations#createOrUpdate~jobCreateOrUpdateParametersValue
+      - 'JobOperations~JobOperations#createOrUpdate~requestDoc'
+      - 'JobOperations~JobOperations#createOrUpdate~actionValue'
+      - 'JobOperations~JobOperations#createOrUpdate~retryPolicyValue'
+      - 'JobOperations~JobOperations#createOrUpdate~errorActionValue'
+      - 'JobOperations~JobOperations#createOrUpdate~requestValue'
+      - 'JobOperations~JobOperations#createOrUpdate~headersDictionary'
+      - 'JobOperations~JobOperations#createOrUpdate~headersKey'
+      - 'JobOperations~JobOperations#createOrUpdate~headersValue'
+      - 'JobOperations~JobOperations#createOrUpdate~authenticationValue'
+      - 'JobOperations~JobOperations#createOrUpdate~derived'
+      - 'JobOperations~JobOperations#createOrUpdate~derived2'
+      - 'JobOperations~JobOperations#createOrUpdate~derived3'
+      - 'JobOperations~JobOperations#createOrUpdate~queueMessageValue'
+      - 'JobOperations~JobOperations#createOrUpdate~requestValue2'
+      - 'JobOperations~JobOperations#createOrUpdate~headersDictionary2'
+      - 'JobOperations~JobOperations#createOrUpdate~headersKey2'
+      - 'JobOperations~JobOperations#createOrUpdate~headersValue2'
+      - 'JobOperations~JobOperations#createOrUpdate~authenticationValue2'
+      - 'JobOperations~JobOperations#createOrUpdate~derived4'
+      - 'JobOperations~JobOperations#createOrUpdate~derived5'
+      - 'JobOperations~JobOperations#createOrUpdate~derived6'
+      - 'JobOperations~JobOperations#createOrUpdate~queueMessageValue2'
+      - 'JobOperations~JobOperations#createOrUpdate~recurrenceValue'
+      - 'JobOperations~JobOperations#createOrUpdate~scheduleValue'
+      - 'JobOperations~JobOperations#createOrUpdate~minutesArray'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex2'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex2'
+      - 'JobOperations~JobOperations#createOrUpdate~minutesItem'
+      - 'JobOperations~JobOperations#createOrUpdate~hoursArray'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex3'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex3'
+      - 'JobOperations~JobOperations#createOrUpdate~hoursItem'
+      - 'JobOperations~JobOperations#createOrUpdate~weekDaysArray'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex4'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex4'
+      - 'JobOperations~JobOperations#createOrUpdate~weekDaysItem'
+      - 'JobOperations~JobOperations#createOrUpdate~monthsArray'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex5'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex5'
+      - 'JobOperations~JobOperations#createOrUpdate~monthsItem'
+      - 'JobOperations~JobOperations#createOrUpdate~monthDaysArray'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex6'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex6'
+      - 'JobOperations~JobOperations#createOrUpdate~monthDaysItem'
+      - 'JobOperations~JobOperations#createOrUpdate~monthlyOccurrencesArray'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex7'
+      - 'JobOperations~JobOperations#createOrUpdate~loweredIndex7'
+      - 'JobOperations~JobOperations#createOrUpdate~monthlyOccurrencesItem'
+      - >-
+        JobOperations~JobOperations#createOrUpdate~jobScheduleMonthlyOccurrenceValue
+      - 'JobOperations~JobOperations#createOrUpdate~requestContent'
+  - uid: 'JobOperations~JobOperations#deleteMethod'
+    id: deleteMethod
+    parent: JobOperations~JobOperations
+    name: 'deleteMethod(jobId, callback)'
+    summary: Deletes a job.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: Id of the job to delete.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(jobId, callback);'
+    fullName: 'JobOperations~JobOperations.deleteMethod(jobId, callback)'
+    children:
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~queryParameters'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~baseUrl'
+      - 'JobOperations~JobOperations#deleteMethod~baseUrl'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~url2'
+      - 'JobOperations~JobOperations#deleteMethod~httpRequest'
+  - uid: 'JobOperations~JobOperations#get'
+    id: get
+    parent: JobOperations~JobOperations
+    name: 'get(jobId, callback)'
+    summary: Get the definition and status of a job.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: Id of the job to get.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(jobId, callback);'
+    fullName: 'JobOperations~JobOperations.get(jobId, callback)'
+    children:
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~queryParameters'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~baseUrl'
+      - 'JobOperations~JobOperations#get~baseUrl'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~url2'
+      - 'JobOperations~JobOperations#get~httpRequest'
+  - uid: 'JobOperations~JobOperations#getHistory'
+    id: getHistory
+    parent: JobOperations~JobOperations
+    name: 'getHistory(jobId, parameters, parameters.skip, parameters.top, callback)'
+    summary: Get the execution history of a Job.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: Id of the job to get the history of.
+        - id: parameters
+          type: JobGetHistoryParameters
+          description: "Parameters supplied to the Get\rJob History operation."
+        - id: parameters.skip
+          type: number
+          description: "Specify the (0-based) index of the\rhistory list from which to begin requesting entries."
+        - id: parameters.top
+          type: number
+          description: "Specify the number of history entries to\rrequest, in the of range [1..100]."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getHistory(jobId, parameters, parameters.skip, parameters.top,
+        callback);
+    fullName: >-
+      JobOperations~JobOperations.getHistory(jobId, parameters, parameters.skip,
+      parameters.top, callback)
+    children:
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~queryParameters'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~baseUrl'
+      - 'JobOperations~JobOperations#getHistory~baseUrl'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~url2'
+      - 'JobOperations~JobOperations#getHistory~httpRequest'
+  - uid: 'JobOperations~JobOperations#getHistoryWithFilter'
+    id: getHistoryWithFilter
+    parent: JobOperations~JobOperations
+    name: >-
+      getHistoryWithFilter(jobId, parameters, parameters.status,
+      parameters.skip, parameters.top, callback)
+    summary: Get the execution history of a Job with a filter on the job Status.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: Id of the job to get the history of.
+        - id: parameters
+          type: JobGetHistoryWithFilterParameters
+          description: "Parameters supplied\rto the Get Job History With Filter operation."
+        - id: parameters.status
+          type: JobHistoryStatus
+          description: "Filter the job history to have\rit only return job execution attempts having a particular Status,\r'completed' or 'failed'."
+        - id: parameters.skip
+          type: number
+          description: "Specify the (0-based) index of the\rhistory list from which to begin requesting entries."
+        - id: parameters.top
+          type: number
+          description: "Specify the number of history entries to\rrequest, in the of range [1..100]."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getHistoryWithFilter(jobId, parameters, parameters.status,
+        parameters.skip, parameters.top, callback);
+    fullName: >-
+      JobOperations~JobOperations.getHistoryWithFilter(jobId, parameters,
+      parameters.status, parameters.skip, parameters.top, callback)
+    children:
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~queryParameters'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~odataFilter'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~baseUrl'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~baseUrl'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
+      - 'JobOperations~JobOperations#getHistoryWithFilter~httpRequest'
+  - uid: 'JobOperations~JobOperations#list'
+    id: list
+    parent: JobOperations~JobOperations
+    name: 'list(parameters, parameters.skip, parameters.top, callback)'
+    summary: Get the list of all jobs in a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: JobListParameters
+          description: "Parameters supplied to the List Jobs\roperation."
+        - id: parameters.skip
+          type: number
+          description: "Specify the (0-based) index of the job\rlist from which to begin requesting entries."
+        - id: parameters.top
+          type: number
+          description: "Specify the number of jobs to request, in\rthe of range [1..100]."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function list(parameters, parameters.skip, parameters.top, callback);'
+    fullName: >-
+      JobOperations~JobOperations.list(parameters, parameters.skip,
+      parameters.top, callback)
+    children:
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~queryParameters'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~baseUrl'
+      - 'JobOperations~JobOperations#list~baseUrl'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~url2'
+      - 'JobOperations~JobOperations#list~httpRequest'
+  - uid: 'JobOperations~JobOperations#listWithFilter'
+    id: listWithFilter
+    parent: JobOperations~JobOperations
+    name: >-
+      listWithFilter(parameters, parameters.state, parameters.skip,
+      parameters.top, callback)
+    summary: Get the list of jobs in a job collection matching a filter on job state.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: JobListWithFilterParameters
+          description: "Parameters supplied to the\rList Jobs with filter operation."
+        - id: parameters.state
+          type: JobState
+          description: "Filter the job history to have it only\rreturn job execution attempts having a particular State, enabled,\rdisabled, faulted, or completed."
+        - id: parameters.skip
+          type: number
+          description: "Specify the (0-based) index of the job\rlist from which to begin requesting entries."
+        - id: parameters.top
+          type: number
+          description: "Specify the number of jobs to request, in\rthe of range [1..100]."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function listWithFilter(parameters, parameters.state, parameters.skip,
+        parameters.top, callback);
+    fullName: >-
+      JobOperations~JobOperations.listWithFilter(parameters, parameters.state,
+      parameters.skip, parameters.top, callback)
+    children:
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~queryParameters'
+      - 'JobOperations~JobOperations#listWithFilter~odataFilter'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~baseUrl'
+      - 'JobOperations~JobOperations#listWithFilter~baseUrl'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~url2'
+      - 'JobOperations~JobOperations#listWithFilter~httpRequest'
+  - uid: 'JobOperations~JobOperations#updateJobCollectionState'
+    id: updateJobCollectionState
+    parent: JobOperations~JobOperations
+    name: 'updateJobCollectionState(parameters, parameters.state, callback)'
+    summary: Update the state of all jobs in a job collections.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: JobCollectionJobsUpdateStateParameters
+          description: "Parameters\rsupplied to the Update Jobs State operation."
+        - id: parameters.state
+          type: JobState
+          description: "New state to update to: 'enabled' or\r'disabled'."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateJobCollectionState(parameters, parameters.state,
+        callback);
+    fullName: >-
+      JobOperations~JobOperations.updateJobCollectionState(parameters,
+      parameters.state, callback)
+    children:
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~baseUrl'
+      - 'JobOperations~JobOperations#updateJobCollectionState~baseUrl'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~url2'
+      - 'JobOperations~JobOperations#updateJobCollectionState~httpRequest'
+      - 'JobOperations~JobOperations#updateJobCollectionState~requestContent'
+      - 'JobOperations~JobOperations#updateJobCollectionState~requestDoc'
+      - >-
+        JobOperations~JobOperations#updateJobCollectionState~jobCollectionJobsUpdateStateParametersValue
+      - 'JobOperations~JobOperations#updateJobCollectionState~requestDoc'
+      - 'JobOperations~JobOperations#updateJobCollectionState~requestContent'
+  - uid: 'JobOperations~JobOperations#updateState'
+    id: updateState
+    parent: JobOperations~JobOperations
+    name: >-
+      updateState(jobId, parameters, parameters.state,
+      parameters.updateStateReason, callback)
+    summary: Update the state of a job.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: Id of the job to update.
+        - id: parameters
+          type: JobUpdateStateParameters
+          description: "Parameters supplied to the\rUpdate Job State operation."
+        - id: parameters.state
+          type: JobState
+          description: "New state to update to: 'enabled' or\r'disabled'."
+        - id: parameters.updateStateReason
+          type: string
+          description: "A description of the\rcircumstances associated with this job state update."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateState(jobId, parameters, parameters.state,
+        parameters.updateStateReason, callback);
+    fullName: >-
+      JobOperations~JobOperations.updateState(jobId, parameters,
+      parameters.state, parameters.updateStateReason, callback)
+    children:
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~queryParameters'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~baseUrl'
+      - 'JobOperations~JobOperations#updateState~baseUrl'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~url2'
+      - 'JobOperations~JobOperations#updateState~httpRequest'
+      - 'JobOperations~JobOperations#updateState~requestContent'
+      - 'JobOperations~JobOperations#updateState~requestDoc'
+      - 'JobOperations~JobOperations#updateState~jobUpdateStateParametersValue'
+      - 'JobOperations~JobOperations#updateState~requestDoc'
+      - 'JobOperations~JobOperations#updateState~requestContent'
+references:
+  - uid: JobCreateParameters
+    name: JobCreateParameters
+    fullName: JobCreateParameters
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: JobAction
+    name: JobAction
+    fullName: JobAction
+    isExternal: true
+  - uid: JobActionType
+    name: JobActionType
+    fullName: JobActionType
+    isExternal: true
+  - uid: RetryPolicy
+    name: RetryPolicy
+    fullName: RetryPolicy
+    isExternal: true
+  - uid: RetryType
+    name: RetryType
+    fullName: RetryType
+    isExternal: true
+  - uid: TimeSpan
+    name: TimeSpan
+    fullName: TimeSpan
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: JobErrorAction
+    name: JobErrorAction
+    fullName: JobErrorAction
+    isExternal: true
+  - uid: JobHttpRequest
+    name: JobHttpRequest
+    fullName: JobHttpRequest
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: HttpAuthentication
+    name: HttpAuthentication
+    fullName: HttpAuthentication
+    isExternal: true
+  - uid: HttpAuthenticationType
+    name: HttpAuthenticationType
+    fullName: HttpAuthenticationType
+    isExternal: true
+  - uid: JobQueueMessage
+    name: JobQueueMessage
+    fullName: JobQueueMessage
+    isExternal: true
+  - uid: JobRecurrence
+    name: JobRecurrence
+    fullName: JobRecurrence
+    isExternal: true
+  - uid: JobRecurrenceFrequency
+    name: JobRecurrenceFrequency
+    fullName: JobRecurrenceFrequency
+    isExternal: true
+  - uid: JobRecurrenceSchedule
+    name: JobRecurrenceSchedule
+    fullName: JobRecurrenceSchedule
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: JobCreateOrUpdateParameters
+    name: JobCreateOrUpdateParameters
+    fullName: JobCreateOrUpdateParameters
+    isExternal: true
+  - uid: JobGetHistoryParameters
+    name: JobGetHistoryParameters
+    fullName: JobGetHistoryParameters
+    isExternal: true
+  - uid: JobGetHistoryWithFilterParameters
+    name: JobGetHistoryWithFilterParameters
+    fullName: JobGetHistoryWithFilterParameters
+    isExternal: true
+  - uid: JobHistoryStatus
+    name: JobHistoryStatus
+    fullName: JobHistoryStatus
+    isExternal: true
+  - uid: JobListParameters
+    name: JobListParameters
+    fullName: JobListParameters
+    isExternal: true
+  - uid: JobListWithFilterParameters
+    name: JobListWithFilterParameters
+    fullName: JobListWithFilterParameters
+    isExternal: true
+  - uid: JobState
+    name: JobState
+    fullName: JobState
+    isExternal: true
+  - uid: JobCollectionJobsUpdateStateParameters
+    name: JobCollectionJobsUpdateStateParameters
+    fullName: JobCollectionJobsUpdateStateParameters
+    isExternal: true
+  - uid: JobUpdateStateParameters
+    name: JobUpdateStateParameters
+    fullName: JobUpdateStateParameters
+    isExternal: true

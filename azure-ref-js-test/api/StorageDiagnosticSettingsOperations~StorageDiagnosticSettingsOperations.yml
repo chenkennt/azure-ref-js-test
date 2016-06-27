@@ -1,0 +1,242 @@
+items:
+  - uid: StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations
+    id: StorageDiagnosticSettingsOperations
+    parent: StorageDiagnosticSettingsOperations
+    name: StorageDiagnosticSettingsOperations
+    type: Class
+    syntax:
+      content: StorageDiagnosticSettingsOperations
+    fullName: StorageDiagnosticSettingsOperations.StorageDiagnosticSettingsOperations
+    children:
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#client
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put
+  - uid: >-
+      StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#client
+    id: client
+    parent: StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: >-
+      StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations.client
+  - uid: >-
+      StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get
+    id: get
+    parent: StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations
+    name: 'get(resourceUri, callback)'
+    summary: Gets the diagnostic settings for the specified storage service.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceUri
+          type: string
+          description: The resource identifier of the storage service.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(resourceUri, callback);'
+    fullName: >-
+      StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations.get(resourceUri,
+      callback)
+    children:
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~queryParameters
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~baseUrl
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~baseUrl
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#get~httpRequest
+  - uid: >-
+      StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put
+    id: put
+    parent: StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations
+    name: >-
+      put(resourceUri, parameters, parameters.properties,
+      parameters.properties.loggingDiagnosticSettings,
+      parameters.properties.loggingDiagnosticSettings.delete,
+      parameters.properties.loggingDiagnosticSettings.read,
+      parameters.properties.loggingDiagnosticSettings.write,
+      parameters.properties.loggingDiagnosticSettings.retention,
+      parameters.properties.metricDiagnosticSettings,
+      parameters.properties.metricDiagnosticSettings.metricAggregations,
+      callback)
+    summary: "Creates or update the diagnostic settings for the specified storage\rservice."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceUri
+          type: string
+          description: The resource identifier of the storage service.
+        - id: parameters
+          type: StorageDiagnosticSettingsPutParameters
+          description: "The storage\rdiagnostic settings parameters."
+        - id: parameters.properties
+          type: StorageDiagnosticSettings
+          description: "Gets or sets\rthe storage diagnostic settings."
+        - id: parameters.properties.loggingDiagnosticSettings
+          type: StorageLoggingDiagnosticSettings
+          description: "Gets or sets the\rlogging diagnostic settings."
+        - id: parameters.properties.loggingDiagnosticSettings.delete
+          type: boolean
+          description: "Gets or sets a value indicating whether delete operations should be\rlogged."
+        - id: parameters.properties.loggingDiagnosticSettings.read
+          type: boolean
+          description: >-
+            Gets or sets a value indicating whether read operations should be
+            logged.
+        - id: parameters.properties.loggingDiagnosticSettings.write
+          type: boolean
+          description: >-
+            Gets or sets a value indicating whether write operations should be
+            logged.
+        - id: parameters.properties.loggingDiagnosticSettings.retention
+          type: TimeSpan
+          description: "Gets or sets\ra value indicating whether retention operations should be logged."
+        - id: parameters.properties.metricDiagnosticSettings
+          type: StorageMetricDiagnosticSettings
+          description: "Gets or sets the metrics\rdiagnostic settings."
+        - id: parameters.properties.metricDiagnosticSettings.metricAggregations
+          type: array
+          description: "Gets\ror sets the list of aggregations to generate."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function put(resourceUri, parameters, parameters.properties,
+        parameters.properties.loggingDiagnosticSettings,
+        parameters.properties.loggingDiagnosticSettings.delete,
+        parameters.properties.loggingDiagnosticSettings.read,
+        parameters.properties.loggingDiagnosticSettings.write,
+        parameters.properties.loggingDiagnosticSettings.retention,
+        parameters.properties.metricDiagnosticSettings,
+        parameters.properties.metricDiagnosticSettings.metricAggregations,
+        callback);
+    fullName: >-
+      StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations.put(resourceUri,
+      parameters, parameters.properties,
+      parameters.properties.loggingDiagnosticSettings,
+      parameters.properties.loggingDiagnosticSettings.delete,
+      parameters.properties.loggingDiagnosticSettings.read,
+      parameters.properties.loggingDiagnosticSettings.write,
+      parameters.properties.loggingDiagnosticSettings.retention,
+      parameters.properties.metricDiagnosticSettings,
+      parameters.properties.metricDiagnosticSettings.metricAggregations,
+      callback)
+    children:
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~queryParameters
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~baseUrl
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~baseUrl
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~url2
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~httpRequest
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~requestContent
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~requestDoc
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~storageDiagnosticSettingsPutParametersValue
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~requestDoc
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~propertiesValue
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~loggingValue
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~metricsValue
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~aggregationsArray
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~loweredIndex1
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~loweredIndex1
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~aggregationsItem
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~storageMetricAggregationValue
+      - >-
+        StorageDiagnosticSettingsOperations~StorageDiagnosticSettingsOperations#put~requestContent
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: StorageDiagnosticSettingsPutParameters
+    name: StorageDiagnosticSettingsPutParameters
+    fullName: StorageDiagnosticSettingsPutParameters
+    isExternal: true
+  - uid: StorageDiagnosticSettings
+    name: StorageDiagnosticSettings
+    fullName: StorageDiagnosticSettings
+    isExternal: true
+  - uid: StorageLoggingDiagnosticSettings
+    name: StorageLoggingDiagnosticSettings
+    fullName: StorageLoggingDiagnosticSettings
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: TimeSpan
+    name: TimeSpan
+    fullName: TimeSpan
+    isExternal: true
+  - uid: StorageMetricDiagnosticSettings
+    name: StorageMetricDiagnosticSettings
+    fullName: StorageMetricDiagnosticSettings
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

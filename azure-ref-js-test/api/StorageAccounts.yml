@@ -1,0 +1,677 @@
+items:
+  - uid: StorageAccounts
+    id: StorageAccounts
+    name: StorageAccounts
+    type: Class
+    syntax:
+      content: StorageAccounts
+    fullName: StorageAccounts
+    children:
+      - 'StorageAccounts#client'
+      - 'StorageAccounts#checkNameAvailability'
+      - 'StorageAccounts#create'
+      - 'StorageAccounts#beginCreate'
+      - 'StorageAccounts#deleteMethod'
+      - 'StorageAccounts#getProperties'
+      - 'StorageAccounts#update'
+      - 'StorageAccounts#list'
+      - 'StorageAccounts#listByResourceGroup'
+      - 'StorageAccounts#listKeys'
+      - 'StorageAccounts#regenerateKey'
+  - uid: 'StorageAccounts#client'
+    id: client
+    parent: StorageAccounts
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: StorageAccounts.client
+  - uid: 'StorageAccounts#checkNameAvailability'
+    id: checkNameAvailability
+    parent: StorageAccounts
+    name: 'checkNameAvailability(name, options, options.customHeaders, callback)'
+    summary: Checks that account name is valid and is not in use.
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckNameAvailabilityResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function checkNameAvailability(name, options, options.customHeaders,
+        callback);
+    fullName: >-
+      StorageAccounts.checkNameAvailability(name, options,
+      options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#checkNameAvailability~client'
+      - 'StorageAccounts#checkNameAvailability~callback'
+      - 'StorageAccounts#checkNameAvailability~options'
+      - 'StorageAccounts#checkNameAvailability~accountName'
+      - 'StorageAccounts#checkNameAvailability~requestUrl'
+      - 'StorageAccounts#checkNameAvailability~requestUrl'
+      - 'StorageAccounts#checkNameAvailability~queryParameters'
+      - 'StorageAccounts#checkNameAvailability~requestUrl'
+      - 'StorageAccounts#checkNameAvailability~regex'
+      - 'StorageAccounts#checkNameAvailability~requestUrl'
+      - 'StorageAccounts#checkNameAvailability~httpRequest'
+      - 'StorageAccounts#checkNameAvailability~headerName'
+      - 'StorageAccounts#checkNameAvailability~requestContent'
+      - 'StorageAccounts#checkNameAvailability~requestModel'
+      - 'StorageAccounts#checkNameAvailability~requestModelMapper'
+      - 'StorageAccounts#checkNameAvailability~requestModel'
+      - 'StorageAccounts#checkNameAvailability~requestContent'
+      - 'StorageAccounts#checkNameAvailability~serializationError'
+  - uid: 'StorageAccounts#create'
+    id: create
+    parent: StorageAccounts
+    name: >-
+      create(resourceGroupName, accountName, parameters, parameters.sku,
+      parameters.sku.name, parameters.kind, parameters.location,
+      parameters.tags, parameters.customDomain, parameters.customDomain.name,
+      parameters.customDomain.useSubDomain, parameters.encryption,
+      parameters.encryption.services, parameters.encryption.services.blob,
+      parameters.encryption.services.blob.enabled, parameters.accessTier,
+      options, options.customHeaders, callback)
+    summary: "Asynchronously creates a new storage account with the specified parameters.\rIf an account is already created and subsequent create request is issued\rwith different properties, the account properties will be updated. If an\raccount is already created and subsequent create or update request is\rissued with exact same set of properties, the request will succeed."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group within the\ruser's subscription."
+        - id: accountName
+          type: string
+          description: "The name of the storage account within the\rspecified resource group. Storage account names must be between 3 and 24\rcharacters in length and use numbers and lower-case letters only."
+        - id: parameters
+          type: object
+          description: "The parameters to provide for the created\raccount."
+        - id: parameters.sku
+          type: object
+          description: Required. Gets or sets the sku type.
+        - id: parameters.sku.name
+          type: string
+          description: "Gets or sets the sku name. Required\rfor account creation, optional for update. Note that in older versions,\rsku name was called accountType. Possible values include: 'Standard_LRS',\r'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS'"
+        - id: parameters.kind
+          type: string
+          description: "Required. Indicates the type of storage\raccount. Possible values include: 'Storage', 'BlobStorage'"
+        - id: parameters.location
+          type: string
+          description: "Required. Gets or sets the location\rof the resource. This will be one of the supported and registered Azure\rGeo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region\rof a resource cannot be changed once it is created, but if an identical\rgeo region is specified on update the request will succeed."
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets a list of key value pairs\rthat describe the resource. These tags can be used in viewing and grouping\rthis resource (across resource groups). A maximum of 15 tags can be\rprovided for a resource. Each tag must have a key no greater than 128\rcharacters and value no greater than 256 characters."
+        - id: parameters.customDomain
+          type: object
+          description: "User domain assigned to the\rstorage account. Name is the CNAME source. Only one custom domain is\rsupported per storage account at this time. To clear the existing custom\rdomain, use an empty string for the custom domain name property."
+        - id: parameters.customDomain.name
+          type: string
+          description: "Gets or sets the custom\rdomain name. Name is the CNAME source."
+        - id: parameters.customDomain.useSubDomain
+          type: boolean
+          description: "Indicates whether\rindirect CName validation is enabled. Default value is false. This should\ronly be set on updates"
+        - id: parameters.encryption
+          type: object
+          description: "Provides the encryption settings on\rthe account. If left unspecified the account encryption settings will\rremain. The default setting is unencrypted."
+        - id: parameters.encryption.services
+          type: object
+          description: "Gets the services which\rare encrypted."
+        - id: parameters.encryption.services.blob
+          type: object
+          description: The blob service.
+        - id: parameters.encryption.services.blob.enabled
+          type: boolean
+          description: "A boolean\rindicating whether or not the service is encrypted."
+        - id: parameters.accessTier
+          type: string
+          description: "Required for StandardBlob accounts.\rThe access tier used for billing. Access tier cannot be changed more than\ronce every 7 days (168 hours). Access tier cannot be set for StandardLRS,\rStandardGRS, StandardRAGRS, or PremiumLRS account types. Possible values\rinclude: 'Hot', 'Cool'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(resourceGroupName, accountName, parameters,
+        parameters.sku, parameters.sku.name, parameters.kind,
+        parameters.location, parameters.tags, parameters.customDomain,
+        parameters.customDomain.name, parameters.customDomain.useSubDomain,
+        parameters.encryption, parameters.encryption.services,
+        parameters.encryption.services.blob,
+        parameters.encryption.services.blob.enabled, parameters.accessTier,
+        options, options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.create(resourceGroupName, accountName, parameters,
+      parameters.sku, parameters.sku.name, parameters.kind, parameters.location,
+      parameters.tags, parameters.customDomain, parameters.customDomain.name,
+      parameters.customDomain.useSubDomain, parameters.encryption,
+      parameters.encryption.services, parameters.encryption.services.blob,
+      parameters.encryption.services.blob.enabled, parameters.accessTier,
+      options, options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#create~client'
+      - 'StorageAccounts#create~callback'
+      - 'StorageAccounts#create~options'
+  - uid: 'StorageAccounts#beginCreate'
+    id: beginCreate
+    parent: StorageAccounts
+    name: >-
+      beginCreate(resourceGroupName, accountName, parameters, parameters.sku,
+      parameters.sku.name, parameters.kind, parameters.location,
+      parameters.tags, parameters.customDomain, parameters.customDomain.name,
+      parameters.customDomain.useSubDomain, parameters.encryption,
+      parameters.encryption.services, parameters.encryption.services.blob,
+      parameters.encryption.services.blob.enabled, parameters.accessTier,
+      options, options.customHeaders, callback)
+    summary: "Asynchronously creates a new storage account with the specified parameters.\rIf an account is already created and subsequent create request is issued\rwith different properties, the account properties will be updated. If an\raccount is already created and subsequent create or update request is\rissued with exact same set of properties, the request will succeed."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group within the\ruser's subscription."
+        - id: accountName
+          type: string
+          description: "The name of the storage account within the\rspecified resource group. Storage account names must be between 3 and 24\rcharacters in length and use numbers and lower-case letters only."
+        - id: parameters
+          type: object
+          description: "The parameters to provide for the created\raccount."
+        - id: parameters.sku
+          type: object
+          description: Required. Gets or sets the sku type.
+        - id: parameters.sku.name
+          type: string
+          description: "Gets or sets the sku name. Required\rfor account creation, optional for update. Note that in older versions,\rsku name was called accountType. Possible values include: 'Standard_LRS',\r'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS'"
+        - id: parameters.kind
+          type: string
+          description: "Required. Indicates the type of storage\raccount. Possible values include: 'Storage', 'BlobStorage'"
+        - id: parameters.location
+          type: string
+          description: "Required. Gets or sets the location\rof the resource. This will be one of the supported and registered Azure\rGeo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region\rof a resource cannot be changed once it is created, but if an identical\rgeo region is specified on update the request will succeed."
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets a list of key value pairs\rthat describe the resource. These tags can be used in viewing and grouping\rthis resource (across resource groups). A maximum of 15 tags can be\rprovided for a resource. Each tag must have a key no greater than 128\rcharacters and value no greater than 256 characters."
+        - id: parameters.customDomain
+          type: object
+          description: "User domain assigned to the\rstorage account. Name is the CNAME source. Only one custom domain is\rsupported per storage account at this time. To clear the existing custom\rdomain, use an empty string for the custom domain name property."
+        - id: parameters.customDomain.name
+          type: string
+          description: "Gets or sets the custom\rdomain name. Name is the CNAME source."
+        - id: parameters.customDomain.useSubDomain
+          type: boolean
+          description: "Indicates whether\rindirect CName validation is enabled. Default value is false. This should\ronly be set on updates"
+        - id: parameters.encryption
+          type: object
+          description: "Provides the encryption settings on\rthe account. If left unspecified the account encryption settings will\rremain. The default setting is unencrypted."
+        - id: parameters.encryption.services
+          type: object
+          description: "Gets the services which\rare encrypted."
+        - id: parameters.encryption.services.blob
+          type: object
+          description: The blob service.
+        - id: parameters.encryption.services.blob.enabled
+          type: boolean
+          description: "A boolean\rindicating whether or not the service is encrypted."
+        - id: parameters.accessTier
+          type: string
+          description: "Required for StandardBlob accounts.\rThe access tier used for billing. Access tier cannot be changed more than\ronce every 7 days (168 hours). Access tier cannot be set for StandardLRS,\rStandardGRS, StandardRAGRS, or PremiumLRS account types. Possible values\rinclude: 'Hot', 'Cool'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(resourceGroupName, accountName, parameters,
+        parameters.sku, parameters.sku.name, parameters.kind,
+        parameters.location, parameters.tags, parameters.customDomain,
+        parameters.customDomain.name, parameters.customDomain.useSubDomain,
+        parameters.encryption, parameters.encryption.services,
+        parameters.encryption.services.blob,
+        parameters.encryption.services.blob.enabled, parameters.accessTier,
+        options, options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.beginCreate(resourceGroupName, accountName, parameters,
+      parameters.sku, parameters.sku.name, parameters.kind, parameters.location,
+      parameters.tags, parameters.customDomain, parameters.customDomain.name,
+      parameters.customDomain.useSubDomain, parameters.encryption,
+      parameters.encryption.services, parameters.encryption.services.blob,
+      parameters.encryption.services.blob.enabled, parameters.accessTier,
+      options, options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#beginCreate~client'
+      - 'StorageAccounts#beginCreate~callback'
+      - 'StorageAccounts#beginCreate~options'
+      - 'StorageAccounts#beginCreate~parameters'
+      - 'StorageAccounts#beginCreate~requestUrl'
+      - 'StorageAccounts#beginCreate~requestUrl'
+      - 'StorageAccounts#beginCreate~requestUrl'
+      - 'StorageAccounts#beginCreate~requestUrl'
+      - 'StorageAccounts#beginCreate~queryParameters'
+      - 'StorageAccounts#beginCreate~requestUrl'
+      - 'StorageAccounts#beginCreate~regex'
+      - 'StorageAccounts#beginCreate~requestUrl'
+      - 'StorageAccounts#beginCreate~httpRequest'
+      - 'StorageAccounts#beginCreate~headerName'
+      - 'StorageAccounts#beginCreate~requestContent'
+      - 'StorageAccounts#beginCreate~requestModel'
+      - 'StorageAccounts#beginCreate~requestModelMapper'
+      - 'StorageAccounts#beginCreate~requestModel'
+      - 'StorageAccounts#beginCreate~requestContent'
+      - 'StorageAccounts#beginCreate~serializationError'
+  - uid: 'StorageAccounts#deleteMethod'
+    id: deleteMethod
+    parent: StorageAccounts
+    name: >-
+      deleteMethod(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    summary: Deletes a storage account in Microsoft Azure.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group within the\ruser's subscription."
+        - id: accountName
+          type: string
+          description: "The name of the storage account within the\rspecified resource group. Storage account names must be between 3 and 24\rcharacters in length and use numbers and lower-case letters only."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, accountName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.deleteMethod(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#deleteMethod~client'
+      - 'StorageAccounts#deleteMethod~callback'
+      - 'StorageAccounts#deleteMethod~options'
+      - 'StorageAccounts#deleteMethod~requestUrl'
+      - 'StorageAccounts#deleteMethod~requestUrl'
+      - 'StorageAccounts#deleteMethod~requestUrl'
+      - 'StorageAccounts#deleteMethod~requestUrl'
+      - 'StorageAccounts#deleteMethod~queryParameters'
+      - 'StorageAccounts#deleteMethod~requestUrl'
+      - 'StorageAccounts#deleteMethod~regex'
+      - 'StorageAccounts#deleteMethod~requestUrl'
+      - 'StorageAccounts#deleteMethod~httpRequest'
+      - 'StorageAccounts#deleteMethod~headerName'
+  - uid: 'StorageAccounts#getProperties'
+    id: getProperties
+    parent: StorageAccounts
+    name: >-
+      getProperties(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    summary: "Returns the properties for the specified storage account including but not\rlimited to name, account type, location, and account status. The ListKeys\roperation should be used to retrieve storage keys."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group within the\ruser's subscription."
+        - id: accountName
+          type: string
+          description: "The name of the storage account within the\rspecified resource group. Storage account names must be between 3 and 24\rcharacters in length and use numbers and lower-case letters only."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getProperties(resourceGroupName, accountName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.getProperties(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#getProperties~client'
+      - 'StorageAccounts#getProperties~callback'
+      - 'StorageAccounts#getProperties~options'
+      - 'StorageAccounts#getProperties~requestUrl'
+      - 'StorageAccounts#getProperties~requestUrl'
+      - 'StorageAccounts#getProperties~requestUrl'
+      - 'StorageAccounts#getProperties~requestUrl'
+      - 'StorageAccounts#getProperties~queryParameters'
+      - 'StorageAccounts#getProperties~requestUrl'
+      - 'StorageAccounts#getProperties~regex'
+      - 'StorageAccounts#getProperties~requestUrl'
+      - 'StorageAccounts#getProperties~httpRequest'
+      - 'StorageAccounts#getProperties~headerName'
+  - uid: 'StorageAccounts#update'
+    id: update
+    parent: StorageAccounts
+    name: >-
+      update(resourceGroupName, accountName, parameters, parameters.sku,
+      parameters.sku.name, parameters.tags, parameters.customDomain,
+      parameters.customDomain.name, parameters.customDomain.useSubDomain,
+      parameters.encryption, parameters.encryption.services,
+      parameters.encryption.services.blob,
+      parameters.encryption.services.blob.enabled, parameters.accessTier,
+      options, options.customHeaders, callback)
+    summary: "The update operation can be used to update the account type, encryption, or\rtags for a storage account. It can also be used to map the account to a\rcustom domain. Only one custom domain is supported per storage account\rand. replacement/change of custom domain is not supported. In order to\rreplace an old custom domain, the old value must be cleared/unregistered\rbefore a new value may be set. Update of multiple properties is supported.\rThis call does not change the storage keys for the account. If you want to\rchange storage account keys, use the regenerate keys operation.  The\rlocation and name of the storage account cannot be changed after creation."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group within the\ruser's subscription."
+        - id: accountName
+          type: string
+          description: "The name of the storage account within the\rspecified resource group. Storage account names must be between 3 and 24\rcharacters in length and use numbers and lower-case letters only."
+        - id: parameters
+          type: object
+          description: "The parameters to provide for the updated\raccount."
+        - id: parameters.sku
+          type: object
+          description: "Gets or sets the sku type. Note that sku\rcannot be updated to StandardZRS or ProvisionedLRS, nor can accounts of\rthat sku type be updated to any other value."
+        - id: parameters.sku.name
+          type: string
+          description: "Gets or sets the sku name. Required\rfor account creation, optional for update. Note that in older versions,\rsku name was called accountType. Possible values include: 'Standard_LRS',\r'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS'"
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets a list of key value pairs\rthat describe the resource. These tags can be used in viewing and grouping\rthis resource (across resource groups). A maximum of 15 tags can be\rprovided for a resource. Each tag must have a key no greater than 128\rcharacters and value no greater than 256 characters."
+        - id: parameters.customDomain
+          type: object
+          description: "User domain assigned to the\rstorage account. Name is the CNAME source. Only one custom domain is\rsupported per storage account at this time. To clear the existing custom\rdomain, use an empty string for the custom domain name property."
+        - id: parameters.customDomain.name
+          type: string
+          description: "Gets or sets the custom\rdomain name. Name is the CNAME source."
+        - id: parameters.customDomain.useSubDomain
+          type: boolean
+          description: "Indicates whether\rindirect CName validation is enabled. Default value is false. This should\ronly be set on updates"
+        - id: parameters.encryption
+          type: object
+          description: "Provides the encryption settings on\rthe account. The default setting is unencrypted."
+        - id: parameters.encryption.services
+          type: object
+          description: "Gets the services which\rare encrypted."
+        - id: parameters.encryption.services.blob
+          type: object
+          description: The blob service.
+        - id: parameters.encryption.services.blob.enabled
+          type: boolean
+          description: "A boolean\rindicating whether or not the service is encrypted."
+        - id: parameters.accessTier
+          type: string
+          description: "The access tier used for billing.\rAccess tier cannot be changed more than once every 7 days (168 hours).\rAccess tier cannot be set for StandardLRS, StandardGRS, StandardRAGRS, or\rPremiumLRS account types. Possible values include: 'Hot', 'Cool'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(resourceGroupName, accountName, parameters,
+        parameters.sku, parameters.sku.name, parameters.tags,
+        parameters.customDomain, parameters.customDomain.name,
+        parameters.customDomain.useSubDomain, parameters.encryption,
+        parameters.encryption.services, parameters.encryption.services.blob,
+        parameters.encryption.services.blob.enabled, parameters.accessTier,
+        options, options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.update(resourceGroupName, accountName, parameters,
+      parameters.sku, parameters.sku.name, parameters.tags,
+      parameters.customDomain, parameters.customDomain.name,
+      parameters.customDomain.useSubDomain, parameters.encryption,
+      parameters.encryption.services, parameters.encryption.services.blob,
+      parameters.encryption.services.blob.enabled, parameters.accessTier,
+      options, options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#update~client'
+      - 'StorageAccounts#update~callback'
+      - 'StorageAccounts#update~options'
+      - 'StorageAccounts#update~parameters'
+      - 'StorageAccounts#update~requestUrl'
+      - 'StorageAccounts#update~requestUrl'
+      - 'StorageAccounts#update~requestUrl'
+      - 'StorageAccounts#update~requestUrl'
+      - 'StorageAccounts#update~queryParameters'
+      - 'StorageAccounts#update~requestUrl'
+      - 'StorageAccounts#update~regex'
+      - 'StorageAccounts#update~requestUrl'
+      - 'StorageAccounts#update~httpRequest'
+      - 'StorageAccounts#update~headerName'
+      - 'StorageAccounts#update~requestContent'
+      - 'StorageAccounts#update~requestModel'
+      - 'StorageAccounts#update~requestModelMapper'
+      - 'StorageAccounts#update~requestModel'
+      - 'StorageAccounts#update~requestContent'
+      - 'StorageAccounts#update~serializationError'
+  - uid: 'StorageAccounts#list'
+    id: list
+    parent: StorageAccounts
+    name: 'list(options, options.customHeaders, callback)'
+    summary: "Lists all the storage accounts available under the subscription. Note that\rstorage keys are not returned; use the ListKeys operation for this."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.customHeaders, callback);'
+    fullName: 'StorageAccounts.list(options, options.customHeaders, callback)'
+    children:
+      - 'StorageAccounts#list~client'
+      - 'StorageAccounts#list~callback'
+      - 'StorageAccounts#list~options'
+      - 'StorageAccounts#list~requestUrl'
+      - 'StorageAccounts#list~requestUrl'
+      - 'StorageAccounts#list~queryParameters'
+      - 'StorageAccounts#list~requestUrl'
+      - 'StorageAccounts#list~regex'
+      - 'StorageAccounts#list~requestUrl'
+      - 'StorageAccounts#list~httpRequest'
+      - 'StorageAccounts#list~headerName'
+  - uid: 'StorageAccounts#listByResourceGroup'
+    id: listByResourceGroup
+    parent: StorageAccounts
+    name: >-
+      listByResourceGroup(resourceGroupName, options, options.customHeaders,
+      callback)
+    summary: "Lists all the storage accounts available under the given resource group.\rNote that storage keys are not returned; use the ListKeys operation for\rthis."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group within the\ruser's subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByResourceGroup(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.listByResourceGroup(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#listByResourceGroup~client'
+      - 'StorageAccounts#listByResourceGroup~callback'
+      - 'StorageAccounts#listByResourceGroup~options'
+      - 'StorageAccounts#listByResourceGroup~requestUrl'
+      - 'StorageAccounts#listByResourceGroup~requestUrl'
+      - 'StorageAccounts#listByResourceGroup~requestUrl'
+      - 'StorageAccounts#listByResourceGroup~queryParameters'
+      - 'StorageAccounts#listByResourceGroup~requestUrl'
+      - 'StorageAccounts#listByResourceGroup~regex'
+      - 'StorageAccounts#listByResourceGroup~requestUrl'
+      - 'StorageAccounts#listByResourceGroup~httpRequest'
+      - 'StorageAccounts#listByResourceGroup~headerName'
+  - uid: 'StorageAccounts#listKeys'
+    id: listKeys
+    parent: StorageAccounts
+    name: >-
+      listKeys(resourceGroupName, accountName, options, options.customHeaders,
+      callback)
+    summary: Lists the access keys for the specified storage account.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: accountName
+          type: string
+          description: The name of the storage account.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListKeysResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listKeys(resourceGroupName, accountName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.listKeys(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#listKeys~client'
+      - 'StorageAccounts#listKeys~callback'
+      - 'StorageAccounts#listKeys~options'
+      - 'StorageAccounts#listKeys~requestUrl'
+      - 'StorageAccounts#listKeys~requestUrl'
+      - 'StorageAccounts#listKeys~requestUrl'
+      - 'StorageAccounts#listKeys~requestUrl'
+      - 'StorageAccounts#listKeys~queryParameters'
+      - 'StorageAccounts#listKeys~requestUrl'
+      - 'StorageAccounts#listKeys~regex'
+      - 'StorageAccounts#listKeys~requestUrl'
+      - 'StorageAccounts#listKeys~httpRequest'
+      - 'StorageAccounts#listKeys~headerName'
+  - uid: 'StorageAccounts#regenerateKey'
+    id: regenerateKey
+    parent: StorageAccounts
+    name: >-
+      regenerateKey(resourceGroupName, accountName, keyName, options,
+      options.customHeaders, callback)
+    summary: Regenerates the access keys for the specified storage account.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group within the\ruser's subscription."
+        - id: accountName
+          type: string
+          description: "The name of the storage account within the\rspecified resource group. Storage account names must be between 3 and 24\rcharacters in length and use numbers and lower-case letters only."
+        - id: keyName
+          type: string
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListKeysResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function regenerateKey(resourceGroupName, accountName, keyName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      StorageAccounts.regenerateKey(resourceGroupName, accountName, keyName,
+      options, options.customHeaders, callback)
+    children:
+      - 'StorageAccounts#regenerateKey~client'
+      - 'StorageAccounts#regenerateKey~callback'
+      - 'StorageAccounts#regenerateKey~options'
+      - 'StorageAccounts#regenerateKey~regenerateKey'
+      - 'StorageAccounts#regenerateKey~regenerateKey'
+      - 'StorageAccounts#regenerateKey~requestUrl'
+      - 'StorageAccounts#regenerateKey~requestUrl'
+      - 'StorageAccounts#regenerateKey~requestUrl'
+      - 'StorageAccounts#regenerateKey~requestUrl'
+      - 'StorageAccounts#regenerateKey~queryParameters'
+      - 'StorageAccounts#regenerateKey~requestUrl'
+      - 'StorageAccounts#regenerateKey~regex'
+      - 'StorageAccounts#regenerateKey~requestUrl'
+      - 'StorageAccounts#regenerateKey~httpRequest'
+      - 'StorageAccounts#regenerateKey~headerName'
+      - 'StorageAccounts#regenerateKey~requestContent'
+      - 'StorageAccounts#regenerateKey~requestModel'
+      - 'StorageAccounts#regenerateKey~requestModelMapper'
+      - 'StorageAccounts#regenerateKey~requestModel'
+      - 'StorageAccounts#regenerateKey~requestContent'
+      - 'StorageAccounts#regenerateKey~serializationError'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

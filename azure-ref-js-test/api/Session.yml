@@ -1,0 +1,250 @@
+items:
+  - uid: Session
+    id: Session
+    name: Session
+    type: Class
+    syntax:
+      content: Session
+    fullName: Session
+    children:
+      - 'Session#client'
+      - 'Session#create'
+      - 'Session#beginCreate'
+      - 'Session#deleteMethod'
+      - 'Session#get'
+  - uid: 'Session#client'
+    id: client
+    parent: Session
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Session.client
+  - uid: 'Session#create'
+    id: create
+    parent: Session
+    name: >-
+      create(resourceGroupName, nodeName, session, options, options.userName,
+      options.password, options.customHeaders, callback)
+    summary: Creates a session for a node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.userName
+          type: string
+          description: User name to be used to connect to node
+        - id: options.password
+          type: string
+          description: Password associated with user name
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SessionResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(resourceGroupName, nodeName, session, options,
+        options.userName, options.password, options.customHeaders, callback);
+    fullName: >-
+      Session.create(resourceGroupName, nodeName, session, options,
+      options.userName, options.password, options.customHeaders, callback)
+    children:
+      - 'Session#create~client'
+      - 'Session#create~callback'
+      - 'Session#create~options'
+  - uid: 'Session#beginCreate'
+    id: beginCreate
+    parent: Session
+    name: >-
+      beginCreate(resourceGroupName, nodeName, session, options,
+      options.userName, options.password, options.customHeaders, callback)
+    summary: Creates a session for a node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.userName
+          type: string
+          description: User name to be used to connect to node
+        - id: options.password
+          type: string
+          description: Password associated with user name
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SessionResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(resourceGroupName, nodeName, session, options,
+        options.userName, options.password, options.customHeaders, callback);
+    fullName: >-
+      Session.beginCreate(resourceGroupName, nodeName, session, options,
+      options.userName, options.password, options.customHeaders, callback)
+    children:
+      - 'Session#beginCreate~client'
+      - 'Session#beginCreate~callback'
+      - 'Session#beginCreate~options'
+      - 'Session#beginCreate~userName'
+      - 'Session#beginCreate~password'
+      - 'Session#beginCreate~sessionParameters'
+      - 'Session#beginCreate~sessionParameters'
+      - 'Session#beginCreate~requestUrl'
+      - 'Session#beginCreate~requestUrl'
+      - 'Session#beginCreate~requestUrl'
+      - 'Session#beginCreate~requestUrl'
+      - 'Session#beginCreate~requestUrl'
+      - 'Session#beginCreate~queryParameters'
+      - 'Session#beginCreate~requestUrl'
+      - 'Session#beginCreate~regex'
+      - 'Session#beginCreate~requestUrl'
+      - 'Session#beginCreate~httpRequest'
+      - 'Session#beginCreate~headerName'
+      - 'Session#beginCreate~requestContent'
+      - 'Session#beginCreate~requestModel'
+      - 'Session#beginCreate~requestModelMapper'
+      - 'Session#beginCreate~requestModel'
+      - 'Session#beginCreate~requestContent'
+      - 'Session#beginCreate~serializationError'
+  - uid: 'Session#deleteMethod'
+    id: deleteMethod
+    parent: Session
+    name: >-
+      deleteMethod(resourceGroupName, nodeName, session, options,
+      options.customHeaders, callback)
+    summary: Deletes a session for a node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, nodeName, session, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Session.deleteMethod(resourceGroupName, nodeName, session, options,
+      options.customHeaders, callback)
+    children:
+      - 'Session#deleteMethod~client'
+      - 'Session#deleteMethod~callback'
+      - 'Session#deleteMethod~options'
+      - 'Session#deleteMethod~requestUrl'
+      - 'Session#deleteMethod~requestUrl'
+      - 'Session#deleteMethod~requestUrl'
+      - 'Session#deleteMethod~requestUrl'
+      - 'Session#deleteMethod~requestUrl'
+      - 'Session#deleteMethod~queryParameters'
+      - 'Session#deleteMethod~requestUrl'
+      - 'Session#deleteMethod~regex'
+      - 'Session#deleteMethod~requestUrl'
+      - 'Session#deleteMethod~httpRequest'
+      - 'Session#deleteMethod~headerName'
+  - uid: 'Session#get'
+    id: get
+    parent: Session
+    name: >-
+      get(resourceGroupName, nodeName, session, options, options.customHeaders,
+      callback)
+    summary: Gets a session for a node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SessionResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, nodeName, session, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Session.get(resourceGroupName, nodeName, session, options,
+      options.customHeaders, callback)
+    children:
+      - 'Session#get~client'
+      - 'Session#get~callback'
+      - 'Session#get~options'
+      - 'Session#get~requestUrl'
+      - 'Session#get~requestUrl'
+      - 'Session#get~requestUrl'
+      - 'Session#get~requestUrl'
+      - 'Session#get~requestUrl'
+      - 'Session#get~queryParameters'
+      - 'Session#get~requestUrl'
+      - 'Session#get~regex'
+      - 'Session#get~requestUrl'
+      - 'Session#get~httpRequest'
+      - 'Session#get~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

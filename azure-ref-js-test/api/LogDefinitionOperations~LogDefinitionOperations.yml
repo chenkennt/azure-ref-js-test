@@ -1,0 +1,75 @@
+items:
+  - uid: LogDefinitionOperations~LogDefinitionOperations
+    id: LogDefinitionOperations
+    parent: LogDefinitionOperations
+    name: LogDefinitionOperations
+    type: Class
+    syntax:
+      content: LogDefinitionOperations
+    fullName: LogDefinitionOperations.LogDefinitionOperations
+    children:
+      - 'LogDefinitionOperations~LogDefinitionOperations#client'
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions'
+  - uid: 'LogDefinitionOperations~LogDefinitionOperations#client'
+    id: client
+    parent: LogDefinitionOperations~LogDefinitionOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: LogDefinitionOperations~LogDefinitionOperations.client
+  - uid: 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions'
+    id: getLogDefinitions
+    parent: LogDefinitionOperations~LogDefinitionOperations
+    name: 'getLogDefinitions(resourceUri, filterString, callback)'
+    summary: "The List Log Definitions operation lists the log definitions for the\rresource."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceUri
+          type: string
+          description: "The resource identifier of the target resource\rto get logs for."
+        - id: filterString
+          type: string
+          description: "An OData $filter expression that supports\rquerying by the name of the log definition. For example, \"name.value eq\r'Percentage CPU'\". Name is optional, meaning the expression may be \"\"."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getLogDefinitions(resourceUri, filterString, callback);'
+    fullName: >-
+      LogDefinitionOperations~LogDefinitionOperations.getLogDefinitions(resourceUri,
+      filterString, callback)
+    children:
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - >-
+        LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~queryParameters
+      - >-
+        LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~odataFilter
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - >-
+        LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~baseUrl
+      - >-
+        LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~baseUrl
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - 'LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~url2'
+      - >-
+        LogDefinitionOperations~LogDefinitionOperations#getLogDefinitions~httpRequest
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

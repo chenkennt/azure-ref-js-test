@@ -1,0 +1,323 @@
+items:
+  - uid: Provider
+    id: Provider
+    name: Provider
+    type: Class
+    syntax:
+      content: Provider
+    fullName: Provider
+    children:
+      - 'Provider#client'
+      - 'Provider#getSourceControls'
+      - 'Provider#getSourceControl'
+      - 'Provider#updateSourceControl'
+      - 'Provider#getPublishingUser'
+      - 'Provider#updatePublishingUser'
+  - uid: 'Provider#client'
+    id: client
+    parent: Provider
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Provider.client
+  - uid: 'Provider#getSourceControls'
+    id: getSourceControls
+    parent: Provider
+    name: 'getSourceControls(options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SourceControlCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function getSourceControls(options, options.customHeaders, callback);'
+    fullName: 'Provider.getSourceControls(options, options.customHeaders, callback)'
+    children:
+      - 'Provider#getSourceControls~client'
+      - 'Provider#getSourceControls~callback'
+      - 'Provider#getSourceControls~options'
+      - 'Provider#getSourceControls~requestUrl'
+      - 'Provider#getSourceControls~queryParameters'
+      - 'Provider#getSourceControls~requestUrl'
+      - 'Provider#getSourceControls~regex'
+      - 'Provider#getSourceControls~requestUrl'
+      - 'Provider#getSourceControls~httpRequest'
+      - 'Provider#getSourceControls~headerName'
+  - uid: 'Provider#getSourceControl'
+    id: getSourceControl
+    parent: Provider
+    name: >-
+      getSourceControl(sourceControlType, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: sourceControlType
+          type: string
+          description: Type of source control
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SourceControl} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getSourceControl(sourceControlType, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Provider.getSourceControl(sourceControlType, options,
+      options.customHeaders, callback)
+    children:
+      - 'Provider#getSourceControl~client'
+      - 'Provider#getSourceControl~callback'
+      - 'Provider#getSourceControl~options'
+      - 'Provider#getSourceControl~requestUrl'
+      - 'Provider#getSourceControl~requestUrl'
+      - 'Provider#getSourceControl~queryParameters'
+      - 'Provider#getSourceControl~requestUrl'
+      - 'Provider#getSourceControl~regex'
+      - 'Provider#getSourceControl~requestUrl'
+      - 'Provider#getSourceControl~httpRequest'
+      - 'Provider#getSourceControl~headerName'
+  - uid: 'Provider#updateSourceControl'
+    id: updateSourceControl
+    parent: Provider
+    name: >-
+      updateSourceControl(sourceControlType, requestMessage,
+      requestMessage.sourceControlName, requestMessage.token,
+      requestMessage.tokenSecret, requestMessage.refreshToken,
+      requestMessage.expirationTime, requestMessage.id, requestMessage.name,
+      requestMessage.kind, requestMessage.location, requestMessage.type,
+      requestMessage.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: sourceControlType
+          type: string
+          description: Type of source control
+        - id: requestMessage
+          type: object
+          description: Source control token information
+        - id: requestMessage.sourceControlName
+          type: string
+          description: "Name or Source Control\rType"
+        - id: requestMessage.token
+          type: string
+          description: OAuth Access Token
+        - id: requestMessage.tokenSecret
+          type: string
+          description: OAuth Access Token Secret
+        - id: requestMessage.refreshToken
+          type: string
+          description: OAuth Refresh Token
+        - id: requestMessage.expirationTime
+          type: date
+          description: OAuth Token Expiration
+        - id: requestMessage.id
+          type: string
+          description: Resource Id
+        - id: requestMessage.name
+          type: string
+          description: Resource Name
+        - id: requestMessage.kind
+          type: string
+          description: Kind of resource
+        - id: requestMessage.location
+          type: string
+          description: Resource Location
+        - id: requestMessage.type
+          type: string
+          description: Resource type
+        - id: requestMessage.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SourceControl} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateSourceControl(sourceControlType, requestMessage,
+        requestMessage.sourceControlName, requestMessage.token,
+        requestMessage.tokenSecret, requestMessage.refreshToken,
+        requestMessage.expirationTime, requestMessage.id, requestMessage.name,
+        requestMessage.kind, requestMessage.location, requestMessage.type,
+        requestMessage.tags, options, options.customHeaders, callback);
+    fullName: >-
+      Provider.updateSourceControl(sourceControlType, requestMessage,
+      requestMessage.sourceControlName, requestMessage.token,
+      requestMessage.tokenSecret, requestMessage.refreshToken,
+      requestMessage.expirationTime, requestMessage.id, requestMessage.name,
+      requestMessage.kind, requestMessage.location, requestMessage.type,
+      requestMessage.tags, options, options.customHeaders, callback)
+    children:
+      - 'Provider#updateSourceControl~client'
+      - 'Provider#updateSourceControl~callback'
+      - 'Provider#updateSourceControl~options'
+      - 'Provider#updateSourceControl~requestUrl'
+      - 'Provider#updateSourceControl~requestUrl'
+      - 'Provider#updateSourceControl~queryParameters'
+      - 'Provider#updateSourceControl~requestUrl'
+      - 'Provider#updateSourceControl~regex'
+      - 'Provider#updateSourceControl~requestUrl'
+      - 'Provider#updateSourceControl~httpRequest'
+      - 'Provider#updateSourceControl~headerName'
+      - 'Provider#updateSourceControl~requestContent'
+      - 'Provider#updateSourceControl~requestModel'
+      - 'Provider#updateSourceControl~requestModelMapper'
+      - 'Provider#updateSourceControl~requestModel'
+      - 'Provider#updateSourceControl~requestContent'
+      - 'Provider#updateSourceControl~serializationError'
+  - uid: 'Provider#getPublishingUser'
+    id: getPublishingUser
+    parent: Provider
+    name: 'getPublishingUser(options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function getPublishingUser(options, options.customHeaders, callback);'
+    fullName: 'Provider.getPublishingUser(options, options.customHeaders, callback)'
+    children:
+      - 'Provider#getPublishingUser~client'
+      - 'Provider#getPublishingUser~callback'
+      - 'Provider#getPublishingUser~options'
+      - 'Provider#getPublishingUser~requestUrl'
+      - 'Provider#getPublishingUser~queryParameters'
+      - 'Provider#getPublishingUser~requestUrl'
+      - 'Provider#getPublishingUser~regex'
+      - 'Provider#getPublishingUser~requestUrl'
+      - 'Provider#getPublishingUser~httpRequest'
+      - 'Provider#getPublishingUser~headerName'
+  - uid: 'Provider#updatePublishingUser'
+    id: updatePublishingUser
+    parent: Provider
+    name: >-
+      updatePublishingUser(requestMessage, requestMessage.userName,
+      requestMessage.publishingUserName, requestMessage.publishingPassword,
+      requestMessage.scmUri, requestMessage.id, requestMessage.name,
+      requestMessage.kind, requestMessage.location, requestMessage.type,
+      requestMessage.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: requestMessage
+          type: object
+          description: Details of publishing user
+        - id: requestMessage.userName
+          type: string
+          description: Username (internal)
+        - id: requestMessage.publishingUserName
+          type: string
+          description: "Username used for\rpublishing"
+        - id: requestMessage.publishingPassword
+          type: string
+          description: "Password used for\rpublishing"
+        - id: requestMessage.scmUri
+          type: string
+          description: "Service Control Manager URI,\rincluding username and password"
+        - id: requestMessage.id
+          type: string
+          description: Resource Id
+        - id: requestMessage.name
+          type: string
+          description: Resource Name
+        - id: requestMessage.kind
+          type: string
+          description: Kind of resource
+        - id: requestMessage.location
+          type: string
+          description: Resource Location
+        - id: requestMessage.type
+          type: string
+          description: Resource type
+        - id: requestMessage.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updatePublishingUser(requestMessage, requestMessage.userName,
+        requestMessage.publishingUserName, requestMessage.publishingPassword,
+        requestMessage.scmUri, requestMessage.id, requestMessage.name,
+        requestMessage.kind, requestMessage.location, requestMessage.type,
+        requestMessage.tags, options, options.customHeaders, callback);
+    fullName: >-
+      Provider.updatePublishingUser(requestMessage, requestMessage.userName,
+      requestMessage.publishingUserName, requestMessage.publishingPassword,
+      requestMessage.scmUri, requestMessage.id, requestMessage.name,
+      requestMessage.kind, requestMessage.location, requestMessage.type,
+      requestMessage.tags, options, options.customHeaders, callback)
+    children:
+      - 'Provider#updatePublishingUser~client'
+      - 'Provider#updatePublishingUser~callback'
+      - 'Provider#updatePublishingUser~options'
+      - 'Provider#updatePublishingUser~requestUrl'
+      - 'Provider#updatePublishingUser~queryParameters'
+      - 'Provider#updatePublishingUser~requestUrl'
+      - 'Provider#updatePublishingUser~regex'
+      - 'Provider#updatePublishingUser~requestUrl'
+      - 'Provider#updatePublishingUser~httpRequest'
+      - 'Provider#updatePublishingUser~headerName'
+      - 'Provider#updatePublishingUser~requestContent'
+      - 'Provider#updatePublishingUser~requestModel'
+      - 'Provider#updatePublishingUser~requestModelMapper'
+      - 'Provider#updatePublishingUser~requestModel'
+      - 'Provider#updatePublishingUser~requestContent'
+      - 'Provider#updatePublishingUser~serializationError'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false

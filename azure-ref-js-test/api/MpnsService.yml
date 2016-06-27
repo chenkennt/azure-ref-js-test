@@ -1,0 +1,1071 @@
+items:
+  - uid: MpnsService
+    id: MpnsService
+    name: MpnsService
+    summary: "Creates a new MpnsService object.\r\r__Note__: An instance of this object is created automatically when a {@link NotificationHubService}\robject is created. See {@link NotificationHubService#gcm}."
+    type: Class
+    syntax:
+      content: MpnsService
+    fullName: MpnsService
+    children:
+      - MpnsService~self
+      - 'MpnsService#notificationHubService'
+      - MpnsService~addSendMethod
+      - MpnsService~addCreateAndUpdateRegistrationMethod
+      - 'MpnsService#createNativeRegistration'
+      - 'MpnsService#createOrUpdateNativeRegistration'
+      - 'MpnsService#createFlipTileRegistration'
+      - 'MpnsService#createTileRegistration'
+      - 'MpnsService#createToastRegistration'
+      - 'MpnsService#createRawTemplateRegistration'
+      - 'MpnsService#createOrUpdateRawTemplateRegistration'
+      - 'MpnsService#updateFlipTileRegistration'
+      - 'MpnsService#updateTileRegistration'
+      - 'MpnsService#updatesToastRegistration'
+      - 'MpnsService#updatesRawTemplateRegistration'
+      - 'MpnsService#listRegistrationsByChannel'
+      - 'MpnsService#sendFlipTile'
+      - 'MpnsService#sendTile'
+      - 'MpnsService#sendToast'
+      - 'MpnsService#send'
+      - 'MpnsService#_createBody'
+      - 'MpnsService#_createTemplateBody'
+  - uid: MpnsService~self
+    id: self
+    parent: MpnsService
+    name: self
+    type: Field
+    syntax:
+      content: self
+    fullName: MpnsService.self
+    children:
+      - 'MpnsService~self.undefined]'
+      - 'MpnsService~self.undefined]'
+      - 'MpnsService~self.undefined]'
+      - 'MpnsService~self.undefined]'
+      - 'MpnsService~self.undefined]'
+  - uid: 'MpnsService#notificationHubService'
+    id: notificationHubService
+    parent: MpnsService
+    name: notificationHubService
+    type: Field
+    syntax:
+      content: notificationHubService
+    fullName: MpnsService.notificationHubService
+  - uid: MpnsService~addSendMethod
+    id: addSendMethod
+    parent: MpnsService
+    name: addSendMethod()
+    type: Method
+    syntax:
+      content: function addSendMethod();
+    fullName: MpnsService.addSendMethod()
+    children:
+      - MpnsService~addSendMethod~sendName
+  - uid: MpnsService~addCreateAndUpdateRegistrationMethod
+    id: addCreateAndUpdateRegistrationMethod
+    parent: MpnsService
+    name: addCreateAndUpdateRegistrationMethod()
+    type: Method
+    syntax:
+      content: function addCreateAndUpdateRegistrationMethod();
+    fullName: MpnsService.addCreateAndUpdateRegistrationMethod()
+    children:
+      - MpnsService~addCreateAndUpdateRegistrationMethod~createRegistrationXml
+      - MpnsService~addCreateAndUpdateRegistrationMethod~createRegistrationName
+      - MpnsService~addCreateAndUpdateRegistrationMethod~updateRegistrationName
+      - >-
+        MpnsService~addCreateAndUpdateRegistrationMethod~createOrUpdateRegistrationName
+  - uid: 'MpnsService#createNativeRegistration'
+    id: createNativeRegistration
+    parent: MpnsService
+    name: 'createNativeRegistration(channel, tags, options, callback)'
+    summary: Creates a native MPNS registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: options
+          type: object
+          description: The request options.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: 'function createNativeRegistration(channel, tags, options, callback);'
+    fullName: 'MpnsService.createNativeRegistration(channel, tags, options, callback)'
+    children:
+      - 'MpnsService#createNativeRegistration~options'
+      - 'MpnsService#createNativeRegistration~registrationXml'
+      - 'MpnsService#createNativeRegistration~webResource'
+  - uid: 'MpnsService#createOrUpdateNativeRegistration'
+    id: createOrUpdateNativeRegistration
+    parent: MpnsService
+    name: >-
+      createOrUpdateNativeRegistration(registrationId, channel, tags, options,
+      callback)
+    summary: Creates or updates a native MPNS registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: options
+          type: object
+          description: The request options.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createOrUpdateNativeRegistration(registrationId, channel, tags,
+        options, callback);
+    fullName: >-
+      MpnsService.createOrUpdateNativeRegistration(registrationId, channel,
+      tags, options, callback)
+    children:
+      - 'MpnsService#createOrUpdateNativeRegistration~options'
+      - 'MpnsService#createOrUpdateNativeRegistration~registrationXml'
+      - 'MpnsService#createOrUpdateNativeRegistration~webResource'
+  - uid: 'MpnsService#createFlipTileRegistration'
+    id: createFlipTileRegistration
+    parent: MpnsService
+    name: >-
+      createFlipTileRegistration(channel, tags, template,
+      template.backgroundImage, template.count, template.title,
+      template.backBackgroundImage, template.backTitle, template.backContent,
+      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
+      template.wideBackContent, template.wideBackBackgroundImage, options,
+      options.headers, callback)
+    summary: >-
+      Creates a registration with a FlipTile template (Only Windows Phone
+      version 7.8 or later). For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: object
+          description: The registration template.
+        - id: template.backgroundImage
+          type: string
+          description: The URI of the background image for the tile.
+        - id: template.count
+          type: string
+          description: The number that appears on the tile.
+        - id: template.title
+          type: string
+          description: The title text of the tile.
+        - id: template.backBackgroundImage
+          type: string
+          description: The URI of the image that is shown on the backside of the tile.
+        - id: template.backTitle
+          type: string
+          description: Title for the backside side of the tile.
+        - id: template.backContent
+          type: string
+          description: Text for the backside of the tile.
+        - id: template.id
+          type: string
+          description: 'ID of a related, secondary tile.'
+        - id: template.smallBackgroundImage
+          type: string
+          description: >-
+            The URI for the background image for the tile when it is reduced to
+            its small size.
+        - id: template.wideBackgroundImage
+          type: string
+          description: >-
+            The URI for the background image for the tile when it is expanded to
+            its wide size.
+        - id: template.wideBackContent
+          type: string
+          description: >-
+            Content for the back tile when the tile is expanded to its wide
+            size.
+        - id: template.wideBackBackgroundImage
+          type: string
+          description: >-
+            The URI for the image to be on the backside of the tile when the
+            tile is expanded to its wide size.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createFlipTileRegistration(channel, tags, template,
+        template.backgroundImage, template.count, template.title,
+        template.backBackgroundImage, template.backTitle, template.backContent,
+        template.id, template.smallBackgroundImage,
+        template.wideBackgroundImage, template.wideBackContent,
+        template.wideBackBackgroundImage, options, options.headers, callback);
+    fullName: >-
+      MpnsService.createFlipTileRegistration(channel, tags, template,
+      template.backgroundImage, template.count, template.title,
+      template.backBackgroundImage, template.backTitle, template.backContent,
+      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
+      template.wideBackContent, template.wideBackBackgroundImage, options,
+      options.headers, callback)
+  - uid: 'MpnsService#createTileRegistration'
+    id: createTileRegistration
+    parent: MpnsService
+    name: >-
+      createTileRegistration(channel, tags, template, template.backgroundImage,
+      template.count, template.title, template.backBackgroundImage,
+      template.backTitle, template.backContent, template.id, options,
+      options.headers, callback)
+    summary: >-
+      Creates a registration with a Tile template. For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: object
+          description: The registration template.
+        - id: template.backgroundImage
+          type: string
+          description: The URI of the background image for the tile.
+        - id: template.count
+          type: string
+          description: The number that appears on the tile.
+        - id: template.title
+          type: string
+          description: The title text of the tile.
+        - id: template.backBackgroundImage
+          type: string
+          description: The URI of the image that is shown on the backside of the tile.
+        - id: template.backTitle
+          type: string
+          description: Title for the backside side of the tile.
+        - id: template.backContent
+          type: string
+          description: Text for the backside of the tile.
+        - id: template.id
+          type: string
+          description: 'ID of a related, secondary tile.'
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createTileRegistration(channel, tags, template,
+        template.backgroundImage, template.count, template.title,
+        template.backBackgroundImage, template.backTitle, template.backContent,
+        template.id, options, options.headers, callback);
+    fullName: >-
+      MpnsService.createTileRegistration(channel, tags, template,
+      template.backgroundImage, template.count, template.title,
+      template.backBackgroundImage, template.backTitle, template.backContent,
+      template.id, options, options.headers, callback)
+  - uid: 'MpnsService#createToastRegistration'
+    id: createToastRegistration
+    parent: MpnsService
+    name: >-
+      createToastRegistration(channel, tags, template, template.text1,
+      template.text2, template.param, options, options.headers, callback)
+    summary: >-
+      Creates a registration with a Toast template For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: object
+          description: The registration template.
+        - id: template.text1
+          type: string
+          description: Text1
+        - id: template.text2
+          type: string
+          description: Text2
+        - id: template.param
+          type: string
+          description: (optional) (Only for Windows Phone version 7.5 or later)
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createToastRegistration(channel, tags, template,
+        template.text1, template.text2, template.param, options,
+        options.headers, callback);
+    fullName: >-
+      MpnsService.createToastRegistration(channel, tags, template,
+      template.text1, template.text2, template.param, options, options.headers,
+      callback)
+  - uid: 'MpnsService#createRawTemplateRegistration'
+    id: createRawTemplateRegistration
+    parent: MpnsService
+    name: >-
+      createRawTemplateRegistration(channel, tags, template, options,
+      options.headers, callback)
+    summary: Creates a raw template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers to include.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createRawTemplateRegistration(channel, tags, template, options,
+        options.headers, callback);
+    fullName: >-
+      MpnsService.createRawTemplateRegistration(channel, tags, template,
+      options, options.headers, callback)
+    children:
+      - 'MpnsService#createRawTemplateRegistration~options'
+      - 'MpnsService#createRawTemplateRegistration~registrationXml'
+      - 'MpnsService#createRawTemplateRegistration~webResource'
+  - uid: 'MpnsService#createOrUpdateRawTemplateRegistration'
+    id: createOrUpdateRawTemplateRegistration
+    parent: MpnsService
+    name: >-
+      createOrUpdateRawTemplateRegistration(registrationId, channel, tags,
+      template, options, options.headers, callback)
+    summary: Creates a raw template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers to include.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createOrUpdateRawTemplateRegistration(registrationId, channel,
+        tags, template, options, options.headers, callback);
+    fullName: >-
+      MpnsService.createOrUpdateRawTemplateRegistration(registrationId, channel,
+      tags, template, options, options.headers, callback)
+    children:
+      - 'MpnsService#createOrUpdateRawTemplateRegistration~options'
+      - 'MpnsService#createOrUpdateRawTemplateRegistration~registrationXml'
+      - 'MpnsService#createOrUpdateRawTemplateRegistration~webResource'
+  - uid: 'MpnsService#updateFlipTileRegistration'
+    id: updateFlipTileRegistration
+    parent: MpnsService
+    name: >-
+      updateFlipTileRegistration(registrationId, channel, tags, template,
+      template.backgroundImage, template.count, template.title,
+      template.backBackgroundImage, template.backTitle, template.backContent,
+      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
+      template.wideBackContent, template.wideBackBackgroundImage, options,
+      options.headers, callback)
+    summary: >-
+      Updates a registration with a FlipTile template (Only Windows Phone
+      version 7.8 or later). For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: object
+          description: The registration template.
+        - id: template.backgroundImage
+          type: string
+          description: The URI of the background image for the tile.
+        - id: template.count
+          type: string
+          description: The number that appears on the tile.
+        - id: template.title
+          type: string
+          description: The title text of the tile.
+        - id: template.backBackgroundImage
+          type: string
+          description: The URI of the image that is shown on the backside of the tile.
+        - id: template.backTitle
+          type: string
+          description: Title for the backside side of the tile.
+        - id: template.backContent
+          type: string
+          description: Text for the backside of the tile.
+        - id: template.id
+          type: string
+          description: 'ID of a related, secondary tile.'
+        - id: template.smallBackgroundImage
+          type: string
+          description: >-
+            The URI for the background image for the tile when it is reduced to
+            its small size.
+        - id: template.wideBackgroundImage
+          type: string
+          description: >-
+            The URI for the background image for the tile when it is expanded to
+            its wide size.
+        - id: template.wideBackContent
+          type: string
+          description: >-
+            Content for the back tile when the tile is expanded to its wide
+            size.
+        - id: template.wideBackBackgroundImage
+          type: string
+          description: >-
+            The URI for the image to be on the backside of the tile when the
+            tile is expanded to its wide size.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function updateFlipTileRegistration(registrationId, channel, tags,
+        template, template.backgroundImage, template.count, template.title,
+        template.backBackgroundImage, template.backTitle, template.backContent,
+        template.id, template.smallBackgroundImage,
+        template.wideBackgroundImage, template.wideBackContent,
+        template.wideBackBackgroundImage, options, options.headers, callback);
+    fullName: >-
+      MpnsService.updateFlipTileRegistration(registrationId, channel, tags,
+      template, template.backgroundImage, template.count, template.title,
+      template.backBackgroundImage, template.backTitle, template.backContent,
+      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
+      template.wideBackContent, template.wideBackBackgroundImage, options,
+      options.headers, callback)
+  - uid: 'MpnsService#updateTileRegistration'
+    id: updateTileRegistration
+    parent: MpnsService
+    name: >-
+      updateTileRegistration(registrationId, channel, tags, template,
+      template.backgroundImage, template.count, template.title,
+      template.backBackgroundImage, template.backTitle, template.backContent,
+      template.id, options, options.headers, callback)
+    summary: "Updates a registration with a Tile template. For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.\r\r\n<<<<<<< HEAD"
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: object
+          description: The registration template.
+        - id: template.backgroundImage
+          type: string
+          description: The URI of the background image for the tile.
+        - id: template.count
+          type: string
+          description: The number that appears on the tile.
+        - id: template.title
+          type: string
+          description: The title text of the tile.
+        - id: template.backBackgroundImage
+          type: string
+          description: The URI of the image that is shown on the backside of the tile.
+        - id: template.backTitle
+          type: string
+          description: Title for the backside side of the tile.
+        - id: template.backContent
+          type: string
+          description: Text for the backside of the tile.
+        - id: template.id
+          type: string
+          description: 'ID of a related, secondary tile.'
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function updateTileRegistration(registrationId, channel, tags, template,
+        template.backgroundImage, template.count, template.title,
+        template.backBackgroundImage, template.backTitle, template.backContent,
+        template.id, options, options.headers, callback);
+    fullName: >-
+      MpnsService.updateTileRegistration(registrationId, channel, tags,
+      template, template.backgroundImage, template.count, template.title,
+      template.backBackgroundImage, template.backTitle, template.backContent,
+      template.id, options, options.headers, callback)
+  - uid: 'MpnsService#updatesToastRegistration'
+    id: updatesToastRegistration
+    parent: MpnsService
+    name: >-
+      updatesToastRegistration(registrationId, channel, tags, template,
+      template.text1, template.text2, template.param, options, options.headers,
+      callback)
+    summary: >-
+      Updates a registration with a Toast template. For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: object
+          description: The registration template.
+        - id: template.text1
+          type: string
+          description: Text1
+        - id: template.text2
+          type: string
+          description: Text2
+        - id: template.param
+          type: string
+          description: (optional) (Only for Windows Phone version 7.5 or later)
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function updatesToastRegistration(registrationId, channel, tags,
+        template, template.text1, template.text2, template.param, options,
+        options.headers, callback);
+    fullName: >-
+      MpnsService.updatesToastRegistration(registrationId, channel, tags,
+      template, template.text1, template.text2, template.param, options,
+      options.headers, callback)
+  - uid: 'MpnsService#updatesRawTemplateRegistration'
+    id: updatesRawTemplateRegistration
+    parent: MpnsService
+    name: >-
+      updatesRawTemplateRegistration(registrationId, channel, tags, template,
+      options, options.headers, options.etag, callback)
+    summary: Updates a raw template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers to include.
+        - id: options.etag
+          type: object
+          description: The etag to include.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function updatesRawTemplateRegistration(registrationId, channel, tags,
+        template, options, options.headers, options.etag, callback);
+    fullName: >-
+      MpnsService.updatesRawTemplateRegistration(registrationId, channel, tags,
+      template, options, options.headers, options.etag, callback)
+    children:
+      - 'MpnsService#updatesRawTemplateRegistration~options'
+      - 'MpnsService#updatesRawTemplateRegistration~registrationXml'
+      - 'MpnsService#updatesRawTemplateRegistration~webResource'
+  - uid: 'MpnsService#listRegistrationsByChannel'
+    id: listRegistrationsByChannel
+    parent: MpnsService
+    name: >-
+      listRegistrationsByChannel(channel, options, options.top, options.skip,
+      callback)
+    summary: Retrieves a registration by channel.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The ChannelUri.
+        - id: options
+          type: object
+          description: >-
+            The request options. Additional properties will be passed as
+            headers.
+        - id: options.top
+          type: object
+          description: >-
+            Specifies the maximum number of registration to obtain from the
+            call.
+        - id: options.skip
+          type: object
+          description: Specifies the number of registrations to skip in the call.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function listRegistrationsByChannel(channel, options, options.top,
+        options.skip, callback);
+    fullName: >-
+      MpnsService.listRegistrationsByChannel(channel, options, options.top,
+      options.skip, callback)
+    children:
+      - 'MpnsService#listRegistrationsByChannel~options'
+      - 'MpnsService#listRegistrationsByChannel~webResource'
+  - uid: 'MpnsService#sendFlipTile'
+    id: sendFlipTile
+    parent: MpnsService
+    name: >-
+      sendFlipTile(tags, payload, payload.backgroundImage, payload.count,
+      payload.title, payload.backBackgroundImage, payload.backTitle,
+      payload.backContent, payload.id, payload.smallBackgroundImage,
+      payload.wideBackgroundImage, payload.wideBackContent,
+      payload.wideBackBackgroundImage, options, options.headers, callback)
+    summary: >-
+      Sends a FlipTile notification (Only Windows Phone version 7.8 or later).
+      For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: A single tag or tag expression.
+        - id: payload
+          type: object
+          description: The message's payload.
+        - id: payload.backgroundImage
+          type: string
+          description: The URI of the background image for the tile.
+        - id: payload.count
+          type: string
+          description: The number that appears on the tile.
+        - id: payload.title
+          type: string
+          description: The title text of the tile.
+        - id: payload.backBackgroundImage
+          type: string
+          description: The URI of the image that is shown on the backside of the tile.
+        - id: payload.backTitle
+          type: string
+          description: Title for the backside side of the tile.
+        - id: payload.backContent
+          type: string
+          description: Text for the backside of the tile.
+        - id: payload.id
+          type: string
+          description: 'ID of a related, secondary tile.'
+        - id: payload.smallBackgroundImage
+          type: string
+          description: >-
+            The URI for the background image for the tile when it is reduced to
+            its small size.
+        - id: payload.wideBackgroundImage
+          type: string
+          description: >-
+            The URI for the background image for the tile when it is expanded to
+            its wide size.
+        - id: payload.wideBackContent
+          type: string
+          description: >-
+            Content for the back tile when the tile is expanded to its wide
+            size.
+        - id: payload.wideBackBackgroundImage
+          type: string
+          description: >-
+            The URI for the image to be on the backside of the tile when the
+            tile is expanded to its wide size.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function sendFlipTile(tags, payload, payload.backgroundImage,
+        payload.count, payload.title, payload.backBackgroundImage,
+        payload.backTitle, payload.backContent, payload.id,
+        payload.smallBackgroundImage, payload.wideBackgroundImage,
+        payload.wideBackContent, payload.wideBackBackgroundImage, options,
+        options.headers, callback);
+    fullName: >-
+      MpnsService.sendFlipTile(tags, payload, payload.backgroundImage,
+      payload.count, payload.title, payload.backBackgroundImage,
+      payload.backTitle, payload.backContent, payload.id,
+      payload.smallBackgroundImage, payload.wideBackgroundImage,
+      payload.wideBackContent, payload.wideBackBackgroundImage, options,
+      options.headers, callback)
+  - uid: 'MpnsService#sendTile'
+    id: sendTile
+    parent: MpnsService
+    name: >-
+      sendTile(tags, payload, payload.backgroundImage, payload.count,
+      payload.title, payload.backBackgroundImage, payload.backTitle,
+      payload.backContent, payload.id, options, options.headers, callback)
+    summary: >-
+      Sends a Tile notification. For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: A single tag or tag expression.
+        - id: payload
+          type: object
+          description: The message's payload.
+        - id: payload.backgroundImage
+          type: string
+          description: The URI of the background image for the tile.
+        - id: payload.count
+          type: string
+          description: the number that appears on the tile.
+        - id: payload.title
+          type: string
+          description: the title text of the tile.
+        - id: payload.backBackgroundImage
+          type: string
+          description: The URI of the image that is shown on the backside of the tile.
+        - id: payload.backTitle
+          type: string
+          description: Title for the backside side of the tile.
+        - id: payload.backContent
+          type: string
+          description: Text for the backside of the tile.
+        - id: payload.id
+          type: string
+          description: 'ID of a related, secondary tile.'
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function sendTile(tags, payload, payload.backgroundImage, payload.count,
+        payload.title, payload.backBackgroundImage, payload.backTitle,
+        payload.backContent, payload.id, options, options.headers, callback);
+    fullName: >-
+      MpnsService.sendTile(tags, payload, payload.backgroundImage,
+      payload.count, payload.title, payload.backBackgroundImage,
+      payload.backTitle, payload.backContent, payload.id, options,
+      options.headers, callback)
+  - uid: 'MpnsService#sendToast'
+    id: sendToast
+    parent: MpnsService
+    name: >-
+      sendToast(tags, payload, payload.text1, payload.text2, payload.param,
+      options, options.headers, callback)
+    summary: >-
+      Sends a Toast notification. For more information see
+      http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: A single tag or tag expression.
+        - id: payload
+          type: object
+          description: The message's payload.
+        - id: payload.text1
+          type: string
+          description: Text1
+        - id: payload.text2
+          type: string
+          description: Text2
+        - id: payload.param
+          type: string
+          description: (optional) (Only for Windows Phone version 7.5 or later)
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function sendToast(tags, payload, payload.text1, payload.text2,
+        payload.param, options, options.headers, callback);
+    fullName: >-
+      MpnsService.sendToast(tags, payload, payload.text1, payload.text2,
+      payload.param, options, options.headers, callback)
+  - uid: 'MpnsService#send'
+    id: send
+    parent: MpnsService
+    name: >-
+      send(tags, payload, targetName, notificationClass, options,
+      options.headers, callback)
+    summary: >-
+      Sends a custom MPNS notification. Use this method if you want to have full
+      control on the payload.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: A single tag or tag expression.
+        - id: payload
+          type: string
+          description: The message's XML payload.
+        - id: targetName
+          type: string
+          description: The target name.
+        - id: notificationClass
+          type: string
+          description: The notification class.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The mpns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function send(tags, payload, targetName, notificationClass, options,
+        options.headers, callback);
+    fullName: >-
+      MpnsService.send(tags, payload, targetName, notificationClass, options,
+      options.headers, callback)
+    children:
+      - 'MpnsService#send~options'
+      - 'MpnsService#send~headers'
+      - 'MpnsService#send~tags'
+  - uid: 'MpnsService#_createBody'
+    id: _createBody
+    parent: MpnsService
+    name: >-
+      _createBody(elementName, channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: elementName
+          type: string
+          description: The element name.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+        - id: options.headers
+          type: object
+          description: The mpns headers to include.
+      return:
+        type: undefined
+      content: >-
+        function _createBody(elementName, channel, tags, template, options,
+        options.pnsCredentialName, options.headers);
+    fullName: >-
+      MpnsService._createBody(elementName, channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+    children:
+      - 'MpnsService#_createBody~registration'
+      - 'MpnsService#_createBody~tags'
+      - 'MpnsService#_createBody~registrationXml'
+      - 'MpnsService#_createBody~registrationXml'
+      - 'MpnsService#_createBody~registrationXml'
+  - uid: 'MpnsService#_createTemplateBody'
+    id: _createTemplateBody
+    parent: MpnsService
+    name: >-
+      _createTemplateBody(channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+        - id: options.headers
+          type: object
+          description: The mpns headers to include.
+      return:
+        type: undefined
+      content: >-
+        function _createTemplateBody(channel, tags, template, options,
+        options.pnsCredentialName, options.headers);
+    fullName: >-
+      MpnsService._createTemplateBody(channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true
+  - uid: json
+    name: json
+    fullName: json
+    isExternal: true

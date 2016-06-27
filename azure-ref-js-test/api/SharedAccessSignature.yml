@@ -1,0 +1,85 @@
+items:
+  - uid: SharedAccessSignature
+    id: SharedAccessSignature
+    name: SharedAccessSignature
+    summary: Creates a new SharedAccessSignature object.
+    type: Class
+    syntax:
+      content: SharedAccessSignature
+    fullName: SharedAccessSignature
+    children:
+      - 'SharedAccessSignature#keyName'
+      - 'SharedAccessSignature#keyValue'
+      - 'SharedAccessSignature#signer'
+      - 'SharedAccessSignature#signRequest'
+      - 'SharedAccessSignature#_generateSignature'
+  - uid: 'SharedAccessSignature#keyName'
+    id: keyName
+    parent: SharedAccessSignature
+    name: keyName
+    type: Field
+    syntax:
+      content: keyName
+    fullName: SharedAccessSignature.keyName
+  - uid: 'SharedAccessSignature#keyValue'
+    id: keyValue
+    parent: SharedAccessSignature
+    name: keyValue
+    type: Field
+    syntax:
+      content: keyValue
+    fullName: SharedAccessSignature.keyValue
+  - uid: 'SharedAccessSignature#signer'
+    id: signer
+    parent: SharedAccessSignature
+    name: signer
+    type: Field
+    syntax:
+      content: signer
+    fullName: SharedAccessSignature.signer
+  - uid: 'SharedAccessSignature#signRequest'
+    id: signRequest
+    parent: SharedAccessSignature
+    name: 'signRequest(The, callback)'
+    summary: Signs a request with the signature header.
+    type: Method
+    syntax:
+      parameters:
+        - id: The
+          type: WebResource
+          description: webresource to be signed.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: 'function signRequest(The, callback);'
+    fullName: 'SharedAccessSignature.signRequest(The, callback)'
+    children:
+      - 'SharedAccessSignature#signRequest~targetUri'
+      - 'SharedAccessSignature#signRequest~expirationDate'
+      - 'SharedAccessSignature#signRequest~signature'
+  - uid: 'SharedAccessSignature#_generateSignature'
+    id: _generateSignature
+    parent: SharedAccessSignature
+    name: _generateSignature()
+    type: Method
+    syntax:
+      content: function _generateSignature();
+    fullName: SharedAccessSignature._generateSignature()
+    children:
+      - 'SharedAccessSignature#_generateSignature~getvalueToAppend'
+      - 'SharedAccessSignature#_generateSignature~stringToSign'
+references:
+  - uid: WebResource
+    name: WebResource
+    fullName: WebResource
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true

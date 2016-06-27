@@ -1,0 +1,577 @@
+items:
+  - uid: CertificateOperations
+    id: CertificateOperations
+    name: CertificateOperations
+    type: Class
+    syntax:
+      content: CertificateOperations
+    fullName: CertificateOperations
+    children:
+      - 'CertificateOperations#client'
+      - 'CertificateOperations#add'
+      - 'CertificateOperations#list'
+      - 'CertificateOperations#cancelDeletion'
+      - 'CertificateOperations#deleteMethod'
+      - 'CertificateOperations#get'
+      - 'CertificateOperations#listNext'
+  - uid: 'CertificateOperations#client'
+    id: client
+    parent: CertificateOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: CertificateOperations.client
+  - uid: 'CertificateOperations#add'
+    id: add
+    parent: CertificateOperations
+    name: >-
+      add(certificate, certificate.thumbprint, certificate.thumbprintAlgorithm,
+      certificate.data, certificate.certificateFormat, certificate.password,
+      options, options.certificateAddOptions,
+      options.certificateAddOptions.timeout,
+      options.certificateAddOptions.clientRequestId,
+      options.certificateAddOptions.returnClientRequestId,
+      options.certificateAddOptions.ocpDate, options.customHeaders, callback)
+    summary: Adds a certificate to the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: certificate
+          type: object
+          description: The certificate to be added.
+        - id: certificate.thumbprint
+          type: string
+          description: "The X.509 thumbprint of the\rcertificate. This is a sequence of up to 40 hex digits (it may include\rspaces but these are removed)."
+        - id: certificate.thumbprintAlgorithm
+          type: string
+          description: "The algorithm used to\rderive the thumbprint. This must be sha1."
+        - id: certificate.data
+          type: string
+          description: "The base64-encoded contents of the\rcertificate. The maximum size is 10KB."
+        - id: certificate.certificateFormat
+          type: string
+          description: "The format of the\rcertificate data. Possible values include: 'pfx', 'cer', 'unmapped'"
+        - id: certificate.password
+          type: string
+          description: "The password to access the\rcertificate's private key."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.certificateAddOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.certificateAddOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.certificateAddOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.certificateAddOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.certificateAddOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function add(certificate, certificate.thumbprint,
+        certificate.thumbprintAlgorithm, certificate.data,
+        certificate.certificateFormat, certificate.password, options,
+        options.certificateAddOptions, options.certificateAddOptions.timeout,
+        options.certificateAddOptions.clientRequestId,
+        options.certificateAddOptions.returnClientRequestId,
+        options.certificateAddOptions.ocpDate, options.customHeaders, callback);
+    fullName: >-
+      CertificateOperations.add(certificate, certificate.thumbprint,
+      certificate.thumbprintAlgorithm, certificate.data,
+      certificate.certificateFormat, certificate.password, options,
+      options.certificateAddOptions, options.certificateAddOptions.timeout,
+      options.certificateAddOptions.clientRequestId,
+      options.certificateAddOptions.returnClientRequestId,
+      options.certificateAddOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'CertificateOperations#add~client'
+      - 'CertificateOperations#add~callback'
+      - 'CertificateOperations#add~options'
+      - 'CertificateOperations#add~certificateAddOptions'
+      - 'CertificateOperations#add~timeout'
+      - 'CertificateOperations#add~clientRequestId'
+      - 'CertificateOperations#add~returnClientRequestId'
+      - 'CertificateOperations#add~ocpDate'
+      - 'CertificateOperations#add~timeout'
+      - 'CertificateOperations#add~clientRequestId'
+      - 'CertificateOperations#add~returnClientRequestId'
+      - 'CertificateOperations#add~ocpDate'
+      - 'CertificateOperations#add~requestUrl'
+      - 'CertificateOperations#add~queryParameters'
+      - 'CertificateOperations#add~requestUrl'
+      - 'CertificateOperations#add~regex'
+      - 'CertificateOperations#add~requestUrl'
+      - 'CertificateOperations#add~httpRequest'
+      - 'CertificateOperations#add~headerName'
+      - 'CertificateOperations#add~requestContent'
+      - 'CertificateOperations#add~requestModel'
+      - 'CertificateOperations#add~requestModelMapper'
+      - 'CertificateOperations#add~requestModel'
+      - 'CertificateOperations#add~requestContent'
+      - 'CertificateOperations#add~serializationError'
+  - uid: 'CertificateOperations#list'
+    id: list
+    parent: CertificateOperations
+    name: >-
+      list(options, options.certificateListOptions,
+      options.certificateListOptions.filter,
+      options.certificateListOptions.select,
+      options.certificateListOptions.maxResults,
+      options.certificateListOptions.timeout,
+      options.certificateListOptions.clientRequestId,
+      options.certificateListOptions.returnClientRequestId,
+      options.certificateListOptions.ocpDate, options.customHeaders, callback)
+    summary: >-
+      Lists all of the certificates that have been added to the specified
+      account.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.certificateListOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.certificateListOptions.filter
+          type: string
+          description: "An OData $filter\rclause."
+        - id: options.certificateListOptions.select
+          type: string
+          description: "An OData $select\rclause."
+        - id: options.certificateListOptions.maxResults
+          type: number
+          description: "The maximum\rnumber of items to return in the response."
+        - id: options.certificateListOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.certificateListOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.certificateListOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.certificateListOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(options, options.certificateListOptions,
+        options.certificateListOptions.filter,
+        options.certificateListOptions.select,
+        options.certificateListOptions.maxResults,
+        options.certificateListOptions.timeout,
+        options.certificateListOptions.clientRequestId,
+        options.certificateListOptions.returnClientRequestId,
+        options.certificateListOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      CertificateOperations.list(options, options.certificateListOptions,
+      options.certificateListOptions.filter,
+      options.certificateListOptions.select,
+      options.certificateListOptions.maxResults,
+      options.certificateListOptions.timeout,
+      options.certificateListOptions.clientRequestId,
+      options.certificateListOptions.returnClientRequestId,
+      options.certificateListOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'CertificateOperations#list~client'
+      - 'CertificateOperations#list~callback'
+      - 'CertificateOperations#list~options'
+      - 'CertificateOperations#list~certificateListOptions'
+      - 'CertificateOperations#list~filter'
+      - 'CertificateOperations#list~select'
+      - 'CertificateOperations#list~maxResults'
+      - 'CertificateOperations#list~timeout'
+      - 'CertificateOperations#list~clientRequestId'
+      - 'CertificateOperations#list~returnClientRequestId'
+      - 'CertificateOperations#list~ocpDate'
+      - 'CertificateOperations#list~filter'
+      - 'CertificateOperations#list~select'
+      - 'CertificateOperations#list~maxResults'
+      - 'CertificateOperations#list~timeout'
+      - 'CertificateOperations#list~clientRequestId'
+      - 'CertificateOperations#list~returnClientRequestId'
+      - 'CertificateOperations#list~ocpDate'
+      - 'CertificateOperations#list~requestUrl'
+      - 'CertificateOperations#list~queryParameters'
+      - 'CertificateOperations#list~requestUrl'
+      - 'CertificateOperations#list~regex'
+      - 'CertificateOperations#list~requestUrl'
+      - 'CertificateOperations#list~httpRequest'
+      - 'CertificateOperations#list~headerName'
+  - uid: 'CertificateOperations#cancelDeletion'
+    id: cancelDeletion
+    parent: CertificateOperations
+    name: >-
+      cancelDeletion(thumbprintAlgorithm, thumbprint, options,
+      options.certificateCancelDeletionOptions,
+      options.certificateCancelDeletionOptions.timeout,
+      options.certificateCancelDeletionOptions.clientRequestId,
+      options.certificateCancelDeletionOptions.returnClientRequestId,
+      options.certificateCancelDeletionOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Cancels a failed deletion of a certificate from the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: thumbprintAlgorithm
+          type: string
+          description: "The algorithm used to derive the\rthumbprint parameter. This must be sha1."
+        - id: thumbprint
+          type: string
+          description: The thumbprint of the certificate being deleted.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.certificateCancelDeletionOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.certificateCancelDeletionOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.certificateCancelDeletionOptions.clientRequestId
+          type: string
+          description: "The caller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.certificateCancelDeletionOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.certificateCancelDeletionOptions.ocpDate
+          type: date
+          description: "The time\rthe request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function cancelDeletion(thumbprintAlgorithm, thumbprint, options,
+        options.certificateCancelDeletionOptions,
+        options.certificateCancelDeletionOptions.timeout,
+        options.certificateCancelDeletionOptions.clientRequestId,
+        options.certificateCancelDeletionOptions.returnClientRequestId,
+        options.certificateCancelDeletionOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      CertificateOperations.cancelDeletion(thumbprintAlgorithm, thumbprint,
+      options, options.certificateCancelDeletionOptions,
+      options.certificateCancelDeletionOptions.timeout,
+      options.certificateCancelDeletionOptions.clientRequestId,
+      options.certificateCancelDeletionOptions.returnClientRequestId,
+      options.certificateCancelDeletionOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'CertificateOperations#cancelDeletion~client'
+      - 'CertificateOperations#cancelDeletion~callback'
+      - 'CertificateOperations#cancelDeletion~options'
+      - 'CertificateOperations#cancelDeletion~certificateCancelDeletionOptions'
+      - 'CertificateOperations#cancelDeletion~timeout'
+      - 'CertificateOperations#cancelDeletion~clientRequestId'
+      - 'CertificateOperations#cancelDeletion~returnClientRequestId'
+      - 'CertificateOperations#cancelDeletion~ocpDate'
+      - 'CertificateOperations#cancelDeletion~timeout'
+      - 'CertificateOperations#cancelDeletion~clientRequestId'
+      - 'CertificateOperations#cancelDeletion~returnClientRequestId'
+      - 'CertificateOperations#cancelDeletion~ocpDate'
+      - 'CertificateOperations#cancelDeletion~requestUrl'
+      - 'CertificateOperations#cancelDeletion~requestUrl'
+      - 'CertificateOperations#cancelDeletion~requestUrl'
+      - 'CertificateOperations#cancelDeletion~queryParameters'
+      - 'CertificateOperations#cancelDeletion~requestUrl'
+      - 'CertificateOperations#cancelDeletion~regex'
+      - 'CertificateOperations#cancelDeletion~requestUrl'
+      - 'CertificateOperations#cancelDeletion~httpRequest'
+      - 'CertificateOperations#cancelDeletion~headerName'
+  - uid: 'CertificateOperations#deleteMethod'
+    id: deleteMethod
+    parent: CertificateOperations
+    name: >-
+      deleteMethod(thumbprintAlgorithm, thumbprint, options,
+      options.certificateDeleteMethodOptions,
+      options.certificateDeleteMethodOptions.timeout,
+      options.certificateDeleteMethodOptions.clientRequestId,
+      options.certificateDeleteMethodOptions.returnClientRequestId,
+      options.certificateDeleteMethodOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Deletes a certificate from the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: thumbprintAlgorithm
+          type: string
+          description: "The algorithm used to derive the\rthumbprint parameter. This must be sha1."
+        - id: thumbprint
+          type: string
+          description: The thumbprint of the certificate to be deleted.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.certificateDeleteMethodOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.certificateDeleteMethodOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.certificateDeleteMethodOptions.clientRequestId
+          type: string
+          description: "The caller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.certificateDeleteMethodOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.certificateDeleteMethodOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(thumbprintAlgorithm, thumbprint, options,
+        options.certificateDeleteMethodOptions,
+        options.certificateDeleteMethodOptions.timeout,
+        options.certificateDeleteMethodOptions.clientRequestId,
+        options.certificateDeleteMethodOptions.returnClientRequestId,
+        options.certificateDeleteMethodOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      CertificateOperations.deleteMethod(thumbprintAlgorithm, thumbprint,
+      options, options.certificateDeleteMethodOptions,
+      options.certificateDeleteMethodOptions.timeout,
+      options.certificateDeleteMethodOptions.clientRequestId,
+      options.certificateDeleteMethodOptions.returnClientRequestId,
+      options.certificateDeleteMethodOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'CertificateOperations#deleteMethod~client'
+      - 'CertificateOperations#deleteMethod~callback'
+      - 'CertificateOperations#deleteMethod~options'
+      - 'CertificateOperations#deleteMethod~certificateDeleteMethodOptions'
+      - 'CertificateOperations#deleteMethod~timeout'
+      - 'CertificateOperations#deleteMethod~clientRequestId'
+      - 'CertificateOperations#deleteMethod~returnClientRequestId'
+      - 'CertificateOperations#deleteMethod~ocpDate'
+      - 'CertificateOperations#deleteMethod~timeout'
+      - 'CertificateOperations#deleteMethod~clientRequestId'
+      - 'CertificateOperations#deleteMethod~returnClientRequestId'
+      - 'CertificateOperations#deleteMethod~ocpDate'
+      - 'CertificateOperations#deleteMethod~requestUrl'
+      - 'CertificateOperations#deleteMethod~requestUrl'
+      - 'CertificateOperations#deleteMethod~requestUrl'
+      - 'CertificateOperations#deleteMethod~queryParameters'
+      - 'CertificateOperations#deleteMethod~requestUrl'
+      - 'CertificateOperations#deleteMethod~regex'
+      - 'CertificateOperations#deleteMethod~requestUrl'
+      - 'CertificateOperations#deleteMethod~httpRequest'
+      - 'CertificateOperations#deleteMethod~headerName'
+  - uid: 'CertificateOperations#get'
+    id: get
+    parent: CertificateOperations
+    name: >-
+      get(thumbprintAlgorithm, thumbprint, options,
+      options.certificateGetOptions, options.certificateGetOptions.select,
+      options.certificateGetOptions.timeout,
+      options.certificateGetOptions.clientRequestId,
+      options.certificateGetOptions.returnClientRequestId,
+      options.certificateGetOptions.ocpDate, options.customHeaders, callback)
+    summary: Gets information about the specified certificate.
+    type: Method
+    syntax:
+      parameters:
+        - id: thumbprintAlgorithm
+          type: string
+          description: "The algorithm used to derive the\rthumbprint parameter. This must be sha1."
+        - id: thumbprint
+          type: string
+          description: The thumbprint of the certificate to get.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.certificateGetOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.certificateGetOptions.select
+          type: string
+          description: "An OData $select\rclause."
+        - id: options.certificateGetOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.certificateGetOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.certificateGetOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.certificateGetOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Certificate} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(thumbprintAlgorithm, thumbprint, options,
+        options.certificateGetOptions, options.certificateGetOptions.select,
+        options.certificateGetOptions.timeout,
+        options.certificateGetOptions.clientRequestId,
+        options.certificateGetOptions.returnClientRequestId,
+        options.certificateGetOptions.ocpDate, options.customHeaders, callback);
+    fullName: >-
+      CertificateOperations.get(thumbprintAlgorithm, thumbprint, options,
+      options.certificateGetOptions, options.certificateGetOptions.select,
+      options.certificateGetOptions.timeout,
+      options.certificateGetOptions.clientRequestId,
+      options.certificateGetOptions.returnClientRequestId,
+      options.certificateGetOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'CertificateOperations#get~client'
+      - 'CertificateOperations#get~callback'
+      - 'CertificateOperations#get~options'
+      - 'CertificateOperations#get~certificateGetOptions'
+      - 'CertificateOperations#get~select'
+      - 'CertificateOperations#get~timeout'
+      - 'CertificateOperations#get~clientRequestId'
+      - 'CertificateOperations#get~returnClientRequestId'
+      - 'CertificateOperations#get~ocpDate'
+      - 'CertificateOperations#get~select'
+      - 'CertificateOperations#get~timeout'
+      - 'CertificateOperations#get~clientRequestId'
+      - 'CertificateOperations#get~returnClientRequestId'
+      - 'CertificateOperations#get~ocpDate'
+      - 'CertificateOperations#get~requestUrl'
+      - 'CertificateOperations#get~requestUrl'
+      - 'CertificateOperations#get~requestUrl'
+      - 'CertificateOperations#get~queryParameters'
+      - 'CertificateOperations#get~requestUrl'
+      - 'CertificateOperations#get~regex'
+      - 'CertificateOperations#get~requestUrl'
+      - 'CertificateOperations#get~httpRequest'
+      - 'CertificateOperations#get~headerName'
+  - uid: 'CertificateOperations#listNext'
+    id: listNext
+    parent: CertificateOperations
+    name: >-
+      listNext(nextPageLink, options, options.certificateListNextOptions,
+      options.certificateListNextOptions.clientRequestId,
+      options.certificateListNextOptions.returnClientRequestId,
+      options.certificateListNextOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: >-
+      Lists all of the certificates that have been added to the specified
+      account.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.certificateListNextOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.certificateListNextOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.certificateListNextOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.certificateListNextOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options,
+        options.certificateListNextOptions,
+        options.certificateListNextOptions.clientRequestId,
+        options.certificateListNextOptions.returnClientRequestId,
+        options.certificateListNextOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      CertificateOperations.listNext(nextPageLink, options,
+      options.certificateListNextOptions,
+      options.certificateListNextOptions.clientRequestId,
+      options.certificateListNextOptions.returnClientRequestId,
+      options.certificateListNextOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'CertificateOperations#listNext~client'
+      - 'CertificateOperations#listNext~callback'
+      - 'CertificateOperations#listNext~options'
+      - 'CertificateOperations#listNext~certificateListNextOptions'
+      - 'CertificateOperations#listNext~clientRequestId'
+      - 'CertificateOperations#listNext~returnClientRequestId'
+      - 'CertificateOperations#listNext~ocpDate'
+      - 'CertificateOperations#listNext~clientRequestId'
+      - 'CertificateOperations#listNext~returnClientRequestId'
+      - 'CertificateOperations#listNext~ocpDate'
+      - 'CertificateOperations#listNext~requestUrl'
+      - 'CertificateOperations#listNext~requestUrl'
+      - 'CertificateOperations#listNext~regex'
+      - 'CertificateOperations#listNext~requestUrl'
+      - 'CertificateOperations#listNext~httpRequest'
+      - 'CertificateOperations#listNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

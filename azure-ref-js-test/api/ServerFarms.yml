@@ -1,0 +1,1459 @@
+items:
+  - uid: ServerFarms
+    id: ServerFarms
+    name: ServerFarms
+    type: Class
+    syntax:
+      content: ServerFarms
+    fullName: ServerFarms
+    children:
+      - 'ServerFarms#client'
+      - 'ServerFarms#getServerFarms'
+      - 'ServerFarms#getServerFarm'
+      - 'ServerFarms#createOrUpdateServerFarm'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm'
+      - 'ServerFarms#deleteServerFarm'
+      - 'ServerFarms#getServerFarmMetrics'
+      - 'ServerFarms#getServerFarmMetricDefintions'
+      - 'ServerFarms#getVnetsForServerFarm'
+      - 'ServerFarms#getVnetFromServerFarm'
+      - 'ServerFarms#getRoutesForVnet'
+      - 'ServerFarms#getRouteForVnet'
+      - 'ServerFarms#createOrUpdateVnetRoute'
+      - 'ServerFarms#deleteVnetRoute'
+      - 'ServerFarms#updateVnetRoute'
+      - 'ServerFarms#getServerFarmVnetGateway'
+      - 'ServerFarms#updateServerFarmVnetGateway'
+      - 'ServerFarms#getServerFarmSites'
+      - 'ServerFarms#rebootWorkerForServerFarm'
+      - 'ServerFarms#restartSitesForServerFarm'
+      - 'ServerFarms#getServerFarmOperation'
+      - 'ServerFarms#getServerFarmSitesNext'
+  - uid: 'ServerFarms#client'
+    id: client
+    parent: ServerFarms
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ServerFarms.client
+  - uid: 'ServerFarms#getServerFarms'
+    id: getServerFarms
+    parent: ServerFarms
+    name: >-
+      getServerFarms(resourceGroupName, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarms(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getServerFarms(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getServerFarms~client'
+      - 'ServerFarms#getServerFarms~callback'
+      - 'ServerFarms#getServerFarms~options'
+      - 'ServerFarms#getServerFarms~requestUrl'
+      - 'ServerFarms#getServerFarms~requestUrl'
+      - 'ServerFarms#getServerFarms~requestUrl'
+      - 'ServerFarms#getServerFarms~queryParameters'
+      - 'ServerFarms#getServerFarms~requestUrl'
+      - 'ServerFarms#getServerFarms~regex'
+      - 'ServerFarms#getServerFarms~requestUrl'
+      - 'ServerFarms#getServerFarms~httpRequest'
+      - 'ServerFarms#getServerFarms~headerName'
+  - uid: 'ServerFarms#getServerFarm'
+    id: getServerFarm
+    parent: ServerFarms
+    name: >-
+      getServerFarm(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmWithRichSku} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarm(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getServerFarm(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getServerFarm~client'
+      - 'ServerFarms#getServerFarm~callback'
+      - 'ServerFarms#getServerFarm~options'
+      - 'ServerFarms#getServerFarm~requestUrl'
+      - 'ServerFarms#getServerFarm~requestUrl'
+      - 'ServerFarms#getServerFarm~requestUrl'
+      - 'ServerFarms#getServerFarm~requestUrl'
+      - 'ServerFarms#getServerFarm~queryParameters'
+      - 'ServerFarms#getServerFarm~requestUrl'
+      - 'ServerFarms#getServerFarm~regex'
+      - 'ServerFarms#getServerFarm~requestUrl'
+      - 'ServerFarms#getServerFarm~httpRequest'
+      - 'ServerFarms#getServerFarm~headerName'
+  - uid: 'ServerFarms#createOrUpdateServerFarm'
+    id: createOrUpdateServerFarm
+    parent: ServerFarms
+    name: >-
+      createOrUpdateServerFarm(resourceGroupName, name, serverFarmEnvelope,
+      serverFarmEnvelope.serverFarmWithRichSkuName,
+      serverFarmEnvelope.workerTierName, serverFarmEnvelope.adminSiteName,
+      serverFarmEnvelope.hostingEnvironmentProfile,
+      serverFarmEnvelope.hostingEnvironmentProfile.id,
+      serverFarmEnvelope.hostingEnvironmentProfile.name,
+      serverFarmEnvelope.hostingEnvironmentProfile.type,
+      serverFarmEnvelope.maximumNumberOfWorkers,
+      serverFarmEnvelope.perSiteScaling, serverFarmEnvelope.sku,
+      serverFarmEnvelope.sku.name, serverFarmEnvelope.sku.tier,
+      serverFarmEnvelope.sku.size, serverFarmEnvelope.sku.family,
+      serverFarmEnvelope.sku.capacity, serverFarmEnvelope.id,
+      serverFarmEnvelope.name, serverFarmEnvelope.kind,
+      serverFarmEnvelope.location, serverFarmEnvelope.type,
+      serverFarmEnvelope.tags, options, options.allowPendingState,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: serverFarmEnvelope
+          type: object
+          description: Details of App Service Plan
+        - id: serverFarmEnvelope.serverFarmWithRichSkuName
+          type: string
+          description: "Name for the\rApp Service Plan"
+        - id: serverFarmEnvelope.workerTierName
+          type: string
+          description: "Target worker tier\rassigned to the App Service Plan"
+        - id: serverFarmEnvelope.adminSiteName
+          type: string
+          description: "App Service Plan\radministration site"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile
+          type: object
+          description: "Specification for the hosting environment (App Service Environment) to use\rfor the App Service Plan"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile.id
+          type: string
+          description: "Resource\rid of the hostingEnvironment (App Service Environment)"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile.name
+          type: string
+          description: "Name of\rthe hostingEnvironment (App Service Environment) (read only)"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile.type
+          type: string
+          description: "Resource type of the hostingEnvironment (App Service Environment) (read\ronly)"
+        - id: serverFarmEnvelope.maximumNumberOfWorkers
+          type: number
+          description: "Maximum number\rof instances that can be assigned to this App Service Plan"
+        - id: serverFarmEnvelope.perSiteScaling
+          type: boolean
+          description: "If True apps assigned\rto this App Service Plan can be scaled independently\rIf False apps assigned to this App Service Plan will scale to\rall instances of the plan"
+        - id: serverFarmEnvelope.sku
+          type: object
+        - id: serverFarmEnvelope.sku.name
+          type: string
+          description: Name of the resource sku
+        - id: serverFarmEnvelope.sku.tier
+          type: string
+          description: "Service Tier of the resource\rsku"
+        - id: serverFarmEnvelope.sku.size
+          type: string
+          description: "Size specifier of the\rresource sku"
+        - id: serverFarmEnvelope.sku.family
+          type: string
+          description: "Family code of the resource\rsku"
+        - id: serverFarmEnvelope.sku.capacity
+          type: number
+          description: "Current number of\rinstances assigned to the resource"
+        - id: serverFarmEnvelope.id
+          type: string
+          description: Resource Id
+        - id: serverFarmEnvelope.name
+          type: string
+          description: Resource Name
+        - id: serverFarmEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: serverFarmEnvelope.location
+          type: string
+          description: Resource Location
+        - id: serverFarmEnvelope.type
+          type: string
+          description: Resource type
+        - id: serverFarmEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.allowPendingState
+          type: boolean
+          description: "OBSOLETE: If true, allow\rpending state for App Service Plan"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmWithRichSku} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateServerFarm(resourceGroupName, name,
+        serverFarmEnvelope, serverFarmEnvelope.serverFarmWithRichSkuName,
+        serverFarmEnvelope.workerTierName, serverFarmEnvelope.adminSiteName,
+        serverFarmEnvelope.hostingEnvironmentProfile,
+        serverFarmEnvelope.hostingEnvironmentProfile.id,
+        serverFarmEnvelope.hostingEnvironmentProfile.name,
+        serverFarmEnvelope.hostingEnvironmentProfile.type,
+        serverFarmEnvelope.maximumNumberOfWorkers,
+        serverFarmEnvelope.perSiteScaling, serverFarmEnvelope.sku,
+        serverFarmEnvelope.sku.name, serverFarmEnvelope.sku.tier,
+        serverFarmEnvelope.sku.size, serverFarmEnvelope.sku.family,
+        serverFarmEnvelope.sku.capacity, serverFarmEnvelope.id,
+        serverFarmEnvelope.name, serverFarmEnvelope.kind,
+        serverFarmEnvelope.location, serverFarmEnvelope.type,
+        serverFarmEnvelope.tags, options, options.allowPendingState,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.createOrUpdateServerFarm(resourceGroupName, name,
+      serverFarmEnvelope, serverFarmEnvelope.serverFarmWithRichSkuName,
+      serverFarmEnvelope.workerTierName, serverFarmEnvelope.adminSiteName,
+      serverFarmEnvelope.hostingEnvironmentProfile,
+      serverFarmEnvelope.hostingEnvironmentProfile.id,
+      serverFarmEnvelope.hostingEnvironmentProfile.name,
+      serverFarmEnvelope.hostingEnvironmentProfile.type,
+      serverFarmEnvelope.maximumNumberOfWorkers,
+      serverFarmEnvelope.perSiteScaling, serverFarmEnvelope.sku,
+      serverFarmEnvelope.sku.name, serverFarmEnvelope.sku.tier,
+      serverFarmEnvelope.sku.size, serverFarmEnvelope.sku.family,
+      serverFarmEnvelope.sku.capacity, serverFarmEnvelope.id,
+      serverFarmEnvelope.name, serverFarmEnvelope.kind,
+      serverFarmEnvelope.location, serverFarmEnvelope.type,
+      serverFarmEnvelope.tags, options, options.allowPendingState,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#createOrUpdateServerFarm~client'
+      - 'ServerFarms#createOrUpdateServerFarm~callback'
+      - 'ServerFarms#createOrUpdateServerFarm~options'
+  - uid: 'ServerFarms#beginCreateOrUpdateServerFarm'
+    id: beginCreateOrUpdateServerFarm
+    parent: ServerFarms
+    name: >-
+      beginCreateOrUpdateServerFarm(resourceGroupName, name, serverFarmEnvelope,
+      serverFarmEnvelope.serverFarmWithRichSkuName,
+      serverFarmEnvelope.workerTierName, serverFarmEnvelope.adminSiteName,
+      serverFarmEnvelope.hostingEnvironmentProfile,
+      serverFarmEnvelope.hostingEnvironmentProfile.id,
+      serverFarmEnvelope.hostingEnvironmentProfile.name,
+      serverFarmEnvelope.hostingEnvironmentProfile.type,
+      serverFarmEnvelope.maximumNumberOfWorkers,
+      serverFarmEnvelope.perSiteScaling, serverFarmEnvelope.sku,
+      serverFarmEnvelope.sku.name, serverFarmEnvelope.sku.tier,
+      serverFarmEnvelope.sku.size, serverFarmEnvelope.sku.family,
+      serverFarmEnvelope.sku.capacity, serverFarmEnvelope.id,
+      serverFarmEnvelope.name, serverFarmEnvelope.kind,
+      serverFarmEnvelope.location, serverFarmEnvelope.type,
+      serverFarmEnvelope.tags, options, options.allowPendingState,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: serverFarmEnvelope
+          type: object
+          description: Details of App Service Plan
+        - id: serverFarmEnvelope.serverFarmWithRichSkuName
+          type: string
+          description: "Name for the\rApp Service Plan"
+        - id: serverFarmEnvelope.workerTierName
+          type: string
+          description: "Target worker tier\rassigned to the App Service Plan"
+        - id: serverFarmEnvelope.adminSiteName
+          type: string
+          description: "App Service Plan\radministration site"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile
+          type: object
+          description: "Specification for the hosting environment (App Service Environment) to use\rfor the App Service Plan"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile.id
+          type: string
+          description: "Resource\rid of the hostingEnvironment (App Service Environment)"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile.name
+          type: string
+          description: "Name of\rthe hostingEnvironment (App Service Environment) (read only)"
+        - id: serverFarmEnvelope.hostingEnvironmentProfile.type
+          type: string
+          description: "Resource type of the hostingEnvironment (App Service Environment) (read\ronly)"
+        - id: serverFarmEnvelope.maximumNumberOfWorkers
+          type: number
+          description: "Maximum number\rof instances that can be assigned to this App Service Plan"
+        - id: serverFarmEnvelope.perSiteScaling
+          type: boolean
+          description: "If True apps assigned\rto this App Service Plan can be scaled independently\rIf False apps assigned to this App Service Plan will scale to\rall instances of the plan"
+        - id: serverFarmEnvelope.sku
+          type: object
+        - id: serverFarmEnvelope.sku.name
+          type: string
+          description: Name of the resource sku
+        - id: serverFarmEnvelope.sku.tier
+          type: string
+          description: "Service Tier of the resource\rsku"
+        - id: serverFarmEnvelope.sku.size
+          type: string
+          description: "Size specifier of the\rresource sku"
+        - id: serverFarmEnvelope.sku.family
+          type: string
+          description: "Family code of the resource\rsku"
+        - id: serverFarmEnvelope.sku.capacity
+          type: number
+          description: "Current number of\rinstances assigned to the resource"
+        - id: serverFarmEnvelope.id
+          type: string
+          description: Resource Id
+        - id: serverFarmEnvelope.name
+          type: string
+          description: Resource Name
+        - id: serverFarmEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: serverFarmEnvelope.location
+          type: string
+          description: Resource Location
+        - id: serverFarmEnvelope.type
+          type: string
+          description: Resource type
+        - id: serverFarmEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.allowPendingState
+          type: boolean
+          description: "OBSOLETE: If true, allow\rpending state for App Service Plan"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmWithRichSku} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateServerFarm(resourceGroupName, name,
+        serverFarmEnvelope, serverFarmEnvelope.serverFarmWithRichSkuName,
+        serverFarmEnvelope.workerTierName, serverFarmEnvelope.adminSiteName,
+        serverFarmEnvelope.hostingEnvironmentProfile,
+        serverFarmEnvelope.hostingEnvironmentProfile.id,
+        serverFarmEnvelope.hostingEnvironmentProfile.name,
+        serverFarmEnvelope.hostingEnvironmentProfile.type,
+        serverFarmEnvelope.maximumNumberOfWorkers,
+        serverFarmEnvelope.perSiteScaling, serverFarmEnvelope.sku,
+        serverFarmEnvelope.sku.name, serverFarmEnvelope.sku.tier,
+        serverFarmEnvelope.sku.size, serverFarmEnvelope.sku.family,
+        serverFarmEnvelope.sku.capacity, serverFarmEnvelope.id,
+        serverFarmEnvelope.name, serverFarmEnvelope.kind,
+        serverFarmEnvelope.location, serverFarmEnvelope.type,
+        serverFarmEnvelope.tags, options, options.allowPendingState,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.beginCreateOrUpdateServerFarm(resourceGroupName, name,
+      serverFarmEnvelope, serverFarmEnvelope.serverFarmWithRichSkuName,
+      serverFarmEnvelope.workerTierName, serverFarmEnvelope.adminSiteName,
+      serverFarmEnvelope.hostingEnvironmentProfile,
+      serverFarmEnvelope.hostingEnvironmentProfile.id,
+      serverFarmEnvelope.hostingEnvironmentProfile.name,
+      serverFarmEnvelope.hostingEnvironmentProfile.type,
+      serverFarmEnvelope.maximumNumberOfWorkers,
+      serverFarmEnvelope.perSiteScaling, serverFarmEnvelope.sku,
+      serverFarmEnvelope.sku.name, serverFarmEnvelope.sku.tier,
+      serverFarmEnvelope.sku.size, serverFarmEnvelope.sku.family,
+      serverFarmEnvelope.sku.capacity, serverFarmEnvelope.id,
+      serverFarmEnvelope.name, serverFarmEnvelope.kind,
+      serverFarmEnvelope.location, serverFarmEnvelope.type,
+      serverFarmEnvelope.tags, options, options.allowPendingState,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~client'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~callback'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~options'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~allowPendingState'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestUrl'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestUrl'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestUrl'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestUrl'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~queryParameters'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestUrl'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~regex'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestUrl'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~httpRequest'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~headerName'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestContent'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestModel'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestModelMapper'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestModel'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~requestContent'
+      - 'ServerFarms#beginCreateOrUpdateServerFarm~serializationError'
+  - uid: 'ServerFarms#deleteServerFarm'
+    id: deleteServerFarm
+    parent: ServerFarms
+    name: >-
+      deleteServerFarm(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteServerFarm(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.deleteServerFarm(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#deleteServerFarm~client'
+      - 'ServerFarms#deleteServerFarm~callback'
+      - 'ServerFarms#deleteServerFarm~options'
+      - 'ServerFarms#deleteServerFarm~requestUrl'
+      - 'ServerFarms#deleteServerFarm~requestUrl'
+      - 'ServerFarms#deleteServerFarm~requestUrl'
+      - 'ServerFarms#deleteServerFarm~requestUrl'
+      - 'ServerFarms#deleteServerFarm~queryParameters'
+      - 'ServerFarms#deleteServerFarm~requestUrl'
+      - 'ServerFarms#deleteServerFarm~regex'
+      - 'ServerFarms#deleteServerFarm~requestUrl'
+      - 'ServerFarms#deleteServerFarm~httpRequest'
+      - 'ServerFarms#deleteServerFarm~headerName'
+  - uid: 'ServerFarms#getServerFarmMetrics'
+    id: getServerFarmMetrics
+    parent: ServerFarms
+    name: >-
+      getServerFarmMetrics(resourceGroupName, name, options, options.details,
+      options.filter, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.details
+          type: boolean
+          description: "If true, metrics are broken down per App\rService Plan instance"
+        - id: options.filter
+          type: string
+          description: "Return only usages/metrics specified in\rthe filter. Filter conforms to odata syntax. Example: $filter=(name.value\req 'Metric1' or name.value eq 'Metric2') and startTime eq\r'2014-01-01T00:00:00Z' and endTime eq '2014-12-31T23:59:59Z' and timeGrain\req duration'[Hour|Minute|Day]'."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceMetricCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarmMetrics(resourceGroupName, name, options,
+        options.details, options.filter, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getServerFarmMetrics(resourceGroupName, name, options,
+      options.details, options.filter, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getServerFarmMetrics~client'
+      - 'ServerFarms#getServerFarmMetrics~callback'
+      - 'ServerFarms#getServerFarmMetrics~options'
+      - 'ServerFarms#getServerFarmMetrics~details'
+      - 'ServerFarms#getServerFarmMetrics~filter'
+      - 'ServerFarms#getServerFarmMetrics~requestUrl'
+      - 'ServerFarms#getServerFarmMetrics~requestUrl'
+      - 'ServerFarms#getServerFarmMetrics~requestUrl'
+      - 'ServerFarms#getServerFarmMetrics~requestUrl'
+      - 'ServerFarms#getServerFarmMetrics~queryParameters'
+      - 'ServerFarms#getServerFarmMetrics~requestUrl'
+      - 'ServerFarms#getServerFarmMetrics~regex'
+      - 'ServerFarms#getServerFarmMetrics~requestUrl'
+      - 'ServerFarms#getServerFarmMetrics~httpRequest'
+      - 'ServerFarms#getServerFarmMetrics~headerName'
+  - uid: 'ServerFarms#getServerFarmMetricDefintions'
+    id: getServerFarmMetricDefintions
+    parent: ServerFarms
+    name: >-
+      getServerFarmMetricDefintions(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link MetricDefinitionCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarmMetricDefintions(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getServerFarmMetricDefintions(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getServerFarmMetricDefintions~client'
+      - 'ServerFarms#getServerFarmMetricDefintions~callback'
+      - 'ServerFarms#getServerFarmMetricDefintions~options'
+      - 'ServerFarms#getServerFarmMetricDefintions~requestUrl'
+      - 'ServerFarms#getServerFarmMetricDefintions~requestUrl'
+      - 'ServerFarms#getServerFarmMetricDefintions~requestUrl'
+      - 'ServerFarms#getServerFarmMetricDefintions~requestUrl'
+      - 'ServerFarms#getServerFarmMetricDefintions~queryParameters'
+      - 'ServerFarms#getServerFarmMetricDefintions~requestUrl'
+      - 'ServerFarms#getServerFarmMetricDefintions~regex'
+      - 'ServerFarms#getServerFarmMetricDefintions~requestUrl'
+      - 'ServerFarms#getServerFarmMetricDefintions~httpRequest'
+      - 'ServerFarms#getServerFarmMetricDefintions~headerName'
+  - uid: 'ServerFarms#getVnetsForServerFarm'
+    id: getVnetsForServerFarm
+    parent: ServerFarms
+    name: >-
+      getVnetsForServerFarm(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getVnetsForServerFarm(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getVnetsForServerFarm(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getVnetsForServerFarm~client'
+      - 'ServerFarms#getVnetsForServerFarm~callback'
+      - 'ServerFarms#getVnetsForServerFarm~options'
+      - 'ServerFarms#getVnetsForServerFarm~requestUrl'
+      - 'ServerFarms#getVnetsForServerFarm~requestUrl'
+      - 'ServerFarms#getVnetsForServerFarm~requestUrl'
+      - 'ServerFarms#getVnetsForServerFarm~requestUrl'
+      - 'ServerFarms#getVnetsForServerFarm~queryParameters'
+      - 'ServerFarms#getVnetsForServerFarm~requestUrl'
+      - 'ServerFarms#getVnetsForServerFarm~regex'
+      - 'ServerFarms#getVnetsForServerFarm~requestUrl'
+      - 'ServerFarms#getVnetsForServerFarm~httpRequest'
+      - 'ServerFarms#getVnetsForServerFarm~headerName'
+  - uid: 'ServerFarms#getVnetFromServerFarm'
+    id: getVnetFromServerFarm
+    parent: ServerFarms
+    name: >-
+      getVnetFromServerFarm(resourceGroupName, name, vnetName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: vnetName
+          type: string
+          description: Name of virtual network
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VnetInfo} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getVnetFromServerFarm(resourceGroupName, name, vnetName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getVnetFromServerFarm(resourceGroupName, name, vnetName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getVnetFromServerFarm~client'
+      - 'ServerFarms#getVnetFromServerFarm~callback'
+      - 'ServerFarms#getVnetFromServerFarm~options'
+      - 'ServerFarms#getVnetFromServerFarm~requestUrl'
+      - 'ServerFarms#getVnetFromServerFarm~requestUrl'
+      - 'ServerFarms#getVnetFromServerFarm~requestUrl'
+      - 'ServerFarms#getVnetFromServerFarm~requestUrl'
+      - 'ServerFarms#getVnetFromServerFarm~requestUrl'
+      - 'ServerFarms#getVnetFromServerFarm~queryParameters'
+      - 'ServerFarms#getVnetFromServerFarm~requestUrl'
+      - 'ServerFarms#getVnetFromServerFarm~regex'
+      - 'ServerFarms#getVnetFromServerFarm~requestUrl'
+      - 'ServerFarms#getVnetFromServerFarm~httpRequest'
+      - 'ServerFarms#getVnetFromServerFarm~headerName'
+  - uid: 'ServerFarms#getRoutesForVnet'
+    id: getRoutesForVnet
+    parent: ServerFarms
+    name: >-
+      getRoutesForVnet(resourceGroupName, name, vnetName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: vnetName
+          type: string
+          description: Name of virtual network
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRoutesForVnet(resourceGroupName, name, vnetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getRoutesForVnet(resourceGroupName, name, vnetName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getRoutesForVnet~client'
+      - 'ServerFarms#getRoutesForVnet~callback'
+      - 'ServerFarms#getRoutesForVnet~options'
+      - 'ServerFarms#getRoutesForVnet~requestUrl'
+      - 'ServerFarms#getRoutesForVnet~requestUrl'
+      - 'ServerFarms#getRoutesForVnet~requestUrl'
+      - 'ServerFarms#getRoutesForVnet~requestUrl'
+      - 'ServerFarms#getRoutesForVnet~requestUrl'
+      - 'ServerFarms#getRoutesForVnet~queryParameters'
+      - 'ServerFarms#getRoutesForVnet~requestUrl'
+      - 'ServerFarms#getRoutesForVnet~regex'
+      - 'ServerFarms#getRoutesForVnet~requestUrl'
+      - 'ServerFarms#getRoutesForVnet~httpRequest'
+      - 'ServerFarms#getRoutesForVnet~headerName'
+  - uid: 'ServerFarms#getRouteForVnet'
+    id: getRouteForVnet
+    parent: ServerFarms
+    name: >-
+      getRouteForVnet(resourceGroupName, name, vnetName, routeName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: vnetName
+          type: string
+          description: Name of virtual network
+        - id: routeName
+          type: string
+          description: Name of the virtual network route
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRouteForVnet(resourceGroupName, name, vnetName, routeName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getRouteForVnet(resourceGroupName, name, vnetName, routeName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getRouteForVnet~client'
+      - 'ServerFarms#getRouteForVnet~callback'
+      - 'ServerFarms#getRouteForVnet~options'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~queryParameters'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~regex'
+      - 'ServerFarms#getRouteForVnet~requestUrl'
+      - 'ServerFarms#getRouteForVnet~httpRequest'
+      - 'ServerFarms#getRouteForVnet~headerName'
+  - uid: 'ServerFarms#createOrUpdateVnetRoute'
+    id: createOrUpdateVnetRoute
+    parent: ServerFarms
+    name: >-
+      createOrUpdateVnetRoute(resourceGroupName, name, vnetName, routeName,
+      route, route.vnetRouteName, route.startAddress, route.endAddress,
+      route.routeType, route.id, route.name, route.kind, route.location,
+      route.type, route.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: vnetName
+          type: string
+          description: Name of virtual network
+        - id: routeName
+          type: string
+          description: Name of the virtual network route
+        - id: route
+          type: object
+          description: The route object
+        - id: route.vnetRouteName
+          type: string
+          description: "The name of this route. This is only\rreturned by the server and does not need to be set by the client."
+        - id: route.startAddress
+          type: string
+          description: "The starting address for this route.\rThis may also include a CIDR notation, in which case the end address must\rnot be specified."
+        - id: route.endAddress
+          type: string
+          description: "The ending address for this route. If\rthe start address is specified in CIDR notation, this must be omitted."
+        - id: route.routeType
+          type: string
+          description: "The type of route this is:\rDEFAULT - By default, every web app has routes to the local\raddress ranges specified by RFC1918\rINHERITED - Routes inherited from the real Virtual Network\rroutes\rSTATIC - Static route set on the web app only\r\rThese values will be used for syncing a Web App's routes with\rthose from a Virtual Network. This operation will clear all DEFAULT and\rINHERITED routes and replace them\rwith new INHERITED routes."
+        - id: route.id
+          type: string
+          description: Resource Id
+        - id: route.name
+          type: string
+          description: Resource Name
+        - id: route.kind
+          type: string
+          description: Kind of resource
+        - id: route.location
+          type: string
+          description: Resource Location
+        - id: route.type
+          type: string
+          description: Resource type
+        - id: route.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VnetRoute} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateVnetRoute(resourceGroupName, name, vnetName,
+        routeName, route, route.vnetRouteName, route.startAddress,
+        route.endAddress, route.routeType, route.id, route.name, route.kind,
+        route.location, route.type, route.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ServerFarms.createOrUpdateVnetRoute(resourceGroupName, name, vnetName,
+      routeName, route, route.vnetRouteName, route.startAddress,
+      route.endAddress, route.routeType, route.id, route.name, route.kind,
+      route.location, route.type, route.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'ServerFarms#createOrUpdateVnetRoute~client'
+      - 'ServerFarms#createOrUpdateVnetRoute~callback'
+      - 'ServerFarms#createOrUpdateVnetRoute~options'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~queryParameters'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~regex'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestUrl'
+      - 'ServerFarms#createOrUpdateVnetRoute~httpRequest'
+      - 'ServerFarms#createOrUpdateVnetRoute~headerName'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestContent'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestModel'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestModelMapper'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestModel'
+      - 'ServerFarms#createOrUpdateVnetRoute~requestContent'
+      - 'ServerFarms#createOrUpdateVnetRoute~serializationError'
+  - uid: 'ServerFarms#deleteVnetRoute'
+    id: deleteVnetRoute
+    parent: ServerFarms
+    name: >-
+      deleteVnetRoute(resourceGroupName, name, vnetName, routeName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: vnetName
+          type: string
+          description: Name of virtual network
+        - id: routeName
+          type: string
+          description: Name of the virtual network route
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteVnetRoute(resourceGroupName, name, vnetName, routeName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.deleteVnetRoute(resourceGroupName, name, vnetName, routeName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#deleteVnetRoute~client'
+      - 'ServerFarms#deleteVnetRoute~callback'
+      - 'ServerFarms#deleteVnetRoute~options'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~queryParameters'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~regex'
+      - 'ServerFarms#deleteVnetRoute~requestUrl'
+      - 'ServerFarms#deleteVnetRoute~httpRequest'
+      - 'ServerFarms#deleteVnetRoute~headerName'
+  - uid: 'ServerFarms#updateVnetRoute'
+    id: updateVnetRoute
+    parent: ServerFarms
+    name: >-
+      updateVnetRoute(resourceGroupName, name, vnetName, routeName, route,
+      route.vnetRouteName, route.startAddress, route.endAddress,
+      route.routeType, route.id, route.name, route.kind, route.location,
+      route.type, route.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: vnetName
+          type: string
+          description: Name of virtual network
+        - id: routeName
+          type: string
+          description: Name of the virtual network route
+        - id: route
+          type: object
+          description: The route object
+        - id: route.vnetRouteName
+          type: string
+          description: "The name of this route. This is only\rreturned by the server and does not need to be set by the client."
+        - id: route.startAddress
+          type: string
+          description: "The starting address for this route.\rThis may also include a CIDR notation, in which case the end address must\rnot be specified."
+        - id: route.endAddress
+          type: string
+          description: "The ending address for this route. If\rthe start address is specified in CIDR notation, this must be omitted."
+        - id: route.routeType
+          type: string
+          description: "The type of route this is:\rDEFAULT - By default, every web app has routes to the local\raddress ranges specified by RFC1918\rINHERITED - Routes inherited from the real Virtual Network\rroutes\rSTATIC - Static route set on the web app only\r\rThese values will be used for syncing a Web App's routes with\rthose from a Virtual Network. This operation will clear all DEFAULT and\rINHERITED routes and replace them\rwith new INHERITED routes."
+        - id: route.id
+          type: string
+          description: Resource Id
+        - id: route.name
+          type: string
+          description: Resource Name
+        - id: route.kind
+          type: string
+          description: Kind of resource
+        - id: route.location
+          type: string
+          description: Resource Location
+        - id: route.type
+          type: string
+          description: Resource type
+        - id: route.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VnetRoute} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateVnetRoute(resourceGroupName, name, vnetName, routeName,
+        route, route.vnetRouteName, route.startAddress, route.endAddress,
+        route.routeType, route.id, route.name, route.kind, route.location,
+        route.type, route.tags, options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.updateVnetRoute(resourceGroupName, name, vnetName, routeName,
+      route, route.vnetRouteName, route.startAddress, route.endAddress,
+      route.routeType, route.id, route.name, route.kind, route.location,
+      route.type, route.tags, options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#updateVnetRoute~client'
+      - 'ServerFarms#updateVnetRoute~callback'
+      - 'ServerFarms#updateVnetRoute~options'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~queryParameters'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~regex'
+      - 'ServerFarms#updateVnetRoute~requestUrl'
+      - 'ServerFarms#updateVnetRoute~httpRequest'
+      - 'ServerFarms#updateVnetRoute~headerName'
+      - 'ServerFarms#updateVnetRoute~requestContent'
+      - 'ServerFarms#updateVnetRoute~requestModel'
+      - 'ServerFarms#updateVnetRoute~requestModelMapper'
+      - 'ServerFarms#updateVnetRoute~requestModel'
+      - 'ServerFarms#updateVnetRoute~requestContent'
+      - 'ServerFarms#updateVnetRoute~serializationError'
+  - uid: 'ServerFarms#getServerFarmVnetGateway'
+    id: getServerFarmVnetGateway
+    parent: ServerFarms
+    name: >-
+      getServerFarmVnetGateway(resourceGroupName, name, vnetName, gatewayName,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of the App Service Plan
+        - id: vnetName
+          type: string
+          description: Name of the virtual network
+        - id: gatewayName
+          type: string
+          description: "Name of the gateway. Only the 'primary' gateway\ris supported."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VnetGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarmVnetGateway(resourceGroupName, name, vnetName,
+        gatewayName, options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getServerFarmVnetGateway(resourceGroupName, name, vnetName,
+      gatewayName, options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getServerFarmVnetGateway~client'
+      - 'ServerFarms#getServerFarmVnetGateway~callback'
+      - 'ServerFarms#getServerFarmVnetGateway~options'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~queryParameters'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~regex'
+      - 'ServerFarms#getServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#getServerFarmVnetGateway~httpRequest'
+      - 'ServerFarms#getServerFarmVnetGateway~headerName'
+  - uid: 'ServerFarms#updateServerFarmVnetGateway'
+    id: updateServerFarmVnetGateway
+    parent: ServerFarms
+    name: >-
+      updateServerFarmVnetGateway(resourceGroupName, name, vnetName,
+      gatewayName, connectionEnvelope, connectionEnvelope.vnetName,
+      connectionEnvelope.vpnPackageUri, connectionEnvelope.id,
+      connectionEnvelope.name, connectionEnvelope.kind,
+      connectionEnvelope.location, connectionEnvelope.type,
+      connectionEnvelope.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The resource group
+        - id: name
+          type: string
+          description: The name of the App Service Plan
+        - id: vnetName
+          type: string
+          description: The name of the virtual network
+        - id: gatewayName
+          type: string
+          description: "The name of the gateway. Only 'primary' is\rsupported."
+        - id: connectionEnvelope
+          type: object
+          description: The gateway entity.
+        - id: connectionEnvelope.vnetName
+          type: string
+          description: The VNET name.
+        - id: connectionEnvelope.vpnPackageUri
+          type: string
+          description: "The URI where the Vpn\rpackage can be downloaded"
+        - id: connectionEnvelope.id
+          type: string
+          description: Resource Id
+        - id: connectionEnvelope.name
+          type: string
+          description: Resource Name
+        - id: connectionEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: connectionEnvelope.location
+          type: string
+          description: Resource Location
+        - id: connectionEnvelope.type
+          type: string
+          description: Resource type
+        - id: connectionEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VnetGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateServerFarmVnetGateway(resourceGroupName, name, vnetName,
+        gatewayName, connectionEnvelope, connectionEnvelope.vnetName,
+        connectionEnvelope.vpnPackageUri, connectionEnvelope.id,
+        connectionEnvelope.name, connectionEnvelope.kind,
+        connectionEnvelope.location, connectionEnvelope.type,
+        connectionEnvelope.tags, options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.updateServerFarmVnetGateway(resourceGroupName, name, vnetName,
+      gatewayName, connectionEnvelope, connectionEnvelope.vnetName,
+      connectionEnvelope.vpnPackageUri, connectionEnvelope.id,
+      connectionEnvelope.name, connectionEnvelope.kind,
+      connectionEnvelope.location, connectionEnvelope.type,
+      connectionEnvelope.tags, options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#updateServerFarmVnetGateway~client'
+      - 'ServerFarms#updateServerFarmVnetGateway~callback'
+      - 'ServerFarms#updateServerFarmVnetGateway~options'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~queryParameters'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~regex'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestUrl'
+      - 'ServerFarms#updateServerFarmVnetGateway~httpRequest'
+      - 'ServerFarms#updateServerFarmVnetGateway~headerName'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestContent'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestModel'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestModelMapper'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestModel'
+      - 'ServerFarms#updateServerFarmVnetGateway~requestContent'
+      - 'ServerFarms#updateServerFarmVnetGateway~serializationError'
+  - uid: 'ServerFarms#getServerFarmSites'
+    id: getServerFarmSites
+    parent: ServerFarms
+    name: >-
+      getServerFarmSites(resourceGroupName, name, options, options.skipToken,
+      options.filter, options.top, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.skipToken
+          type: string
+          description: "Skip to of web apps in a list. If\rspecified, the resulting list will contain web apps starting from\r(including) the skipToken. Else, the resulting list contains web apps from\rthe start of the list"
+        - id: options.filter
+          type: string
+          description: "Supported filter: $filter=state eq\rrunning. Returns only web apps that are currently running"
+        - id: options.top
+          type: string
+          description: "List page size. If specified, results are\rpaged."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarmSites(resourceGroupName, name, options,
+        options.skipToken, options.filter, options.top, options.customHeaders,
+        callback);
+    fullName: >-
+      ServerFarms.getServerFarmSites(resourceGroupName, name, options,
+      options.skipToken, options.filter, options.top, options.customHeaders,
+      callback)
+    children:
+      - 'ServerFarms#getServerFarmSites~client'
+      - 'ServerFarms#getServerFarmSites~callback'
+      - 'ServerFarms#getServerFarmSites~options'
+      - 'ServerFarms#getServerFarmSites~skipToken'
+      - 'ServerFarms#getServerFarmSites~filter'
+      - 'ServerFarms#getServerFarmSites~top'
+      - 'ServerFarms#getServerFarmSites~requestUrl'
+      - 'ServerFarms#getServerFarmSites~requestUrl'
+      - 'ServerFarms#getServerFarmSites~requestUrl'
+      - 'ServerFarms#getServerFarmSites~requestUrl'
+      - 'ServerFarms#getServerFarmSites~queryParameters'
+      - 'ServerFarms#getServerFarmSites~requestUrl'
+      - 'ServerFarms#getServerFarmSites~regex'
+      - 'ServerFarms#getServerFarmSites~requestUrl'
+      - 'ServerFarms#getServerFarmSites~httpRequest'
+      - 'ServerFarms#getServerFarmSites~headerName'
+  - uid: 'ServerFarms#rebootWorkerForServerFarm'
+    id: rebootWorkerForServerFarm
+    parent: ServerFarms
+    name: >-
+      rebootWorkerForServerFarm(resourceGroupName, name, workerName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of server farm
+        - id: workerName
+          type: string
+          description: 'Name of worker machine, typically starts with RD'
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function rebootWorkerForServerFarm(resourceGroupName, name, workerName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.rebootWorkerForServerFarm(resourceGroupName, name, workerName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#rebootWorkerForServerFarm~client'
+      - 'ServerFarms#rebootWorkerForServerFarm~callback'
+      - 'ServerFarms#rebootWorkerForServerFarm~options'
+      - 'ServerFarms#rebootWorkerForServerFarm~requestUrl'
+      - 'ServerFarms#rebootWorkerForServerFarm~requestUrl'
+      - 'ServerFarms#rebootWorkerForServerFarm~requestUrl'
+      - 'ServerFarms#rebootWorkerForServerFarm~requestUrl'
+      - 'ServerFarms#rebootWorkerForServerFarm~requestUrl'
+      - 'ServerFarms#rebootWorkerForServerFarm~queryParameters'
+      - 'ServerFarms#rebootWorkerForServerFarm~requestUrl'
+      - 'ServerFarms#rebootWorkerForServerFarm~regex'
+      - 'ServerFarms#rebootWorkerForServerFarm~requestUrl'
+      - 'ServerFarms#rebootWorkerForServerFarm~httpRequest'
+      - 'ServerFarms#rebootWorkerForServerFarm~headerName'
+  - uid: 'ServerFarms#restartSitesForServerFarm'
+    id: restartSitesForServerFarm
+    parent: ServerFarms
+    name: >-
+      restartSitesForServerFarm(resourceGroupName, name, options,
+      options.softRestart, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of App Service Plan
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.softRestart
+          type: boolean
+          description: "Soft restart applies the\rconfiguration settings and restarts the apps if necessary. Hard restart\ralways restarts and reprovisions the apps"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function restartSitesForServerFarm(resourceGroupName, name, options,
+        options.softRestart, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.restartSitesForServerFarm(resourceGroupName, name, options,
+      options.softRestart, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#restartSitesForServerFarm~client'
+      - 'ServerFarms#restartSitesForServerFarm~callback'
+      - 'ServerFarms#restartSitesForServerFarm~options'
+      - 'ServerFarms#restartSitesForServerFarm~softRestart'
+      - 'ServerFarms#restartSitesForServerFarm~requestUrl'
+      - 'ServerFarms#restartSitesForServerFarm~requestUrl'
+      - 'ServerFarms#restartSitesForServerFarm~requestUrl'
+      - 'ServerFarms#restartSitesForServerFarm~requestUrl'
+      - 'ServerFarms#restartSitesForServerFarm~queryParameters'
+      - 'ServerFarms#restartSitesForServerFarm~requestUrl'
+      - 'ServerFarms#restartSitesForServerFarm~regex'
+      - 'ServerFarms#restartSitesForServerFarm~requestUrl'
+      - 'ServerFarms#restartSitesForServerFarm~httpRequest'
+      - 'ServerFarms#restartSitesForServerFarm~headerName'
+  - uid: 'ServerFarms#getServerFarmOperation'
+    id: getServerFarmOperation
+    parent: ServerFarms
+    name: >-
+      getServerFarmOperation(resourceGroupName, name, operationId, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of server farm
+        - id: operationId
+          type: string
+          description: Id of Server farm operation"&gt;
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmWithRichSku} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarmOperation(resourceGroupName, name, operationId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getServerFarmOperation(resourceGroupName, name, operationId,
+      options, options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getServerFarmOperation~client'
+      - 'ServerFarms#getServerFarmOperation~callback'
+      - 'ServerFarms#getServerFarmOperation~options'
+      - 'ServerFarms#getServerFarmOperation~requestUrl'
+      - 'ServerFarms#getServerFarmOperation~requestUrl'
+      - 'ServerFarms#getServerFarmOperation~requestUrl'
+      - 'ServerFarms#getServerFarmOperation~requestUrl'
+      - 'ServerFarms#getServerFarmOperation~requestUrl'
+      - 'ServerFarms#getServerFarmOperation~queryParameters'
+      - 'ServerFarms#getServerFarmOperation~requestUrl'
+      - 'ServerFarms#getServerFarmOperation~regex'
+      - 'ServerFarms#getServerFarmOperation~requestUrl'
+      - 'ServerFarms#getServerFarmOperation~httpRequest'
+      - 'ServerFarms#getServerFarmOperation~headerName'
+  - uid: 'ServerFarms#getServerFarmSitesNext'
+    id: getServerFarmSitesNext
+    parent: ServerFarms
+    name: >-
+      getServerFarmSitesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getServerFarmSitesNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ServerFarms.getServerFarmSitesNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ServerFarms#getServerFarmSitesNext~client'
+      - 'ServerFarms#getServerFarmSitesNext~callback'
+      - 'ServerFarms#getServerFarmSitesNext~options'
+      - 'ServerFarms#getServerFarmSitesNext~requestUrl'
+      - 'ServerFarms#getServerFarmSitesNext~requestUrl'
+      - 'ServerFarms#getServerFarmSitesNext~regex'
+      - 'ServerFarms#getServerFarmSitesNext~requestUrl'
+      - 'ServerFarms#getServerFarmSitesNext~httpRequest'
+      - 'ServerFarms#getServerFarmSitesNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

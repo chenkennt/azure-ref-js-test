@@ -1,0 +1,292 @@
+items:
+  - uid: SqlManagementService
+    id: SqlManagementService
+    name: SqlManagementService
+    summary: Creates a new SqlManagementService object
+    type: Class
+    syntax:
+      content: SqlManagementService
+    fullName: SqlManagementService
+    children:
+      - SqlManagementService~settings
+      - 'SqlManagementService#subscriptionId'
+      - 'SqlManagementService#listServers'
+      - 'SqlManagementService#deleteServer'
+      - 'SqlManagementService#createServer'
+      - 'SqlManagementService#listServerFirewallRules'
+      - 'SqlManagementService#deleteServerFirewallRule'
+      - 'SqlManagementService#createServerFirewallRule'
+      - 'SqlManagementService#updateServerFirewallRule'
+      - 'SqlManagementService#createDatabase'
+      - 'SqlManagementService#_makePath'
+  - uid: SqlManagementService~settings
+    id: settings
+    parent: SqlManagementService
+    name: settings
+    type: Field
+    syntax:
+      content: settings
+    fullName: SqlManagementService.settings
+  - uid: 'SqlManagementService#subscriptionId'
+    id: subscriptionId
+    parent: SqlManagementService
+    name: subscriptionId
+    type: Field
+    syntax:
+      content: subscriptionId
+    fullName: SqlManagementService.subscriptionId
+  - uid: 'SqlManagementService#listServers'
+    id: listServers
+    parent: SqlManagementService
+    name: listServers(callback)
+    summary: Lists the available SQL Database servers.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                       if an error occurs; otherwise `results` will contain\r                                                       the list of available SQL Database servers information.\r                                                       `response` will contain information related to this operation."
+      content: function listServers(callback);
+    fullName: SqlManagementService.listServers(callback)
+    children:
+      - 'SqlManagementService#listServers~path'
+      - 'SqlManagementService#listServers~webResource'
+  - uid: 'SqlManagementService#deleteServer'
+    id: deleteServer
+    parent: SqlManagementService
+    name: 'deleteServer(name, callback)'
+    summary: Deletes a SQL Database server.
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+          description: The SQL Server name.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                  if an error occurs; otherwise `response` will contain information related to this operation."
+      content: 'function deleteServer(name, callback);'
+    fullName: 'SqlManagementService.deleteServer(name, callback)'
+    children:
+      - 'SqlManagementService#deleteServer~path'
+      - 'SqlManagementService#deleteServer~webResource'
+  - uid: 'SqlManagementService#createServer'
+    id: createServer
+    parent: SqlManagementService
+    name: >-
+      createServer(administratorLogin, administratorLoginPassword, location,
+      callback)
+    summary: Creates a SQL Database server.
+    type: Method
+    syntax:
+      parameters:
+        - id: administratorLogin
+          type: string
+          description: The administrator's login.
+        - id: administratorLoginPassword
+          type: string
+          description: The administrator's password.
+        - id: location
+          type: string
+          description: The server's location.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                           if an error occurs; otherwise `server` will contain\r                                                           the new server information.\r                                                           `response` will contain information related to this operation."
+      content: >-
+        function createServer(administratorLogin, administratorLoginPassword,
+        location, callback);
+    fullName: >-
+      SqlManagementService.createServer(administratorLogin,
+      administratorLoginPassword, location, callback)
+    children:
+      - 'SqlManagementService#createServer~path'
+      - 'SqlManagementService#createServer~webResource'
+      - 'SqlManagementService#createServer~createServerRequestBody'
+      - 'SqlManagementService#createServer~createServerRequestBodyXml'
+  - uid: 'SqlManagementService#listServerFirewallRules'
+    id: listServerFirewallRules
+    parent: SqlManagementService
+    name: 'listServerFirewallRules(serverName, callback)'
+    summary: Lists SQL Database server firewall rules.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                          if an error occurs; otherwise `results` will contain\r                                                          the firewall rules.\r                                                          `response` will contain information related to this operation."
+      content: 'function listServerFirewallRules(serverName, callback);'
+    fullName: 'SqlManagementService.listServerFirewallRules(serverName, callback)'
+    children:
+      - 'SqlManagementService#listServerFirewallRules~path'
+      - 'SqlManagementService#listServerFirewallRules~webResource'
+  - uid: 'SqlManagementService#deleteServerFirewallRule'
+    id: deleteServerFirewallRule
+    parent: SqlManagementService
+    name: 'deleteServerFirewallRule(serverName, ruleName, callback)'
+    summary: Deletes a SQL Database server firewall rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: ruleName
+          type: string
+          description: The rule name.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                  if an error occurs; otherwise `response` will contain information related to this operation."
+      content: 'function deleteServerFirewallRule(serverName, ruleName, callback);'
+    fullName: >-
+      SqlManagementService.deleteServerFirewallRule(serverName, ruleName,
+      callback)
+    children:
+      - 'SqlManagementService#deleteServerFirewallRule~path'
+      - 'SqlManagementService#deleteServerFirewallRule~webResource'
+  - uid: 'SqlManagementService#createServerFirewallRule'
+    id: createServerFirewallRule
+    parent: SqlManagementService
+    name: >-
+      createServerFirewallRule(serverName, ruleName, startIPAddress,
+      endIPAddress, callback)
+    summary: Creates a SQL Database server firewall rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: ruleName
+          type: string
+          description: The rule name.
+        - id: startIPAddress
+          type: string
+          description: The starting IP address for the rule.
+        - id: endIPAddress
+          type: string
+          description: The ending IP address for the rule.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                       if an error occurs; otherwise `rule` will contain\r                                                       the new rule information.\r                                                       `response` will contain information related to this operation."
+      content: >-
+        function createServerFirewallRule(serverName, ruleName, startIPAddress,
+        endIPAddress, callback);
+    fullName: >-
+      SqlManagementService.createServerFirewallRule(serverName, ruleName,
+      startIPAddress, endIPAddress, callback)
+    children:
+      - 'SqlManagementService#createServerFirewallRule~path'
+      - 'SqlManagementService#createServerFirewallRule~webResource'
+      - 'SqlManagementService#createServerFirewallRule~createRuleRequestBody'
+      - 'SqlManagementService#createServerFirewallRule~createRuleRequestBodyXml'
+  - uid: 'SqlManagementService#updateServerFirewallRule'
+    id: updateServerFirewallRule
+    parent: SqlManagementService
+    name: >-
+      updateServerFirewallRule(serverName, ruleName, startIPAddress,
+      endIPAddress, callback)
+    summary: Updates a SQL Database server firewall rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: ruleName
+          type: string
+          description: The rule name.
+        - id: startIPAddress
+          type: string
+          description: The starting IP address for the rule.
+        - id: endIPAddress
+          type: string
+          description: The ending IP address for the rule.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                       if an error occurs; otherwise `rule` will contain\r                                                       the updated rule information.\r                                                       `response` will contain information related to this operation."
+      content: >-
+        function updateServerFirewallRule(serverName, ruleName, startIPAddress,
+        endIPAddress, callback);
+    fullName: >-
+      SqlManagementService.updateServerFirewallRule(serverName, ruleName,
+      startIPAddress, endIPAddress, callback)
+    children:
+      - 'SqlManagementService#updateServerFirewallRule~path'
+      - 'SqlManagementService#updateServerFirewallRule~webResource'
+      - 'SqlManagementService#updateServerFirewallRule~updateServerRequestBody'
+      - 'SqlManagementService#updateServerFirewallRule~updateServerRequestBodyXml'
+  - uid: 'SqlManagementService#createDatabase'
+    id: createDatabase
+    parent: SqlManagementService
+    name: >-
+      createDatabase(serverName, databaseName, options, options.edition,
+      options.maxsize, options.collation, callback)
+    summary: Create a new database.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: The server name
+        - id: databaseName
+          type: string
+          description: Name of database to create
+        - id: options
+          type: object
+          description: Creation options.
+        - id: options.edition
+          type: string
+          description: '''Web'' or ''Business''.'
+        - id: options.maxsize
+          type: number
+          description: >-
+            Max DB size in GB, defaults to 1 for web, 10 for business, only
+            certain values are valid
+        - id: options.collation
+          type: string
+          description: sql collation name
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                               if an error occurs; otherwise `createResult` will contain\r                                                                               the new database information.\r                                                                               `response` will contain information related to this operation."
+      content: >-
+        function createDatabase(serverName, databaseName, options,
+        options.edition, options.maxsize, options.collation, callback);
+    fullName: >-
+      SqlManagementService.createDatabase(serverName, databaseName, options,
+      options.edition, options.maxsize, options.collation, callback)
+    children:
+      - 'SqlManagementService#createDatabase~options'
+      - 'SqlManagementService#createDatabase~callback'
+      - 'SqlManagementService#createDatabase~options'
+      - 'SqlManagementService#createDatabase~path'
+      - 'SqlManagementService#createDatabase~webResource'
+      - 'SqlManagementService#createDatabase~createDatabaseRequestBody'
+      - 'SqlManagementService#createDatabase~createDatabaseRequestBodyXml'
+  - uid: 'SqlManagementService#_makePath'
+    id: _makePath
+    parent: SqlManagementService
+    name: _makePath()
+    type: Method
+    syntax:
+      content: function _makePath();
+    fullName: SqlManagementService._makePath()
+references:
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

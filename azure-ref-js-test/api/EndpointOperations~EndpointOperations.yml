@@ -1,0 +1,432 @@
+items:
+  - uid: EndpointOperations~EndpointOperations
+    id: EndpointOperations
+    parent: EndpointOperations
+    name: EndpointOperations
+    type: Class
+    syntax:
+      content: EndpointOperations
+    fullName: EndpointOperations.EndpointOperations
+    children:
+      - 'EndpointOperations~EndpointOperations#client'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate'
+      - 'EndpointOperations~EndpointOperations#deleteMethod'
+      - 'EndpointOperations~EndpointOperations#get'
+      - 'EndpointOperations~EndpointOperations#update'
+  - uid: 'EndpointOperations~EndpointOperations#client'
+    id: client
+    parent: EndpointOperations~EndpointOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: EndpointOperations~EndpointOperations.client
+  - uid: 'EndpointOperations~EndpointOperations#createOrUpdate'
+    id: createOrUpdate
+    parent: EndpointOperations~EndpointOperations
+    name: >-
+      createOrUpdate(resourceGroupName, profileName, endpointType, endpointName,
+      parameters, parameters.endpoint, parameters.endpoint.id,
+      parameters.endpoint.name, parameters.endpoint.type,
+      parameters.endpoint.properties,
+      parameters.endpoint.properties.targetResourceId,
+      parameters.endpoint.properties.target,
+      parameters.endpoint.properties.endpointStatus,
+      parameters.endpoint.properties.weight,
+      parameters.endpoint.properties.priority,
+      parameters.endpoint.properties.endpointLocation,
+      parameters.endpoint.properties.endpointMonitorStatus,
+      parameters.endpoint.properties.minChildEndpoints, callback)
+    summary: Create or update a Traffic Manager endpoint.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager endpoint to be created or updated."
+        - id: profileName
+          type: string
+          description: "The name of the Traffic Manager endpoint to be\rcreated or updated."
+        - id: endpointType
+          type: string
+          description: "The type of the Traffic Manager endpoint to\rbe created or updated."
+        - id: endpointName
+          type: string
+          description: "The name of the Traffic Manager endpoint to\rbe created or updated."
+        - id: parameters
+          type: EndpointCreateOrUpdateParameters
+          description: "The Traffic Manager\rendpoint parameters supplied to the CreateOrUpdate operation."
+        - id: parameters.endpoint
+          type: Endpoint
+          description: "Gets or sets parameters for the\rTraffic Manager endpoint being created or updated."
+        - id: parameters.endpoint.id
+          type: string
+          description: "Gets or sets the ID of the\rTraffic Manager endpoint."
+        - id: parameters.endpoint.name
+          type: string
+          description: "Gets or sets the name of the\rTraffic Manager endpoint."
+        - id: parameters.endpoint.type
+          type: string
+          description: "Gets or sets the endpoint type\rof the Traffic Manager endpoint."
+        - id: parameters.endpoint.properties
+          type: EndpointProperties
+          description: "Gets or sets\rthe properties of the Traffic Manager endpoint."
+        - id: parameters.endpoint.properties.targetResourceId
+          type: string
+          description: "Gets or\rsets the Azure Resource URI of the of the endpoint.  Not applicable to\rendpoints of type 'ExternalEndpoints'."
+        - id: parameters.endpoint.properties.target
+          type: string
+          description: "Gets or sets the\rfully-qualified DNS name of the endpoint.  Traffic Manager returns this\rvalue in DNS responses to direct traffic to this endpoint."
+        - id: parameters.endpoint.properties.endpointStatus
+          type: string
+          description: "Gets or\rsets the status of the endpoint..  If the endpoint is Enabled, it is\rprobed for endpoint health and is included in the traffic routing method.\rPossible values are 'Enabled' and 'Disabled'."
+        - id: parameters.endpoint.properties.weight
+          type: number
+          description: "Gets or sets the\rweight of this endpoint when using the 'Weighted' traffic routing method.\rPossible values are from 1 to 1000."
+        - id: parameters.endpoint.properties.priority
+          type: number
+          description: "Gets or sets the\rpriority of this endpoint when using the ‘Priority’ traffic routing\rmethod. Possible values are from 1 to 1000, lower values represent higher\rpriority. This is an optional parameter.  If specified, it must be\rspecified on all endpoints, and no two endpoints can share the same\rpriority value."
+        - id: parameters.endpoint.properties.endpointLocation
+          type: string
+          description: "Specifies the location of the external or nested endpoints when using the\r‘Performance’ traffic routing method."
+        - id: parameters.endpoint.properties.endpointMonitorStatus
+          type: string
+          description: Gets or sets the monitoring status of the endpoint.
+        - id: parameters.endpoint.properties.minChildEndpoints
+          type: number
+          description: "Gets or\rsets the minimum number of endpoints that must be available in the child\rprofile in order for the parent profile to be considered available. Only\rapplicable to endpoint of type 'NestedEndpoints'."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createOrUpdate(resourceGroupName, profileName, endpointType,
+        endpointName, parameters, parameters.endpoint, parameters.endpoint.id,
+        parameters.endpoint.name, parameters.endpoint.type,
+        parameters.endpoint.properties,
+        parameters.endpoint.properties.targetResourceId,
+        parameters.endpoint.properties.target,
+        parameters.endpoint.properties.endpointStatus,
+        parameters.endpoint.properties.weight,
+        parameters.endpoint.properties.priority,
+        parameters.endpoint.properties.endpointLocation,
+        parameters.endpoint.properties.endpointMonitorStatus,
+        parameters.endpoint.properties.minChildEndpoints, callback);
+    fullName: >-
+      EndpointOperations~EndpointOperations.createOrUpdate(resourceGroupName,
+      profileName, endpointType, endpointName, parameters, parameters.endpoint,
+      parameters.endpoint.id, parameters.endpoint.name,
+      parameters.endpoint.type, parameters.endpoint.properties,
+      parameters.endpoint.properties.targetResourceId,
+      parameters.endpoint.properties.target,
+      parameters.endpoint.properties.endpointStatus,
+      parameters.endpoint.properties.weight,
+      parameters.endpoint.properties.priority,
+      parameters.endpoint.properties.endpointLocation,
+      parameters.endpoint.properties.endpointMonitorStatus,
+      parameters.endpoint.properties.minChildEndpoints, callback)
+    children:
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~queryParameters'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~baseUrl'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~baseUrl'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~url2'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~httpRequest'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~requestContent'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~requestDoc'
+      - >-
+        EndpointOperations~EndpointOperations#createOrUpdate~endpointCreateOrUpdateParametersValue
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~requestDoc'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~propertiesValue'
+      - 'EndpointOperations~EndpointOperations#createOrUpdate~requestContent'
+  - uid: 'EndpointOperations~EndpointOperations#deleteMethod'
+    id: deleteMethod
+    parent: EndpointOperations~EndpointOperations
+    name: >-
+      deleteMethod(resourceGroupName, profileName, endpointType, endpointName,
+      callback)
+    summary: Deletes a Traffic Manager endpoint.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager endpoint to be deleted."
+        - id: profileName
+          type: string
+          description: "The name of the Traffic Manager endpoint to be\rdeleted."
+        - id: endpointType
+          type: string
+          description: "The type of the Traffic Manager endpoint to\rbe deleted."
+        - id: endpointName
+          type: string
+          description: "The name of the Traffic Manager endpoint to\rbe deleted."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteMethod(resourceGroupName, profileName, endpointType,
+        endpointName, callback);
+    fullName: >-
+      EndpointOperations~EndpointOperations.deleteMethod(resourceGroupName,
+      profileName, endpointType, endpointName, callback)
+    children:
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~queryParameters'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~baseUrl'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~baseUrl'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~url2'
+      - 'EndpointOperations~EndpointOperations#deleteMethod~httpRequest'
+  - uid: 'EndpointOperations~EndpointOperations#get'
+    id: get
+    parent: EndpointOperations~EndpointOperations
+    name: 'get(resourceGroupName, profileName, endpointType, endpointName, callback)'
+    summary: Gets a Traffic Manager endpoint.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager endpoint."
+        - id: profileName
+          type: string
+          description: The name of the Traffic Manager endpoint.
+        - id: endpointType
+          type: string
+          description: The type of the Traffic Manager endpoint.
+        - id: endpointName
+          type: string
+          description: The name of the Traffic Manager endpoint.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function get(resourceGroupName, profileName, endpointType, endpointName,
+        callback);
+    fullName: >-
+      EndpointOperations~EndpointOperations.get(resourceGroupName, profileName,
+      endpointType, endpointName, callback)
+    children:
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~queryParameters'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~baseUrl'
+      - 'EndpointOperations~EndpointOperations#get~baseUrl'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~url2'
+      - 'EndpointOperations~EndpointOperations#get~httpRequest'
+  - uid: 'EndpointOperations~EndpointOperations#update'
+    id: update
+    parent: EndpointOperations~EndpointOperations
+    name: >-
+      update(resourceGroupName, profileName, endpointType, endpointName,
+      parameters, parameters.endpoint, parameters.endpoint.id,
+      parameters.endpoint.name, parameters.endpoint.type,
+      parameters.endpoint.properties,
+      parameters.endpoint.properties.targetResourceId,
+      parameters.endpoint.properties.target,
+      parameters.endpoint.properties.endpointStatus,
+      parameters.endpoint.properties.weight,
+      parameters.endpoint.properties.priority,
+      parameters.endpoint.properties.endpointLocation,
+      parameters.endpoint.properties.endpointMonitorStatus,
+      parameters.endpoint.properties.minChildEndpoints, callback)
+    summary: Create or update a Traffic Manager endpoint.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager endpoint to be created or updated."
+        - id: profileName
+          type: string
+          description: "The name of the Traffic Manager endpoint to be\rcreated or updated."
+        - id: endpointType
+          type: string
+          description: "The type of the Traffic Manager endpoint to\rbe created or updated."
+        - id: endpointName
+          type: string
+          description: "The name of the Traffic Manager endpoint to\rbe created or updated."
+        - id: parameters
+          type: EndpointUpdateParameters
+          description: "The Traffic Manager endpoint\rparameters supplied to the Update operation."
+        - id: parameters.endpoint
+          type: Endpoint
+          description: "Gets or sets parameters for the\rTraffic Manager endpoint being created or updated."
+        - id: parameters.endpoint.id
+          type: string
+          description: "Gets or sets the ID of the\rTraffic Manager endpoint."
+        - id: parameters.endpoint.name
+          type: string
+          description: "Gets or sets the name of the\rTraffic Manager endpoint."
+        - id: parameters.endpoint.type
+          type: string
+          description: "Gets or sets the endpoint type\rof the Traffic Manager endpoint."
+        - id: parameters.endpoint.properties
+          type: EndpointProperties
+          description: "Gets or sets\rthe properties of the Traffic Manager endpoint."
+        - id: parameters.endpoint.properties.targetResourceId
+          type: string
+          description: "Gets or\rsets the Azure Resource URI of the of the endpoint.  Not applicable to\rendpoints of type 'ExternalEndpoints'."
+        - id: parameters.endpoint.properties.target
+          type: string
+          description: "Gets or sets the\rfully-qualified DNS name of the endpoint.  Traffic Manager returns this\rvalue in DNS responses to direct traffic to this endpoint."
+        - id: parameters.endpoint.properties.endpointStatus
+          type: string
+          description: "Gets or\rsets the status of the endpoint..  If the endpoint is Enabled, it is\rprobed for endpoint health and is included in the traffic routing method.\rPossible values are 'Enabled' and 'Disabled'."
+        - id: parameters.endpoint.properties.weight
+          type: number
+          description: "Gets or sets the\rweight of this endpoint when using the 'Weighted' traffic routing method.\rPossible values are from 1 to 1000."
+        - id: parameters.endpoint.properties.priority
+          type: number
+          description: "Gets or sets the\rpriority of this endpoint when using the ‘Priority’ traffic routing\rmethod. Possible values are from 1 to 1000, lower values represent higher\rpriority. This is an optional parameter.  If specified, it must be\rspecified on all endpoints, and no two endpoints can share the same\rpriority value."
+        - id: parameters.endpoint.properties.endpointLocation
+          type: string
+          description: "Specifies the location of the external or nested endpoints when using the\r‘Performance’ traffic routing method."
+        - id: parameters.endpoint.properties.endpointMonitorStatus
+          type: string
+          description: Gets or sets the monitoring status of the endpoint.
+        - id: parameters.endpoint.properties.minChildEndpoints
+          type: number
+          description: "Gets or\rsets the minimum number of endpoints that must be available in the child\rprofile in order for the parent profile to be considered available. Only\rapplicable to endpoint of type 'NestedEndpoints'."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(resourceGroupName, profileName, endpointType,
+        endpointName, parameters, parameters.endpoint, parameters.endpoint.id,
+        parameters.endpoint.name, parameters.endpoint.type,
+        parameters.endpoint.properties,
+        parameters.endpoint.properties.targetResourceId,
+        parameters.endpoint.properties.target,
+        parameters.endpoint.properties.endpointStatus,
+        parameters.endpoint.properties.weight,
+        parameters.endpoint.properties.priority,
+        parameters.endpoint.properties.endpointLocation,
+        parameters.endpoint.properties.endpointMonitorStatus,
+        parameters.endpoint.properties.minChildEndpoints, callback);
+    fullName: >-
+      EndpointOperations~EndpointOperations.update(resourceGroupName,
+      profileName, endpointType, endpointName, parameters, parameters.endpoint,
+      parameters.endpoint.id, parameters.endpoint.name,
+      parameters.endpoint.type, parameters.endpoint.properties,
+      parameters.endpoint.properties.targetResourceId,
+      parameters.endpoint.properties.target,
+      parameters.endpoint.properties.endpointStatus,
+      parameters.endpoint.properties.weight,
+      parameters.endpoint.properties.priority,
+      parameters.endpoint.properties.endpointLocation,
+      parameters.endpoint.properties.endpointMonitorStatus,
+      parameters.endpoint.properties.minChildEndpoints, callback)
+    children:
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~queryParameters'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~baseUrl'
+      - 'EndpointOperations~EndpointOperations#update~baseUrl'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~url2'
+      - 'EndpointOperations~EndpointOperations#update~httpRequest'
+      - 'EndpointOperations~EndpointOperations#update~requestContent'
+      - 'EndpointOperations~EndpointOperations#update~requestDoc'
+      - >-
+        EndpointOperations~EndpointOperations#update~endpointUpdateParametersValue
+      - 'EndpointOperations~EndpointOperations#update~requestDoc'
+      - 'EndpointOperations~EndpointOperations#update~propertiesValue'
+      - 'EndpointOperations~EndpointOperations#update~requestContent'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: EndpointCreateOrUpdateParameters
+    name: EndpointCreateOrUpdateParameters
+    fullName: EndpointCreateOrUpdateParameters
+    isExternal: true
+  - uid: Endpoint
+    name: Endpoint
+    fullName: Endpoint
+    isExternal: false
+  - uid: EndpointProperties
+    name: EndpointProperties
+    fullName: EndpointProperties
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: EndpointUpdateParameters
+    name: EndpointUpdateParameters
+    fullName: EndpointUpdateParameters
+    isExternal: false

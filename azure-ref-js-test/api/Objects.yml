@@ -1,0 +1,181 @@
+items:
+  - uid: Objects
+    id: Objects
+    name: Objects
+    type: Class
+    syntax:
+      content: Objects
+    fullName: Objects
+    children:
+      - 'Objects#client'
+      - 'Objects#getCurrentUser'
+      - 'Objects#getObjectsByObjectIds'
+      - 'Objects#getObjectsByObjectIdsNext'
+  - uid: 'Objects#client'
+    id: client
+    parent: Objects
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Objects.client
+  - uid: 'Objects#getCurrentUser'
+    id: getCurrentUser
+    parent: Objects
+    name: 'getCurrentUser(options, options.customHeaders, callback)'
+    summary: Gets the details for current logged in user
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AADObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function getCurrentUser(options, options.customHeaders, callback);'
+    fullName: 'Objects.getCurrentUser(options, options.customHeaders, callback)'
+    children:
+      - 'Objects#getCurrentUser~client'
+      - 'Objects#getCurrentUser~callback'
+      - 'Objects#getCurrentUser~options'
+      - 'Objects#getCurrentUser~apiVersion'
+      - 'Objects#getCurrentUser~requestUrl'
+      - 'Objects#getCurrentUser~requestUrl'
+      - 'Objects#getCurrentUser~queryParameters'
+      - 'Objects#getCurrentUser~requestUrl'
+      - 'Objects#getCurrentUser~regex'
+      - 'Objects#getCurrentUser~requestUrl'
+      - 'Objects#getCurrentUser~httpRequest'
+      - 'Objects#getCurrentUser~headerName'
+  - uid: 'Objects#getObjectsByObjectIds'
+    id: getObjectsByObjectIds
+    parent: Objects
+    name: >-
+      getObjectsByObjectIds(parameters, parameters.objectIds, parameters.types,
+      parameters.includeDirectoryObjectReferences, options,
+      options.customHeaders, callback)
+    summary: Gets AD group membership by provided AD object Ids
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: Objects filtering parameters.
+        - id: parameters.objectIds
+          type: array
+          description: Requested object Ids
+        - id: parameters.types
+          type: array
+          description: Requested object types
+        - id: parameters.includeDirectoryObjectReferences
+          type: boolean
+          description: "If true,\ralso searches for object ids in the partner tenant"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GetObjectsResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getObjectsByObjectIds(parameters, parameters.objectIds,
+        parameters.types, parameters.includeDirectoryObjectReferences, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Objects.getObjectsByObjectIds(parameters, parameters.objectIds,
+      parameters.types, parameters.includeDirectoryObjectReferences, options,
+      options.customHeaders, callback)
+    children:
+      - 'Objects#getObjectsByObjectIds~client'
+      - 'Objects#getObjectsByObjectIds~callback'
+      - 'Objects#getObjectsByObjectIds~options'
+      - 'Objects#getObjectsByObjectIds~apiVersion'
+      - 'Objects#getObjectsByObjectIds~requestUrl'
+      - 'Objects#getObjectsByObjectIds~requestUrl'
+      - 'Objects#getObjectsByObjectIds~queryParameters'
+      - 'Objects#getObjectsByObjectIds~requestUrl'
+      - 'Objects#getObjectsByObjectIds~regex'
+      - 'Objects#getObjectsByObjectIds~requestUrl'
+      - 'Objects#getObjectsByObjectIds~httpRequest'
+      - 'Objects#getObjectsByObjectIds~headerName'
+      - 'Objects#getObjectsByObjectIds~requestContent'
+      - 'Objects#getObjectsByObjectIds~requestModel'
+      - 'Objects#getObjectsByObjectIds~requestModelMapper'
+      - 'Objects#getObjectsByObjectIds~requestModel'
+      - 'Objects#getObjectsByObjectIds~requestContent'
+      - 'Objects#getObjectsByObjectIds~serializationError'
+  - uid: 'Objects#getObjectsByObjectIdsNext'
+    id: getObjectsByObjectIdsNext
+    parent: Objects
+    name: >-
+      getObjectsByObjectIdsNext(nextLink, options, options.customHeaders,
+      callback)
+    summary: Gets AD group membership by provided AD object Ids
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: Next link for list operation.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GetObjectsResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getObjectsByObjectIdsNext(nextLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Objects.getObjectsByObjectIdsNext(nextLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Objects#getObjectsByObjectIdsNext~client'
+      - 'Objects#getObjectsByObjectIdsNext~callback'
+      - 'Objects#getObjectsByObjectIdsNext~options'
+      - 'Objects#getObjectsByObjectIdsNext~apiVersion'
+      - 'Objects#getObjectsByObjectIdsNext~requestUrl'
+      - 'Objects#getObjectsByObjectIdsNext~requestUrl'
+      - 'Objects#getObjectsByObjectIdsNext~requestUrl'
+      - 'Objects#getObjectsByObjectIdsNext~queryParameters'
+      - 'Objects#getObjectsByObjectIdsNext~requestUrl'
+      - 'Objects#getObjectsByObjectIdsNext~regex'
+      - 'Objects#getObjectsByObjectIdsNext~requestUrl'
+      - 'Objects#getObjectsByObjectIdsNext~httpRequest'
+      - 'Objects#getObjectsByObjectIdsNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false

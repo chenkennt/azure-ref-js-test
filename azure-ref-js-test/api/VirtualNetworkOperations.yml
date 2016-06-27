@@ -1,0 +1,576 @@
+items:
+  - uid: VirtualNetworkOperations
+    id: VirtualNetworkOperations
+    name: VirtualNetworkOperations
+    type: Class
+    syntax:
+      content: VirtualNetworkOperations
+    fullName: VirtualNetworkOperations
+    children:
+      - 'VirtualNetworkOperations#client'
+      - 'VirtualNetworkOperations#list'
+      - 'VirtualNetworkOperations#getResource'
+      - 'VirtualNetworkOperations#createOrUpdateResource'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource'
+      - 'VirtualNetworkOperations#deleteResource'
+      - 'VirtualNetworkOperations#beginDeleteResource'
+      - 'VirtualNetworkOperations#patchResource'
+      - 'VirtualNetworkOperations#listNext'
+  - uid: 'VirtualNetworkOperations#client'
+    id: client
+    parent: VirtualNetworkOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualNetworkOperations.client
+  - uid: 'VirtualNetworkOperations#list'
+    id: list
+    parent: VirtualNetworkOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List virtual networks.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationVirtualNetwork} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkOperations.list(resourceGroupName, labName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualNetworkOperations#list~client'
+      - 'VirtualNetworkOperations#list~callback'
+      - 'VirtualNetworkOperations#list~options'
+      - 'VirtualNetworkOperations#list~filter'
+      - 'VirtualNetworkOperations#list~top'
+      - 'VirtualNetworkOperations#list~orderBy'
+      - 'VirtualNetworkOperations#list~requestUrl'
+      - 'VirtualNetworkOperations#list~requestUrl'
+      - 'VirtualNetworkOperations#list~requestUrl'
+      - 'VirtualNetworkOperations#list~requestUrl'
+      - 'VirtualNetworkOperations#list~queryParameters'
+      - 'VirtualNetworkOperations#list~requestUrl'
+      - 'VirtualNetworkOperations#list~regex'
+      - 'VirtualNetworkOperations#list~requestUrl'
+      - 'VirtualNetworkOperations#list~httpRequest'
+      - 'VirtualNetworkOperations#list~headerName'
+  - uid: 'VirtualNetworkOperations#getResource'
+    id: getResource
+    parent: VirtualNetworkOperations
+    name: >-
+      getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Get virtual network.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the virtual network.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetwork} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkOperations.getResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkOperations#getResource~client'
+      - 'VirtualNetworkOperations#getResource~callback'
+      - 'VirtualNetworkOperations#getResource~options'
+      - 'VirtualNetworkOperations#getResource~requestUrl'
+      - 'VirtualNetworkOperations#getResource~requestUrl'
+      - 'VirtualNetworkOperations#getResource~requestUrl'
+      - 'VirtualNetworkOperations#getResource~requestUrl'
+      - 'VirtualNetworkOperations#getResource~requestUrl'
+      - 'VirtualNetworkOperations#getResource~queryParameters'
+      - 'VirtualNetworkOperations#getResource~requestUrl'
+      - 'VirtualNetworkOperations#getResource~regex'
+      - 'VirtualNetworkOperations#getResource~requestUrl'
+      - 'VirtualNetworkOperations#getResource~httpRequest'
+      - 'VirtualNetworkOperations#getResource~headerName'
+  - uid: 'VirtualNetworkOperations#createOrUpdateResource'
+    id: createOrUpdateResource
+    parent: VirtualNetworkOperations
+    name: >-
+      createOrUpdateResource(resourceGroupName, labName, name, virtualNetwork,
+      virtualNetwork.allowedSubnets, virtualNetwork.description,
+      virtualNetwork.externalProviderResourceId, virtualNetwork.subnetOverrides,
+      virtualNetwork.provisioningState, virtualNetwork.id, virtualNetwork.name,
+      virtualNetwork.type, virtualNetwork.location, virtualNetwork.tags,
+      options, options.customHeaders, callback)
+    summary: "Create or replace an existing virtual network. This operation can take a\rwhile to complete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the virtual network.
+        - id: virtualNetwork
+          type: object
+        - id: virtualNetwork.allowedSubnets
+          type: array
+          description: "The allowed subnets of the\rvirtual network."
+        - id: virtualNetwork.description
+          type: string
+          description: "The description of the virtual\rnetwork."
+        - id: virtualNetwork.externalProviderResourceId
+          type: string
+          description: "The\rMicrosoft.Network resource identifier of the virtual network."
+        - id: virtualNetwork.subnetOverrides
+          type: array
+          description: "The subnet overrides of the\rvirtual network."
+        - id: virtualNetwork.provisioningState
+          type: string
+          description: "The provisioning status\rof the resource."
+        - id: virtualNetwork.id
+          type: string
+          description: The identifier of the resource.
+        - id: virtualNetwork.name
+          type: string
+          description: The name of the resource.
+        - id: virtualNetwork.type
+          type: string
+          description: The type of the resource.
+        - id: virtualNetwork.location
+          type: string
+          description: The location of the resource.
+        - id: virtualNetwork.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetwork} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateResource(resourceGroupName, labName, name,
+        virtualNetwork, virtualNetwork.allowedSubnets,
+        virtualNetwork.description, virtualNetwork.externalProviderResourceId,
+        virtualNetwork.subnetOverrides, virtualNetwork.provisioningState,
+        virtualNetwork.id, virtualNetwork.name, virtualNetwork.type,
+        virtualNetwork.location, virtualNetwork.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkOperations.createOrUpdateResource(resourceGroupName,
+      labName, name, virtualNetwork, virtualNetwork.allowedSubnets,
+      virtualNetwork.description, virtualNetwork.externalProviderResourceId,
+      virtualNetwork.subnetOverrides, virtualNetwork.provisioningState,
+      virtualNetwork.id, virtualNetwork.name, virtualNetwork.type,
+      virtualNetwork.location, virtualNetwork.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkOperations#createOrUpdateResource~client'
+      - 'VirtualNetworkOperations#createOrUpdateResource~callback'
+      - 'VirtualNetworkOperations#createOrUpdateResource~options'
+  - uid: 'VirtualNetworkOperations#beginCreateOrUpdateResource'
+    id: beginCreateOrUpdateResource
+    parent: VirtualNetworkOperations
+    name: >-
+      beginCreateOrUpdateResource(resourceGroupName, labName, name,
+      virtualNetwork, virtualNetwork.allowedSubnets, virtualNetwork.description,
+      virtualNetwork.externalProviderResourceId, virtualNetwork.subnetOverrides,
+      virtualNetwork.provisioningState, virtualNetwork.id, virtualNetwork.name,
+      virtualNetwork.type, virtualNetwork.location, virtualNetwork.tags,
+      options, options.customHeaders, callback)
+    summary: "Create or replace an existing virtual network. This operation can take a\rwhile to complete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the virtual network.
+        - id: virtualNetwork
+          type: object
+        - id: virtualNetwork.allowedSubnets
+          type: array
+          description: "The allowed subnets of the\rvirtual network."
+        - id: virtualNetwork.description
+          type: string
+          description: "The description of the virtual\rnetwork."
+        - id: virtualNetwork.externalProviderResourceId
+          type: string
+          description: "The\rMicrosoft.Network resource identifier of the virtual network."
+        - id: virtualNetwork.subnetOverrides
+          type: array
+          description: "The subnet overrides of the\rvirtual network."
+        - id: virtualNetwork.provisioningState
+          type: string
+          description: "The provisioning status\rof the resource."
+        - id: virtualNetwork.id
+          type: string
+          description: The identifier of the resource.
+        - id: virtualNetwork.name
+          type: string
+          description: The name of the resource.
+        - id: virtualNetwork.type
+          type: string
+          description: The type of the resource.
+        - id: virtualNetwork.location
+          type: string
+          description: The location of the resource.
+        - id: virtualNetwork.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetwork} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateResource(resourceGroupName, labName, name,
+        virtualNetwork, virtualNetwork.allowedSubnets,
+        virtualNetwork.description, virtualNetwork.externalProviderResourceId,
+        virtualNetwork.subnetOverrides, virtualNetwork.provisioningState,
+        virtualNetwork.id, virtualNetwork.name, virtualNetwork.type,
+        virtualNetwork.location, virtualNetwork.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkOperations.beginCreateOrUpdateResource(resourceGroupName,
+      labName, name, virtualNetwork, virtualNetwork.allowedSubnets,
+      virtualNetwork.description, virtualNetwork.externalProviderResourceId,
+      virtualNetwork.subnetOverrides, virtualNetwork.provisioningState,
+      virtualNetwork.id, virtualNetwork.name, virtualNetwork.type,
+      virtualNetwork.location, virtualNetwork.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~client'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~callback'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~options'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~queryParameters'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~regex'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~httpRequest'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~headerName'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestContent'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestModel'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestModelMapper'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestModel'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~requestContent'
+      - 'VirtualNetworkOperations#beginCreateOrUpdateResource~serializationError'
+  - uid: 'VirtualNetworkOperations#deleteResource'
+    id: deleteResource
+    parent: VirtualNetworkOperations
+    name: >-
+      deleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete virtual network. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the virtual network.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkOperations.deleteResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkOperations#deleteResource~client'
+      - 'VirtualNetworkOperations#deleteResource~callback'
+      - 'VirtualNetworkOperations#deleteResource~options'
+  - uid: 'VirtualNetworkOperations#beginDeleteResource'
+    id: beginDeleteResource
+    parent: VirtualNetworkOperations
+    name: >-
+      beginDeleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete virtual network. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the virtual network.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkOperations.beginDeleteResource(resourceGroupName, labName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkOperations#beginDeleteResource~client'
+      - 'VirtualNetworkOperations#beginDeleteResource~callback'
+      - 'VirtualNetworkOperations#beginDeleteResource~options'
+      - 'VirtualNetworkOperations#beginDeleteResource~requestUrl'
+      - 'VirtualNetworkOperations#beginDeleteResource~requestUrl'
+      - 'VirtualNetworkOperations#beginDeleteResource~requestUrl'
+      - 'VirtualNetworkOperations#beginDeleteResource~requestUrl'
+      - 'VirtualNetworkOperations#beginDeleteResource~requestUrl'
+      - 'VirtualNetworkOperations#beginDeleteResource~queryParameters'
+      - 'VirtualNetworkOperations#beginDeleteResource~requestUrl'
+      - 'VirtualNetworkOperations#beginDeleteResource~regex'
+      - 'VirtualNetworkOperations#beginDeleteResource~requestUrl'
+      - 'VirtualNetworkOperations#beginDeleteResource~httpRequest'
+      - 'VirtualNetworkOperations#beginDeleteResource~headerName'
+  - uid: 'VirtualNetworkOperations#patchResource'
+    id: patchResource
+    parent: VirtualNetworkOperations
+    name: >-
+      patchResource(resourceGroupName, labName, name, virtualNetwork,
+      virtualNetwork.allowedSubnets, virtualNetwork.description,
+      virtualNetwork.externalProviderResourceId, virtualNetwork.subnetOverrides,
+      virtualNetwork.provisioningState, virtualNetwork.id, virtualNetwork.name,
+      virtualNetwork.type, virtualNetwork.location, virtualNetwork.tags,
+      options, options.customHeaders, callback)
+    summary: Modify properties of virtual networks.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the virtual network.
+        - id: virtualNetwork
+          type: object
+        - id: virtualNetwork.allowedSubnets
+          type: array
+          description: "The allowed subnets of the\rvirtual network."
+        - id: virtualNetwork.description
+          type: string
+          description: "The description of the virtual\rnetwork."
+        - id: virtualNetwork.externalProviderResourceId
+          type: string
+          description: "The\rMicrosoft.Network resource identifier of the virtual network."
+        - id: virtualNetwork.subnetOverrides
+          type: array
+          description: "The subnet overrides of the\rvirtual network."
+        - id: virtualNetwork.provisioningState
+          type: string
+          description: "The provisioning status\rof the resource."
+        - id: virtualNetwork.id
+          type: string
+          description: The identifier of the resource.
+        - id: virtualNetwork.name
+          type: string
+          description: The name of the resource.
+        - id: virtualNetwork.type
+          type: string
+          description: The type of the resource.
+        - id: virtualNetwork.location
+          type: string
+          description: The location of the resource.
+        - id: virtualNetwork.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetwork} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function patchResource(resourceGroupName, labName, name, virtualNetwork,
+        virtualNetwork.allowedSubnets, virtualNetwork.description,
+        virtualNetwork.externalProviderResourceId,
+        virtualNetwork.subnetOverrides, virtualNetwork.provisioningState,
+        virtualNetwork.id, virtualNetwork.name, virtualNetwork.type,
+        virtualNetwork.location, virtualNetwork.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkOperations.patchResource(resourceGroupName, labName, name,
+      virtualNetwork, virtualNetwork.allowedSubnets, virtualNetwork.description,
+      virtualNetwork.externalProviderResourceId, virtualNetwork.subnetOverrides,
+      virtualNetwork.provisioningState, virtualNetwork.id, virtualNetwork.name,
+      virtualNetwork.type, virtualNetwork.location, virtualNetwork.tags,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkOperations#patchResource~client'
+      - 'VirtualNetworkOperations#patchResource~callback'
+      - 'VirtualNetworkOperations#patchResource~options'
+      - 'VirtualNetworkOperations#patchResource~requestUrl'
+      - 'VirtualNetworkOperations#patchResource~requestUrl'
+      - 'VirtualNetworkOperations#patchResource~requestUrl'
+      - 'VirtualNetworkOperations#patchResource~requestUrl'
+      - 'VirtualNetworkOperations#patchResource~requestUrl'
+      - 'VirtualNetworkOperations#patchResource~queryParameters'
+      - 'VirtualNetworkOperations#patchResource~requestUrl'
+      - 'VirtualNetworkOperations#patchResource~regex'
+      - 'VirtualNetworkOperations#patchResource~requestUrl'
+      - 'VirtualNetworkOperations#patchResource~httpRequest'
+      - 'VirtualNetworkOperations#patchResource~headerName'
+      - 'VirtualNetworkOperations#patchResource~requestContent'
+      - 'VirtualNetworkOperations#patchResource~requestModel'
+      - 'VirtualNetworkOperations#patchResource~requestModelMapper'
+      - 'VirtualNetworkOperations#patchResource~requestModel'
+      - 'VirtualNetworkOperations#patchResource~requestContent'
+      - 'VirtualNetworkOperations#patchResource~serializationError'
+  - uid: 'VirtualNetworkOperations#listNext'
+    id: listNext
+    parent: VirtualNetworkOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List virtual networks.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationVirtualNetwork} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualNetworkOperations.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkOperations#listNext~client'
+      - 'VirtualNetworkOperations#listNext~callback'
+      - 'VirtualNetworkOperations#listNext~options'
+      - 'VirtualNetworkOperations#listNext~requestUrl'
+      - 'VirtualNetworkOperations#listNext~requestUrl'
+      - 'VirtualNetworkOperations#listNext~regex'
+      - 'VirtualNetworkOperations#listNext~requestUrl'
+      - 'VirtualNetworkOperations#listNext~httpRequest'
+      - 'VirtualNetworkOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

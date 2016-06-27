@@ -1,0 +1,513 @@
+items:
+  - uid: GlobalDomainRegistration
+    id: GlobalDomainRegistration
+    name: GlobalDomainRegistration
+    type: Class
+    syntax:
+      content: GlobalDomainRegistration
+    fullName: GlobalDomainRegistration
+    children:
+      - 'GlobalDomainRegistration#client'
+      - 'GlobalDomainRegistration#getAllDomains'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation'
+      - 'GlobalDomainRegistration#checkDomainAvailability'
+      - 'GlobalDomainRegistration#listDomainRecommendations'
+  - uid: 'GlobalDomainRegistration#client'
+    id: client
+    parent: GlobalDomainRegistration
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: GlobalDomainRegistration.client
+  - uid: 'GlobalDomainRegistration#getAllDomains'
+    id: getAllDomains
+    parent: GlobalDomainRegistration
+    name: 'getAllDomains(options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function getAllDomains(options, options.customHeaders, callback);'
+    fullName: >-
+      GlobalDomainRegistration.getAllDomains(options, options.customHeaders,
+      callback)
+    children:
+      - 'GlobalDomainRegistration#getAllDomains~client'
+      - 'GlobalDomainRegistration#getAllDomains~callback'
+      - 'GlobalDomainRegistration#getAllDomains~options'
+      - 'GlobalDomainRegistration#getAllDomains~requestUrl'
+      - 'GlobalDomainRegistration#getAllDomains~requestUrl'
+      - 'GlobalDomainRegistration#getAllDomains~queryParameters'
+      - 'GlobalDomainRegistration#getAllDomains~requestUrl'
+      - 'GlobalDomainRegistration#getAllDomains~regex'
+      - 'GlobalDomainRegistration#getAllDomains~requestUrl'
+      - 'GlobalDomainRegistration#getAllDomains~httpRequest'
+      - 'GlobalDomainRegistration#getAllDomains~headerName'
+  - uid: 'GlobalDomainRegistration#getDomainControlCenterSsoRequest'
+    id: getDomainControlCenterSsoRequest
+    parent: GlobalDomainRegistration
+    name: 'getDomainControlCenterSsoRequest(options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainControlCenterSsoRequest} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getDomainControlCenterSsoRequest(options,
+        options.customHeaders, callback);
+    fullName: >-
+      GlobalDomainRegistration.getDomainControlCenterSsoRequest(options,
+      options.customHeaders, callback)
+    children:
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~client'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~callback'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~options'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~requestUrl'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~requestUrl'
+      - >-
+        GlobalDomainRegistration#getDomainControlCenterSsoRequest~queryParameters
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~requestUrl'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~regex'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~requestUrl'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~httpRequest'
+      - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~headerName'
+  - uid: 'GlobalDomainRegistration#validateDomainPurchaseInformation'
+    id: validateDomainPurchaseInformation
+    parent: GlobalDomainRegistration
+    name: >-
+      validateDomainPurchaseInformation(domainRegistrationInput,
+      domainRegistrationInput.domainRegistrationInputName,
+      domainRegistrationInput.contactAdmin,
+      domainRegistrationInput.contactBilling,
+      domainRegistrationInput.contactRegistrant,
+      domainRegistrationInput.contactTech,
+      domainRegistrationInput.contactTech.addressMailing,
+      domainRegistrationInput.contactTech.addressMailing.address1,
+      domainRegistrationInput.contactTech.addressMailing.address2,
+      domainRegistrationInput.contactTech.addressMailing.city,
+      domainRegistrationInput.contactTech.addressMailing.country,
+      domainRegistrationInput.contactTech.addressMailing.postalCode,
+      domainRegistrationInput.contactTech.addressMailing.state,
+      domainRegistrationInput.contactTech.email,
+      domainRegistrationInput.contactTech.fax,
+      domainRegistrationInput.contactTech.jobTitle,
+      domainRegistrationInput.contactTech.nameFirst,
+      domainRegistrationInput.contactTech.nameLast,
+      domainRegistrationInput.contactTech.nameMiddle,
+      domainRegistrationInput.contactTech.organization,
+      domainRegistrationInput.contactTech.phone,
+      domainRegistrationInput.registrationStatus,
+      domainRegistrationInput.provisioningState,
+      domainRegistrationInput.nameServers, domainRegistrationInput.privacy,
+      domainRegistrationInput.createdTime,
+      domainRegistrationInput.expirationTime,
+      domainRegistrationInput.lastRenewedTime,
+      domainRegistrationInput.autoRenew,
+      domainRegistrationInput.readyForDnsRecordManagement,
+      domainRegistrationInput.managedHostNames, domainRegistrationInput.consent,
+      domainRegistrationInput.consent.agreementKeys,
+      domainRegistrationInput.consent.agreedBy,
+      domainRegistrationInput.consent.agreedAt,
+      domainRegistrationInput.domainNotRenewableReasons,
+      domainRegistrationInput.id, domainRegistrationInput.name,
+      domainRegistrationInput.kind, domainRegistrationInput.location,
+      domainRegistrationInput.type, domainRegistrationInput.tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: domainRegistrationInput
+          type: object
+          description: Domain registration information
+        - id: domainRegistrationInput.domainRegistrationInputName
+          type: string
+          description: "Name\rof the domain"
+        - id: domainRegistrationInput.contactAdmin
+          type: object
+          description: "Admin contact\rinformation"
+        - id: domainRegistrationInput.contactBilling
+          type: object
+          description: "Billing contact\rinformation"
+        - id: domainRegistrationInput.contactRegistrant
+          type: object
+          description: "Registrant\rcontact information"
+        - id: domainRegistrationInput.contactTech
+          type: object
+          description: "Technical contact\rinformation"
+        - id: domainRegistrationInput.contactTech.addressMailing
+          type: object
+          description: Mailing address
+        - id: domainRegistrationInput.contactTech.addressMailing.address1
+          type: string
+          description: Address 1
+        - id: domainRegistrationInput.contactTech.addressMailing.address2
+          type: string
+          description: Address 2
+        - id: domainRegistrationInput.contactTech.addressMailing.city
+          type: string
+          description: City
+        - id: domainRegistrationInput.contactTech.addressMailing.country
+          type: string
+          description: Country
+        - id: domainRegistrationInput.contactTech.addressMailing.postalCode
+          type: string
+          description: Postal code
+        - id: domainRegistrationInput.contactTech.addressMailing.state
+          type: string
+          description: State
+        - id: domainRegistrationInput.contactTech.email
+          type: string
+          description: Email address
+        - id: domainRegistrationInput.contactTech.fax
+          type: string
+          description: Fax number
+        - id: domainRegistrationInput.contactTech.jobTitle
+          type: string
+          description: Job title
+        - id: domainRegistrationInput.contactTech.nameFirst
+          type: string
+          description: First name
+        - id: domainRegistrationInput.contactTech.nameLast
+          type: string
+          description: Last name
+        - id: domainRegistrationInput.contactTech.nameMiddle
+          type: string
+          description: Middle name
+        - id: domainRegistrationInput.contactTech.organization
+          type: string
+          description: Organization
+        - id: domainRegistrationInput.contactTech.phone
+          type: string
+          description: Phone number
+        - id: domainRegistrationInput.registrationStatus
+          type: string
+          description: "Domain\rregistration status. Possible values include: 'Active', 'Awaiting',\r'Cancelled', 'Confiscated', 'Disabled', 'Excluded', 'Expired', 'Failed',\r'Held', 'Locked', 'Parked', 'Pending', 'Reserved', 'Reverted',\r'Suspended', 'Transferred', 'Unknown', 'Unlocked', 'Unparked', 'Updated',\r'JsonConverterFailed'"
+        - id: domainRegistrationInput.provisioningState
+          type: string
+          description: "Domain\rprovisioning state. Possible values include: 'Succeeded', 'Failed',\r'Canceled', 'InProgress', 'Deleting'"
+        - id: domainRegistrationInput.nameServers
+          type: array
+          description: Name servers
+        - id: domainRegistrationInput.privacy
+          type: boolean
+          description: "If true then domain\rprivacy is enabled for this domain"
+        - id: domainRegistrationInput.createdTime
+          type: date
+          description: "Domain creation\rtimestamp"
+        - id: domainRegistrationInput.expirationTime
+          type: date
+          description: "Domain expiration\rtimestamp"
+        - id: domainRegistrationInput.lastRenewedTime
+          type: date
+          description: "Timestamp when the\rdomain was renewed last time"
+        - id: domainRegistrationInput.autoRenew
+          type: boolean
+          description: "If true then domain\rwill renewed automatically"
+        - id: domainRegistrationInput.readyForDnsRecordManagement
+          type: boolean
+          description: "If\rtrue then Azure can assign this domain to Web Apps. This value will be\rtrue if domain registration status is active and it is hosted on name\rservers Azure has programmatic access to"
+        - id: domainRegistrationInput.managedHostNames
+          type: array
+          description: "All hostnames\rderived from the domain and assigned to Azure resources"
+        - id: domainRegistrationInput.consent
+          type: object
+          description: Legal agreement consent
+        - id: domainRegistrationInput.consent.agreementKeys
+          type: array
+          description: "List of\rapplicable legal agreement keys. This list can be retrieved using\rListLegalAgreements Api under TopLevelDomain resource"
+        - id: domainRegistrationInput.consent.agreedBy
+          type: string
+          description: Client IP address
+        - id: domainRegistrationInput.consent.agreedAt
+          type: date
+          description: "Timestamp when the\ragreements were accepted"
+        - id: domainRegistrationInput.domainNotRenewableReasons
+          type: array
+          description: "Reasons\rwhy domain is not renewable"
+        - id: domainRegistrationInput.id
+          type: string
+          description: Resource Id
+        - id: domainRegistrationInput.name
+          type: string
+          description: Resource Name
+        - id: domainRegistrationInput.kind
+          type: string
+          description: Kind of resource
+        - id: domainRegistrationInput.location
+          type: string
+          description: Resource Location
+        - id: domainRegistrationInput.type
+          type: string
+          description: Resource type
+        - id: domainRegistrationInput.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function validateDomainPurchaseInformation(domainRegistrationInput,
+        domainRegistrationInput.domainRegistrationInputName,
+        domainRegistrationInput.contactAdmin,
+        domainRegistrationInput.contactBilling,
+        domainRegistrationInput.contactRegistrant,
+        domainRegistrationInput.contactTech,
+        domainRegistrationInput.contactTech.addressMailing,
+        domainRegistrationInput.contactTech.addressMailing.address1,
+        domainRegistrationInput.contactTech.addressMailing.address2,
+        domainRegistrationInput.contactTech.addressMailing.city,
+        domainRegistrationInput.contactTech.addressMailing.country,
+        domainRegistrationInput.contactTech.addressMailing.postalCode,
+        domainRegistrationInput.contactTech.addressMailing.state,
+        domainRegistrationInput.contactTech.email,
+        domainRegistrationInput.contactTech.fax,
+        domainRegistrationInput.contactTech.jobTitle,
+        domainRegistrationInput.contactTech.nameFirst,
+        domainRegistrationInput.contactTech.nameLast,
+        domainRegistrationInput.contactTech.nameMiddle,
+        domainRegistrationInput.contactTech.organization,
+        domainRegistrationInput.contactTech.phone,
+        domainRegistrationInput.registrationStatus,
+        domainRegistrationInput.provisioningState,
+        domainRegistrationInput.nameServers, domainRegistrationInput.privacy,
+        domainRegistrationInput.createdTime,
+        domainRegistrationInput.expirationTime,
+        domainRegistrationInput.lastRenewedTime,
+        domainRegistrationInput.autoRenew,
+        domainRegistrationInput.readyForDnsRecordManagement,
+        domainRegistrationInput.managedHostNames,
+        domainRegistrationInput.consent,
+        domainRegistrationInput.consent.agreementKeys,
+        domainRegistrationInput.consent.agreedBy,
+        domainRegistrationInput.consent.agreedAt,
+        domainRegistrationInput.domainNotRenewableReasons,
+        domainRegistrationInput.id, domainRegistrationInput.name,
+        domainRegistrationInput.kind, domainRegistrationInput.location,
+        domainRegistrationInput.type, domainRegistrationInput.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      GlobalDomainRegistration.validateDomainPurchaseInformation(domainRegistrationInput,
+      domainRegistrationInput.domainRegistrationInputName,
+      domainRegistrationInput.contactAdmin,
+      domainRegistrationInput.contactBilling,
+      domainRegistrationInput.contactRegistrant,
+      domainRegistrationInput.contactTech,
+      domainRegistrationInput.contactTech.addressMailing,
+      domainRegistrationInput.contactTech.addressMailing.address1,
+      domainRegistrationInput.contactTech.addressMailing.address2,
+      domainRegistrationInput.contactTech.addressMailing.city,
+      domainRegistrationInput.contactTech.addressMailing.country,
+      domainRegistrationInput.contactTech.addressMailing.postalCode,
+      domainRegistrationInput.contactTech.addressMailing.state,
+      domainRegistrationInput.contactTech.email,
+      domainRegistrationInput.contactTech.fax,
+      domainRegistrationInput.contactTech.jobTitle,
+      domainRegistrationInput.contactTech.nameFirst,
+      domainRegistrationInput.contactTech.nameLast,
+      domainRegistrationInput.contactTech.nameMiddle,
+      domainRegistrationInput.contactTech.organization,
+      domainRegistrationInput.contactTech.phone,
+      domainRegistrationInput.registrationStatus,
+      domainRegistrationInput.provisioningState,
+      domainRegistrationInput.nameServers, domainRegistrationInput.privacy,
+      domainRegistrationInput.createdTime,
+      domainRegistrationInput.expirationTime,
+      domainRegistrationInput.lastRenewedTime,
+      domainRegistrationInput.autoRenew,
+      domainRegistrationInput.readyForDnsRecordManagement,
+      domainRegistrationInput.managedHostNames, domainRegistrationInput.consent,
+      domainRegistrationInput.consent.agreementKeys,
+      domainRegistrationInput.consent.agreedBy,
+      domainRegistrationInput.consent.agreedAt,
+      domainRegistrationInput.domainNotRenewableReasons,
+      domainRegistrationInput.id, domainRegistrationInput.name,
+      domainRegistrationInput.kind, domainRegistrationInput.location,
+      domainRegistrationInput.type, domainRegistrationInput.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~client'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~callback'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~options'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~requestUrl'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~requestUrl'
+      - >-
+        GlobalDomainRegistration#validateDomainPurchaseInformation~queryParameters
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~requestUrl'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~regex'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~requestUrl'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~httpRequest'
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~headerName'
+      - >-
+        GlobalDomainRegistration#validateDomainPurchaseInformation~requestContent
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~requestModel'
+      - >-
+        GlobalDomainRegistration#validateDomainPurchaseInformation~requestModelMapper
+      - 'GlobalDomainRegistration#validateDomainPurchaseInformation~requestModel'
+      - >-
+        GlobalDomainRegistration#validateDomainPurchaseInformation~requestContent
+      - >-
+        GlobalDomainRegistration#validateDomainPurchaseInformation~serializationError
+  - uid: 'GlobalDomainRegistration#checkDomainAvailability'
+    id: checkDomainAvailability
+    parent: GlobalDomainRegistration
+    name: >-
+      checkDomainAvailability(options, options.name, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.name
+          type: string
+          description: Name of the object
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainAvailablilityCheckResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function checkDomainAvailability(options, options.name,
+        options.customHeaders, callback);
+    fullName: >-
+      GlobalDomainRegistration.checkDomainAvailability(options, options.name,
+      options.customHeaders, callback)
+    children:
+      - 'GlobalDomainRegistration#checkDomainAvailability~client'
+      - 'GlobalDomainRegistration#checkDomainAvailability~callback'
+      - 'GlobalDomainRegistration#checkDomainAvailability~options'
+      - 'GlobalDomainRegistration#checkDomainAvailability~name'
+      - 'GlobalDomainRegistration#checkDomainAvailability~identifier'
+      - 'GlobalDomainRegistration#checkDomainAvailability~identifier'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestUrl'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestUrl'
+      - 'GlobalDomainRegistration#checkDomainAvailability~queryParameters'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestUrl'
+      - 'GlobalDomainRegistration#checkDomainAvailability~regex'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestUrl'
+      - 'GlobalDomainRegistration#checkDomainAvailability~httpRequest'
+      - 'GlobalDomainRegistration#checkDomainAvailability~headerName'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestContent'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestModel'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestModelMapper'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestModel'
+      - 'GlobalDomainRegistration#checkDomainAvailability~requestContent'
+      - 'GlobalDomainRegistration#checkDomainAvailability~serializationError'
+  - uid: 'GlobalDomainRegistration#listDomainRecommendations'
+    id: listDomainRecommendations
+    parent: GlobalDomainRegistration
+    name: >-
+      listDomainRecommendations(parameters, parameters.keywords,
+      parameters.maxDomainRecommendations, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: Domain recommendation search parameters
+        - id: parameters.keywords
+          type: string
+          description: "Keywords to be used for generating\rdomain recommendations"
+        - id: parameters.maxDomainRecommendations
+          type: number
+          description: "Maximum number of\rrecommendations"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NameIdentifierCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listDomainRecommendations(parameters, parameters.keywords,
+        parameters.maxDomainRecommendations, options, options.customHeaders,
+        callback);
+    fullName: >-
+      GlobalDomainRegistration.listDomainRecommendations(parameters,
+      parameters.keywords, parameters.maxDomainRecommendations, options,
+      options.customHeaders, callback)
+    children:
+      - 'GlobalDomainRegistration#listDomainRecommendations~client'
+      - 'GlobalDomainRegistration#listDomainRecommendations~callback'
+      - 'GlobalDomainRegistration#listDomainRecommendations~options'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestUrl'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestUrl'
+      - 'GlobalDomainRegistration#listDomainRecommendations~queryParameters'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestUrl'
+      - 'GlobalDomainRegistration#listDomainRecommendations~regex'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestUrl'
+      - 'GlobalDomainRegistration#listDomainRecommendations~httpRequest'
+      - 'GlobalDomainRegistration#listDomainRecommendations~headerName'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestContent'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestModel'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestModelMapper'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestModel'
+      - 'GlobalDomainRegistration#listDomainRecommendations~requestContent'
+      - 'GlobalDomainRegistration#listDomainRecommendations~serializationError'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

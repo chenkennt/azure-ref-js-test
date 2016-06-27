@@ -1,0 +1,469 @@
+items:
+  - uid: PolicyOperations
+    id: PolicyOperations
+    name: PolicyOperations
+    type: Class
+    syntax:
+      content: PolicyOperations
+    fullName: PolicyOperations
+    children:
+      - 'PolicyOperations#client'
+      - 'PolicyOperations#list'
+      - 'PolicyOperations#getResource'
+      - 'PolicyOperations#createOrUpdateResource'
+      - 'PolicyOperations#deleteResource'
+      - 'PolicyOperations#patchResource'
+      - 'PolicyOperations#listNext'
+  - uid: 'PolicyOperations#client'
+    id: client
+    parent: PolicyOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: PolicyOperations.client
+  - uid: 'PolicyOperations#list'
+    id: list
+    parent: PolicyOperations
+    name: >-
+      list(resourceGroupName, labName, policySetName, options, options.filter,
+      options.top, options.orderBy, options.customHeaders, callback)
+    summary: List policies.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: policySetName
+          type: string
+          description: The name of the policy set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationPolicy} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, policySetName, options,
+        options.filter, options.top, options.orderBy, options.customHeaders,
+        callback);
+    fullName: >-
+      PolicyOperations.list(resourceGroupName, labName, policySetName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'PolicyOperations#list~client'
+      - 'PolicyOperations#list~callback'
+      - 'PolicyOperations#list~options'
+      - 'PolicyOperations#list~filter'
+      - 'PolicyOperations#list~top'
+      - 'PolicyOperations#list~orderBy'
+      - 'PolicyOperations#list~requestUrl'
+      - 'PolicyOperations#list~requestUrl'
+      - 'PolicyOperations#list~requestUrl'
+      - 'PolicyOperations#list~requestUrl'
+      - 'PolicyOperations#list~requestUrl'
+      - 'PolicyOperations#list~queryParameters'
+      - 'PolicyOperations#list~requestUrl'
+      - 'PolicyOperations#list~regex'
+      - 'PolicyOperations#list~requestUrl'
+      - 'PolicyOperations#list~httpRequest'
+      - 'PolicyOperations#list~headerName'
+  - uid: 'PolicyOperations#getResource'
+    id: getResource
+    parent: PolicyOperations
+    name: >-
+      getResource(resourceGroupName, labName, policySetName, name, options,
+      options.customHeaders, callback)
+    summary: Get policy.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: policySetName
+          type: string
+          description: The name of the policy set.
+        - id: name
+          type: string
+          description: The name of the policy.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Policy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, policySetName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      PolicyOperations.getResource(resourceGroupName, labName, policySetName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'PolicyOperations#getResource~client'
+      - 'PolicyOperations#getResource~callback'
+      - 'PolicyOperations#getResource~options'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~queryParameters'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~regex'
+      - 'PolicyOperations#getResource~requestUrl'
+      - 'PolicyOperations#getResource~httpRequest'
+      - 'PolicyOperations#getResource~headerName'
+  - uid: 'PolicyOperations#createOrUpdateResource'
+    id: createOrUpdateResource
+    parent: PolicyOperations
+    name: >-
+      createOrUpdateResource(resourceGroupName, labName, policySetName, name,
+      policy, policy.description, policy.status, policy.factName,
+      policy.factData, policy.threshold, policy.evaluatorType,
+      policy.provisioningState, policy.id, policy.name, policy.type,
+      policy.location, policy.tags, options, options.customHeaders, callback)
+    summary: Create or replace an existing policy.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: policySetName
+          type: string
+          description: The name of the policy set.
+        - id: name
+          type: string
+          description: The name of the policy.
+        - id: policy
+          type: object
+        - id: policy.description
+          type: string
+          description: The description of the policy.
+        - id: policy.status
+          type: string
+          description: "The status of the policy. Possible values\rinclude: 'Enabled', 'Disabled'"
+        - id: policy.factName
+          type: string
+          description: "The fact name of the policy. Possible\rvalues include: 'UserOwnedLabVmCount', 'LabVmCount', 'LabVmSize',\r'GalleryImage', 'UserOwnedLabVmCountInSubnet'"
+        - id: policy.factData
+          type: string
+          description: The fact data of the policy.
+        - id: policy.threshold
+          type: string
+          description: The threshold of the policy.
+        - id: policy.evaluatorType
+          type: string
+          description: "The evaluator type of the policy.\rPossible values include: 'AllowedValuesPolicy', 'MaxValuePolicy'"
+        - id: policy.provisioningState
+          type: string
+          description: "The provisioning status of the\rresource."
+        - id: policy.id
+          type: string
+          description: The identifier of the resource.
+        - id: policy.name
+          type: string
+          description: The name of the resource.
+        - id: policy.type
+          type: string
+          description: The type of the resource.
+        - id: policy.location
+          type: string
+          description: The location of the resource.
+        - id: policy.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Policy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateResource(resourceGroupName, labName,
+        policySetName, name, policy, policy.description, policy.status,
+        policy.factName, policy.factData, policy.threshold,
+        policy.evaluatorType, policy.provisioningState, policy.id, policy.name,
+        policy.type, policy.location, policy.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      PolicyOperations.createOrUpdateResource(resourceGroupName, labName,
+      policySetName, name, policy, policy.description, policy.status,
+      policy.factName, policy.factData, policy.threshold, policy.evaluatorType,
+      policy.provisioningState, policy.id, policy.name, policy.type,
+      policy.location, policy.tags, options, options.customHeaders, callback)
+    children:
+      - 'PolicyOperations#createOrUpdateResource~client'
+      - 'PolicyOperations#createOrUpdateResource~callback'
+      - 'PolicyOperations#createOrUpdateResource~options'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~queryParameters'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~regex'
+      - 'PolicyOperations#createOrUpdateResource~requestUrl'
+      - 'PolicyOperations#createOrUpdateResource~httpRequest'
+      - 'PolicyOperations#createOrUpdateResource~headerName'
+      - 'PolicyOperations#createOrUpdateResource~requestContent'
+      - 'PolicyOperations#createOrUpdateResource~requestModel'
+      - 'PolicyOperations#createOrUpdateResource~requestModelMapper'
+      - 'PolicyOperations#createOrUpdateResource~requestModel'
+      - 'PolicyOperations#createOrUpdateResource~requestContent'
+      - 'PolicyOperations#createOrUpdateResource~serializationError'
+  - uid: 'PolicyOperations#deleteResource'
+    id: deleteResource
+    parent: PolicyOperations
+    name: >-
+      deleteResource(resourceGroupName, labName, policySetName, name, options,
+      options.customHeaders, callback)
+    summary: Delete policy.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: policySetName
+          type: string
+          description: The name of the policy set.
+        - id: name
+          type: string
+          description: The name of the policy.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteResource(resourceGroupName, labName, policySetName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      PolicyOperations.deleteResource(resourceGroupName, labName, policySetName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'PolicyOperations#deleteResource~client'
+      - 'PolicyOperations#deleteResource~callback'
+      - 'PolicyOperations#deleteResource~options'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~queryParameters'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~regex'
+      - 'PolicyOperations#deleteResource~requestUrl'
+      - 'PolicyOperations#deleteResource~httpRequest'
+      - 'PolicyOperations#deleteResource~headerName'
+  - uid: 'PolicyOperations#patchResource'
+    id: patchResource
+    parent: PolicyOperations
+    name: >-
+      patchResource(resourceGroupName, labName, policySetName, name, policy,
+      policy.description, policy.status, policy.factName, policy.factData,
+      policy.threshold, policy.evaluatorType, policy.provisioningState,
+      policy.id, policy.name, policy.type, policy.location, policy.tags,
+      options, options.customHeaders, callback)
+    summary: Modify properties of policies.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: policySetName
+          type: string
+          description: The name of the policy set.
+        - id: name
+          type: string
+          description: The name of the policy.
+        - id: policy
+          type: object
+        - id: policy.description
+          type: string
+          description: The description of the policy.
+        - id: policy.status
+          type: string
+          description: "The status of the policy. Possible values\rinclude: 'Enabled', 'Disabled'"
+        - id: policy.factName
+          type: string
+          description: "The fact name of the policy. Possible\rvalues include: 'UserOwnedLabVmCount', 'LabVmCount', 'LabVmSize',\r'GalleryImage', 'UserOwnedLabVmCountInSubnet'"
+        - id: policy.factData
+          type: string
+          description: The fact data of the policy.
+        - id: policy.threshold
+          type: string
+          description: The threshold of the policy.
+        - id: policy.evaluatorType
+          type: string
+          description: "The evaluator type of the policy.\rPossible values include: 'AllowedValuesPolicy', 'MaxValuePolicy'"
+        - id: policy.provisioningState
+          type: string
+          description: "The provisioning status of the\rresource."
+        - id: policy.id
+          type: string
+          description: The identifier of the resource.
+        - id: policy.name
+          type: string
+          description: The name of the resource.
+        - id: policy.type
+          type: string
+          description: The type of the resource.
+        - id: policy.location
+          type: string
+          description: The location of the resource.
+        - id: policy.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Policy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function patchResource(resourceGroupName, labName, policySetName, name,
+        policy, policy.description, policy.status, policy.factName,
+        policy.factData, policy.threshold, policy.evaluatorType,
+        policy.provisioningState, policy.id, policy.name, policy.type,
+        policy.location, policy.tags, options, options.customHeaders, callback);
+    fullName: >-
+      PolicyOperations.patchResource(resourceGroupName, labName, policySetName,
+      name, policy, policy.description, policy.status, policy.factName,
+      policy.factData, policy.threshold, policy.evaluatorType,
+      policy.provisioningState, policy.id, policy.name, policy.type,
+      policy.location, policy.tags, options, options.customHeaders, callback)
+    children:
+      - 'PolicyOperations#patchResource~client'
+      - 'PolicyOperations#patchResource~callback'
+      - 'PolicyOperations#patchResource~options'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~queryParameters'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~regex'
+      - 'PolicyOperations#patchResource~requestUrl'
+      - 'PolicyOperations#patchResource~httpRequest'
+      - 'PolicyOperations#patchResource~headerName'
+      - 'PolicyOperations#patchResource~requestContent'
+      - 'PolicyOperations#patchResource~requestModel'
+      - 'PolicyOperations#patchResource~requestModelMapper'
+      - 'PolicyOperations#patchResource~requestModel'
+      - 'PolicyOperations#patchResource~requestContent'
+      - 'PolicyOperations#patchResource~serializationError'
+  - uid: 'PolicyOperations#listNext'
+    id: listNext
+    parent: PolicyOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List policies.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationPolicy} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      PolicyOperations.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'PolicyOperations#listNext~client'
+      - 'PolicyOperations#listNext~callback'
+      - 'PolicyOperations#listNext~options'
+      - 'PolicyOperations#listNext~requestUrl'
+      - 'PolicyOperations#listNext~requestUrl'
+      - 'PolicyOperations#listNext~regex'
+      - 'PolicyOperations#listNext~requestUrl'
+      - 'PolicyOperations#listNext~httpRequest'
+      - 'PolicyOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

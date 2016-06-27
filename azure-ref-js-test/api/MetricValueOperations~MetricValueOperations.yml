@@ -1,0 +1,97 @@
+items:
+  - uid: MetricValueOperations~MetricValueOperations
+    id: MetricValueOperations
+    parent: MetricValueOperations
+    name: MetricValueOperations
+    type: Class
+    syntax:
+      content: MetricValueOperations
+    fullName: MetricValueOperations.MetricValueOperations
+    children:
+      - 'MetricValueOperations~MetricValueOperations#client'
+      - 'MetricValueOperations~MetricValueOperations#list'
+  - uid: 'MetricValueOperations~MetricValueOperations#client'
+    id: client
+    parent: MetricValueOperations~MetricValueOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: MetricValueOperations~MetricValueOperations.client
+  - uid: 'MetricValueOperations~MetricValueOperations#list'
+    id: list
+    parent: MetricValueOperations~MetricValueOperations
+    name: >-
+      list(resourceId, metricNames, metricNamespace, timeGrain, startTime,
+      endTime, callback)
+    summary: "The List Metric Value operation lists the metric value sets for the\rresource metrics."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceId
+          type: string
+          description: The id of the resource.
+        - id: metricNames
+          type: Array
+          description: The names of the metrics.
+        - id: metricNamespace
+          type: string
+          description: The namespace of the metrics.
+        - id: timeGrain
+          type: TimeSpan
+          description: The time grain of the metrics.
+        - id: startTime
+          type: Date
+          description: The start time (in UTC) of the metrics.
+        - id: endTime
+          type: Date
+          description: The end time (in UTC) of the metrics.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function list(resourceId, metricNames, metricNamespace, timeGrain,
+        startTime, endTime, callback);
+    fullName: >-
+      MetricValueOperations~MetricValueOperations.list(resourceId, metricNames,
+      metricNamespace, timeGrain, startTime, endTime, callback)
+    children:
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~queryParameters'
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~baseUrl'
+      - 'MetricValueOperations~MetricValueOperations#list~baseUrl'
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~url2'
+      - 'MetricValueOperations~MetricValueOperations#list~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: Array
+    name: Array
+    fullName: Array
+    isExternal: true
+  - uid: TimeSpan
+    name: TimeSpan
+    fullName: TimeSpan
+    isExternal: true
+  - uid: Date
+    name: Date
+    fullName: Date
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

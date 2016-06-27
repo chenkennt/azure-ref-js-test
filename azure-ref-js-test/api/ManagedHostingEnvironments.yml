@@ -1,0 +1,1149 @@
+items:
+  - uid: ManagedHostingEnvironments
+    id: ManagedHostingEnvironments
+    name: ManagedHostingEnvironments
+    type: Class
+    syntax:
+      content: ManagedHostingEnvironments
+    fullName: ManagedHostingEnvironments
+    children:
+      - 'ManagedHostingEnvironments#client'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment'
+      - 'ManagedHostingEnvironments#createOrUpdateManagedHostingEnvironment'
+      - 'ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment'
+      - 'ManagedHostingEnvironments#deleteManagedHostingEnvironment'
+      - 'ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentOperation'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms'
+  - uid: 'ManagedHostingEnvironments#client'
+    id: client
+    parent: ManagedHostingEnvironments
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ManagedHostingEnvironments.client
+  - uid: 'ManagedHostingEnvironments#getManagedHostingEnvironment'
+    id: getManagedHostingEnvironment
+    parent: ManagedHostingEnvironments
+    name: >-
+      getManagedHostingEnvironment(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagedHostingEnvironment} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getManagedHostingEnvironment(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.getManagedHostingEnvironment(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~client'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~callback'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~options'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~queryParameters'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~regex'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~httpRequest'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironment~headerName'
+  - uid: 'ManagedHostingEnvironments#createOrUpdateManagedHostingEnvironment'
+    id: createOrUpdateManagedHostingEnvironment
+    parent: ManagedHostingEnvironments
+    name: >-
+      createOrUpdateManagedHostingEnvironment(resourceGroupName, name,
+      managedHostingEnvironmentEnvelope,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentName,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      managedHostingEnvironmentEnvelope.provisioningState,
+      managedHostingEnvironmentEnvelope.status,
+      managedHostingEnvironmentEnvelope.vnetName,
+      managedHostingEnvironmentEnvelope.vnetResourceGroupName,
+      managedHostingEnvironmentEnvelope.vnetSubnetName,
+      managedHostingEnvironmentEnvelope.virtualNetwork,
+      managedHostingEnvironmentEnvelope.virtualNetwork.id,
+      managedHostingEnvironmentEnvelope.virtualNetwork.name,
+      managedHostingEnvironmentEnvelope.virtualNetwork.type,
+      managedHostingEnvironmentEnvelope.virtualNetwork.subnet,
+      managedHostingEnvironmentEnvelope.internalLoadBalancingMode,
+      managedHostingEnvironmentEnvelope.multiSize,
+      managedHostingEnvironmentEnvelope.multiRoleCount,
+      managedHostingEnvironmentEnvelope.workerPools,
+      managedHostingEnvironmentEnvelope.ipsslAddressCount,
+      managedHostingEnvironmentEnvelope.databaseEdition,
+      managedHostingEnvironmentEnvelope.databaseServiceObjective,
+      managedHostingEnvironmentEnvelope.upgradeDomains,
+      managedHostingEnvironmentEnvelope.subscriptionId,
+      managedHostingEnvironmentEnvelope.dnsSuffix,
+      managedHostingEnvironmentEnvelope.lastAction,
+      managedHostingEnvironmentEnvelope.lastActionResult,
+      managedHostingEnvironmentEnvelope.allowedMultiSizes,
+      managedHostingEnvironmentEnvelope.allowedWorkerSizes,
+      managedHostingEnvironmentEnvelope.maximumNumberOfMachines,
+      managedHostingEnvironmentEnvelope.vipMappings,
+      managedHostingEnvironmentEnvelope.environmentCapacities,
+      managedHostingEnvironmentEnvelope.networkAccessControlList,
+      managedHostingEnvironmentEnvelope.environmentIsHealthy,
+      managedHostingEnvironmentEnvelope.environmentStatus,
+      managedHostingEnvironmentEnvelope.resourceGroup,
+      managedHostingEnvironmentEnvelope.apiManagementAccountId,
+      managedHostingEnvironmentEnvelope.suspended,
+      managedHostingEnvironmentEnvelope.clusterSettings,
+      managedHostingEnvironmentEnvelope.id,
+      managedHostingEnvironmentEnvelope.name,
+      managedHostingEnvironmentEnvelope.kind,
+      managedHostingEnvironmentEnvelope.location,
+      managedHostingEnvironmentEnvelope.type,
+      managedHostingEnvironmentEnvelope.tags, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: managedHostingEnvironmentEnvelope
+          type: object
+          description: "Properties of managed\rhosting environment"
+        - id: managedHostingEnvironmentEnvelope.hostingEnvironmentName
+          type: string
+          description: Name of the hostingEnvironment (App Service Environment)
+        - id: managedHostingEnvironmentEnvelope.hostingEnvironmentLocation
+          type: string
+          description: "Location of\rthe hostingEnvironment (App Service Environment), e.g. \"West US\""
+        - id: managedHostingEnvironmentEnvelope.provisioningState
+          type: string
+          description: "Provisioning state of the hostingEnvironment (App Service Environment).\rPossible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress',\r'Deleting'"
+        - id: managedHostingEnvironmentEnvelope.status
+          type: string
+          description: "Current status\rof the hostingEnvironment (App Service Environment). Possible values\rinclude: 'Preparing', 'Ready', 'Scaling', 'Deleting'"
+        - id: managedHostingEnvironmentEnvelope.vnetName
+          type: string
+          description: "Name of the\rhostingEnvironment's (App Service Environment) virtual network"
+        - id: managedHostingEnvironmentEnvelope.vnetResourceGroupName
+          type: string
+          description: "Resource group of the hostingEnvironment's (App Service Environment)\rvirtual network"
+        - id: managedHostingEnvironmentEnvelope.vnetSubnetName
+          type: string
+          description: "Subnet\rof the hostingEnvironment's (App Service Environment) virtual network"
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork
+          type: object
+          description: "Description of the hostingEnvironment's (App Service Environment) virtual\rnetwork"
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.id
+          type: string
+          description: Resource id of the virtual network
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.name
+          type: string
+          description: Name of the virtual network (read-only)
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.type
+          type: string
+          description: Resource type of the virtual network (read-only)
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.subnet
+          type: string
+          description: Subnet within the virtual network
+        - id: managedHostingEnvironmentEnvelope.internalLoadBalancingMode
+          type: string
+          description: "Specifies\rwhich endpoints to serve internally in the hostingEnvironment's (App\rService Environment) VNET. Possible values include: 'None', 'Web',\r'Publishing'"
+        - id: managedHostingEnvironmentEnvelope.multiSize
+          type: string
+          description: "Front-end VM\rsize, e.g. \"Medium\", \"Large\""
+        - id: managedHostingEnvironmentEnvelope.multiRoleCount
+          type: number
+          description: "Number\rof front-end instances"
+        - id: managedHostingEnvironmentEnvelope.workerPools
+          type: array
+          description: "Description\rof worker pools with worker size ids, VM sizes, and number of workers in\reach pool"
+        - id: managedHostingEnvironmentEnvelope.ipsslAddressCount
+          type: number
+          description: "Number of IP SSL addresses reserved for this hostingEnvironment (App\rService Environment)"
+        - id: managedHostingEnvironmentEnvelope.databaseEdition
+          type: string
+          description: "Edition\rof the metadata database for the hostingEnvironment (App Service\rEnvironment) e.g. \"Standard\""
+        - id: managedHostingEnvironmentEnvelope.databaseServiceObjective
+          type: string
+          description: "Service\robjective of the metadata database for the hostingEnvironment (App Service\rEnvironment) e.g. \"S0\""
+        - id: managedHostingEnvironmentEnvelope.upgradeDomains
+          type: number
+          description: "Number\rof upgrade domains of this hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.subscriptionId
+          type: string
+          description: Subscription of the hostingEnvironment (App Service Environment)
+        - id: managedHostingEnvironmentEnvelope.dnsSuffix
+          type: string
+          description: "DNS suffix of\rthe hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.lastAction
+          type: string
+          description: "Last\rdeployment action on this hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.lastActionResult
+          type: string
+          description: "Result\rof the last deployment action on this hostingEnvironment (App Service\rEnvironment)"
+        - id: managedHostingEnvironmentEnvelope.allowedMultiSizes
+          type: string
+          description: "List\rof comma separated strings describing which VM sizes are allowed for\rfront-ends"
+        - id: managedHostingEnvironmentEnvelope.allowedWorkerSizes
+          type: string
+          description: "List\rof comma separated strings describing which VM sizes are allowed for\rworkers"
+        - id: managedHostingEnvironmentEnvelope.maximumNumberOfMachines
+          type: number
+          description: >-
+            Maximum number of VMs in this hostingEnvironment (App Service
+            Environment)
+        - id: managedHostingEnvironmentEnvelope.vipMappings
+          type: array
+          description: "Description\rof IP SSL mapping for this hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.environmentCapacities
+          type: array
+          description: 'Current total, used, and available worker capacities'
+        - id: managedHostingEnvironmentEnvelope.networkAccessControlList
+          type: array
+          description: "Access control list for controlling traffic to the hostingEnvironment (App\rService Environment)"
+        - id: managedHostingEnvironmentEnvelope.environmentIsHealthy
+          type: boolean
+          description: "True/false indicating whether the hostingEnvironment (App Service\rEnvironment) is healthy"
+        - id: managedHostingEnvironmentEnvelope.environmentStatus
+          type: string
+          description: "Detailed message about with results of the last check of the\rhostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.resourceGroup
+          type: string
+          description: "Resource\rgroup of the hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.apiManagementAccountId
+          type: string
+          description: Api Management Account associated with this Hosting Environment
+        - id: managedHostingEnvironmentEnvelope.suspended
+          type: boolean
+          description: "True/false\rindicating whether the hostingEnvironment is suspended. The environment\rcan be suspended e.g. when the management endpoint is no longer available\r(most likely because NSG blocked the incoming traffic)"
+        - id: managedHostingEnvironmentEnvelope.clusterSettings
+          type: array
+          description: "Custom\rsettings for changing the behavior of the hosting environment"
+        - id: managedHostingEnvironmentEnvelope.id
+          type: string
+          description: Resource Id
+        - id: managedHostingEnvironmentEnvelope.name
+          type: string
+          description: Resource Name
+        - id: managedHostingEnvironmentEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: managedHostingEnvironmentEnvelope.location
+          type: string
+          description: "Resource\rLocation"
+        - id: managedHostingEnvironmentEnvelope.type
+          type: string
+          description: Resource type
+        - id: managedHostingEnvironmentEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateManagedHostingEnvironment(resourceGroupName,
+        name, managedHostingEnvironmentEnvelope,
+        managedHostingEnvironmentEnvelope.hostingEnvironmentName,
+        managedHostingEnvironmentEnvelope.hostingEnvironmentLocation,
+        managedHostingEnvironmentEnvelope.provisioningState,
+        managedHostingEnvironmentEnvelope.status,
+        managedHostingEnvironmentEnvelope.vnetName,
+        managedHostingEnvironmentEnvelope.vnetResourceGroupName,
+        managedHostingEnvironmentEnvelope.vnetSubnetName,
+        managedHostingEnvironmentEnvelope.virtualNetwork,
+        managedHostingEnvironmentEnvelope.virtualNetwork.id,
+        managedHostingEnvironmentEnvelope.virtualNetwork.name,
+        managedHostingEnvironmentEnvelope.virtualNetwork.type,
+        managedHostingEnvironmentEnvelope.virtualNetwork.subnet,
+        managedHostingEnvironmentEnvelope.internalLoadBalancingMode,
+        managedHostingEnvironmentEnvelope.multiSize,
+        managedHostingEnvironmentEnvelope.multiRoleCount,
+        managedHostingEnvironmentEnvelope.workerPools,
+        managedHostingEnvironmentEnvelope.ipsslAddressCount,
+        managedHostingEnvironmentEnvelope.databaseEdition,
+        managedHostingEnvironmentEnvelope.databaseServiceObjective,
+        managedHostingEnvironmentEnvelope.upgradeDomains,
+        managedHostingEnvironmentEnvelope.subscriptionId,
+        managedHostingEnvironmentEnvelope.dnsSuffix,
+        managedHostingEnvironmentEnvelope.lastAction,
+        managedHostingEnvironmentEnvelope.lastActionResult,
+        managedHostingEnvironmentEnvelope.allowedMultiSizes,
+        managedHostingEnvironmentEnvelope.allowedWorkerSizes,
+        managedHostingEnvironmentEnvelope.maximumNumberOfMachines,
+        managedHostingEnvironmentEnvelope.vipMappings,
+        managedHostingEnvironmentEnvelope.environmentCapacities,
+        managedHostingEnvironmentEnvelope.networkAccessControlList,
+        managedHostingEnvironmentEnvelope.environmentIsHealthy,
+        managedHostingEnvironmentEnvelope.environmentStatus,
+        managedHostingEnvironmentEnvelope.resourceGroup,
+        managedHostingEnvironmentEnvelope.apiManagementAccountId,
+        managedHostingEnvironmentEnvelope.suspended,
+        managedHostingEnvironmentEnvelope.clusterSettings,
+        managedHostingEnvironmentEnvelope.id,
+        managedHostingEnvironmentEnvelope.name,
+        managedHostingEnvironmentEnvelope.kind,
+        managedHostingEnvironmentEnvelope.location,
+        managedHostingEnvironmentEnvelope.type,
+        managedHostingEnvironmentEnvelope.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ManagedHostingEnvironments.createOrUpdateManagedHostingEnvironment(resourceGroupName,
+      name, managedHostingEnvironmentEnvelope,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentName,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      managedHostingEnvironmentEnvelope.provisioningState,
+      managedHostingEnvironmentEnvelope.status,
+      managedHostingEnvironmentEnvelope.vnetName,
+      managedHostingEnvironmentEnvelope.vnetResourceGroupName,
+      managedHostingEnvironmentEnvelope.vnetSubnetName,
+      managedHostingEnvironmentEnvelope.virtualNetwork,
+      managedHostingEnvironmentEnvelope.virtualNetwork.id,
+      managedHostingEnvironmentEnvelope.virtualNetwork.name,
+      managedHostingEnvironmentEnvelope.virtualNetwork.type,
+      managedHostingEnvironmentEnvelope.virtualNetwork.subnet,
+      managedHostingEnvironmentEnvelope.internalLoadBalancingMode,
+      managedHostingEnvironmentEnvelope.multiSize,
+      managedHostingEnvironmentEnvelope.multiRoleCount,
+      managedHostingEnvironmentEnvelope.workerPools,
+      managedHostingEnvironmentEnvelope.ipsslAddressCount,
+      managedHostingEnvironmentEnvelope.databaseEdition,
+      managedHostingEnvironmentEnvelope.databaseServiceObjective,
+      managedHostingEnvironmentEnvelope.upgradeDomains,
+      managedHostingEnvironmentEnvelope.subscriptionId,
+      managedHostingEnvironmentEnvelope.dnsSuffix,
+      managedHostingEnvironmentEnvelope.lastAction,
+      managedHostingEnvironmentEnvelope.lastActionResult,
+      managedHostingEnvironmentEnvelope.allowedMultiSizes,
+      managedHostingEnvironmentEnvelope.allowedWorkerSizes,
+      managedHostingEnvironmentEnvelope.maximumNumberOfMachines,
+      managedHostingEnvironmentEnvelope.vipMappings,
+      managedHostingEnvironmentEnvelope.environmentCapacities,
+      managedHostingEnvironmentEnvelope.networkAccessControlList,
+      managedHostingEnvironmentEnvelope.environmentIsHealthy,
+      managedHostingEnvironmentEnvelope.environmentStatus,
+      managedHostingEnvironmentEnvelope.resourceGroup,
+      managedHostingEnvironmentEnvelope.apiManagementAccountId,
+      managedHostingEnvironmentEnvelope.suspended,
+      managedHostingEnvironmentEnvelope.clusterSettings,
+      managedHostingEnvironmentEnvelope.id,
+      managedHostingEnvironmentEnvelope.name,
+      managedHostingEnvironmentEnvelope.kind,
+      managedHostingEnvironmentEnvelope.location,
+      managedHostingEnvironmentEnvelope.type,
+      managedHostingEnvironmentEnvelope.tags, options, options.customHeaders,
+      callback)
+    children:
+      - >-
+        ManagedHostingEnvironments#createOrUpdateManagedHostingEnvironment~client
+      - >-
+        ManagedHostingEnvironments#createOrUpdateManagedHostingEnvironment~callback
+      - >-
+        ManagedHostingEnvironments#createOrUpdateManagedHostingEnvironment~options
+  - uid: 'ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment'
+    id: beginCreateOrUpdateManagedHostingEnvironment
+    parent: ManagedHostingEnvironments
+    name: >-
+      beginCreateOrUpdateManagedHostingEnvironment(resourceGroupName, name,
+      managedHostingEnvironmentEnvelope,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentName,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      managedHostingEnvironmentEnvelope.provisioningState,
+      managedHostingEnvironmentEnvelope.status,
+      managedHostingEnvironmentEnvelope.vnetName,
+      managedHostingEnvironmentEnvelope.vnetResourceGroupName,
+      managedHostingEnvironmentEnvelope.vnetSubnetName,
+      managedHostingEnvironmentEnvelope.virtualNetwork,
+      managedHostingEnvironmentEnvelope.virtualNetwork.id,
+      managedHostingEnvironmentEnvelope.virtualNetwork.name,
+      managedHostingEnvironmentEnvelope.virtualNetwork.type,
+      managedHostingEnvironmentEnvelope.virtualNetwork.subnet,
+      managedHostingEnvironmentEnvelope.internalLoadBalancingMode,
+      managedHostingEnvironmentEnvelope.multiSize,
+      managedHostingEnvironmentEnvelope.multiRoleCount,
+      managedHostingEnvironmentEnvelope.workerPools,
+      managedHostingEnvironmentEnvelope.ipsslAddressCount,
+      managedHostingEnvironmentEnvelope.databaseEdition,
+      managedHostingEnvironmentEnvelope.databaseServiceObjective,
+      managedHostingEnvironmentEnvelope.upgradeDomains,
+      managedHostingEnvironmentEnvelope.subscriptionId,
+      managedHostingEnvironmentEnvelope.dnsSuffix,
+      managedHostingEnvironmentEnvelope.lastAction,
+      managedHostingEnvironmentEnvelope.lastActionResult,
+      managedHostingEnvironmentEnvelope.allowedMultiSizes,
+      managedHostingEnvironmentEnvelope.allowedWorkerSizes,
+      managedHostingEnvironmentEnvelope.maximumNumberOfMachines,
+      managedHostingEnvironmentEnvelope.vipMappings,
+      managedHostingEnvironmentEnvelope.environmentCapacities,
+      managedHostingEnvironmentEnvelope.networkAccessControlList,
+      managedHostingEnvironmentEnvelope.environmentIsHealthy,
+      managedHostingEnvironmentEnvelope.environmentStatus,
+      managedHostingEnvironmentEnvelope.resourceGroup,
+      managedHostingEnvironmentEnvelope.apiManagementAccountId,
+      managedHostingEnvironmentEnvelope.suspended,
+      managedHostingEnvironmentEnvelope.clusterSettings,
+      managedHostingEnvironmentEnvelope.id,
+      managedHostingEnvironmentEnvelope.name,
+      managedHostingEnvironmentEnvelope.kind,
+      managedHostingEnvironmentEnvelope.location,
+      managedHostingEnvironmentEnvelope.type,
+      managedHostingEnvironmentEnvelope.tags, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: managedHostingEnvironmentEnvelope
+          type: object
+          description: "Properties of managed\rhosting environment"
+        - id: managedHostingEnvironmentEnvelope.hostingEnvironmentName
+          type: string
+          description: Name of the hostingEnvironment (App Service Environment)
+        - id: managedHostingEnvironmentEnvelope.hostingEnvironmentLocation
+          type: string
+          description: "Location of\rthe hostingEnvironment (App Service Environment), e.g. \"West US\""
+        - id: managedHostingEnvironmentEnvelope.provisioningState
+          type: string
+          description: "Provisioning state of the hostingEnvironment (App Service Environment).\rPossible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress',\r'Deleting'"
+        - id: managedHostingEnvironmentEnvelope.status
+          type: string
+          description: "Current status\rof the hostingEnvironment (App Service Environment). Possible values\rinclude: 'Preparing', 'Ready', 'Scaling', 'Deleting'"
+        - id: managedHostingEnvironmentEnvelope.vnetName
+          type: string
+          description: "Name of the\rhostingEnvironment's (App Service Environment) virtual network"
+        - id: managedHostingEnvironmentEnvelope.vnetResourceGroupName
+          type: string
+          description: "Resource group of the hostingEnvironment's (App Service Environment)\rvirtual network"
+        - id: managedHostingEnvironmentEnvelope.vnetSubnetName
+          type: string
+          description: "Subnet\rof the hostingEnvironment's (App Service Environment) virtual network"
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork
+          type: object
+          description: "Description of the hostingEnvironment's (App Service Environment) virtual\rnetwork"
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.id
+          type: string
+          description: Resource id of the virtual network
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.name
+          type: string
+          description: Name of the virtual network (read-only)
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.type
+          type: string
+          description: Resource type of the virtual network (read-only)
+        - id: managedHostingEnvironmentEnvelope.virtualNetwork.subnet
+          type: string
+          description: Subnet within the virtual network
+        - id: managedHostingEnvironmentEnvelope.internalLoadBalancingMode
+          type: string
+          description: "Specifies\rwhich endpoints to serve internally in the hostingEnvironment's (App\rService Environment) VNET. Possible values include: 'None', 'Web',\r'Publishing'"
+        - id: managedHostingEnvironmentEnvelope.multiSize
+          type: string
+          description: "Front-end VM\rsize, e.g. \"Medium\", \"Large\""
+        - id: managedHostingEnvironmentEnvelope.multiRoleCount
+          type: number
+          description: "Number\rof front-end instances"
+        - id: managedHostingEnvironmentEnvelope.workerPools
+          type: array
+          description: "Description\rof worker pools with worker size ids, VM sizes, and number of workers in\reach pool"
+        - id: managedHostingEnvironmentEnvelope.ipsslAddressCount
+          type: number
+          description: "Number of IP SSL addresses reserved for this hostingEnvironment (App\rService Environment)"
+        - id: managedHostingEnvironmentEnvelope.databaseEdition
+          type: string
+          description: "Edition\rof the metadata database for the hostingEnvironment (App Service\rEnvironment) e.g. \"Standard\""
+        - id: managedHostingEnvironmentEnvelope.databaseServiceObjective
+          type: string
+          description: "Service\robjective of the metadata database for the hostingEnvironment (App Service\rEnvironment) e.g. \"S0\""
+        - id: managedHostingEnvironmentEnvelope.upgradeDomains
+          type: number
+          description: "Number\rof upgrade domains of this hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.subscriptionId
+          type: string
+          description: Subscription of the hostingEnvironment (App Service Environment)
+        - id: managedHostingEnvironmentEnvelope.dnsSuffix
+          type: string
+          description: "DNS suffix of\rthe hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.lastAction
+          type: string
+          description: "Last\rdeployment action on this hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.lastActionResult
+          type: string
+          description: "Result\rof the last deployment action on this hostingEnvironment (App Service\rEnvironment)"
+        - id: managedHostingEnvironmentEnvelope.allowedMultiSizes
+          type: string
+          description: "List\rof comma separated strings describing which VM sizes are allowed for\rfront-ends"
+        - id: managedHostingEnvironmentEnvelope.allowedWorkerSizes
+          type: string
+          description: "List\rof comma separated strings describing which VM sizes are allowed for\rworkers"
+        - id: managedHostingEnvironmentEnvelope.maximumNumberOfMachines
+          type: number
+          description: >-
+            Maximum number of VMs in this hostingEnvironment (App Service
+            Environment)
+        - id: managedHostingEnvironmentEnvelope.vipMappings
+          type: array
+          description: "Description\rof IP SSL mapping for this hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.environmentCapacities
+          type: array
+          description: 'Current total, used, and available worker capacities'
+        - id: managedHostingEnvironmentEnvelope.networkAccessControlList
+          type: array
+          description: "Access control list for controlling traffic to the hostingEnvironment (App\rService Environment)"
+        - id: managedHostingEnvironmentEnvelope.environmentIsHealthy
+          type: boolean
+          description: "True/false indicating whether the hostingEnvironment (App Service\rEnvironment) is healthy"
+        - id: managedHostingEnvironmentEnvelope.environmentStatus
+          type: string
+          description: "Detailed message about with results of the last check of the\rhostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.resourceGroup
+          type: string
+          description: "Resource\rgroup of the hostingEnvironment (App Service Environment)"
+        - id: managedHostingEnvironmentEnvelope.apiManagementAccountId
+          type: string
+          description: Api Management Account associated with this Hosting Environment
+        - id: managedHostingEnvironmentEnvelope.suspended
+          type: boolean
+          description: "True/false\rindicating whether the hostingEnvironment is suspended. The environment\rcan be suspended e.g. when the management endpoint is no longer available\r(most likely because NSG blocked the incoming traffic)"
+        - id: managedHostingEnvironmentEnvelope.clusterSettings
+          type: array
+          description: "Custom\rsettings for changing the behavior of the hosting environment"
+        - id: managedHostingEnvironmentEnvelope.id
+          type: string
+          description: Resource Id
+        - id: managedHostingEnvironmentEnvelope.name
+          type: string
+          description: Resource Name
+        - id: managedHostingEnvironmentEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: managedHostingEnvironmentEnvelope.location
+          type: string
+          description: "Resource\rLocation"
+        - id: managedHostingEnvironmentEnvelope.type
+          type: string
+          description: Resource type
+        - id: managedHostingEnvironmentEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateManagedHostingEnvironment(resourceGroupName,
+        name, managedHostingEnvironmentEnvelope,
+        managedHostingEnvironmentEnvelope.hostingEnvironmentName,
+        managedHostingEnvironmentEnvelope.hostingEnvironmentLocation,
+        managedHostingEnvironmentEnvelope.provisioningState,
+        managedHostingEnvironmentEnvelope.status,
+        managedHostingEnvironmentEnvelope.vnetName,
+        managedHostingEnvironmentEnvelope.vnetResourceGroupName,
+        managedHostingEnvironmentEnvelope.vnetSubnetName,
+        managedHostingEnvironmentEnvelope.virtualNetwork,
+        managedHostingEnvironmentEnvelope.virtualNetwork.id,
+        managedHostingEnvironmentEnvelope.virtualNetwork.name,
+        managedHostingEnvironmentEnvelope.virtualNetwork.type,
+        managedHostingEnvironmentEnvelope.virtualNetwork.subnet,
+        managedHostingEnvironmentEnvelope.internalLoadBalancingMode,
+        managedHostingEnvironmentEnvelope.multiSize,
+        managedHostingEnvironmentEnvelope.multiRoleCount,
+        managedHostingEnvironmentEnvelope.workerPools,
+        managedHostingEnvironmentEnvelope.ipsslAddressCount,
+        managedHostingEnvironmentEnvelope.databaseEdition,
+        managedHostingEnvironmentEnvelope.databaseServiceObjective,
+        managedHostingEnvironmentEnvelope.upgradeDomains,
+        managedHostingEnvironmentEnvelope.subscriptionId,
+        managedHostingEnvironmentEnvelope.dnsSuffix,
+        managedHostingEnvironmentEnvelope.lastAction,
+        managedHostingEnvironmentEnvelope.lastActionResult,
+        managedHostingEnvironmentEnvelope.allowedMultiSizes,
+        managedHostingEnvironmentEnvelope.allowedWorkerSizes,
+        managedHostingEnvironmentEnvelope.maximumNumberOfMachines,
+        managedHostingEnvironmentEnvelope.vipMappings,
+        managedHostingEnvironmentEnvelope.environmentCapacities,
+        managedHostingEnvironmentEnvelope.networkAccessControlList,
+        managedHostingEnvironmentEnvelope.environmentIsHealthy,
+        managedHostingEnvironmentEnvelope.environmentStatus,
+        managedHostingEnvironmentEnvelope.resourceGroup,
+        managedHostingEnvironmentEnvelope.apiManagementAccountId,
+        managedHostingEnvironmentEnvelope.suspended,
+        managedHostingEnvironmentEnvelope.clusterSettings,
+        managedHostingEnvironmentEnvelope.id,
+        managedHostingEnvironmentEnvelope.name,
+        managedHostingEnvironmentEnvelope.kind,
+        managedHostingEnvironmentEnvelope.location,
+        managedHostingEnvironmentEnvelope.type,
+        managedHostingEnvironmentEnvelope.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ManagedHostingEnvironments.beginCreateOrUpdateManagedHostingEnvironment(resourceGroupName,
+      name, managedHostingEnvironmentEnvelope,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentName,
+      managedHostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      managedHostingEnvironmentEnvelope.provisioningState,
+      managedHostingEnvironmentEnvelope.status,
+      managedHostingEnvironmentEnvelope.vnetName,
+      managedHostingEnvironmentEnvelope.vnetResourceGroupName,
+      managedHostingEnvironmentEnvelope.vnetSubnetName,
+      managedHostingEnvironmentEnvelope.virtualNetwork,
+      managedHostingEnvironmentEnvelope.virtualNetwork.id,
+      managedHostingEnvironmentEnvelope.virtualNetwork.name,
+      managedHostingEnvironmentEnvelope.virtualNetwork.type,
+      managedHostingEnvironmentEnvelope.virtualNetwork.subnet,
+      managedHostingEnvironmentEnvelope.internalLoadBalancingMode,
+      managedHostingEnvironmentEnvelope.multiSize,
+      managedHostingEnvironmentEnvelope.multiRoleCount,
+      managedHostingEnvironmentEnvelope.workerPools,
+      managedHostingEnvironmentEnvelope.ipsslAddressCount,
+      managedHostingEnvironmentEnvelope.databaseEdition,
+      managedHostingEnvironmentEnvelope.databaseServiceObjective,
+      managedHostingEnvironmentEnvelope.upgradeDomains,
+      managedHostingEnvironmentEnvelope.subscriptionId,
+      managedHostingEnvironmentEnvelope.dnsSuffix,
+      managedHostingEnvironmentEnvelope.lastAction,
+      managedHostingEnvironmentEnvelope.lastActionResult,
+      managedHostingEnvironmentEnvelope.allowedMultiSizes,
+      managedHostingEnvironmentEnvelope.allowedWorkerSizes,
+      managedHostingEnvironmentEnvelope.maximumNumberOfMachines,
+      managedHostingEnvironmentEnvelope.vipMappings,
+      managedHostingEnvironmentEnvelope.environmentCapacities,
+      managedHostingEnvironmentEnvelope.networkAccessControlList,
+      managedHostingEnvironmentEnvelope.environmentIsHealthy,
+      managedHostingEnvironmentEnvelope.environmentStatus,
+      managedHostingEnvironmentEnvelope.resourceGroup,
+      managedHostingEnvironmentEnvelope.apiManagementAccountId,
+      managedHostingEnvironmentEnvelope.suspended,
+      managedHostingEnvironmentEnvelope.clusterSettings,
+      managedHostingEnvironmentEnvelope.id,
+      managedHostingEnvironmentEnvelope.name,
+      managedHostingEnvironmentEnvelope.kind,
+      managedHostingEnvironmentEnvelope.location,
+      managedHostingEnvironmentEnvelope.type,
+      managedHostingEnvironmentEnvelope.tags, options, options.customHeaders,
+      callback)
+    children:
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~client
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~callback
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~options
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~queryParameters
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~regex
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~httpRequest
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~headerName
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestContent
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestModel
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestModelMapper
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestModel
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~requestContent
+      - >-
+        ManagedHostingEnvironments#beginCreateOrUpdateManagedHostingEnvironment~serializationError
+  - uid: 'ManagedHostingEnvironments#deleteManagedHostingEnvironment'
+    id: deleteManagedHostingEnvironment
+    parent: ManagedHostingEnvironments
+    name: >-
+      deleteManagedHostingEnvironment(resourceGroupName, name, options,
+      options.forceDelete, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.forceDelete
+          type: boolean
+          description: "Delete even if the managed hosting\renvironment contains resources"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteManagedHostingEnvironment(resourceGroupName, name,
+        options, options.forceDelete, options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.deleteManagedHostingEnvironment(resourceGroupName,
+      name, options, options.forceDelete, options.customHeaders, callback)
+    children:
+      - 'ManagedHostingEnvironments#deleteManagedHostingEnvironment~client'
+      - 'ManagedHostingEnvironments#deleteManagedHostingEnvironment~callback'
+      - 'ManagedHostingEnvironments#deleteManagedHostingEnvironment~options'
+  - uid: 'ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment'
+    id: beginDeleteManagedHostingEnvironment
+    parent: ManagedHostingEnvironments
+    name: >-
+      beginDeleteManagedHostingEnvironment(resourceGroupName, name, options,
+      options.forceDelete, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.forceDelete
+          type: boolean
+          description: "Delete even if the managed hosting\renvironment contains resources"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteManagedHostingEnvironment(resourceGroupName, name,
+        options, options.forceDelete, options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.beginDeleteManagedHostingEnvironment(resourceGroupName,
+      name, options, options.forceDelete, options.customHeaders, callback)
+    children:
+      - 'ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~client'
+      - 'ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~callback'
+      - 'ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~options'
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~forceDelete
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~queryParameters
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~requestUrl
+      - 'ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~regex'
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~requestUrl
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~httpRequest
+      - >-
+        ManagedHostingEnvironments#beginDeleteManagedHostingEnvironment~headerName
+  - uid: 'ManagedHostingEnvironments#getManagedHostingEnvironments'
+    id: getManagedHostingEnvironments
+    parent: ManagedHostingEnvironments
+    name: >-
+      getManagedHostingEnvironments(resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironmentCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getManagedHostingEnvironments(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.getManagedHostingEnvironments(resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~client'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~callback'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~options'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~queryParameters'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~regex'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~httpRequest'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironments~headerName'
+  - uid: 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips'
+    id: getManagedHostingEnvironmentVips
+    parent: ManagedHostingEnvironments
+    name: >-
+      getManagedHostingEnvironmentVips(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AddressResponse} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getManagedHostingEnvironmentVips(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.getManagedHostingEnvironmentVips(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~client'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~callback'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~options'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~requestUrl'
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentVips~queryParameters
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~regex'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~httpRequest'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentVips~headerName'
+  - uid: 'ManagedHostingEnvironments#getManagedHostingEnvironmentOperation'
+    id: getManagedHostingEnvironmentOperation
+    parent: ManagedHostingEnvironments
+    name: >-
+      getManagedHostingEnvironmentOperation(resourceGroupName, name,
+      operationId, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: operationId
+          type: string
+          description: operation identifier GUID
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getManagedHostingEnvironmentOperation(resourceGroupName, name,
+        operationId, options, options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.getManagedHostingEnvironmentOperation(resourceGroupName,
+      name, operationId, options, options.customHeaders, callback)
+    children:
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~client'
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~callback
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~options'
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~queryParameters
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~requestUrl
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~regex'
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~httpRequest
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentOperation~headerName
+  - uid: 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites'
+    id: getManagedHostingEnvironmentSites
+    parent: ManagedHostingEnvironments
+    name: >-
+      getManagedHostingEnvironmentSites(resourceGroupName, name, options,
+      options.propertiesToInclude, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.propertiesToInclude
+          type: string
+          description: "Comma separated list of site\rproperties to include"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getManagedHostingEnvironmentSites(resourceGroupName, name,
+        options, options.propertiesToInclude, options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.getManagedHostingEnvironmentSites(resourceGroupName,
+      name, options, options.propertiesToInclude, options.customHeaders,
+      callback)
+    children:
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~client'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~callback'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~options'
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentSites~propertiesToInclude
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~requestUrl'
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentSites~queryParameters
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~regex'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~requestUrl'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~httpRequest'
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentSites~headerName'
+  - uid: 'ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans'
+    id: getManagedHostingEnvironmentWebHostingPlans
+    parent: ManagedHostingEnvironments
+    name: >-
+      getManagedHostingEnvironmentWebHostingPlans(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getManagedHostingEnvironmentWebHostingPlans(resourceGroupName,
+        name, options, options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.getManagedHostingEnvironmentWebHostingPlans(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~client
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~callback
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~options
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~queryParameters
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~regex
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~httpRequest
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentWebHostingPlans~headerName
+  - uid: 'ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms'
+    id: getManagedHostingEnvironmentServerFarms
+    parent: ManagedHostingEnvironments
+    name: >-
+      getManagedHostingEnvironmentServerFarms(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of managed hosting environment
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getManagedHostingEnvironmentServerFarms(resourceGroupName,
+        name, options, options.customHeaders, callback);
+    fullName: >-
+      ManagedHostingEnvironments.getManagedHostingEnvironmentServerFarms(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~client
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~callback
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~options
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~queryParameters
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~requestUrl
+      - 'ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~regex'
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~requestUrl
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~httpRequest
+      - >-
+        ManagedHostingEnvironments#getManagedHostingEnvironmentServerFarms~headerName
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

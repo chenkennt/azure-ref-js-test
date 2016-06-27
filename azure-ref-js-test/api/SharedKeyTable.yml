@@ -1,0 +1,97 @@
+items:
+  - uid: SharedKeyTable
+    id: SharedKeyTable
+    name: SharedKeyTable
+    summary: Creates a new SharedKeyTable object.
+    type: Class
+    syntax:
+      content: SharedKeyTable
+    fullName: SharedKeyTable
+    children:
+      - 'SharedKeyTable#storageAccount'
+      - 'SharedKeyTable#storageAccessKey'
+      - 'SharedKeyTable#usePathStyleUri'
+      - 'SharedKeyTable#signer'
+      - 'SharedKeyTable#signRequest'
+      - 'SharedKeyTable#_getCanonicalizedResource'
+  - uid: 'SharedKeyTable#storageAccount'
+    id: storageAccount
+    parent: SharedKeyTable
+    name: storageAccount
+    type: Field
+    syntax:
+      content: storageAccount
+    fullName: SharedKeyTable.storageAccount
+  - uid: 'SharedKeyTable#storageAccessKey'
+    id: storageAccessKey
+    parent: SharedKeyTable
+    name: storageAccessKey
+    type: Field
+    syntax:
+      content: storageAccessKey
+    fullName: SharedKeyTable.storageAccessKey
+  - uid: 'SharedKeyTable#usePathStyleUri'
+    id: usePathStyleUri
+    parent: SharedKeyTable
+    name: usePathStyleUri
+    type: Field
+    syntax:
+      content: usePathStyleUri
+    fullName: SharedKeyTable.usePathStyleUri
+  - uid: 'SharedKeyTable#signer'
+    id: signer
+    parent: SharedKeyTable
+    name: signer
+    type: Field
+    syntax:
+      content: signer
+    fullName: SharedKeyTable.signer
+  - uid: 'SharedKeyTable#signRequest'
+    id: signRequest
+    parent: SharedKeyTable
+    name: 'signRequest(The, callback)'
+    summary: Signs a request with the Authentication header.
+    type: Method
+    syntax:
+      parameters:
+        - id: The
+          type: WebResource
+          description: webresource to be signed.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: 'function signRequest(The, callback);'
+    fullName: 'SharedKeyTable.signRequest(The, callback)'
+    children:
+      - 'SharedKeyTable#signRequest~getvalueToAppend'
+      - 'SharedKeyTable#signRequest~stringToSign'
+      - 'SharedKeyTable#signRequest~signature'
+  - uid: 'SharedKeyTable#_getCanonicalizedResource'
+    id: _getCanonicalizedResource
+    parent: SharedKeyTable
+    name: _getCanonicalizedResource()
+    type: Method
+    syntax:
+      content: function _getCanonicalizedResource();
+    fullName: SharedKeyTable._getCanonicalizedResource()
+    children:
+      - 'SharedKeyTable#_getCanonicalizedResource~path'
+      - 'SharedKeyTable#_getCanonicalizedResource~path'
+      - 'SharedKeyTable#_getCanonicalizedResource~canonicalizedResource'
+      - 'SharedKeyTable#_getCanonicalizedResource~queryStringValues'
+      - 'SharedKeyTable#_getCanonicalizedResource~canonicalizedResource'
+references:
+  - uid: WebResource
+    name: WebResource
+    fullName: WebResource
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true

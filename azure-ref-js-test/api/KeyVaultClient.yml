@@ -1,0 +1,842 @@
+items:
+  - uid: KeyVaultClient
+    id: KeyVaultClient
+    name: KeyVaultClient
+    summary: A Key Vault client object.
+    type: Class
+    syntax:
+      content: KeyVaultClient
+    fullName: KeyVaultClient
+    children:
+      - KeyVaultClient~filters
+      - 'KeyVaultClient#_internalClient'
+      - 'KeyVaultClient#_keys'
+      - 'KeyVaultClient#_secrets'
+  - uid: KeyVaultClient~filters
+    id: filters
+    parent: KeyVaultClient
+    name: filters
+    type: Field
+    syntax:
+      content: filters
+    fullName: KeyVaultClient.filters
+  - uid: 'KeyVaultClient#_internalClient'
+    id: _internalClient
+    parent: KeyVaultClient
+    name: _internalClient
+    type: Field
+    syntax:
+      content: _internalClient
+    fullName: KeyVaultClient._internalClient
+  - uid: 'KeyVaultClient#_keys'
+    id: _keys
+    parent: KeyVaultClient
+    name: _keys
+    type: Field
+    syntax:
+      content: _keys
+    fullName: KeyVaultClient._keys
+  - uid: 'KeyVaultClient#_secrets'
+    id: _secrets
+    parent: KeyVaultClient
+    name: _secrets
+    type: Field
+    syntax:
+      content: _secrets
+    fullName: KeyVaultClient._secrets
+  - uid: 'KeyVaultClient#withFilter'
+    id: withFilter
+    parent: KeyVaultClient
+    name: withFilter()
+    summary: 'See {@linkcode Service#withFilter}.'
+    type: Method
+    syntax:
+      content: function withFilter();
+    fullName: KeyVaultClient.withFilter()
+    children:
+      - 'KeyVaultClient#withFilter#_internalClient'
+      - 'KeyVaultClient#withFilter#_keys'
+      - 'KeyVaultClient#withFilter#_secrets'
+  - uid: 'KeyVaultClient#encrypt'
+    id: encrypt
+    parent: KeyVaultClient
+    name: 'encrypt(keyIdentifier, algorithm, plainText, callback)'
+    summary: Performs an ENCRYPT operation using the specified key.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: algorithm
+          type: string
+          description: >-
+            The algorithm name. Use a constant from {@linkcode
+            JsonWebKeyEncryptionAlgorithms}.
+        - id: plainText
+          type: Buffer
+          description: 'A {@linkcode Buffer} containing the data to be encrypted.'
+        - id: callback
+          type: KeyVaultClient~valueCallback
+          description: >-
+            A callback that will be called on completion. The value will contain
+            the ciphertext.
+      content: 'function encrypt(keyIdentifier, algorithm, plainText, callback);'
+    fullName: 'KeyVaultClient.encrypt(keyIdentifier, algorithm, plainText, callback)'
+    children:
+      - 'KeyVaultClient#encrypt~keyOpRequest'
+      - 'KeyVaultClient#encrypt~result'
+  - uid: 'KeyVaultClient#decrypt'
+    id: decrypt
+    parent: KeyVaultClient
+    name: 'decrypt(keyIdentifier, algorithm, cipherText, callback)'
+    summary: Performs a DECRYPT operation using the specified key.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: algorithm
+          type: string
+          description: >-
+            The algorithm name. Use a constant from {@linkcode
+            JsonWebKeyEncryptionAlgorithms}.
+        - id: cipherText
+          type: Buffer
+          description: 'A {@linkcode Buffer} containing the data to be decrypted.'
+        - id: callback
+          type: KeyVaultClient~valueCallback
+          description: >-
+            A callback that will be called on completion. The value will contain
+            the plaintext.
+      content: 'function decrypt(keyIdentifier, algorithm, cipherText, callback);'
+    fullName: 'KeyVaultClient.decrypt(keyIdentifier, algorithm, cipherText, callback)'
+    children:
+      - 'KeyVaultClient#decrypt~keyOpRequest'
+      - 'KeyVaultClient#decrypt~result'
+  - uid: 'KeyVaultClient#sign'
+    id: sign
+    parent: KeyVaultClient
+    name: 'sign(keyIdentifier, algorithm, digest, callback)'
+    summary: Performs a SIGN operation using the specified key.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: algorithm
+          type: string
+          description: >-
+            The algorithm name. Use a constant from {@linkcode
+            JsonWebKeySignatureAlgorithms}.
+        - id: digest
+          type: Buffer
+          description: >-
+            A {@linkcode Buffer} containing the digest to be signed. It must be
+            a valid digest.
+        - id: callback
+          type: KeyVaultClient~valueCallback
+          description: >-
+            A callback that will be called on completion. The value will contain
+            the signature.
+      content: 'function sign(keyIdentifier, algorithm, digest, callback);'
+    fullName: 'KeyVaultClient.sign(keyIdentifier, algorithm, digest, callback)'
+    children:
+      - 'KeyVaultClient#sign~keyOpRequest'
+      - 'KeyVaultClient#sign~result'
+  - uid: 'KeyVaultClient#verify'
+    id: verify
+    parent: KeyVaultClient
+    name: 'verify(keyIdentifier, algorithm, digest, signature, callback)'
+    summary: Performs a VERIFY operation using the specified key.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: algorithm
+          type: string
+          description: >-
+            The algorithm name. Use a constant from {@linkcode
+            JsonWebKeySignatureAlgorithms}.
+        - id: digest
+          type: Buffer
+          description: 'A {@linkcode Buffer} containing the digest that was signed.'
+        - id: signature
+          type: Buffer
+          description: 'A {@linkcode Buffer} containing the signature to be verified.'
+        - id: callback
+          type: KeyVaultClient~boolCallback
+          description: >-
+            A callback that will be called on completion. The value will be true
+            if the signature is valid for the digest.
+      content: 'function verify(keyIdentifier, algorithm, digest, signature, callback);'
+    fullName: >-
+      KeyVaultClient.verify(keyIdentifier, algorithm, digest, signature,
+      callback)
+    children:
+      - 'KeyVaultClient#verify~keyOpRequest'
+      - 'KeyVaultClient#verify~result'
+  - uid: 'KeyVaultClient#wrapKey'
+    id: wrapKey
+    parent: KeyVaultClient
+    name: 'wrapKey(keyIdentifier, algorithm, key, callback)'
+    summary: Performs a WRAP KEY operation using the specified key.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: algorithm
+          type: string
+          description: >-
+            The algorithm name. Use a constant from {@linkcode
+            JsonWebKeyEncryptionAlgorithms}.
+        - id: key
+          type: Buffer
+          description: 'A {@linkcode Buffer} containing the key material to be wrapped.'
+        - id: callback
+          type: KeyVaultClient~valueCallback
+          description: >-
+            A callback that will be called on completion. The value will contain
+            the wrapped key.
+      content: 'function wrapKey(keyIdentifier, algorithm, key, callback);'
+    fullName: 'KeyVaultClient.wrapKey(keyIdentifier, algorithm, key, callback)'
+    children:
+      - 'KeyVaultClient#wrapKey~keyOpRequest'
+      - 'KeyVaultClient#wrapKey~result'
+  - uid: 'KeyVaultClient#unwrapKey'
+    id: unwrapKey
+    parent: KeyVaultClient
+    name: 'unwrapKey(keyIdentifier, algorithm, cipherText, callback)'
+    summary: Performs an UNWRAP KEY operation using the specified key.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: algorithm
+          type: string
+          description: >-
+            The algorithm name. Use a constant from {@linkcode
+            JsonWebKeyEncryptionAlgorithms}.
+        - id: cipherText
+          type: Buffer
+          description: 'A {@linkcode Buffer} containing the wrapped key.'
+        - id: callback
+          type: KeyVaultClient~valueCallback
+          description: >-
+            A callback that will be called on completion. The value will contain
+            the unwrapped key material.
+      content: 'function unwrapKey(keyIdentifier, algorithm, cipherText, callback);'
+    fullName: 'KeyVaultClient.unwrapKey(keyIdentifier, algorithm, cipherText, callback)'
+    children:
+      - 'KeyVaultClient#unwrapKey~keyOpRequest'
+      - 'KeyVaultClient#unwrapKey~result'
+  - uid: 'KeyVaultClient#getKey'
+    id: getKey
+    parent: KeyVaultClient
+    name: 'getKey(keyIdentifier, callback)'
+    summary: >-
+      Performs a GET KEY operation, which retrieves key attributes from the
+      service.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: callback
+          type: KeyVaultClient~keyBundleCallback
+          description: A callback that will be called on completion.
+      content: 'function getKey(keyIdentifier, callback);'
+    fullName: 'KeyVaultClient.getKey(keyIdentifier, callback)'
+    children:
+      - 'KeyVaultClient#getKey~result'
+  - uid: 'KeyVaultClient#getKeys'
+    id: getKeys
+    parent: KeyVaultClient
+    name: 'getKeys(vault, maxresults, callback)'
+    summary: "Performs a GET KEYS operation, which lists keys of a vault.\rThis operation may use paging. Call {@linkcode #getKeysNext} to retrieve more pages."
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: maxresults
+          type: number
+          description: >-
+            The maximum number of keys to return. This is the total number of
+            keys, not the size of first page.
+        - id: callback
+          type: KeyVaultClient~keyListCallback
+          description: A callback that will be called on completion.
+      content: 'function getKeys(vault, maxresults, callback);'
+    fullName: 'KeyVaultClient.getKeys(vault, maxresults, callback)'
+    children:
+      - 'KeyVaultClient#getKeys~result'
+  - uid: 'KeyVaultClient#getKeysNext'
+    id: getKeysNext
+    parent: KeyVaultClient
+    name: 'getKeysNext(nextLink, callback)'
+    summary: Resumes a GET KEYS operation by returning the next page.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: >-
+            The value returned by a previous call to {@linkcode #getKeys} or
+            {@linkcode #getKeysNext}.
+        - id: callback
+          type: KeyVaultClient~keyListCallback
+          description: A callback that will be called on completion.
+      content: 'function getKeysNext(nextLink, callback);'
+    fullName: 'KeyVaultClient.getKeysNext(nextLink, callback)'
+    children:
+      - 'KeyVaultClient#getKeysNext~result'
+  - uid: 'KeyVaultClient#getKeyVersions'
+    id: getKeyVersions
+    parent: KeyVaultClient
+    name: 'getKeyVersions(vault, keyName, maxresults, callback)'
+    summary: "Performs a GET KEY VERSIONS operation, which lists all versions of a key.\rThis operation may use paging. Call {@linkcode #getKeyVersionsNext} to retrieve more pages."
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: keyName
+          type: string
+          description: The key name.
+        - id: maxresults
+          type: number
+          description: >-
+            The maximum number of key versions to return. This is the total
+            number of items, not the size of first page.
+        - id: callback
+          type: KeyVaultClient~keyListCallback
+          description: A callback that will be called on completion.
+      content: 'function getKeyVersions(vault, keyName, maxresults, callback);'
+    fullName: 'KeyVaultClient.getKeyVersions(vault, keyName, maxresults, callback)'
+    children:
+      - 'KeyVaultClient#getKeyVersions~result'
+  - uid: 'KeyVaultClient#getKeyVersionsNext'
+    id: getKeyVersionsNext
+    parent: KeyVaultClient
+    name: 'getKeyVersionsNext(nextLink, callback)'
+    summary: Resumes a GET KEY VERSIONS operation by returning the next page.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: >-
+            The value returned by a previous call to {@linkcode #getKeyVersions}
+            or {@linkcode #getKeyVersionsNext}.
+        - id: callback
+          type: KeyVaultClient~keyListCallback
+          description: A callback that will be called on completion.
+      content: 'function getKeyVersionsNext(nextLink, callback);'
+    fullName: 'KeyVaultClient.getKeyVersionsNext(nextLink, callback)'
+    children:
+      - 'KeyVaultClient#getKeyVersionsNext~result'
+  - uid: 'KeyVaultClient#createKey'
+    id: createKey
+    parent: KeyVaultClient
+    name: >-
+      createKey(vault, keyName, request.kty, request.key_size, request.key_ops,
+      request.attributes, request.tags, callback)
+    summary: >-
+      Performs a CREATE KEY operation, which creates a key and stores in the
+      service.
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: keyName
+          type: string
+          description: >-
+            The key name. If a key with this name already exists, the service
+            creates a new version and set as current.
+        - id: request.kty
+          type: string
+          description: 'The key type. Use a constant from {@linkcode JsonWebKeyType}.'
+        - id: request.key_size
+          type: number
+          description: >-
+            The key size. Must be valid for the key type. If omitted, a default
+            for the key type is used.
+        - id: request.key_ops
+          type: Array.<string>
+          description: >-
+            The allowed operations on the key. Each can be a constant from
+            {@linkcode JsonWebKeyOperation}.
+        - id: request.attributes
+          type: KeyAttributes
+          description: 'Initial attributes. If omitted, a service defined default is used.'
+        - id: request.tags
+          type: object
+          description: User defined tags to be associated with the key.
+        - id: callback
+          type: KeyVaultClient~keyBundleCallback
+          description: A callback that will be called on completion.
+      content: >-
+        function createKey(vault, keyName, request.kty, request.key_size,
+        request.key_ops, request.attributes, request.tags, callback);
+    fullName: >-
+      KeyVaultClient.createKey(vault, keyName, request.kty, request.key_size,
+      request.key_ops, request.attributes, request.tags, callback)
+    children:
+      - 'KeyVaultClient#createKey~result'
+  - uid: 'KeyVaultClient#deleteKey'
+    id: deleteKey
+    parent: KeyVaultClient
+    name: 'deleteKey(vault, keyName, callback)'
+    summary: "Performs a DELETE KEY operation, which deletes a key and all its versions.\rThis method returns data about the current version of deleted key."
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: keyName
+          type: string
+          description: The key name.
+        - id: callback
+          type: KeyVaultClient~keyBundleCallback
+          description: A callback that will be called on completion.
+      content: 'function deleteKey(vault, keyName, callback);'
+    fullName: 'KeyVaultClient.deleteKey(vault, keyName, callback)'
+    children:
+      - 'KeyVaultClient#deleteKey~result'
+  - uid: 'KeyVaultClient#updateKey'
+    id: updateKey
+    parent: KeyVaultClient
+    name: >-
+      updateKey(keyIdentifier, request.key_ops, request.attributes,
+      request.tags, callback)
+    summary: >-
+      Performs an UPDATE KEY operation, which updates attributes of a key
+      version.
+    type: Method
+    syntax:
+      parameters:
+        - id: keyIdentifier
+          type: string
+          description: >-
+            The key identifier. It may or may not contain a version path. If a
+            version is not provided, the latest key version is used.
+        - id: request.key_ops
+          type: Array.<string>
+          description: >-
+            If informed, changes allowed operations. Each can be a constant from
+            {@linkcode JsonWebKeyOperation}.
+        - id: request.attributes
+          type: KeyAttributes
+          description: 'If informed, changes attributes.'
+        - id: request.tags
+          type: object
+          description: 'If informed, replaces all tags.'
+        - id: callback
+          type: KeyVaultClient~keyBundleCallback
+          description: A callback that will be called on completion.
+      content: >-
+        function updateKey(keyIdentifier, request.key_ops, request.attributes,
+        request.tags, callback);
+    fullName: >-
+      KeyVaultClient.updateKey(keyIdentifier, request.key_ops,
+      request.attributes, request.tags, callback)
+    children:
+      - 'KeyVaultClient#updateKey~result'
+  - uid: 'KeyVaultClient#importKey'
+    id: importKey
+    parent: KeyVaultClient
+    name: >-
+      importKey(vault, keyName, request.key, request.hsm, request.attributes,
+      request.tags, callback)
+    summary: >-
+      Performs an IMPORT KEY operation, which imports existing key material into
+      a new key that is stored on the service.
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: keyName
+          type: string
+          description: >-
+            The key name. If a key with this name already exists, the service
+            creates a new version and set as current.
+        - id: request.key
+          type: string
+          description: >-
+            A {@linkcode JsonWebKey} that describes the key to be imported. The
+            kid property is ignored.
+        - id: request.hsm
+          type: boolean
+          description: >-
+            true to import as a "hardware" key, false to import as "software"
+            key. Default is false.
+        - id: request.attributes
+          type: KeyAttributes
+          description: 'Initial attributes. If omitted, a service defined default is used.'
+        - id: request.tags
+          type: object
+          description: User defined tags to be associated with the key.
+        - id: callback
+          type: KeyVaultClient~keyBundleCallback
+          description: A callback that will be called on completion.
+      content: >-
+        function importKey(vault, keyName, request.key, request.hsm,
+        request.attributes, request.tags, callback);
+    fullName: >-
+      KeyVaultClient.importKey(vault, keyName, request.key, request.hsm,
+      request.attributes, request.tags, callback)
+    children:
+      - 'KeyVaultClient#importKey~keyIdentifier'
+      - 'KeyVaultClient#importKey~result'
+  - uid: 'KeyVaultClient#backupKey'
+    id: backupKey
+    parent: KeyVaultClient
+    name: 'backupKey(vault, keyName, callback)'
+    summary: >-
+      Performs a BACKUP KEY operation, which backs up a key and all its
+      versions.
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: keyName
+          type: string
+          description: The key name.
+        - id: callback
+          type: KeyVaultClient~valueCallback
+          description: >-
+            A callback that will be called on completion. The value is a
+            sequence of bytes suitable for the RESTORE KEY operation.
+      content: 'function backupKey(vault, keyName, callback);'
+    fullName: 'KeyVaultClient.backupKey(vault, keyName, callback)'
+    children:
+      - 'KeyVaultClient#backupKey~keyIdentifier'
+      - 'KeyVaultClient#backupKey~result'
+  - uid: 'KeyVaultClient#restoreKey'
+    id: restoreKey
+    parent: KeyVaultClient
+    name: 'restoreKey(vault, backupValue, callback)'
+    summary: "Performs a RESTORE KEY operation, which restores a key and all its versions. The key to be restored must not exist previously.\rThis method returns data about the restored key. Despite all versions are being restored, only the current version is returned."
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: backupValue
+          type: Buffer
+          description: A sequence of bytes obtained through the BACKUP KEY operation.
+        - id: callback
+          type: KeyVaultClient~keyBundleCallback
+          description: A callback that will be called on completion.
+      content: 'function restoreKey(vault, backupValue, callback);'
+    fullName: 'KeyVaultClient.restoreKey(vault, backupValue, callback)'
+    children:
+      - 'KeyVaultClient#restoreKey~keyOpRequest'
+      - 'KeyVaultClient#restoreKey~result'
+  - uid: 'KeyVaultClient#getSecret'
+    id: getSecret
+    parent: KeyVaultClient
+    name: 'getSecret(secretIdentifier, callback)'
+    summary: >-
+      Performs a GET SECRET operation, which retrieves secret attributes from
+      the service.
+    type: Method
+    syntax:
+      parameters:
+        - id: secretIdentifier
+          type: string
+          description: >-
+            The secret identifier. It may or may not contain a version path. If
+            a version is not provided, the latest secret version is used.
+        - id: callback
+          type: KeyVaultClient~secretBundleCallback
+          description: A callback that will be called on completion.
+      content: 'function getSecret(secretIdentifier, callback);'
+    fullName: 'KeyVaultClient.getSecret(secretIdentifier, callback)'
+    children:
+      - 'KeyVaultClient#getSecret~result'
+  - uid: 'KeyVaultClient#setSecret'
+    id: setSecret
+    parent: KeyVaultClient
+    name: >-
+      setSecret(vault, secretName, request.value, request.contentType,
+      request.attributes, request.tags, callback)
+    summary: 'Performs a SET SECRET operation, which stores a secret in the service.'
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: secretName
+          type: string
+          description: >-
+            The secret name. If a secret with this name already exists, the
+            service creates a new version and set as current.
+        - id: request.value
+          type: string
+          description: The secret value.
+        - id: request.contentType
+          type: string
+          description: The value's content type.
+        - id: request.attributes
+          type: SecretAttributes
+          description: 'Initial attributes. If omitted, a service defined default is used.'
+        - id: request.tags
+          type: object
+          description: User defined tags to be associated with the secret.
+        - id: callback
+          type: KeyVaultClient~secretBundleCallback
+          description: A callback that will be called on completion.
+      content: >-
+        function setSecret(vault, secretName, request.value,
+        request.contentType, request.attributes, request.tags, callback);
+    fullName: >-
+      KeyVaultClient.setSecret(vault, secretName, request.value,
+      request.contentType, request.attributes, request.tags, callback)
+    children:
+      - 'KeyVaultClient#setSecret~secretIdentifier'
+      - 'KeyVaultClient#setSecret~result'
+  - uid: 'KeyVaultClient#updateSecret'
+    id: updateSecret
+    parent: KeyVaultClient
+    name: >-
+      updateSecret(secretIdentifier, request.contentType, request.attributes,
+      request.tags, callback)
+    summary: >-
+      Performs an UPDATE SECRET operation, which updates attributes of a secret
+      version.
+    type: Method
+    syntax:
+      parameters:
+        - id: secretIdentifier
+          type: string
+          description: >-
+            The secret identifier. It may or may not contain a version path. If
+            a version is not provided, the latest secret version is used.
+        - id: request.contentType
+          type: stri
+          description: 'If informed, changes the value''s content type.'
+        - id: request.attributes
+          type: SecretAttributes
+          description: 'If informed, changes attributes.'
+        - id: request.tags
+          type: object
+          description: 'If informed, replaces all tags.'
+        - id: callback
+          type: KeyVaultClient~secretBundleCallback
+          description: A callback that will be called on completion.
+      content: >-
+        function updateSecret(secretIdentifier, request.contentType,
+        request.attributes, request.tags, callback);
+    fullName: >-
+      KeyVaultClient.updateSecret(secretIdentifier, request.contentType,
+      request.attributes, request.tags, callback)
+    children:
+      - 'KeyVaultClient#updateSecret~result'
+  - uid: 'KeyVaultClient#deleteSecret'
+    id: deleteSecret
+    parent: KeyVaultClient
+    name: 'deleteSecret(vault, secretName, callback)'
+    summary: "Performs a DELETE SECRET operation, which deletes a secret and all its versions.\rThis method returns data about the current version of the deleted secret."
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: secretName
+          type: string
+          description: The secret name.
+        - id: callback
+          type: KeyVaultClient~secretBundleCallback
+          description: A callback that will be called on completion.
+      content: 'function deleteSecret(vault, secretName, callback);'
+    fullName: 'KeyVaultClient.deleteSecret(vault, secretName, callback)'
+    children:
+      - 'KeyVaultClient#deleteSecret~secretIdentifier'
+      - 'KeyVaultClient#deleteSecret~result'
+  - uid: 'KeyVaultClient#getSecrets'
+    id: getSecrets
+    parent: KeyVaultClient
+    name: 'getSecrets(vault, maxresults, callback)'
+    summary: "Performs a GET SECRETS operation, which lists secrets of a vault.\rThis operation may use paging. Call {@linkcode #getSecretsNext} to retrieve more pages."
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: maxresults
+          type: number
+          description: >-
+            The maximum number of secrets to return. This is the total number of
+            secrets, not the size of first page.
+        - id: callback
+          type: KeyVaultClient~secretListCallback
+          description: A callback that will be called on completion.
+      content: 'function getSecrets(vault, maxresults, callback);'
+    fullName: 'KeyVaultClient.getSecrets(vault, maxresults, callback)'
+    children:
+      - 'KeyVaultClient#getSecrets~result'
+  - uid: 'KeyVaultClient#getSecretsNext'
+    id: getSecretsNext
+    parent: KeyVaultClient
+    name: 'getSecretsNext(nextLink, callback)'
+    summary: Resumes a GET SECRETS operation by returning the next page.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: >-
+            The value returned by a previous call to {@linkcode #getSecrets} or
+            {@linkcode #getSecretsNext}.
+        - id: callback
+          type: KeyVaultClient~secretListCallback
+          description: A callback that will be called on completion.
+      content: 'function getSecretsNext(nextLink, callback);'
+    fullName: 'KeyVaultClient.getSecretsNext(nextLink, callback)'
+    children:
+      - 'KeyVaultClient#getSecretsNext~result'
+  - uid: 'KeyVaultClient#getSecretVersions'
+    id: getSecretVersions
+    parent: KeyVaultClient
+    name: 'getSecretVersions(vault, secretName, maxresults, callback)'
+    summary: "Performs a GET SECRET VERSIONS operation, which lists all versions of a secret.\rThis operation may use paging. Call {@linkcode #getSecretVersionsNext} to retrieve more pages."
+    type: Method
+    syntax:
+      parameters:
+        - id: vault
+          type: string
+          description: The vault identifier.
+        - id: secretName
+          type: string
+          description: The secret name.
+        - id: maxresults
+          type: number
+          description: >-
+            The maximum number of secret versions to return. This is the total
+            number of items, not the size of first page.
+        - id: callback
+          type: KeyVaultClient~secretListCallback
+          description: A callback that will be called on completion.
+      content: 'function getSecretVersions(vault, secretName, maxresults, callback);'
+    fullName: 'KeyVaultClient.getSecretVersions(vault, secretName, maxresults, callback)'
+    children:
+      - 'KeyVaultClient#getSecretVersions~result'
+  - uid: 'KeyVaultClient#getSecretVersionsNext'
+    id: getSecretVersionsNext
+    parent: KeyVaultClient
+    name: 'getSecretVersionsNext(nextLink, callback)'
+    summary: Resumes a GET SECRET VERSIONS operation by returning the next page.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: >-
+            The value returned by a previous call to {@linkcode
+            #getSecretVersions} or {@linkcode #getSecretVersionsNext}.
+        - id: callback
+          type: KeyVaultClient~secretListCallback
+          description: A callback that will be called on completion.
+      content: 'function getSecretVersionsNext(nextLink, callback);'
+    fullName: 'KeyVaultClient.getSecretVersionsNext(nextLink, callback)'
+    children:
+      - 'KeyVaultClient#getSecretVersionsNext~result'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: Buffer
+    name: Buffer
+    fullName: Buffer
+    isExternal: true
+  - uid: KeyVaultClient~valueCallback
+    name: KeyVaultClient~valueCallback
+    fullName: KeyVaultClient~valueCallback
+    isExternal: true
+  - uid: KeyVaultClient~boolCallback
+    name: KeyVaultClient~boolCallback
+    fullName: KeyVaultClient~boolCallback
+    isExternal: true
+  - uid: KeyVaultClient~keyBundleCallback
+    name: KeyVaultClient~keyBundleCallback
+    fullName: KeyVaultClient~keyBundleCallback
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: KeyVaultClient~keyListCallback
+    name: KeyVaultClient~keyListCallback
+    fullName: KeyVaultClient~keyListCallback
+    isExternal: true
+  - uid: Array.<string>
+    name: Array.<string>
+    fullName: Array.<string>
+    isExternal: true
+  - uid: KeyAttributes
+    name: KeyAttributes
+    fullName: KeyAttributes
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: KeyVaultClient~secretBundleCallback
+    name: KeyVaultClient~secretBundleCallback
+    fullName: KeyVaultClient~secretBundleCallback
+    isExternal: true
+  - uid: SecretAttributes
+    name: SecretAttributes
+    fullName: SecretAttributes
+    isExternal: false
+  - uid: stri
+    name: stri
+    fullName: stri
+    isExternal: true
+  - uid: KeyVaultClient~secretListCallback
+    name: KeyVaultClient~secretListCallback
+    fullName: KeyVaultClient~secretListCallback
+    isExternal: true

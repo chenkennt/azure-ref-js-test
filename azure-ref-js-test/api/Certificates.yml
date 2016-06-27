@@ -1,0 +1,872 @@
+items:
+  - uid: Certificates
+    id: Certificates
+    name: Certificates
+    type: Class
+    syntax:
+      content: Certificates
+    fullName: Certificates
+    children:
+      - 'Certificates#client'
+      - 'Certificates#getCertificates'
+      - 'Certificates#getCertificate'
+      - 'Certificates#createOrUpdateCertificate'
+      - 'Certificates#deleteCertificate'
+      - 'Certificates#updateCertificate'
+      - 'Certificates#getCsrs'
+      - 'Certificates#getCsr'
+      - 'Certificates#createOrUpdateCsr'
+      - 'Certificates#deleteCsr'
+      - 'Certificates#updateCsr'
+  - uid: 'Certificates#client'
+    id: client
+    parent: Certificates
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Certificates.client
+  - uid: 'Certificates#getCertificates'
+    id: getCertificates
+    parent: Certificates
+    name: >-
+      getCertificates(resourceGroupName, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCertificates(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.getCertificates(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Certificates#getCertificates~client'
+      - 'Certificates#getCertificates~callback'
+      - 'Certificates#getCertificates~options'
+      - 'Certificates#getCertificates~requestUrl'
+      - 'Certificates#getCertificates~requestUrl'
+      - 'Certificates#getCertificates~requestUrl'
+      - 'Certificates#getCertificates~queryParameters'
+      - 'Certificates#getCertificates~requestUrl'
+      - 'Certificates#getCertificates~regex'
+      - 'Certificates#getCertificates~requestUrl'
+      - 'Certificates#getCertificates~httpRequest'
+      - 'Certificates#getCertificates~headerName'
+  - uid: 'Certificates#getCertificate'
+    id: getCertificate
+    parent: Certificates
+    name: >-
+      getCertificate(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Certificate} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCertificate(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.getCertificate(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'Certificates#getCertificate~client'
+      - 'Certificates#getCertificate~callback'
+      - 'Certificates#getCertificate~options'
+      - 'Certificates#getCertificate~requestUrl'
+      - 'Certificates#getCertificate~requestUrl'
+      - 'Certificates#getCertificate~requestUrl'
+      - 'Certificates#getCertificate~requestUrl'
+      - 'Certificates#getCertificate~queryParameters'
+      - 'Certificates#getCertificate~requestUrl'
+      - 'Certificates#getCertificate~regex'
+      - 'Certificates#getCertificate~requestUrl'
+      - 'Certificates#getCertificate~httpRequest'
+      - 'Certificates#getCertificate~headerName'
+  - uid: 'Certificates#createOrUpdateCertificate'
+    id: createOrUpdateCertificate
+    parent: Certificates
+    name: >-
+      createOrUpdateCertificate(resourceGroupName, name, certificateEnvelope,
+      certificateEnvelope.friendlyName, certificateEnvelope.subjectName,
+      certificateEnvelope.hostNames, certificateEnvelope.pfxBlob,
+      certificateEnvelope.siteName, certificateEnvelope.selfLink,
+      certificateEnvelope.issuer, certificateEnvelope.issueDate,
+      certificateEnvelope.expirationDate, certificateEnvelope.password,
+      certificateEnvelope.thumbprint, certificateEnvelope.valid,
+      certificateEnvelope.cerBlob, certificateEnvelope.publicKeyHash,
+      certificateEnvelope.hostingEnvironmentProfile,
+      certificateEnvelope.hostingEnvironmentProfile.id,
+      certificateEnvelope.hostingEnvironmentProfile.name,
+      certificateEnvelope.hostingEnvironmentProfile.type,
+      certificateEnvelope.id, certificateEnvelope.name,
+      certificateEnvelope.kind, certificateEnvelope.location,
+      certificateEnvelope.type, certificateEnvelope.tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate.
+        - id: certificateEnvelope
+          type: object
+          description: "Details of certificate if it exists\ralready."
+        - id: certificateEnvelope.friendlyName
+          type: string
+          description: "Friendly name of the\rcertificate"
+        - id: certificateEnvelope.subjectName
+          type: string
+          description: "Subject name of the\rcertificate"
+        - id: certificateEnvelope.hostNames
+          type: array
+          description: "Host names the certificate\rapplies to"
+        - id: certificateEnvelope.pfxBlob
+          type: string
+          description: Pfx blob
+        - id: certificateEnvelope.siteName
+          type: string
+          description: App name
+        - id: certificateEnvelope.selfLink
+          type: string
+          description: Self link
+        - id: certificateEnvelope.issuer
+          type: string
+          description: Certificate issuer
+        - id: certificateEnvelope.issueDate
+          type: date
+          description: Certificate issue Date
+        - id: certificateEnvelope.expirationDate
+          type: date
+          description: "Certificate expriration\rdate"
+        - id: certificateEnvelope.password
+          type: string
+          description: Certificate password
+        - id: certificateEnvelope.thumbprint
+          type: string
+          description: Certificate thumbprint
+        - id: certificateEnvelope.valid
+          type: boolean
+          description: Is the certificate valid?
+        - id: certificateEnvelope.cerBlob
+          type: string
+          description: Raw bytes of .cer file
+        - id: certificateEnvelope.publicKeyHash
+          type: string
+          description: Public key hash
+        - id: certificateEnvelope.hostingEnvironmentProfile
+          type: object
+          description: "Specification for the hosting environment (App Service Environment) to use\rfor the certificate"
+        - id: certificateEnvelope.hostingEnvironmentProfile.id
+          type: string
+          description: "Resource\rid of the hostingEnvironment (App Service Environment)"
+        - id: certificateEnvelope.hostingEnvironmentProfile.name
+          type: string
+          description: "Name\rof the hostingEnvironment (App Service Environment) (read only)"
+        - id: certificateEnvelope.hostingEnvironmentProfile.type
+          type: string
+          description: "Resource type of the hostingEnvironment (App Service Environment) (read\ronly)"
+        - id: certificateEnvelope.id
+          type: string
+          description: Resource Id
+        - id: certificateEnvelope.name
+          type: string
+          description: Resource Name
+        - id: certificateEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: certificateEnvelope.location
+          type: string
+          description: Resource Location
+        - id: certificateEnvelope.type
+          type: string
+          description: Resource type
+        - id: certificateEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Certificate} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateCertificate(resourceGroupName, name,
+        certificateEnvelope, certificateEnvelope.friendlyName,
+        certificateEnvelope.subjectName, certificateEnvelope.hostNames,
+        certificateEnvelope.pfxBlob, certificateEnvelope.siteName,
+        certificateEnvelope.selfLink, certificateEnvelope.issuer,
+        certificateEnvelope.issueDate, certificateEnvelope.expirationDate,
+        certificateEnvelope.password, certificateEnvelope.thumbprint,
+        certificateEnvelope.valid, certificateEnvelope.cerBlob,
+        certificateEnvelope.publicKeyHash,
+        certificateEnvelope.hostingEnvironmentProfile,
+        certificateEnvelope.hostingEnvironmentProfile.id,
+        certificateEnvelope.hostingEnvironmentProfile.name,
+        certificateEnvelope.hostingEnvironmentProfile.type,
+        certificateEnvelope.id, certificateEnvelope.name,
+        certificateEnvelope.kind, certificateEnvelope.location,
+        certificateEnvelope.type, certificateEnvelope.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.createOrUpdateCertificate(resourceGroupName, name,
+      certificateEnvelope, certificateEnvelope.friendlyName,
+      certificateEnvelope.subjectName, certificateEnvelope.hostNames,
+      certificateEnvelope.pfxBlob, certificateEnvelope.siteName,
+      certificateEnvelope.selfLink, certificateEnvelope.issuer,
+      certificateEnvelope.issueDate, certificateEnvelope.expirationDate,
+      certificateEnvelope.password, certificateEnvelope.thumbprint,
+      certificateEnvelope.valid, certificateEnvelope.cerBlob,
+      certificateEnvelope.publicKeyHash,
+      certificateEnvelope.hostingEnvironmentProfile,
+      certificateEnvelope.hostingEnvironmentProfile.id,
+      certificateEnvelope.hostingEnvironmentProfile.name,
+      certificateEnvelope.hostingEnvironmentProfile.type,
+      certificateEnvelope.id, certificateEnvelope.name,
+      certificateEnvelope.kind, certificateEnvelope.location,
+      certificateEnvelope.type, certificateEnvelope.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'Certificates#createOrUpdateCertificate~client'
+      - 'Certificates#createOrUpdateCertificate~callback'
+      - 'Certificates#createOrUpdateCertificate~options'
+      - 'Certificates#createOrUpdateCertificate~requestUrl'
+      - 'Certificates#createOrUpdateCertificate~requestUrl'
+      - 'Certificates#createOrUpdateCertificate~requestUrl'
+      - 'Certificates#createOrUpdateCertificate~requestUrl'
+      - 'Certificates#createOrUpdateCertificate~queryParameters'
+      - 'Certificates#createOrUpdateCertificate~requestUrl'
+      - 'Certificates#createOrUpdateCertificate~regex'
+      - 'Certificates#createOrUpdateCertificate~requestUrl'
+      - 'Certificates#createOrUpdateCertificate~httpRequest'
+      - 'Certificates#createOrUpdateCertificate~headerName'
+      - 'Certificates#createOrUpdateCertificate~requestContent'
+      - 'Certificates#createOrUpdateCertificate~requestModel'
+      - 'Certificates#createOrUpdateCertificate~requestModelMapper'
+      - 'Certificates#createOrUpdateCertificate~requestModel'
+      - 'Certificates#createOrUpdateCertificate~requestContent'
+      - 'Certificates#createOrUpdateCertificate~serializationError'
+  - uid: 'Certificates#deleteCertificate'
+    id: deleteCertificate
+    parent: Certificates
+    name: >-
+      deleteCertificate(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate to be deleted.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteCertificate(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.deleteCertificate(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'Certificates#deleteCertificate~client'
+      - 'Certificates#deleteCertificate~callback'
+      - 'Certificates#deleteCertificate~options'
+      - 'Certificates#deleteCertificate~requestUrl'
+      - 'Certificates#deleteCertificate~requestUrl'
+      - 'Certificates#deleteCertificate~requestUrl'
+      - 'Certificates#deleteCertificate~requestUrl'
+      - 'Certificates#deleteCertificate~queryParameters'
+      - 'Certificates#deleteCertificate~requestUrl'
+      - 'Certificates#deleteCertificate~regex'
+      - 'Certificates#deleteCertificate~requestUrl'
+      - 'Certificates#deleteCertificate~httpRequest'
+      - 'Certificates#deleteCertificate~headerName'
+  - uid: 'Certificates#updateCertificate'
+    id: updateCertificate
+    parent: Certificates
+    name: >-
+      updateCertificate(resourceGroupName, name, certificateEnvelope,
+      certificateEnvelope.friendlyName, certificateEnvelope.subjectName,
+      certificateEnvelope.hostNames, certificateEnvelope.pfxBlob,
+      certificateEnvelope.siteName, certificateEnvelope.selfLink,
+      certificateEnvelope.issuer, certificateEnvelope.issueDate,
+      certificateEnvelope.expirationDate, certificateEnvelope.password,
+      certificateEnvelope.thumbprint, certificateEnvelope.valid,
+      certificateEnvelope.cerBlob, certificateEnvelope.publicKeyHash,
+      certificateEnvelope.hostingEnvironmentProfile,
+      certificateEnvelope.hostingEnvironmentProfile.id,
+      certificateEnvelope.hostingEnvironmentProfile.name,
+      certificateEnvelope.hostingEnvironmentProfile.type,
+      certificateEnvelope.id, certificateEnvelope.name,
+      certificateEnvelope.kind, certificateEnvelope.location,
+      certificateEnvelope.type, certificateEnvelope.tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate.
+        - id: certificateEnvelope
+          type: object
+          description: "Details of certificate if it exists\ralready."
+        - id: certificateEnvelope.friendlyName
+          type: string
+          description: "Friendly name of the\rcertificate"
+        - id: certificateEnvelope.subjectName
+          type: string
+          description: "Subject name of the\rcertificate"
+        - id: certificateEnvelope.hostNames
+          type: array
+          description: "Host names the certificate\rapplies to"
+        - id: certificateEnvelope.pfxBlob
+          type: string
+          description: Pfx blob
+        - id: certificateEnvelope.siteName
+          type: string
+          description: App name
+        - id: certificateEnvelope.selfLink
+          type: string
+          description: Self link
+        - id: certificateEnvelope.issuer
+          type: string
+          description: Certificate issuer
+        - id: certificateEnvelope.issueDate
+          type: date
+          description: Certificate issue Date
+        - id: certificateEnvelope.expirationDate
+          type: date
+          description: "Certificate expriration\rdate"
+        - id: certificateEnvelope.password
+          type: string
+          description: Certificate password
+        - id: certificateEnvelope.thumbprint
+          type: string
+          description: Certificate thumbprint
+        - id: certificateEnvelope.valid
+          type: boolean
+          description: Is the certificate valid?
+        - id: certificateEnvelope.cerBlob
+          type: string
+          description: Raw bytes of .cer file
+        - id: certificateEnvelope.publicKeyHash
+          type: string
+          description: Public key hash
+        - id: certificateEnvelope.hostingEnvironmentProfile
+          type: object
+          description: "Specification for the hosting environment (App Service Environment) to use\rfor the certificate"
+        - id: certificateEnvelope.hostingEnvironmentProfile.id
+          type: string
+          description: "Resource\rid of the hostingEnvironment (App Service Environment)"
+        - id: certificateEnvelope.hostingEnvironmentProfile.name
+          type: string
+          description: "Name\rof the hostingEnvironment (App Service Environment) (read only)"
+        - id: certificateEnvelope.hostingEnvironmentProfile.type
+          type: string
+          description: "Resource type of the hostingEnvironment (App Service Environment) (read\ronly)"
+        - id: certificateEnvelope.id
+          type: string
+          description: Resource Id
+        - id: certificateEnvelope.name
+          type: string
+          description: Resource Name
+        - id: certificateEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: certificateEnvelope.location
+          type: string
+          description: Resource Location
+        - id: certificateEnvelope.type
+          type: string
+          description: Resource type
+        - id: certificateEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Certificate} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateCertificate(resourceGroupName, name, certificateEnvelope,
+        certificateEnvelope.friendlyName, certificateEnvelope.subjectName,
+        certificateEnvelope.hostNames, certificateEnvelope.pfxBlob,
+        certificateEnvelope.siteName, certificateEnvelope.selfLink,
+        certificateEnvelope.issuer, certificateEnvelope.issueDate,
+        certificateEnvelope.expirationDate, certificateEnvelope.password,
+        certificateEnvelope.thumbprint, certificateEnvelope.valid,
+        certificateEnvelope.cerBlob, certificateEnvelope.publicKeyHash,
+        certificateEnvelope.hostingEnvironmentProfile,
+        certificateEnvelope.hostingEnvironmentProfile.id,
+        certificateEnvelope.hostingEnvironmentProfile.name,
+        certificateEnvelope.hostingEnvironmentProfile.type,
+        certificateEnvelope.id, certificateEnvelope.name,
+        certificateEnvelope.kind, certificateEnvelope.location,
+        certificateEnvelope.type, certificateEnvelope.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.updateCertificate(resourceGroupName, name,
+      certificateEnvelope, certificateEnvelope.friendlyName,
+      certificateEnvelope.subjectName, certificateEnvelope.hostNames,
+      certificateEnvelope.pfxBlob, certificateEnvelope.siteName,
+      certificateEnvelope.selfLink, certificateEnvelope.issuer,
+      certificateEnvelope.issueDate, certificateEnvelope.expirationDate,
+      certificateEnvelope.password, certificateEnvelope.thumbprint,
+      certificateEnvelope.valid, certificateEnvelope.cerBlob,
+      certificateEnvelope.publicKeyHash,
+      certificateEnvelope.hostingEnvironmentProfile,
+      certificateEnvelope.hostingEnvironmentProfile.id,
+      certificateEnvelope.hostingEnvironmentProfile.name,
+      certificateEnvelope.hostingEnvironmentProfile.type,
+      certificateEnvelope.id, certificateEnvelope.name,
+      certificateEnvelope.kind, certificateEnvelope.location,
+      certificateEnvelope.type, certificateEnvelope.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'Certificates#updateCertificate~client'
+      - 'Certificates#updateCertificate~callback'
+      - 'Certificates#updateCertificate~options'
+      - 'Certificates#updateCertificate~requestUrl'
+      - 'Certificates#updateCertificate~requestUrl'
+      - 'Certificates#updateCertificate~requestUrl'
+      - 'Certificates#updateCertificate~requestUrl'
+      - 'Certificates#updateCertificate~queryParameters'
+      - 'Certificates#updateCertificate~requestUrl'
+      - 'Certificates#updateCertificate~regex'
+      - 'Certificates#updateCertificate~requestUrl'
+      - 'Certificates#updateCertificate~httpRequest'
+      - 'Certificates#updateCertificate~headerName'
+      - 'Certificates#updateCertificate~requestContent'
+      - 'Certificates#updateCertificate~requestModel'
+      - 'Certificates#updateCertificate~requestModelMapper'
+      - 'Certificates#updateCertificate~requestModel'
+      - 'Certificates#updateCertificate~requestContent'
+      - 'Certificates#updateCertificate~serializationError'
+  - uid: 'Certificates#getCsrs'
+    id: getCsrs
+    parent: Certificates
+    name: 'getCsrs(resourceGroupName, options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCsrs(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Certificates.getCsrs(resourceGroupName, options, options.customHeaders,
+      callback)
+    children:
+      - 'Certificates#getCsrs~client'
+      - 'Certificates#getCsrs~callback'
+      - 'Certificates#getCsrs~options'
+      - 'Certificates#getCsrs~requestUrl'
+      - 'Certificates#getCsrs~requestUrl'
+      - 'Certificates#getCsrs~requestUrl'
+      - 'Certificates#getCsrs~queryParameters'
+      - 'Certificates#getCsrs~requestUrl'
+      - 'Certificates#getCsrs~regex'
+      - 'Certificates#getCsrs~requestUrl'
+      - 'Certificates#getCsrs~httpRequest'
+      - 'Certificates#getCsrs~headerName'
+  - uid: 'Certificates#getCsr'
+    id: getCsr
+    parent: Certificates
+    name: 'getCsr(resourceGroupName, name, options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Csr} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCsr(resourceGroupName, name, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Certificates.getCsr(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'Certificates#getCsr~client'
+      - 'Certificates#getCsr~callback'
+      - 'Certificates#getCsr~options'
+      - 'Certificates#getCsr~requestUrl'
+      - 'Certificates#getCsr~requestUrl'
+      - 'Certificates#getCsr~requestUrl'
+      - 'Certificates#getCsr~requestUrl'
+      - 'Certificates#getCsr~queryParameters'
+      - 'Certificates#getCsr~requestUrl'
+      - 'Certificates#getCsr~regex'
+      - 'Certificates#getCsr~requestUrl'
+      - 'Certificates#getCsr~httpRequest'
+      - 'Certificates#getCsr~headerName'
+  - uid: 'Certificates#createOrUpdateCsr'
+    id: createOrUpdateCsr
+    parent: Certificates
+    name: >-
+      createOrUpdateCsr(resourceGroupName, name, csrEnvelope,
+      csrEnvelope.csrName, csrEnvelope.distinguishedName, csrEnvelope.csrString,
+      csrEnvelope.pfxBlob, csrEnvelope.password, csrEnvelope.publicKeyHash,
+      csrEnvelope.hostingEnvironment, csrEnvelope.id, csrEnvelope.name,
+      csrEnvelope.kind, csrEnvelope.location, csrEnvelope.type,
+      csrEnvelope.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate.
+        - id: csrEnvelope
+          type: object
+          description: "Details of certificate signing request if it\rexists already."
+        - id: csrEnvelope.csrName
+          type: string
+          description: Name used to locate CSR object
+        - id: csrEnvelope.distinguishedName
+          type: string
+          description: "Distinguished name of\rcertificate to be created"
+        - id: csrEnvelope.csrString
+          type: string
+          description: Actual CSR string created
+        - id: csrEnvelope.pfxBlob
+          type: string
+          description: PFX certifcate of created certificate
+        - id: csrEnvelope.password
+          type: string
+          description: PFX password
+        - id: csrEnvelope.publicKeyHash
+          type: string
+          description: "Hash of the certificates public\rkey"
+        - id: csrEnvelope.hostingEnvironment
+          type: string
+          description: Hosting environment
+        - id: csrEnvelope.id
+          type: string
+          description: Resource Id
+        - id: csrEnvelope.name
+          type: string
+          description: Resource Name
+        - id: csrEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: csrEnvelope.location
+          type: string
+          description: Resource Location
+        - id: csrEnvelope.type
+          type: string
+          description: Resource type
+        - id: csrEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Csr} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateCsr(resourceGroupName, name, csrEnvelope,
+        csrEnvelope.csrName, csrEnvelope.distinguishedName,
+        csrEnvelope.csrString, csrEnvelope.pfxBlob, csrEnvelope.password,
+        csrEnvelope.publicKeyHash, csrEnvelope.hostingEnvironment,
+        csrEnvelope.id, csrEnvelope.name, csrEnvelope.kind,
+        csrEnvelope.location, csrEnvelope.type, csrEnvelope.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.createOrUpdateCsr(resourceGroupName, name, csrEnvelope,
+      csrEnvelope.csrName, csrEnvelope.distinguishedName, csrEnvelope.csrString,
+      csrEnvelope.pfxBlob, csrEnvelope.password, csrEnvelope.publicKeyHash,
+      csrEnvelope.hostingEnvironment, csrEnvelope.id, csrEnvelope.name,
+      csrEnvelope.kind, csrEnvelope.location, csrEnvelope.type,
+      csrEnvelope.tags, options, options.customHeaders, callback)
+    children:
+      - 'Certificates#createOrUpdateCsr~client'
+      - 'Certificates#createOrUpdateCsr~callback'
+      - 'Certificates#createOrUpdateCsr~options'
+      - 'Certificates#createOrUpdateCsr~requestUrl'
+      - 'Certificates#createOrUpdateCsr~requestUrl'
+      - 'Certificates#createOrUpdateCsr~requestUrl'
+      - 'Certificates#createOrUpdateCsr~requestUrl'
+      - 'Certificates#createOrUpdateCsr~queryParameters'
+      - 'Certificates#createOrUpdateCsr~requestUrl'
+      - 'Certificates#createOrUpdateCsr~regex'
+      - 'Certificates#createOrUpdateCsr~requestUrl'
+      - 'Certificates#createOrUpdateCsr~httpRequest'
+      - 'Certificates#createOrUpdateCsr~headerName'
+      - 'Certificates#createOrUpdateCsr~requestContent'
+      - 'Certificates#createOrUpdateCsr~requestModel'
+      - 'Certificates#createOrUpdateCsr~requestModelMapper'
+      - 'Certificates#createOrUpdateCsr~requestModel'
+      - 'Certificates#createOrUpdateCsr~requestContent'
+      - 'Certificates#createOrUpdateCsr~serializationError'
+  - uid: 'Certificates#deleteCsr'
+    id: deleteCsr
+    parent: Certificates
+    name: >-
+      deleteCsr(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate signing request.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteCsr(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.deleteCsr(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'Certificates#deleteCsr~client'
+      - 'Certificates#deleteCsr~callback'
+      - 'Certificates#deleteCsr~options'
+      - 'Certificates#deleteCsr~requestUrl'
+      - 'Certificates#deleteCsr~requestUrl'
+      - 'Certificates#deleteCsr~requestUrl'
+      - 'Certificates#deleteCsr~requestUrl'
+      - 'Certificates#deleteCsr~queryParameters'
+      - 'Certificates#deleteCsr~requestUrl'
+      - 'Certificates#deleteCsr~regex'
+      - 'Certificates#deleteCsr~requestUrl'
+      - 'Certificates#deleteCsr~httpRequest'
+      - 'Certificates#deleteCsr~headerName'
+  - uid: 'Certificates#updateCsr'
+    id: updateCsr
+    parent: Certificates
+    name: >-
+      updateCsr(resourceGroupName, name, csrEnvelope, csrEnvelope.csrName,
+      csrEnvelope.distinguishedName, csrEnvelope.csrString, csrEnvelope.pfxBlob,
+      csrEnvelope.password, csrEnvelope.publicKeyHash,
+      csrEnvelope.hostingEnvironment, csrEnvelope.id, csrEnvelope.name,
+      csrEnvelope.kind, csrEnvelope.location, csrEnvelope.type,
+      csrEnvelope.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: name
+          type: string
+          description: Name of the certificate.
+        - id: csrEnvelope
+          type: object
+          description: "Details of certificate signing request if it\rexists already."
+        - id: csrEnvelope.csrName
+          type: string
+          description: Name used to locate CSR object
+        - id: csrEnvelope.distinguishedName
+          type: string
+          description: "Distinguished name of\rcertificate to be created"
+        - id: csrEnvelope.csrString
+          type: string
+          description: Actual CSR string created
+        - id: csrEnvelope.pfxBlob
+          type: string
+          description: PFX certifcate of created certificate
+        - id: csrEnvelope.password
+          type: string
+          description: PFX password
+        - id: csrEnvelope.publicKeyHash
+          type: string
+          description: "Hash of the certificates public\rkey"
+        - id: csrEnvelope.hostingEnvironment
+          type: string
+          description: Hosting environment
+        - id: csrEnvelope.id
+          type: string
+          description: Resource Id
+        - id: csrEnvelope.name
+          type: string
+          description: Resource Name
+        - id: csrEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: csrEnvelope.location
+          type: string
+          description: Resource Location
+        - id: csrEnvelope.type
+          type: string
+          description: Resource type
+        - id: csrEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Csr} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateCsr(resourceGroupName, name, csrEnvelope,
+        csrEnvelope.csrName, csrEnvelope.distinguishedName,
+        csrEnvelope.csrString, csrEnvelope.pfxBlob, csrEnvelope.password,
+        csrEnvelope.publicKeyHash, csrEnvelope.hostingEnvironment,
+        csrEnvelope.id, csrEnvelope.name, csrEnvelope.kind,
+        csrEnvelope.location, csrEnvelope.type, csrEnvelope.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Certificates.updateCsr(resourceGroupName, name, csrEnvelope,
+      csrEnvelope.csrName, csrEnvelope.distinguishedName, csrEnvelope.csrString,
+      csrEnvelope.pfxBlob, csrEnvelope.password, csrEnvelope.publicKeyHash,
+      csrEnvelope.hostingEnvironment, csrEnvelope.id, csrEnvelope.name,
+      csrEnvelope.kind, csrEnvelope.location, csrEnvelope.type,
+      csrEnvelope.tags, options, options.customHeaders, callback)
+    children:
+      - 'Certificates#updateCsr~client'
+      - 'Certificates#updateCsr~callback'
+      - 'Certificates#updateCsr~options'
+      - 'Certificates#updateCsr~requestUrl'
+      - 'Certificates#updateCsr~requestUrl'
+      - 'Certificates#updateCsr~requestUrl'
+      - 'Certificates#updateCsr~requestUrl'
+      - 'Certificates#updateCsr~queryParameters'
+      - 'Certificates#updateCsr~requestUrl'
+      - 'Certificates#updateCsr~regex'
+      - 'Certificates#updateCsr~requestUrl'
+      - 'Certificates#updateCsr~httpRequest'
+      - 'Certificates#updateCsr~headerName'
+      - 'Certificates#updateCsr~requestContent'
+      - 'Certificates#updateCsr~requestModel'
+      - 'Certificates#updateCsr~requestModelMapper'
+      - 'Certificates#updateCsr~requestModel'
+      - 'Certificates#updateCsr~requestContent'
+      - 'Certificates#updateCsr~serializationError'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

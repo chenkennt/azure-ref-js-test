@@ -1,0 +1,246 @@
+items:
+  - uid: AffinityGroupOperations~AffinityGroupOperations
+    id: AffinityGroupOperations
+    parent: AffinityGroupOperations
+    name: AffinityGroupOperations
+    type: Class
+    syntax:
+      content: AffinityGroupOperations
+    fullName: AffinityGroupOperations.AffinityGroupOperations
+    children:
+      - 'AffinityGroupOperations~AffinityGroupOperations#client'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update'
+  - uid: 'AffinityGroupOperations~AffinityGroupOperations#client'
+    id: client
+    parent: AffinityGroupOperations~AffinityGroupOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: AffinityGroupOperations~AffinityGroupOperations.client
+  - uid: 'AffinityGroupOperations~AffinityGroupOperations#create'
+    id: create
+    parent: AffinityGroupOperations~AffinityGroupOperations
+    name: >-
+      create(parameters, parameters.name, parameters.label,
+      parameters.description, parameters.location, callback)
+    summary: "The Create Affinity Group operation creates a new affinity group for the\rspecified subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/gg715317.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: AffinityGroupCreateParameters
+          description: "Parameters supplied to\rthe Create Affinity Group operation."
+        - id: parameters.name
+          type: string
+          description: "A name for the affinity group that is\runique to the subscription."
+        - id: parameters.label
+          type: string
+          description: "A base-64-encoded name for the affinity\rgroup. The name can be up to 100 characters in length. Its value defaults\rto the Name of the affinity group if not provided."
+        - id: parameters.description
+          type: string
+          description: "A description for the affinity\rgroup. The description can be up to 1024 characters in length."
+        - id: parameters.location
+          type: string
+          description: "The data center location where the\raffinity group will be created. To list available locations, see the List\rLocations operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.name, parameters.label,
+        parameters.description, parameters.location, callback);
+    fullName: >-
+      AffinityGroupOperations~AffinityGroupOperations.create(parameters,
+      parameters.name, parameters.label, parameters.description,
+      parameters.location, callback)
+    children:
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~httpRequest'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~requestContent'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~requestDoc'
+      - >-
+        AffinityGroupOperations~AffinityGroupOperations#create~createAffinityGroupElement
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~nameElement'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~labelElement'
+      - >-
+        AffinityGroupOperations~AffinityGroupOperations#create~descriptionElement
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~locationElement'
+      - 'AffinityGroupOperations~AffinityGroupOperations#create~requestContent'
+  - uid: 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod'
+    id: deleteMethod
+    parent: AffinityGroupOperations~AffinityGroupOperations
+    name: 'deleteMethod(affinityGroupName, callback)'
+    summary: "The Delete Affinity Group operation deletes an affinity group in the\rspecified subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/gg715314.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: affinityGroupName
+          type: string
+          description: The name of the affinity group.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(affinityGroupName, callback);'
+    fullName: >-
+      AffinityGroupOperations~AffinityGroupOperations.deleteMethod(affinityGroupName,
+      callback)
+    children:
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#deleteMethod~httpRequest'
+  - uid: 'AffinityGroupOperations~AffinityGroupOperations#get'
+    id: get
+    parent: AffinityGroupOperations~AffinityGroupOperations
+    name: 'get(affinityGroupName, callback)'
+    summary: "The Get Affinity Group Properties operation returns the system properties\rassociated with the specified affinity group.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460789.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: affinityGroupName
+          type: string
+          description: "The name of the desired affinity group\ras returned by the name element of the List Affinity Groups operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(affinityGroupName, callback);'
+    fullName: >-
+      AffinityGroupOperations~AffinityGroupOperations.get(affinityGroupName,
+      callback)
+    children:
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#get~httpRequest'
+  - uid: 'AffinityGroupOperations~AffinityGroupOperations#list'
+    id: list
+    parent: AffinityGroupOperations~AffinityGroupOperations
+    name: list(callback)
+    summary: "The List Affinity Groups operation lists the affinity groups associated\rwith the specified subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460797.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: AffinityGroupOperations~AffinityGroupOperations.list(callback)
+    children:
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#list~httpRequest'
+  - uid: 'AffinityGroupOperations~AffinityGroupOperations#update'
+    id: update
+    parent: AffinityGroupOperations~AffinityGroupOperations
+    name: >-
+      update(affinityGroupName, parameters, parameters.label,
+      parameters.description, callback)
+    summary: "The Update Affinity Group operation updates the label and/or the\rdescription for an affinity group for the specified subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/gg715316.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: affinityGroupName
+          type: string
+          description: The name of the affinity group.
+        - id: parameters
+          type: AffinityGroupUpdateParameters
+          description: "Parameters supplied to\rthe Update Affinity Group operation."
+        - id: parameters.label
+          type: string
+          description: "A name for the affinity specified as a\rbase-64-encoded string. The label can be up to 100 characters in length."
+        - id: parameters.description
+          type: string
+          description: "A description for the affinity\rgroup. The description can be up to 1024 characters in length."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(affinityGroupName, parameters, parameters.label,
+        parameters.description, callback);
+    fullName: >-
+      AffinityGroupOperations~AffinityGroupOperations.update(affinityGroupName,
+      parameters, parameters.label, parameters.description, callback)
+    children:
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~baseUrl'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~url2'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~httpRequest'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~requestContent'
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~requestDoc'
+      - >-
+        AffinityGroupOperations~AffinityGroupOperations#update~updateAffinityGroupElement
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~labelElement'
+      - >-
+        AffinityGroupOperations~AffinityGroupOperations#update~descriptionElement
+      - 'AffinityGroupOperations~AffinityGroupOperations#update~requestContent'
+references:
+  - uid: AffinityGroupCreateParameters
+    name: AffinityGroupCreateParameters
+    fullName: AffinityGroupCreateParameters
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: AffinityGroupUpdateParameters
+    name: AffinityGroupUpdateParameters
+    fullName: AffinityGroupUpdateParameters
+    isExternal: true

@@ -1,0 +1,256 @@
+items:
+  - uid: Recommendations
+    id: Recommendations
+    name: Recommendations
+    type: Class
+    syntax:
+      content: Recommendations
+    fullName: Recommendations
+    children:
+      - 'Recommendations#client'
+      - 'Recommendations#getRecommendationBySubscription'
+      - 'Recommendations#getRuleDetailsBySiteName'
+      - 'Recommendations#getRecommendedRulesForSite'
+      - 'Recommendations#getRecommendationHistoryForSite'
+  - uid: 'Recommendations#client'
+    id: client
+    parent: Recommendations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Recommendations.client
+  - uid: 'Recommendations#getRecommendationBySubscription'
+    id: getRecommendationBySubscription
+    parent: Recommendations
+    name: >-
+      getRecommendationBySubscription(options, options.featured, options.filter,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.featured
+          type: boolean
+          description: "If set, this API returns only the most\rcritical recommendation among the others. Otherwise this API returns all\rrecommendations available"
+        - id: options.filter
+          type: string
+          description: "Return only channels specified in the\rfilter. Filter is specified by using OData syntax. Example:\r$filter=channels eq 'Api' or channel eq 'Notification'"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRecommendationBySubscription(options, options.featured,
+        options.filter, options.customHeaders, callback);
+    fullName: >-
+      Recommendations.getRecommendationBySubscription(options, options.featured,
+      options.filter, options.customHeaders, callback)
+    children:
+      - 'Recommendations#getRecommendationBySubscription~client'
+      - 'Recommendations#getRecommendationBySubscription~callback'
+      - 'Recommendations#getRecommendationBySubscription~options'
+      - 'Recommendations#getRecommendationBySubscription~featured'
+      - 'Recommendations#getRecommendationBySubscription~filter'
+      - 'Recommendations#getRecommendationBySubscription~requestUrl'
+      - 'Recommendations#getRecommendationBySubscription~requestUrl'
+      - 'Recommendations#getRecommendationBySubscription~queryParameters'
+      - 'Recommendations#getRecommendationBySubscription~requestUrl'
+      - 'Recommendations#getRecommendationBySubscription~regex'
+      - 'Recommendations#getRecommendationBySubscription~requestUrl'
+      - 'Recommendations#getRecommendationBySubscription~httpRequest'
+      - 'Recommendations#getRecommendationBySubscription~headerName'
+  - uid: 'Recommendations#getRuleDetailsBySiteName'
+    id: getRuleDetailsBySiteName
+    parent: Recommendations
+    name: >-
+      getRuleDetailsBySiteName(resourceGroupName, siteName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Resource group name
+        - id: siteName
+          type: string
+          description: Site name
+        - id: name
+          type: string
+          description: Recommendation rule name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RecommendationRule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRuleDetailsBySiteName(resourceGroupName, siteName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Recommendations.getRuleDetailsBySiteName(resourceGroupName, siteName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'Recommendations#getRuleDetailsBySiteName~client'
+      - 'Recommendations#getRuleDetailsBySiteName~callback'
+      - 'Recommendations#getRuleDetailsBySiteName~options'
+      - 'Recommendations#getRuleDetailsBySiteName~requestUrl'
+      - 'Recommendations#getRuleDetailsBySiteName~requestUrl'
+      - 'Recommendations#getRuleDetailsBySiteName~requestUrl'
+      - 'Recommendations#getRuleDetailsBySiteName~requestUrl'
+      - 'Recommendations#getRuleDetailsBySiteName~requestUrl'
+      - 'Recommendations#getRuleDetailsBySiteName~queryParameters'
+      - 'Recommendations#getRuleDetailsBySiteName~requestUrl'
+      - 'Recommendations#getRuleDetailsBySiteName~regex'
+      - 'Recommendations#getRuleDetailsBySiteName~requestUrl'
+      - 'Recommendations#getRuleDetailsBySiteName~httpRequest'
+      - 'Recommendations#getRuleDetailsBySiteName~headerName'
+  - uid: 'Recommendations#getRecommendedRulesForSite'
+    id: getRecommendedRulesForSite
+    parent: Recommendations
+    name: >-
+      getRecommendedRulesForSite(resourceGroupName, siteName, options,
+      options.featured, options.siteSku, options.numSlots,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Resource group name
+        - id: siteName
+          type: string
+          description: Site name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.featured
+          type: boolean
+          description: "If set, this API returns only the most\rcritical recommendation among the others. Otherwise this API returns all\rrecommendations available"
+        - id: options.siteSku
+          type: string
+          description: The name of site SKU.
+        - id: options.numSlots
+          type: number
+          description: "The number of site slots associated to\rthe site"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRecommendedRulesForSite(resourceGroupName, siteName,
+        options, options.featured, options.siteSku, options.numSlots,
+        options.customHeaders, callback);
+    fullName: >-
+      Recommendations.getRecommendedRulesForSite(resourceGroupName, siteName,
+      options, options.featured, options.siteSku, options.numSlots,
+      options.customHeaders, callback)
+    children:
+      - 'Recommendations#getRecommendedRulesForSite~client'
+      - 'Recommendations#getRecommendedRulesForSite~callback'
+      - 'Recommendations#getRecommendedRulesForSite~options'
+      - 'Recommendations#getRecommendedRulesForSite~featured'
+      - 'Recommendations#getRecommendedRulesForSite~siteSku'
+      - 'Recommendations#getRecommendedRulesForSite~numSlots'
+      - 'Recommendations#getRecommendedRulesForSite~requestUrl'
+      - 'Recommendations#getRecommendedRulesForSite~requestUrl'
+      - 'Recommendations#getRecommendedRulesForSite~requestUrl'
+      - 'Recommendations#getRecommendedRulesForSite~requestUrl'
+      - 'Recommendations#getRecommendedRulesForSite~queryParameters'
+      - 'Recommendations#getRecommendedRulesForSite~requestUrl'
+      - 'Recommendations#getRecommendedRulesForSite~regex'
+      - 'Recommendations#getRecommendedRulesForSite~requestUrl'
+      - 'Recommendations#getRecommendedRulesForSite~httpRequest'
+      - 'Recommendations#getRecommendedRulesForSite~headerName'
+  - uid: 'Recommendations#getRecommendationHistoryForSite'
+    id: getRecommendationHistoryForSite
+    parent: Recommendations
+    name: >-
+      getRecommendationHistoryForSite(resourceGroupName, siteName, options,
+      options.startTime, options.endTime, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Resource group name
+        - id: siteName
+          type: string
+          description: Site name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.startTime
+          type: string
+          description: "The start time of a time range to\rquery, e.g. $filter=startTime eq '2015-01-01T00:00:00Z' and endTime eq\r'2015-01-02T00:00:00Z'"
+        - id: options.endTime
+          type: string
+          description: "The end time of a time range to query,\re.g. $filter=startTime eq '2015-01-01T00:00:00Z' and endTime eq\r'2015-01-02T00:00:00Z'"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRecommendationHistoryForSite(resourceGroupName, siteName,
+        options, options.startTime, options.endTime, options.customHeaders,
+        callback);
+    fullName: >-
+      Recommendations.getRecommendationHistoryForSite(resourceGroupName,
+      siteName, options, options.startTime, options.endTime,
+      options.customHeaders, callback)
+    children:
+      - 'Recommendations#getRecommendationHistoryForSite~client'
+      - 'Recommendations#getRecommendationHistoryForSite~callback'
+      - 'Recommendations#getRecommendationHistoryForSite~options'
+      - 'Recommendations#getRecommendationHistoryForSite~startTime'
+      - 'Recommendations#getRecommendationHistoryForSite~endTime'
+      - 'Recommendations#getRecommendationHistoryForSite~requestUrl'
+      - 'Recommendations#getRecommendationHistoryForSite~requestUrl'
+      - 'Recommendations#getRecommendationHistoryForSite~requestUrl'
+      - 'Recommendations#getRecommendationHistoryForSite~requestUrl'
+      - 'Recommendations#getRecommendationHistoryForSite~queryParameters'
+      - 'Recommendations#getRecommendationHistoryForSite~requestUrl'
+      - 'Recommendations#getRecommendationHistoryForSite~regex'
+      - 'Recommendations#getRecommendationHistoryForSite~requestUrl'
+      - 'Recommendations#getRecommendationHistoryForSite~httpRequest'
+      - 'Recommendations#getRecommendationHistoryForSite~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

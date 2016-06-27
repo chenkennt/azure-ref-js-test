@@ -1,0 +1,483 @@
+items:
+  - uid: ApnsService
+    id: ApnsService
+    name: ApnsService
+    summary: "Creates a new ApnsService object using the specified {@link NotificationHubService} object.\r\r\r__Note__: An instance of this object is created automatically when a {@link NotificationHubService}\robject is created. See {@link NotificationHubService#apns}."
+    type: Class
+    syntax:
+      content: ApnsService
+    fullName: ApnsService
+    children:
+      - 'ApnsService#notificationHubService'
+      - 'ApnsService#send'
+      - 'ApnsService#createNativeRegistration'
+      - 'ApnsService#createOrUpdateNativeRegistration'
+      - 'ApnsService#createTemplateRegistration'
+      - 'ApnsService#createOrUpdateTemplateRegistration'
+      - 'ApnsService#updateTemplateRegistration'
+      - 'ApnsService#listRegistrationsByToken'
+      - 'ApnsService#_createBody'
+      - 'ApnsService#_createTemplateBody'
+      - 'ApnsService#_formatPayload'
+  - uid: 'ApnsService#notificationHubService'
+    id: notificationHubService
+    parent: ApnsService
+    name: notificationHubService
+    type: Field
+    syntax:
+      content: notificationHubService
+    fullName: ApnsService.notificationHubService
+  - uid: 'ApnsService#send'
+    id: send
+    parent: ApnsService
+    name: >-
+      send(tags, payload, payload.expiry, payload.aps, payload.badge,
+      payload.alert, payload.sound, payload.payload, callback)
+    summary: Sends an APNS notification.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: "A single tag or tag expression.\r                                                        If null it will broadcast to all registrations in this hub"
+        - id: payload
+          type: object
+          description: "The message's JSON payload as specified below.\r                                                        If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1"
+        - id: payload.expiry
+          type: date
+          description: >-
+            The expiration date. (in W3C DTF, YYYY-MM-DDThh:mmTZD (e.g.
+            1997-07-16T19:20+01:00))
+        - id: payload.aps
+          type: object
+          description: >-
+            If the 'aps' member is provided, the object is delivered to APNS
+            as-is after expiry is processed. The object is assumed to follow the
+            APNS format at
+            https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+        - id: payload.badge
+          type: number
+          description: >-
+            If the 'aps' member is not provided, the number to display over the
+            app icon.
+        - id: payload.alert
+          type: string
+          description: 'If the ''aps'' member is not provided, the alert text.'
+        - id: payload.sound
+          type: string
+          description: 'If the ''aps'' member is not provided, the sound file name.'
+        - id: payload.payload
+          type: object
+          description: >-
+            If the 'aps' member is not provided, the payload object that
+            contains the notification text.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: >-
+        function send(tags, payload, payload.expiry, payload.aps, payload.badge,
+        payload.alert, payload.sound, payload.payload, callback);
+    fullName: >-
+      ApnsService.send(tags, payload, payload.expiry, payload.aps,
+      payload.badge, payload.alert, payload.sound, payload.payload, callback)
+    children:
+      - 'ApnsService#send~headers'
+      - 'ApnsService#send~tags'
+      - 'ApnsService#send~payload'
+      - 'ApnsService#send~expiry'
+      - 'ApnsService#send~payload'
+  - uid: 'ApnsService#createNativeRegistration'
+    id: createNativeRegistration
+    parent: ApnsService
+    name: 'createNativeRegistration(token, tags, options, callback)'
+    summary: Creates a native registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: token
+          type: string
+          description: The device token.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: options
+          type: object
+          description: The request options
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                if an error occurs; otherwise, `response`\r                                                                will contain information related to this operation."
+      content: 'function createNativeRegistration(token, tags, options, callback);'
+    fullName: 'ApnsService.createNativeRegistration(token, tags, options, callback)'
+    children:
+      - 'ApnsService#createNativeRegistration~options'
+      - 'ApnsService#createNativeRegistration~registrationXml'
+      - 'ApnsService#createNativeRegistration~webResource'
+  - uid: 'ApnsService#createOrUpdateNativeRegistration'
+    id: createOrUpdateNativeRegistration
+    parent: ApnsService
+    name: >-
+      createOrUpdateNativeRegistration(registrationId, token, tags, options,
+      callback)
+    summary: Creates or updates a native registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: token
+          type: string
+          description: The device token.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: options
+          type: object
+          description: The request options
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                if an error occurs; otherwise, `response`\r                                                                will contain information related to this operation."
+      content: >-
+        function createOrUpdateNativeRegistration(registrationId, token, tags,
+        options, callback);
+    fullName: >-
+      ApnsService.createOrUpdateNativeRegistration(registrationId, token, tags,
+      options, callback)
+    children:
+      - 'ApnsService#createOrUpdateNativeRegistration~options'
+      - 'ApnsService#createOrUpdateNativeRegistration~registrationXml'
+      - 'ApnsService#createOrUpdateNativeRegistration~webResource'
+  - uid: 'ApnsService#createTemplateRegistration'
+    id: createTemplateRegistration
+    parent: ApnsService
+    name: >-
+      createTemplateRegistration(token, tags, template, template.expiry,
+      template.aps, template.badge, template.alert, template.sound,
+      template.payload, options, callback)
+    summary: Creates a template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: token
+          type: string
+          description: The device token.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: object
+          description: "The message's JSON payload as specified below.\r                                                        If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1"
+        - id: template.expiry
+          type: date
+          description: The expiration date.
+        - id: template.aps
+          type: object
+          description: >-
+            If the 'aps' member is provided, the registration is delivered to
+            NotifcationHub as-is after expiry is processed. The object is
+            assumed to follow the APNS format at
+            https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+        - id: template.badge
+          type: number
+          description: >-
+            If the 'aps' member is not provided, the number to display over the
+            app icon.
+        - id: template.alert
+          type: string
+          description: 'If the ''aps'' member is not provided, the alert text.'
+        - id: template.sound
+          type: string
+          description: 'If the ''aps'' member is not provided, the sound file name.'
+        - id: template.payload
+          type: object
+          description: >-
+            If the 'aps' member is not provided, the payload object that
+            contains the notification text.
+        - id: options
+          type: object
+          description: The request options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: >-
+        function createTemplateRegistration(token, tags, template,
+        template.expiry, template.aps, template.badge, template.alert,
+        template.sound, template.payload, options, callback);
+    fullName: >-
+      ApnsService.createTemplateRegistration(token, tags, template,
+      template.expiry, template.aps, template.badge, template.alert,
+      template.sound, template.payload, options, callback)
+    children:
+      - 'ApnsService#createTemplateRegistration~options'
+      - 'ApnsService#createTemplateRegistration~registrationXml'
+      - 'ApnsService#createTemplateRegistration~webResource'
+  - uid: 'ApnsService#createOrUpdateTemplateRegistration'
+    id: createOrUpdateTemplateRegistration
+    parent: ApnsService
+    name: >-
+      createOrUpdateTemplateRegistration(registrationId, token, template,
+      template.expiry, template.aps, template.badge, template.alert,
+      template.sound, template.payload, options, callback)
+    summary: Creates or updates a template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: token
+          type: string
+          description: The device token.
+        - id: template
+          type: object
+          description: "The message's JSON payload as specified below.\r                                                        If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1"
+        - id: template.expiry
+          type: date
+          description: The expiration date.
+        - id: template.aps
+          type: object
+          description: >-
+            If the 'aps' member is provided, the registration is delivered to
+            NotifcationHub as-is after expiry is processed. The object is
+            assumed to follow the APNS format at
+            https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+        - id: template.badge
+          type: number
+          description: >-
+            If the 'aps' member is not provided, the number to display over the
+            app icon.
+        - id: template.alert
+          type: string
+          description: 'If the ''aps'' member is not provided, the alert text.'
+        - id: template.sound
+          type: string
+          description: 'If the ''aps'' member is not provided, the sound file name.'
+        - id: template.payload
+          type: object
+          description: >-
+            If the 'aps' member is not provided, the payload object that
+            contains the notification text.
+        - id: options
+          type: object
+          description: The request options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: >-
+        function createOrUpdateTemplateRegistration(registrationId, token,
+        template, template.expiry, template.aps, template.badge, template.alert,
+        template.sound, template.payload, options, callback);
+    fullName: >-
+      ApnsService.createOrUpdateTemplateRegistration(registrationId, token,
+      template, template.expiry, template.aps, template.badge, template.alert,
+      template.sound, template.payload, options, callback)
+    children:
+      - 'ApnsService#createOrUpdateTemplateRegistration~options'
+      - 'ApnsService#createOrUpdateTemplateRegistration~registrationXml'
+      - 'ApnsService#createOrUpdateTemplateRegistration~webResource'
+  - uid: 'ApnsService#updateTemplateRegistration'
+    id: updateTemplateRegistration
+    parent: ApnsService
+    name: >-
+      updateTemplateRegistration(registrationId, token, template,
+      template.expiry, template.aps, template.badge, template.alert,
+      template.sound, template.payload, options, callback)
+    summary: Updates a template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: token
+          type: string
+          description: The device token.
+        - id: template
+          type: object
+          description: "The message's JSON payload as specified below.\r                                                        If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1"
+        - id: template.expiry
+          type: date
+          description: The expiration date.
+        - id: template.aps
+          type: object
+          description: >-
+            If the 'aps' member is provided, the registration is delivered to
+            NotifcationHub as-is after expiry is processed. The object is
+            assumed to follow the APNS format at
+            https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+        - id: template.badge
+          type: number
+          description: >-
+            If the 'aps' member is not provided, the number to display over the
+            app icon.
+        - id: template.alert
+          type: string
+          description: 'If the ''aps'' member is not provided, the alert text.'
+        - id: template.sound
+          type: string
+          description: 'If the ''aps'' member is not provided, the sound file name.'
+        - id: template.payload
+          type: object
+          description: >-
+            If the 'aps' member is not provided, the payload object that
+            contains the notification text.
+        - id: options
+          type: object
+          description: The request options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: >-
+        function updateTemplateRegistration(registrationId, token, template,
+        template.expiry, template.aps, template.badge, template.alert,
+        template.sound, template.payload, options, callback);
+    fullName: >-
+      ApnsService.updateTemplateRegistration(registrationId, token, template,
+      template.expiry, template.aps, template.badge, template.alert,
+      template.sound, template.payload, options, callback)
+    children:
+      - 'ApnsService#updateTemplateRegistration~options'
+      - 'ApnsService#updateTemplateRegistration~registrationXml'
+      - 'ApnsService#updateTemplateRegistration~webResource'
+  - uid: 'ApnsService#listRegistrationsByToken'
+    id: listRegistrationsByToken
+    parent: ApnsService
+    name: >-
+      listRegistrationsByToken(token, options, options.top, options.skip,
+      callback)
+    summary: Retrieves a registration by device token.
+    type: Method
+    syntax:
+      parameters:
+        - id: token
+          type: string
+          description: The device token.
+        - id: options
+          type: object
+          description: >-
+            The request options. Additional properties will be passed as
+            headers.
+        - id: options.top
+          type: object
+          description: >-
+            Specifies the maximum number of registration to obtain from the
+            call.
+        - id: options.skip
+          type: object
+          description: Specifies the number of registrations to skip in the call.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: >-
+        function listRegistrationsByToken(token, options, options.top,
+        options.skip, callback);
+    fullName: >-
+      ApnsService.listRegistrationsByToken(token, options, options.top,
+      options.skip, callback)
+    children:
+      - 'ApnsService#listRegistrationsByToken~options'
+      - 'ApnsService#listRegistrationsByToken~webResource'
+  - uid: 'ApnsService#_createBody'
+    id: _createBody
+    parent: ApnsService
+    name: >-
+      _createBody(elementName, token, tags, template, options,
+      options.pnsCredentialName)
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: elementName
+          type: string
+          description: The element name.
+        - id: token
+          type: string
+          description: The device token.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: options.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+      return:
+        type: string
+        description: The template body.
+      content: >-
+        function _createBody(elementName, token, tags, template, options,
+        options.pnsCredentialName);
+    fullName: >-
+      ApnsService._createBody(elementName, token, tags, template, options,
+      options.pnsCredentialName)
+    children:
+      - 'ApnsService#_createBody~registration'
+      - 'ApnsService#_createBody~tags'
+      - 'ApnsService#_createBody~payload'
+      - 'ApnsService#_createBody~expiry'
+      - 'ApnsService#_createBody~expiry'
+      - 'ApnsService#_createBody~payload'
+  - uid: 'ApnsService#_createTemplateBody'
+    id: _createTemplateBody
+    parent: ApnsService
+    name: '_createTemplateBody(token, tags, template, options)'
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: token
+          type: string
+          description: The device token.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options or callback function.
+      return:
+        type: string
+        description: The template body.
+      content: 'function _createTemplateBody(token, tags, template, options);'
+    fullName: 'ApnsService._createTemplateBody(token, tags, template, options)'
+  - uid: 'ApnsService#_formatPayload'
+    id: _formatPayload
+    parent: ApnsService
+    name: _formatPayload()
+    type: Method
+    syntax:
+      content: function _formatPayload();
+    fullName: ApnsService._formatPayload()
+    children:
+      - 'ApnsService#_formatPayload~payload'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: json
+    name: json
+    fullName: json
+    isExternal: true

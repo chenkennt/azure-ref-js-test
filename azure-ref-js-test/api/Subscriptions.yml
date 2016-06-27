@@ -1,0 +1,222 @@
+items:
+  - uid: Subscriptions
+    id: Subscriptions
+    name: Subscriptions
+    type: Class
+    syntax:
+      content: Subscriptions
+    fullName: Subscriptions
+    children:
+      - 'Subscriptions#client'
+      - 'Subscriptions#listLocations'
+      - 'Subscriptions#get'
+      - 'Subscriptions#list'
+      - 'Subscriptions#listLocationsNext'
+      - 'Subscriptions#listNext'
+  - uid: 'Subscriptions#client'
+    id: client
+    parent: Subscriptions
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Subscriptions.client
+  - uid: 'Subscriptions#listLocations'
+    id: listLocations
+    parent: Subscriptions
+    name: 'listLocations(subscriptionId, options, options.customHeaders, callback)'
+    summary: Gets a list of the subscription locations.
+    type: Method
+    syntax:
+      parameters:
+        - id: subscriptionId
+          type: string
+          description: Id of the subscription
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocationListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listLocations(subscriptionId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Subscriptions.listLocations(subscriptionId, options,
+      options.customHeaders, callback)
+    children:
+      - 'Subscriptions#listLocations~client'
+      - 'Subscriptions#listLocations~callback'
+      - 'Subscriptions#listLocations~options'
+      - 'Subscriptions#listLocations~requestUrl'
+      - 'Subscriptions#listLocations~requestUrl'
+      - 'Subscriptions#listLocations~queryParameters'
+      - 'Subscriptions#listLocations~requestUrl'
+      - 'Subscriptions#listLocations~regex'
+      - 'Subscriptions#listLocations~requestUrl'
+      - 'Subscriptions#listLocations~httpRequest'
+      - 'Subscriptions#listLocations~headerName'
+  - uid: 'Subscriptions#get'
+    id: get
+    parent: Subscriptions
+    name: 'get(subscriptionId, options, options.customHeaders, callback)'
+    summary: Gets details about particular subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: subscriptionId
+          type: string
+          description: Id of the subscription.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Subscription} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function get(subscriptionId, options, options.customHeaders, callback);'
+    fullName: >-
+      Subscriptions.get(subscriptionId, options, options.customHeaders,
+      callback)
+    children:
+      - 'Subscriptions#get~client'
+      - 'Subscriptions#get~callback'
+      - 'Subscriptions#get~options'
+      - 'Subscriptions#get~requestUrl'
+      - 'Subscriptions#get~requestUrl'
+      - 'Subscriptions#get~queryParameters'
+      - 'Subscriptions#get~requestUrl'
+      - 'Subscriptions#get~regex'
+      - 'Subscriptions#get~requestUrl'
+      - 'Subscriptions#get~httpRequest'
+      - 'Subscriptions#get~headerName'
+  - uid: 'Subscriptions#list'
+    id: list
+    parent: Subscriptions
+    name: 'list(options, options.customHeaders, callback)'
+    summary: Gets a list of the subscriptionIds.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SubscriptionListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.customHeaders, callback);'
+    fullName: 'Subscriptions.list(options, options.customHeaders, callback)'
+    children:
+      - 'Subscriptions#list~client'
+      - 'Subscriptions#list~callback'
+      - 'Subscriptions#list~options'
+      - 'Subscriptions#list~requestUrl'
+      - 'Subscriptions#list~queryParameters'
+      - 'Subscriptions#list~requestUrl'
+      - 'Subscriptions#list~regex'
+      - 'Subscriptions#list~requestUrl'
+      - 'Subscriptions#list~httpRequest'
+      - 'Subscriptions#list~headerName'
+  - uid: 'Subscriptions#listLocationsNext'
+    id: listLocationsNext
+    parent: Subscriptions
+    name: 'listLocationsNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets a list of the subscription locations.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocationListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listLocationsNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Subscriptions.listLocationsNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Subscriptions#listLocationsNext~client'
+      - 'Subscriptions#listLocationsNext~callback'
+      - 'Subscriptions#listLocationsNext~options'
+      - 'Subscriptions#listLocationsNext~requestUrl'
+      - 'Subscriptions#listLocationsNext~requestUrl'
+      - 'Subscriptions#listLocationsNext~regex'
+      - 'Subscriptions#listLocationsNext~requestUrl'
+      - 'Subscriptions#listLocationsNext~httpRequest'
+      - 'Subscriptions#listLocationsNext~headerName'
+  - uid: 'Subscriptions#listNext'
+    id: listNext
+    parent: Subscriptions
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets a list of the subscriptionIds.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SubscriptionListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Subscriptions.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Subscriptions#listNext~client'
+      - 'Subscriptions#listNext~callback'
+      - 'Subscriptions#listNext~options'
+      - 'Subscriptions#listNext~requestUrl'
+      - 'Subscriptions#listNext~requestUrl'
+      - 'Subscriptions#listNext~regex'
+      - 'Subscriptions#listNext~requestUrl'
+      - 'Subscriptions#listNext~httpRequest'
+      - 'Subscriptions#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

@@ -1,0 +1,1450 @@
+items:
+  - uid: CertificateOrders
+    id: CertificateOrders
+    name: CertificateOrders
+    type: Class
+    syntax:
+      content: CertificateOrders
+    fullName: CertificateOrders
+    children:
+      - 'CertificateOrders#client'
+      - 'CertificateOrders#getCertificate'
+      - 'CertificateOrders#createOrUpdateCertificate'
+      - 'CertificateOrders#deleteCertificate'
+      - 'CertificateOrders#updateCertificate'
+      - 'CertificateOrders#getCertificateOrder'
+      - 'CertificateOrders#createOrUpdateCertificateOrder'
+      - 'CertificateOrders#deleteCertificateOrder'
+      - 'CertificateOrders#updateCertificateOrder'
+      - 'CertificateOrders#getCertificateOrders'
+      - 'CertificateOrders#getCertificates'
+      - 'CertificateOrders#reissueCertificateOrder'
+      - 'CertificateOrders#renewCertificateOrder'
+      - 'CertificateOrders#retrieveCertificateActions'
+      - 'CertificateOrders#retrieveCertificateEmailHistory'
+      - 'CertificateOrders#resendCertificateEmail'
+      - 'CertificateOrders#verifyDomainOwnership'
+  - uid: 'CertificateOrders#client'
+    id: client
+    parent: CertificateOrders
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: CertificateOrders.client
+  - uid: 'CertificateOrders#getCertificate'
+    id: getCertificate
+    parent: CertificateOrders
+    name: >-
+      getCertificate(resourceGroupName, certificateOrderName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: certificateOrderName
+          type: string
+          description: Certificate name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrderCertificate} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCertificate(resourceGroupName, certificateOrderName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.getCertificate(resourceGroupName, certificateOrderName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#getCertificate~client'
+      - 'CertificateOrders#getCertificate~callback'
+      - 'CertificateOrders#getCertificate~options'
+      - 'CertificateOrders#getCertificate~requestUrl'
+      - 'CertificateOrders#getCertificate~requestUrl'
+      - 'CertificateOrders#getCertificate~requestUrl'
+      - 'CertificateOrders#getCertificate~requestUrl'
+      - 'CertificateOrders#getCertificate~requestUrl'
+      - 'CertificateOrders#getCertificate~queryParameters'
+      - 'CertificateOrders#getCertificate~requestUrl'
+      - 'CertificateOrders#getCertificate~regex'
+      - 'CertificateOrders#getCertificate~requestUrl'
+      - 'CertificateOrders#getCertificate~httpRequest'
+      - 'CertificateOrders#getCertificate~headerName'
+  - uid: 'CertificateOrders#createOrUpdateCertificate'
+    id: createOrUpdateCertificate
+    parent: CertificateOrders
+    name: >-
+      createOrUpdateCertificate(resourceGroupName, certificateOrderName, name,
+      keyVaultCertificate, keyVaultCertificate.keyVaultId,
+      keyVaultCertificate.keyVaultSecretName,
+      keyVaultCertificate.provisioningState, keyVaultCertificate.id,
+      keyVaultCertificate.name, keyVaultCertificate.kind,
+      keyVaultCertificate.location, keyVaultCertificate.type,
+      keyVaultCertificate.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: certificateOrderName
+          type: string
+          description: Certificate name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: keyVaultCertificate
+          type: object
+          description: Key Vault secret csm Id
+        - id: keyVaultCertificate.keyVaultId
+          type: string
+          description: Key Vault Csm resource Id
+        - id: keyVaultCertificate.keyVaultSecretName
+          type: string
+          description: "Key Vault secret\rname"
+        - id: keyVaultCertificate.provisioningState
+          type: string
+          description: "Status of the Key\rVault secret. Possible values include: 'Initialized',\r'WaitingOnCertificateOrder', 'Succeeded', 'CertificateOrderFailed',\r'OperationNotPermittedOnKeyVault',\r'AzureServiceUnauthorizedToAccessKeyVault', 'KeyVaultDoesNotExist',\r'KeyVaultSecretDoesNotExist', 'UnknownError', 'Unknown'"
+        - id: keyVaultCertificate.id
+          type: string
+          description: Resource Id
+        - id: keyVaultCertificate.name
+          type: string
+          description: Resource Name
+        - id: keyVaultCertificate.kind
+          type: string
+          description: Kind of resource
+        - id: keyVaultCertificate.location
+          type: string
+          description: Resource Location
+        - id: keyVaultCertificate.type
+          type: string
+          description: Resource type
+        - id: keyVaultCertificate.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrderCertificate} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateCertificate(resourceGroupName,
+        certificateOrderName, name, keyVaultCertificate,
+        keyVaultCertificate.keyVaultId, keyVaultCertificate.keyVaultSecretName,
+        keyVaultCertificate.provisioningState, keyVaultCertificate.id,
+        keyVaultCertificate.name, keyVaultCertificate.kind,
+        keyVaultCertificate.location, keyVaultCertificate.type,
+        keyVaultCertificate.tags, options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.createOrUpdateCertificate(resourceGroupName,
+      certificateOrderName, name, keyVaultCertificate,
+      keyVaultCertificate.keyVaultId, keyVaultCertificate.keyVaultSecretName,
+      keyVaultCertificate.provisioningState, keyVaultCertificate.id,
+      keyVaultCertificate.name, keyVaultCertificate.kind,
+      keyVaultCertificate.location, keyVaultCertificate.type,
+      keyVaultCertificate.tags, options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#createOrUpdateCertificate~client'
+      - 'CertificateOrders#createOrUpdateCertificate~callback'
+      - 'CertificateOrders#createOrUpdateCertificate~options'
+      - 'CertificateOrders#createOrUpdateCertificate~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificate~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificate~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificate~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificate~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificate~queryParameters'
+      - 'CertificateOrders#createOrUpdateCertificate~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificate~regex'
+      - 'CertificateOrders#createOrUpdateCertificate~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificate~httpRequest'
+      - 'CertificateOrders#createOrUpdateCertificate~headerName'
+      - 'CertificateOrders#createOrUpdateCertificate~requestContent'
+      - 'CertificateOrders#createOrUpdateCertificate~requestModel'
+      - 'CertificateOrders#createOrUpdateCertificate~requestModelMapper'
+      - 'CertificateOrders#createOrUpdateCertificate~requestModel'
+      - 'CertificateOrders#createOrUpdateCertificate~requestContent'
+      - 'CertificateOrders#createOrUpdateCertificate~serializationError'
+  - uid: 'CertificateOrders#deleteCertificate'
+    id: deleteCertificate
+    parent: CertificateOrders
+    name: >-
+      deleteCertificate(resourceGroupName, certificateOrderName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: certificateOrderName
+          type: string
+          description: Certificate name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteCertificate(resourceGroupName, certificateOrderName,
+        name, options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.deleteCertificate(resourceGroupName,
+      certificateOrderName, name, options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#deleteCertificate~client'
+      - 'CertificateOrders#deleteCertificate~callback'
+      - 'CertificateOrders#deleteCertificate~options'
+      - 'CertificateOrders#deleteCertificate~requestUrl'
+      - 'CertificateOrders#deleteCertificate~requestUrl'
+      - 'CertificateOrders#deleteCertificate~requestUrl'
+      - 'CertificateOrders#deleteCertificate~requestUrl'
+      - 'CertificateOrders#deleteCertificate~requestUrl'
+      - 'CertificateOrders#deleteCertificate~queryParameters'
+      - 'CertificateOrders#deleteCertificate~requestUrl'
+      - 'CertificateOrders#deleteCertificate~regex'
+      - 'CertificateOrders#deleteCertificate~requestUrl'
+      - 'CertificateOrders#deleteCertificate~httpRequest'
+      - 'CertificateOrders#deleteCertificate~headerName'
+  - uid: 'CertificateOrders#updateCertificate'
+    id: updateCertificate
+    parent: CertificateOrders
+    name: >-
+      updateCertificate(resourceGroupName, certificateOrderName, name,
+      keyVaultCertificate, keyVaultCertificate.keyVaultId,
+      keyVaultCertificate.keyVaultSecretName,
+      keyVaultCertificate.provisioningState, keyVaultCertificate.id,
+      keyVaultCertificate.name, keyVaultCertificate.kind,
+      keyVaultCertificate.location, keyVaultCertificate.type,
+      keyVaultCertificate.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: certificateOrderName
+          type: string
+          description: Certificate name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: keyVaultCertificate
+          type: object
+          description: Key Vault secret csm Id
+        - id: keyVaultCertificate.keyVaultId
+          type: string
+          description: Key Vault Csm resource Id
+        - id: keyVaultCertificate.keyVaultSecretName
+          type: string
+          description: "Key Vault secret\rname"
+        - id: keyVaultCertificate.provisioningState
+          type: string
+          description: "Status of the Key\rVault secret. Possible values include: 'Initialized',\r'WaitingOnCertificateOrder', 'Succeeded', 'CertificateOrderFailed',\r'OperationNotPermittedOnKeyVault',\r'AzureServiceUnauthorizedToAccessKeyVault', 'KeyVaultDoesNotExist',\r'KeyVaultSecretDoesNotExist', 'UnknownError', 'Unknown'"
+        - id: keyVaultCertificate.id
+          type: string
+          description: Resource Id
+        - id: keyVaultCertificate.name
+          type: string
+          description: Resource Name
+        - id: keyVaultCertificate.kind
+          type: string
+          description: Kind of resource
+        - id: keyVaultCertificate.location
+          type: string
+          description: Resource Location
+        - id: keyVaultCertificate.type
+          type: string
+          description: Resource type
+        - id: keyVaultCertificate.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrderCertificate} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateCertificate(resourceGroupName, certificateOrderName,
+        name, keyVaultCertificate, keyVaultCertificate.keyVaultId,
+        keyVaultCertificate.keyVaultSecretName,
+        keyVaultCertificate.provisioningState, keyVaultCertificate.id,
+        keyVaultCertificate.name, keyVaultCertificate.kind,
+        keyVaultCertificate.location, keyVaultCertificate.type,
+        keyVaultCertificate.tags, options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.updateCertificate(resourceGroupName,
+      certificateOrderName, name, keyVaultCertificate,
+      keyVaultCertificate.keyVaultId, keyVaultCertificate.keyVaultSecretName,
+      keyVaultCertificate.provisioningState, keyVaultCertificate.id,
+      keyVaultCertificate.name, keyVaultCertificate.kind,
+      keyVaultCertificate.location, keyVaultCertificate.type,
+      keyVaultCertificate.tags, options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#updateCertificate~client'
+      - 'CertificateOrders#updateCertificate~callback'
+      - 'CertificateOrders#updateCertificate~options'
+      - 'CertificateOrders#updateCertificate~requestUrl'
+      - 'CertificateOrders#updateCertificate~requestUrl'
+      - 'CertificateOrders#updateCertificate~requestUrl'
+      - 'CertificateOrders#updateCertificate~requestUrl'
+      - 'CertificateOrders#updateCertificate~requestUrl'
+      - 'CertificateOrders#updateCertificate~queryParameters'
+      - 'CertificateOrders#updateCertificate~requestUrl'
+      - 'CertificateOrders#updateCertificate~regex'
+      - 'CertificateOrders#updateCertificate~requestUrl'
+      - 'CertificateOrders#updateCertificate~httpRequest'
+      - 'CertificateOrders#updateCertificate~headerName'
+      - 'CertificateOrders#updateCertificate~requestContent'
+      - 'CertificateOrders#updateCertificate~requestModel'
+      - 'CertificateOrders#updateCertificate~requestModelMapper'
+      - 'CertificateOrders#updateCertificate~requestModel'
+      - 'CertificateOrders#updateCertificate~requestContent'
+      - 'CertificateOrders#updateCertificate~serializationError'
+  - uid: 'CertificateOrders#getCertificateOrder'
+    id: getCertificateOrder
+    parent: CertificateOrders
+    name: >-
+      getCertificateOrder(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrder} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCertificateOrder(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.getCertificateOrder(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#getCertificateOrder~client'
+      - 'CertificateOrders#getCertificateOrder~callback'
+      - 'CertificateOrders#getCertificateOrder~options'
+      - 'CertificateOrders#getCertificateOrder~requestUrl'
+      - 'CertificateOrders#getCertificateOrder~requestUrl'
+      - 'CertificateOrders#getCertificateOrder~requestUrl'
+      - 'CertificateOrders#getCertificateOrder~requestUrl'
+      - 'CertificateOrders#getCertificateOrder~queryParameters'
+      - 'CertificateOrders#getCertificateOrder~requestUrl'
+      - 'CertificateOrders#getCertificateOrder~regex'
+      - 'CertificateOrders#getCertificateOrder~requestUrl'
+      - 'CertificateOrders#getCertificateOrder~httpRequest'
+      - 'CertificateOrders#getCertificateOrder~headerName'
+  - uid: 'CertificateOrders#createOrUpdateCertificateOrder'
+    id: createOrUpdateCertificateOrder
+    parent: CertificateOrders
+    name: >-
+      createOrUpdateCertificateOrder(resourceGroupName, name,
+      certificateDistinguishedName, certificateDistinguishedName.certificates,
+      certificateDistinguishedName.distinguishedName,
+      certificateDistinguishedName.domainVerificationToken,
+      certificateDistinguishedName.validityInYears,
+      certificateDistinguishedName.keySize,
+      certificateDistinguishedName.productType,
+      certificateDistinguishedName.autoRenew,
+      certificateDistinguishedName.provisioningState,
+      certificateDistinguishedName.status,
+      certificateDistinguishedName.signedCertificate,
+      certificateDistinguishedName.csr,
+      certificateDistinguishedName.intermediate,
+      certificateDistinguishedName.root,
+      certificateDistinguishedName.root.version,
+      certificateDistinguishedName.root.serialNumber,
+      certificateDistinguishedName.root.thumbprint,
+      certificateDistinguishedName.root.subject,
+      certificateDistinguishedName.root.notBefore,
+      certificateDistinguishedName.root.notAfter,
+      certificateDistinguishedName.root.signatureAlgorithm,
+      certificateDistinguishedName.root.issuer,
+      certificateDistinguishedName.root.rawData,
+      certificateDistinguishedName.root.id,
+      certificateDistinguishedName.root.name,
+      certificateDistinguishedName.root.kind,
+      certificateDistinguishedName.root.location,
+      certificateDistinguishedName.root.type,
+      certificateDistinguishedName.root.tags,
+      certificateDistinguishedName.serialNumber,
+      certificateDistinguishedName.lastCertificateIssuanceTime,
+      certificateDistinguishedName.expirationTime,
+      certificateDistinguishedName.id, certificateDistinguishedName.name,
+      certificateDistinguishedName.kind, certificateDistinguishedName.location,
+      certificateDistinguishedName.type, certificateDistinguishedName.tags,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: certificateDistinguishedName
+          type: object
+          description: "Distinguished name to be used\rfor purchasing certificate"
+        - id: certificateDistinguishedName.certificates
+          type: object
+          description: "State of the\rKey Vault secret"
+        - id: certificateDistinguishedName.distinguishedName
+          type: string
+          description: Certificate distinguished name
+        - id: certificateDistinguishedName.domainVerificationToken
+          type: string
+          description: Domain Verification Token
+        - id: certificateDistinguishedName.validityInYears
+          type: number
+          description: "Duration in\ryears (must be between 1 and 3)"
+        - id: certificateDistinguishedName.keySize
+          type: number
+          description: Certificate Key Size
+        - id: certificateDistinguishedName.productType
+          type: string
+          description: "Certificate\rproduct type. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
+        - id: certificateDistinguishedName.autoRenew
+          type: boolean
+          description: Auto renew
+        - id: certificateDistinguishedName.provisioningState
+          type: string
+          description: "Status of\rcertificate order. Possible values include: 'Succeeded', 'Failed',\r'Canceled', 'InProgress', 'Deleting'"
+        - id: certificateDistinguishedName.status
+          type: string
+          description: "Current order status.\rPossible values include: 'Pendingissuance', 'Issued', 'Revoked',\r'Canceled', 'Denied', 'Pendingrevocation', 'PendingRekey', 'Unused',\r'Expired', 'NotSubmitted'"
+        - id: certificateDistinguishedName.signedCertificate
+          type: object
+          description: "Signed\rcertificate"
+        - id: certificateDistinguishedName.csr
+          type: string
+          description: "Last CSR that was\rcreated for this order"
+        - id: certificateDistinguishedName.intermediate
+          type: object
+          description: "Intermediate\rcertificate"
+        - id: certificateDistinguishedName.root
+          type: object
+          description: Root certificate
+        - id: certificateDistinguishedName.root.version
+          type: number
+          description: Version
+        - id: certificateDistinguishedName.root.serialNumber
+          type: string
+          description: "Serial\rNumber"
+        - id: certificateDistinguishedName.root.thumbprint
+          type: string
+          description: Thumbprint
+        - id: certificateDistinguishedName.root.subject
+          type: string
+          description: Subject
+        - id: certificateDistinguishedName.root.notBefore
+          type: date
+          description: Valid from
+        - id: certificateDistinguishedName.root.notAfter
+          type: date
+          description: Valid to
+        - id: certificateDistinguishedName.root.signatureAlgorithm
+          type: string
+          description: Signature Algorithm
+        - id: certificateDistinguishedName.root.issuer
+          type: string
+          description: Issuer
+        - id: certificateDistinguishedName.root.rawData
+          type: string
+          description: "Raw certificate\rdata"
+        - id: certificateDistinguishedName.root.id
+          type: string
+          description: Resource Id
+        - id: certificateDistinguishedName.root.name
+          type: string
+          description: Resource Name
+        - id: certificateDistinguishedName.root.kind
+          type: string
+          description: Kind of resource
+        - id: certificateDistinguishedName.root.location
+          type: string
+          description: "Resource\rLocation"
+        - id: certificateDistinguishedName.root.type
+          type: string
+          description: Resource type
+        - id: certificateDistinguishedName.root.tags
+          type: object
+          description: Resource tags
+        - id: certificateDistinguishedName.serialNumber
+          type: string
+          description: "Current serial\rnumber of the certificate"
+        - id: certificateDistinguishedName.lastCertificateIssuanceTime
+          type: date
+          description: Certificate last issuance time
+        - id: certificateDistinguishedName.expirationTime
+          type: date
+          description: "Certificate\rexpiration time"
+        - id: certificateDistinguishedName.id
+          type: string
+          description: Resource Id
+        - id: certificateDistinguishedName.name
+          type: string
+          description: Resource Name
+        - id: certificateDistinguishedName.kind
+          type: string
+          description: Kind of resource
+        - id: certificateDistinguishedName.location
+          type: string
+          description: Resource Location
+        - id: certificateDistinguishedName.type
+          type: string
+          description: Resource type
+        - id: certificateDistinguishedName.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrder} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateCertificateOrder(resourceGroupName, name,
+        certificateDistinguishedName, certificateDistinguishedName.certificates,
+        certificateDistinguishedName.distinguishedName,
+        certificateDistinguishedName.domainVerificationToken,
+        certificateDistinguishedName.validityInYears,
+        certificateDistinguishedName.keySize,
+        certificateDistinguishedName.productType,
+        certificateDistinguishedName.autoRenew,
+        certificateDistinguishedName.provisioningState,
+        certificateDistinguishedName.status,
+        certificateDistinguishedName.signedCertificate,
+        certificateDistinguishedName.csr,
+        certificateDistinguishedName.intermediate,
+        certificateDistinguishedName.root,
+        certificateDistinguishedName.root.version,
+        certificateDistinguishedName.root.serialNumber,
+        certificateDistinguishedName.root.thumbprint,
+        certificateDistinguishedName.root.subject,
+        certificateDistinguishedName.root.notBefore,
+        certificateDistinguishedName.root.notAfter,
+        certificateDistinguishedName.root.signatureAlgorithm,
+        certificateDistinguishedName.root.issuer,
+        certificateDistinguishedName.root.rawData,
+        certificateDistinguishedName.root.id,
+        certificateDistinguishedName.root.name,
+        certificateDistinguishedName.root.kind,
+        certificateDistinguishedName.root.location,
+        certificateDistinguishedName.root.type,
+        certificateDistinguishedName.root.tags,
+        certificateDistinguishedName.serialNumber,
+        certificateDistinguishedName.lastCertificateIssuanceTime,
+        certificateDistinguishedName.expirationTime,
+        certificateDistinguishedName.id, certificateDistinguishedName.name,
+        certificateDistinguishedName.kind,
+        certificateDistinguishedName.location,
+        certificateDistinguishedName.type, certificateDistinguishedName.tags,
+        options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.createOrUpdateCertificateOrder(resourceGroupName, name,
+      certificateDistinguishedName, certificateDistinguishedName.certificates,
+      certificateDistinguishedName.distinguishedName,
+      certificateDistinguishedName.domainVerificationToken,
+      certificateDistinguishedName.validityInYears,
+      certificateDistinguishedName.keySize,
+      certificateDistinguishedName.productType,
+      certificateDistinguishedName.autoRenew,
+      certificateDistinguishedName.provisioningState,
+      certificateDistinguishedName.status,
+      certificateDistinguishedName.signedCertificate,
+      certificateDistinguishedName.csr,
+      certificateDistinguishedName.intermediate,
+      certificateDistinguishedName.root,
+      certificateDistinguishedName.root.version,
+      certificateDistinguishedName.root.serialNumber,
+      certificateDistinguishedName.root.thumbprint,
+      certificateDistinguishedName.root.subject,
+      certificateDistinguishedName.root.notBefore,
+      certificateDistinguishedName.root.notAfter,
+      certificateDistinguishedName.root.signatureAlgorithm,
+      certificateDistinguishedName.root.issuer,
+      certificateDistinguishedName.root.rawData,
+      certificateDistinguishedName.root.id,
+      certificateDistinguishedName.root.name,
+      certificateDistinguishedName.root.kind,
+      certificateDistinguishedName.root.location,
+      certificateDistinguishedName.root.type,
+      certificateDistinguishedName.root.tags,
+      certificateDistinguishedName.serialNumber,
+      certificateDistinguishedName.lastCertificateIssuanceTime,
+      certificateDistinguishedName.expirationTime,
+      certificateDistinguishedName.id, certificateDistinguishedName.name,
+      certificateDistinguishedName.kind, certificateDistinguishedName.location,
+      certificateDistinguishedName.type, certificateDistinguishedName.tags,
+      options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#createOrUpdateCertificateOrder~client'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~callback'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~options'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~queryParameters'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~regex'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestUrl'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~httpRequest'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~headerName'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestContent'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestModel'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestModelMapper'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestModel'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~requestContent'
+      - 'CertificateOrders#createOrUpdateCertificateOrder~serializationError'
+  - uid: 'CertificateOrders#deleteCertificateOrder'
+    id: deleteCertificateOrder
+    parent: CertificateOrders
+    name: >-
+      deleteCertificateOrder(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteCertificateOrder(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.deleteCertificateOrder(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#deleteCertificateOrder~client'
+      - 'CertificateOrders#deleteCertificateOrder~callback'
+      - 'CertificateOrders#deleteCertificateOrder~options'
+      - 'CertificateOrders#deleteCertificateOrder~requestUrl'
+      - 'CertificateOrders#deleteCertificateOrder~requestUrl'
+      - 'CertificateOrders#deleteCertificateOrder~requestUrl'
+      - 'CertificateOrders#deleteCertificateOrder~requestUrl'
+      - 'CertificateOrders#deleteCertificateOrder~queryParameters'
+      - 'CertificateOrders#deleteCertificateOrder~requestUrl'
+      - 'CertificateOrders#deleteCertificateOrder~regex'
+      - 'CertificateOrders#deleteCertificateOrder~requestUrl'
+      - 'CertificateOrders#deleteCertificateOrder~httpRequest'
+      - 'CertificateOrders#deleteCertificateOrder~headerName'
+  - uid: 'CertificateOrders#updateCertificateOrder'
+    id: updateCertificateOrder
+    parent: CertificateOrders
+    name: >-
+      updateCertificateOrder(resourceGroupName, name,
+      certificateDistinguishedName, certificateDistinguishedName.certificates,
+      certificateDistinguishedName.distinguishedName,
+      certificateDistinguishedName.domainVerificationToken,
+      certificateDistinguishedName.validityInYears,
+      certificateDistinguishedName.keySize,
+      certificateDistinguishedName.productType,
+      certificateDistinguishedName.autoRenew,
+      certificateDistinguishedName.provisioningState,
+      certificateDistinguishedName.status,
+      certificateDistinguishedName.signedCertificate,
+      certificateDistinguishedName.csr,
+      certificateDistinguishedName.intermediate,
+      certificateDistinguishedName.root,
+      certificateDistinguishedName.root.version,
+      certificateDistinguishedName.root.serialNumber,
+      certificateDistinguishedName.root.thumbprint,
+      certificateDistinguishedName.root.subject,
+      certificateDistinguishedName.root.notBefore,
+      certificateDistinguishedName.root.notAfter,
+      certificateDistinguishedName.root.signatureAlgorithm,
+      certificateDistinguishedName.root.issuer,
+      certificateDistinguishedName.root.rawData,
+      certificateDistinguishedName.root.id,
+      certificateDistinguishedName.root.name,
+      certificateDistinguishedName.root.kind,
+      certificateDistinguishedName.root.location,
+      certificateDistinguishedName.root.type,
+      certificateDistinguishedName.root.tags,
+      certificateDistinguishedName.serialNumber,
+      certificateDistinguishedName.lastCertificateIssuanceTime,
+      certificateDistinguishedName.expirationTime,
+      certificateDistinguishedName.id, certificateDistinguishedName.name,
+      certificateDistinguishedName.kind, certificateDistinguishedName.location,
+      certificateDistinguishedName.type, certificateDistinguishedName.tags,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: certificateDistinguishedName
+          type: object
+          description: "Distinguished name to be used\rfor purchasing certificate"
+        - id: certificateDistinguishedName.certificates
+          type: object
+          description: "State of the\rKey Vault secret"
+        - id: certificateDistinguishedName.distinguishedName
+          type: string
+          description: Certificate distinguished name
+        - id: certificateDistinguishedName.domainVerificationToken
+          type: string
+          description: Domain Verification Token
+        - id: certificateDistinguishedName.validityInYears
+          type: number
+          description: "Duration in\ryears (must be between 1 and 3)"
+        - id: certificateDistinguishedName.keySize
+          type: number
+          description: Certificate Key Size
+        - id: certificateDistinguishedName.productType
+          type: string
+          description: "Certificate\rproduct type. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
+        - id: certificateDistinguishedName.autoRenew
+          type: boolean
+          description: Auto renew
+        - id: certificateDistinguishedName.provisioningState
+          type: string
+          description: "Status of\rcertificate order. Possible values include: 'Succeeded', 'Failed',\r'Canceled', 'InProgress', 'Deleting'"
+        - id: certificateDistinguishedName.status
+          type: string
+          description: "Current order status.\rPossible values include: 'Pendingissuance', 'Issued', 'Revoked',\r'Canceled', 'Denied', 'Pendingrevocation', 'PendingRekey', 'Unused',\r'Expired', 'NotSubmitted'"
+        - id: certificateDistinguishedName.signedCertificate
+          type: object
+          description: "Signed\rcertificate"
+        - id: certificateDistinguishedName.csr
+          type: string
+          description: "Last CSR that was\rcreated for this order"
+        - id: certificateDistinguishedName.intermediate
+          type: object
+          description: "Intermediate\rcertificate"
+        - id: certificateDistinguishedName.root
+          type: object
+          description: Root certificate
+        - id: certificateDistinguishedName.root.version
+          type: number
+          description: Version
+        - id: certificateDistinguishedName.root.serialNumber
+          type: string
+          description: "Serial\rNumber"
+        - id: certificateDistinguishedName.root.thumbprint
+          type: string
+          description: Thumbprint
+        - id: certificateDistinguishedName.root.subject
+          type: string
+          description: Subject
+        - id: certificateDistinguishedName.root.notBefore
+          type: date
+          description: Valid from
+        - id: certificateDistinguishedName.root.notAfter
+          type: date
+          description: Valid to
+        - id: certificateDistinguishedName.root.signatureAlgorithm
+          type: string
+          description: Signature Algorithm
+        - id: certificateDistinguishedName.root.issuer
+          type: string
+          description: Issuer
+        - id: certificateDistinguishedName.root.rawData
+          type: string
+          description: "Raw certificate\rdata"
+        - id: certificateDistinguishedName.root.id
+          type: string
+          description: Resource Id
+        - id: certificateDistinguishedName.root.name
+          type: string
+          description: Resource Name
+        - id: certificateDistinguishedName.root.kind
+          type: string
+          description: Kind of resource
+        - id: certificateDistinguishedName.root.location
+          type: string
+          description: "Resource\rLocation"
+        - id: certificateDistinguishedName.root.type
+          type: string
+          description: Resource type
+        - id: certificateDistinguishedName.root.tags
+          type: object
+          description: Resource tags
+        - id: certificateDistinguishedName.serialNumber
+          type: string
+          description: "Current serial\rnumber of the certificate"
+        - id: certificateDistinguishedName.lastCertificateIssuanceTime
+          type: date
+          description: Certificate last issuance time
+        - id: certificateDistinguishedName.expirationTime
+          type: date
+          description: "Certificate\rexpiration time"
+        - id: certificateDistinguishedName.id
+          type: string
+          description: Resource Id
+        - id: certificateDistinguishedName.name
+          type: string
+          description: Resource Name
+        - id: certificateDistinguishedName.kind
+          type: string
+          description: Kind of resource
+        - id: certificateDistinguishedName.location
+          type: string
+          description: Resource Location
+        - id: certificateDistinguishedName.type
+          type: string
+          description: Resource type
+        - id: certificateDistinguishedName.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrder} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateCertificateOrder(resourceGroupName, name,
+        certificateDistinguishedName, certificateDistinguishedName.certificates,
+        certificateDistinguishedName.distinguishedName,
+        certificateDistinguishedName.domainVerificationToken,
+        certificateDistinguishedName.validityInYears,
+        certificateDistinguishedName.keySize,
+        certificateDistinguishedName.productType,
+        certificateDistinguishedName.autoRenew,
+        certificateDistinguishedName.provisioningState,
+        certificateDistinguishedName.status,
+        certificateDistinguishedName.signedCertificate,
+        certificateDistinguishedName.csr,
+        certificateDistinguishedName.intermediate,
+        certificateDistinguishedName.root,
+        certificateDistinguishedName.root.version,
+        certificateDistinguishedName.root.serialNumber,
+        certificateDistinguishedName.root.thumbprint,
+        certificateDistinguishedName.root.subject,
+        certificateDistinguishedName.root.notBefore,
+        certificateDistinguishedName.root.notAfter,
+        certificateDistinguishedName.root.signatureAlgorithm,
+        certificateDistinguishedName.root.issuer,
+        certificateDistinguishedName.root.rawData,
+        certificateDistinguishedName.root.id,
+        certificateDistinguishedName.root.name,
+        certificateDistinguishedName.root.kind,
+        certificateDistinguishedName.root.location,
+        certificateDistinguishedName.root.type,
+        certificateDistinguishedName.root.tags,
+        certificateDistinguishedName.serialNumber,
+        certificateDistinguishedName.lastCertificateIssuanceTime,
+        certificateDistinguishedName.expirationTime,
+        certificateDistinguishedName.id, certificateDistinguishedName.name,
+        certificateDistinguishedName.kind,
+        certificateDistinguishedName.location,
+        certificateDistinguishedName.type, certificateDistinguishedName.tags,
+        options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.updateCertificateOrder(resourceGroupName, name,
+      certificateDistinguishedName, certificateDistinguishedName.certificates,
+      certificateDistinguishedName.distinguishedName,
+      certificateDistinguishedName.domainVerificationToken,
+      certificateDistinguishedName.validityInYears,
+      certificateDistinguishedName.keySize,
+      certificateDistinguishedName.productType,
+      certificateDistinguishedName.autoRenew,
+      certificateDistinguishedName.provisioningState,
+      certificateDistinguishedName.status,
+      certificateDistinguishedName.signedCertificate,
+      certificateDistinguishedName.csr,
+      certificateDistinguishedName.intermediate,
+      certificateDistinguishedName.root,
+      certificateDistinguishedName.root.version,
+      certificateDistinguishedName.root.serialNumber,
+      certificateDistinguishedName.root.thumbprint,
+      certificateDistinguishedName.root.subject,
+      certificateDistinguishedName.root.notBefore,
+      certificateDistinguishedName.root.notAfter,
+      certificateDistinguishedName.root.signatureAlgorithm,
+      certificateDistinguishedName.root.issuer,
+      certificateDistinguishedName.root.rawData,
+      certificateDistinguishedName.root.id,
+      certificateDistinguishedName.root.name,
+      certificateDistinguishedName.root.kind,
+      certificateDistinguishedName.root.location,
+      certificateDistinguishedName.root.type,
+      certificateDistinguishedName.root.tags,
+      certificateDistinguishedName.serialNumber,
+      certificateDistinguishedName.lastCertificateIssuanceTime,
+      certificateDistinguishedName.expirationTime,
+      certificateDistinguishedName.id, certificateDistinguishedName.name,
+      certificateDistinguishedName.kind, certificateDistinguishedName.location,
+      certificateDistinguishedName.type, certificateDistinguishedName.tags,
+      options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#updateCertificateOrder~client'
+      - 'CertificateOrders#updateCertificateOrder~callback'
+      - 'CertificateOrders#updateCertificateOrder~options'
+      - 'CertificateOrders#updateCertificateOrder~requestUrl'
+      - 'CertificateOrders#updateCertificateOrder~requestUrl'
+      - 'CertificateOrders#updateCertificateOrder~requestUrl'
+      - 'CertificateOrders#updateCertificateOrder~requestUrl'
+      - 'CertificateOrders#updateCertificateOrder~queryParameters'
+      - 'CertificateOrders#updateCertificateOrder~requestUrl'
+      - 'CertificateOrders#updateCertificateOrder~regex'
+      - 'CertificateOrders#updateCertificateOrder~requestUrl'
+      - 'CertificateOrders#updateCertificateOrder~httpRequest'
+      - 'CertificateOrders#updateCertificateOrder~headerName'
+      - 'CertificateOrders#updateCertificateOrder~requestContent'
+      - 'CertificateOrders#updateCertificateOrder~requestModel'
+      - 'CertificateOrders#updateCertificateOrder~requestModelMapper'
+      - 'CertificateOrders#updateCertificateOrder~requestModel'
+      - 'CertificateOrders#updateCertificateOrder~requestContent'
+      - 'CertificateOrders#updateCertificateOrder~serializationError'
+  - uid: 'CertificateOrders#getCertificateOrders'
+    id: getCertificateOrders
+    parent: CertificateOrders
+    name: >-
+      getCertificateOrders(resourceGroupName, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrderCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCertificateOrders(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.getCertificateOrders(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#getCertificateOrders~client'
+      - 'CertificateOrders#getCertificateOrders~callback'
+      - 'CertificateOrders#getCertificateOrders~options'
+      - 'CertificateOrders#getCertificateOrders~requestUrl'
+      - 'CertificateOrders#getCertificateOrders~requestUrl'
+      - 'CertificateOrders#getCertificateOrders~requestUrl'
+      - 'CertificateOrders#getCertificateOrders~queryParameters'
+      - 'CertificateOrders#getCertificateOrders~requestUrl'
+      - 'CertificateOrders#getCertificateOrders~regex'
+      - 'CertificateOrders#getCertificateOrders~requestUrl'
+      - 'CertificateOrders#getCertificateOrders~httpRequest'
+      - 'CertificateOrders#getCertificateOrders~headerName'
+  - uid: 'CertificateOrders#getCertificates'
+    id: getCertificates
+    parent: CertificateOrders
+    name: >-
+      getCertificates(resourceGroupName, certificateOrderName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: certificateOrderName
+          type: string
+          description: Certificate name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrderCertificateCollection} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCertificates(resourceGroupName, certificateOrderName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.getCertificates(resourceGroupName, certificateOrderName,
+      options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#getCertificates~client'
+      - 'CertificateOrders#getCertificates~callback'
+      - 'CertificateOrders#getCertificates~options'
+      - 'CertificateOrders#getCertificates~requestUrl'
+      - 'CertificateOrders#getCertificates~requestUrl'
+      - 'CertificateOrders#getCertificates~requestUrl'
+      - 'CertificateOrders#getCertificates~requestUrl'
+      - 'CertificateOrders#getCertificates~queryParameters'
+      - 'CertificateOrders#getCertificates~requestUrl'
+      - 'CertificateOrders#getCertificates~regex'
+      - 'CertificateOrders#getCertificates~requestUrl'
+      - 'CertificateOrders#getCertificates~httpRequest'
+      - 'CertificateOrders#getCertificates~headerName'
+  - uid: 'CertificateOrders#reissueCertificateOrder'
+    id: reissueCertificateOrder
+    parent: CertificateOrders
+    name: >-
+      reissueCertificateOrder(resourceGroupName, name,
+      reissueCertificateOrderRequest, reissueCertificateOrderRequest.keySize,
+      reissueCertificateOrderRequest.delayExistingRevokeInHours,
+      reissueCertificateOrderRequest.id, reissueCertificateOrderRequest.name,
+      reissueCertificateOrderRequest.kind,
+      reissueCertificateOrderRequest.location,
+      reissueCertificateOrderRequest.type, reissueCertificateOrderRequest.tags,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: reissueCertificateOrderRequest
+          type: object
+          description: Reissue parameters
+        - id: reissueCertificateOrderRequest.keySize
+          type: number
+          description: "Certificate Key\rSize"
+        - id: reissueCertificateOrderRequest.delayExistingRevokeInHours
+          type: number
+          description: "Delay in hours to revoke existing certificate after the new certificate is\rissued"
+        - id: reissueCertificateOrderRequest.id
+          type: string
+          description: Resource Id
+        - id: reissueCertificateOrderRequest.name
+          type: string
+          description: Resource Name
+        - id: reissueCertificateOrderRequest.kind
+          type: string
+          description: Kind of resource
+        - id: reissueCertificateOrderRequest.location
+          type: string
+          description: Resource Location
+        - id: reissueCertificateOrderRequest.type
+          type: string
+          description: Resource type
+        - id: reissueCertificateOrderRequest.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function reissueCertificateOrder(resourceGroupName, name,
+        reissueCertificateOrderRequest, reissueCertificateOrderRequest.keySize,
+        reissueCertificateOrderRequest.delayExistingRevokeInHours,
+        reissueCertificateOrderRequest.id, reissueCertificateOrderRequest.name,
+        reissueCertificateOrderRequest.kind,
+        reissueCertificateOrderRequest.location,
+        reissueCertificateOrderRequest.type,
+        reissueCertificateOrderRequest.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      CertificateOrders.reissueCertificateOrder(resourceGroupName, name,
+      reissueCertificateOrderRequest, reissueCertificateOrderRequest.keySize,
+      reissueCertificateOrderRequest.delayExistingRevokeInHours,
+      reissueCertificateOrderRequest.id, reissueCertificateOrderRequest.name,
+      reissueCertificateOrderRequest.kind,
+      reissueCertificateOrderRequest.location,
+      reissueCertificateOrderRequest.type, reissueCertificateOrderRequest.tags,
+      options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#reissueCertificateOrder~client'
+      - 'CertificateOrders#reissueCertificateOrder~callback'
+      - 'CertificateOrders#reissueCertificateOrder~options'
+      - 'CertificateOrders#reissueCertificateOrder~requestUrl'
+      - 'CertificateOrders#reissueCertificateOrder~requestUrl'
+      - 'CertificateOrders#reissueCertificateOrder~requestUrl'
+      - 'CertificateOrders#reissueCertificateOrder~requestUrl'
+      - 'CertificateOrders#reissueCertificateOrder~queryParameters'
+      - 'CertificateOrders#reissueCertificateOrder~requestUrl'
+      - 'CertificateOrders#reissueCertificateOrder~regex'
+      - 'CertificateOrders#reissueCertificateOrder~requestUrl'
+      - 'CertificateOrders#reissueCertificateOrder~httpRequest'
+      - 'CertificateOrders#reissueCertificateOrder~headerName'
+      - 'CertificateOrders#reissueCertificateOrder~requestContent'
+      - 'CertificateOrders#reissueCertificateOrder~requestModel'
+      - 'CertificateOrders#reissueCertificateOrder~requestModelMapper'
+      - 'CertificateOrders#reissueCertificateOrder~requestModel'
+      - 'CertificateOrders#reissueCertificateOrder~requestContent'
+      - 'CertificateOrders#reissueCertificateOrder~serializationError'
+  - uid: 'CertificateOrders#renewCertificateOrder'
+    id: renewCertificateOrder
+    parent: CertificateOrders
+    name: >-
+      renewCertificateOrder(resourceGroupName, name,
+      renewCertificateOrderRequest, renewCertificateOrderRequest.keySize,
+      renewCertificateOrderRequest.id, renewCertificateOrderRequest.name,
+      renewCertificateOrderRequest.kind, renewCertificateOrderRequest.location,
+      renewCertificateOrderRequest.type, renewCertificateOrderRequest.tags,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate name
+        - id: renewCertificateOrderRequest
+          type: object
+          description: Renew parameters
+        - id: renewCertificateOrderRequest.keySize
+          type: number
+          description: Certificate Key Size
+        - id: renewCertificateOrderRequest.id
+          type: string
+          description: Resource Id
+        - id: renewCertificateOrderRequest.name
+          type: string
+          description: Resource Name
+        - id: renewCertificateOrderRequest.kind
+          type: string
+          description: Kind of resource
+        - id: renewCertificateOrderRequest.location
+          type: string
+          description: Resource Location
+        - id: renewCertificateOrderRequest.type
+          type: string
+          description: Resource type
+        - id: renewCertificateOrderRequest.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function renewCertificateOrder(resourceGroupName, name,
+        renewCertificateOrderRequest, renewCertificateOrderRequest.keySize,
+        renewCertificateOrderRequest.id, renewCertificateOrderRequest.name,
+        renewCertificateOrderRequest.kind,
+        renewCertificateOrderRequest.location,
+        renewCertificateOrderRequest.type, renewCertificateOrderRequest.tags,
+        options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.renewCertificateOrder(resourceGroupName, name,
+      renewCertificateOrderRequest, renewCertificateOrderRequest.keySize,
+      renewCertificateOrderRequest.id, renewCertificateOrderRequest.name,
+      renewCertificateOrderRequest.kind, renewCertificateOrderRequest.location,
+      renewCertificateOrderRequest.type, renewCertificateOrderRequest.tags,
+      options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#renewCertificateOrder~client'
+      - 'CertificateOrders#renewCertificateOrder~callback'
+      - 'CertificateOrders#renewCertificateOrder~options'
+      - 'CertificateOrders#renewCertificateOrder~requestUrl'
+      - 'CertificateOrders#renewCertificateOrder~requestUrl'
+      - 'CertificateOrders#renewCertificateOrder~requestUrl'
+      - 'CertificateOrders#renewCertificateOrder~requestUrl'
+      - 'CertificateOrders#renewCertificateOrder~queryParameters'
+      - 'CertificateOrders#renewCertificateOrder~requestUrl'
+      - 'CertificateOrders#renewCertificateOrder~regex'
+      - 'CertificateOrders#renewCertificateOrder~requestUrl'
+      - 'CertificateOrders#renewCertificateOrder~httpRequest'
+      - 'CertificateOrders#renewCertificateOrder~headerName'
+      - 'CertificateOrders#renewCertificateOrder~requestContent'
+      - 'CertificateOrders#renewCertificateOrder~requestModel'
+      - 'CertificateOrders#renewCertificateOrder~requestModelMapper'
+      - 'CertificateOrders#renewCertificateOrder~requestModel'
+      - 'CertificateOrders#renewCertificateOrder~requestContent'
+      - 'CertificateOrders#renewCertificateOrder~serializationError'
+  - uid: 'CertificateOrders#retrieveCertificateActions'
+    id: retrieveCertificateActions
+    parent: CertificateOrders
+    name: >-
+      retrieveCertificateActions(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate order name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function retrieveCertificateActions(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.retrieveCertificateActions(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#retrieveCertificateActions~client'
+      - 'CertificateOrders#retrieveCertificateActions~callback'
+      - 'CertificateOrders#retrieveCertificateActions~options'
+      - 'CertificateOrders#retrieveCertificateActions~requestUrl'
+      - 'CertificateOrders#retrieveCertificateActions~requestUrl'
+      - 'CertificateOrders#retrieveCertificateActions~requestUrl'
+      - 'CertificateOrders#retrieveCertificateActions~requestUrl'
+      - 'CertificateOrders#retrieveCertificateActions~queryParameters'
+      - 'CertificateOrders#retrieveCertificateActions~requestUrl'
+      - 'CertificateOrders#retrieveCertificateActions~regex'
+      - 'CertificateOrders#retrieveCertificateActions~requestUrl'
+      - 'CertificateOrders#retrieveCertificateActions~httpRequest'
+      - 'CertificateOrders#retrieveCertificateActions~headerName'
+  - uid: 'CertificateOrders#retrieveCertificateEmailHistory'
+    id: retrieveCertificateEmailHistory
+    parent: CertificateOrders
+    name: >-
+      retrieveCertificateEmailHistory(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate order name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function retrieveCertificateEmailHistory(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.retrieveCertificateEmailHistory(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#retrieveCertificateEmailHistory~client'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~callback'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~options'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~requestUrl'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~requestUrl'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~requestUrl'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~requestUrl'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~queryParameters'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~requestUrl'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~regex'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~requestUrl'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~httpRequest'
+      - 'CertificateOrders#retrieveCertificateEmailHistory~headerName'
+  - uid: 'CertificateOrders#resendCertificateEmail'
+    id: resendCertificateEmail
+    parent: CertificateOrders
+    name: >-
+      resendCertificateEmail(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate order name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function resendCertificateEmail(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.resendCertificateEmail(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#resendCertificateEmail~client'
+      - 'CertificateOrders#resendCertificateEmail~callback'
+      - 'CertificateOrders#resendCertificateEmail~options'
+      - 'CertificateOrders#resendCertificateEmail~requestUrl'
+      - 'CertificateOrders#resendCertificateEmail~requestUrl'
+      - 'CertificateOrders#resendCertificateEmail~requestUrl'
+      - 'CertificateOrders#resendCertificateEmail~requestUrl'
+      - 'CertificateOrders#resendCertificateEmail~queryParameters'
+      - 'CertificateOrders#resendCertificateEmail~requestUrl'
+      - 'CertificateOrders#resendCertificateEmail~regex'
+      - 'CertificateOrders#resendCertificateEmail~requestUrl'
+      - 'CertificateOrders#resendCertificateEmail~httpRequest'
+      - 'CertificateOrders#resendCertificateEmail~headerName'
+  - uid: 'CertificateOrders#verifyDomainOwnership'
+    id: verifyDomainOwnership
+    parent: CertificateOrders
+    name: >-
+      verifyDomainOwnership(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group name
+        - id: name
+          type: string
+          description: Certificate order name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function verifyDomainOwnership(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CertificateOrders.verifyDomainOwnership(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'CertificateOrders#verifyDomainOwnership~client'
+      - 'CertificateOrders#verifyDomainOwnership~callback'
+      - 'CertificateOrders#verifyDomainOwnership~options'
+      - 'CertificateOrders#verifyDomainOwnership~requestUrl'
+      - 'CertificateOrders#verifyDomainOwnership~requestUrl'
+      - 'CertificateOrders#verifyDomainOwnership~requestUrl'
+      - 'CertificateOrders#verifyDomainOwnership~requestUrl'
+      - 'CertificateOrders#verifyDomainOwnership~queryParameters'
+      - 'CertificateOrders#verifyDomainOwnership~requestUrl'
+      - 'CertificateOrders#verifyDomainOwnership~regex'
+      - 'CertificateOrders#verifyDomainOwnership~requestUrl'
+      - 'CertificateOrders#verifyDomainOwnership~httpRequest'
+      - 'CertificateOrders#verifyDomainOwnership~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false

@@ -1,0 +1,59 @@
+items:
+  - uid: Operations
+    id: Operations
+    name: Operations
+    type: Class
+    syntax:
+      content: Operations
+    fullName: Operations
+    children:
+      - 'Operations#client'
+      - 'Operations#list'
+  - uid: 'Operations#client'
+    id: client
+    parent: Operations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Operations.client
+  - uid: 'Operations#list'
+    id: list
+    parent: Operations
+    name: 'list(options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link OperationListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.customHeaders, callback);'
+    fullName: 'Operations.list(options, options.customHeaders, callback)'
+    children:
+      - 'Operations#list~client'
+      - 'Operations#list~callback'
+      - 'Operations#list~options'
+      - 'Operations#list~requestUrl'
+      - 'Operations#list~queryParameters'
+      - 'Operations#list~requestUrl'
+      - 'Operations#list~regex'
+      - 'Operations#list~requestUrl'
+      - 'Operations#list~httpRequest'
+      - 'Operations#list~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

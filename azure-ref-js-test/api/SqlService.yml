@@ -1,0 +1,148 @@
+items:
+  - uid: SqlService
+    id: SqlService
+    name: SqlService
+    summary: Creates a new SqlService object
+    type: Class
+    syntax:
+      content: SqlService
+    fullName: SqlService
+    children:
+      - 'SqlService#serverName'
+      - SqlService~host
+      - SqlService~endpoint
+      - SqlService~acsEndpoint
+      - 'SqlService#createServerDatabase'
+      - 'SqlService#deleteServerDatabase'
+      - 'SqlService#listServerDatabases'
+      - 'SqlService#_performRequestExtended'
+  - uid: 'SqlService#serverName'
+    id: serverName
+    parent: SqlService
+    name: serverName
+    type: Field
+    syntax:
+      content: serverName
+    fullName: SqlService.serverName
+  - uid: SqlService~host
+    id: host
+    parent: SqlService
+    name: host
+    type: Field
+    syntax:
+      content: host
+    fullName: SqlService.host
+  - uid: SqlService~endpoint
+    id: endpoint
+    parent: SqlService
+    name: endpoint
+    type: Field
+    syntax:
+      content: endpoint
+    fullName: SqlService.endpoint
+  - uid: SqlService~acsEndpoint
+    id: acsEndpoint
+    parent: SqlService
+    name: acsEndpoint
+    type: Field
+    syntax:
+      content: acsEndpoint
+    fullName: SqlService.acsEndpoint
+  - uid: 'SqlService#createServerDatabase'
+    id: createServerDatabase
+    parent: SqlService
+    name: >-
+      createServerDatabase(databaseName, options, options.collation,
+      options.edition, options.maxSizeInGB, callback)
+    summary: Creates a SQL Server database.
+    type: Method
+    syntax:
+      parameters:
+        - id: databaseName
+          type: string
+          description: The database name.
+        - id: options
+          type: object
+          description: The get options or callback function.
+        - id: options.collation
+          type: string
+          description: The database collation to be used.
+        - id: options.edition
+          type: string
+          description: The database edition to be used.
+        - id: options.maxSizeInGB
+          type: string
+          description: The database maximum size in gigabytes.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                           if an error occurs; otherwise `response` will contain information related to this operation."
+      content: >-
+        function createServerDatabase(databaseName, options, options.collation,
+        options.edition, options.maxSizeInGB, callback);
+    fullName: >-
+      SqlService.createServerDatabase(databaseName, options, options.collation,
+      options.edition, options.maxSizeInGB, callback)
+    children:
+      - 'SqlService#createServerDatabase~options'
+      - 'SqlService#createServerDatabase~callback'
+      - 'SqlService#createServerDatabase~options'
+      - 'SqlService#createServerDatabase~options'
+      - 'SqlService#createServerDatabase~databaseXml'
+      - 'SqlService#createServerDatabase~webResource'
+      - 'SqlService#createServerDatabase~processResponseCallback'
+  - uid: 'SqlService#deleteServerDatabase'
+    id: deleteServerDatabase
+    parent: SqlService
+    name: 'deleteServerDatabase(databaseId, callback)'
+    summary: Deletes a SQL Server database.
+    type: Method
+    syntax:
+      parameters:
+        - id: databaseId
+          type: string
+          description: The database identifier.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                if an error occurs; otherwise `response` will contain information related to this operation."
+      content: 'function deleteServerDatabase(databaseId, callback);'
+    fullName: 'SqlService.deleteServerDatabase(databaseId, callback)'
+    children:
+      - 'SqlService#deleteServerDatabase~webResource'
+      - 'SqlService#deleteServerDatabase~processResponseCallback'
+  - uid: 'SqlService#listServerDatabases'
+    id: listServerDatabases
+    parent: SqlService
+    name: listServerDatabases(callback)
+    summary: Lists the SQL Server databases.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                         if an error occurs; otherwise `results` will contain\r                                                         the list of databases.\r                                                         `response` will contain information related to this operation."
+      content: function listServerDatabases(callback);
+    fullName: SqlService.listServerDatabases(callback)
+    children:
+      - 'SqlService#listServerDatabases~webResource'
+      - 'SqlService#listServerDatabases~processResponseCallback'
+  - uid: 'SqlService#_performRequestExtended'
+    id: _performRequestExtended
+    parent: SqlService
+    name: _performRequestExtended()
+    type: Method
+    syntax:
+      content: function _performRequestExtended();
+    fullName: SqlService._performRequestExtended()
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

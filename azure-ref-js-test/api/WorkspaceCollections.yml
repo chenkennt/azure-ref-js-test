@@ -1,0 +1,599 @@
+items:
+  - uid: WorkspaceCollections
+    id: WorkspaceCollections
+    name: WorkspaceCollections
+    type: Class
+    syntax:
+      content: WorkspaceCollections
+    fullName: WorkspaceCollections
+    children:
+      - 'WorkspaceCollections#client'
+      - 'WorkspaceCollections#getByName'
+      - 'WorkspaceCollections#create'
+      - 'WorkspaceCollections#update'
+      - 'WorkspaceCollections#deleteMethod'
+      - 'WorkspaceCollections#beginDeleteMethod'
+      - 'WorkspaceCollections#checkNameAvailability'
+      - 'WorkspaceCollections#listByResourceGroup'
+      - 'WorkspaceCollections#listBySubscription'
+      - 'WorkspaceCollections#getAccessKeys'
+      - 'WorkspaceCollections#regenerateKey'
+      - 'WorkspaceCollections#migrate'
+  - uid: 'WorkspaceCollections#client'
+    id: client
+    parent: WorkspaceCollections
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: WorkspaceCollections.client
+  - uid: 'WorkspaceCollections#getByName'
+    id: getByName
+    parent: WorkspaceCollections
+    name: >-
+      getByName(resourceGroupName, workspaceCollectionName, options,
+      options.customHeaders, callback)
+    summary: Retrieves an existing Power BI Workspace Collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getByName(resourceGroupName, workspaceCollectionName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.getByName(resourceGroupName, workspaceCollectionName,
+      options, options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#getByName~client'
+      - 'WorkspaceCollections#getByName~callback'
+      - 'WorkspaceCollections#getByName~options'
+      - 'WorkspaceCollections#getByName~requestUrl'
+      - 'WorkspaceCollections#getByName~requestUrl'
+      - 'WorkspaceCollections#getByName~requestUrl'
+      - 'WorkspaceCollections#getByName~requestUrl'
+      - 'WorkspaceCollections#getByName~queryParameters'
+      - 'WorkspaceCollections#getByName~requestUrl'
+      - 'WorkspaceCollections#getByName~regex'
+      - 'WorkspaceCollections#getByName~requestUrl'
+      - 'WorkspaceCollections#getByName~httpRequest'
+      - 'WorkspaceCollections#getByName~headerName'
+  - uid: 'WorkspaceCollections#create'
+    id: create
+    parent: WorkspaceCollections
+    name: >-
+      create(resourceGroupName, workspaceCollectionName, body, body.location,
+      body.tags, options, options.customHeaders, callback)
+    summary: "Creates a new Power BI Workspace Collection with the specified properties.\rA Power BI Workspace Collection contains one or more Power BI Workspaces\rand can be used to provision keys that provide API access to those Power\rBI Workspaces."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: body
+          type: object
+          description: Create workspace collection request
+        - id: body.location
+          type: string
+          description: Azure location
+        - id: body.tags
+          type: object
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(resourceGroupName, workspaceCollectionName, body,
+        body.location, body.tags, options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.create(resourceGroupName, workspaceCollectionName,
+      body, body.location, body.tags, options, options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#create~client'
+      - 'WorkspaceCollections#create~callback'
+      - 'WorkspaceCollections#create~options'
+      - 'WorkspaceCollections#create~body'
+      - 'WorkspaceCollections#create~requestUrl'
+      - 'WorkspaceCollections#create~requestUrl'
+      - 'WorkspaceCollections#create~requestUrl'
+      - 'WorkspaceCollections#create~requestUrl'
+      - 'WorkspaceCollections#create~queryParameters'
+      - 'WorkspaceCollections#create~requestUrl'
+      - 'WorkspaceCollections#create~regex'
+      - 'WorkspaceCollections#create~requestUrl'
+      - 'WorkspaceCollections#create~httpRequest'
+      - 'WorkspaceCollections#create~headerName'
+      - 'WorkspaceCollections#create~requestContent'
+      - 'WorkspaceCollections#create~requestModel'
+      - 'WorkspaceCollections#create~requestModelMapper'
+      - 'WorkspaceCollections#create~requestModel'
+      - 'WorkspaceCollections#create~requestContent'
+      - 'WorkspaceCollections#create~serializationError'
+  - uid: 'WorkspaceCollections#update'
+    id: update
+    parent: WorkspaceCollections
+    name: >-
+      update(resourceGroupName, workspaceCollectionName, body, body.tags,
+      options, options.customHeaders, callback)
+    summary: "Update an existing Power BI Workspace Collection with the specified\rproperties."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: body
+          type: object
+          description: Update workspace collection request
+        - id: body.tags
+          type: object
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(resourceGroupName, workspaceCollectionName, body,
+        body.tags, options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.update(resourceGroupName, workspaceCollectionName,
+      body, body.tags, options, options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#update~client'
+      - 'WorkspaceCollections#update~callback'
+      - 'WorkspaceCollections#update~options'
+      - 'WorkspaceCollections#update~body'
+      - 'WorkspaceCollections#update~requestUrl'
+      - 'WorkspaceCollections#update~requestUrl'
+      - 'WorkspaceCollections#update~requestUrl'
+      - 'WorkspaceCollections#update~requestUrl'
+      - 'WorkspaceCollections#update~queryParameters'
+      - 'WorkspaceCollections#update~requestUrl'
+      - 'WorkspaceCollections#update~regex'
+      - 'WorkspaceCollections#update~requestUrl'
+      - 'WorkspaceCollections#update~httpRequest'
+      - 'WorkspaceCollections#update~headerName'
+      - 'WorkspaceCollections#update~requestContent'
+      - 'WorkspaceCollections#update~requestModel'
+      - 'WorkspaceCollections#update~requestModelMapper'
+      - 'WorkspaceCollections#update~requestModel'
+      - 'WorkspaceCollections#update~requestContent'
+      - 'WorkspaceCollections#update~serializationError'
+  - uid: 'WorkspaceCollections#deleteMethod'
+    id: deleteMethod
+    parent: WorkspaceCollections
+    name: >-
+      deleteMethod(resourceGroupName, workspaceCollectionName, options,
+      options.customHeaders, callback)
+    summary: Delete a Power BI Workspace Collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, workspaceCollectionName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.deleteMethod(resourceGroupName,
+      workspaceCollectionName, options, options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#deleteMethod~client'
+      - 'WorkspaceCollections#deleteMethod~callback'
+      - 'WorkspaceCollections#deleteMethod~options'
+  - uid: 'WorkspaceCollections#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: WorkspaceCollections
+    name: >-
+      beginDeleteMethod(resourceGroupName, workspaceCollectionName, options,
+      options.customHeaders, callback)
+    summary: Delete a Power BI Workspace Collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, workspaceCollectionName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.beginDeleteMethod(resourceGroupName,
+      workspaceCollectionName, options, options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#beginDeleteMethod~client'
+      - 'WorkspaceCollections#beginDeleteMethod~callback'
+      - 'WorkspaceCollections#beginDeleteMethod~options'
+      - 'WorkspaceCollections#beginDeleteMethod~requestUrl'
+      - 'WorkspaceCollections#beginDeleteMethod~requestUrl'
+      - 'WorkspaceCollections#beginDeleteMethod~requestUrl'
+      - 'WorkspaceCollections#beginDeleteMethod~requestUrl'
+      - 'WorkspaceCollections#beginDeleteMethod~queryParameters'
+      - 'WorkspaceCollections#beginDeleteMethod~requestUrl'
+      - 'WorkspaceCollections#beginDeleteMethod~regex'
+      - 'WorkspaceCollections#beginDeleteMethod~requestUrl'
+      - 'WorkspaceCollections#beginDeleteMethod~httpRequest'
+      - 'WorkspaceCollections#beginDeleteMethod~headerName'
+  - uid: 'WorkspaceCollections#checkNameAvailability'
+    id: checkNameAvailability
+    parent: WorkspaceCollections
+    name: >-
+      checkNameAvailability(location, body, body.name, body.type, options,
+      options.customHeaders, callback)
+    summary: "Check that the specified Power BI Workspace Collection name is valid and\rnot in use."
+    type: Method
+    syntax:
+      parameters:
+        - id: location
+          type: string
+          description: Azure location
+        - id: body
+          type: object
+          description: Check name availability request
+        - id: body.name
+          type: string
+          description: Workspace collection name
+        - id: body.type
+          type: string
+          description: Resource type
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckNameResponse} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function checkNameAvailability(location, body, body.name, body.type,
+        options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.checkNameAvailability(location, body, body.name,
+      body.type, options, options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#checkNameAvailability~client'
+      - 'WorkspaceCollections#checkNameAvailability~callback'
+      - 'WorkspaceCollections#checkNameAvailability~options'
+      - 'WorkspaceCollections#checkNameAvailability~requestUrl'
+      - 'WorkspaceCollections#checkNameAvailability~requestUrl'
+      - 'WorkspaceCollections#checkNameAvailability~requestUrl'
+      - 'WorkspaceCollections#checkNameAvailability~queryParameters'
+      - 'WorkspaceCollections#checkNameAvailability~requestUrl'
+      - 'WorkspaceCollections#checkNameAvailability~regex'
+      - 'WorkspaceCollections#checkNameAvailability~requestUrl'
+      - 'WorkspaceCollections#checkNameAvailability~httpRequest'
+      - 'WorkspaceCollections#checkNameAvailability~headerName'
+      - 'WorkspaceCollections#checkNameAvailability~requestContent'
+      - 'WorkspaceCollections#checkNameAvailability~requestModel'
+      - 'WorkspaceCollections#checkNameAvailability~requestModelMapper'
+      - 'WorkspaceCollections#checkNameAvailability~requestModel'
+      - 'WorkspaceCollections#checkNameAvailability~requestContent'
+      - 'WorkspaceCollections#checkNameAvailability~serializationError'
+  - uid: 'WorkspaceCollections#listByResourceGroup'
+    id: listByResourceGroup
+    parent: WorkspaceCollections
+    name: >-
+      listByResourceGroup(resourceGroupName, options, options.customHeaders,
+      callback)
+    summary: "Retrieves all existing Power BI Workspace Collections in the specified\rresource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceCollectionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByResourceGroup(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.listByResourceGroup(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#listByResourceGroup~client'
+      - 'WorkspaceCollections#listByResourceGroup~callback'
+      - 'WorkspaceCollections#listByResourceGroup~options'
+      - 'WorkspaceCollections#listByResourceGroup~requestUrl'
+      - 'WorkspaceCollections#listByResourceGroup~requestUrl'
+      - 'WorkspaceCollections#listByResourceGroup~requestUrl'
+      - 'WorkspaceCollections#listByResourceGroup~queryParameters'
+      - 'WorkspaceCollections#listByResourceGroup~requestUrl'
+      - 'WorkspaceCollections#listByResourceGroup~regex'
+      - 'WorkspaceCollections#listByResourceGroup~requestUrl'
+      - 'WorkspaceCollections#listByResourceGroup~httpRequest'
+      - 'WorkspaceCollections#listByResourceGroup~headerName'
+  - uid: 'WorkspaceCollections#listBySubscription'
+    id: listBySubscription
+    parent: WorkspaceCollections
+    name: 'listBySubscription(options, options.customHeaders, callback)'
+    summary: "Retrieves all existing Power BI Workspace Collections in the specified\rsubscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceCollectionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listBySubscription(options, options.customHeaders, callback);'
+    fullName: >-
+      WorkspaceCollections.listBySubscription(options, options.customHeaders,
+      callback)
+    children:
+      - 'WorkspaceCollections#listBySubscription~client'
+      - 'WorkspaceCollections#listBySubscription~callback'
+      - 'WorkspaceCollections#listBySubscription~options'
+      - 'WorkspaceCollections#listBySubscription~requestUrl'
+      - 'WorkspaceCollections#listBySubscription~requestUrl'
+      - 'WorkspaceCollections#listBySubscription~queryParameters'
+      - 'WorkspaceCollections#listBySubscription~requestUrl'
+      - 'WorkspaceCollections#listBySubscription~regex'
+      - 'WorkspaceCollections#listBySubscription~requestUrl'
+      - 'WorkspaceCollections#listBySubscription~httpRequest'
+      - 'WorkspaceCollections#listBySubscription~headerName'
+  - uid: 'WorkspaceCollections#getAccessKeys'
+    id: getAccessKeys
+    parent: WorkspaceCollections
+    name: >-
+      getAccessKeys(resourceGroupName, workspaceCollectionName, options,
+      options.customHeaders, callback)
+    summary: "Retrieves the primary and secondary access keys for the specified Power BI\rWorkspace Collection."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceCollectionAccessKeys} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getAccessKeys(resourceGroupName, workspaceCollectionName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.getAccessKeys(resourceGroupName,
+      workspaceCollectionName, options, options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#getAccessKeys~client'
+      - 'WorkspaceCollections#getAccessKeys~callback'
+      - 'WorkspaceCollections#getAccessKeys~options'
+      - 'WorkspaceCollections#getAccessKeys~requestUrl'
+      - 'WorkspaceCollections#getAccessKeys~requestUrl'
+      - 'WorkspaceCollections#getAccessKeys~requestUrl'
+      - 'WorkspaceCollections#getAccessKeys~requestUrl'
+      - 'WorkspaceCollections#getAccessKeys~queryParameters'
+      - 'WorkspaceCollections#getAccessKeys~requestUrl'
+      - 'WorkspaceCollections#getAccessKeys~regex'
+      - 'WorkspaceCollections#getAccessKeys~requestUrl'
+      - 'WorkspaceCollections#getAccessKeys~httpRequest'
+      - 'WorkspaceCollections#getAccessKeys~headerName'
+  - uid: 'WorkspaceCollections#regenerateKey'
+    id: regenerateKey
+    parent: WorkspaceCollections
+    name: >-
+      regenerateKey(resourceGroupName, workspaceCollectionName, body,
+      body.keyName, options, options.customHeaders, callback)
+    summary: "Regenerates the primary or secondary access key for the specified Power BI\rWorkspace Collection."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: body
+          type: object
+          description: Access key to regenerate
+        - id: body.keyName
+          type: string
+          description: "Key name. Possible values include: 'key1',\r'key2'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceCollectionAccessKeys} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function regenerateKey(resourceGroupName, workspaceCollectionName, body,
+        body.keyName, options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.regenerateKey(resourceGroupName,
+      workspaceCollectionName, body, body.keyName, options,
+      options.customHeaders, callback)
+    children:
+      - 'WorkspaceCollections#regenerateKey~client'
+      - 'WorkspaceCollections#regenerateKey~callback'
+      - 'WorkspaceCollections#regenerateKey~options'
+      - 'WorkspaceCollections#regenerateKey~requestUrl'
+      - 'WorkspaceCollections#regenerateKey~requestUrl'
+      - 'WorkspaceCollections#regenerateKey~requestUrl'
+      - 'WorkspaceCollections#regenerateKey~requestUrl'
+      - 'WorkspaceCollections#regenerateKey~queryParameters'
+      - 'WorkspaceCollections#regenerateKey~requestUrl'
+      - 'WorkspaceCollections#regenerateKey~regex'
+      - 'WorkspaceCollections#regenerateKey~requestUrl'
+      - 'WorkspaceCollections#regenerateKey~httpRequest'
+      - 'WorkspaceCollections#regenerateKey~headerName'
+      - 'WorkspaceCollections#regenerateKey~requestContent'
+      - 'WorkspaceCollections#regenerateKey~requestModel'
+      - 'WorkspaceCollections#regenerateKey~requestModelMapper'
+      - 'WorkspaceCollections#regenerateKey~requestModel'
+      - 'WorkspaceCollections#regenerateKey~requestContent'
+      - 'WorkspaceCollections#regenerateKey~serializationError'
+  - uid: 'WorkspaceCollections#migrate'
+    id: migrate
+    parent: WorkspaceCollections
+    name: >-
+      migrate(resourceGroupName, body, body.targetResourceGroup, body.resources,
+      options, options.customHeaders, callback)
+    summary: "Migrates an existing Power BI Workspace Collection to a different resource\rgroup and/or subscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: body
+          type: object
+          description: Workspace migration request
+        - id: body.targetResourceGroup
+          type: string
+          description: "Name of the resource group that\rthe Power BI Workspace Collections will be migrated to."
+        - id: body.resources
+          type: array
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function migrate(resourceGroupName, body, body.targetResourceGroup,
+        body.resources, options, options.customHeaders, callback);
+    fullName: >-
+      WorkspaceCollections.migrate(resourceGroupName, body,
+      body.targetResourceGroup, body.resources, options, options.customHeaders,
+      callback)
+    children:
+      - 'WorkspaceCollections#migrate~client'
+      - 'WorkspaceCollections#migrate~callback'
+      - 'WorkspaceCollections#migrate~options'
+      - 'WorkspaceCollections#migrate~requestUrl'
+      - 'WorkspaceCollections#migrate~requestUrl'
+      - 'WorkspaceCollections#migrate~requestUrl'
+      - 'WorkspaceCollections#migrate~queryParameters'
+      - 'WorkspaceCollections#migrate~requestUrl'
+      - 'WorkspaceCollections#migrate~regex'
+      - 'WorkspaceCollections#migrate~requestUrl'
+      - 'WorkspaceCollections#migrate~httpRequest'
+      - 'WorkspaceCollections#migrate~headerName'
+      - 'WorkspaceCollections#migrate~requestContent'
+      - 'WorkspaceCollections#migrate~requestModel'
+      - 'WorkspaceCollections#migrate~requestModelMapper'
+      - 'WorkspaceCollections#migrate~requestModel'
+      - 'WorkspaceCollections#migrate~requestContent'
+      - 'WorkspaceCollections#migrate~serializationError'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

@@ -1,0 +1,256 @@
+items:
+  - uid: BatchServiceClient
+    id: BatchServiceClient
+    name: BatchServiceClient
+    summary: "Creates a new BatchServiceClient.\r\rImplements a batch service client able to produce OData batch requests from an array of operations.\rFor more information about OData batch processing refer to http://www.odata.org/developers/protocols/batch."
+    type: Class
+    syntax:
+      content: BatchServiceClient
+    fullName: BatchServiceClient
+    children:
+      - 'BatchServiceClient#operations'
+      - BatchServiceClient.BATCH_CODE
+      - 'BatchServiceClient#beginBatch'
+      - 'BatchServiceClient#operations'
+      - 'BatchServiceClient#isInBatch'
+      - 'BatchServiceClient#rollback'
+      - 'BatchServiceClient#operations'
+      - 'BatchServiceClient#hasOperations'
+      - 'BatchServiceClient#addOperation'
+      - 'BatchServiceClient#commitBatch'
+      - 'BatchServiceClient#operations'
+      - 'BatchServiceClient#processResponse'
+      - 'BatchServiceClient#processOperation'
+  - uid: 'BatchServiceClient#operations'
+    id: operations
+    parent: BatchServiceClient
+    name: operations
+    type: Field
+    syntax:
+      content: operations
+    fullName: BatchServiceClient.operations
+  - uid: BatchServiceClient.BATCH_CODE
+    id: BATCH_CODE
+    parent: BatchServiceClient
+    name: BATCH_CODE
+    type: Field
+    syntax:
+      content: BATCH_CODE
+    fullName: BatchServiceClient.BATCH_CODE
+  - uid: 'BatchServiceClient#beginBatch'
+    id: beginBatch
+    parent: BatchServiceClient
+    name: beginBatch()
+    summary: Begins a new batch scope.
+    type: Method
+    syntax:
+      return:
+        type: undefined
+      content: function beginBatch();
+    fullName: BatchServiceClient.beginBatch()
+  - uid: 'BatchServiceClient#operations'
+    id: operations
+    parent: BatchServiceClient
+    name: operations
+    type: Field
+    syntax:
+      content: operations
+    fullName: BatchServiceClient.operations
+  - uid: 'BatchServiceClient#isInBatch'
+    id: isInBatch
+    parent: BatchServiceClient
+    name: isInBatch()
+    summary: Determines if there is a current batch.
+    type: Method
+    syntax:
+      return:
+        type: boolean
+        description: Boolean value indicating if service is in a batch context or not.
+      content: function isInBatch();
+    fullName: BatchServiceClient.isInBatch()
+  - uid: 'BatchServiceClient#rollback'
+    id: rollback
+    parent: BatchServiceClient
+    name: rollback()
+    summary: Terminates the current batch scope by clearing current operations.
+    type: Method
+    syntax:
+      return:
+        type: undefined
+      content: function rollback();
+    fullName: BatchServiceClient.rollback()
+  - uid: 'BatchServiceClient#operations'
+    id: operations
+    parent: BatchServiceClient
+    name: operations
+    type: Field
+    syntax:
+      content: operations
+    fullName: BatchServiceClient.operations
+  - uid: 'BatchServiceClient#hasOperations'
+    id: hasOperations
+    parent: BatchServiceClient
+    name: hasOperations()
+    summary: >-
+      Returns a boolean value indicating weather there are operations queued up
+      for execution in a batch or not.
+    type: Method
+    syntax:
+      return:
+        type: Boolean
+        description: True if there are operations queued up; false otherwise.
+      content: function hasOperations();
+    fullName: BatchServiceClient.hasOperations()
+  - uid: 'BatchServiceClient#addOperation'
+    id: addOperation
+    parent: BatchServiceClient
+    name: 'addOperation(webResource, outputData)'
+    summary: Adds an operation to the batch.
+    type: Method
+    syntax:
+      parameters:
+        - id: webResource
+          type: object
+          description: The request parameters.
+        - id: outputData
+          type: object
+          description: The body for the operation.
+      return:
+        type: undefined
+      content: 'function addOperation(webResource, outputData);'
+    fullName: 'BatchServiceClient.addOperation(webResource, outputData)'
+    children:
+      - 'BatchServiceClient#addOperation~outputData'
+      - 'BatchServiceClient#addOperation~operation'
+  - uid: 'BatchServiceClient#commitBatch'
+    id: commitBatch
+    parent: BatchServiceClient
+    name: 'commitBatch(options, options.timeoutIntervalInMs, callback)'
+    summary: Commits the operations within the batch scope.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The response callback function.
+      return:
+        type: undefined
+      content: 'function commitBatch(options, options.timeoutIntervalInMs, callback);'
+    fullName: >-
+      BatchServiceClient.commitBatch(options, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BatchServiceClient#commitBatch~options'
+      - 'BatchServiceClient#commitBatch~callback'
+      - 'BatchServiceClient#commitBatch~options'
+      - 'BatchServiceClient#commitBatch~batchBoundary'
+      - 'BatchServiceClient#commitBatch~changesetBoundary'
+      - 'BatchServiceClient#commitBatch~body'
+      - 'BatchServiceClient#commitBatch~body'
+      - 'BatchServiceClient#commitBatch~body'
+      - 'BatchServiceClient#commitBatch~body'
+      - 'BatchServiceClient#commitBatch~webResource'
+      - 'BatchServiceClient#commitBatch~self'
+      - 'BatchServiceClient#commitBatch~requestOperations'
+      - 'BatchServiceClient#commitBatch~processResponseCallback'
+  - uid: 'BatchServiceClient#operations'
+    id: operations
+    parent: BatchServiceClient
+    name: operations
+    type: Field
+    syntax:
+      content: operations
+    fullName: BatchServiceClient.operations
+  - uid: 'BatchServiceClient#processResponse'
+    id: processResponse
+    parent: BatchServiceClient
+    name: processResponse(responseObject)
+    summary: Processes a batch response.
+    type: Method
+    syntax:
+      parameters:
+        - id: responseObject
+          type: object
+          description: The response object for the batch request.
+      return:
+        type: array
+        description: An array with the processed / parsed responses.
+      content: function processResponse(responseObject);
+    fullName: BatchServiceClient.processResponse(responseObject)
+    children:
+      - 'BatchServiceClient#processResponse~self'
+      - 'BatchServiceClient#processResponse~responses'
+      - 'BatchServiceClient#processResponse~responses'
+      - 'BatchServiceClient#processResponse~rawResponses'
+      - 'BatchServiceClient#processResponse~validResponse'
+  - uid: 'BatchServiceClient#processOperation'
+    id: processOperation
+    parent: BatchServiceClient
+    name: 'processOperation(webResource, rawResponse)'
+    summary: Processes a partial response.
+    type: Method
+    syntax:
+      parameters:
+        - id: webResource
+          type: WebResource
+          description: The web resource for the response.
+        - id: rawResponse
+          type: string
+          description: >-
+            The raw, unparsed, http response from the server for the batch
+            response.
+      return:
+        type: object
+        description: A response object.
+      content: 'function processOperation(webResource, rawResponse);'
+    fullName: 'BatchServiceClient.processOperation(webResource, rawResponse)'
+    children:
+      - 'BatchServiceClient#processOperation~self'
+      - 'BatchServiceClient#processOperation~responseObject'
+      - 'BatchServiceClient#processOperation~firstSpace'
+      - 'BatchServiceClient#processOperation~rawResponse'
+      - 'BatchServiceClient#processOperation~responseLines'
+      - 'BatchServiceClient#processOperation~isBody'
+references:
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: Boolean
+    name: Boolean
+    fullName: Boolean
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: int
+    name: int
+    fullName: int
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: WebResource
+    name: WebResource
+    fullName: WebResource
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false

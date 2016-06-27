@@ -1,0 +1,699 @@
+items:
+  - uid: Domains
+    id: Domains
+    name: Domains
+    type: Class
+    syntax:
+      content: Domains
+    fullName: Domains
+    children:
+      - 'Domains#client'
+      - 'Domains#getDomains'
+      - 'Domains#getDomain'
+      - 'Domains#createOrUpdateDomain'
+      - 'Domains#deleteDomain'
+      - 'Domains#updateDomain'
+      - 'Domains#getDomainOperation'
+  - uid: 'Domains#client'
+    id: client
+    parent: Domains
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Domains.client
+  - uid: 'Domains#getDomains'
+    id: getDomains
+    parent: Domains
+    name: 'getDomains(resourceGroupName, options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getDomains(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Domains.getDomains(resourceGroupName, options, options.customHeaders,
+      callback)
+    children:
+      - 'Domains#getDomains~client'
+      - 'Domains#getDomains~callback'
+      - 'Domains#getDomains~options'
+      - 'Domains#getDomains~requestUrl'
+      - 'Domains#getDomains~requestUrl'
+      - 'Domains#getDomains~requestUrl'
+      - 'Domains#getDomains~queryParameters'
+      - 'Domains#getDomains~requestUrl'
+      - 'Domains#getDomains~regex'
+      - 'Domains#getDomains~requestUrl'
+      - 'Domains#getDomains~httpRequest'
+      - 'Domains#getDomains~headerName'
+  - uid: 'Domains#getDomain'
+    id: getDomain
+    parent: Domains
+    name: >-
+      getDomain(resourceGroupName, domainName, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: domainName
+          type: string
+          description: Name of the domain
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getDomain(resourceGroupName, domainName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Domains.getDomain(resourceGroupName, domainName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Domains#getDomain~client'
+      - 'Domains#getDomain~callback'
+      - 'Domains#getDomain~options'
+      - 'Domains#getDomain~requestUrl'
+      - 'Domains#getDomain~requestUrl'
+      - 'Domains#getDomain~requestUrl'
+      - 'Domains#getDomain~requestUrl'
+      - 'Domains#getDomain~queryParameters'
+      - 'Domains#getDomain~requestUrl'
+      - 'Domains#getDomain~regex'
+      - 'Domains#getDomain~requestUrl'
+      - 'Domains#getDomain~httpRequest'
+      - 'Domains#getDomain~headerName'
+  - uid: 'Domains#createOrUpdateDomain'
+    id: createOrUpdateDomain
+    parent: Domains
+    name: >-
+      createOrUpdateDomain(resourceGroupName, domainName, domain,
+      domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
+      domain.contactTech, domain.contactTech.addressMailing,
+      domain.contactTech.addressMailing.address1,
+      domain.contactTech.addressMailing.address2,
+      domain.contactTech.addressMailing.city,
+      domain.contactTech.addressMailing.country,
+      domain.contactTech.addressMailing.postalCode,
+      domain.contactTech.addressMailing.state, domain.contactTech.email,
+      domain.contactTech.fax, domain.contactTech.jobTitle,
+      domain.contactTech.nameFirst, domain.contactTech.nameLast,
+      domain.contactTech.nameMiddle, domain.contactTech.organization,
+      domain.contactTech.phone, domain.registrationStatus,
+      domain.provisioningState, domain.nameServers, domain.privacy,
+      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
+      domain.autoRenew, domain.readyForDnsRecordManagement,
+      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
+      domain.consent.agreedBy, domain.consent.agreedAt,
+      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
+      domain.location, domain.type, domain.tags, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: '&gt;Name of the resource group'
+        - id: domainName
+          type: string
+          description: Name of the domain
+        - id: domain
+          type: object
+          description: Domain registration information
+        - id: domain.contactAdmin
+          type: object
+          description: Admin contact information
+        - id: domain.contactBilling
+          type: object
+          description: Billing contact information
+        - id: domain.contactRegistrant
+          type: object
+          description: Registrant contact information
+        - id: domain.contactTech
+          type: object
+          description: Technical contact information
+        - id: domain.contactTech.addressMailing
+          type: object
+          description: Mailing address
+        - id: domain.contactTech.addressMailing.address1
+          type: string
+          description: Address 1
+        - id: domain.contactTech.addressMailing.address2
+          type: string
+          description: Address 2
+        - id: domain.contactTech.addressMailing.city
+          type: string
+          description: City
+        - id: domain.contactTech.addressMailing.country
+          type: string
+          description: Country
+        - id: domain.contactTech.addressMailing.postalCode
+          type: string
+          description: Postal code
+        - id: domain.contactTech.addressMailing.state
+          type: string
+          description: State
+        - id: domain.contactTech.email
+          type: string
+          description: Email address
+        - id: domain.contactTech.fax
+          type: string
+          description: Fax number
+        - id: domain.contactTech.jobTitle
+          type: string
+          description: Job title
+        - id: domain.contactTech.nameFirst
+          type: string
+          description: First name
+        - id: domain.contactTech.nameLast
+          type: string
+          description: Last name
+        - id: domain.contactTech.nameMiddle
+          type: string
+          description: Middle name
+        - id: domain.contactTech.organization
+          type: string
+          description: Organization
+        - id: domain.contactTech.phone
+          type: string
+          description: Phone number
+        - id: domain.registrationStatus
+          type: string
+          description: "Domain registration status.\rPossible values include: 'Active', 'Awaiting', 'Cancelled', 'Confiscated',\r'Disabled', 'Excluded', 'Expired', 'Failed', 'Held', 'Locked', 'Parked',\r'Pending', 'Reserved', 'Reverted', 'Suspended', 'Transferred', 'Unknown',\r'Unlocked', 'Unparked', 'Updated', 'JsonConverterFailed'"
+        - id: domain.provisioningState
+          type: string
+          description: "Domain provisioning state.\rPossible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress',\r'Deleting'"
+        - id: domain.nameServers
+          type: array
+          description: Name servers
+        - id: domain.privacy
+          type: boolean
+          description: "If true then domain privacy is enabled\rfor this domain"
+        - id: domain.createdTime
+          type: date
+          description: Domain creation timestamp
+        - id: domain.expirationTime
+          type: date
+          description: Domain expiration timestamp
+        - id: domain.lastRenewedTime
+          type: date
+          description: "Timestamp when the domain was\rrenewed last time"
+        - id: domain.autoRenew
+          type: boolean
+          description: "If true then domain will renewed\rautomatically"
+        - id: domain.readyForDnsRecordManagement
+          type: boolean
+          description: "If true then Azure\rcan assign this domain to Web Apps. This value will be true if domain\rregistration status is active and it is hosted on name servers Azure has\rprogrammatic access to"
+        - id: domain.managedHostNames
+          type: array
+          description: "All hostnames derived from the\rdomain and assigned to Azure resources"
+        - id: domain.consent
+          type: object
+          description: Legal agreement consent
+        - id: domain.consent.agreementKeys
+          type: array
+          description: "List of applicable legal\ragreement keys. This list can be retrieved using ListLegalAgreements Api\runder TopLevelDomain resource"
+        - id: domain.consent.agreedBy
+          type: string
+          description: Client IP address
+        - id: domain.consent.agreedAt
+          type: date
+          description: "Timestamp when the agreements were\raccepted"
+        - id: domain.domainNotRenewableReasons
+          type: array
+          description: "Reasons why domain is not\rrenewable"
+        - id: domain.id
+          type: string
+          description: Resource Id
+        - id: domain.name
+          type: string
+          description: Resource Name
+        - id: domain.kind
+          type: string
+          description: Kind of resource
+        - id: domain.location
+          type: string
+          description: Resource Location
+        - id: domain.type
+          type: string
+          description: Resource type
+        - id: domain.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateDomain(resourceGroupName, domainName, domain,
+        domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
+        domain.contactTech, domain.contactTech.addressMailing,
+        domain.contactTech.addressMailing.address1,
+        domain.contactTech.addressMailing.address2,
+        domain.contactTech.addressMailing.city,
+        domain.contactTech.addressMailing.country,
+        domain.contactTech.addressMailing.postalCode,
+        domain.contactTech.addressMailing.state, domain.contactTech.email,
+        domain.contactTech.fax, domain.contactTech.jobTitle,
+        domain.contactTech.nameFirst, domain.contactTech.nameLast,
+        domain.contactTech.nameMiddle, domain.contactTech.organization,
+        domain.contactTech.phone, domain.registrationStatus,
+        domain.provisioningState, domain.nameServers, domain.privacy,
+        domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
+        domain.autoRenew, domain.readyForDnsRecordManagement,
+        domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
+        domain.consent.agreedBy, domain.consent.agreedAt,
+        domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
+        domain.location, domain.type, domain.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Domains.createOrUpdateDomain(resourceGroupName, domainName, domain,
+      domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
+      domain.contactTech, domain.contactTech.addressMailing,
+      domain.contactTech.addressMailing.address1,
+      domain.contactTech.addressMailing.address2,
+      domain.contactTech.addressMailing.city,
+      domain.contactTech.addressMailing.country,
+      domain.contactTech.addressMailing.postalCode,
+      domain.contactTech.addressMailing.state, domain.contactTech.email,
+      domain.contactTech.fax, domain.contactTech.jobTitle,
+      domain.contactTech.nameFirst, domain.contactTech.nameLast,
+      domain.contactTech.nameMiddle, domain.contactTech.organization,
+      domain.contactTech.phone, domain.registrationStatus,
+      domain.provisioningState, domain.nameServers, domain.privacy,
+      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
+      domain.autoRenew, domain.readyForDnsRecordManagement,
+      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
+      domain.consent.agreedBy, domain.consent.agreedAt,
+      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
+      domain.location, domain.type, domain.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'Domains#createOrUpdateDomain~client'
+      - 'Domains#createOrUpdateDomain~callback'
+      - 'Domains#createOrUpdateDomain~options'
+      - 'Domains#createOrUpdateDomain~requestUrl'
+      - 'Domains#createOrUpdateDomain~requestUrl'
+      - 'Domains#createOrUpdateDomain~requestUrl'
+      - 'Domains#createOrUpdateDomain~requestUrl'
+      - 'Domains#createOrUpdateDomain~queryParameters'
+      - 'Domains#createOrUpdateDomain~requestUrl'
+      - 'Domains#createOrUpdateDomain~regex'
+      - 'Domains#createOrUpdateDomain~requestUrl'
+      - 'Domains#createOrUpdateDomain~httpRequest'
+      - 'Domains#createOrUpdateDomain~headerName'
+      - 'Domains#createOrUpdateDomain~requestContent'
+      - 'Domains#createOrUpdateDomain~requestModel'
+      - 'Domains#createOrUpdateDomain~requestModelMapper'
+      - 'Domains#createOrUpdateDomain~requestModel'
+      - 'Domains#createOrUpdateDomain~requestContent'
+      - 'Domains#createOrUpdateDomain~serializationError'
+  - uid: 'Domains#deleteDomain'
+    id: deleteDomain
+    parent: Domains
+    name: >-
+      deleteDomain(resourceGroupName, domainName, options,
+      options.forceHardDeleteDomain, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: domainName
+          type: string
+          description: Name of the domain
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.forceHardDeleteDomain
+          type: boolean
+          description: "If true then the domain\rwill be deleted immediately instead of after 24 hours"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteDomain(resourceGroupName, domainName, options,
+        options.forceHardDeleteDomain, options.customHeaders, callback);
+    fullName: >-
+      Domains.deleteDomain(resourceGroupName, domainName, options,
+      options.forceHardDeleteDomain, options.customHeaders, callback)
+    children:
+      - 'Domains#deleteDomain~client'
+      - 'Domains#deleteDomain~callback'
+      - 'Domains#deleteDomain~options'
+      - 'Domains#deleteDomain~forceHardDeleteDomain'
+      - 'Domains#deleteDomain~requestUrl'
+      - 'Domains#deleteDomain~requestUrl'
+      - 'Domains#deleteDomain~requestUrl'
+      - 'Domains#deleteDomain~requestUrl'
+      - 'Domains#deleteDomain~queryParameters'
+      - 'Domains#deleteDomain~requestUrl'
+      - 'Domains#deleteDomain~regex'
+      - 'Domains#deleteDomain~requestUrl'
+      - 'Domains#deleteDomain~httpRequest'
+      - 'Domains#deleteDomain~headerName'
+  - uid: 'Domains#updateDomain'
+    id: updateDomain
+    parent: Domains
+    name: >-
+      updateDomain(resourceGroupName, domainName, domain, domain.contactAdmin,
+      domain.contactBilling, domain.contactRegistrant, domain.contactTech,
+      domain.contactTech.addressMailing,
+      domain.contactTech.addressMailing.address1,
+      domain.contactTech.addressMailing.address2,
+      domain.contactTech.addressMailing.city,
+      domain.contactTech.addressMailing.country,
+      domain.contactTech.addressMailing.postalCode,
+      domain.contactTech.addressMailing.state, domain.contactTech.email,
+      domain.contactTech.fax, domain.contactTech.jobTitle,
+      domain.contactTech.nameFirst, domain.contactTech.nameLast,
+      domain.contactTech.nameMiddle, domain.contactTech.organization,
+      domain.contactTech.phone, domain.registrationStatus,
+      domain.provisioningState, domain.nameServers, domain.privacy,
+      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
+      domain.autoRenew, domain.readyForDnsRecordManagement,
+      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
+      domain.consent.agreedBy, domain.consent.agreedAt,
+      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
+      domain.location, domain.type, domain.tags, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: '&gt;Name of the resource group'
+        - id: domainName
+          type: string
+          description: Name of the domain
+        - id: domain
+          type: object
+          description: Domain registration information
+        - id: domain.contactAdmin
+          type: object
+          description: Admin contact information
+        - id: domain.contactBilling
+          type: object
+          description: Billing contact information
+        - id: domain.contactRegistrant
+          type: object
+          description: Registrant contact information
+        - id: domain.contactTech
+          type: object
+          description: Technical contact information
+        - id: domain.contactTech.addressMailing
+          type: object
+          description: Mailing address
+        - id: domain.contactTech.addressMailing.address1
+          type: string
+          description: Address 1
+        - id: domain.contactTech.addressMailing.address2
+          type: string
+          description: Address 2
+        - id: domain.contactTech.addressMailing.city
+          type: string
+          description: City
+        - id: domain.contactTech.addressMailing.country
+          type: string
+          description: Country
+        - id: domain.contactTech.addressMailing.postalCode
+          type: string
+          description: Postal code
+        - id: domain.contactTech.addressMailing.state
+          type: string
+          description: State
+        - id: domain.contactTech.email
+          type: string
+          description: Email address
+        - id: domain.contactTech.fax
+          type: string
+          description: Fax number
+        - id: domain.contactTech.jobTitle
+          type: string
+          description: Job title
+        - id: domain.contactTech.nameFirst
+          type: string
+          description: First name
+        - id: domain.contactTech.nameLast
+          type: string
+          description: Last name
+        - id: domain.contactTech.nameMiddle
+          type: string
+          description: Middle name
+        - id: domain.contactTech.organization
+          type: string
+          description: Organization
+        - id: domain.contactTech.phone
+          type: string
+          description: Phone number
+        - id: domain.registrationStatus
+          type: string
+          description: "Domain registration status.\rPossible values include: 'Active', 'Awaiting', 'Cancelled', 'Confiscated',\r'Disabled', 'Excluded', 'Expired', 'Failed', 'Held', 'Locked', 'Parked',\r'Pending', 'Reserved', 'Reverted', 'Suspended', 'Transferred', 'Unknown',\r'Unlocked', 'Unparked', 'Updated', 'JsonConverterFailed'"
+        - id: domain.provisioningState
+          type: string
+          description: "Domain provisioning state.\rPossible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress',\r'Deleting'"
+        - id: domain.nameServers
+          type: array
+          description: Name servers
+        - id: domain.privacy
+          type: boolean
+          description: "If true then domain privacy is enabled\rfor this domain"
+        - id: domain.createdTime
+          type: date
+          description: Domain creation timestamp
+        - id: domain.expirationTime
+          type: date
+          description: Domain expiration timestamp
+        - id: domain.lastRenewedTime
+          type: date
+          description: "Timestamp when the domain was\rrenewed last time"
+        - id: domain.autoRenew
+          type: boolean
+          description: "If true then domain will renewed\rautomatically"
+        - id: domain.readyForDnsRecordManagement
+          type: boolean
+          description: "If true then Azure\rcan assign this domain to Web Apps. This value will be true if domain\rregistration status is active and it is hosted on name servers Azure has\rprogrammatic access to"
+        - id: domain.managedHostNames
+          type: array
+          description: "All hostnames derived from the\rdomain and assigned to Azure resources"
+        - id: domain.consent
+          type: object
+          description: Legal agreement consent
+        - id: domain.consent.agreementKeys
+          type: array
+          description: "List of applicable legal\ragreement keys. This list can be retrieved using ListLegalAgreements Api\runder TopLevelDomain resource"
+        - id: domain.consent.agreedBy
+          type: string
+          description: Client IP address
+        - id: domain.consent.agreedAt
+          type: date
+          description: "Timestamp when the agreements were\raccepted"
+        - id: domain.domainNotRenewableReasons
+          type: array
+          description: "Reasons why domain is not\rrenewable"
+        - id: domain.id
+          type: string
+          description: Resource Id
+        - id: domain.name
+          type: string
+          description: Resource Name
+        - id: domain.kind
+          type: string
+          description: Kind of resource
+        - id: domain.location
+          type: string
+          description: Resource Location
+        - id: domain.type
+          type: string
+          description: Resource type
+        - id: domain.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateDomain(resourceGroupName, domainName, domain,
+        domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
+        domain.contactTech, domain.contactTech.addressMailing,
+        domain.contactTech.addressMailing.address1,
+        domain.contactTech.addressMailing.address2,
+        domain.contactTech.addressMailing.city,
+        domain.contactTech.addressMailing.country,
+        domain.contactTech.addressMailing.postalCode,
+        domain.contactTech.addressMailing.state, domain.contactTech.email,
+        domain.contactTech.fax, domain.contactTech.jobTitle,
+        domain.contactTech.nameFirst, domain.contactTech.nameLast,
+        domain.contactTech.nameMiddle, domain.contactTech.organization,
+        domain.contactTech.phone, domain.registrationStatus,
+        domain.provisioningState, domain.nameServers, domain.privacy,
+        domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
+        domain.autoRenew, domain.readyForDnsRecordManagement,
+        domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
+        domain.consent.agreedBy, domain.consent.agreedAt,
+        domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
+        domain.location, domain.type, domain.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Domains.updateDomain(resourceGroupName, domainName, domain,
+      domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
+      domain.contactTech, domain.contactTech.addressMailing,
+      domain.contactTech.addressMailing.address1,
+      domain.contactTech.addressMailing.address2,
+      domain.contactTech.addressMailing.city,
+      domain.contactTech.addressMailing.country,
+      domain.contactTech.addressMailing.postalCode,
+      domain.contactTech.addressMailing.state, domain.contactTech.email,
+      domain.contactTech.fax, domain.contactTech.jobTitle,
+      domain.contactTech.nameFirst, domain.contactTech.nameLast,
+      domain.contactTech.nameMiddle, domain.contactTech.organization,
+      domain.contactTech.phone, domain.registrationStatus,
+      domain.provisioningState, domain.nameServers, domain.privacy,
+      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
+      domain.autoRenew, domain.readyForDnsRecordManagement,
+      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
+      domain.consent.agreedBy, domain.consent.agreedAt,
+      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
+      domain.location, domain.type, domain.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'Domains#updateDomain~client'
+      - 'Domains#updateDomain~callback'
+      - 'Domains#updateDomain~options'
+      - 'Domains#updateDomain~requestUrl'
+      - 'Domains#updateDomain~requestUrl'
+      - 'Domains#updateDomain~requestUrl'
+      - 'Domains#updateDomain~requestUrl'
+      - 'Domains#updateDomain~queryParameters'
+      - 'Domains#updateDomain~requestUrl'
+      - 'Domains#updateDomain~regex'
+      - 'Domains#updateDomain~requestUrl'
+      - 'Domains#updateDomain~httpRequest'
+      - 'Domains#updateDomain~headerName'
+      - 'Domains#updateDomain~requestContent'
+      - 'Domains#updateDomain~requestModel'
+      - 'Domains#updateDomain~requestModelMapper'
+      - 'Domains#updateDomain~requestModel'
+      - 'Domains#updateDomain~requestContent'
+      - 'Domains#updateDomain~serializationError'
+  - uid: 'Domains#getDomainOperation'
+    id: getDomainOperation
+    parent: Domains
+    name: >-
+      getDomainOperation(resourceGroupName, domainName, operationId, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group
+        - id: domainName
+          type: string
+          description: Name of the domain
+        - id: operationId
+          type: string
+          description: Domain purchase operation Id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getDomainOperation(resourceGroupName, domainName, operationId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Domains.getDomainOperation(resourceGroupName, domainName, operationId,
+      options, options.customHeaders, callback)
+    children:
+      - 'Domains#getDomainOperation~client'
+      - 'Domains#getDomainOperation~callback'
+      - 'Domains#getDomainOperation~options'
+      - 'Domains#getDomainOperation~requestUrl'
+      - 'Domains#getDomainOperation~requestUrl'
+      - 'Domains#getDomainOperation~requestUrl'
+      - 'Domains#getDomainOperation~requestUrl'
+      - 'Domains#getDomainOperation~requestUrl'
+      - 'Domains#getDomainOperation~queryParameters'
+      - 'Domains#getDomainOperation~requestUrl'
+      - 'Domains#getDomainOperation~regex'
+      - 'Domains#getDomainOperation~requestUrl'
+      - 'Domains#getDomainOperation~httpRequest'
+      - 'Domains#getDomainOperation~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false

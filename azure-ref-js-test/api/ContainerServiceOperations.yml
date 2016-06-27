@@ -1,0 +1,491 @@
+items:
+  - uid: ContainerServiceOperations
+    id: ContainerServiceOperations
+    name: ContainerServiceOperations
+    type: Class
+    syntax:
+      content: ContainerServiceOperations
+    fullName: ContainerServiceOperations
+    children:
+      - 'ContainerServiceOperations#client'
+      - 'ContainerServiceOperations#createOrUpdate'
+      - 'ContainerServiceOperations#beginCreateOrUpdate'
+      - 'ContainerServiceOperations#get'
+      - 'ContainerServiceOperations#deleteMethod'
+      - 'ContainerServiceOperations#beginDeleteMethod'
+      - 'ContainerServiceOperations#list'
+  - uid: 'ContainerServiceOperations#client'
+    id: client
+    parent: ContainerServiceOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ContainerServiceOperations.client
+  - uid: 'ContainerServiceOperations#createOrUpdate'
+    id: createOrUpdate
+    parent: ContainerServiceOperations
+    name: >-
+      createOrUpdate(resourceGroupName, containerServiceName, parameters,
+      parameters.orchestratorProfile,
+      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
+      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
+      parameters.agentPoolProfiles, parameters.windowsProfile,
+      parameters.windowsProfile.adminUsername,
+      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
+      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
+      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.vmDiagnostics,
+      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
+      parameters.tags, options, options.customHeaders, callback)
+    summary: The operation to create or update a container service.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: containerServiceName
+          type: string
+          description: "The name of the container service\rwithin the given subscription and resource group."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Create Container\rService operation."
+        - id: parameters.orchestratorProfile
+          type: object
+          description: Properties of orchestrator
+        - id: parameters.orchestratorProfile.orchestratorType
+          type: string
+          description: "Specifies\rwhat orchestrator will be used to manage container cluster resources.\rPossible values include: 'Swarm', 'DCOS'"
+        - id: parameters.masterProfile
+          type: object
+          description: Properties of master agents
+        - id: parameters.masterProfile.count
+          type: number
+          description: "Number of masters (VMs) in\rthe container cluster"
+        - id: parameters.masterProfile.dnsPrefix
+          type: string
+          description: "DNS prefix to be used\rto create FQDN for master"
+        - id: parameters.agentPoolProfiles
+          type: array
+          description: Properties of agent pools
+        - id: parameters.windowsProfile
+          type: object
+          description: Properties of Windows VMs
+        - id: parameters.windowsProfile.adminUsername
+          type: string
+          description: "The administrator\rusername to use for Windows VMs"
+        - id: parameters.windowsProfile.adminPassword
+          type: string
+          description: "The administrator\rpassword to use for Windows VMs"
+        - id: parameters.linuxProfile
+          type: object
+          description: Properties for Linux VMs
+        - id: parameters.linuxProfile.adminUsername
+          type: string
+          description: "The administrator\rusername to use for all Linux VMs"
+        - id: parameters.linuxProfile.ssh
+          type: object
+          description: "Specifies the ssh key\rconfiguration for Linux VMs"
+        - id: parameters.linuxProfile.ssh.publicKeys
+          type: array
+          description: "Gets or sets the\rlist of SSH public keys used to authenticate with Linux based VMs"
+        - id: parameters.diagnosticsProfile
+          type: object
+          description: "Properties for Diagnostic\rAgent"
+        - id: parameters.diagnosticsProfile.vmDiagnostics
+          type: object
+          description: "Profile for\rcontainer service VM diagnostic agent"
+        - id: parameters.diagnosticsProfile.vmDiagnostics.enabled
+          type: boolean
+          description: "Gets\ror sets whether VM Diagnostic Agent should be provisioned on the Virtual\rMachine."
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerService} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, containerServiceName,
+        parameters, parameters.orchestratorProfile,
+        parameters.orchestratorProfile.orchestratorType,
+        parameters.masterProfile, parameters.masterProfile.count,
+        parameters.masterProfile.dnsPrefix, parameters.agentPoolProfiles,
+        parameters.windowsProfile, parameters.windowsProfile.adminUsername,
+        parameters.windowsProfile.adminPassword, parameters.linuxProfile,
+        parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
+        parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
+        parameters.diagnosticsProfile.vmDiagnostics,
+        parameters.diagnosticsProfile.vmDiagnostics.enabled,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ContainerServiceOperations.createOrUpdate(resourceGroupName,
+      containerServiceName, parameters, parameters.orchestratorProfile,
+      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
+      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
+      parameters.agentPoolProfiles, parameters.windowsProfile,
+      parameters.windowsProfile.adminUsername,
+      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
+      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
+      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.vmDiagnostics,
+      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
+      parameters.tags, options, options.customHeaders, callback)
+    children:
+      - 'ContainerServiceOperations#createOrUpdate~client'
+      - 'ContainerServiceOperations#createOrUpdate~callback'
+      - 'ContainerServiceOperations#createOrUpdate~options'
+  - uid: 'ContainerServiceOperations#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: ContainerServiceOperations
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, containerServiceName, parameters,
+      parameters.orchestratorProfile,
+      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
+      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
+      parameters.agentPoolProfiles, parameters.windowsProfile,
+      parameters.windowsProfile.adminUsername,
+      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
+      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
+      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.vmDiagnostics,
+      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
+      parameters.tags, options, options.customHeaders, callback)
+    summary: The operation to create or update a container service.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: containerServiceName
+          type: string
+          description: "The name of the container service\rwithin the given subscription and resource group."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Create Container\rService operation."
+        - id: parameters.orchestratorProfile
+          type: object
+          description: Properties of orchestrator
+        - id: parameters.orchestratorProfile.orchestratorType
+          type: string
+          description: "Specifies\rwhat orchestrator will be used to manage container cluster resources.\rPossible values include: 'Swarm', 'DCOS'"
+        - id: parameters.masterProfile
+          type: object
+          description: Properties of master agents
+        - id: parameters.masterProfile.count
+          type: number
+          description: "Number of masters (VMs) in\rthe container cluster"
+        - id: parameters.masterProfile.dnsPrefix
+          type: string
+          description: "DNS prefix to be used\rto create FQDN for master"
+        - id: parameters.agentPoolProfiles
+          type: array
+          description: Properties of agent pools
+        - id: parameters.windowsProfile
+          type: object
+          description: Properties of Windows VMs
+        - id: parameters.windowsProfile.adminUsername
+          type: string
+          description: "The administrator\rusername to use for Windows VMs"
+        - id: parameters.windowsProfile.adminPassword
+          type: string
+          description: "The administrator\rpassword to use for Windows VMs"
+        - id: parameters.linuxProfile
+          type: object
+          description: Properties for Linux VMs
+        - id: parameters.linuxProfile.adminUsername
+          type: string
+          description: "The administrator\rusername to use for all Linux VMs"
+        - id: parameters.linuxProfile.ssh
+          type: object
+          description: "Specifies the ssh key\rconfiguration for Linux VMs"
+        - id: parameters.linuxProfile.ssh.publicKeys
+          type: array
+          description: "Gets or sets the\rlist of SSH public keys used to authenticate with Linux based VMs"
+        - id: parameters.diagnosticsProfile
+          type: object
+          description: "Properties for Diagnostic\rAgent"
+        - id: parameters.diagnosticsProfile.vmDiagnostics
+          type: object
+          description: "Profile for\rcontainer service VM diagnostic agent"
+        - id: parameters.diagnosticsProfile.vmDiagnostics.enabled
+          type: boolean
+          description: "Gets\ror sets whether VM Diagnostic Agent should be provisioned on the Virtual\rMachine."
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerService} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, containerServiceName,
+        parameters, parameters.orchestratorProfile,
+        parameters.orchestratorProfile.orchestratorType,
+        parameters.masterProfile, parameters.masterProfile.count,
+        parameters.masterProfile.dnsPrefix, parameters.agentPoolProfiles,
+        parameters.windowsProfile, parameters.windowsProfile.adminUsername,
+        parameters.windowsProfile.adminPassword, parameters.linuxProfile,
+        parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
+        parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
+        parameters.diagnosticsProfile.vmDiagnostics,
+        parameters.diagnosticsProfile.vmDiagnostics.enabled,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ContainerServiceOperations.beginCreateOrUpdate(resourceGroupName,
+      containerServiceName, parameters, parameters.orchestratorProfile,
+      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
+      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
+      parameters.agentPoolProfiles, parameters.windowsProfile,
+      parameters.windowsProfile.adminUsername,
+      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
+      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
+      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.vmDiagnostics,
+      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
+      parameters.tags, options, options.customHeaders, callback)
+    children:
+      - 'ContainerServiceOperations#beginCreateOrUpdate~client'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~callback'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~options'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~apiVersion'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestUrl'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestUrl'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestUrl'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestUrl'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~queryParameters'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestUrl'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~regex'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestUrl'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~httpRequest'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~headerName'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestContent'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestModel'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestModelMapper'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestModel'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~requestContent'
+      - 'ContainerServiceOperations#beginCreateOrUpdate~serializationError'
+  - uid: 'ContainerServiceOperations#get'
+    id: get
+    parent: ContainerServiceOperations
+    name: >-
+      get(resourceGroupName, containerServiceName, options,
+      options.customHeaders, callback)
+    summary: The operation to get a container service.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: containerServiceName
+          type: string
+          description: "The name of the container service\rwithin the given subscription and resource group."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerService} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, containerServiceName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ContainerServiceOperations.get(resourceGroupName, containerServiceName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ContainerServiceOperations#get~client'
+      - 'ContainerServiceOperations#get~callback'
+      - 'ContainerServiceOperations#get~options'
+      - 'ContainerServiceOperations#get~apiVersion'
+      - 'ContainerServiceOperations#get~requestUrl'
+      - 'ContainerServiceOperations#get~requestUrl'
+      - 'ContainerServiceOperations#get~requestUrl'
+      - 'ContainerServiceOperations#get~requestUrl'
+      - 'ContainerServiceOperations#get~queryParameters'
+      - 'ContainerServiceOperations#get~requestUrl'
+      - 'ContainerServiceOperations#get~regex'
+      - 'ContainerServiceOperations#get~requestUrl'
+      - 'ContainerServiceOperations#get~httpRequest'
+      - 'ContainerServiceOperations#get~headerName'
+  - uid: 'ContainerServiceOperations#deleteMethod'
+    id: deleteMethod
+    parent: ContainerServiceOperations
+    name: >-
+      deleteMethod(resourceGroupName, containerServiceName, options,
+      options.customHeaders, callback)
+    summary: The operation to delete a container service.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: containerServiceName
+          type: string
+          description: "The name of the container service\rwithin the given subscription and resource group."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, containerServiceName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ContainerServiceOperations.deleteMethod(resourceGroupName,
+      containerServiceName, options, options.customHeaders, callback)
+    children:
+      - 'ContainerServiceOperations#deleteMethod~client'
+      - 'ContainerServiceOperations#deleteMethod~callback'
+      - 'ContainerServiceOperations#deleteMethod~options'
+  - uid: 'ContainerServiceOperations#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: ContainerServiceOperations
+    name: >-
+      beginDeleteMethod(resourceGroupName, containerServiceName, options,
+      options.customHeaders, callback)
+    summary: The operation to delete a container service.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: containerServiceName
+          type: string
+          description: "The name of the container service\rwithin the given subscription and resource group."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, containerServiceName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ContainerServiceOperations.beginDeleteMethod(resourceGroupName,
+      containerServiceName, options, options.customHeaders, callback)
+    children:
+      - 'ContainerServiceOperations#beginDeleteMethod~client'
+      - 'ContainerServiceOperations#beginDeleteMethod~callback'
+      - 'ContainerServiceOperations#beginDeleteMethod~options'
+      - 'ContainerServiceOperations#beginDeleteMethod~apiVersion'
+      - 'ContainerServiceOperations#beginDeleteMethod~requestUrl'
+      - 'ContainerServiceOperations#beginDeleteMethod~requestUrl'
+      - 'ContainerServiceOperations#beginDeleteMethod~requestUrl'
+      - 'ContainerServiceOperations#beginDeleteMethod~requestUrl'
+      - 'ContainerServiceOperations#beginDeleteMethod~queryParameters'
+      - 'ContainerServiceOperations#beginDeleteMethod~requestUrl'
+      - 'ContainerServiceOperations#beginDeleteMethod~regex'
+      - 'ContainerServiceOperations#beginDeleteMethod~requestUrl'
+      - 'ContainerServiceOperations#beginDeleteMethod~httpRequest'
+      - 'ContainerServiceOperations#beginDeleteMethod~headerName'
+  - uid: 'ContainerServiceOperations#list'
+    id: list
+    parent: ContainerServiceOperations
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: The operation to list container services.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerServiceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ContainerServiceOperations.list(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ContainerServiceOperations#list~client'
+      - 'ContainerServiceOperations#list~callback'
+      - 'ContainerServiceOperations#list~options'
+      - 'ContainerServiceOperations#list~apiVersion'
+      - 'ContainerServiceOperations#list~requestUrl'
+      - 'ContainerServiceOperations#list~requestUrl'
+      - 'ContainerServiceOperations#list~requestUrl'
+      - 'ContainerServiceOperations#list~queryParameters'
+      - 'ContainerServiceOperations#list~requestUrl'
+      - 'ContainerServiceOperations#list~regex'
+      - 'ContainerServiceOperations#list~requestUrl'
+      - 'ContainerServiceOperations#list~httpRequest'
+      - 'ContainerServiceOperations#list~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

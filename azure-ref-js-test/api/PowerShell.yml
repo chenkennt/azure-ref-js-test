@@ -1,0 +1,627 @@
+items:
+  - uid: PowerShell
+    id: PowerShell
+    name: PowerShell
+    type: Class
+    syntax:
+      content: PowerShell
+    fullName: PowerShell
+    children:
+      - 'PowerShell#client'
+      - 'PowerShell#listSession'
+      - 'PowerShell#createSession'
+      - 'PowerShell#beginCreateSession'
+      - 'PowerShell#getCommandStatus'
+      - 'PowerShell#updateCommand'
+      - 'PowerShell#beginUpdateCommand'
+      - 'PowerShell#invokeCommand'
+      - 'PowerShell#beginInvokeCommand'
+      - 'PowerShell#cancelCommand'
+      - 'PowerShell#beginCancelCommand'
+      - 'PowerShell#tabCompletion'
+  - uid: 'PowerShell#client'
+    id: client
+    parent: PowerShell
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: PowerShell.client
+  - uid: 'PowerShell#listSession'
+    id: listSession
+    parent: PowerShell
+    name: >-
+      listSession(resourceGroupName, nodeName, session, options,
+      options.customHeaders, callback)
+    summary: Gets a list of the active sessions.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellSessionResources} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listSession(resourceGroupName, nodeName, session, options,
+        options.customHeaders, callback);
+    fullName: >-
+      PowerShell.listSession(resourceGroupName, nodeName, session, options,
+      options.customHeaders, callback)
+    children:
+      - 'PowerShell#listSession~client'
+      - 'PowerShell#listSession~callback'
+      - 'PowerShell#listSession~options'
+      - 'PowerShell#listSession~requestUrl'
+      - 'PowerShell#listSession~requestUrl'
+      - 'PowerShell#listSession~requestUrl'
+      - 'PowerShell#listSession~requestUrl'
+      - 'PowerShell#listSession~requestUrl'
+      - 'PowerShell#listSession~queryParameters'
+      - 'PowerShell#listSession~requestUrl'
+      - 'PowerShell#listSession~regex'
+      - 'PowerShell#listSession~requestUrl'
+      - 'PowerShell#listSession~httpRequest'
+      - 'PowerShell#listSession~headerName'
+  - uid: 'PowerShell#createSession'
+    id: createSession
+    parent: PowerShell
+    name: >-
+      createSession(resourceGroupName, nodeName, session, pssession, options,
+      options.customHeaders, callback)
+    summary: Creates a PowerShell session
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellSessionResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createSession(resourceGroupName, nodeName, session, pssession,
+        options, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.createSession(resourceGroupName, nodeName, session, pssession,
+      options, options.customHeaders, callback)
+    children:
+      - 'PowerShell#createSession~client'
+      - 'PowerShell#createSession~callback'
+      - 'PowerShell#createSession~options'
+  - uid: 'PowerShell#beginCreateSession'
+    id: beginCreateSession
+    parent: PowerShell
+    name: >-
+      beginCreateSession(resourceGroupName, nodeName, session, pssession,
+      options, options.customHeaders, callback)
+    summary: Creates a PowerShell session
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellSessionResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateSession(resourceGroupName, nodeName, session,
+        pssession, options, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.beginCreateSession(resourceGroupName, nodeName, session,
+      pssession, options, options.customHeaders, callback)
+    children:
+      - 'PowerShell#beginCreateSession~client'
+      - 'PowerShell#beginCreateSession~callback'
+      - 'PowerShell#beginCreateSession~options'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~queryParameters'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~regex'
+      - 'PowerShell#beginCreateSession~requestUrl'
+      - 'PowerShell#beginCreateSession~httpRequest'
+      - 'PowerShell#beginCreateSession~headerName'
+  - uid: 'PowerShell#getCommandStatus'
+    id: getCommandStatus
+    parent: PowerShell
+    name: >-
+      getCommandStatus(resourceGroupName, nodeName, session, pssession, options,
+      options.expand, options.customHeaders, callback)
+    summary: Gets the status of a command.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.expand
+          type: string
+          description: "Gets current output from an ongoing call.\rPossible values include: 'output'"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellCommandStatus} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCommandStatus(resourceGroupName, nodeName, session,
+        pssession, options, options.expand, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.getCommandStatus(resourceGroupName, nodeName, session,
+      pssession, options, options.expand, options.customHeaders, callback)
+    children:
+      - 'PowerShell#getCommandStatus~client'
+      - 'PowerShell#getCommandStatus~callback'
+      - 'PowerShell#getCommandStatus~options'
+      - 'PowerShell#getCommandStatus~expand'
+      - 'PowerShell#getCommandStatus~allowedValues'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~queryParameters'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~regex'
+      - 'PowerShell#getCommandStatus~requestUrl'
+      - 'PowerShell#getCommandStatus~httpRequest'
+      - 'PowerShell#getCommandStatus~headerName'
+  - uid: 'PowerShell#updateCommand'
+    id: updateCommand
+    parent: PowerShell
+    name: >-
+      updateCommand(resourceGroupName, nodeName, session, pssession, options,
+      options.customHeaders, callback)
+    summary: updates a running PowerShell command with more data.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellCommandResults} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateCommand(resourceGroupName, nodeName, session, pssession,
+        options, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.updateCommand(resourceGroupName, nodeName, session, pssession,
+      options, options.customHeaders, callback)
+    children:
+      - 'PowerShell#updateCommand~client'
+      - 'PowerShell#updateCommand~callback'
+      - 'PowerShell#updateCommand~options'
+  - uid: 'PowerShell#beginUpdateCommand'
+    id: beginUpdateCommand
+    parent: PowerShell
+    name: >-
+      beginUpdateCommand(resourceGroupName, nodeName, session, pssession,
+      options, options.customHeaders, callback)
+    summary: updates a running PowerShell command with more data.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellCommandResults} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginUpdateCommand(resourceGroupName, nodeName, session,
+        pssession, options, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.beginUpdateCommand(resourceGroupName, nodeName, session,
+      pssession, options, options.customHeaders, callback)
+    children:
+      - 'PowerShell#beginUpdateCommand~client'
+      - 'PowerShell#beginUpdateCommand~callback'
+      - 'PowerShell#beginUpdateCommand~options'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~queryParameters'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~regex'
+      - 'PowerShell#beginUpdateCommand~requestUrl'
+      - 'PowerShell#beginUpdateCommand~httpRequest'
+      - 'PowerShell#beginUpdateCommand~headerName'
+  - uid: 'PowerShell#invokeCommand'
+    id: invokeCommand
+    parent: PowerShell
+    name: >-
+      invokeCommand(resourceGroupName, nodeName, session, pssession, options,
+      options.command, options.customHeaders, callback)
+    summary: Creates a PowerShell script and invokes it.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.command
+          type: string
+          description: Script to execute
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellCommandResults} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function invokeCommand(resourceGroupName, nodeName, session, pssession,
+        options, options.command, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.invokeCommand(resourceGroupName, nodeName, session, pssession,
+      options, options.command, options.customHeaders, callback)
+    children:
+      - 'PowerShell#invokeCommand~client'
+      - 'PowerShell#invokeCommand~callback'
+      - 'PowerShell#invokeCommand~options'
+  - uid: 'PowerShell#beginInvokeCommand'
+    id: beginInvokeCommand
+    parent: PowerShell
+    name: >-
+      beginInvokeCommand(resourceGroupName, nodeName, session, pssession,
+      options, options.command, options.customHeaders, callback)
+    summary: Creates a PowerShell script and invokes it.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.command
+          type: string
+          description: Script to execute
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellCommandResults} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginInvokeCommand(resourceGroupName, nodeName, session,
+        pssession, options, options.command, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.beginInvokeCommand(resourceGroupName, nodeName, session,
+      pssession, options, options.command, options.customHeaders, callback)
+    children:
+      - 'PowerShell#beginInvokeCommand~client'
+      - 'PowerShell#beginInvokeCommand~callback'
+      - 'PowerShell#beginInvokeCommand~options'
+      - 'PowerShell#beginInvokeCommand~command'
+      - 'PowerShell#beginInvokeCommand~powerShellCommandParameters'
+      - 'PowerShell#beginInvokeCommand~powerShellCommandParameters'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~queryParameters'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~regex'
+      - 'PowerShell#beginInvokeCommand~requestUrl'
+      - 'PowerShell#beginInvokeCommand~httpRequest'
+      - 'PowerShell#beginInvokeCommand~headerName'
+      - 'PowerShell#beginInvokeCommand~requestContent'
+      - 'PowerShell#beginInvokeCommand~requestModel'
+      - 'PowerShell#beginInvokeCommand~requestModelMapper'
+      - 'PowerShell#beginInvokeCommand~requestModel'
+      - 'PowerShell#beginInvokeCommand~requestContent'
+      - 'PowerShell#beginInvokeCommand~serializationError'
+  - uid: 'PowerShell#cancelCommand'
+    id: cancelCommand
+    parent: PowerShell
+    name: >-
+      cancelCommand(resourceGroupName, nodeName, session, pssession, options,
+      options.customHeaders, callback)
+    summary: Cancels a PowerShell command.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellCommandResults} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function cancelCommand(resourceGroupName, nodeName, session, pssession,
+        options, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.cancelCommand(resourceGroupName, nodeName, session, pssession,
+      options, options.customHeaders, callback)
+    children:
+      - 'PowerShell#cancelCommand~client'
+      - 'PowerShell#cancelCommand~callback'
+      - 'PowerShell#cancelCommand~options'
+  - uid: 'PowerShell#beginCancelCommand'
+    id: beginCancelCommand
+    parent: PowerShell
+    name: >-
+      beginCancelCommand(resourceGroupName, nodeName, session, pssession,
+      options, options.customHeaders, callback)
+    summary: Cancels a PowerShell command.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellCommandResults} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCancelCommand(resourceGroupName, nodeName, session,
+        pssession, options, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.beginCancelCommand(resourceGroupName, nodeName, session,
+      pssession, options, options.customHeaders, callback)
+    children:
+      - 'PowerShell#beginCancelCommand~client'
+      - 'PowerShell#beginCancelCommand~callback'
+      - 'PowerShell#beginCancelCommand~options'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~queryParameters'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~regex'
+      - 'PowerShell#beginCancelCommand~requestUrl'
+      - 'PowerShell#beginCancelCommand~httpRequest'
+      - 'PowerShell#beginCancelCommand~headerName'
+  - uid: 'PowerShell#tabCompletion'
+    id: tabCompletion
+    parent: PowerShell
+    name: >-
+      tabCompletion(resourceGroupName, nodeName, session, pssession, options,
+      options.command, options.customHeaders, callback)
+    summary: gets tab completion values for a command.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: session
+          type: string
+          description: The sessionId from the user
+        - id: pssession
+          type: string
+          description: The PowerShell sessionId from the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.command
+          type: string
+          description: Command to get tab completion for.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PowerShellTabCompletionResults} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function tabCompletion(resourceGroupName, nodeName, session, pssession,
+        options, options.command, options.customHeaders, callback);
+    fullName: >-
+      PowerShell.tabCompletion(resourceGroupName, nodeName, session, pssession,
+      options, options.command, options.customHeaders, callback)
+    children:
+      - 'PowerShell#tabCompletion~client'
+      - 'PowerShell#tabCompletion~callback'
+      - 'PowerShell#tabCompletion~options'
+      - 'PowerShell#tabCompletion~command'
+      - 'PowerShell#tabCompletion~powerShellTabCompletionParamters'
+      - 'PowerShell#tabCompletion~powerShellTabCompletionParamters'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~queryParameters'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~regex'
+      - 'PowerShell#tabCompletion~requestUrl'
+      - 'PowerShell#tabCompletion~httpRequest'
+      - 'PowerShell#tabCompletion~headerName'
+      - 'PowerShell#tabCompletion~requestContent'
+      - 'PowerShell#tabCompletion~requestModel'
+      - 'PowerShell#tabCompletion~requestModelMapper'
+      - 'PowerShell#tabCompletion~requestModel'
+      - 'PowerShell#tabCompletion~requestContent'
+      - 'PowerShell#tabCompletion~serializationError'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

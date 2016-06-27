@@ -1,0 +1,575 @@
+items:
+  - uid: ResourceGroups
+    id: ResourceGroups
+    name: ResourceGroups
+    type: Class
+    syntax:
+      content: ResourceGroups
+    fullName: ResourceGroups
+    children:
+      - 'ResourceGroups#client'
+      - 'ResourceGroups#listResources'
+      - 'ResourceGroups#checkExistence'
+      - 'ResourceGroups#createOrUpdate'
+      - 'ResourceGroups#deleteMethod'
+      - 'ResourceGroups#beginDeleteMethod'
+      - 'ResourceGroups#get'
+      - 'ResourceGroups#patch'
+      - 'ResourceGroups#exportTemplate'
+      - 'ResourceGroups#list'
+      - 'ResourceGroups#listResourcesNext'
+      - 'ResourceGroups#listNext'
+  - uid: 'ResourceGroups#client'
+    id: client
+    parent: ResourceGroups
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ResourceGroups.client
+  - uid: 'ResourceGroups#listResources'
+    id: listResources
+    parent: ResourceGroups
+    name: >-
+      listResources(resourceGroupName, options, options.filter, options.top,
+      options.customHeaders, callback)
+    summary: Get all of the resources under a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "Query parameters. If null is passed\rreturns all resource groups."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+          description: "Query parameters. If null is passed returns\rall resource groups."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listResources(resourceGroupName, options, options.filter,
+        options.top, options.customHeaders, callback);
+    fullName: >-
+      ResourceGroups.listResources(resourceGroupName, options, options.filter,
+      options.top, options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#listResources~client'
+      - 'ResourceGroups#listResources~callback'
+      - 'ResourceGroups#listResources~options'
+      - 'ResourceGroups#listResources~filter'
+      - 'ResourceGroups#listResources~top'
+      - 'ResourceGroups#listResources~requestUrl'
+      - 'ResourceGroups#listResources~requestUrl'
+      - 'ResourceGroups#listResources~requestUrl'
+      - 'ResourceGroups#listResources~queryParameters'
+      - 'ResourceGroups#listResources~requestUrl'
+      - 'ResourceGroups#listResources~regex'
+      - 'ResourceGroups#listResources~requestUrl'
+      - 'ResourceGroups#listResources~httpRequest'
+      - 'ResourceGroups#listResources~headerName'
+  - uid: 'ResourceGroups#checkExistence'
+    id: checkExistence
+    parent: ResourceGroups
+    name: >-
+      checkExistence(resourceGroupName, options, options.customHeaders,
+      callback)
+    summary: Checks whether resource group exists.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group to check.\rThe name is case insensitive."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {boolean} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function checkExistence(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ResourceGroups.checkExistence(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#checkExistence~client'
+      - 'ResourceGroups#checkExistence~callback'
+      - 'ResourceGroups#checkExistence~options'
+      - 'ResourceGroups#checkExistence~requestUrl'
+      - 'ResourceGroups#checkExistence~requestUrl'
+      - 'ResourceGroups#checkExistence~requestUrl'
+      - 'ResourceGroups#checkExistence~queryParameters'
+      - 'ResourceGroups#checkExistence~requestUrl'
+      - 'ResourceGroups#checkExistence~regex'
+      - 'ResourceGroups#checkExistence~requestUrl'
+      - 'ResourceGroups#checkExistence~httpRequest'
+      - 'ResourceGroups#checkExistence~headerName'
+  - uid: 'ResourceGroups#createOrUpdate'
+    id: createOrUpdate
+    parent: ResourceGroups
+    name: >-
+      createOrUpdate(resourceGroupName, parameters, parameters.name,
+      parameters.properties, parameters.location, parameters.tags, options,
+      options.customHeaders, callback)
+    summary: Create a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group to be\rcreated or updated."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create or update\rresource group service operation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets the Name of the resource\rgroup."
+        - id: parameters.properties
+          type: object
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the location of the\rresource group. It cannot be changed after the resource group has been\rcreated. Has to be one of the supported Azure Locations, such as West US,\rEast US, West Europe, East Asia, etc."
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets the tags attached to the\rresource group."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, parameters, parameters.name,
+        parameters.properties, parameters.location, parameters.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ResourceGroups.createOrUpdate(resourceGroupName, parameters,
+      parameters.name, parameters.properties, parameters.location,
+      parameters.tags, options, options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#createOrUpdate~client'
+      - 'ResourceGroups#createOrUpdate~callback'
+      - 'ResourceGroups#createOrUpdate~options'
+      - 'ResourceGroups#createOrUpdate~requestUrl'
+      - 'ResourceGroups#createOrUpdate~requestUrl'
+      - 'ResourceGroups#createOrUpdate~requestUrl'
+      - 'ResourceGroups#createOrUpdate~queryParameters'
+      - 'ResourceGroups#createOrUpdate~requestUrl'
+      - 'ResourceGroups#createOrUpdate~regex'
+      - 'ResourceGroups#createOrUpdate~requestUrl'
+      - 'ResourceGroups#createOrUpdate~httpRequest'
+      - 'ResourceGroups#createOrUpdate~headerName'
+      - 'ResourceGroups#createOrUpdate~requestContent'
+      - 'ResourceGroups#createOrUpdate~requestModel'
+      - 'ResourceGroups#createOrUpdate~requestModelMapper'
+      - 'ResourceGroups#createOrUpdate~requestModel'
+      - 'ResourceGroups#createOrUpdate~requestContent'
+      - 'ResourceGroups#createOrUpdate~serializationError'
+  - uid: 'ResourceGroups#deleteMethod'
+    id: deleteMethod
+    parent: ResourceGroups
+    name: 'deleteMethod(resourceGroupName, options, options.customHeaders, callback)'
+    summary: Delete resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group to be\rdeleted. The name is case insensitive."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ResourceGroups.deleteMethod(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#deleteMethod~client'
+      - 'ResourceGroups#deleteMethod~callback'
+      - 'ResourceGroups#deleteMethod~options'
+  - uid: 'ResourceGroups#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: ResourceGroups
+    name: >-
+      beginDeleteMethod(resourceGroupName, options, options.customHeaders,
+      callback)
+    summary: Delete resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group to be\rdeleted. The name is case insensitive."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ResourceGroups.beginDeleteMethod(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#beginDeleteMethod~client'
+      - 'ResourceGroups#beginDeleteMethod~callback'
+      - 'ResourceGroups#beginDeleteMethod~options'
+      - 'ResourceGroups#beginDeleteMethod~requestUrl'
+      - 'ResourceGroups#beginDeleteMethod~requestUrl'
+      - 'ResourceGroups#beginDeleteMethod~requestUrl'
+      - 'ResourceGroups#beginDeleteMethod~queryParameters'
+      - 'ResourceGroups#beginDeleteMethod~requestUrl'
+      - 'ResourceGroups#beginDeleteMethod~regex'
+      - 'ResourceGroups#beginDeleteMethod~requestUrl'
+      - 'ResourceGroups#beginDeleteMethod~httpRequest'
+      - 'ResourceGroups#beginDeleteMethod~headerName'
+  - uid: 'ResourceGroups#get'
+    id: get
+    parent: ResourceGroups
+    name: 'get(resourceGroupName, options, options.customHeaders, callback)'
+    summary: Get a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group to get.\rThe name is case insensitive."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ResourceGroups.get(resourceGroupName, options, options.customHeaders,
+      callback)
+    children:
+      - 'ResourceGroups#get~client'
+      - 'ResourceGroups#get~callback'
+      - 'ResourceGroups#get~options'
+      - 'ResourceGroups#get~requestUrl'
+      - 'ResourceGroups#get~requestUrl'
+      - 'ResourceGroups#get~requestUrl'
+      - 'ResourceGroups#get~queryParameters'
+      - 'ResourceGroups#get~requestUrl'
+      - 'ResourceGroups#get~regex'
+      - 'ResourceGroups#get~requestUrl'
+      - 'ResourceGroups#get~httpRequest'
+      - 'ResourceGroups#get~headerName'
+  - uid: 'ResourceGroups#patch'
+    id: patch
+    parent: ResourceGroups
+    name: >-
+      patch(resourceGroupName, parameters, parameters.name,
+      parameters.properties, parameters.location, parameters.tags, options,
+      options.customHeaders, callback)
+    summary: "Resource groups can be updated through a simple PATCH operation to a group\raddress. The format of the request is the same as that for creating a\rresource groups, though if a field is unspecified current value will be\rcarried over."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group to be\rcreated or updated. The name is case insensitive."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the update state resource\rgroup service operation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets the Name of the resource\rgroup."
+        - id: parameters.properties
+          type: object
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the location of the\rresource group. It cannot be changed after the resource group has been\rcreated. Has to be one of the supported Azure Locations, such as West US,\rEast US, West Europe, East Asia, etc."
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets the tags attached to the\rresource group."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function patch(resourceGroupName, parameters, parameters.name,
+        parameters.properties, parameters.location, parameters.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ResourceGroups.patch(resourceGroupName, parameters, parameters.name,
+      parameters.properties, parameters.location, parameters.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#patch~client'
+      - 'ResourceGroups#patch~callback'
+      - 'ResourceGroups#patch~options'
+      - 'ResourceGroups#patch~requestUrl'
+      - 'ResourceGroups#patch~requestUrl'
+      - 'ResourceGroups#patch~requestUrl'
+      - 'ResourceGroups#patch~queryParameters'
+      - 'ResourceGroups#patch~requestUrl'
+      - 'ResourceGroups#patch~regex'
+      - 'ResourceGroups#patch~requestUrl'
+      - 'ResourceGroups#patch~httpRequest'
+      - 'ResourceGroups#patch~headerName'
+      - 'ResourceGroups#patch~requestContent'
+      - 'ResourceGroups#patch~requestModel'
+      - 'ResourceGroups#patch~requestModelMapper'
+      - 'ResourceGroups#patch~requestModel'
+      - 'ResourceGroups#patch~requestContent'
+      - 'ResourceGroups#patch~serializationError'
+  - uid: 'ResourceGroups#exportTemplate'
+    id: exportTemplate
+    parent: ResourceGroups
+    name: >-
+      exportTemplate(resourceGroupName, parameters, parameters.resources,
+      parameters.options, options, options.customHeaders, callback)
+    summary: Captures the specified resource group as a template.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group to be\rcreated or updated."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the export template\rresource group operation."
+        - id: parameters.resources
+          type: array
+          description: "Gets or sets the ids of the\rresources. The only supported string currently is '*' (all resources).\rFuture api updates will support exporting specific resources."
+        - id: parameters.options
+          type: string
+          description: "The export template options. Supported\rvalues include 'IncludeParameterDefaultValue', 'IncludeComments' or\r'IncludeParameterDefaultValue, IncludeComments"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceGroupExportResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function exportTemplate(resourceGroupName, parameters,
+        parameters.resources, parameters.options, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ResourceGroups.exportTemplate(resourceGroupName, parameters,
+      parameters.resources, parameters.options, options, options.customHeaders,
+      callback)
+    children:
+      - 'ResourceGroups#exportTemplate~client'
+      - 'ResourceGroups#exportTemplate~callback'
+      - 'ResourceGroups#exportTemplate~options'
+      - 'ResourceGroups#exportTemplate~requestUrl'
+      - 'ResourceGroups#exportTemplate~requestUrl'
+      - 'ResourceGroups#exportTemplate~requestUrl'
+      - 'ResourceGroups#exportTemplate~queryParameters'
+      - 'ResourceGroups#exportTemplate~requestUrl'
+      - 'ResourceGroups#exportTemplate~regex'
+      - 'ResourceGroups#exportTemplate~requestUrl'
+      - 'ResourceGroups#exportTemplate~httpRequest'
+      - 'ResourceGroups#exportTemplate~headerName'
+      - 'ResourceGroups#exportTemplate~requestContent'
+      - 'ResourceGroups#exportTemplate~requestModel'
+      - 'ResourceGroups#exportTemplate~requestModelMapper'
+      - 'ResourceGroups#exportTemplate~requestModel'
+      - 'ResourceGroups#exportTemplate~requestContent'
+      - 'ResourceGroups#exportTemplate~serializationError'
+  - uid: 'ResourceGroups#list'
+    id: list
+    parent: ResourceGroups
+    name: >-
+      list(options, options.filter, options.top, options.customHeaders,
+      callback)
+    summary: Gets a collection of resource groups.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+          description: "Query parameters. If null is passed returns\rall resource groups."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(options, options.filter, options.top,
+        options.customHeaders, callback);
+    fullName: >-
+      ResourceGroups.list(options, options.filter, options.top,
+      options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#list~client'
+      - 'ResourceGroups#list~callback'
+      - 'ResourceGroups#list~options'
+      - 'ResourceGroups#list~filter'
+      - 'ResourceGroups#list~top'
+      - 'ResourceGroups#list~requestUrl'
+      - 'ResourceGroups#list~requestUrl'
+      - 'ResourceGroups#list~queryParameters'
+      - 'ResourceGroups#list~requestUrl'
+      - 'ResourceGroups#list~regex'
+      - 'ResourceGroups#list~requestUrl'
+      - 'ResourceGroups#list~httpRequest'
+      - 'ResourceGroups#list~headerName'
+  - uid: 'ResourceGroups#listResourcesNext'
+    id: listResourcesNext
+    parent: ResourceGroups
+    name: 'listResourcesNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Get all of the resources under a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listResourcesNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ResourceGroups.listResourcesNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ResourceGroups#listResourcesNext~client'
+      - 'ResourceGroups#listResourcesNext~callback'
+      - 'ResourceGroups#listResourcesNext~options'
+      - 'ResourceGroups#listResourcesNext~requestUrl'
+      - 'ResourceGroups#listResourcesNext~requestUrl'
+      - 'ResourceGroups#listResourcesNext~regex'
+      - 'ResourceGroups#listResourcesNext~requestUrl'
+      - 'ResourceGroups#listResourcesNext~httpRequest'
+      - 'ResourceGroups#listResourcesNext~headerName'
+  - uid: 'ResourceGroups#listNext'
+    id: listNext
+    parent: ResourceGroups
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets a collection of resource groups.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ResourceGroups.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'ResourceGroups#listNext~client'
+      - 'ResourceGroups#listNext~callback'
+      - 'ResourceGroups#listNext~options'
+      - 'ResourceGroups#listNext~requestUrl'
+      - 'ResourceGroups#listNext~requestUrl'
+      - 'ResourceGroups#listNext~regex'
+      - 'ResourceGroups#listNext~requestUrl'
+      - 'ResourceGroups#listNext~httpRequest'
+      - 'ResourceGroups#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

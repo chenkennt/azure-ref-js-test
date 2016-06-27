@@ -1,0 +1,2289 @@
+items:
+  - uid: WebSiteOperations~WebSiteOperations
+    id: WebSiteOperations
+    parent: WebSiteOperations
+    name: WebSiteOperations
+    type: Class
+    syntax:
+      content: WebSiteOperations
+    fullName: WebSiteOperations.WebSiteOperations
+    children:
+      - 'WebSiteOperations~WebSiteOperations#client'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration'
+      - 'WebSiteOperations~WebSiteOperations#backup'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots'
+      - 'WebSiteOperations~WebSiteOperations#create'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection'
+      - 'WebSiteOperations~WebSiteOperations#createRepository'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository'
+      - 'WebSiteOperations~WebSiteOperations#discover'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword'
+      - 'WebSiteOperations~WebSiteOperations#get'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile'
+      - 'WebSiteOperations~WebSiteOperations#getRepository'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable'
+      - 'WebSiteOperations~WebSiteOperations#listBackups'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration'
+      - 'WebSiteOperations~WebSiteOperations#restart'
+      - 'WebSiteOperations~WebSiteOperations#restore'
+      - 'WebSiteOperations~WebSiteOperations#swapSlots'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository'
+      - 'WebSiteOperations~WebSiteOperations#update'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames'
+  - uid: 'WebSiteOperations~WebSiteOperations#client'
+    id: client
+    parent: WebSiteOperations~WebSiteOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: WebSiteOperations~WebSiteOperations.client
+  - uid: 'WebSiteOperations~WebSiteOperations#applySlotConfiguration'
+    id: applySlotConfiguration
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      applySlotConfiguration(webSpaceName, webSiteName, targetSwapSlot,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: targetSwapSlot
+          type: string
+          description: "The name of the target slot to be swapped\rwith."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function applySlotConfiguration(webSpaceName, webSiteName,
+        targetSwapSlot, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.applySlotConfiguration(webSpaceName,
+      webSiteName, targetSwapSlot, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - >-
+        WebSiteOperations~WebSiteOperations#applySlotConfiguration~queryParameters
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#applySlotConfiguration~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#backup'
+    id: backup
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      backup(webSpaceName, webSiteName, backupRequest,
+      backupRequest.backupSchedule,
+      backupRequest.backupSchedule.frequencyInterval,
+      backupRequest.backupSchedule.frequencyUnit,
+      backupRequest.backupSchedule.keepAtLeastOneBackup,
+      backupRequest.backupSchedule.lastExecutionTime,
+      backupRequest.backupSchedule.retentionPeriodInDays,
+      backupRequest.backupSchedule.startTime, backupRequest.databases,
+      backupRequest.enabled, backupRequest.name,
+      backupRequest.storageAccountUrl, callback)
+    summary: Backups a site on-demand.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: backupRequest
+          type: BackupRequest
+          description: A backup specification.
+        - id: backupRequest.backupSchedule
+          type: BackupSchedule
+          description: "The backup schedule\rstructure - valid only when setting up a schedule. Should be Null for\ron-demand backups."
+        - id: backupRequest.backupSchedule.frequencyInterval
+          type: number
+          description: "The\rfrequency of backups."
+        - id: backupRequest.backupSchedule.frequencyUnit
+          type: FrequencyUnit
+          description: "Units\rfor FrequencyInterval - e.g. Day or Hour"
+        - id: backupRequest.backupSchedule.keepAtLeastOneBackup
+          type: boolean
+          description: "Retention policy deletes backups after predefined number of days. If this\ris true, there will be always at least one backup left. regardless of the\rpolicy. If false, all backups can be deleted."
+        - id: backupRequest.backupSchedule.lastExecutionTime
+          type: date
+          description: "The last\rtime when this schedule started a backup, Null if didn't start anything\ryet."
+        - id: backupRequest.backupSchedule.retentionPeriodInDays
+          type: number
+          description: "Backups older N days (N defined by this value) will be automatically\rdeleted."
+        - id: backupRequest.backupSchedule.startTime
+          type: date
+          description: "When this schedule\rshould start backing up the site. Null means immediately."
+        - id: backupRequest.databases
+          type: IEnumerable
+          description: "Database settings for\rbackup."
+        - id: backupRequest.enabled
+          type: boolean
+          description: "Valid only for a backup schedule\r(can be Null for on-demand backups). True if enabled; false if disabled\r(no backups will be performed)."
+        - id: backupRequest.name
+          type: string
+          description: "The name of this backup - will be\rused for generating a blob name."
+        - id: backupRequest.storageAccountUrl
+          type: string
+          description: "SAS URL for a container\rin a storage account. E.g.\rhttps://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function backup(webSpaceName, webSiteName, backupRequest,
+        backupRequest.backupSchedule,
+        backupRequest.backupSchedule.frequencyInterval,
+        backupRequest.backupSchedule.frequencyUnit,
+        backupRequest.backupSchedule.keepAtLeastOneBackup,
+        backupRequest.backupSchedule.lastExecutionTime,
+        backupRequest.backupSchedule.retentionPeriodInDays,
+        backupRequest.backupSchedule.startTime, backupRequest.databases,
+        backupRequest.enabled, backupRequest.name,
+        backupRequest.storageAccountUrl, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.backup(webSpaceName, webSiteName,
+      backupRequest, backupRequest.backupSchedule,
+      backupRequest.backupSchedule.frequencyInterval,
+      backupRequest.backupSchedule.frequencyUnit,
+      backupRequest.backupSchedule.keepAtLeastOneBackup,
+      backupRequest.backupSchedule.lastExecutionTime,
+      backupRequest.backupSchedule.retentionPeriodInDays,
+      backupRequest.backupSchedule.startTime, backupRequest.databases,
+      backupRequest.enabled, backupRequest.name,
+      backupRequest.storageAccountUrl, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#backup~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~url2'
+      - 'WebSiteOperations~WebSiteOperations#backup~httpRequest'
+      - 'WebSiteOperations~WebSiteOperations#backup~requestContent'
+      - 'WebSiteOperations~WebSiteOperations#backup~requestDoc'
+      - 'WebSiteOperations~WebSiteOperations#backup~backupRequestElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~backupScheduleElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~frequencyIntervalElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~frequencyUnitElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~keepAtLeastOneBackupElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~lastExecutionTimeElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~retentionPeriodInDaysElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~startTimeElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~databasesSequenceElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#backup~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#backup~databasesItem'
+      - 'WebSiteOperations~WebSiteOperations#backup~databaseBackupSettingElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~connectionStringElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~connectionStringNameElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~databaseTypeElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~nameElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~enabledElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~nameElement2'
+      - 'WebSiteOperations~WebSiteOperations#backup~storageAccountUrlElement'
+      - 'WebSiteOperations~WebSiteOperations#backup~requestContent'
+  - uid: 'WebSiteOperations~WebSiteOperations#beginSwappingSlots'
+    id: beginSwappingSlots
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      beginSwappingSlots(webSpaceName, webSiteName, sourceSlotName,
+      targetSlotName, callback)
+    summary: You can swap a web site from one slot to another slot.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: sourceSlotName
+          type: string
+          description: "The name of the first web site slot to swap\r(source)."
+        - id: targetSlotName
+          type: string
+          description: "The name of the second web site slot to\rswap with (target)."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginSwappingSlots(webSpaceName, webSiteName, sourceSlotName,
+        targetSlotName, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.beginSwappingSlots(webSpaceName,
+      webSiteName, sourceSlotName, targetSlotName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~queryParameters'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~url2'
+      - 'WebSiteOperations~WebSiteOperations#beginSwappingSlots~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#create'
+    id: create
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      create(webSpaceName, parameters, parameters.name, parameters.serverFarm,
+      parameters.webSpace, parameters.webSpace.geoRegion,
+      parameters.webSpace.name, parameters.webSpace.plan, callback)
+    summary: "You can create a web site by using a POST request that includes the name\rof the web site and other information in the request body.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166986.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: parameters
+          type: WebSiteCreateParameters
+          description: "Parameters supplied to the\rCreate Web Site operation."
+        - id: parameters.name
+          type: string
+          description: "The name of the web site. This should\rmatch the host name in the default domain."
+        - id: parameters.serverFarm
+          type: string
+          description: "The name of the Server Farm (Web\rHosting Plan) associated with this web site. This is a required value.\rServer Farm must already exist."
+        - id: parameters.webSpace
+          type: WebSpaceDetails
+          description: "Information about the web\rspace to create."
+        - id: parameters.webSpace.geoRegion
+          type: string
+          description: "The geographical region of\rthe web space that will be created."
+        - id: parameters.webSpace.name
+          type: string
+          description: The name of the web space.
+        - id: parameters.webSpace.plan
+          type: string
+          description: "The web space plan. This value\rmust be VirtualDedicatedPlan."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(webSpaceName, parameters, parameters.name,
+        parameters.serverFarm, parameters.webSpace,
+        parameters.webSpace.geoRegion, parameters.webSpace.name,
+        parameters.webSpace.plan, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.create(webSpaceName, parameters,
+      parameters.name, parameters.serverFarm, parameters.webSpace,
+      parameters.webSpace.geoRegion, parameters.webSpace.name,
+      parameters.webSpace.plan, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#create~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~url2'
+      - 'WebSiteOperations~WebSiteOperations#create~httpRequest'
+      - 'WebSiteOperations~WebSiteOperations#create~requestContent'
+      - 'WebSiteOperations~WebSiteOperations#create~requestDoc'
+      - 'WebSiteOperations~WebSiteOperations#create~siteElement'
+      - 'WebSiteOperations~WebSiteOperations#create~nameElement'
+      - 'WebSiteOperations~WebSiteOperations#create~serverFarmElement'
+      - 'WebSiteOperations~WebSiteOperations#create~webSpaceToCreateElement'
+      - 'WebSiteOperations~WebSiteOperations#create~geoRegionElement'
+      - 'WebSiteOperations~WebSiteOperations#create~nameElement2'
+      - 'WebSiteOperations~WebSiteOperations#create~planElement'
+      - 'WebSiteOperations~WebSiteOperations#create~requestContent'
+  - uid: 'WebSiteOperations~WebSiteOperations#createHybridConnection'
+    id: createHybridConnection
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      createHybridConnection(webSpaceName, siteName, parameters,
+      parameters.biztalkUri, parameters.entityConnectionString,
+      parameters.entityName, parameters.hostname, parameters.port,
+      parameters.resourceConnectionString, parameters.resourceType, callback)
+    summary: Creates an association to a hybrid connection for a web site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: siteName
+          type: string
+          description: The name of the web site.
+        - id: parameters
+          type: HybridConnectionCreateParameters
+          description: "Parameters supplied\rto the Create Hybrid Connection operation."
+        - id: parameters.biztalkUri
+          type: string
+          description: "The resource uri of the biztalk\rservice. This field can be left empty; Without it the Azure Portal will\rnot be able to display the biztalk service for this connection properly."
+        - id: parameters.entityConnectionString
+          type: string
+          description: "The biztalk application\rconnection string for this connection"
+        - id: parameters.entityName
+          type: string
+          description: The unique name for this connection
+        - id: parameters.hostname
+          type: string
+          description: "The hostname of the target on-premise\rresource"
+        - id: parameters.port
+          type: number
+          description: The port of the target on-premise resource
+        - id: parameters.resourceConnectionString
+          type: string
+          description: "Reserved for future\ruse. The connection string for the resource. This field can be left empty."
+        - id: parameters.resourceType
+          type: string
+          description: "Reserved for future use. The type\rof resource to be connected. This field can be left empty."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createHybridConnection(webSpaceName, siteName, parameters,
+        parameters.biztalkUri, parameters.entityConnectionString,
+        parameters.entityName, parameters.hostname, parameters.port,
+        parameters.resourceConnectionString, parameters.resourceType, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.createHybridConnection(webSpaceName,
+      siteName, parameters, parameters.biztalkUri,
+      parameters.entityConnectionString, parameters.entityName,
+      parameters.hostname, parameters.port, parameters.resourceConnectionString,
+      parameters.resourceType, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~httpRequest'
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~requestContent
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~requestDoc'
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~relayServiceConnectionEntityElement
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~biztalkUriElement
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~entityConnectionStringElement
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~entityNameElement
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~hostnameElement
+      - 'WebSiteOperations~WebSiteOperations#createHybridConnection~portElement'
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~resourceConnectionStringElement
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~resourceTypeElement
+      - >-
+        WebSiteOperations~WebSiteOperations#createHybridConnection~requestContent
+  - uid: 'WebSiteOperations~WebSiteOperations#createRepository'
+    id: createRepository
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'createRepository(webSpaceName, webSiteName, callback)'
+    summary: "A web site repository is essentially a Git repository that you can use to\rmanage your web site content. By using Git source control tools, you can\rpush or pull version-controlled changes to your site. This API executes a\rrepository create operation.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function createRepository(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.createRepository(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#createRepository~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#deleteMethod'
+    id: deleteMethod
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      deleteMethod(webSpaceName, webSiteName, parameters,
+      parameters.deleteEmptyServerFarm, parameters.deleteMetrics,
+      parameters.deleteAllSlots, callback)
+    summary: "You can delete a web site by issuing an HTTP DELETE request. If the web\rsite being deleted is the only site remaining in a server farm, you can\roptionally delete the server farm as well by using the\rdeleteEmptyServerFarm parameter.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn236430.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: parameters
+          type: WebSiteDeleteParameters
+          description: "Parameters supplied to the\rDelete Web Site operation."
+        - id: parameters.deleteEmptyServerFarm
+          type: boolean
+          description: "Indicates if the server\rfarm should be deleted. You can delete the server farm if the web site\rbeing deleted is the last web site in a server farm."
+        - id: parameters.deleteMetrics
+          type: boolean
+          description: "Indicates if the metrics for the\rweb site should be deleted."
+        - id: parameters.deleteAllSlots
+          type: boolean
+          description: "Indicates if all slots for the\rweb site should be deleted."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteMethod(webSpaceName, webSiteName, parameters,
+        parameters.deleteEmptyServerFarm, parameters.deleteMetrics,
+        parameters.deleteAllSlots, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.deleteMethod(webSpaceName,
+      webSiteName, parameters, parameters.deleteEmptyServerFarm,
+      parameters.deleteMetrics, parameters.deleteAllSlots, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~queryParameters'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteMethod~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#deleteHybridConnection'
+    id: deleteHybridConnection
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      deleteHybridConnection(webSpaceName, webSiteName, hybridConnectionName,
+      callback)
+    summary: Deletes a hybrid connection on a specific site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: hybridConnectionName
+          type: string
+          description: "The name of the hybrid connection\rentity"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteHybridConnection(webSpaceName, webSiteName,
+        hybridConnectionName, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.deleteHybridConnection(webSpaceName,
+      webSiteName, hybridConnectionName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteHybridConnection~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#deleteRepository'
+    id: deleteRepository
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'deleteRepository(webSpaceName, webSiteName, callback)'
+    summary: "A web site repository is essentially a Git repository that you can use to\rmanage your web site content. By using Git source control tools, you can\rpush or pull version-controlled changes to your site. This API executes a\rrepository delete operation.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteRepository(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.deleteRepository(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#deleteRepository~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#discover'
+    id: discover
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      discover(webSpaceName, webSiteName, restoreRequest,
+      restoreRequest.adjustConnectionStrings, restoreRequest.blobName,
+      restoreRequest.databases, restoreRequest.ignoreConflictingHostNames,
+      restoreRequest.overwrite, restoreRequest.storageAccountUrl, callback)
+    summary: "Scans a backup in a storage account and returns database information etc.\rShould be called before calling Restore to discover what parameters are\rneeded for the restore operation."
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: restoreRequest
+          type: RestoreRequest
+          description: A restore request.
+        - id: restoreRequest.adjustConnectionStrings
+          type: boolean
+          description: "If the restore\roperation also restores a database along with the website and the\rdatabase is on a different server than when the original site h"
+        - id: restoreRequest.blobName
+          type: string
+          description: "The blob name where the backup\ris stored. E.g. mysite1_20140203.zip"
+        - id: restoreRequest.databases
+          type: IEnumerable
+          description: "Database settings for\rbackup."
+        - id: restoreRequest.ignoreConflictingHostNames
+          type: boolean
+          description: "When\rrestoring a site, custom domains might conflict with other site in the\rsame datacenter. If this value is true, such hostnames will be ignored\rduring restore. If this is false, the restore operation will fail on such\rconflict."
+        - id: restoreRequest.overwrite
+          type: boolean
+          description: "True if the restore operation\rwill be used for overwrite an existing site; false otherwise."
+        - id: restoreRequest.storageAccountUrl
+          type: string
+          description: "SAS URL for a container\rin a storage account. E.g.\rhttps://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function discover(webSpaceName, webSiteName, restoreRequest,
+        restoreRequest.adjustConnectionStrings, restoreRequest.blobName,
+        restoreRequest.databases, restoreRequest.ignoreConflictingHostNames,
+        restoreRequest.overwrite, restoreRequest.storageAccountUrl, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.discover(webSpaceName, webSiteName,
+      restoreRequest, restoreRequest.adjustConnectionStrings,
+      restoreRequest.blobName, restoreRequest.databases,
+      restoreRequest.ignoreConflictingHostNames, restoreRequest.overwrite,
+      restoreRequest.storageAccountUrl, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#discover~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~url2'
+      - 'WebSiteOperations~WebSiteOperations#discover~httpRequest'
+      - 'WebSiteOperations~WebSiteOperations#discover~requestContent'
+      - 'WebSiteOperations~WebSiteOperations#discover~requestDoc'
+      - 'WebSiteOperations~WebSiteOperations#discover~restoreRequestElement'
+      - >-
+        WebSiteOperations~WebSiteOperations#discover~adjustConnectionStringsElement
+      - 'WebSiteOperations~WebSiteOperations#discover~blobNameElement'
+      - 'WebSiteOperations~WebSiteOperations#discover~databasesSequenceElement'
+      - 'WebSiteOperations~WebSiteOperations#discover~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#discover~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#discover~databasesItem'
+      - >-
+        WebSiteOperations~WebSiteOperations#discover~databaseBackupSettingElement
+      - 'WebSiteOperations~WebSiteOperations#discover~connectionStringElement'
+      - 'WebSiteOperations~WebSiteOperations#discover~connectionStringNameElement'
+      - 'WebSiteOperations~WebSiteOperations#discover~databaseTypeElement'
+      - 'WebSiteOperations~WebSiteOperations#discover~nameElement'
+      - >-
+        WebSiteOperations~WebSiteOperations#discover~ignoreConflictingHostNamesElement
+      - 'WebSiteOperations~WebSiteOperations#discover~overwriteElement'
+      - 'WebSiteOperations~WebSiteOperations#discover~storageAccountUrlElement'
+      - 'WebSiteOperations~WebSiteOperations#discover~requestContent'
+  - uid: 'WebSiteOperations~WebSiteOperations#generatePassword'
+    id: generatePassword
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'generatePassword(webSpaceName, webSiteName, callback)'
+    summary: "You can generate a new random password for publishing a site by issuing an\rHTTP POST request. Tip: If you want to verify that the publish password\rhas changed, issue an HTTP GET on /publishxml before calling\r/newpassword. In the publish XML, note the hash value in the userPWD\rattribute. After calling /newpassword, call /publishxml again. You can\rthen compare the new value of userPWD in the Publish XML with the one you\rnoted earlier.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn236428.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function generatePassword(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.generatePassword(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~url2'
+      - 'WebSiteOperations~WebSiteOperations#generatePassword~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#get'
+    id: get
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      get(webSpaceName, webSiteName, parametersOrCallback,
+      parametersOrCallback.propertiesToInclude, callback)
+    summary: "You can retrieve details for a web site by issuing an HTTP GET request.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/dn167007.aspx\rfor more information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: parametersOrCallback
+          type: WebSiteGetParameters
+          description: "Parameters supplied\rto the Get Web Site Operation."
+        - id: parametersOrCallback.propertiesToInclude
+          type: array
+          description: "Specifies a list\rof the names of any additional parameters to return."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function get(webSpaceName, webSiteName, parametersOrCallback,
+        parametersOrCallback.propertiesToInclude, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.get(webSpaceName, webSiteName,
+      parametersOrCallback, parametersOrCallback.propertiesToInclude, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#get~parameters'
+      - 'WebSiteOperations~WebSiteOperations#get~callback'
+      - 'WebSiteOperations~WebSiteOperations#get~parameters'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~queryParameters'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#get~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~url2'
+      - 'WebSiteOperations~WebSiteOperations#get~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getBackupConfiguration'
+    id: getBackupConfiguration
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'getBackupConfiguration(webSpaceName, webSiteName, callback)'
+    summary: Gets a schedule configuration for site backups.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getBackupConfiguration(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getBackupConfiguration(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getBackupConfiguration~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getConfiguration'
+    id: getConfiguration
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'getConfiguration(webSpaceName, webSiteName, callback)'
+    summary: "You can retrieve the config settings for a web site by issuing an HTTP GET\rrequest.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166985.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getConfiguration(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getConfiguration(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#getConfiguration~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics'
+    id: getHistoricalUsageMetrics
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      getHistoricalUsageMetrics(webSpaceName, webSiteName, parameters,
+      parameters.metricNames, parameters.startTime, parameters.endTime,
+      parameters.timeGrain, parameters.includeInstanceBreakdown,
+      parameters.slotView, callback)
+    summary: "You can retrieve historical usage metrics for a site by issuing an HTTP\rGET request.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: parameters
+          type: WebSiteGetHistoricalUsageMetricsParameters
+          description: "Parameters\rsupplied to the Get Historical Usage Metrics Web Site operation."
+        - id: parameters.metricNames
+          type: array
+          description: "Specifies a comma-separated list\rof the names of the metrics to return. If the names parameter is not\rspecified, then all available metrics are returned."
+        - id: parameters.startTime
+          type: date
+          description: "The starting time of the metrics to\rreturn. If this parameter is not specified, the beginning of the current\rhour is used."
+        - id: parameters.endTime
+          type: date
+          description: "The ending time of the metrics to\rreturn. If this parameter is not specified, the current time is used."
+        - id: parameters.timeGrain
+          type: string
+          description: "The grain at which the metrics are\rreturned. Supported values are PT1M (minute), PT1H (hour), P1D (day)."
+        - id: parameters.includeInstanceBreakdown
+          type: boolean
+          description: "Flag which\rspecifies if the metrics for each machine instance should be included.\rFor sites that run on more than one machine this could be useful to\ridentify a bad machine."
+        - id: parameters.slotView
+          type: boolean
+          description: "Flag which specifies if the metrics\rreturned should reflect slot swaps. Let's take for example following\rcase: if production slot has hostname www.contos.com and take traffic for\r12 hours and later is swapped with staging slot. Getting metrics with\rSlotView=false will reflect the swap - e.g. there will be a increase on\rthe staging slot metrics after it goes to production.If SlotView=true is\rused it will show the metrics for the www.contoso.com regardless which\rslot was serving at the moment."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getHistoricalUsageMetrics(webSpaceName, webSiteName,
+        parameters, parameters.metricNames, parameters.startTime,
+        parameters.endTime, parameters.timeGrain,
+        parameters.includeInstanceBreakdown, parameters.slotView, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getHistoricalUsageMetrics(webSpaceName,
+      webSiteName, parameters, parameters.metricNames, parameters.startTime,
+      parameters.endTime, parameters.timeGrain,
+      parameters.includeInstanceBreakdown, parameters.slotView, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - >-
+        WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~queryParameters
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~url2'
+      - >-
+        WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics~httpRequest
+  - uid: 'WebSiteOperations~WebSiteOperations#getHybridConnection'
+    id: getHybridConnection
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      getHybridConnection(webSpaceName, webSiteName, hybridConnectionName,
+      callback)
+    summary: Retrieves a particular hybrid connection that belongs to a specific site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: hybridConnectionName
+          type: string
+          description: "The name of the hybrid connection\rentity"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getHybridConnection(webSpaceName, webSiteName,
+        hybridConnectionName, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getHybridConnection(webSpaceName,
+      webSiteName, hybridConnectionName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#getHybridConnection~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getInstanceIds'
+    id: getInstanceIds
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'getInstanceIds(webSpaceName, webSiteName, callback)'
+    summary: "You can retrieve the list of active instances by ids for a web site by\rissuing an HTTP GET request.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166981.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getInstanceIds(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getInstanceIds(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~url2'
+      - 'WebSiteOperations~WebSiteOperations#getInstanceIds~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getPublishProfile'
+    id: getPublishProfile
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'getPublishProfile(webSpaceName, webSiteName, callback)'
+    summary: "You can retrieve the publish settings information for a web site by\rissuing an HTTP GET request.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166996.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getPublishProfile(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getPublishProfile(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~url2'
+      - 'WebSiteOperations~WebSiteOperations#getPublishProfile~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getRepository'
+    id: getRepository
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'getRepository(webSpaceName, webSiteName, callback)'
+    summary: "A web site repository is essentially a Git repository that you can use to\rmanage your web site content. By using Git source control tools, you can\rpush or pull version-controlled changes to your site. This API executes a\rrepository get operation.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getRepository(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getRepository(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#getRepository~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getSlotConfigNames'
+    id: getSlotConfigNames
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'getSlotConfigNames(webSpaceName, webSiteName, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getSlotConfigNames(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getSlotConfigNames(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#getSlotConfigNames~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#getUsageMetrics'
+    id: getUsageMetrics
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'getUsageMetrics(webSpaceName, webSiteName, callback)'
+    summary: "You can retrieve current usage metrics for a site by issuing an HTTP GET\rrequest. The metrics returned include CPU Time, Data In, Data Out, Local\rBytes Read, Local Bytes Written, Network Bytes Read, Network Bytes\rWritten, WP Stop Requests, Memory Usage, CPU Time - Minute Limit, and\rFile System Storage.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166991.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getUsageMetrics(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.getUsageMetrics(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~url2'
+      - 'WebSiteOperations~WebSiteOperations#getUsageMetrics~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#isHostnameAvailable'
+    id: isHostnameAvailable
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'isHostnameAvailable(webSiteName, callback)'
+    summary: Determines if a host name is available.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function isHostnameAvailable(webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.isHostnameAvailable(webSiteName,
+      callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~queryParameters'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~url2'
+      - 'WebSiteOperations~WebSiteOperations#isHostnameAvailable~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#listBackups'
+    id: listBackups
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'listBackups(webSpaceName, webSiteName, callback)'
+    summary: Returns list of all backups which are tracked by the system.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listBackups(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.listBackups(webSpaceName, webSiteName,
+      callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~url2'
+      - 'WebSiteOperations~WebSiteOperations#listBackups~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#listHybridConnections'
+    id: listHybridConnections
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'listHybridConnections(webSpaceName, webSiteName, callback)'
+    summary: Retrieves a list of all hybrid connections on a specific web site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listHybridConnections(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.listHybridConnections(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~url2'
+      - 'WebSiteOperations~WebSiteOperations#listHybridConnections~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration'
+    id: resetSlotConfiguration
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'resetSlotConfiguration(webSpaceName, webSiteName, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function resetSlotConfiguration(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.resetSlotConfiguration(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#resetSlotConfiguration~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#restart'
+    id: restart
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'restart(webSpaceName, webSiteName, callback)'
+    summary: "You can restart a web site by issuing an HTTP POST request.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn236425.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function restart(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.restart(webSpaceName, webSiteName,
+      callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#restart~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~url2'
+      - 'WebSiteOperations~WebSiteOperations#restart~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#restore'
+    id: restore
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      restore(webSpaceName, webSiteName, restoreRequest,
+      restoreRequest.adjustConnectionStrings, restoreRequest.blobName,
+      restoreRequest.databases, restoreRequest.ignoreConflictingHostNames,
+      restoreRequest.overwrite, restoreRequest.storageAccountUrl, callback)
+    summary: "Restores a site to either a new site or existing site (Overwrite flag has\rto be set to true for that)."
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: restoreRequest
+          type: RestoreRequest
+          description: A restore request.
+        - id: restoreRequest.adjustConnectionStrings
+          type: boolean
+          description: "If the restore\roperation also restores a database along with the website and the\rdatabase is on a different server than when the original site h"
+        - id: restoreRequest.blobName
+          type: string
+          description: "The blob name where the backup\ris stored. E.g. mysite1_20140203.zip"
+        - id: restoreRequest.databases
+          type: IEnumerable
+          description: "Database settings for\rbackup."
+        - id: restoreRequest.ignoreConflictingHostNames
+          type: boolean
+          description: "When\rrestoring a site, custom domains might conflict with other site in the\rsame datacenter. If this value is true, such hostnames will be ignored\rduring restore. If this is false, the restore operation will fail on such\rconflict."
+        - id: restoreRequest.overwrite
+          type: boolean
+          description: "True if the restore operation\rwill be used for overwrite an existing site; false otherwise."
+        - id: restoreRequest.storageAccountUrl
+          type: string
+          description: "SAS URL for a container\rin a storage account. E.g.\rhttps://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function restore(webSpaceName, webSiteName, restoreRequest,
+        restoreRequest.adjustConnectionStrings, restoreRequest.blobName,
+        restoreRequest.databases, restoreRequest.ignoreConflictingHostNames,
+        restoreRequest.overwrite, restoreRequest.storageAccountUrl, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.restore(webSpaceName, webSiteName,
+      restoreRequest, restoreRequest.adjustConnectionStrings,
+      restoreRequest.blobName, restoreRequest.databases,
+      restoreRequest.ignoreConflictingHostNames, restoreRequest.overwrite,
+      restoreRequest.storageAccountUrl, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#restore~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~url2'
+      - 'WebSiteOperations~WebSiteOperations#restore~httpRequest'
+      - 'WebSiteOperations~WebSiteOperations#restore~requestContent'
+      - 'WebSiteOperations~WebSiteOperations#restore~requestDoc'
+      - 'WebSiteOperations~WebSiteOperations#restore~restoreRequestElement'
+      - >-
+        WebSiteOperations~WebSiteOperations#restore~adjustConnectionStringsElement
+      - 'WebSiteOperations~WebSiteOperations#restore~blobNameElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~databasesSequenceElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#restore~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#restore~databasesItem'
+      - 'WebSiteOperations~WebSiteOperations#restore~databaseBackupSettingElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~connectionStringElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~connectionStringNameElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~databaseTypeElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~nameElement'
+      - >-
+        WebSiteOperations~WebSiteOperations#restore~ignoreConflictingHostNamesElement
+      - 'WebSiteOperations~WebSiteOperations#restore~overwriteElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~storageAccountUrlElement'
+      - 'WebSiteOperations~WebSiteOperations#restore~requestContent'
+  - uid: 'WebSiteOperations~WebSiteOperations#swapSlots'
+    id: swapSlots
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      swapSlots(webSpaceName, webSiteName, sourceSlotName, targetSlotName,
+      callback)
+    summary: You can swap a web site from one slot to another slot.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: sourceSlotName
+          type: string
+          description: "The name of the first web site slot to swap\r(source)."
+        - id: targetSlotName
+          type: string
+          description: "The name of the second web site slot to\rswap with (target)."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function swapSlots(webSpaceName, webSiteName, sourceSlotName,
+        targetSlotName, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.swapSlots(webSpaceName, webSiteName,
+      sourceSlotName, targetSlotName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#swapSlots~client2'
+  - uid: 'WebSiteOperations~WebSiteOperations#syncRepository'
+    id: syncRepository
+    parent: WebSiteOperations~WebSiteOperations
+    name: 'syncRepository(webSpaceName, webSiteName, callback)'
+    summary: "A web site repository is essentially a Git repository that you can use to\rmanage your web site content. By using Git source control tools, you can\rpush or pull version-controlled changes to your site. This API executes a\rrepository sync operation.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function syncRepository(webSpaceName, webSiteName, callback);'
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.syncRepository(webSpaceName,
+      webSiteName, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~queryParameters'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~url2'
+      - 'WebSiteOperations~WebSiteOperations#syncRepository~httpRequest'
+  - uid: 'WebSiteOperations~WebSiteOperations#update'
+    id: update
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      update(webSpaceName, webSiteName, parameters,
+      parameters.hostNameSslStates, parameters.hostNames, parameters.serverFarm,
+      parameters.state, callback)
+    summary: "You can update the settings for a web site by using the HTTP PUT method\rand by specifying the settings in the request body.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn167005.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: parameters
+          type: WebSiteUpdateParameters
+          description: "Parameters supplied to the\rUpdate Web Site operation."
+        - id: parameters.hostNameSslStates
+          type: array
+          description: "SSL states of host names\rbound to the web site."
+        - id: parameters.hostNames
+          type: array
+          description: "An array of strings that contains\rthe public host names for the web site, including custom domains.\rImportant: When you add a custom domain in a PUT operation, be sure to\rinclude every host name that you want for the web site. To delete a\rcustom domain name in a PUT operation, include all of the host names for\rthe web site that you want to keep, but leave out the one that you want\rto delete."
+        - id: parameters.serverFarm
+          type: string
+          description: "String specifying the Server Farm\r(Web Hosting Plan) where to place the site. Server Farm must exist."
+        - id: parameters.state
+          type: string
+          description: "A string that describes the state of\rthe web site. Possible values include Stopped, Running, or QuotaExceeded."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(webSpaceName, webSiteName, parameters,
+        parameters.hostNameSslStates, parameters.hostNames,
+        parameters.serverFarm, parameters.state, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.update(webSpaceName, webSiteName,
+      parameters, parameters.hostNameSslStates, parameters.hostNames,
+      parameters.serverFarm, parameters.state, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#update~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#update~loweredIndex1'
+      - >-
+        WebSiteOperations~WebSiteOperations#update~hostNameSslStatesParameterItem
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#update~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~url2'
+      - 'WebSiteOperations~WebSiteOperations#update~httpRequest'
+      - 'WebSiteOperations~WebSiteOperations#update~requestContent'
+      - 'WebSiteOperations~WebSiteOperations#update~requestDoc'
+      - 'WebSiteOperations~WebSiteOperations#update~siteElement'
+      - >-
+        WebSiteOperations~WebSiteOperations#update~hostNameSslStatesSequenceElement
+      - 'WebSiteOperations~WebSiteOperations#update~loweredIndex2'
+      - 'WebSiteOperations~WebSiteOperations#update~loweredIndex2'
+      - 'WebSiteOperations~WebSiteOperations#update~hostNameSslStatesItem'
+      - >-
+        WebSiteOperations~WebSiteOperations#update~webSiteHostNameSslStateElement
+      - 'WebSiteOperations~WebSiteOperations#update~nameElement'
+      - 'WebSiteOperations~WebSiteOperations#update~sslStateElement'
+      - 'WebSiteOperations~WebSiteOperations#update~thumbprintElement'
+      - 'WebSiteOperations~WebSiteOperations#update~emptyElement'
+      - 'WebSiteOperations~WebSiteOperations#update~nilAttribute'
+      - 'WebSiteOperations~WebSiteOperations#update~toUpdateElement'
+      - 'WebSiteOperations~WebSiteOperations#update~hostNamesSequenceElement'
+      - 'WebSiteOperations~WebSiteOperations#update~loweredIndex3'
+      - 'WebSiteOperations~WebSiteOperations#update~loweredIndex3'
+      - 'WebSiteOperations~WebSiteOperations#update~hostNamesItem'
+      - 'WebSiteOperations~WebSiteOperations#update~hostNamesItemElement'
+      - 'WebSiteOperations~WebSiteOperations#update~serverFarmElement'
+      - 'WebSiteOperations~WebSiteOperations#update~stateElement'
+      - 'WebSiteOperations~WebSiteOperations#update~requestContent'
+  - uid: 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration'
+    id: updateBackupConfiguration
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      updateBackupConfiguration(webSpaceName, webSiteName, backupRequest,
+      backupRequest.backupSchedule,
+      backupRequest.backupSchedule.frequencyInterval,
+      backupRequest.backupSchedule.frequencyUnit,
+      backupRequest.backupSchedule.keepAtLeastOneBackup,
+      backupRequest.backupSchedule.lastExecutionTime,
+      backupRequest.backupSchedule.retentionPeriodInDays,
+      backupRequest.backupSchedule.startTime, backupRequest.databases,
+      backupRequest.enabled, backupRequest.name,
+      backupRequest.storageAccountUrl, callback)
+    summary: Updates a backup schedule for a site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: backupRequest
+          type: BackupRequest
+          description: A backup schedule specification.
+        - id: backupRequest.backupSchedule
+          type: BackupSchedule
+          description: "The backup schedule\rstructure - valid only when setting up a schedule. Should be Null for\ron-demand backups."
+        - id: backupRequest.backupSchedule.frequencyInterval
+          type: number
+          description: "The\rfrequency of backups."
+        - id: backupRequest.backupSchedule.frequencyUnit
+          type: FrequencyUnit
+          description: "Units\rfor FrequencyInterval - e.g. Day or Hour"
+        - id: backupRequest.backupSchedule.keepAtLeastOneBackup
+          type: boolean
+          description: "Retention policy deletes backups after predefined number of days. If this\ris true, there will be always at least one backup left. regardless of the\rpolicy. If false, all backups can be deleted."
+        - id: backupRequest.backupSchedule.lastExecutionTime
+          type: date
+          description: "The last\rtime when this schedule started a backup, Null if didn't start anything\ryet."
+        - id: backupRequest.backupSchedule.retentionPeriodInDays
+          type: number
+          description: "Backups older N days (N defined by this value) will be automatically\rdeleted."
+        - id: backupRequest.backupSchedule.startTime
+          type: date
+          description: "When this schedule\rshould start backing up the site. Null means immediately."
+        - id: backupRequest.databases
+          type: IEnumerable
+          description: "Database settings for\rbackup."
+        - id: backupRequest.enabled
+          type: boolean
+          description: "Valid only for a backup schedule\r(can be Null for on-demand backups). True if enabled; false if disabled\r(no backups will be performed)."
+        - id: backupRequest.name
+          type: string
+          description: "The name of this backup - will be\rused for generating a blob name."
+        - id: backupRequest.storageAccountUrl
+          type: string
+          description: "SAS URL for a container\rin a storage account. E.g.\rhttps://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateBackupConfiguration(webSpaceName, webSiteName,
+        backupRequest, backupRequest.backupSchedule,
+        backupRequest.backupSchedule.frequencyInterval,
+        backupRequest.backupSchedule.frequencyUnit,
+        backupRequest.backupSchedule.keepAtLeastOneBackup,
+        backupRequest.backupSchedule.lastExecutionTime,
+        backupRequest.backupSchedule.retentionPeriodInDays,
+        backupRequest.backupSchedule.startTime, backupRequest.databases,
+        backupRequest.enabled, backupRequest.name,
+        backupRequest.storageAccountUrl, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.updateBackupConfiguration(webSpaceName,
+      webSiteName, backupRequest, backupRequest.backupSchedule,
+      backupRequest.backupSchedule.frequencyInterval,
+      backupRequest.backupSchedule.frequencyUnit,
+      backupRequest.backupSchedule.keepAtLeastOneBackup,
+      backupRequest.backupSchedule.lastExecutionTime,
+      backupRequest.backupSchedule.retentionPeriodInDays,
+      backupRequest.backupSchedule.startTime, backupRequest.databases,
+      backupRequest.enabled, backupRequest.name,
+      backupRequest.storageAccountUrl, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~url2'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~httpRequest
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~requestContent
+      - 'WebSiteOperations~WebSiteOperations#updateBackupConfiguration~requestDoc'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~backupRequestElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~backupScheduleElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~frequencyIntervalElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~frequencyUnitElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~keepAtLeastOneBackupElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~lastExecutionTimeElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~retentionPeriodInDaysElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~startTimeElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~databasesSequenceElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~loweredIndex1
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~loweredIndex1
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~databasesItem
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~databaseBackupSettingElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~connectionStringElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~connectionStringNameElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~databaseTypeElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~nameElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~enabledElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~nameElement2
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~storageAccountUrlElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateBackupConfiguration~requestContent
+  - uid: 'WebSiteOperations~WebSiteOperations#updateConfiguration'
+    id: updateConfiguration
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      updateConfiguration(webSpaceName, webSiteName, parameters,
+      parameters.appSettings, parameters.connectionStrings,
+      parameters.defaultDocuments, parameters.detailedErrorLoggingEnabled,
+      parameters.documentRoot, parameters.handlerMappings,
+      parameters.httpLoggingEnabled, parameters.logsDirectorySizeLimit,
+      parameters.managedPipelineMode, parameters.metadata,
+      parameters.netFrameworkVersion, parameters.numberOfWorkers,
+      parameters.phpVersion, parameters.remoteDebuggingEnabled,
+      parameters.remoteDebuggingVersion, parameters.requestTracingEnabled,
+      parameters.requestTracingExpirationTime, parameters.scmType,
+      parameters.use32BitWorkerProcess, parameters.webSocketsEnabled,
+      parameters.alwaysOn, parameters.routingRules, parameters.javaVersion,
+      parameters.javaContainer, parameters.javaContainerVersion,
+      parameters.autoSwapSlotName, parameters.siteAuthEnabled,
+      parameters.siteAuthSettings, parameters.siteAuthSettings.aADClientId,
+      parameters.siteAuthSettings.openIdIssuer, parameters.limits,
+      parameters.limits.maxPercentageCpu, parameters.limits.maxMemoryInMb,
+      parameters.limits.maxDiskSizeInMb, callback)
+    summary: "You can update the config settings for a web site by issuing an HTTP PUT\rwith a request body containing the updated settings.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn166985.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: parameters
+          type: WebSiteUpdateConfigurationParameters
+          description: "Parameters\rsupplied to the Update Configuration Web Site operation."
+        - id: parameters.appSettings
+          type: object
+          description: "A set of name/value pairs that\rcontain application settings for a web site."
+        - id: parameters.connectionStrings
+          type: array
+          description: "The connection strings for\rdatabase and other external resources."
+        - id: parameters.defaultDocuments
+          type: array
+          description: "One or more string elements\rthat list, in order of preference, the name of the file that a web site\rreturns when the web site's domain name is requested by itself. For\rexample, if the default document for http://contoso.com is default.htm,\rthe page http://www.contoso.com/default.htm is returned when the browser\ris pointed to http://www.contoso.com."
+        - id: parameters.detailedErrorLoggingEnabled
+          type: boolean
+          description: "Indicates if\rdetailed error logging is enabled."
+        - id: parameters.documentRoot
+          type: string
+          description: The document root.
+        - id: parameters.handlerMappings
+          type: array
+          description: "Specifies custom executable\rprograms for handling requests for specific file name extensions."
+        - id: parameters.httpLoggingEnabled
+          type: boolean
+          description: "Indicates if HTTP error\rlogging is enabled."
+        - id: parameters.logsDirectorySizeLimit
+          type: number
+          description: "The size limit of the\rlogs directory."
+        - id: parameters.managedPipelineMode
+          type: ManagedPipelineMode
+          description: "The managed\rpipeline mode."
+        - id: parameters.metadata
+          type: object
+          description: "Name/value pairs for source control\ror other information."
+        - id: parameters.netFrameworkVersion
+          type: string
+          description: "The .NET Framework\rversion. Supported values are v2.0 and v4.0."
+        - id: parameters.numberOfWorkers
+          type: number
+          description: "The number of web workers\rallotted to the web site. If the web site mode is Free, this value is 1.\rIf the web site mode is Shared, this value can range from 1 through 6. If\rthe web site mode is Standard, this value can range from 1 through 10."
+        - id: parameters.phpVersion
+          type: string
+          description: "The web site PHP version.\rSupported values are an empty string (an empty string disables PHP), 5.3,\rand 5.4."
+        - id: parameters.remoteDebuggingEnabled
+          type: boolean
+          description: "Indicates if remote\rdebugging is enabled."
+        - id: parameters.remoteDebuggingVersion
+          type: RemoteDebuggingVersion
+          description: "The\rremote debugging version."
+        - id: parameters.requestTracingEnabled
+          type: boolean
+          description: "Indicates if request\rtracing is enabled."
+        - id: parameters.requestTracingExpirationTime
+          type: date
+          description: "Time remaining\runtil request tracing expires."
+        - id: parameters.scmType
+          type: string
+          description: "The source control method that the\rweb site is using (for example, Local Git). If deployment from source\rcontrol has not been set up for the web site, this value is None."
+        - id: parameters.use32BitWorkerProcess
+          type: boolean
+          description: "Indicates if 32-bit\rmode is enabled."
+        - id: parameters.webSocketsEnabled
+          type: boolean
+          description: "Indicates if Web Sockets\rare enabled."
+        - id: parameters.alwaysOn
+          type: boolean
+          description: "Indicates if site's Always On\rfeature enabled."
+        - id: parameters.routingRules
+          type: array
+          description: "List of routing rules for the\rwebsite."
+        - id: parameters.javaVersion
+          type: string
+          description: "The web site JDK version.\rSupported values are an empty string (an empty string disables Java),\r1.7.0_51"
+        - id: parameters.javaContainer
+          type: string
+          description: "The web site Java Container.\rSupported values are TOMCAT, JETTY"
+        - id: parameters.javaContainerVersion
+          type: string
+          description: "The web site Java\rContainer Version. Supported values are 7.0.50 if Java Container is\rTOMCAT and 9.1.0.20131115 if Java Container is JETTY"
+        - id: parameters.autoSwapSlotName
+          type: string
+          description: "Sets the slot name to swap\rwith after successful deployment."
+        - id: parameters.siteAuthEnabled
+          type: boolean
+          description: "Gets or sets a value\rindicating whether the site's Authentication / Authorization feature is\renabled."
+        - id: parameters.siteAuthSettings
+          type: SiteAuthSettings
+          description: "Gets or sets the\rAuthentication / Authorization settings of a web site."
+        - id: parameters.siteAuthSettings.aADClientId
+          type: string
+          description: "Gets or sets the\rOpenID Connection client_id value for the web site."
+        - id: parameters.siteAuthSettings.openIdIssuer
+          type: string
+          description: "Gets or sets\rthe OpenID Connect issuer URL value for the web site."
+        - id: parameters.limits
+          type: SiteLimits
+          description: The per site limits.
+        - id: parameters.limits.maxPercentageCpu
+          type: number
+          description: The name of the pair.
+        - id: parameters.limits.maxMemoryInMb
+          type: number
+          description: "Maximum memory allowed\rin MB"
+        - id: parameters.limits.maxDiskSizeInMb
+          type: number
+          description: "Maximum disk size\rallowed in MB"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateConfiguration(webSpaceName, webSiteName, parameters,
+        parameters.appSettings, parameters.connectionStrings,
+        parameters.defaultDocuments, parameters.detailedErrorLoggingEnabled,
+        parameters.documentRoot, parameters.handlerMappings,
+        parameters.httpLoggingEnabled, parameters.logsDirectorySizeLimit,
+        parameters.managedPipelineMode, parameters.metadata,
+        parameters.netFrameworkVersion, parameters.numberOfWorkers,
+        parameters.phpVersion, parameters.remoteDebuggingEnabled,
+        parameters.remoteDebuggingVersion, parameters.requestTracingEnabled,
+        parameters.requestTracingExpirationTime, parameters.scmType,
+        parameters.use32BitWorkerProcess, parameters.webSocketsEnabled,
+        parameters.alwaysOn, parameters.routingRules, parameters.javaVersion,
+        parameters.javaContainer, parameters.javaContainerVersion,
+        parameters.autoSwapSlotName, parameters.siteAuthEnabled,
+        parameters.siteAuthSettings, parameters.siteAuthSettings.aADClientId,
+        parameters.siteAuthSettings.openIdIssuer, parameters.limits,
+        parameters.limits.maxPercentageCpu, parameters.limits.maxMemoryInMb,
+        parameters.limits.maxDiskSizeInMb, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.updateConfiguration(webSpaceName,
+      webSiteName, parameters, parameters.appSettings,
+      parameters.connectionStrings, parameters.defaultDocuments,
+      parameters.detailedErrorLoggingEnabled, parameters.documentRoot,
+      parameters.handlerMappings, parameters.httpLoggingEnabled,
+      parameters.logsDirectorySizeLimit, parameters.managedPipelineMode,
+      parameters.metadata, parameters.netFrameworkVersion,
+      parameters.numberOfWorkers, parameters.phpVersion,
+      parameters.remoteDebuggingEnabled, parameters.remoteDebuggingVersion,
+      parameters.requestTracingEnabled, parameters.requestTracingExpirationTime,
+      parameters.scmType, parameters.use32BitWorkerProcess,
+      parameters.webSocketsEnabled, parameters.alwaysOn,
+      parameters.routingRules, parameters.javaVersion, parameters.javaContainer,
+      parameters.javaContainerVersion, parameters.autoSwapSlotName,
+      parameters.siteAuthEnabled, parameters.siteAuthSettings,
+      parameters.siteAuthSettings.aADClientId,
+      parameters.siteAuthSettings.openIdIssuer, parameters.limits,
+      parameters.limits.maxPercentageCpu, parameters.limits.maxMemoryInMb,
+      parameters.limits.maxDiskSizeInMb, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~httpRequest'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~requestContent'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~requestDoc'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~webSiteUpdateConfigurationParametersValue
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~requestDoc'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~appSettingsDictionary
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~appSettingsKey'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~appSettingsValue'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~appSettingsItemObject
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~connectionStringsArray
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex1'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~connectionStringsItem
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~connectionStringInfoValue
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~defaultDocumentsArray
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex2'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex2'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~defaultDocumentsItem
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~handlerMappingsArray
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex3'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex3'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~handlerMappingsItem
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~handlerMappingValue
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~metadataDictionary
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~metadataKey'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~metadataValue'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~metadataItemObject
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~routingRulesArray
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex4'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~loweredIndex4'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~routingRulesItem'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~routingRuleValue'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~derived'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateConfiguration~siteAuthSettingsValue
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~limitsValue'
+      - 'WebSiteOperations~WebSiteOperations#updateConfiguration~requestContent'
+  - uid: 'WebSiteOperations~WebSiteOperations#updateHybridConnection'
+    id: updateHybridConnection
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      updateHybridConnection(webSpaceName, siteName, parameters,
+      parameters.biztalkUri, parameters.entityConnectionString,
+      parameters.entityName, parameters.hostname, parameters.port,
+      parameters.resourceConnectionString, parameters.resourceType, callback)
+    summary: Updates an association to a hybrid connection for a web site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: siteName
+          type: string
+          description: The name of the web site.
+        - id: parameters
+          type: HybridConnectionUpdateParameters
+          description: "Parameters supplied\rto the Create Hybrid Connection operation."
+        - id: parameters.biztalkUri
+          type: string
+          description: "The resource uri of the biztalk\rservice. This field can be left empty; Without it the Azure Portal will\rnot be able to display the biztalk service for this connection properly."
+        - id: parameters.entityConnectionString
+          type: string
+          description: "The biztalk\rapplication connection string for this connection"
+        - id: parameters.entityName
+          type: string
+          description: The unique name for this connection
+        - id: parameters.hostname
+          type: string
+          description: "The hostname of the target\ron-premise resource"
+        - id: parameters.port
+          type: number
+          description: "The port of the target on-premise\rresource"
+        - id: parameters.resourceConnectionString
+          type: string
+          description: "Reserved for future\ruse. The connection string for the resource. This field can be left empty."
+        - id: parameters.resourceType
+          type: string
+          description: "Reserved for future use. The\rtype of resource to be connected. This field can be left empty."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateHybridConnection(webSpaceName, siteName, parameters,
+        parameters.biztalkUri, parameters.entityConnectionString,
+        parameters.entityName, parameters.hostname, parameters.port,
+        parameters.resourceConnectionString, parameters.resourceType, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.updateHybridConnection(webSpaceName,
+      siteName, parameters, parameters.biztalkUri,
+      parameters.entityConnectionString, parameters.entityName,
+      parameters.hostname, parameters.port, parameters.resourceConnectionString,
+      parameters.resourceType, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~httpRequest'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~requestContent
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~requestDoc'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~relayServiceConnectionEntityElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~biztalkUriElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~entityConnectionStringElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~entityNameElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~hostnameElement
+      - 'WebSiteOperations~WebSiteOperations#updateHybridConnection~portElement'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~resourceConnectionStringElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~resourceTypeElement
+      - >-
+        WebSiteOperations~WebSiteOperations#updateHybridConnection~requestContent
+  - uid: 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames'
+    id: updateSlotConfigNames
+    parent: WebSiteOperations~WebSiteOperations
+    name: >-
+      updateSlotConfigNames(webSpaceName, webSiteName, parameters,
+      parameters.connectionStringNames, parameters.appSettingNames, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: The name of the web space.
+        - id: webSiteName
+          type: string
+          description: The name of the web site.
+        - id: parameters
+          type: SlotConfigNamesUpdate
+          description: The parameters.
+        - id: parameters.connectionStringNames
+          type: array
+          description: "One or more string\relements that list the name of the connection string setting that will\rnot be moved durig site swap. For example, if slot named staging has\rconnection UsersDatabase that points to staging test database, it\rshouldn't be moved when swapped with production slot but should take the\rcurrent value from production."
+        - id: parameters.appSettingNames
+          type: array
+          description: "One or more string elements\rthat list the name of the app setting that will not be moved durig site\rswap. For example, if slot named staging has setting\rEnableVerboseLogging=1, it shouldn't be moved when swapped with\rproduction slot but should take the current value from production."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateSlotConfigNames(webSpaceName, webSiteName, parameters,
+        parameters.connectionStringNames, parameters.appSettingNames, callback);
+    fullName: >-
+      WebSiteOperations~WebSiteOperations.updateSlotConfigNames(webSpaceName,
+      webSiteName, parameters, parameters.connectionStringNames,
+      parameters.appSettingNames, callback)
+    children:
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~baseUrl'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~url2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~httpRequest'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~requestContent'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~requestDoc'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateSlotConfigNames~slotConfigNamesUpdateValue
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~requestDoc'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateSlotConfigNames~connectionStringNamesArray
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~loweredIndex1'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~loweredIndex1'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateSlotConfigNames~connectionStringNamesItem
+      - >-
+        WebSiteOperations~WebSiteOperations#updateSlotConfigNames~appSettingNamesArray
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~loweredIndex2'
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~loweredIndex2'
+      - >-
+        WebSiteOperations~WebSiteOperations#updateSlotConfigNames~appSettingNamesItem
+      - 'WebSiteOperations~WebSiteOperations#updateSlotConfigNames~requestContent'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: BackupRequest
+    name: BackupRequest
+    fullName: BackupRequest
+    isExternal: false
+  - uid: BackupSchedule
+    name: BackupSchedule
+    fullName: BackupSchedule
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: FrequencyUnit
+    name: FrequencyUnit
+    fullName: FrequencyUnit
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: IEnumerable
+    name: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - uid: WebSiteCreateParameters
+    name: WebSiteCreateParameters
+    fullName: WebSiteCreateParameters
+    isExternal: true
+  - uid: WebSpaceDetails
+    name: WebSpaceDetails
+    fullName: WebSpaceDetails
+    isExternal: true
+  - uid: HybridConnectionCreateParameters
+    name: HybridConnectionCreateParameters
+    fullName: HybridConnectionCreateParameters
+    isExternal: true
+  - uid: WebSiteDeleteParameters
+    name: WebSiteDeleteParameters
+    fullName: WebSiteDeleteParameters
+    isExternal: true
+  - uid: RestoreRequest
+    name: RestoreRequest
+    fullName: RestoreRequest
+    isExternal: false
+  - uid: WebSiteGetParameters
+    name: WebSiteGetParameters
+    fullName: WebSiteGetParameters
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: WebSiteGetHistoricalUsageMetricsParameters
+    name: WebSiteGetHistoricalUsageMetricsParameters
+    fullName: WebSiteGetHistoricalUsageMetricsParameters
+    isExternal: true
+  - uid: WebSiteUpdateParameters
+    name: WebSiteUpdateParameters
+    fullName: WebSiteUpdateParameters
+    isExternal: true
+  - uid: WebSiteUpdateConfigurationParameters
+    name: WebSiteUpdateConfigurationParameters
+    fullName: WebSiteUpdateConfigurationParameters
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: ManagedPipelineMode
+    name: ManagedPipelineMode
+    fullName: ManagedPipelineMode
+    isExternal: true
+  - uid: RemoteDebuggingVersion
+    name: RemoteDebuggingVersion
+    fullName: RemoteDebuggingVersion
+    isExternal: true
+  - uid: SiteAuthSettings
+    name: SiteAuthSettings
+    fullName: SiteAuthSettings
+    isExternal: false
+  - uid: SiteLimits
+    name: SiteLimits
+    fullName: SiteLimits
+    isExternal: false
+  - uid: HybridConnectionUpdateParameters
+    name: HybridConnectionUpdateParameters
+    fullName: HybridConnectionUpdateParameters
+    isExternal: true
+  - uid: SlotConfigNamesUpdate
+    name: SlotConfigNamesUpdate
+    fullName: SlotConfigNamesUpdate
+    isExternal: true

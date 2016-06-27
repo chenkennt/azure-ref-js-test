@@ -1,0 +1,101 @@
+items:
+  - uid: RecoverDatabaseOperations~RecoverDatabaseOperations
+    id: RecoverDatabaseOperations
+    parent: RecoverDatabaseOperations
+    name: RecoverDatabaseOperations
+    type: Class
+    syntax:
+      content: RecoverDatabaseOperations
+    fullName: RecoverDatabaseOperations.RecoverDatabaseOperations
+    children:
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#client'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create'
+  - uid: 'RecoverDatabaseOperations~RecoverDatabaseOperations#client'
+    id: client
+    parent: RecoverDatabaseOperations~RecoverDatabaseOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: RecoverDatabaseOperations~RecoverDatabaseOperations.client
+  - uid: 'RecoverDatabaseOperations~RecoverDatabaseOperations#create'
+    id: create
+    parent: RecoverDatabaseOperations~RecoverDatabaseOperations
+    name: >-
+      create(sourceServerName, parameters, parameters.sourceDatabaseName,
+      parameters.targetServerName, parameters.targetDatabaseName, callback)
+    summary: Issues a recovery request for an Azure SQL Database.
+    type: Method
+    syntax:
+      parameters:
+        - id: sourceServerName
+          type: string
+          description: "The name of the Azure SQL Database Server\ron which the database was hosted."
+        - id: parameters
+          type: RecoverDatabaseOperationCreateParameters
+          description: "Additional\rparameters for the Create Recover Database Operation request."
+        - id: parameters.sourceDatabaseName
+          type: string
+          description: "Gets or sets the name of the\rsource Azure SQL Database."
+        - id: parameters.targetServerName
+          type: string
+          description: "Gets or sets the name of the\rtarget Azure SQL Database Server."
+        - id: parameters.targetDatabaseName
+          type: string
+          description: "Gets or sets the name of\rthe target Azure SQL Database."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(sourceServerName, parameters,
+        parameters.sourceDatabaseName, parameters.targetServerName,
+        parameters.targetDatabaseName, callback);
+    fullName: >-
+      RecoverDatabaseOperations~RecoverDatabaseOperations.create(sourceServerName,
+      parameters, parameters.sourceDatabaseName, parameters.targetServerName,
+      parameters.targetDatabaseName, callback)
+    children:
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~baseUrl'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~baseUrl'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~url2'
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~httpRequest'
+      - >-
+        RecoverDatabaseOperations~RecoverDatabaseOperations#create~requestContent
+      - 'RecoverDatabaseOperations~RecoverDatabaseOperations#create~requestDoc'
+      - >-
+        RecoverDatabaseOperations~RecoverDatabaseOperations#create~serviceResourceElement
+      - >-
+        RecoverDatabaseOperations~RecoverDatabaseOperations#create~sourceDatabaseNameElement
+      - >-
+        RecoverDatabaseOperations~RecoverDatabaseOperations#create~targetServerNameElement
+      - >-
+        RecoverDatabaseOperations~RecoverDatabaseOperations#create~targetDatabaseNameElement
+      - >-
+        RecoverDatabaseOperations~RecoverDatabaseOperations#create~requestContent
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: RecoverDatabaseOperationCreateParameters
+    name: RecoverDatabaseOperationCreateParameters
+    fullName: RecoverDatabaseOperationCreateParameters
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

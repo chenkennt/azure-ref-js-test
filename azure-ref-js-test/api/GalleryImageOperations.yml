@@ -1,0 +1,133 @@
+items:
+  - uid: GalleryImageOperations
+    id: GalleryImageOperations
+    name: GalleryImageOperations
+    type: Class
+    syntax:
+      content: GalleryImageOperations
+    fullName: GalleryImageOperations
+    children:
+      - 'GalleryImageOperations#client'
+      - 'GalleryImageOperations#list'
+      - 'GalleryImageOperations#listNext'
+  - uid: 'GalleryImageOperations#client'
+    id: client
+    parent: GalleryImageOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: GalleryImageOperations.client
+  - uid: 'GalleryImageOperations#list'
+    id: list
+    parent: GalleryImageOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List gallery images.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationGalleryImage} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      GalleryImageOperations.list(resourceGroupName, labName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'GalleryImageOperations#list~client'
+      - 'GalleryImageOperations#list~callback'
+      - 'GalleryImageOperations#list~options'
+      - 'GalleryImageOperations#list~filter'
+      - 'GalleryImageOperations#list~top'
+      - 'GalleryImageOperations#list~orderBy'
+      - 'GalleryImageOperations#list~requestUrl'
+      - 'GalleryImageOperations#list~requestUrl'
+      - 'GalleryImageOperations#list~requestUrl'
+      - 'GalleryImageOperations#list~requestUrl'
+      - 'GalleryImageOperations#list~queryParameters'
+      - 'GalleryImageOperations#list~requestUrl'
+      - 'GalleryImageOperations#list~regex'
+      - 'GalleryImageOperations#list~requestUrl'
+      - 'GalleryImageOperations#list~httpRequest'
+      - 'GalleryImageOperations#list~headerName'
+  - uid: 'GalleryImageOperations#listNext'
+    id: listNext
+    parent: GalleryImageOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List gallery images.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationGalleryImage} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      GalleryImageOperations.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'GalleryImageOperations#listNext~client'
+      - 'GalleryImageOperations#listNext~callback'
+      - 'GalleryImageOperations#listNext~options'
+      - 'GalleryImageOperations#listNext~requestUrl'
+      - 'GalleryImageOperations#listNext~requestUrl'
+      - 'GalleryImageOperations#listNext~regex'
+      - 'GalleryImageOperations#listNext~requestUrl'
+      - 'GalleryImageOperations#listNext~httpRequest'
+      - 'GalleryImageOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

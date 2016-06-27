@@ -1,0 +1,513 @@
+items:
+  - uid: Origins
+    id: Origins
+    name: Origins
+    type: Class
+    syntax:
+      content: Origins
+    fullName: Origins
+    children:
+      - 'Origins#client'
+      - 'Origins#listByEndpoint'
+      - 'Origins#get'
+      - 'Origins#create'
+      - 'Origins#beginCreate'
+      - 'Origins#update'
+      - 'Origins#beginUpdate'
+      - 'Origins#deleteIfExists'
+      - 'Origins#beginDeleteIfExists'
+  - uid: 'Origins#client'
+    id: client
+    parent: Origins
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Origins.client
+  - uid: 'Origins#listByEndpoint'
+    id: listByEndpoint
+    parent: Origins
+    name: >-
+      listByEndpoint(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link OriginListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByEndpoint(endpointName, profileName, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Origins.listByEndpoint(endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Origins#listByEndpoint~client'
+      - 'Origins#listByEndpoint~callback'
+      - 'Origins#listByEndpoint~options'
+      - 'Origins#listByEndpoint~requestUrl'
+      - 'Origins#listByEndpoint~requestUrl'
+      - 'Origins#listByEndpoint~requestUrl'
+      - 'Origins#listByEndpoint~requestUrl'
+      - 'Origins#listByEndpoint~requestUrl'
+      - 'Origins#listByEndpoint~queryParameters'
+      - 'Origins#listByEndpoint~requestUrl'
+      - 'Origins#listByEndpoint~regex'
+      - 'Origins#listByEndpoint~requestUrl'
+      - 'Origins#listByEndpoint~httpRequest'
+      - 'Origins#listByEndpoint~headerName'
+  - uid: 'Origins#get'
+    id: get
+    parent: Origins
+    name: >-
+      get(originName, endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: originName
+          type: string
+          description: "Name of the origin, an arbitrary value but it\rneeds to be unique under endpoint"
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(originName, endpointName, profileName, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Origins.get(originName, endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Origins#get~client'
+      - 'Origins#get~callback'
+      - 'Origins#get~options'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~queryParameters'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~regex'
+      - 'Origins#get~requestUrl'
+      - 'Origins#get~httpRequest'
+      - 'Origins#get~headerName'
+  - uid: 'Origins#create'
+    id: create
+    parent: Origins
+    name: >-
+      create(originName, originProperties, originProperties.hostName,
+      originProperties.httpPort, originProperties.httpsPort, endpointName,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: originName
+          type: string
+          description: "Name of the origin, an arbitrary value but it\rneeds to be unique under endpoint"
+        - id: originProperties
+          type: object
+          description: Origin properties
+        - id: originProperties.hostName
+          type: string
+          description: "The address of the origin.\rDomain names, IPv4 addresses, and IPv6 addresses are supported."
+        - id: originProperties.httpPort
+          type: number
+          description: "The value of the HTTP port.\rMust be between 1 and 65535."
+        - id: originProperties.httpsPort
+          type: number
+          description: "The value of the HTTPS port.\rMust be between 1 and 65535."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(originName, originProperties, originProperties.hostName,
+        originProperties.httpPort, originProperties.httpsPort, endpointName,
+        profileName, resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Origins.create(originName, originProperties, originProperties.hostName,
+      originProperties.httpPort, originProperties.httpsPort, endpointName,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Origins#create~client'
+      - 'Origins#create~callback'
+      - 'Origins#create~options'
+  - uid: 'Origins#beginCreate'
+    id: beginCreate
+    parent: Origins
+    name: >-
+      beginCreate(originName, originProperties, originProperties.hostName,
+      originProperties.httpPort, originProperties.httpsPort, endpointName,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: originName
+          type: string
+          description: "Name of the origin, an arbitrary value but it\rneeds to be unique under endpoint"
+        - id: originProperties
+          type: object
+          description: Origin properties
+        - id: originProperties.hostName
+          type: string
+          description: "The address of the origin.\rDomain names, IPv4 addresses, and IPv6 addresses are supported."
+        - id: originProperties.httpPort
+          type: number
+          description: "The value of the HTTP port.\rMust be between 1 and 65535."
+        - id: originProperties.httpsPort
+          type: number
+          description: "The value of the HTTPS port.\rMust be between 1 and 65535."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(originName, originProperties,
+        originProperties.hostName, originProperties.httpPort,
+        originProperties.httpsPort, endpointName, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      Origins.beginCreate(originName, originProperties,
+      originProperties.hostName, originProperties.httpPort,
+      originProperties.httpsPort, endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Origins#beginCreate~client'
+      - 'Origins#beginCreate~callback'
+      - 'Origins#beginCreate~options'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~queryParameters'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~regex'
+      - 'Origins#beginCreate~requestUrl'
+      - 'Origins#beginCreate~httpRequest'
+      - 'Origins#beginCreate~headerName'
+      - 'Origins#beginCreate~requestContent'
+      - 'Origins#beginCreate~requestModel'
+      - 'Origins#beginCreate~requestModelMapper'
+      - 'Origins#beginCreate~requestModel'
+      - 'Origins#beginCreate~requestContent'
+      - 'Origins#beginCreate~serializationError'
+  - uid: 'Origins#update'
+    id: update
+    parent: Origins
+    name: >-
+      update(originName, originProperties, originProperties.hostName,
+      originProperties.httpPort, originProperties.httpsPort, endpointName,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: originName
+          type: string
+          description: "Name of the origin. Must be unique within\rendpoint."
+        - id: originProperties
+          type: object
+          description: Origin properties
+        - id: originProperties.hostName
+          type: string
+          description: "The address of the origin.\rDomain names, IPv4 addresses, and IPv6 addresses are supported."
+        - id: originProperties.httpPort
+          type: number
+          description: "The value of the HTTP port.\rMust be between 1 and 65535."
+        - id: originProperties.httpsPort
+          type: number
+          description: "The value of the HTTPS port.\rMust be between 1 and 65535."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(originName, originProperties, originProperties.hostName,
+        originProperties.httpPort, originProperties.httpsPort, endpointName,
+        profileName, resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Origins.update(originName, originProperties, originProperties.hostName,
+      originProperties.httpPort, originProperties.httpsPort, endpointName,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Origins#update~client'
+      - 'Origins#update~callback'
+      - 'Origins#update~options'
+  - uid: 'Origins#beginUpdate'
+    id: beginUpdate
+    parent: Origins
+    name: >-
+      beginUpdate(originName, originProperties, originProperties.hostName,
+      originProperties.httpPort, originProperties.httpsPort, endpointName,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: originName
+          type: string
+          description: "Name of the origin. Must be unique within\rendpoint."
+        - id: originProperties
+          type: object
+          description: Origin properties
+        - id: originProperties.hostName
+          type: string
+          description: "The address of the origin.\rDomain names, IPv4 addresses, and IPv6 addresses are supported."
+        - id: originProperties.httpPort
+          type: number
+          description: "The value of the HTTP port.\rMust be between 1 and 65535."
+        - id: originProperties.httpsPort
+          type: number
+          description: "The value of the HTTPS port.\rMust be between 1 and 65535."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginUpdate(originName, originProperties,
+        originProperties.hostName, originProperties.httpPort,
+        originProperties.httpsPort, endpointName, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      Origins.beginUpdate(originName, originProperties,
+      originProperties.hostName, originProperties.httpPort,
+      originProperties.httpsPort, endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Origins#beginUpdate~client'
+      - 'Origins#beginUpdate~callback'
+      - 'Origins#beginUpdate~options'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~queryParameters'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~regex'
+      - 'Origins#beginUpdate~requestUrl'
+      - 'Origins#beginUpdate~httpRequest'
+      - 'Origins#beginUpdate~headerName'
+      - 'Origins#beginUpdate~requestContent'
+      - 'Origins#beginUpdate~requestModel'
+      - 'Origins#beginUpdate~requestModelMapper'
+      - 'Origins#beginUpdate~requestModel'
+      - 'Origins#beginUpdate~requestContent'
+      - 'Origins#beginUpdate~serializationError'
+  - uid: 'Origins#deleteIfExists'
+    id: deleteIfExists
+    parent: Origins
+    name: >-
+      deleteIfExists(originName, endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: originName
+          type: string
+          description: "Name of the origin. Must be unique within\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteIfExists(originName, endpointName, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      Origins.deleteIfExists(originName, endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Origins#deleteIfExists~client'
+      - 'Origins#deleteIfExists~callback'
+      - 'Origins#deleteIfExists~options'
+  - uid: 'Origins#beginDeleteIfExists'
+    id: beginDeleteIfExists
+    parent: Origins
+    name: >-
+      beginDeleteIfExists(originName, endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: originName
+          type: string
+          description: "Name of the origin. Must be unique within\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteIfExists(originName, endpointName, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      Origins.beginDeleteIfExists(originName, endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Origins#beginDeleteIfExists~client'
+      - 'Origins#beginDeleteIfExists~callback'
+      - 'Origins#beginDeleteIfExists~options'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~queryParameters'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~regex'
+      - 'Origins#beginDeleteIfExists~requestUrl'
+      - 'Origins#beginDeleteIfExists~httpRequest'
+      - 'Origins#beginDeleteIfExists~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

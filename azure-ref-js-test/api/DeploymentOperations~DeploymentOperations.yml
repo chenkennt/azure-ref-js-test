@@ -1,0 +1,226 @@
+items:
+  - uid: DeploymentOperations~DeploymentOperations
+    id: DeploymentOperations
+    parent: DeploymentOperations
+    name: DeploymentOperations
+    type: Class
+    syntax:
+      content: DeploymentOperations
+    fullName: DeploymentOperations.DeploymentOperations
+    children:
+      - 'DeploymentOperations~DeploymentOperations#client'
+      - 'DeploymentOperations~DeploymentOperations#get'
+      - 'DeploymentOperations~DeploymentOperations#getLog'
+      - 'DeploymentOperations~DeploymentOperations#list'
+      - 'DeploymentOperations~DeploymentOperations#listLogs'
+      - 'DeploymentOperations~DeploymentOperations#redeploy'
+  - uid: 'DeploymentOperations~DeploymentOperations#client'
+    id: client
+    parent: DeploymentOperations~DeploymentOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: DeploymentOperations~DeploymentOperations.client
+  - uid: 'DeploymentOperations~DeploymentOperations#get'
+    id: get
+    parent: DeploymentOperations~DeploymentOperations
+    name: 'get(deploymentId, callback)'
+    summary: Gets a deployment for a website.
+    type: Method
+    syntax:
+      parameters:
+        - id: deploymentId
+          type: string
+          description: The deployment identifier.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(deploymentId, callback);'
+    fullName: 'DeploymentOperations~DeploymentOperations.get(deploymentId, callback)'
+    children:
+      - 'DeploymentOperations~DeploymentOperations#get~url2'
+      - 'DeploymentOperations~DeploymentOperations#get~url2'
+      - 'DeploymentOperations~DeploymentOperations#get~url2'
+      - 'DeploymentOperations~DeploymentOperations#get~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#get~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#get~url2'
+      - 'DeploymentOperations~DeploymentOperations#get~url2'
+      - 'DeploymentOperations~DeploymentOperations#get~url2'
+      - 'DeploymentOperations~DeploymentOperations#get~httpRequest'
+  - uid: 'DeploymentOperations~DeploymentOperations#getLog'
+    id: getLog
+    parent: DeploymentOperations~DeploymentOperations
+    name: 'getLog(deploymentId, deploymentLogId, callback)'
+    summary: Gets a deployment log for a website.
+    type: Method
+    syntax:
+      parameters:
+        - id: deploymentId
+          type: string
+          description: The deployment identifier.
+        - id: deploymentLogId
+          type: string
+          description: The deployment log identifier.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getLog(deploymentId, deploymentLogId, callback);'
+    fullName: >-
+      DeploymentOperations~DeploymentOperations.getLog(deploymentId,
+      deploymentLogId, callback)
+    children:
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#getLog~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~url2'
+      - 'DeploymentOperations~DeploymentOperations#getLog~httpRequest'
+  - uid: 'DeploymentOperations~DeploymentOperations#list'
+    id: list
+    parent: DeploymentOperations~DeploymentOperations
+    name: >-
+      list(parametersOrCallback, parametersOrCallback.top,
+      parametersOrCallback.orderBy, callback)
+    summary: List the deployments for a website.
+    type: Method
+    syntax:
+      parameters:
+        - id: parametersOrCallback
+          type: DeploymentListParameters
+          description: "Additional\rparameters."
+        - id: parametersOrCallback.top
+          type: string
+          description: The top query criteria.
+        - id: parametersOrCallback.orderBy
+          type: string
+          description: The order by query criteria.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function list(parametersOrCallback, parametersOrCallback.top,
+        parametersOrCallback.orderBy, callback);
+    fullName: >-
+      DeploymentOperations~DeploymentOperations.list(parametersOrCallback,
+      parametersOrCallback.top, parametersOrCallback.orderBy, callback)
+    children:
+      - 'DeploymentOperations~DeploymentOperations#list~parameters'
+      - 'DeploymentOperations~DeploymentOperations#list~callback'
+      - 'DeploymentOperations~DeploymentOperations#list~parameters'
+      - 'DeploymentOperations~DeploymentOperations#list~url2'
+      - 'DeploymentOperations~DeploymentOperations#list~url2'
+      - 'DeploymentOperations~DeploymentOperations#list~queryParameters'
+      - 'DeploymentOperations~DeploymentOperations#list~url2'
+      - 'DeploymentOperations~DeploymentOperations#list~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#list~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#list~url2'
+      - 'DeploymentOperations~DeploymentOperations#list~url2'
+      - 'DeploymentOperations~DeploymentOperations#list~url2'
+      - 'DeploymentOperations~DeploymentOperations#list~httpRequest'
+  - uid: 'DeploymentOperations~DeploymentOperations#listLogs'
+    id: listLogs
+    parent: DeploymentOperations~DeploymentOperations
+    name: >-
+      listLogs(deploymentId, parametersOrCallback, parametersOrCallback.top,
+      parametersOrCallback.orderBy, callback)
+    summary: List the logs for a deployment for a website.
+    type: Method
+    syntax:
+      parameters:
+        - id: deploymentId
+          type: string
+          description: The deployment identifier.
+        - id: parametersOrCallback
+          type: DeploymentListParameters
+          description: "Additional\rparameters."
+        - id: parametersOrCallback.top
+          type: string
+          description: The top query criteria.
+        - id: parametersOrCallback.orderBy
+          type: string
+          description: The order by query criteria.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function listLogs(deploymentId, parametersOrCallback,
+        parametersOrCallback.top, parametersOrCallback.orderBy, callback);
+    fullName: >-
+      DeploymentOperations~DeploymentOperations.listLogs(deploymentId,
+      parametersOrCallback, parametersOrCallback.top,
+      parametersOrCallback.orderBy, callback)
+    children:
+      - 'DeploymentOperations~DeploymentOperations#listLogs~parameters'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~callback'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~parameters'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~queryParameters'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~url2'
+      - 'DeploymentOperations~DeploymentOperations#listLogs~httpRequest'
+  - uid: 'DeploymentOperations~DeploymentOperations#redeploy'
+    id: redeploy
+    parent: DeploymentOperations~DeploymentOperations
+    name: 'redeploy(deploymentId, callback)'
+    summary: Redeploys a specific website deployment.
+    type: Method
+    syntax:
+      parameters:
+        - id: deploymentId
+          type: string
+          description: The deployment identifier.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function redeploy(deploymentId, callback);'
+    fullName: 'DeploymentOperations~DeploymentOperations.redeploy(deploymentId, callback)'
+    children:
+      - 'DeploymentOperations~DeploymentOperations#redeploy~url2'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~url2'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~url2'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~baseUrl'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~url2'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~url2'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~url2'
+      - 'DeploymentOperations~DeploymentOperations#redeploy~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: DeploymentListParameters
+    name: DeploymentListParameters
+    fullName: DeploymentListParameters
+    isExternal: true

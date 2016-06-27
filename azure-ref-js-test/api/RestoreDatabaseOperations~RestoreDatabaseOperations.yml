@@ -1,0 +1,118 @@
+items:
+  - uid: RestoreDatabaseOperations~RestoreDatabaseOperations
+    id: RestoreDatabaseOperations
+    parent: RestoreDatabaseOperations
+    name: RestoreDatabaseOperations
+    type: Class
+    syntax:
+      content: RestoreDatabaseOperations
+    fullName: RestoreDatabaseOperations.RestoreDatabaseOperations
+    children:
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#client'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create'
+  - uid: 'RestoreDatabaseOperations~RestoreDatabaseOperations#client'
+    id: client
+    parent: RestoreDatabaseOperations~RestoreDatabaseOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: RestoreDatabaseOperations~RestoreDatabaseOperations.client
+  - uid: 'RestoreDatabaseOperations~RestoreDatabaseOperations#create'
+    id: create
+    parent: RestoreDatabaseOperations~RestoreDatabaseOperations
+    name: >-
+      create(sourceServerName, parameters, parameters.sourceDatabaseName,
+      parameters.sourceDatabaseDeletionDate, parameters.targetServerName,
+      parameters.targetDatabaseName, parameters.pointInTime, callback)
+    summary: Issues a restore request for an Azure SQL Database.
+    type: Method
+    syntax:
+      parameters:
+        - id: sourceServerName
+          type: string
+          description: "The name of the Azure SQL Database Server\rwhere the source database is, or was, hosted."
+        - id: parameters
+          type: RestoreDatabaseOperationCreateParameters
+          description: "Additional\rparameters for the Create Restore Database Operation request."
+        - id: parameters.sourceDatabaseName
+          type: string
+          description: "Gets or sets the name of the\rsource Azure SQL Database."
+        - id: parameters.sourceDatabaseDeletionDate
+          type: date
+          description: "Gets or sets the\rdeletion date of the source Azure SQL Database."
+        - id: parameters.targetServerName
+          type: string
+          description: "Gets or sets the name of the\rtarget Azure SQL Database Server."
+        - id: parameters.targetDatabaseName
+          type: string
+          description: "Gets or sets the name of the\rtarget Azure SQL Database."
+        - id: parameters.pointInTime
+          type: date
+          description: "Gets or sets the point in time to\rrestore to."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(sourceServerName, parameters,
+        parameters.sourceDatabaseName, parameters.sourceDatabaseDeletionDate,
+        parameters.targetServerName, parameters.targetDatabaseName,
+        parameters.pointInTime, callback);
+    fullName: >-
+      RestoreDatabaseOperations~RestoreDatabaseOperations.create(sourceServerName,
+      parameters, parameters.sourceDatabaseName,
+      parameters.sourceDatabaseDeletionDate, parameters.targetServerName,
+      parameters.targetDatabaseName, parameters.pointInTime, callback)
+    children:
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~baseUrl'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~baseUrl'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~url2'
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~httpRequest'
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~requestContent
+      - 'RestoreDatabaseOperations~RestoreDatabaseOperations#create~requestDoc'
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~serviceResourceElement
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~sourceDatabaseNameElement
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~sourceDatabaseDeletionDateElement
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~targetServerNameElement
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~targetDatabaseNameElement
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~targetUtcPointInTimeElement
+      - >-
+        RestoreDatabaseOperations~RestoreDatabaseOperations#create~requestContent
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: RestoreDatabaseOperationCreateParameters
+    name: RestoreDatabaseOperationCreateParameters
+    fullName: RestoreDatabaseOperationCreateParameters
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

@@ -1,0 +1,1408 @@
+items:
+  - uid: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    id: NetworkSecurityGroupOperations
+    parent: NetworkSecurityGroupOperations
+    name: NetworkSecurityGroupOperations
+    type: Class
+    syntax:
+      content: NetworkSecurityGroupOperations
+    fullName: NetworkSecurityGroupOperations.NetworkSecurityGroupOperations
+    children:
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#client'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToNetworkInterface
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToRole'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToSubnet
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#create'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteMethod
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteRule'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromNetworkInterface
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromRole
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromSubnet
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#setRule'
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#client'
+    id: client
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.client
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToNetworkInterface
+    id: addToNetworkInterface
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      addToNetworkInterface(serviceName, deploymentName, roleName,
+      networkInterfaceName, parameters, parameters.name, callback)
+    summary: Adds a Network Security Group to a network interface.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: networkInterfaceName
+          type: string
+        - id: parameters
+          type: NetworkSecurityGroupAddAssociationParameters
+          description: "Parameters supplied to the Add Network Security Group to a network\rinterface operation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for a Network Security\rGroup from this subscription."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function addToNetworkInterface(serviceName, deploymentName, roleName,
+        networkInterfaceName, parameters, parameters.name, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.addToNetworkInterface(serviceName,
+      deploymentName, roleName, networkInterfaceName, parameters,
+      parameters.name, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToNetworkInterface~client2
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToRole'
+    id: addToRole
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      addToRole(serviceName, deploymentName, roleName, parameters,
+      parameters.name, callback)
+    summary: Adds a Network Security Group to a Role.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: parameters
+          type: NetworkSecurityGroupAddAssociationParameters
+          description: >-
+            Parameters supplied to the Add Network Security Group to Role
+            operation.
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for a Network Security\rGroup from this subscription."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function addToRole(serviceName, deploymentName, roleName, parameters,
+        parameters.name, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.addToRole(serviceName,
+      deploymentName, roleName, parameters, parameters.name, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToRole~client2
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToSubnet'
+    id: addToSubnet
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      addToSubnet(virtualNetworkName, subnetName, parameters, parameters.name,
+      callback)
+    summary: Adds a Network Security Group to a subnet.
+    type: Method
+    syntax:
+      parameters:
+        - id: virtualNetworkName
+          type: string
+        - id: subnetName
+          type: string
+        - id: parameters
+          type: NetworkSecurityGroupAddAssociationParameters
+          description: >-
+            Parameters supplied to the Add Network Security Group to subnet
+            operation.
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for a Network Security\rGroup from this subscription."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function addToSubnet(virtualNetworkName, subnetName, parameters,
+        parameters.name, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.addToSubnet(virtualNetworkName,
+      subnetName, parameters, parameters.name, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToSubnet~client2
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface
+    id: beginAddingToNetworkInterface
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginAddingToNetworkInterface(serviceName, deploymentName, roleName,
+      networkInterfaceName, parameters, parameters.name, callback)
+    summary: Adds a Network Security Group to a network interface.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: networkInterfaceName
+          type: string
+        - id: parameters
+          type: NetworkSecurityGroupAddAssociationParameters
+          description: "Parameters supplied to the Add Network Security Group to a network\rinterface operation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for a Network Security\rGroup from this subscription."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginAddingToNetworkInterface(serviceName, deploymentName,
+        roleName, networkInterfaceName, parameters, parameters.name, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginAddingToNetworkInterface(serviceName,
+      deploymentName, roleName, networkInterfaceName, parameters,
+      parameters.name, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~httpRequest
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~requestContent
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~requestDoc
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~networkSecurityGroupElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~nameElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface~requestContent
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole
+    id: beginAddingToRole
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginAddingToRole(serviceName, deploymentName, roleName, parameters,
+      parameters.name, callback)
+    summary: Adds a Network Security Group to a Role.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: parameters
+          type: NetworkSecurityGroupAddAssociationParameters
+          description: >-
+            Parameters supplied to the Add Network Security Group to Role
+            operation.
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for a Network Security\rGroup from this subscription."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginAddingToRole(serviceName, deploymentName, roleName,
+        parameters, parameters.name, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginAddingToRole(serviceName,
+      deploymentName, roleName, parameters, parameters.name, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~httpRequest
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~requestContent
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~requestDoc
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~networkSecurityGroupElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~nameElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole~requestContent
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet
+    id: beginAddingToSubnet
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginAddingToSubnet(virtualNetworkName, subnetName, parameters,
+      parameters.name, callback)
+    summary: Adds a Network Security Group to a subnet.
+    type: Method
+    syntax:
+      parameters:
+        - id: virtualNetworkName
+          type: string
+        - id: subnetName
+          type: string
+        - id: parameters
+          type: NetworkSecurityGroupAddAssociationParameters
+          description: >-
+            Parameters supplied to the Add Network Security Group to subnet
+            operation.
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for a Network Security\rGroup from this subscription."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginAddingToSubnet(virtualNetworkName, subnetName, parameters,
+        parameters.name, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginAddingToSubnet(virtualNetworkName,
+      subnetName, parameters, parameters.name, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~httpRequest
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~requestContent
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~requestDoc
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~networkSecurityGroupElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~nameElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet~requestContent
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating
+    id: beginCreating
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginCreating(parameters, parameters.name, parameters.label,
+      parameters.location, callback)
+    summary: Creates a new Network Security Group.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: NetworkSecurityGroupCreateParameters
+          description: "Parameters\rsupplied to the Create Network Security Group operation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for the Network Security\rGroup that is unique to the subscription."
+        - id: parameters.label
+          type: string
+          description: "Gets or sets description for the\rNetwork Security Group. The description can be up to 1024 characters in\rlength."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the data center location\rwhere the Network Security Group will be created."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginCreating(parameters, parameters.name, parameters.label,
+        parameters.location, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginCreating(parameters,
+      parameters.name, parameters.label, parameters.location, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~httpRequest
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~requestContent
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~requestDoc
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~networkSecurityGroupElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~nameElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~labelElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~locationElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating~requestContent
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting
+    id: beginDeleting
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: 'beginDeleting(networkSecurityGroupName, callback)'
+    summary: "Deletes the pecified Network Security Group from your subscription.If the\rNetwork Security group is still associated with some VM/Role/Subnet, the\rdeletion will fail. In order to successfully delete the Network Security,\rit needs to be not used."
+    type: Method
+    syntax:
+      parameters:
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the Network Security\rGroup to delete."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginDeleting(networkSecurityGroupName, callback);'
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginDeleting(networkSecurityGroupName,
+      callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting~httpRequest
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule
+    id: beginDeletingRule
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: 'beginDeletingRule(networkSecurityGroupName, ruleName, callback)'
+    summary: Deletes a rule from the specified Network Security Group.
+    type: Method
+    syntax:
+      parameters:
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the Network Security\rGroup."
+        - id: ruleName
+          type: string
+          description: The name of the rule to delete.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginDeletingRule(networkSecurityGroupName, ruleName,
+        callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginDeletingRule(networkSecurityGroupName,
+      ruleName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule~httpRequest
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface
+    id: beginRemovingFromNetworkInterface
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginRemovingFromNetworkInterface(serviceName, deploymentName, roleName,
+      networkInterfaceName, networkSecurityGroupName, callback)
+    summary: Removes a Network Security Group from a network interface.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: networkInterfaceName
+          type: string
+        - id: networkSecurityGroupName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginRemovingFromNetworkInterface(serviceName, deploymentName,
+        roleName, networkInterfaceName, networkSecurityGroupName, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginRemovingFromNetworkInterface(serviceName,
+      deploymentName, roleName, networkInterfaceName, networkSecurityGroupName,
+      callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface~httpRequest
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole
+    id: beginRemovingFromRole
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginRemovingFromRole(serviceName, deploymentName, roleName,
+      networkSecurityGroupName, callback)
+    summary: Removes a Network Security Group from a role.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: networkSecurityGroupName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginRemovingFromRole(serviceName, deploymentName, roleName,
+        networkSecurityGroupName, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginRemovingFromRole(serviceName,
+      deploymentName, roleName, networkSecurityGroupName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole~httpRequest
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet
+    id: beginRemovingFromSubnet
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginRemovingFromSubnet(virtualNetworkName, subnetName,
+      networkSecurityGroupName, callback)
+    summary: Removes a Network Security Group from a subnet.
+    type: Method
+    syntax:
+      parameters:
+        - id: virtualNetworkName
+          type: string
+        - id: subnetName
+          type: string
+        - id: networkSecurityGroupName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginRemovingFromSubnet(virtualNetworkName, subnetName,
+        networkSecurityGroupName, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginRemovingFromSubnet(virtualNetworkName,
+      subnetName, networkSecurityGroupName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet~httpRequest
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule
+    id: beginSettingRule
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      beginSettingRule(networkSecurityGroupName, ruleName, parameters,
+      parameters.type, parameters.priority, parameters.action,
+      parameters.sourceAddressPrefix, parameters.sourcePortRange,
+      parameters.destinationAddressPrefix, parameters.destinationPortRange,
+      parameters.protocol, callback)
+    summary: Sets a new Network Security Rule to existing Network Security Group.
+    type: Method
+    syntax:
+      parameters:
+        - id: networkSecurityGroupName
+          type: string
+        - id: ruleName
+          type: string
+        - id: parameters
+          type: NetworkSecuritySetRuleParameters
+          description: "Parameters supplied\rto the Set Network Security Rule operation."
+        - id: parameters.type
+          type: string
+          description: "Gets or sets type of Rule. Possible\rvalues: Inbound (to be evaluated against ingress traffic), Outbound (to\rbe evaluated against egress traffic)."
+        - id: parameters.priority
+          type: number
+          description: "Gets or sets Priority. Value from 100\r– 4096."
+        - id: parameters.action
+          type: string
+          description: "Gets or sets Action. Allow/Deny. Whether\rto allow or deny traffic."
+        - id: parameters.sourceAddressPrefix
+          type: string
+          description: "Gets or sets\rSourceAddressPrefix. CIDR value of Source IP from which traffic is\rcoming. You can specify star (*) to map all traffic or one of pre-defined\rTAGs"
+        - id: parameters.sourcePortRange
+          type: string
+          description: "Gets or sets Source Port\r(single port) or Source Port Range (separated by “-“) or star (*) for all\rports. All numbers are inclusive. Example: 80, 80-80, 80-81, *"
+        - id: parameters.destinationAddressPrefix
+          type: string
+          description: "Gets or sets\rDestinationAddressPrefix. CIDR value of Destination IP from which traffic\ris coming. You can specify star (*) to map all traffic or one of\rpre-defined TAGs."
+        - id: parameters.destinationPortRange
+          type: string
+          description: "Gets or sets destination\rPort (single port) or Destination Port Range (separated by “-“) or star\r(*) for all ports. All numbers are inclusive. Example: 80, 80-80, 80-81, *"
+        - id: parameters.protocol
+          type: string
+          description: 'Gets or sets Protocol. TCP, UDP, *.'
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginSettingRule(networkSecurityGroupName, ruleName,
+        parameters, parameters.type, parameters.priority, parameters.action,
+        parameters.sourceAddressPrefix, parameters.sourcePortRange,
+        parameters.destinationAddressPrefix, parameters.destinationPortRange,
+        parameters.protocol, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginSettingRule(networkSecurityGroupName,
+      ruleName, parameters, parameters.type, parameters.priority,
+      parameters.action, parameters.sourceAddressPrefix,
+      parameters.sourcePortRange, parameters.destinationAddressPrefix,
+      parameters.destinationPortRange, parameters.protocol, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~httpRequest
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~requestContent
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~requestDoc
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~ruleElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~typeElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~priorityElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~actionElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~sourceAddressPrefixElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~sourcePortRangeElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~destinationAddressPrefixElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~destinationPortRangeElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~protocolElement
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule~requestContent
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#create'
+    id: create
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      create(parameters, parameters.name, parameters.label, parameters.location,
+      callback)
+    summary: Creates a new Network Security Group.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: NetworkSecurityGroupCreateParameters
+          description: "Parameters\rsupplied to the Create Network Security Group operation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets name for the Network Security\rGroup that is unique to the subscription."
+        - id: parameters.label
+          type: string
+          description: "Gets or sets description for the\rNetwork Security Group. The description can be up to 1024 characters in\rlength."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the data center location\rwhere the Network Security Group will be created."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.name, parameters.label,
+        parameters.location, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.create(parameters,
+      parameters.name, parameters.label, parameters.location, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#create~client2
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteMethod'
+    id: deleteMethod
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: 'deleteMethod(networkSecurityGroupName, callback)'
+    summary: "The Delete Network Security Group operation removes thespecified Network\rSecurity Group from your subscription.If the Network Security group is\rstill associated with some VM/Role/Subnet, the deletion will fail. In\rorder to successfully delete the Network Security, it needs to be not\rused."
+    type: Method
+    syntax:
+      parameters:
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the Network Security\rGroup to delete."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(networkSecurityGroupName, callback);'
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.deleteMethod(networkSecurityGroupName,
+      callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteMethod~client2
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteRule'
+    id: deleteRule
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: 'deleteRule(networkSecurityGroupName, ruleName, callback)'
+    summary: "The Delete Network Security Rule operation removes a rule from the\rspecified Network Security Group."
+    type: Method
+    syntax:
+      parameters:
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the Network Security\rGroup."
+        - id: ruleName
+          type: string
+          description: The name of the rule to delete.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteRule(networkSecurityGroupName, ruleName, callback);'
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.deleteRule(networkSecurityGroupName,
+      ruleName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteRule~client2
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get'
+    id: get
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: 'get(networkSecurityGroupName, detailLevel, callback)'
+    summary: "Gets the details for the specified Network Security Group in the\rsubscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the Network Security\rGroup to retrieve."
+        - id: detailLevel
+          type: string
+          description: Use 'Full' to list rules.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(networkSecurityGroupName, detailLevel, callback);'
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.get(networkSecurityGroupName,
+      detailLevel, callback)
+    children:
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~queryParameters
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~baseUrl
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~url2'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get~httpRequest
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface
+    id: getForNetworkInterface
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      getForNetworkInterface(serviceName, deploymentName, roleName,
+      networkInterfaceName, callback)
+    summary: Gets the Network Security Group applied to a specific network interface.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: networkInterfaceName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getForNetworkInterface(serviceName, deploymentName, roleName,
+        networkInterfaceName, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.getForNetworkInterface(serviceName,
+      deploymentName, roleName, networkInterfaceName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface~httpRequest
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole'
+    id: getForRole
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: 'getForRole(serviceName, deploymentName, roleName, callback)'
+    summary: Gets the Network Security Group applied to a specific role.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getForRole(serviceName, deploymentName, roleName, callback);'
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.getForRole(serviceName,
+      deploymentName, roleName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole~httpRequest
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet'
+    id: getForSubnet
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: 'getForSubnet(virtualNetworkName, subnetName, callback)'
+    summary: Gets the Network Security Group applied to a specific subnet.
+    type: Method
+    syntax:
+      parameters:
+        - id: virtualNetworkName
+          type: string
+        - id: subnetName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getForSubnet(virtualNetworkName, subnetName, callback);'
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.getForSubnet(virtualNetworkName,
+      subnetName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~url2
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet~httpRequest
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list'
+    id: list
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: list(callback)
+    summary: Lists all of the Network Security Groups for the subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.list(callback)
+    children:
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~url2'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~baseUrl
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~baseUrl
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~url2'
+      - 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~url2'
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list~httpRequest
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromNetworkInterface
+    id: removeFromNetworkInterface
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      removeFromNetworkInterface(serviceName, deploymentName, roleName,
+      networkInterfaceName, networkSecurityGroupName, callback)
+    summary: Removes a Network Security Group from a network interface.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: networkInterfaceName
+          type: string
+        - id: networkSecurityGroupName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function removeFromNetworkInterface(serviceName, deploymentName,
+        roleName, networkInterfaceName, networkSecurityGroupName, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.removeFromNetworkInterface(serviceName,
+      deploymentName, roleName, networkInterfaceName, networkSecurityGroupName,
+      callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromNetworkInterface~client2
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromRole
+    id: removeFromRole
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      removeFromRole(serviceName, deploymentName, roleName,
+      networkSecurityGroupName, callback)
+    summary: Removes a Network Security Group from a role.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+        - id: deploymentName
+          type: string
+        - id: roleName
+          type: string
+        - id: networkSecurityGroupName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function removeFromRole(serviceName, deploymentName, roleName,
+        networkSecurityGroupName, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.removeFromRole(serviceName,
+      deploymentName, roleName, networkSecurityGroupName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromRole~client2
+  - uid: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromSubnet
+    id: removeFromSubnet
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      removeFromSubnet(virtualNetworkName, subnetName, networkSecurityGroupName,
+      callback)
+    summary: Removes a Network Security Group from a subnet.
+    type: Method
+    syntax:
+      parameters:
+        - id: virtualNetworkName
+          type: string
+        - id: subnetName
+          type: string
+        - id: networkSecurityGroupName
+          type: string
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function removeFromSubnet(virtualNetworkName, subnetName,
+        networkSecurityGroupName, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.removeFromSubnet(virtualNetworkName,
+      subnetName, networkSecurityGroupName, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromSubnet~client2
+  - uid: 'NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#setRule'
+    id: setRule
+    parent: NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+    name: >-
+      setRule(networkSecurityGroupName, ruleName, parameters, parameters.type,
+      parameters.priority, parameters.action, parameters.sourceAddressPrefix,
+      parameters.sourcePortRange, parameters.destinationAddressPrefix,
+      parameters.destinationPortRange, parameters.protocol, callback)
+    summary: Add new Network Security Rule to existing Network Security Group.
+    type: Method
+    syntax:
+      parameters:
+        - id: networkSecurityGroupName
+          type: string
+        - id: ruleName
+          type: string
+        - id: parameters
+          type: NetworkSecuritySetRuleParameters
+          description: "Parameters supplied\rto the Set Network Security Rule operation."
+        - id: parameters.type
+          type: string
+          description: "Gets or sets type of Rule. Possible\rvalues: Inbound (to be evaluated against ingress traffic), Outbound (to\rbe evaluated against egress traffic)."
+        - id: parameters.priority
+          type: number
+          description: "Gets or sets Priority. Value from 100\r– 4096."
+        - id: parameters.action
+          type: string
+          description: "Gets or sets Action. Allow/Deny. Whether\rto allow or deny traffic."
+        - id: parameters.sourceAddressPrefix
+          type: string
+          description: "Gets or sets\rSourceAddressPrefix. CIDR value of Source IP from which traffic is\rcoming. You can specify star (*) to map all traffic or one of pre-defined\rTAGs"
+        - id: parameters.sourcePortRange
+          type: string
+          description: "Gets or sets Source Port\r(single port) or Source Port Range (separated by “-“) or star (*) for all\rports. All numbers are inclusive. Example: 80, 80-80, 80-81, *"
+        - id: parameters.destinationAddressPrefix
+          type: string
+          description: "Gets or sets\rDestinationAddressPrefix. CIDR value of Destination IP from which traffic\ris coming. You can specify star (*) to map all traffic or one of\rpre-defined TAGs."
+        - id: parameters.destinationPortRange
+          type: string
+          description: "Gets or sets destination\rPort (single port) or Destination Port Range (separated by “-“) or star\r(*) for all ports. All numbers are inclusive. Example: 80, 80-80, 80-81, *"
+        - id: parameters.protocol
+          type: string
+          description: 'Gets or sets Protocol. TCP, UDP, *.'
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function setRule(networkSecurityGroupName, ruleName, parameters,
+        parameters.type, parameters.priority, parameters.action,
+        parameters.sourceAddressPrefix, parameters.sourcePortRange,
+        parameters.destinationAddressPrefix, parameters.destinationPortRange,
+        parameters.protocol, callback);
+    fullName: >-
+      NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.setRule(networkSecurityGroupName,
+      ruleName, parameters, parameters.type, parameters.priority,
+      parameters.action, parameters.sourceAddressPrefix,
+      parameters.sourcePortRange, parameters.destinationAddressPrefix,
+      parameters.destinationPortRange, parameters.protocol, callback)
+    children:
+      - >-
+        NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#setRule~client2
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: NetworkSecurityGroupAddAssociationParameters
+    name: NetworkSecurityGroupAddAssociationParameters
+    fullName: NetworkSecurityGroupAddAssociationParameters
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: NetworkSecurityGroupCreateParameters
+    name: NetworkSecurityGroupCreateParameters
+    fullName: NetworkSecurityGroupCreateParameters
+    isExternal: true
+  - uid: NetworkSecuritySetRuleParameters
+    name: NetworkSecuritySetRuleParameters
+    fullName: NetworkSecuritySetRuleParameters
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

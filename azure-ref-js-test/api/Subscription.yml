@@ -1,0 +1,87 @@
+items:
+  - uid: Subscription
+    id: Subscription
+    name: Subscription
+    type: Class
+    syntax:
+      content: Subscription
+    fullName: Subscription
+    children:
+      - 'Subscription#client'
+      - 'Subscription#getSubscriptionQuotas'
+  - uid: 'Subscription#client'
+    id: client
+    parent: Subscription
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Subscription.client
+  - uid: 'Subscription#getSubscriptionQuotas'
+    id: getSubscriptionQuotas
+    parent: Subscription
+    name: >-
+      getSubscriptionQuotas(locationName, options, options.customHeaders,
+      callback)
+    summary: Gets the Batch service quotas for the specified suscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: locationName
+          type: string
+          description: The desired region for the quotas.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SubscriptionQuotasGetResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getSubscriptionQuotas(locationName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Subscription.getSubscriptionQuotas(locationName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Subscription#getSubscriptionQuotas~client'
+      - 'Subscription#getSubscriptionQuotas~callback'
+      - 'Subscription#getSubscriptionQuotas~options'
+      - 'Subscription#getSubscriptionQuotas~requestUrl'
+      - 'Subscription#getSubscriptionQuotas~requestUrl'
+      - 'Subscription#getSubscriptionQuotas~requestUrl'
+      - 'Subscription#getSubscriptionQuotas~queryParameters'
+      - 'Subscription#getSubscriptionQuotas~requestUrl'
+      - 'Subscription#getSubscriptionQuotas~regex'
+      - 'Subscription#getSubscriptionQuotas~requestUrl'
+      - 'Subscription#getSubscriptionQuotas~httpRequest'
+      - 'Subscription#getSubscriptionQuotas~headerName'
+  - uid: 'Subscription#mapper'
+    id: mapper
+    parent: Subscription
+    name: mapper()
+    summary: Defines the metadata of Subscription
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: metadata of Subscription
+      content: function mapper();
+    fullName: Subscription.mapper()
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

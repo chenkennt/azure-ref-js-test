@@ -1,0 +1,79 @@
+items:
+  - uid: Workspaces
+    id: Workspaces
+    name: Workspaces
+    type: Class
+    syntax:
+      content: Workspaces
+    fullName: Workspaces
+    children:
+      - 'Workspaces#client'
+      - 'Workspaces#list'
+  - uid: 'Workspaces#client'
+    id: client
+    parent: Workspaces
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Workspaces.client
+  - uid: 'Workspaces#list'
+    id: list
+    parent: Workspaces
+    name: >-
+      list(resourceGroupName, workspaceCollectionName, options,
+      options.customHeaders, callback)
+    summary: "Retrieves all existing Power BI Workspaces in the specified Workspace\rCollection."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Azure resource group
+        - id: workspaceCollectionName
+          type: string
+          description: "Power BI Embedded workspace\rcollection name"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkspaceList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, workspaceCollectionName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Workspaces.list(resourceGroupName, workspaceCollectionName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Workspaces#list~client'
+      - 'Workspaces#list~callback'
+      - 'Workspaces#list~options'
+      - 'Workspaces#list~requestUrl'
+      - 'Workspaces#list~requestUrl'
+      - 'Workspaces#list~requestUrl'
+      - 'Workspaces#list~requestUrl'
+      - 'Workspaces#list~queryParameters'
+      - 'Workspaces#list~requestUrl'
+      - 'Workspaces#list~regex'
+      - 'Workspaces#list~requestUrl'
+      - 'Workspaces#list~httpRequest'
+      - 'Workspaces#list~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

@@ -1,0 +1,551 @@
+items:
+  - uid: Groups
+    id: Groups
+    name: Groups
+    type: Class
+    syntax:
+      content: Groups
+    fullName: Groups
+    children:
+      - 'Groups#client'
+      - 'Groups#isMemberOf'
+      - 'Groups#removeMember'
+      - 'Groups#addMember'
+      - 'Groups#deleteMethod'
+      - 'Groups#create'
+      - 'Groups#list'
+      - 'Groups#getGroupMembers'
+      - 'Groups#get'
+      - 'Groups#getMemberGroups'
+      - 'Groups#listNext'
+      - 'Groups#getGroupMembersNext'
+  - uid: 'Groups#client'
+    id: client
+    parent: Groups
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Groups.client
+  - uid: 'Groups#isMemberOf'
+    id: isMemberOf
+    parent: Groups
+    name: >-
+      isMemberOf(parameters, parameters.groupId, parameters.memberId, options,
+      options.customHeaders, callback)
+    summary: "Checks whether the specified user, group, contact, or service principal is\ra direct or a transitive member of the specified group."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: Check group membership parameters.
+        - id: parameters.groupId
+          type: string
+          description: The object ID of the group to check.
+        - id: parameters.memberId
+          type: string
+          description: "The object ID of the contact, group,\ruser, or service principal to check for membership in the specified group."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckGroupMembershipResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function isMemberOf(parameters, parameters.groupId, parameters.memberId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Groups.isMemberOf(parameters, parameters.groupId, parameters.memberId,
+      options, options.customHeaders, callback)
+    children:
+      - 'Groups#isMemberOf~client'
+      - 'Groups#isMemberOf~callback'
+      - 'Groups#isMemberOf~options'
+      - 'Groups#isMemberOf~apiVersion'
+      - 'Groups#isMemberOf~requestUrl'
+      - 'Groups#isMemberOf~requestUrl'
+      - 'Groups#isMemberOf~queryParameters'
+      - 'Groups#isMemberOf~requestUrl'
+      - 'Groups#isMemberOf~regex'
+      - 'Groups#isMemberOf~requestUrl'
+      - 'Groups#isMemberOf~httpRequest'
+      - 'Groups#isMemberOf~headerName'
+      - 'Groups#isMemberOf~requestContent'
+      - 'Groups#isMemberOf~requestModel'
+      - 'Groups#isMemberOf~requestModelMapper'
+      - 'Groups#isMemberOf~requestModel'
+      - 'Groups#isMemberOf~requestContent'
+      - 'Groups#isMemberOf~serializationError'
+  - uid: 'Groups#removeMember'
+    id: removeMember
+    parent: Groups
+    name: >-
+      removeMember(groupObjectId, memberObjectId, options,
+      options.customHeaders, callback)
+    summary: "Remove a memeber from a group. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/groups-operations#DeleteGroupMember"
+    type: Method
+    syntax:
+      parameters:
+        - id: groupObjectId
+          type: string
+          description: Group object id
+        - id: memberObjectId
+          type: string
+          description: Member Object id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function removeMember(groupObjectId, memberObjectId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Groups.removeMember(groupObjectId, memberObjectId, options,
+      options.customHeaders, callback)
+    children:
+      - 'Groups#removeMember~client'
+      - 'Groups#removeMember~callback'
+      - 'Groups#removeMember~options'
+      - 'Groups#removeMember~apiVersion'
+      - 'Groups#removeMember~requestUrl'
+      - 'Groups#removeMember~requestUrl'
+      - 'Groups#removeMember~requestUrl'
+      - 'Groups#removeMember~requestUrl'
+      - 'Groups#removeMember~queryParameters'
+      - 'Groups#removeMember~requestUrl'
+      - 'Groups#removeMember~regex'
+      - 'Groups#removeMember~requestUrl'
+      - 'Groups#removeMember~httpRequest'
+      - 'Groups#removeMember~headerName'
+  - uid: 'Groups#addMember'
+    id: addMember
+    parent: Groups
+    name: 'addMember(groupObjectId, url, options, options.customHeaders, callback)'
+    summary: "Add a memeber to a group. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/groups-operations#AddGroupMembers"
+    type: Method
+    syntax:
+      parameters:
+        - id: groupObjectId
+          type: string
+          description: Group object id
+        - id: url
+          type: string
+          description: "Member Object Url as\r\"https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd\",\rwhere \"0b1f9851-1bf0-433f-aec3-cb9272f093dc\" is the tenantId and\r\"f260bbc4-c254-447b-94cf-293b5ec434dd\" is the objectId of the member\r(user, application, servicePrincipal, group) to be added."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function addMember(groupObjectId, url, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Groups.addMember(groupObjectId, url, options, options.customHeaders,
+      callback)
+    children:
+      - 'Groups#addMember~client'
+      - 'Groups#addMember~callback'
+      - 'Groups#addMember~options'
+      - 'Groups#addMember~apiVersion'
+      - 'Groups#addMember~parameters'
+      - 'Groups#addMember~parameters'
+      - 'Groups#addMember~requestUrl'
+      - 'Groups#addMember~requestUrl'
+      - 'Groups#addMember~requestUrl'
+      - 'Groups#addMember~queryParameters'
+      - 'Groups#addMember~requestUrl'
+      - 'Groups#addMember~regex'
+      - 'Groups#addMember~requestUrl'
+      - 'Groups#addMember~httpRequest'
+      - 'Groups#addMember~headerName'
+      - 'Groups#addMember~requestContent'
+      - 'Groups#addMember~requestModel'
+      - 'Groups#addMember~requestModelMapper'
+      - 'Groups#addMember~requestModel'
+      - 'Groups#addMember~requestContent'
+      - 'Groups#addMember~serializationError'
+  - uid: 'Groups#deleteMethod'
+    id: deleteMethod
+    parent: Groups
+    name: 'deleteMethod(groupObjectId, options, options.customHeaders, callback)'
+    summary: "Delete a group in the directory. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/dn151676.aspx"
+    type: Method
+    syntax:
+      parameters:
+        - id: groupObjectId
+          type: string
+          description: Object id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(groupObjectId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Groups.deleteMethod(groupObjectId, options, options.customHeaders,
+      callback)
+    children:
+      - 'Groups#deleteMethod~client'
+      - 'Groups#deleteMethod~callback'
+      - 'Groups#deleteMethod~options'
+      - 'Groups#deleteMethod~apiVersion'
+      - 'Groups#deleteMethod~requestUrl'
+      - 'Groups#deleteMethod~requestUrl'
+      - 'Groups#deleteMethod~requestUrl'
+      - 'Groups#deleteMethod~queryParameters'
+      - 'Groups#deleteMethod~requestUrl'
+      - 'Groups#deleteMethod~regex'
+      - 'Groups#deleteMethod~requestUrl'
+      - 'Groups#deleteMethod~httpRequest'
+      - 'Groups#deleteMethod~headerName'
+  - uid: 'Groups#create'
+    id: create
+    parent: Groups
+    name: >-
+      create(parameters, parameters.displayName, parameters.mailNickname,
+      options, options.customHeaders, callback)
+    summary: "Create a group in the directory. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/dn151676.aspx"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: Parameters to create a group
+        - id: parameters.displayName
+          type: string
+          description: Group display name
+        - id: parameters.mailNickname
+          type: string
+          description: Mail nick name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ADGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(parameters, parameters.displayName,
+        parameters.mailNickname, options, options.customHeaders, callback);
+    fullName: >-
+      Groups.create(parameters, parameters.displayName, parameters.mailNickname,
+      options, options.customHeaders, callback)
+    children:
+      - 'Groups#create~client'
+      - 'Groups#create~callback'
+      - 'Groups#create~options'
+      - 'Groups#create~parameters'
+      - 'Groups#create~apiVersion'
+      - 'Groups#create~requestUrl'
+      - 'Groups#create~requestUrl'
+      - 'Groups#create~queryParameters'
+      - 'Groups#create~requestUrl'
+      - 'Groups#create~regex'
+      - 'Groups#create~requestUrl'
+      - 'Groups#create~httpRequest'
+      - 'Groups#create~headerName'
+      - 'Groups#create~requestContent'
+      - 'Groups#create~requestModel'
+      - 'Groups#create~requestModelMapper'
+      - 'Groups#create~requestModel'
+      - 'Groups#create~requestContent'
+      - 'Groups#create~serializationError'
+  - uid: 'Groups#list'
+    id: list
+    parent: Groups
+    name: 'list(options, options.filter, options.customHeaders, callback)'
+    summary: Gets list of groups for the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.filter, options.customHeaders, callback);'
+    fullName: 'Groups.list(options, options.filter, options.customHeaders, callback)'
+    children:
+      - 'Groups#list~client'
+      - 'Groups#list~callback'
+      - 'Groups#list~options'
+      - 'Groups#list~filter'
+      - 'Groups#list~apiVersion'
+      - 'Groups#list~requestUrl'
+      - 'Groups#list~requestUrl'
+      - 'Groups#list~queryParameters'
+      - 'Groups#list~requestUrl'
+      - 'Groups#list~regex'
+      - 'Groups#list~requestUrl'
+      - 'Groups#list~httpRequest'
+      - 'Groups#list~headerName'
+  - uid: 'Groups#getGroupMembers'
+    id: getGroupMembers
+    parent: Groups
+    name: 'getGroupMembers(objectId, options, options.customHeaders, callback)'
+    summary: Gets the members of a group.
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: Group object Id who's members should be retrieved.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GetObjectsResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getGroupMembers(objectId, options, options.customHeaders,
+        callback);
+    fullName: 'Groups.getGroupMembers(objectId, options, options.customHeaders, callback)'
+    children:
+      - 'Groups#getGroupMembers~client'
+      - 'Groups#getGroupMembers~callback'
+      - 'Groups#getGroupMembers~options'
+      - 'Groups#getGroupMembers~apiVersion'
+      - 'Groups#getGroupMembers~requestUrl'
+      - 'Groups#getGroupMembers~requestUrl'
+      - 'Groups#getGroupMembers~requestUrl'
+      - 'Groups#getGroupMembers~queryParameters'
+      - 'Groups#getGroupMembers~requestUrl'
+      - 'Groups#getGroupMembers~regex'
+      - 'Groups#getGroupMembers~requestUrl'
+      - 'Groups#getGroupMembers~httpRequest'
+      - 'Groups#getGroupMembers~headerName'
+  - uid: 'Groups#get'
+    id: get
+    parent: Groups
+    name: 'get(objectId, options, options.customHeaders, callback)'
+    summary: Gets group information from the directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: User objectId to get group information.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ADGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function get(objectId, options, options.customHeaders, callback);'
+    fullName: 'Groups.get(objectId, options, options.customHeaders, callback)'
+    children:
+      - 'Groups#get~client'
+      - 'Groups#get~callback'
+      - 'Groups#get~options'
+      - 'Groups#get~apiVersion'
+      - 'Groups#get~requestUrl'
+      - 'Groups#get~requestUrl'
+      - 'Groups#get~requestUrl'
+      - 'Groups#get~queryParameters'
+      - 'Groups#get~requestUrl'
+      - 'Groups#get~regex'
+      - 'Groups#get~requestUrl'
+      - 'Groups#get~httpRequest'
+      - 'Groups#get~headerName'
+  - uid: 'Groups#getMemberGroups'
+    id: getMemberGroups
+    parent: Groups
+    name: >-
+      getMemberGroups(objectId, securityEnabledOnly, options,
+      options.customHeaders, callback)
+    summary: "Gets a collection that contains the Object IDs of the groups of which the\rgroup is a member."
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: Group filtering parameters.
+        - id: securityEnabledOnly
+          type: boolean
+          description: "If true only membership in security\renabled groups should be checked. Otherwise membership in all groups\rshould be checked"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupGetMemberGroupsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getMemberGroups(objectId, securityEnabledOnly, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Groups.getMemberGroups(objectId, securityEnabledOnly, options,
+      options.customHeaders, callback)
+    children:
+      - 'Groups#getMemberGroups~client'
+      - 'Groups#getMemberGroups~callback'
+      - 'Groups#getMemberGroups~options'
+      - 'Groups#getMemberGroups~apiVersion'
+      - 'Groups#getMemberGroups~parameters'
+      - 'Groups#getMemberGroups~parameters'
+      - 'Groups#getMemberGroups~requestUrl'
+      - 'Groups#getMemberGroups~requestUrl'
+      - 'Groups#getMemberGroups~requestUrl'
+      - 'Groups#getMemberGroups~queryParameters'
+      - 'Groups#getMemberGroups~requestUrl'
+      - 'Groups#getMemberGroups~regex'
+      - 'Groups#getMemberGroups~requestUrl'
+      - 'Groups#getMemberGroups~httpRequest'
+      - 'Groups#getMemberGroups~headerName'
+      - 'Groups#getMemberGroups~requestContent'
+      - 'Groups#getMemberGroups~requestModel'
+      - 'Groups#getMemberGroups~requestModelMapper'
+      - 'Groups#getMemberGroups~requestModel'
+      - 'Groups#getMemberGroups~requestContent'
+      - 'Groups#getMemberGroups~serializationError'
+  - uid: 'Groups#listNext'
+    id: listNext
+    parent: Groups
+    name: 'listNext(nextLink, options, options.customHeaders, callback)'
+    summary: Gets list of groups for the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: Next link for list operation.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listNext(nextLink, options, options.customHeaders, callback);'
+    fullName: 'Groups.listNext(nextLink, options, options.customHeaders, callback)'
+    children:
+      - 'Groups#listNext~client'
+      - 'Groups#listNext~callback'
+      - 'Groups#listNext~options'
+      - 'Groups#listNext~apiVersion'
+      - 'Groups#listNext~requestUrl'
+      - 'Groups#listNext~requestUrl'
+      - 'Groups#listNext~requestUrl'
+      - 'Groups#listNext~queryParameters'
+      - 'Groups#listNext~requestUrl'
+      - 'Groups#listNext~regex'
+      - 'Groups#listNext~requestUrl'
+      - 'Groups#listNext~httpRequest'
+      - 'Groups#listNext~headerName'
+  - uid: 'Groups#getGroupMembersNext'
+    id: getGroupMembersNext
+    parent: Groups
+    name: 'getGroupMembersNext(nextLink, options, options.customHeaders, callback)'
+    summary: Gets the members of a group.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: Next link for list operation.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GetObjectsResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getGroupMembersNext(nextLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Groups.getGroupMembersNext(nextLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Groups#getGroupMembersNext~client'
+      - 'Groups#getGroupMembersNext~callback'
+      - 'Groups#getGroupMembersNext~options'
+      - 'Groups#getGroupMembersNext~apiVersion'
+      - 'Groups#getGroupMembersNext~requestUrl'
+      - 'Groups#getGroupMembersNext~requestUrl'
+      - 'Groups#getGroupMembersNext~requestUrl'
+      - 'Groups#getGroupMembersNext~queryParameters'
+      - 'Groups#getGroupMembersNext~requestUrl'
+      - 'Groups#getGroupMembersNext~regex'
+      - 'Groups#getGroupMembersNext~requestUrl'
+      - 'Groups#getGroupMembersNext~httpRequest'
+      - 'Groups#getGroupMembersNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

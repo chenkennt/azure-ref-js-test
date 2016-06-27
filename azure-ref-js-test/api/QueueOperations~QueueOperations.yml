@@ -1,0 +1,615 @@
+items:
+  - uid: QueueOperations~QueueOperations
+    id: QueueOperations
+    parent: QueueOperations
+    name: QueueOperations
+    type: Class
+    syntax:
+      content: QueueOperations
+    fullName: QueueOperations.QueueOperations
+    children:
+      - 'QueueOperations~QueueOperations#client'
+      - 'QueueOperations~QueueOperations#create'
+      - 'QueueOperations~QueueOperations#deleteMethod'
+      - 'QueueOperations~QueueOperations#get'
+      - 'QueueOperations~QueueOperations#getConnectionDetails'
+      - 'QueueOperations~QueueOperations#list'
+      - 'QueueOperations~QueueOperations#update'
+  - uid: 'QueueOperations~QueueOperations#client'
+    id: client
+    parent: QueueOperations~QueueOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: QueueOperations~QueueOperations.client
+  - uid: 'QueueOperations~QueueOperations#create'
+    id: create
+    parent: QueueOperations~QueueOperations
+    name: >-
+      create(namespaceName, queue, queue.name, queue.lockDuration,
+      queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
+      queue.requiresSession, queue.defaultMessageTimeToLive,
+      queue.deadLetteringOnMessageExpiration,
+      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
+      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
+      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
+      queue.supportOrdering, queue.countDetails,
+      queue.countDetails.activeMessageCount,
+      queue.countDetails.deadLetterMessageCount,
+      queue.countDetails.scheduledMessageCount,
+      queue.countDetails.transferDeadLetterMessageCount,
+      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
+      queue.entityAvailabilityStatus, callback)
+    summary: "Creates a new queue. Once created, this queue's resource manifest is\rimmutable. This operation is idempotent. Repeating the create call, after\ra queue with same name has been created successfully, will result in a\r409 Conflict error message.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: queue
+          type: ServiceBusQueueCreateParameters
+          description: The service bus queue.
+        - id: queue.name
+          type: string
+          description: The name of the queue.
+        - id: queue.lockDuration
+          type: string
+          description: "Determines the amount of time in\rseconds in which a message should be locked for processing by a receiver.\rAfter this period, the message is unlocked and available for consumption\rby the next receiver. Settable only at queue creation time:* Range: 0 - 5\rminutes. 0 means that the message is not locked* Default: 30 seconds"
+        - id: queue.maxSizeInMegabytes
+          type: number
+          description: "Specifies the maximum queue\rsize in megabytes. Any attempt to enqueue a message that will cause the\rqueue to exceed this value will fail. You can only set this parameter at\rqueue creation time using the following values: * Range: 1 - 1024 (valid\rvalues are 1024, 2048, 3072, 4096, 5120) * Default: 1*1024 (valid values\rare 1024, 2048, 3072, 4096, 5120)"
+        - id: queue.requiresDuplicateDetection
+          type: boolean
+          description: "Settable only at queue\rcreation time.* Default for durable queue: false"
+        - id: queue.requiresSession
+          type: boolean
+          description: "Settable only at queue creation\rtime. If set to true, the queue will be session-aware and only\rSessionReceiver will be supported. Session-aware queues are not supported\rthrough REST.* Default for durable queue: false"
+        - id: queue.defaultMessageTimeToLive
+          type: string
+          description: "Depending on whether\rDeadLettering is enabled, a message is automatically moved to the\rDeadLetterQueue or deleted if it has been stored in the queue for longer\rthan the specified time. This value is overwritten by a TTL specified on\rthe message if and only if the message TTL is smaller than the TTL set on\rthe queue. This value is immutable after the Queue has been created:*\rRange: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue"
+        - id: queue.deadLetteringOnMessageExpiration
+          type: boolean
+          description: "This field\rcontrols how the Service Bus handles a message whose TTL has expired. If\rit is enabled and a message expires, the Service Bus moves the message\rfrom the queue into the queue's dead-letter sub-queue. If disabled,\rmessage will be permanently deleted from the queue. Settable only at\rqueue creation time.* Default: false"
+        - id: queue.duplicateDetectionHistoryTimeWindow
+          type: string
+          description: "Specifies the\rtime span during which the Service Bus detects message duplication:*\rRange: 1 second - 7 days* Default: 10 minutes"
+        - id: queue.maxDeliveryCount
+          type: number
+          description: "The maximum number of times a\rmessage SB will try to deliver before being dead lettered or discarded."
+        - id: queue.enableBatchedOperations
+          type: boolean
+          description: "Enables or disables\rservice side batching behavior when performing operations for the\rspecific queue. When enabled, service bus will collect/batch multiple\roperations to the backend to be more connection efficient. If user wants\rlower operation latency then they can disable this feature."
+        - id: queue.sizeInBytes
+          type: number
+          description: "Reflects the actual bytes that\rmessages in the queue currently occupy toward the queue's quota.* Range:\r0 -MaxTopicSizeinMegaBytes"
+        - id: queue.messageCount
+          type: number
+          description: "Displays the number of messages\rcurrently in the queue."
+        - id: queue.isAnonymousAccessible
+          type: boolean
+          description: "Gets whether anonymous\raccess is allowed."
+        - id: queue.authorizationRules
+          type: array
+          description: "Gets the authorization rules for\rthe description."
+        - id: queue.status
+          type: string
+          description: "Gets or sets the current status of the\rqueue (enabled or disabled). When a queue is disabled, that queue cannot\rsend or receive messages."
+        - id: queue.supportOrdering
+          type: boolean
+          description: "Gets or sets whether the queue\rsupports ordering."
+        - id: queue.countDetails
+          type: CountDetails
+          description: Current queue statistics.
+        - id: queue.countDetails.activeMessageCount
+          type: number
+          description: "The current number\rof active messages."
+        - id: queue.countDetails.deadLetterMessageCount
+          type: number
+          description: "The current\rnumber of dead letters."
+        - id: queue.countDetails.scheduledMessageCount
+          type: number
+          description: "The current\rnumber of scheduled messages."
+        - id: queue.countDetails.transferDeadLetterMessageCount
+          type: number
+          description: "The\rcurrent number of transfer dead letters."
+        - id: queue.countDetails.transferMessageCount
+          type: number
+          description: "The current\rnumber of transfer messages."
+        - id: queue.autoDeleteOnIdle
+          type: string
+          description: Implemented.
+        - id: queue.entityAvailabilityStatus
+          type: string
+          description: "The current availability\rstatus of the queue."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(namespaceName, queue, queue.name, queue.lockDuration,
+        queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
+        queue.requiresSession, queue.defaultMessageTimeToLive,
+        queue.deadLetteringOnMessageExpiration,
+        queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
+        queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
+        queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
+        queue.supportOrdering, queue.countDetails,
+        queue.countDetails.activeMessageCount,
+        queue.countDetails.deadLetterMessageCount,
+        queue.countDetails.scheduledMessageCount,
+        queue.countDetails.transferDeadLetterMessageCount,
+        queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
+        queue.entityAvailabilityStatus, callback);
+    fullName: >-
+      QueueOperations~QueueOperations.create(namespaceName, queue, queue.name,
+      queue.lockDuration, queue.maxSizeInMegabytes,
+      queue.requiresDuplicateDetection, queue.requiresSession,
+      queue.defaultMessageTimeToLive, queue.deadLetteringOnMessageExpiration,
+      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
+      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
+      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
+      queue.supportOrdering, queue.countDetails,
+      queue.countDetails.activeMessageCount,
+      queue.countDetails.deadLetterMessageCount,
+      queue.countDetails.scheduledMessageCount,
+      queue.countDetails.transferDeadLetterMessageCount,
+      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
+      queue.entityAvailabilityStatus, callback)
+    children:
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~baseUrl'
+      - 'QueueOperations~QueueOperations#create~baseUrl'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~url2'
+      - 'QueueOperations~QueueOperations#create~httpRequest'
+      - 'QueueOperations~QueueOperations#create~requestContent'
+      - 'QueueOperations~QueueOperations#create~requestDoc'
+      - 'QueueOperations~QueueOperations#create~entryElement'
+      - 'QueueOperations~QueueOperations#create~contentElement'
+      - 'QueueOperations~QueueOperations#create~typeAttribute'
+      - 'QueueOperations~QueueOperations#create~queueDescriptionElement'
+      - 'QueueOperations~QueueOperations#create~lockDurationElement'
+      - 'QueueOperations~QueueOperations#create~maxSizeInMegabytesElement'
+      - 'QueueOperations~QueueOperations#create~requiresDuplicateDetectionElement'
+      - 'QueueOperations~QueueOperations#create~requiresSessionElement'
+      - 'QueueOperations~QueueOperations#create~defaultMessageTimeToLiveElement'
+      - >-
+        QueueOperations~QueueOperations#create~deadLetteringOnMessageExpirationElement
+      - >-
+        QueueOperations~QueueOperations#create~duplicateDetectionHistoryTimeWindowElement
+      - 'QueueOperations~QueueOperations#create~enableBatchedOperationsElement'
+      - 'QueueOperations~QueueOperations#create~sizeInBytesElement'
+      - 'QueueOperations~QueueOperations#create~messageCountElement'
+      - 'QueueOperations~QueueOperations#create~isAnonymousAccessibleElement'
+      - 'QueueOperations~QueueOperations#create~authorizationRulesSequenceElement'
+      - 'QueueOperations~QueueOperations#create~loweredIndex1'
+      - 'QueueOperations~QueueOperations#create~loweredIndex1'
+      - 'QueueOperations~QueueOperations#create~authorizationRulesItem'
+      - 'QueueOperations~QueueOperations#create~authorizationRuleElement'
+      - 'QueueOperations~QueueOperations#create~typeAttribute2'
+      - 'QueueOperations~QueueOperations#create~claimTypeElement'
+      - 'QueueOperations~QueueOperations#create~claimValueElement'
+      - 'QueueOperations~QueueOperations#create~rightsSequenceElement'
+      - 'QueueOperations~QueueOperations#create~loweredIndex2'
+      - 'QueueOperations~QueueOperations#create~loweredIndex2'
+      - 'QueueOperations~QueueOperations#create~rightsItem'
+      - 'QueueOperations~QueueOperations#create~rightsItemElement'
+      - 'QueueOperations~QueueOperations#create~createdTimeElement'
+      - 'QueueOperations~QueueOperations#create~keyNameElement'
+      - 'QueueOperations~QueueOperations#create~modifiedTimeElement'
+      - 'QueueOperations~QueueOperations#create~primaryKeyElement'
+      - 'QueueOperations~QueueOperations#create~secondaryKeyElement'
+      - 'QueueOperations~QueueOperations#create~statusElement'
+      - 'QueueOperations~QueueOperations#create~supportOrderingElement'
+      - 'QueueOperations~QueueOperations#create~countDetailsElement'
+      - 'QueueOperations~QueueOperations#create~activeMessageCountElement'
+      - 'QueueOperations~QueueOperations#create~deadLetterMessageCountElement'
+      - 'QueueOperations~QueueOperations#create~scheduledMessageCountElement'
+      - >-
+        QueueOperations~QueueOperations#create~transferDeadLetterMessageCountElement
+      - 'QueueOperations~QueueOperations#create~transferMessageCountElement'
+      - 'QueueOperations~QueueOperations#create~autoDeleteOnIdleElement'
+      - 'QueueOperations~QueueOperations#create~entityAvailabilityStatusElement'
+      - 'QueueOperations~QueueOperations#create~requestContent'
+  - uid: 'QueueOperations~QueueOperations#deleteMethod'
+    id: deleteMethod
+    parent: QueueOperations~QueueOperations
+    name: 'deleteMethod(namespaceName, queueName, callback)'
+    summary: "Deletes an existing queue. This operation will also remove all associated\rstate including messages in the queue.  (see\rhttp://msdn.microsoft.com/en-us/library/hh780747.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: queueName
+          type: string
+          description: The queue name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(namespaceName, queueName, callback);'
+    fullName: >-
+      QueueOperations~QueueOperations.deleteMethod(namespaceName, queueName,
+      callback)
+    children:
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~baseUrl'
+      - 'QueueOperations~QueueOperations#deleteMethod~baseUrl'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~url2'
+      - 'QueueOperations~QueueOperations#deleteMethod~httpRequest'
+  - uid: 'QueueOperations~QueueOperations#get'
+    id: get
+    parent: QueueOperations~QueueOperations
+    name: 'get(namespaceName, queueName, callback)'
+    summary: "The queue description is an XML AtomPub document that defines the desired\rsemantics for a subscription. The queue description contains the\rfollowing properties. For more information, see the QueueDescription\rProperties topic.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780773.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: queueName
+          type: string
+          description: The queue name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(namespaceName, queueName, callback);'
+    fullName: 'QueueOperations~QueueOperations.get(namespaceName, queueName, callback)'
+    children:
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~baseUrl'
+      - 'QueueOperations~QueueOperations#get~baseUrl'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~url2'
+      - 'QueueOperations~QueueOperations#get~httpRequest'
+  - uid: 'QueueOperations~QueueOperations#getConnectionDetails'
+    id: getConnectionDetails
+    parent: QueueOperations~QueueOperations
+    name: 'getConnectionDetails(namespaceName, queueName, callback)'
+    summary: Gets the set of connection strings for a queue.
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: queueName
+          type: string
+          description: The queue name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getConnectionDetails(namespaceName, queueName, callback);'
+    fullName: >-
+      QueueOperations~QueueOperations.getConnectionDetails(namespaceName,
+      queueName, callback)
+    children:
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~baseUrl'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~baseUrl'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~url2'
+      - 'QueueOperations~QueueOperations#getConnectionDetails~httpRequest'
+  - uid: 'QueueOperations~QueueOperations#list'
+    id: list
+    parent: QueueOperations~QueueOperations
+    name: 'list(namespaceName, callback)'
+    summary: "Enumerates the queues in the service namespace. The result is returned in\rpages, each containing up to 100 queues. If the namespace contains more\rthan 100 queues, a feed is returned that contains the first page and a\rnext link with the URI to view the next page of data.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780759.asp for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function list(namespaceName, callback);'
+    fullName: 'QueueOperations~QueueOperations.list(namespaceName, callback)'
+    children:
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~baseUrl'
+      - 'QueueOperations~QueueOperations#list~baseUrl'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~url2'
+      - 'QueueOperations~QueueOperations#list~httpRequest'
+  - uid: 'QueueOperations~QueueOperations#update'
+    id: update
+    parent: QueueOperations~QueueOperations
+    name: >-
+      update(namespaceName, queue, queue.name, queue.lockDuration,
+      queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
+      queue.requiresSession, queue.defaultMessageTimeToLive,
+      queue.deadLetteringOnMessageExpiration,
+      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
+      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
+      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
+      queue.createdAt, queue.updatedAt, queue.accessedAt, queue.supportOrdering,
+      queue.countDetails, queue.countDetails.activeMessageCount,
+      queue.countDetails.deadLetterMessageCount,
+      queue.countDetails.scheduledMessageCount,
+      queue.countDetails.transferDeadLetterMessageCount,
+      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
+      queue.entityAvailabilityStatus, callback)
+    summary: "Updates the queue description and makes a call to update corresponding DB\rentries.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: queue
+          type: ServiceBusQueue
+          description: The service bus queue.
+        - id: queue.name
+          type: string
+          description: The name of the queue.
+        - id: queue.lockDuration
+          type: string
+          description: "Determines the amount of time in\rseconds in which a message should be locked for processing by a receiver.\rAfter this period, the message is unlocked and available for consumption\rby the next receiver. Settable only at queue creation time:* Range: 0 - 5\rminutes. 0 means that the message is not locked* Default: 30 seconds"
+        - id: queue.maxSizeInMegabytes
+          type: number
+          description: "Specifies the maximum queue\rsize in megabytes. Any attempt to enqueue a message that will cause the\rqueue to exceed this value will fail. You can only set this parameter at\rqueue creation time using the following values: * Range: 1 - 1024 (valid\rvalues are 1024, 2048, 3072, 4096, 5120) * Default: 1*1024 (valid values\rare 1024, 2048, 3072, 4096, 5120)"
+        - id: queue.requiresDuplicateDetection
+          type: boolean
+          description: "Settable only at queue\rcreation time.* Default for durable queue: false"
+        - id: queue.requiresSession
+          type: boolean
+          description: "Settable only at queue creation\rtime. If set to true, the queue will be session-aware and only\rSessionReceiver will be supported. Session-aware queues are not supported\rthrough REST.* Default for durable queue: false"
+        - id: queue.defaultMessageTimeToLive
+          type: string
+          description: "Depending on whether\rDeadLettering is enabled, a message is automatically moved to the\rDeadLetterQueue or deleted if it has been stored in the queue for longer\rthan the specified time. This value is overwritten by a TTL specified on\rthe message if and only if the message TTL is smaller than the TTL set on\rthe queue. This value is immutable after the Queue has been created:*\rRange: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue"
+        - id: queue.deadLetteringOnMessageExpiration
+          type: boolean
+          description: "This field\rcontrols how the Service Bus handles a message whose TTL has expired. If\rit is enabled and a message expires, the Service Bus moves the message\rfrom the queue into the queue's dead-letter sub-queue. If disabled,\rmessage will be permanently deleted from the queue. Settable only at\rqueue creation time.* Default: false"
+        - id: queue.duplicateDetectionHistoryTimeWindow
+          type: string
+          description: "Specifies the\rtime span during which the Service Bus detects message duplication:*\rRange: 1 second - 7 days* Default: 10 minutes"
+        - id: queue.maxDeliveryCount
+          type: number
+          description: "The maximum number of times a\rmessage SB will try to deliver before being dead lettered or discarded."
+        - id: queue.enableBatchedOperations
+          type: boolean
+          description: "Enables or disables\rservice side batching behavior when performing operations for the\rspecific queue. When enabled, service bus will collect/batch multiple\roperations to the backend to be more connection efficient. If user wants\rlower operation latency then they can disable this feature."
+        - id: queue.sizeInBytes
+          type: number
+          description: "Reflects the actual bytes that\rmessages in the queue currently occupy toward the queue's quota.* Range:\r0 -MaxTopicSizeinMegaBytes"
+        - id: queue.messageCount
+          type: number
+          description: "Displays the number of messages\rcurrently in the queue."
+        - id: queue.isAnonymousAccessible
+          type: boolean
+          description: "Gets whether anonymous\raccess is allowed."
+        - id: queue.authorizationRules
+          type: array
+          description: "Gets the authorization rules for\rthe description."
+        - id: queue.status
+          type: string
+          description: "Gets or sets the current status of the\rqueue (enabled or disabled). When a queue is disabled, that queue cannot\rsend or receive messages."
+        - id: queue.createdAt
+          type: date
+          description: The time the queue was created at.
+        - id: queue.updatedAt
+          type: date
+          description: The time the queue was last updated.
+        - id: queue.accessedAt
+          type: date
+          description: The time the queue was last accessed.
+        - id: queue.supportOrdering
+          type: boolean
+          description: "Gets or sets whether the queue\rsupports ordering."
+        - id: queue.countDetails
+          type: CountDetails
+          description: Current queue statistics.
+        - id: queue.countDetails.activeMessageCount
+          type: number
+          description: "The current number\rof active messages."
+        - id: queue.countDetails.deadLetterMessageCount
+          type: number
+          description: "The current\rnumber of dead letters."
+        - id: queue.countDetails.scheduledMessageCount
+          type: number
+          description: "The current\rnumber of scheduled messages."
+        - id: queue.countDetails.transferDeadLetterMessageCount
+          type: number
+          description: "The\rcurrent number of transfer dead letters."
+        - id: queue.countDetails.transferMessageCount
+          type: number
+          description: "The current\rnumber of transfer messages."
+        - id: queue.autoDeleteOnIdle
+          type: string
+          description: Implemented.
+        - id: queue.entityAvailabilityStatus
+          type: string
+          description: "The current availability\rstatus of the queue."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(namespaceName, queue, queue.name, queue.lockDuration,
+        queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
+        queue.requiresSession, queue.defaultMessageTimeToLive,
+        queue.deadLetteringOnMessageExpiration,
+        queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
+        queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
+        queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
+        queue.createdAt, queue.updatedAt, queue.accessedAt,
+        queue.supportOrdering, queue.countDetails,
+        queue.countDetails.activeMessageCount,
+        queue.countDetails.deadLetterMessageCount,
+        queue.countDetails.scheduledMessageCount,
+        queue.countDetails.transferDeadLetterMessageCount,
+        queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
+        queue.entityAvailabilityStatus, callback);
+    fullName: >-
+      QueueOperations~QueueOperations.update(namespaceName, queue, queue.name,
+      queue.lockDuration, queue.maxSizeInMegabytes,
+      queue.requiresDuplicateDetection, queue.requiresSession,
+      queue.defaultMessageTimeToLive, queue.deadLetteringOnMessageExpiration,
+      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
+      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
+      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
+      queue.createdAt, queue.updatedAt, queue.accessedAt, queue.supportOrdering,
+      queue.countDetails, queue.countDetails.activeMessageCount,
+      queue.countDetails.deadLetterMessageCount,
+      queue.countDetails.scheduledMessageCount,
+      queue.countDetails.transferDeadLetterMessageCount,
+      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
+      queue.entityAvailabilityStatus, callback)
+    children:
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~baseUrl'
+      - 'QueueOperations~QueueOperations#update~baseUrl'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~url2'
+      - 'QueueOperations~QueueOperations#update~httpRequest'
+      - 'QueueOperations~QueueOperations#update~requestContent'
+      - 'QueueOperations~QueueOperations#update~requestDoc'
+      - 'QueueOperations~QueueOperations#update~entryElement'
+      - 'QueueOperations~QueueOperations#update~contentElement'
+      - 'QueueOperations~QueueOperations#update~typeAttribute'
+      - 'QueueOperations~QueueOperations#update~queueDescriptionElement'
+      - 'QueueOperations~QueueOperations#update~lockDurationElement'
+      - 'QueueOperations~QueueOperations#update~maxSizeInMegabytesElement'
+      - 'QueueOperations~QueueOperations#update~requiresDuplicateDetectionElement'
+      - 'QueueOperations~QueueOperations#update~requiresSessionElement'
+      - 'QueueOperations~QueueOperations#update~defaultMessageTimeToLiveElement'
+      - >-
+        QueueOperations~QueueOperations#update~deadLetteringOnMessageExpirationElement
+      - >-
+        QueueOperations~QueueOperations#update~duplicateDetectionHistoryTimeWindowElement
+      - 'QueueOperations~QueueOperations#update~enableBatchedOperationsElement'
+      - 'QueueOperations~QueueOperations#update~sizeInBytesElement'
+      - 'QueueOperations~QueueOperations#update~messageCountElement'
+      - 'QueueOperations~QueueOperations#update~isAnonymousAccessibleElement'
+      - 'QueueOperations~QueueOperations#update~authorizationRulesSequenceElement'
+      - 'QueueOperations~QueueOperations#update~loweredIndex1'
+      - 'QueueOperations~QueueOperations#update~loweredIndex1'
+      - 'QueueOperations~QueueOperations#update~authorizationRulesItem'
+      - 'QueueOperations~QueueOperations#update~authorizationRuleElement'
+      - 'QueueOperations~QueueOperations#update~typeAttribute2'
+      - 'QueueOperations~QueueOperations#update~claimTypeElement'
+      - 'QueueOperations~QueueOperations#update~claimValueElement'
+      - 'QueueOperations~QueueOperations#update~rightsSequenceElement'
+      - 'QueueOperations~QueueOperations#update~loweredIndex2'
+      - 'QueueOperations~QueueOperations#update~loweredIndex2'
+      - 'QueueOperations~QueueOperations#update~rightsItem'
+      - 'QueueOperations~QueueOperations#update~rightsItemElement'
+      - 'QueueOperations~QueueOperations#update~createdTimeElement'
+      - 'QueueOperations~QueueOperations#update~keyNameElement'
+      - 'QueueOperations~QueueOperations#update~modifiedTimeElement'
+      - 'QueueOperations~QueueOperations#update~primaryKeyElement'
+      - 'QueueOperations~QueueOperations#update~secondaryKeyElement'
+      - 'QueueOperations~QueueOperations#update~statusElement'
+      - 'QueueOperations~QueueOperations#update~supportOrderingElement'
+      - 'QueueOperations~QueueOperations#update~countDetailsElement'
+      - 'QueueOperations~QueueOperations#update~activeMessageCountElement'
+      - 'QueueOperations~QueueOperations#update~deadLetterMessageCountElement'
+      - 'QueueOperations~QueueOperations#update~scheduledMessageCountElement'
+      - >-
+        QueueOperations~QueueOperations#update~transferDeadLetterMessageCountElement
+      - 'QueueOperations~QueueOperations#update~transferMessageCountElement'
+      - 'QueueOperations~QueueOperations#update~autoDeleteOnIdleElement'
+      - 'QueueOperations~QueueOperations#update~entityAvailabilityStatusElement'
+      - 'QueueOperations~QueueOperations#update~requestContent'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: ServiceBusQueueCreateParameters
+    name: ServiceBusQueueCreateParameters
+    fullName: ServiceBusQueueCreateParameters
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: CountDetails
+    name: CountDetails
+    fullName: CountDetails
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: ServiceBusQueue
+    name: ServiceBusQueue
+    fullName: ServiceBusQueue
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false

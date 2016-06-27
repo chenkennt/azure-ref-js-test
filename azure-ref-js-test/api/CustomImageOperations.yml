@@ -1,0 +1,553 @@
+items:
+  - uid: CustomImageOperations
+    id: CustomImageOperations
+    name: CustomImageOperations
+    type: Class
+    syntax:
+      content: CustomImageOperations
+    fullName: CustomImageOperations
+    children:
+      - 'CustomImageOperations#client'
+      - 'CustomImageOperations#list'
+      - 'CustomImageOperations#getResource'
+      - 'CustomImageOperations#createOrUpdateResource'
+      - 'CustomImageOperations#beginCreateOrUpdateResource'
+      - 'CustomImageOperations#deleteResource'
+      - 'CustomImageOperations#beginDeleteResource'
+      - 'CustomImageOperations#listNext'
+  - uid: 'CustomImageOperations#client'
+    id: client
+    parent: CustomImageOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: CustomImageOperations.client
+  - uid: 'CustomImageOperations#list'
+    id: list
+    parent: CustomImageOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List custom images.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCustomImage} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      CustomImageOperations.list(resourceGroupName, labName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'CustomImageOperations#list~client'
+      - 'CustomImageOperations#list~callback'
+      - 'CustomImageOperations#list~options'
+      - 'CustomImageOperations#list~filter'
+      - 'CustomImageOperations#list~top'
+      - 'CustomImageOperations#list~orderBy'
+      - 'CustomImageOperations#list~requestUrl'
+      - 'CustomImageOperations#list~requestUrl'
+      - 'CustomImageOperations#list~requestUrl'
+      - 'CustomImageOperations#list~requestUrl'
+      - 'CustomImageOperations#list~queryParameters'
+      - 'CustomImageOperations#list~requestUrl'
+      - 'CustomImageOperations#list~regex'
+      - 'CustomImageOperations#list~requestUrl'
+      - 'CustomImageOperations#list~httpRequest'
+      - 'CustomImageOperations#list~headerName'
+  - uid: 'CustomImageOperations#getResource'
+    id: getResource
+    parent: CustomImageOperations
+    name: >-
+      getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Get custom image.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the custom image.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomImage} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CustomImageOperations.getResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'CustomImageOperations#getResource~client'
+      - 'CustomImageOperations#getResource~callback'
+      - 'CustomImageOperations#getResource~options'
+      - 'CustomImageOperations#getResource~requestUrl'
+      - 'CustomImageOperations#getResource~requestUrl'
+      - 'CustomImageOperations#getResource~requestUrl'
+      - 'CustomImageOperations#getResource~requestUrl'
+      - 'CustomImageOperations#getResource~requestUrl'
+      - 'CustomImageOperations#getResource~queryParameters'
+      - 'CustomImageOperations#getResource~requestUrl'
+      - 'CustomImageOperations#getResource~regex'
+      - 'CustomImageOperations#getResource~requestUrl'
+      - 'CustomImageOperations#getResource~httpRequest'
+      - 'CustomImageOperations#getResource~headerName'
+  - uid: 'CustomImageOperations#createOrUpdateResource'
+    id: createOrUpdateResource
+    parent: CustomImageOperations
+    name: >-
+      createOrUpdateResource(resourceGroupName, labName, name, customImage,
+      customImage.vm, customImage.vm.sourceVmId, customImage.vm.sysPrep,
+      customImage.vm.windowsOsInfo, customImage.vm.windowsOsInfo.windowsOsState,
+      customImage.vm.linuxOsInfo, customImage.vm.linuxOsInfo.linuxOsState,
+      customImage.vhd, customImage.vhd.imageName, customImage.vhd.sysPrep,
+      customImage.description, customImage.osType, customImage.author,
+      customImage.creationDate, customImage.provisioningState, customImage.id,
+      customImage.name, customImage.type, customImage.location,
+      customImage.tags, options, options.customHeaders, callback)
+    summary: "Create or replace an existing custom image. This operation can take a while\rto complete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the custom image.
+        - id: customImage
+          type: object
+        - id: customImage.vm
+          type: object
+        - id: customImage.vm.sourceVmId
+          type: string
+          description: The source vm identifier.
+        - id: customImage.vm.sysPrep
+          type: boolean
+          description: "Indicates whether sysprep has\rbeen run on the VHD."
+        - id: customImage.vm.windowsOsInfo
+          type: object
+          description: "The Windows OS information\rof the VM."
+        - id: customImage.vm.windowsOsInfo.windowsOsState
+          type: string
+          description: "The state of\rthe Windows OS. Possible values include: 'NonSysprepped',\r'SysprepRequested', 'SysprepApplied'"
+        - id: customImage.vm.linuxOsInfo
+          type: object
+          description: "The Linux OS information of\rthe VM."
+        - id: customImage.vm.linuxOsInfo.linuxOsState
+          type: string
+          description: "The state of the\rLinux OS. Possible values include: 'NonDeprovisioned',\r'DeprovisionRequested', 'DeprovisionApplied'"
+        - id: customImage.vhd
+          type: object
+          description: "The VHD from which the image is to be\rcreated."
+        - id: customImage.vhd.imageName
+          type: string
+          description: The image name.
+        - id: customImage.vhd.sysPrep
+          type: boolean
+          description: "Indicates whether sysprep has\rbeen run on the VHD."
+        - id: customImage.description
+          type: string
+          description: "The description of the custom\rimage."
+        - id: customImage.osType
+          type: string
+          description: "The OS type of the custom image.\rPossible values include: 'Windows', 'Linux', 'None'"
+        - id: customImage.author
+          type: string
+          description: The author of the custom image.
+        - id: customImage.creationDate
+          type: date
+          description: "The creation date of the custom\rimage."
+        - id: customImage.provisioningState
+          type: string
+          description: "The provisioning status of\rthe resource."
+        - id: customImage.id
+          type: string
+          description: The identifier of the resource.
+        - id: customImage.name
+          type: string
+          description: The name of the resource.
+        - id: customImage.type
+          type: string
+          description: The type of the resource.
+        - id: customImage.location
+          type: string
+          description: The location of the resource.
+        - id: customImage.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomImage} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateResource(resourceGroupName, labName, name,
+        customImage, customImage.vm, customImage.vm.sourceVmId,
+        customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
+        customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
+        customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
+        customImage.vhd.imageName, customImage.vhd.sysPrep,
+        customImage.description, customImage.osType, customImage.author,
+        customImage.creationDate, customImage.provisioningState, customImage.id,
+        customImage.name, customImage.type, customImage.location,
+        customImage.tags, options, options.customHeaders, callback);
+    fullName: >-
+      CustomImageOperations.createOrUpdateResource(resourceGroupName, labName,
+      name, customImage, customImage.vm, customImage.vm.sourceVmId,
+      customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
+      customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
+      customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
+      customImage.vhd.imageName, customImage.vhd.sysPrep,
+      customImage.description, customImage.osType, customImage.author,
+      customImage.creationDate, customImage.provisioningState, customImage.id,
+      customImage.name, customImage.type, customImage.location,
+      customImage.tags, options, options.customHeaders, callback)
+    children:
+      - 'CustomImageOperations#createOrUpdateResource~client'
+      - 'CustomImageOperations#createOrUpdateResource~callback'
+      - 'CustomImageOperations#createOrUpdateResource~options'
+  - uid: 'CustomImageOperations#beginCreateOrUpdateResource'
+    id: beginCreateOrUpdateResource
+    parent: CustomImageOperations
+    name: >-
+      beginCreateOrUpdateResource(resourceGroupName, labName, name, customImage,
+      customImage.vm, customImage.vm.sourceVmId, customImage.vm.sysPrep,
+      customImage.vm.windowsOsInfo, customImage.vm.windowsOsInfo.windowsOsState,
+      customImage.vm.linuxOsInfo, customImage.vm.linuxOsInfo.linuxOsState,
+      customImage.vhd, customImage.vhd.imageName, customImage.vhd.sysPrep,
+      customImage.description, customImage.osType, customImage.author,
+      customImage.creationDate, customImage.provisioningState, customImage.id,
+      customImage.name, customImage.type, customImage.location,
+      customImage.tags, options, options.customHeaders, callback)
+    summary: "Create or replace an existing custom image. This operation can take a while\rto complete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the custom image.
+        - id: customImage
+          type: object
+        - id: customImage.vm
+          type: object
+        - id: customImage.vm.sourceVmId
+          type: string
+          description: The source vm identifier.
+        - id: customImage.vm.sysPrep
+          type: boolean
+          description: "Indicates whether sysprep has\rbeen run on the VHD."
+        - id: customImage.vm.windowsOsInfo
+          type: object
+          description: "The Windows OS information\rof the VM."
+        - id: customImage.vm.windowsOsInfo.windowsOsState
+          type: string
+          description: "The state of\rthe Windows OS. Possible values include: 'NonSysprepped',\r'SysprepRequested', 'SysprepApplied'"
+        - id: customImage.vm.linuxOsInfo
+          type: object
+          description: "The Linux OS information of\rthe VM."
+        - id: customImage.vm.linuxOsInfo.linuxOsState
+          type: string
+          description: "The state of the\rLinux OS. Possible values include: 'NonDeprovisioned',\r'DeprovisionRequested', 'DeprovisionApplied'"
+        - id: customImage.vhd
+          type: object
+          description: "The VHD from which the image is to be\rcreated."
+        - id: customImage.vhd.imageName
+          type: string
+          description: The image name.
+        - id: customImage.vhd.sysPrep
+          type: boolean
+          description: "Indicates whether sysprep has\rbeen run on the VHD."
+        - id: customImage.description
+          type: string
+          description: "The description of the custom\rimage."
+        - id: customImage.osType
+          type: string
+          description: "The OS type of the custom image.\rPossible values include: 'Windows', 'Linux', 'None'"
+        - id: customImage.author
+          type: string
+          description: The author of the custom image.
+        - id: customImage.creationDate
+          type: date
+          description: "The creation date of the custom\rimage."
+        - id: customImage.provisioningState
+          type: string
+          description: "The provisioning status of\rthe resource."
+        - id: customImage.id
+          type: string
+          description: The identifier of the resource.
+        - id: customImage.name
+          type: string
+          description: The name of the resource.
+        - id: customImage.type
+          type: string
+          description: The type of the resource.
+        - id: customImage.location
+          type: string
+          description: The location of the resource.
+        - id: customImage.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomImage} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateResource(resourceGroupName, labName, name,
+        customImage, customImage.vm, customImage.vm.sourceVmId,
+        customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
+        customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
+        customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
+        customImage.vhd.imageName, customImage.vhd.sysPrep,
+        customImage.description, customImage.osType, customImage.author,
+        customImage.creationDate, customImage.provisioningState, customImage.id,
+        customImage.name, customImage.type, customImage.location,
+        customImage.tags, options, options.customHeaders, callback);
+    fullName: >-
+      CustomImageOperations.beginCreateOrUpdateResource(resourceGroupName,
+      labName, name, customImage, customImage.vm, customImage.vm.sourceVmId,
+      customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
+      customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
+      customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
+      customImage.vhd.imageName, customImage.vhd.sysPrep,
+      customImage.description, customImage.osType, customImage.author,
+      customImage.creationDate, customImage.provisioningState, customImage.id,
+      customImage.name, customImage.type, customImage.location,
+      customImage.tags, options, options.customHeaders, callback)
+    children:
+      - 'CustomImageOperations#beginCreateOrUpdateResource~client'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~callback'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~options'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~queryParameters'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~regex'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~httpRequest'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~headerName'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestContent'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestModel'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestModelMapper'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestModel'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~requestContent'
+      - 'CustomImageOperations#beginCreateOrUpdateResource~serializationError'
+  - uid: 'CustomImageOperations#deleteResource'
+    id: deleteResource
+    parent: CustomImageOperations
+    name: >-
+      deleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete custom image. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the custom image.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CustomImageOperations.deleteResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'CustomImageOperations#deleteResource~client'
+      - 'CustomImageOperations#deleteResource~callback'
+      - 'CustomImageOperations#deleteResource~options'
+  - uid: 'CustomImageOperations#beginDeleteResource'
+    id: beginDeleteResource
+    parent: CustomImageOperations
+    name: >-
+      beginDeleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete custom image. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the custom image.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CustomImageOperations.beginDeleteResource(resourceGroupName, labName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'CustomImageOperations#beginDeleteResource~client'
+      - 'CustomImageOperations#beginDeleteResource~callback'
+      - 'CustomImageOperations#beginDeleteResource~options'
+      - 'CustomImageOperations#beginDeleteResource~requestUrl'
+      - 'CustomImageOperations#beginDeleteResource~requestUrl'
+      - 'CustomImageOperations#beginDeleteResource~requestUrl'
+      - 'CustomImageOperations#beginDeleteResource~requestUrl'
+      - 'CustomImageOperations#beginDeleteResource~requestUrl'
+      - 'CustomImageOperations#beginDeleteResource~queryParameters'
+      - 'CustomImageOperations#beginDeleteResource~requestUrl'
+      - 'CustomImageOperations#beginDeleteResource~regex'
+      - 'CustomImageOperations#beginDeleteResource~requestUrl'
+      - 'CustomImageOperations#beginDeleteResource~httpRequest'
+      - 'CustomImageOperations#beginDeleteResource~headerName'
+  - uid: 'CustomImageOperations#listNext'
+    id: listNext
+    parent: CustomImageOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List custom images.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCustomImage} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      CustomImageOperations.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'CustomImageOperations#listNext~client'
+      - 'CustomImageOperations#listNext~callback'
+      - 'CustomImageOperations#listNext~options'
+      - 'CustomImageOperations#listNext~requestUrl'
+      - 'CustomImageOperations#listNext~requestUrl'
+      - 'CustomImageOperations#listNext~regex'
+      - 'CustomImageOperations#listNext~requestUrl'
+      - 'CustomImageOperations#listNext~httpRequest'
+      - 'CustomImageOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false

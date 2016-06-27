@@ -1,0 +1,1724 @@
+items:
+  - uid: VirtualMachines
+    id: VirtualMachines
+    name: VirtualMachines
+    type: Class
+    syntax:
+      content: VirtualMachines
+    fullName: VirtualMachines
+    children:
+      - 'VirtualMachines#client'
+      - 'VirtualMachines#capture'
+      - 'VirtualMachines#beginCapture'
+      - 'VirtualMachines#createOrUpdate'
+      - 'VirtualMachines#beginCreateOrUpdate'
+      - 'VirtualMachines#deleteMethod'
+      - 'VirtualMachines#beginDeleteMethod'
+      - 'VirtualMachines#get'
+      - 'VirtualMachines#deallocate'
+      - 'VirtualMachines#beginDeallocate'
+      - 'VirtualMachines#generalize'
+      - 'VirtualMachines#list'
+      - 'VirtualMachines#listAll'
+      - 'VirtualMachines#listAvailableSizes'
+      - 'VirtualMachines#powerOff'
+      - 'VirtualMachines#beginPowerOff'
+      - 'VirtualMachines#restart'
+      - 'VirtualMachines#beginRestart'
+      - 'VirtualMachines#start'
+      - 'VirtualMachines#beginStart'
+      - 'VirtualMachines#redeploy'
+      - 'VirtualMachines#beginRedeploy'
+      - 'VirtualMachines#listAllNext'
+  - uid: 'VirtualMachines#client'
+    id: client
+    parent: VirtualMachines
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualMachines.client
+  - uid: 'VirtualMachines#capture'
+    id: capture
+    parent: VirtualMachines
+    name: >-
+      capture(resourceGroupName, vmName, parameters, parameters.vhdPrefix,
+      parameters.destinationContainerName, parameters.overwriteVhds, options,
+      options.customHeaders, callback)
+    summary: "Captures the VM by copying virtual hard disks of the VM and outputs a\rtemplate that can be used to create similar VMs."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Capture Virtual\rMachine operation."
+        - id: parameters.vhdPrefix
+          type: string
+          description: "Gets or sets the captured\rVirtualHardDisk's name prefix."
+        - id: parameters.destinationContainerName
+          type: string
+          description: "Gets or sets the\rdestination container name."
+        - id: parameters.overwriteVhds
+          type: boolean
+          description: "Gets or sets whether it\roverwrites destination VirtualHardDisk if true, in case of conflict."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineCaptureResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function capture(resourceGroupName, vmName, parameters,
+        parameters.vhdPrefix, parameters.destinationContainerName,
+        parameters.overwriteVhds, options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.capture(resourceGroupName, vmName, parameters,
+      parameters.vhdPrefix, parameters.destinationContainerName,
+      parameters.overwriteVhds, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#capture~client'
+      - 'VirtualMachines#capture~callback'
+      - 'VirtualMachines#capture~options'
+  - uid: 'VirtualMachines#beginCapture'
+    id: beginCapture
+    parent: VirtualMachines
+    name: >-
+      beginCapture(resourceGroupName, vmName, parameters, parameters.vhdPrefix,
+      parameters.destinationContainerName, parameters.overwriteVhds, options,
+      options.customHeaders, callback)
+    summary: "Captures the VM by copying virtual hard disks of the VM and outputs a\rtemplate that can be used to create similar VMs."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Capture Virtual\rMachine operation."
+        - id: parameters.vhdPrefix
+          type: string
+          description: "Gets or sets the captured\rVirtualHardDisk's name prefix."
+        - id: parameters.destinationContainerName
+          type: string
+          description: "Gets or sets the\rdestination container name."
+        - id: parameters.overwriteVhds
+          type: boolean
+          description: "Gets or sets whether it\roverwrites destination VirtualHardDisk if true, in case of conflict."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineCaptureResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCapture(resourceGroupName, vmName, parameters,
+        parameters.vhdPrefix, parameters.destinationContainerName,
+        parameters.overwriteVhds, options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.beginCapture(resourceGroupName, vmName, parameters,
+      parameters.vhdPrefix, parameters.destinationContainerName,
+      parameters.overwriteVhds, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#beginCapture~client'
+      - 'VirtualMachines#beginCapture~callback'
+      - 'VirtualMachines#beginCapture~options'
+      - 'VirtualMachines#beginCapture~apiVersion'
+      - 'VirtualMachines#beginCapture~requestUrl'
+      - 'VirtualMachines#beginCapture~requestUrl'
+      - 'VirtualMachines#beginCapture~requestUrl'
+      - 'VirtualMachines#beginCapture~requestUrl'
+      - 'VirtualMachines#beginCapture~queryParameters'
+      - 'VirtualMachines#beginCapture~requestUrl'
+      - 'VirtualMachines#beginCapture~regex'
+      - 'VirtualMachines#beginCapture~requestUrl'
+      - 'VirtualMachines#beginCapture~httpRequest'
+      - 'VirtualMachines#beginCapture~headerName'
+      - 'VirtualMachines#beginCapture~requestContent'
+      - 'VirtualMachines#beginCapture~requestModel'
+      - 'VirtualMachines#beginCapture~requestModelMapper'
+      - 'VirtualMachines#beginCapture~requestModel'
+      - 'VirtualMachines#beginCapture~requestContent'
+      - 'VirtualMachines#beginCapture~serializationError'
+  - uid: 'VirtualMachines#createOrUpdate'
+    id: createOrUpdate
+    parent: VirtualMachines
+    name: >-
+      createOrUpdate(resourceGroupName, vmName, parameters, parameters.plan,
+      parameters.plan.name, parameters.plan.publisher, parameters.plan.product,
+      parameters.plan.promotionCode, parameters.hardwareProfile,
+      parameters.hardwareProfile.vmSize, parameters.storageProfile,
+      parameters.storageProfile.imageReference,
+      parameters.storageProfile.imageReference.publisher,
+      parameters.storageProfile.imageReference.offer,
+      parameters.storageProfile.imageReference.sku,
+      parameters.storageProfile.imageReference.version,
+      parameters.storageProfile.osDisk, parameters.storageProfile.osDisk.osType,
+      parameters.storageProfile.osDisk.encryptionSettings,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.enabled,
+      parameters.storageProfile.osDisk.name,
+      parameters.storageProfile.osDisk.vhd,
+      parameters.storageProfile.osDisk.image,
+      parameters.storageProfile.osDisk.image.uri,
+      parameters.storageProfile.osDisk.caching,
+      parameters.storageProfile.osDisk.createOption,
+      parameters.storageProfile.osDisk.diskSizeGB,
+      parameters.storageProfile.dataDisks, parameters.osProfile,
+      parameters.osProfile.computerName, parameters.osProfile.adminUsername,
+      parameters.osProfile.adminPassword, parameters.osProfile.customData,
+      parameters.osProfile.windowsConfiguration,
+      parameters.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.osProfile.windowsConfiguration.timeZone,
+      parameters.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.osProfile.windowsConfiguration.winRM,
+      parameters.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.osProfile.linuxConfiguration,
+      parameters.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.osProfile.linuxConfiguration.ssh,
+      parameters.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.osProfile.secrets, parameters.networkProfile,
+      parameters.networkProfile.networkInterfaces,
+      parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.bootDiagnostics,
+      parameters.diagnosticsProfile.bootDiagnostics.enabled,
+      parameters.diagnosticsProfile.bootDiagnostics.storageUri,
+      parameters.availabilitySet, parameters.availabilitySet.id,
+      parameters.provisioningState, parameters.licenseType, parameters.vmId,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: The operation to create or update a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Create Virtual\rMachine operation."
+        - id: parameters.plan
+          type: object
+          description: "Gets or sets the purchase plan when\rdeploying virtual machine from VM Marketplace images."
+        - id: parameters.plan.name
+          type: string
+          description: Gets or sets the plan ID.
+        - id: parameters.plan.publisher
+          type: string
+          description: Gets or sets the publisher ID.
+        - id: parameters.plan.product
+          type: string
+          description: Gets or sets the offer ID.
+        - id: parameters.plan.promotionCode
+          type: string
+          description: "Gets or sets the promotion\rcode."
+        - id: parameters.hardwareProfile
+          type: object
+          description: "Gets or sets the hardware\rprofile."
+        - id: parameters.hardwareProfile.vmSize
+          type: string
+          description: "The virtual machine\rsize name. Possible values include: 'Basic_A0', 'Basic_A1', 'Basic_A2',\r'Basic_A3', 'Basic_A4', 'Standard_A0', 'Standard_A1', 'Standard_A2',\r'Standard_A3', 'Standard_A4', 'Standard_A5', 'Standard_A6', 'Standard_A7',\r'Standard_A8', 'Standard_A9', 'Standard_A10', 'Standard_A11',\r'Standard_D1', 'Standard_D2', 'Standard_D3', 'Standard_D4',\r'Standard_D11', 'Standard_D12', 'Standard_D13', 'Standard_D14',\r'Standard_D1_v2', 'Standard_D2_v2', 'Standard_D3_v2', 'Standard_D4_v2',\r'Standard_D5_v2', 'Standard_D11_v2', 'Standard_D12_v2', 'Standard_D13_v2',\r'Standard_D14_v2', 'Standard_DS1', 'Standard_DS2', 'Standard_DS3',\r'Standard_DS4', 'Standard_DS11', 'Standard_DS12', 'Standard_DS13',\r'Standard_DS14', 'Standard_G1', 'Standard_G2', 'Standard_G3',\r'Standard_G4', 'Standard_G5', 'Standard_GS1', 'Standard_GS2',\r'Standard_GS3', 'Standard_GS4', 'Standard_GS5'"
+        - id: parameters.storageProfile
+          type: object
+          description: "Gets or sets the storage\rprofile."
+        - id: parameters.storageProfile.imageReference
+          type: object
+          description: "Gets or sets the\rimage reference."
+        - id: parameters.storageProfile.imageReference.publisher
+          type: string
+          description: "Gets\ror sets the image publisher."
+        - id: parameters.storageProfile.imageReference.offer
+          type: string
+          description: "Gets or\rsets the image offer."
+        - id: parameters.storageProfile.imageReference.sku
+          type: string
+          description: "Gets or sets\rthe image sku."
+        - id: parameters.storageProfile.imageReference.version
+          type: string
+          description: "Gets or\rsets the image version. The allowed formats are Major.Minor.Build or\r'latest'. Major, Minor and Build being decimal numbers. Specify 'latest'\rto use the latest version of image."
+        - id: parameters.storageProfile.osDisk
+          type: object
+          description: Gets or sets the OS disk.
+        - id: parameters.storageProfile.osDisk.osType
+          type: string
+          description: "Gets or sets the\rOperating System type. Possible values include: 'Windows', 'Linux'"
+        - id: parameters.storageProfile.osDisk.encryptionSettings
+          type: object
+          description: "Gets\ror sets the disk encryption settings."
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey
+          type: object
+          description: Gets or sets the disk encryption key which is a KeyVault Secret.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl
+          type: string
+          description: Gets or sets the URL referencing a secret in a Key Vault.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault
+          type: object
+          description: >-
+            Gets or sets the Relative URL of the Key Vault containing the
+            secret.
+        - id: parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey
+          type: object
+          description: Gets or sets the key encryption key which is KeyVault Key.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl
+          type: string
+          description: Gets or sets the URL referencing a key in a Key Vault.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault
+          type: object
+          description: Gets or sets the Relative URL of the Key Vault containing the key
+        - id: parameters.storageProfile.osDisk.encryptionSettings.enabled
+          type: boolean
+          description: "Gets or sets\rwhether disk encryption should be enabled on the Virtual Machine."
+        - id: parameters.storageProfile.osDisk.name
+          type: string
+          description: "Gets or sets the\rdisk name."
+        - id: parameters.storageProfile.osDisk.vhd
+          type: object
+          description: "Gets or sets the\rVirtual Hard Disk."
+        - id: parameters.storageProfile.osDisk.image
+          type: object
+          description: "Gets or sets the\rSource User Image VirtualHardDisk. This VirtualHardDisk will be copied\rbefore using it to attach to the Virtual Machine.If SourceImage is\rprovided, the destination VirtualHardDisk should not exist."
+        - id: parameters.storageProfile.osDisk.image.uri
+          type: string
+          description: "Gets or sets\rthe virtual hard disk's uri. It should be a valid Uri to a virtual hard\rdisk."
+        - id: parameters.storageProfile.osDisk.caching
+          type: string
+          description: "Gets or sets the\rcaching type. Possible values include: 'None', 'ReadOnly', 'ReadWrite'"
+        - id: parameters.storageProfile.osDisk.createOption
+          type: string
+          description: "Gets or\rsets the create option. Possible values include: 'fromImage', 'empty',\r'attach'"
+        - id: parameters.storageProfile.osDisk.diskSizeGB
+          type: number
+          description: "Gets or sets\rthe initial disk size in GB for blank data disks, and the new desired size\rfor existing OS and Data disks."
+        - id: parameters.storageProfile.dataDisks
+          type: array
+          description: "Gets or sets the data\rdisks."
+        - id: parameters.osProfile
+          type: object
+          description: Gets or sets the OS profile.
+        - id: parameters.osProfile.computerName
+          type: string
+          description: "Gets or sets the\rcomputer name."
+        - id: parameters.osProfile.adminUsername
+          type: string
+          description: "Gets or sets the admin\ruser name."
+        - id: parameters.osProfile.adminPassword
+          type: string
+          description: "Gets or sets the admin\ruser password."
+        - id: parameters.osProfile.customData
+          type: string
+          description: "Gets or sets a base-64\rencoded string of custom data."
+        - id: parameters.osProfile.windowsConfiguration
+          type: object
+          description: "Gets or sets\rthe Windows Configuration of the OS profile."
+        - id: parameters.osProfile.windowsConfiguration.provisionVMAgent
+          type: boolean
+          description: "Gets or sets\rwhether VM Agent should be provisioned on the Virtual Machine."
+        - id: parameters.osProfile.windowsConfiguration.enableAutomaticUpdates
+          type: boolean
+          description: "Gets or\rsets whether Windows updates are automatically installed on the VM"
+        - id: parameters.osProfile.windowsConfiguration.timeZone
+          type: string
+          description: "Gets\ror sets the Time Zone of the VM"
+        - id: parameters.osProfile.windowsConfiguration.additionalUnattendContent
+          type: array
+          description: "Gets\ror sets the additional base-64 encoded XML formatted information that can\rbe included in the Unattend.xml file."
+        - id: parameters.osProfile.windowsConfiguration.winRM
+          type: object
+          description: "Gets or\rsets the Windows Remote Management configuration of the VM"
+        - id: parameters.osProfile.windowsConfiguration.winRM.listeners
+          type: array
+          description: Gets or sets the list of Windows Remote Management listeners
+        - id: parameters.osProfile.linuxConfiguration
+          type: object
+          description: "Gets or sets the\rLinux Configuration of the OS profile."
+        - id: >-
+            parameters.osProfile.linuxConfiguration.disablePasswordAuthentication
+          type: boolean
+          description: "Gets or sets whether Authentication using user name and password is\rallowed or not"
+        - id: parameters.osProfile.linuxConfiguration.ssh
+          type: object
+          description: "Gets or sets\rthe SSH configuration for linux VMs"
+        - id: parameters.osProfile.linuxConfiguration.ssh.publicKeys
+          type: array
+          description: "Gets or sets the list of SSH public keys used to authenticate with linux\rbased VMs"
+        - id: parameters.osProfile.secrets
+          type: array
+          description: "Gets or sets the List of\rcertificates for addition to the VM."
+        - id: parameters.networkProfile
+          type: object
+          description: "Gets or sets the network\rprofile."
+        - id: parameters.networkProfile.networkInterfaces
+          type: array
+          description: "Gets or sets\rthe network interfaces."
+        - id: parameters.diagnosticsProfile
+          type: object
+          description: "Gets or sets the\rdiagnostics profile."
+        - id: parameters.diagnosticsProfile.bootDiagnostics
+          type: object
+          description: "Gets or\rsets the boot diagnostics."
+        - id: parameters.diagnosticsProfile.bootDiagnostics.enabled
+          type: boolean
+          description: "Gets or sets whether boot diagnostics should be enabled on the Virtual\rMachine."
+        - id: parameters.diagnosticsProfile.bootDiagnostics.storageUri
+          type: string
+          description: >-
+            Gets or sets the boot diagnostics storage Uri. It should be a valid
+            Uri
+        - id: parameters.availabilitySet
+          type: object
+          description: "Gets or sets the reference Id\rof the availability set to which this virtual machine belongs."
+        - id: parameters.availabilitySet.id
+          type: string
+          description: Resource Id
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets the\rprovisioning state, which only appears in the response."
+        - id: parameters.licenseType
+          type: string
+          description: "Gets or sets the license type,\rwhich is for bring your own license scenario."
+        - id: parameters.vmId
+          type: string
+          description: Gets the virtual machine unique id.
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachine} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, vmName, parameters,
+        parameters.plan, parameters.plan.name, parameters.plan.publisher,
+        parameters.plan.product, parameters.plan.promotionCode,
+        parameters.hardwareProfile, parameters.hardwareProfile.vmSize,
+        parameters.storageProfile, parameters.storageProfile.imageReference,
+        parameters.storageProfile.imageReference.publisher,
+        parameters.storageProfile.imageReference.offer,
+        parameters.storageProfile.imageReference.sku,
+        parameters.storageProfile.imageReference.version,
+        parameters.storageProfile.osDisk,
+        parameters.storageProfile.osDisk.osType,
+        parameters.storageProfile.osDisk.encryptionSettings,
+        parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey,
+        parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl,
+        parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault,
+        parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey,
+        parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl,
+        parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault,
+        parameters.storageProfile.osDisk.encryptionSettings.enabled,
+        parameters.storageProfile.osDisk.name,
+        parameters.storageProfile.osDisk.vhd,
+        parameters.storageProfile.osDisk.image,
+        parameters.storageProfile.osDisk.image.uri,
+        parameters.storageProfile.osDisk.caching,
+        parameters.storageProfile.osDisk.createOption,
+        parameters.storageProfile.osDisk.diskSizeGB,
+        parameters.storageProfile.dataDisks, parameters.osProfile,
+        parameters.osProfile.computerName, parameters.osProfile.adminUsername,
+        parameters.osProfile.adminPassword, parameters.osProfile.customData,
+        parameters.osProfile.windowsConfiguration,
+        parameters.osProfile.windowsConfiguration.provisionVMAgent,
+        parameters.osProfile.windowsConfiguration.enableAutomaticUpdates,
+        parameters.osProfile.windowsConfiguration.timeZone,
+        parameters.osProfile.windowsConfiguration.additionalUnattendContent,
+        parameters.osProfile.windowsConfiguration.winRM,
+        parameters.osProfile.windowsConfiguration.winRM.listeners,
+        parameters.osProfile.linuxConfiguration,
+        parameters.osProfile.linuxConfiguration.disablePasswordAuthentication,
+        parameters.osProfile.linuxConfiguration.ssh,
+        parameters.osProfile.linuxConfiguration.ssh.publicKeys,
+        parameters.osProfile.secrets, parameters.networkProfile,
+        parameters.networkProfile.networkInterfaces,
+        parameters.diagnosticsProfile,
+        parameters.diagnosticsProfile.bootDiagnostics,
+        parameters.diagnosticsProfile.bootDiagnostics.enabled,
+        parameters.diagnosticsProfile.bootDiagnostics.storageUri,
+        parameters.availabilitySet, parameters.availabilitySet.id,
+        parameters.provisioningState, parameters.licenseType, parameters.vmId,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachines.createOrUpdate(resourceGroupName, vmName, parameters,
+      parameters.plan, parameters.plan.name, parameters.plan.publisher,
+      parameters.plan.product, parameters.plan.promotionCode,
+      parameters.hardwareProfile, parameters.hardwareProfile.vmSize,
+      parameters.storageProfile, parameters.storageProfile.imageReference,
+      parameters.storageProfile.imageReference.publisher,
+      parameters.storageProfile.imageReference.offer,
+      parameters.storageProfile.imageReference.sku,
+      parameters.storageProfile.imageReference.version,
+      parameters.storageProfile.osDisk, parameters.storageProfile.osDisk.osType,
+      parameters.storageProfile.osDisk.encryptionSettings,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.enabled,
+      parameters.storageProfile.osDisk.name,
+      parameters.storageProfile.osDisk.vhd,
+      parameters.storageProfile.osDisk.image,
+      parameters.storageProfile.osDisk.image.uri,
+      parameters.storageProfile.osDisk.caching,
+      parameters.storageProfile.osDisk.createOption,
+      parameters.storageProfile.osDisk.diskSizeGB,
+      parameters.storageProfile.dataDisks, parameters.osProfile,
+      parameters.osProfile.computerName, parameters.osProfile.adminUsername,
+      parameters.osProfile.adminPassword, parameters.osProfile.customData,
+      parameters.osProfile.windowsConfiguration,
+      parameters.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.osProfile.windowsConfiguration.timeZone,
+      parameters.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.osProfile.windowsConfiguration.winRM,
+      parameters.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.osProfile.linuxConfiguration,
+      parameters.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.osProfile.linuxConfiguration.ssh,
+      parameters.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.osProfile.secrets, parameters.networkProfile,
+      parameters.networkProfile.networkInterfaces,
+      parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.bootDiagnostics,
+      parameters.diagnosticsProfile.bootDiagnostics.enabled,
+      parameters.diagnosticsProfile.bootDiagnostics.storageUri,
+      parameters.availabilitySet, parameters.availabilitySet.id,
+      parameters.provisioningState, parameters.licenseType, parameters.vmId,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualMachines#createOrUpdate~client'
+      - 'VirtualMachines#createOrUpdate~callback'
+      - 'VirtualMachines#createOrUpdate~options'
+  - uid: 'VirtualMachines#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: VirtualMachines
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, vmName, parameters,
+      parameters.plan, parameters.plan.name, parameters.plan.publisher,
+      parameters.plan.product, parameters.plan.promotionCode,
+      parameters.hardwareProfile, parameters.hardwareProfile.vmSize,
+      parameters.storageProfile, parameters.storageProfile.imageReference,
+      parameters.storageProfile.imageReference.publisher,
+      parameters.storageProfile.imageReference.offer,
+      parameters.storageProfile.imageReference.sku,
+      parameters.storageProfile.imageReference.version,
+      parameters.storageProfile.osDisk, parameters.storageProfile.osDisk.osType,
+      parameters.storageProfile.osDisk.encryptionSettings,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.enabled,
+      parameters.storageProfile.osDisk.name,
+      parameters.storageProfile.osDisk.vhd,
+      parameters.storageProfile.osDisk.image,
+      parameters.storageProfile.osDisk.image.uri,
+      parameters.storageProfile.osDisk.caching,
+      parameters.storageProfile.osDisk.createOption,
+      parameters.storageProfile.osDisk.diskSizeGB,
+      parameters.storageProfile.dataDisks, parameters.osProfile,
+      parameters.osProfile.computerName, parameters.osProfile.adminUsername,
+      parameters.osProfile.adminPassword, parameters.osProfile.customData,
+      parameters.osProfile.windowsConfiguration,
+      parameters.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.osProfile.windowsConfiguration.timeZone,
+      parameters.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.osProfile.windowsConfiguration.winRM,
+      parameters.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.osProfile.linuxConfiguration,
+      parameters.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.osProfile.linuxConfiguration.ssh,
+      parameters.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.osProfile.secrets, parameters.networkProfile,
+      parameters.networkProfile.networkInterfaces,
+      parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.bootDiagnostics,
+      parameters.diagnosticsProfile.bootDiagnostics.enabled,
+      parameters.diagnosticsProfile.bootDiagnostics.storageUri,
+      parameters.availabilitySet, parameters.availabilitySet.id,
+      parameters.provisioningState, parameters.licenseType, parameters.vmId,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: The operation to create or update a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Create Virtual\rMachine operation."
+        - id: parameters.plan
+          type: object
+          description: "Gets or sets the purchase plan when\rdeploying virtual machine from VM Marketplace images."
+        - id: parameters.plan.name
+          type: string
+          description: Gets or sets the plan ID.
+        - id: parameters.plan.publisher
+          type: string
+          description: Gets or sets the publisher ID.
+        - id: parameters.plan.product
+          type: string
+          description: Gets or sets the offer ID.
+        - id: parameters.plan.promotionCode
+          type: string
+          description: "Gets or sets the promotion\rcode."
+        - id: parameters.hardwareProfile
+          type: object
+          description: "Gets or sets the hardware\rprofile."
+        - id: parameters.hardwareProfile.vmSize
+          type: string
+          description: "The virtual machine\rsize name. Possible values include: 'Basic_A0', 'Basic_A1', 'Basic_A2',\r'Basic_A3', 'Basic_A4', 'Standard_A0', 'Standard_A1', 'Standard_A2',\r'Standard_A3', 'Standard_A4', 'Standard_A5', 'Standard_A6', 'Standard_A7',\r'Standard_A8', 'Standard_A9', 'Standard_A10', 'Standard_A11',\r'Standard_D1', 'Standard_D2', 'Standard_D3', 'Standard_D4',\r'Standard_D11', 'Standard_D12', 'Standard_D13', 'Standard_D14',\r'Standard_D1_v2', 'Standard_D2_v2', 'Standard_D3_v2', 'Standard_D4_v2',\r'Standard_D5_v2', 'Standard_D11_v2', 'Standard_D12_v2', 'Standard_D13_v2',\r'Standard_D14_v2', 'Standard_DS1', 'Standard_DS2', 'Standard_DS3',\r'Standard_DS4', 'Standard_DS11', 'Standard_DS12', 'Standard_DS13',\r'Standard_DS14', 'Standard_G1', 'Standard_G2', 'Standard_G3',\r'Standard_G4', 'Standard_G5', 'Standard_GS1', 'Standard_GS2',\r'Standard_GS3', 'Standard_GS4', 'Standard_GS5'"
+        - id: parameters.storageProfile
+          type: object
+          description: "Gets or sets the storage\rprofile."
+        - id: parameters.storageProfile.imageReference
+          type: object
+          description: "Gets or sets the\rimage reference."
+        - id: parameters.storageProfile.imageReference.publisher
+          type: string
+          description: "Gets\ror sets the image publisher."
+        - id: parameters.storageProfile.imageReference.offer
+          type: string
+          description: "Gets or\rsets the image offer."
+        - id: parameters.storageProfile.imageReference.sku
+          type: string
+          description: "Gets or sets\rthe image sku."
+        - id: parameters.storageProfile.imageReference.version
+          type: string
+          description: "Gets or\rsets the image version. The allowed formats are Major.Minor.Build or\r'latest'. Major, Minor and Build being decimal numbers. Specify 'latest'\rto use the latest version of image."
+        - id: parameters.storageProfile.osDisk
+          type: object
+          description: Gets or sets the OS disk.
+        - id: parameters.storageProfile.osDisk.osType
+          type: string
+          description: "Gets or sets the\rOperating System type. Possible values include: 'Windows', 'Linux'"
+        - id: parameters.storageProfile.osDisk.encryptionSettings
+          type: object
+          description: "Gets\ror sets the disk encryption settings."
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey
+          type: object
+          description: Gets or sets the disk encryption key which is a KeyVault Secret.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl
+          type: string
+          description: Gets or sets the URL referencing a secret in a Key Vault.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault
+          type: object
+          description: >-
+            Gets or sets the Relative URL of the Key Vault containing the
+            secret.
+        - id: parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey
+          type: object
+          description: Gets or sets the key encryption key which is KeyVault Key.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl
+          type: string
+          description: Gets or sets the URL referencing a key in a Key Vault.
+        - id: >-
+            parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault
+          type: object
+          description: Gets or sets the Relative URL of the Key Vault containing the key
+        - id: parameters.storageProfile.osDisk.encryptionSettings.enabled
+          type: boolean
+          description: "Gets or sets\rwhether disk encryption should be enabled on the Virtual Machine."
+        - id: parameters.storageProfile.osDisk.name
+          type: string
+          description: "Gets or sets the\rdisk name."
+        - id: parameters.storageProfile.osDisk.vhd
+          type: object
+          description: "Gets or sets the\rVirtual Hard Disk."
+        - id: parameters.storageProfile.osDisk.image
+          type: object
+          description: "Gets or sets the\rSource User Image VirtualHardDisk. This VirtualHardDisk will be copied\rbefore using it to attach to the Virtual Machine.If SourceImage is\rprovided, the destination VirtualHardDisk should not exist."
+        - id: parameters.storageProfile.osDisk.image.uri
+          type: string
+          description: "Gets or sets\rthe virtual hard disk's uri. It should be a valid Uri to a virtual hard\rdisk."
+        - id: parameters.storageProfile.osDisk.caching
+          type: string
+          description: "Gets or sets the\rcaching type. Possible values include: 'None', 'ReadOnly', 'ReadWrite'"
+        - id: parameters.storageProfile.osDisk.createOption
+          type: string
+          description: "Gets or\rsets the create option. Possible values include: 'fromImage', 'empty',\r'attach'"
+        - id: parameters.storageProfile.osDisk.diskSizeGB
+          type: number
+          description: "Gets or sets\rthe initial disk size in GB for blank data disks, and the new desired size\rfor existing OS and Data disks."
+        - id: parameters.storageProfile.dataDisks
+          type: array
+          description: "Gets or sets the data\rdisks."
+        - id: parameters.osProfile
+          type: object
+          description: Gets or sets the OS profile.
+        - id: parameters.osProfile.computerName
+          type: string
+          description: "Gets or sets the\rcomputer name."
+        - id: parameters.osProfile.adminUsername
+          type: string
+          description: "Gets or sets the admin\ruser name."
+        - id: parameters.osProfile.adminPassword
+          type: string
+          description: "Gets or sets the admin\ruser password."
+        - id: parameters.osProfile.customData
+          type: string
+          description: "Gets or sets a base-64\rencoded string of custom data."
+        - id: parameters.osProfile.windowsConfiguration
+          type: object
+          description: "Gets or sets\rthe Windows Configuration of the OS profile."
+        - id: parameters.osProfile.windowsConfiguration.provisionVMAgent
+          type: boolean
+          description: "Gets or sets\rwhether VM Agent should be provisioned on the Virtual Machine."
+        - id: parameters.osProfile.windowsConfiguration.enableAutomaticUpdates
+          type: boolean
+          description: "Gets or\rsets whether Windows updates are automatically installed on the VM"
+        - id: parameters.osProfile.windowsConfiguration.timeZone
+          type: string
+          description: "Gets\ror sets the Time Zone of the VM"
+        - id: parameters.osProfile.windowsConfiguration.additionalUnattendContent
+          type: array
+          description: "Gets\ror sets the additional base-64 encoded XML formatted information that can\rbe included in the Unattend.xml file."
+        - id: parameters.osProfile.windowsConfiguration.winRM
+          type: object
+          description: "Gets or\rsets the Windows Remote Management configuration of the VM"
+        - id: parameters.osProfile.windowsConfiguration.winRM.listeners
+          type: array
+          description: Gets or sets the list of Windows Remote Management listeners
+        - id: parameters.osProfile.linuxConfiguration
+          type: object
+          description: "Gets or sets the\rLinux Configuration of the OS profile."
+        - id: >-
+            parameters.osProfile.linuxConfiguration.disablePasswordAuthentication
+          type: boolean
+          description: "Gets or sets whether Authentication using user name and password is\rallowed or not"
+        - id: parameters.osProfile.linuxConfiguration.ssh
+          type: object
+          description: "Gets or sets\rthe SSH configuration for linux VMs"
+        - id: parameters.osProfile.linuxConfiguration.ssh.publicKeys
+          type: array
+          description: "Gets or sets the list of SSH public keys used to authenticate with linux\rbased VMs"
+        - id: parameters.osProfile.secrets
+          type: array
+          description: "Gets or sets the List of\rcertificates for addition to the VM."
+        - id: parameters.networkProfile
+          type: object
+          description: "Gets or sets the network\rprofile."
+        - id: parameters.networkProfile.networkInterfaces
+          type: array
+          description: "Gets or sets\rthe network interfaces."
+        - id: parameters.diagnosticsProfile
+          type: object
+          description: "Gets or sets the\rdiagnostics profile."
+        - id: parameters.diagnosticsProfile.bootDiagnostics
+          type: object
+          description: "Gets or\rsets the boot diagnostics."
+        - id: parameters.diagnosticsProfile.bootDiagnostics.enabled
+          type: boolean
+          description: "Gets or sets whether boot diagnostics should be enabled on the Virtual\rMachine."
+        - id: parameters.diagnosticsProfile.bootDiagnostics.storageUri
+          type: string
+          description: >-
+            Gets or sets the boot diagnostics storage Uri. It should be a valid
+            Uri
+        - id: parameters.availabilitySet
+          type: object
+          description: "Gets or sets the reference Id\rof the availability set to which this virtual machine belongs."
+        - id: parameters.availabilitySet.id
+          type: string
+          description: Resource Id
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets the\rprovisioning state, which only appears in the response."
+        - id: parameters.licenseType
+          type: string
+          description: "Gets or sets the license type,\rwhich is for bring your own license scenario."
+        - id: parameters.vmId
+          type: string
+          description: Gets the virtual machine unique id.
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachine} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, vmName, parameters,
+        parameters.plan, parameters.plan.name, parameters.plan.publisher,
+        parameters.plan.product, parameters.plan.promotionCode,
+        parameters.hardwareProfile, parameters.hardwareProfile.vmSize,
+        parameters.storageProfile, parameters.storageProfile.imageReference,
+        parameters.storageProfile.imageReference.publisher,
+        parameters.storageProfile.imageReference.offer,
+        parameters.storageProfile.imageReference.sku,
+        parameters.storageProfile.imageReference.version,
+        parameters.storageProfile.osDisk,
+        parameters.storageProfile.osDisk.osType,
+        parameters.storageProfile.osDisk.encryptionSettings,
+        parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey,
+        parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl,
+        parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault,
+        parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey,
+        parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl,
+        parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault,
+        parameters.storageProfile.osDisk.encryptionSettings.enabled,
+        parameters.storageProfile.osDisk.name,
+        parameters.storageProfile.osDisk.vhd,
+        parameters.storageProfile.osDisk.image,
+        parameters.storageProfile.osDisk.image.uri,
+        parameters.storageProfile.osDisk.caching,
+        parameters.storageProfile.osDisk.createOption,
+        parameters.storageProfile.osDisk.diskSizeGB,
+        parameters.storageProfile.dataDisks, parameters.osProfile,
+        parameters.osProfile.computerName, parameters.osProfile.adminUsername,
+        parameters.osProfile.adminPassword, parameters.osProfile.customData,
+        parameters.osProfile.windowsConfiguration,
+        parameters.osProfile.windowsConfiguration.provisionVMAgent,
+        parameters.osProfile.windowsConfiguration.enableAutomaticUpdates,
+        parameters.osProfile.windowsConfiguration.timeZone,
+        parameters.osProfile.windowsConfiguration.additionalUnattendContent,
+        parameters.osProfile.windowsConfiguration.winRM,
+        parameters.osProfile.windowsConfiguration.winRM.listeners,
+        parameters.osProfile.linuxConfiguration,
+        parameters.osProfile.linuxConfiguration.disablePasswordAuthentication,
+        parameters.osProfile.linuxConfiguration.ssh,
+        parameters.osProfile.linuxConfiguration.ssh.publicKeys,
+        parameters.osProfile.secrets, parameters.networkProfile,
+        parameters.networkProfile.networkInterfaces,
+        parameters.diagnosticsProfile,
+        parameters.diagnosticsProfile.bootDiagnostics,
+        parameters.diagnosticsProfile.bootDiagnostics.enabled,
+        parameters.diagnosticsProfile.bootDiagnostics.storageUri,
+        parameters.availabilitySet, parameters.availabilitySet.id,
+        parameters.provisioningState, parameters.licenseType, parameters.vmId,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachines.beginCreateOrUpdate(resourceGroupName, vmName, parameters,
+      parameters.plan, parameters.plan.name, parameters.plan.publisher,
+      parameters.plan.product, parameters.plan.promotionCode,
+      parameters.hardwareProfile, parameters.hardwareProfile.vmSize,
+      parameters.storageProfile, parameters.storageProfile.imageReference,
+      parameters.storageProfile.imageReference.publisher,
+      parameters.storageProfile.imageReference.offer,
+      parameters.storageProfile.imageReference.sku,
+      parameters.storageProfile.imageReference.version,
+      parameters.storageProfile.osDisk, parameters.storageProfile.osDisk.osType,
+      parameters.storageProfile.osDisk.encryptionSettings,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.secretUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.keyUrl,
+      parameters.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault,
+      parameters.storageProfile.osDisk.encryptionSettings.enabled,
+      parameters.storageProfile.osDisk.name,
+      parameters.storageProfile.osDisk.vhd,
+      parameters.storageProfile.osDisk.image,
+      parameters.storageProfile.osDisk.image.uri,
+      parameters.storageProfile.osDisk.caching,
+      parameters.storageProfile.osDisk.createOption,
+      parameters.storageProfile.osDisk.diskSizeGB,
+      parameters.storageProfile.dataDisks, parameters.osProfile,
+      parameters.osProfile.computerName, parameters.osProfile.adminUsername,
+      parameters.osProfile.adminPassword, parameters.osProfile.customData,
+      parameters.osProfile.windowsConfiguration,
+      parameters.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.osProfile.windowsConfiguration.timeZone,
+      parameters.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.osProfile.windowsConfiguration.winRM,
+      parameters.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.osProfile.linuxConfiguration,
+      parameters.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.osProfile.linuxConfiguration.ssh,
+      parameters.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.osProfile.secrets, parameters.networkProfile,
+      parameters.networkProfile.networkInterfaces,
+      parameters.diagnosticsProfile,
+      parameters.diagnosticsProfile.bootDiagnostics,
+      parameters.diagnosticsProfile.bootDiagnostics.enabled,
+      parameters.diagnosticsProfile.bootDiagnostics.storageUri,
+      parameters.availabilitySet, parameters.availabilitySet.id,
+      parameters.provisioningState, parameters.licenseType, parameters.vmId,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualMachines#beginCreateOrUpdate~client'
+      - 'VirtualMachines#beginCreateOrUpdate~callback'
+      - 'VirtualMachines#beginCreateOrUpdate~options'
+      - 'VirtualMachines#beginCreateOrUpdate~apiVersion'
+      - 'VirtualMachines#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachines#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachines#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachines#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachines#beginCreateOrUpdate~queryParameters'
+      - 'VirtualMachines#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachines#beginCreateOrUpdate~regex'
+      - 'VirtualMachines#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachines#beginCreateOrUpdate~httpRequest'
+      - 'VirtualMachines#beginCreateOrUpdate~headerName'
+      - 'VirtualMachines#beginCreateOrUpdate~requestContent'
+      - 'VirtualMachines#beginCreateOrUpdate~requestModel'
+      - 'VirtualMachines#beginCreateOrUpdate~requestModelMapper'
+      - 'VirtualMachines#beginCreateOrUpdate~requestModel'
+      - 'VirtualMachines#beginCreateOrUpdate~requestContent'
+      - 'VirtualMachines#beginCreateOrUpdate~serializationError'
+  - uid: 'VirtualMachines#deleteMethod'
+    id: deleteMethod
+    parent: VirtualMachines
+    name: >-
+      deleteMethod(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to delete a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.deleteMethod(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#deleteMethod~client'
+      - 'VirtualMachines#deleteMethod~callback'
+      - 'VirtualMachines#deleteMethod~options'
+  - uid: 'VirtualMachines#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: VirtualMachines
+    name: >-
+      beginDeleteMethod(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    summary: The operation to delete a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.beginDeleteMethod(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#beginDeleteMethod~client'
+      - 'VirtualMachines#beginDeleteMethod~callback'
+      - 'VirtualMachines#beginDeleteMethod~options'
+      - 'VirtualMachines#beginDeleteMethod~apiVersion'
+      - 'VirtualMachines#beginDeleteMethod~requestUrl'
+      - 'VirtualMachines#beginDeleteMethod~requestUrl'
+      - 'VirtualMachines#beginDeleteMethod~requestUrl'
+      - 'VirtualMachines#beginDeleteMethod~requestUrl'
+      - 'VirtualMachines#beginDeleteMethod~queryParameters'
+      - 'VirtualMachines#beginDeleteMethod~requestUrl'
+      - 'VirtualMachines#beginDeleteMethod~regex'
+      - 'VirtualMachines#beginDeleteMethod~requestUrl'
+      - 'VirtualMachines#beginDeleteMethod~httpRequest'
+      - 'VirtualMachines#beginDeleteMethod~headerName'
+  - uid: 'VirtualMachines#get'
+    id: get
+    parent: VirtualMachines
+    name: >-
+      get(resourceGroupName, vmName, options, options.expand,
+      options.customHeaders, callback)
+    summary: The operation to get a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.expand
+          type: string
+          description: "The expand expression to apply on the\roperation. Possible values include: 'instanceView'"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachine} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, vmName, options, options.expand,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.get(resourceGroupName, vmName, options, options.expand,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#get~client'
+      - 'VirtualMachines#get~callback'
+      - 'VirtualMachines#get~options'
+      - 'VirtualMachines#get~expand'
+      - 'VirtualMachines#get~apiVersion'
+      - 'VirtualMachines#get~allowedValues'
+      - 'VirtualMachines#get~requestUrl'
+      - 'VirtualMachines#get~requestUrl'
+      - 'VirtualMachines#get~requestUrl'
+      - 'VirtualMachines#get~requestUrl'
+      - 'VirtualMachines#get~queryParameters'
+      - 'VirtualMachines#get~requestUrl'
+      - 'VirtualMachines#get~regex'
+      - 'VirtualMachines#get~requestUrl'
+      - 'VirtualMachines#get~httpRequest'
+      - 'VirtualMachines#get~headerName'
+  - uid: 'VirtualMachines#deallocate'
+    id: deallocate
+    parent: VirtualMachines
+    name: >-
+      deallocate(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: "Shuts down the Virtual Machine and releases the compute resources. You are\rnot billed for the compute resources that this Virtual Machine uses."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deallocate(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.deallocate(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#deallocate~client'
+      - 'VirtualMachines#deallocate~callback'
+      - 'VirtualMachines#deallocate~options'
+  - uid: 'VirtualMachines#beginDeallocate'
+    id: beginDeallocate
+    parent: VirtualMachines
+    name: >-
+      beginDeallocate(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: "Shuts down the Virtual Machine and releases the compute resources. You are\rnot billed for the compute resources that this Virtual Machine uses."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeallocate(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.beginDeallocate(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#beginDeallocate~client'
+      - 'VirtualMachines#beginDeallocate~callback'
+      - 'VirtualMachines#beginDeallocate~options'
+      - 'VirtualMachines#beginDeallocate~apiVersion'
+      - 'VirtualMachines#beginDeallocate~requestUrl'
+      - 'VirtualMachines#beginDeallocate~requestUrl'
+      - 'VirtualMachines#beginDeallocate~requestUrl'
+      - 'VirtualMachines#beginDeallocate~requestUrl'
+      - 'VirtualMachines#beginDeallocate~queryParameters'
+      - 'VirtualMachines#beginDeallocate~requestUrl'
+      - 'VirtualMachines#beginDeallocate~regex'
+      - 'VirtualMachines#beginDeallocate~requestUrl'
+      - 'VirtualMachines#beginDeallocate~httpRequest'
+      - 'VirtualMachines#beginDeallocate~headerName'
+  - uid: 'VirtualMachines#generalize'
+    id: generalize
+    parent: VirtualMachines
+    name: >-
+      generalize(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: Sets the state of the VM as Generalized.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function generalize(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.generalize(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#generalize~client'
+      - 'VirtualMachines#generalize~callback'
+      - 'VirtualMachines#generalize~options'
+      - 'VirtualMachines#generalize~apiVersion'
+      - 'VirtualMachines#generalize~requestUrl'
+      - 'VirtualMachines#generalize~requestUrl'
+      - 'VirtualMachines#generalize~requestUrl'
+      - 'VirtualMachines#generalize~requestUrl'
+      - 'VirtualMachines#generalize~queryParameters'
+      - 'VirtualMachines#generalize~requestUrl'
+      - 'VirtualMachines#generalize~regex'
+      - 'VirtualMachines#generalize~requestUrl'
+      - 'VirtualMachines#generalize~httpRequest'
+      - 'VirtualMachines#generalize~headerName'
+  - uid: 'VirtualMachines#list'
+    id: list
+    parent: VirtualMachines
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: The operation to list virtual machines under a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachines.list(resourceGroupName, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualMachines#list~client'
+      - 'VirtualMachines#list~callback'
+      - 'VirtualMachines#list~options'
+      - 'VirtualMachines#list~apiVersion'
+      - 'VirtualMachines#list~requestUrl'
+      - 'VirtualMachines#list~requestUrl'
+      - 'VirtualMachines#list~requestUrl'
+      - 'VirtualMachines#list~queryParameters'
+      - 'VirtualMachines#list~requestUrl'
+      - 'VirtualMachines#list~regex'
+      - 'VirtualMachines#list~requestUrl'
+      - 'VirtualMachines#list~httpRequest'
+      - 'VirtualMachines#list~headerName'
+  - uid: 'VirtualMachines#listAll'
+    id: listAll
+    parent: VirtualMachines
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "Gets the list of Virtual Machines in the subscription. Use nextLink\rproperty in the response to get the next page of Virtual Machines. Do this\rtill nextLink is not null to fetch all the Virtual Machines."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'VirtualMachines.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'VirtualMachines#listAll~client'
+      - 'VirtualMachines#listAll~callback'
+      - 'VirtualMachines#listAll~options'
+      - 'VirtualMachines#listAll~apiVersion'
+      - 'VirtualMachines#listAll~requestUrl'
+      - 'VirtualMachines#listAll~requestUrl'
+      - 'VirtualMachines#listAll~queryParameters'
+      - 'VirtualMachines#listAll~requestUrl'
+      - 'VirtualMachines#listAll~regex'
+      - 'VirtualMachines#listAll~requestUrl'
+      - 'VirtualMachines#listAll~httpRequest'
+      - 'VirtualMachines#listAll~headerName'
+  - uid: 'VirtualMachines#listAvailableSizes'
+    id: listAvailableSizes
+    parent: VirtualMachines
+    name: >-
+      listAvailableSizes(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    summary: "Lists all available virtual machine sizes it can be resized to for a\rvirtual machine."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineSizeListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAvailableSizes(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.listAvailableSizes(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#listAvailableSizes~client'
+      - 'VirtualMachines#listAvailableSizes~callback'
+      - 'VirtualMachines#listAvailableSizes~options'
+      - 'VirtualMachines#listAvailableSizes~apiVersion'
+      - 'VirtualMachines#listAvailableSizes~requestUrl'
+      - 'VirtualMachines#listAvailableSizes~requestUrl'
+      - 'VirtualMachines#listAvailableSizes~requestUrl'
+      - 'VirtualMachines#listAvailableSizes~requestUrl'
+      - 'VirtualMachines#listAvailableSizes~queryParameters'
+      - 'VirtualMachines#listAvailableSizes~requestUrl'
+      - 'VirtualMachines#listAvailableSizes~regex'
+      - 'VirtualMachines#listAvailableSizes~requestUrl'
+      - 'VirtualMachines#listAvailableSizes~httpRequest'
+      - 'VirtualMachines#listAvailableSizes~headerName'
+  - uid: 'VirtualMachines#powerOff'
+    id: powerOff
+    parent: VirtualMachines
+    name: >-
+      powerOff(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to power off (stop) a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function powerOff(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.powerOff(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#powerOff~client'
+      - 'VirtualMachines#powerOff~callback'
+      - 'VirtualMachines#powerOff~options'
+  - uid: 'VirtualMachines#beginPowerOff'
+    id: beginPowerOff
+    parent: VirtualMachines
+    name: >-
+      beginPowerOff(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to power off (stop) a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginPowerOff(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.beginPowerOff(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#beginPowerOff~client'
+      - 'VirtualMachines#beginPowerOff~callback'
+      - 'VirtualMachines#beginPowerOff~options'
+      - 'VirtualMachines#beginPowerOff~apiVersion'
+      - 'VirtualMachines#beginPowerOff~requestUrl'
+      - 'VirtualMachines#beginPowerOff~requestUrl'
+      - 'VirtualMachines#beginPowerOff~requestUrl'
+      - 'VirtualMachines#beginPowerOff~requestUrl'
+      - 'VirtualMachines#beginPowerOff~queryParameters'
+      - 'VirtualMachines#beginPowerOff~requestUrl'
+      - 'VirtualMachines#beginPowerOff~regex'
+      - 'VirtualMachines#beginPowerOff~requestUrl'
+      - 'VirtualMachines#beginPowerOff~httpRequest'
+      - 'VirtualMachines#beginPowerOff~headerName'
+  - uid: 'VirtualMachines#restart'
+    id: restart
+    parent: VirtualMachines
+    name: >-
+      restart(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to restart a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function restart(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.restart(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#restart~client'
+      - 'VirtualMachines#restart~callback'
+      - 'VirtualMachines#restart~options'
+  - uid: 'VirtualMachines#beginRestart'
+    id: beginRestart
+    parent: VirtualMachines
+    name: >-
+      beginRestart(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to restart a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginRestart(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.beginRestart(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#beginRestart~client'
+      - 'VirtualMachines#beginRestart~callback'
+      - 'VirtualMachines#beginRestart~options'
+      - 'VirtualMachines#beginRestart~apiVersion'
+      - 'VirtualMachines#beginRestart~requestUrl'
+      - 'VirtualMachines#beginRestart~requestUrl'
+      - 'VirtualMachines#beginRestart~requestUrl'
+      - 'VirtualMachines#beginRestart~requestUrl'
+      - 'VirtualMachines#beginRestart~queryParameters'
+      - 'VirtualMachines#beginRestart~requestUrl'
+      - 'VirtualMachines#beginRestart~regex'
+      - 'VirtualMachines#beginRestart~requestUrl'
+      - 'VirtualMachines#beginRestart~httpRequest'
+      - 'VirtualMachines#beginRestart~headerName'
+  - uid: 'VirtualMachines#start'
+    id: start
+    parent: VirtualMachines
+    name: 'start(resourceGroupName, vmName, options, options.customHeaders, callback)'
+    summary: The operation to start a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function start(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.start(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#start~client'
+      - 'VirtualMachines#start~callback'
+      - 'VirtualMachines#start~options'
+  - uid: 'VirtualMachines#beginStart'
+    id: beginStart
+    parent: VirtualMachines
+    name: >-
+      beginStart(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to start a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginStart(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.beginStart(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#beginStart~client'
+      - 'VirtualMachines#beginStart~callback'
+      - 'VirtualMachines#beginStart~options'
+      - 'VirtualMachines#beginStart~apiVersion'
+      - 'VirtualMachines#beginStart~requestUrl'
+      - 'VirtualMachines#beginStart~requestUrl'
+      - 'VirtualMachines#beginStart~requestUrl'
+      - 'VirtualMachines#beginStart~requestUrl'
+      - 'VirtualMachines#beginStart~queryParameters'
+      - 'VirtualMachines#beginStart~requestUrl'
+      - 'VirtualMachines#beginStart~regex'
+      - 'VirtualMachines#beginStart~requestUrl'
+      - 'VirtualMachines#beginStart~httpRequest'
+      - 'VirtualMachines#beginStart~headerName'
+  - uid: 'VirtualMachines#redeploy'
+    id: redeploy
+    parent: VirtualMachines
+    name: >-
+      redeploy(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to redeploy a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function redeploy(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.redeploy(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#redeploy~client'
+      - 'VirtualMachines#redeploy~callback'
+      - 'VirtualMachines#redeploy~options'
+  - uid: 'VirtualMachines#beginRedeploy'
+    id: beginRedeploy
+    parent: VirtualMachines
+    name: >-
+      beginRedeploy(resourceGroupName, vmName, options, options.customHeaders,
+      callback)
+    summary: The operation to redeploy a virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginRedeploy(resourceGroupName, vmName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachines.beginRedeploy(resourceGroupName, vmName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachines#beginRedeploy~client'
+      - 'VirtualMachines#beginRedeploy~callback'
+      - 'VirtualMachines#beginRedeploy~options'
+      - 'VirtualMachines#beginRedeploy~apiVersion'
+      - 'VirtualMachines#beginRedeploy~requestUrl'
+      - 'VirtualMachines#beginRedeploy~requestUrl'
+      - 'VirtualMachines#beginRedeploy~requestUrl'
+      - 'VirtualMachines#beginRedeploy~requestUrl'
+      - 'VirtualMachines#beginRedeploy~queryParameters'
+      - 'VirtualMachines#beginRedeploy~requestUrl'
+      - 'VirtualMachines#beginRedeploy~regex'
+      - 'VirtualMachines#beginRedeploy~requestUrl'
+      - 'VirtualMachines#beginRedeploy~httpRequest'
+      - 'VirtualMachines#beginRedeploy~headerName'
+  - uid: 'VirtualMachines#listAllNext'
+    id: listAllNext
+    parent: VirtualMachines
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "Gets the list of Virtual Machines in the subscription. Use nextLink\rproperty in the response to get the next page of Virtual Machines. Do this\rtill nextLink is not null to fetch all the Virtual Machines."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachines.listAllNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualMachines#listAllNext~client'
+      - 'VirtualMachines#listAllNext~callback'
+      - 'VirtualMachines#listAllNext~options'
+      - 'VirtualMachines#listAllNext~requestUrl'
+      - 'VirtualMachines#listAllNext~requestUrl'
+      - 'VirtualMachines#listAllNext~regex'
+      - 'VirtualMachines#listAllNext~requestUrl'
+      - 'VirtualMachines#listAllNext~httpRequest'
+      - 'VirtualMachines#listAllNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

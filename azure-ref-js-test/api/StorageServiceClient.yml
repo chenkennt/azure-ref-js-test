@@ -1,0 +1,192 @@
+items:
+  - uid: StorageServiceClient
+    id: StorageServiceClient
+    name: StorageServiceClient
+    summary: Creates a new ServiceClient object.
+    type: Class
+    syntax:
+      content: StorageServiceClient
+    fullName: StorageServiceClient
+    children:
+      - 'StorageServiceClient#apiVersion'
+      - 'StorageServiceClient#usePathStyleUri'
+      - StorageServiceClient.incorrectStorageAccountErr
+      - StorageServiceClient.incorrectStorageAccessKeyErr
+      - StorageServiceClient.getStorageSettings
+      - 'StorageServiceClient#_buildRequestOptions'
+      - 'StorageServiceClient#_getPath'
+      - 'StorageServiceClient#_setAccountCredentials'
+      - 'StorageServiceClient#storageAccount'
+      - 'StorageServiceClient#storageAccessKey'
+  - uid: 'StorageServiceClient#apiVersion'
+    id: apiVersion
+    parent: StorageServiceClient
+    name: apiVersion
+    type: Field
+    syntax:
+      content: apiVersion
+    fullName: StorageServiceClient.apiVersion
+  - uid: 'StorageServiceClient#usePathStyleUri'
+    id: usePathStyleUri
+    parent: StorageServiceClient
+    name: usePathStyleUri
+    type: Field
+    syntax:
+      content: usePathStyleUri
+    fullName: StorageServiceClient.usePathStyleUri
+  - uid: StorageServiceClient.incorrectStorageAccountErr
+    id: incorrectStorageAccountErr
+    parent: StorageServiceClient
+    name: incorrectStorageAccountErr
+    type: Field
+    syntax:
+      content: incorrectStorageAccountErr
+    fullName: StorageServiceClient.incorrectStorageAccountErr
+  - uid: StorageServiceClient.incorrectStorageAccessKeyErr
+    id: incorrectStorageAccessKeyErr
+    parent: StorageServiceClient
+    name: incorrectStorageAccessKeyErr
+    type: Field
+    syntax:
+      content: incorrectStorageAccessKeyErr
+    fullName: StorageServiceClient.incorrectStorageAccessKeyErr
+  - uid: StorageServiceClient.getStorageSettings
+    id: getStorageSettings
+    parent: StorageServiceClient
+    name: >-
+      getStorageSettings(storageAccountOrConnectionString, storageAccessKey,
+      host)
+    summary: Gets the storage settings.
+    type: Method
+    syntax:
+      parameters:
+        - id: storageAccountOrConnectionString
+          type: string
+          description: The storage account or the connection string.
+        - id: storageAccessKey
+          type: string
+          description: The storage access key.
+        - id: host
+          type: string
+          description: The host address.
+      return:
+        type: StorageServiceSettings
+      content: >-
+        function getStorageSettings(storageAccountOrConnectionString,
+        storageAccessKey, host);
+    fullName: >-
+      StorageServiceClient.getStorageSettings(storageAccountOrConnectionString,
+      storageAccessKey, host)
+    children:
+      - StorageServiceClient.getStorageSettings~storageServiceSettings
+      - StorageServiceClient.getStorageSettings~storageServiceSettings
+      - StorageServiceClient.getStorageSettings~storageServiceSettings
+      - StorageServiceClient.getStorageSettings~storageServiceSettings
+      - StorageServiceClient.getStorageSettings~storageServiceSettings
+  - uid: 'StorageServiceClient#_buildRequestOptions'
+    id: _buildRequestOptions
+    parent: StorageServiceClient
+    name: '_buildRequestOptions(webResource, options, callback)'
+    summary: Builds the request options to be passed to the http.request method.
+    type: Method
+    syntax:
+      parameters:
+        - id: webResource
+          type: WebResource
+          description: The webresource where to build the options from.
+        - id: options
+          type: object
+          description: The request options.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: 'function _buildRequestOptions(webResource, options, callback);'
+    fullName: 'StorageServiceClient._buildRequestOptions(webResource, options, callback)'
+  - uid: 'StorageServiceClient#_getPath'
+    id: _getPath
+    parent: StorageServiceClient
+    name: _getPath(path)
+    summary: "Retrieves the normalized path to be used in a request.\rThis takes into consideration the usePathStyleUri object field\rwhich specifies if the request is against the emulator or against\rthe live service. It also adds a leading \"/\" to the path in case\rit's not there before."
+    type: Method
+    syntax:
+      parameters:
+        - id: path
+          type: string
+          description: The path to be normalized.
+      return:
+        type: string
+        description: The normalized path.
+      content: function _getPath(path);
+    fullName: StorageServiceClient._getPath(path)
+    children:
+      - 'StorageServiceClient#_getPath~path'
+      - 'StorageServiceClient#_getPath~path'
+      - 'StorageServiceClient#_getPath~path'
+  - uid: 'StorageServiceClient#_setAccountCredentials'
+    id: _setAccountCredentials
+    parent: StorageServiceClient
+    name: '_setAccountCredentials(storageAccount, storageAccessKey)'
+    summary: "Sets the account credentials taking into consideration the isEmulated value and the environment variables:\rAZURE_STORAGE_ACCOUNT and AZURE_STORAGE_ACCESS_KEY."
+    type: Method
+    syntax:
+      parameters:
+        - id: storageAccount
+          type: string
+          description: The storage account.
+        - id: storageAccessKey
+          type: string
+          description: The storage access key.
+      return:
+        type: undefined
+      content: 'function _setAccountCredentials(storageAccount, storageAccessKey);'
+    fullName: >-
+      StorageServiceClient._setAccountCredentials(storageAccount,
+      storageAccessKey)
+    children:
+      - 'StorageServiceClient#_setAccountCredentials~storageAccount'
+      - 'StorageServiceClient#_setAccountCredentials~storageAccount'
+      - 'StorageServiceClient#_setAccountCredentials~storageAccessKey'
+      - 'StorageServiceClient#_setAccountCredentials~storageAccessKey'
+  - uid: 'StorageServiceClient#storageAccount'
+    id: storageAccount
+    parent: StorageServiceClient
+    name: storageAccount
+    type: Field
+    syntax:
+      content: storageAccount
+    fullName: StorageServiceClient.storageAccount
+  - uid: 'StorageServiceClient#storageAccessKey'
+    id: storageAccessKey
+    parent: StorageServiceClient
+    name: storageAccessKey
+    type: Field
+    syntax:
+      content: storageAccessKey
+    fullName: StorageServiceClient.storageAccessKey
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: StorageServiceSettings
+    name: StorageServiceSettings
+    fullName: StorageServiceSettings
+    isExternal: false
+  - uid: WebResource
+    name: WebResource
+    fullName: WebResource
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true

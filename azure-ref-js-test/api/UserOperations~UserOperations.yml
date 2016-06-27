@@ -1,0 +1,344 @@
+items:
+  - uid: UserOperations~UserOperations
+    id: UserOperations
+    parent: UserOperations
+    name: UserOperations
+    type: Class
+    syntax:
+      content: UserOperations
+    fullName: UserOperations.UserOperations
+    children:
+      - 'UserOperations~UserOperations#client'
+      - 'UserOperations~UserOperations#create'
+      - 'UserOperations~UserOperations#deleteMethod'
+      - 'UserOperations~UserOperations#get'
+      - 'UserOperations~UserOperations#getBySignInName'
+      - 'UserOperations~UserOperations#getMemberGroups'
+      - 'UserOperations~UserOperations#list'
+      - 'UserOperations~UserOperations#listNext'
+  - uid: 'UserOperations~UserOperations#client'
+    id: client
+    parent: UserOperations~UserOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: UserOperations~UserOperations.client
+  - uid: 'UserOperations~UserOperations#create'
+    id: create
+    parent: UserOperations~UserOperations
+    name: >-
+      create(parameters, parameters.userPrincipalName,
+      parameters.accountEnabled, parameters.displayName,
+      parameters.mailNickname, parameters.passwordProfileSettings,
+      parameters.passwordProfileSettings.password,
+      parameters.passwordProfileSettings.forceChangePasswordNextLogin, callback)
+    summary: "Create a new user.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn130117.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: UserCreateParameters
+          description: Parameters to create a user.
+        - id: parameters.userPrincipalName
+          type: string
+          description: User Principal Name
+        - id: parameters.accountEnabled
+          type: boolean
+          description: Enable the account
+        - id: parameters.displayName
+          type: string
+          description: User display name
+        - id: parameters.mailNickname
+          type: string
+          description: Mail nick name
+        - id: parameters.passwordProfileSettings
+          type: PasswordProfile
+          description: "Password\rProfile"
+        - id: parameters.passwordProfileSettings.password
+          type: string
+          description: Password
+        - id: parameters.passwordProfileSettings.forceChangePasswordNextLogin
+          type: boolean
+          description: "Force\rchange password on next login"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.userPrincipalName,
+        parameters.accountEnabled, parameters.displayName,
+        parameters.mailNickname, parameters.passwordProfileSettings,
+        parameters.passwordProfileSettings.password,
+        parameters.passwordProfileSettings.forceChangePasswordNextLogin,
+        callback);
+    fullName: >-
+      UserOperations~UserOperations.create(parameters,
+      parameters.userPrincipalName, parameters.accountEnabled,
+      parameters.displayName, parameters.mailNickname,
+      parameters.passwordProfileSettings,
+      parameters.passwordProfileSettings.password,
+      parameters.passwordProfileSettings.forceChangePasswordNextLogin, callback)
+    children:
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~queryParameters'
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~baseUrl'
+      - 'UserOperations~UserOperations#create~baseUrl'
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~url2'
+      - 'UserOperations~UserOperations#create~httpRequest'
+      - 'UserOperations~UserOperations#create~requestContent'
+      - 'UserOperations~UserOperations#create~requestDoc'
+      - 'UserOperations~UserOperations#create~userCreateParametersValue'
+      - 'UserOperations~UserOperations#create~requestDoc'
+      - 'UserOperations~UserOperations#create~passwordProfileValue'
+      - 'UserOperations~UserOperations#create~requestContent'
+  - uid: 'UserOperations~UserOperations#deleteMethod'
+    id: deleteMethod
+    parent: UserOperations~UserOperations
+    name: 'deleteMethod(user, callback)'
+    summary: "Delete a user.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151676.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: user
+          type: string
+          description: user object id or user principal name
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(user, callback);'
+    fullName: 'UserOperations~UserOperations.deleteMethod(user, callback)'
+    children:
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~queryParameters'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~baseUrl'
+      - 'UserOperations~UserOperations#deleteMethod~baseUrl'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~url2'
+      - 'UserOperations~UserOperations#deleteMethod~httpRequest'
+  - uid: 'UserOperations~UserOperations#get'
+    id: get
+    parent: UserOperations~UserOperations
+    name: 'get(upnOrObjectId, callback)'
+    summary: "Gets user information from the directory.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151678.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: upnOrObjectId
+          type: string
+          description: "User object Id or user principal name to get\ruser information."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(upnOrObjectId, callback);'
+    fullName: 'UserOperations~UserOperations.get(upnOrObjectId, callback)'
+    children:
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~queryParameters'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~baseUrl'
+      - 'UserOperations~UserOperations#get~baseUrl'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~url2'
+      - 'UserOperations~UserOperations#get~httpRequest'
+  - uid: 'UserOperations~UserOperations#getBySignInName'
+    id: getBySignInName
+    parent: UserOperations~UserOperations
+    name: 'getBySignInName(signInName, callback)'
+    summary: Gets user information from the directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: signInName
+          type: string
+          description: filter based on sign in name
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getBySignInName(signInName, callback);'
+    fullName: 'UserOperations~UserOperations.getBySignInName(signInName, callback)'
+    children:
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~queryParameters'
+      - 'UserOperations~UserOperations#getBySignInName~odataFilter'
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~baseUrl'
+      - 'UserOperations~UserOperations#getBySignInName~baseUrl'
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~url2'
+      - 'UserOperations~UserOperations#getBySignInName~httpRequest'
+  - uid: 'UserOperations~UserOperations#getMemberGroups'
+    id: getMemberGroups
+    parent: UserOperations~UserOperations
+    name: >-
+      getMemberGroups(parameters, parameters.objectId,
+      parameters.securityEnabledOnly, callback)
+    summary: "Gets a collection that contains the Object IDs of the groups of which the\ruser is a member."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: UserGetMemberGroupsParameters
+          description: "User filtering\rparameters."
+        - id: parameters.objectId
+          type: string
+          description: User object Id
+        - id: parameters.securityEnabledOnly
+          type: boolean
+          description: "If true only membership in\rsecurity enabled groups should be checked. Otherwise membership in all\rgroups should be checked"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getMemberGroups(parameters, parameters.objectId,
+        parameters.securityEnabledOnly, callback);
+    fullName: >-
+      UserOperations~UserOperations.getMemberGroups(parameters,
+      parameters.objectId, parameters.securityEnabledOnly, callback)
+    children:
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~queryParameters'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~baseUrl'
+      - 'UserOperations~UserOperations#getMemberGroups~baseUrl'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~url2'
+      - 'UserOperations~UserOperations#getMemberGroups~httpRequest'
+      - 'UserOperations~UserOperations#getMemberGroups~requestContent'
+      - 'UserOperations~UserOperations#getMemberGroups~requestDoc'
+      - >-
+        UserOperations~UserOperations#getMemberGroups~userGetMemberGroupsParametersValue
+      - 'UserOperations~UserOperations#getMemberGroups~requestDoc'
+      - 'UserOperations~UserOperations#getMemberGroups~requestContent'
+  - uid: 'UserOperations~UserOperations#list'
+    id: list
+    parent: UserOperations~UserOperations
+    name: 'list(mail, displayNameStartsWith, callback)'
+    summary: Gets list of users for the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: mail
+          type: string
+          description: Email to filter results.
+        - id: displayNameStartsWith
+          type: string
+          description: Display name to filter results.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function list(mail, displayNameStartsWith, callback);'
+    fullName: 'UserOperations~UserOperations.list(mail, displayNameStartsWith, callback)'
+    children:
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~queryParameters'
+      - 'UserOperations~UserOperations#list~odataFilter'
+      - 'UserOperations~UserOperations#list~odataFilter2'
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~baseUrl'
+      - 'UserOperations~UserOperations#list~baseUrl'
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~url2'
+      - 'UserOperations~UserOperations#list~httpRequest'
+  - uid: 'UserOperations~UserOperations#listNext'
+    id: listNext
+    parent: UserOperations~UserOperations
+    name: 'listNext(nextLink, callback)'
+    summary: Gets list of users for the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: "NextLink from the previous successful call to\rList operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listNext(nextLink, callback);'
+    fullName: 'UserOperations~UserOperations.listNext(nextLink, callback)'
+    children:
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~baseUrl'
+      - 'UserOperations~UserOperations#listNext~baseUrl'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~url2'
+      - 'UserOperations~UserOperations#listNext~httpRequest'
+references:
+  - uid: UserCreateParameters
+    name: UserCreateParameters
+    fullName: UserCreateParameters
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: PasswordProfile
+    name: PasswordProfile
+    fullName: PasswordProfile
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: UserGetMemberGroupsParameters
+    name: UserGetMemberGroupsParameters
+    fullName: UserGetMemberGroupsParameters
+    isExternal: false

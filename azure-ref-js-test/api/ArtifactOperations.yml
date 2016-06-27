@@ -1,0 +1,283 @@
+items:
+  - uid: ArtifactOperations
+    id: ArtifactOperations
+    name: ArtifactOperations
+    type: Class
+    syntax:
+      content: ArtifactOperations
+    fullName: ArtifactOperations
+    children:
+      - 'ArtifactOperations#client'
+      - 'ArtifactOperations#list'
+      - 'ArtifactOperations#getResource'
+      - 'ArtifactOperations#generateArmTemplate'
+      - 'ArtifactOperations#listNext'
+  - uid: 'ArtifactOperations#client'
+    id: client
+    parent: ArtifactOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ArtifactOperations.client
+  - uid: 'ArtifactOperations#list'
+    id: list
+    parent: ArtifactOperations
+    name: >-
+      list(resourceGroupName, labName, artifactSourceName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    summary: List artifacts.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: artifactSourceName
+          type: string
+          description: The name of the artifact source.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifact} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, artifactSourceName, options,
+        options.filter, options.top, options.orderBy, options.customHeaders,
+        callback);
+    fullName: >-
+      ArtifactOperations.list(resourceGroupName, labName, artifactSourceName,
+      options, options.filter, options.top, options.orderBy,
+      options.customHeaders, callback)
+    children:
+      - 'ArtifactOperations#list~client'
+      - 'ArtifactOperations#list~callback'
+      - 'ArtifactOperations#list~options'
+      - 'ArtifactOperations#list~filter'
+      - 'ArtifactOperations#list~top'
+      - 'ArtifactOperations#list~orderBy'
+      - 'ArtifactOperations#list~requestUrl'
+      - 'ArtifactOperations#list~requestUrl'
+      - 'ArtifactOperations#list~requestUrl'
+      - 'ArtifactOperations#list~requestUrl'
+      - 'ArtifactOperations#list~requestUrl'
+      - 'ArtifactOperations#list~queryParameters'
+      - 'ArtifactOperations#list~requestUrl'
+      - 'ArtifactOperations#list~regex'
+      - 'ArtifactOperations#list~requestUrl'
+      - 'ArtifactOperations#list~httpRequest'
+      - 'ArtifactOperations#list~headerName'
+  - uid: 'ArtifactOperations#getResource'
+    id: getResource
+    parent: ArtifactOperations
+    name: >-
+      getResource(resourceGroupName, labName, artifactSourceName, name, options,
+      options.customHeaders, callback)
+    summary: Get artifact.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: artifactSourceName
+          type: string
+          description: The name of the artifact source.
+        - id: name
+          type: string
+          description: The name of the artifact.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Artifact} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, artifactSourceName,
+        name, options, options.customHeaders, callback);
+    fullName: >-
+      ArtifactOperations.getResource(resourceGroupName, labName,
+      artifactSourceName, name, options, options.customHeaders, callback)
+    children:
+      - 'ArtifactOperations#getResource~client'
+      - 'ArtifactOperations#getResource~callback'
+      - 'ArtifactOperations#getResource~options'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~queryParameters'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~regex'
+      - 'ArtifactOperations#getResource~requestUrl'
+      - 'ArtifactOperations#getResource~httpRequest'
+      - 'ArtifactOperations#getResource~headerName'
+  - uid: 'ArtifactOperations#generateArmTemplate'
+    id: generateArmTemplate
+    parent: ArtifactOperations
+    name: >-
+      generateArmTemplate(resourceGroupName, labName, artifactSourceName, name,
+      generateArmTemplateRequest, generateArmTemplateRequest.virtualMachineName,
+      generateArmTemplateRequest.parameters,
+      generateArmTemplateRequest.location, options, options.customHeaders,
+      callback)
+    summary: "Generates an ARM template for the given artifact, uploads the required\rfiles to a storage account, and validates the generated artifact."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: artifactSourceName
+          type: string
+          description: The name of the artifact source.
+        - id: name
+          type: string
+          description: The name of the artifact.
+        - id: generateArmTemplateRequest
+          type: object
+        - id: generateArmTemplateRequest.virtualMachineName
+          type: string
+          description: "The\rresource name of the virtual machine."
+        - id: generateArmTemplateRequest.parameters
+          type: array
+          description: "The parameters of\rthe ARM template."
+        - id: generateArmTemplateRequest.location
+          type: string
+          description: "The location of the\rvirtual machine."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArmTemplateInfo} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function generateArmTemplate(resourceGroupName, labName,
+        artifactSourceName, name, generateArmTemplateRequest,
+        generateArmTemplateRequest.virtualMachineName,
+        generateArmTemplateRequest.parameters,
+        generateArmTemplateRequest.location, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ArtifactOperations.generateArmTemplate(resourceGroupName, labName,
+      artifactSourceName, name, generateArmTemplateRequest,
+      generateArmTemplateRequest.virtualMachineName,
+      generateArmTemplateRequest.parameters,
+      generateArmTemplateRequest.location, options, options.customHeaders,
+      callback)
+    children:
+      - 'ArtifactOperations#generateArmTemplate~client'
+      - 'ArtifactOperations#generateArmTemplate~callback'
+      - 'ArtifactOperations#generateArmTemplate~options'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~queryParameters'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~regex'
+      - 'ArtifactOperations#generateArmTemplate~requestUrl'
+      - 'ArtifactOperations#generateArmTemplate~httpRequest'
+      - 'ArtifactOperations#generateArmTemplate~headerName'
+      - 'ArtifactOperations#generateArmTemplate~requestContent'
+      - 'ArtifactOperations#generateArmTemplate~requestModel'
+      - 'ArtifactOperations#generateArmTemplate~requestModelMapper'
+      - 'ArtifactOperations#generateArmTemplate~requestModel'
+      - 'ArtifactOperations#generateArmTemplate~requestContent'
+      - 'ArtifactOperations#generateArmTemplate~serializationError'
+  - uid: 'ArtifactOperations#listNext'
+    id: listNext
+    parent: ArtifactOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List artifacts.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifact} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ArtifactOperations.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'ArtifactOperations#listNext~client'
+      - 'ArtifactOperations#listNext~callback'
+      - 'ArtifactOperations#listNext~options'
+      - 'ArtifactOperations#listNext~requestUrl'
+      - 'ArtifactOperations#listNext~requestUrl'
+      - 'ArtifactOperations#listNext~regex'
+      - 'ArtifactOperations#listNext~requestUrl'
+      - 'ArtifactOperations#listNext~httpRequest'
+      - 'ArtifactOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

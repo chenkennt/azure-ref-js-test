@@ -1,0 +1,804 @@
+items:
+  - uid: VirtualMachineScaleSetVMs
+    id: VirtualMachineScaleSetVMs
+    name: VirtualMachineScaleSetVMs
+    type: Class
+    syntax:
+      content: VirtualMachineScaleSetVMs
+    fullName: VirtualMachineScaleSetVMs
+    children:
+      - 'VirtualMachineScaleSetVMs#client'
+      - 'VirtualMachineScaleSetVMs#reimage'
+      - 'VirtualMachineScaleSetVMs#beginReimage'
+      - 'VirtualMachineScaleSetVMs#deallocate'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate'
+      - 'VirtualMachineScaleSetVMs#deleteMethod'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod'
+      - 'VirtualMachineScaleSetVMs#get'
+      - 'VirtualMachineScaleSetVMs#getInstanceView'
+      - 'VirtualMachineScaleSetVMs#list'
+      - 'VirtualMachineScaleSetVMs#powerOff'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff'
+      - 'VirtualMachineScaleSetVMs#restart'
+      - 'VirtualMachineScaleSetVMs#beginRestart'
+      - 'VirtualMachineScaleSetVMs#start'
+      - 'VirtualMachineScaleSetVMs#beginStart'
+      - 'VirtualMachineScaleSetVMs#listNext'
+  - uid: 'VirtualMachineScaleSetVMs#client'
+    id: client
+    parent: VirtualMachineScaleSetVMs
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualMachineScaleSetVMs.client
+  - uid: 'VirtualMachineScaleSetVMs#reimage'
+    id: reimage
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      reimage(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to re-image a virtual machine scale set instance.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function reimage(resourceGroupName, vmScaleSetName, instanceId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.reimage(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#reimage~client'
+      - 'VirtualMachineScaleSetVMs#reimage~callback'
+      - 'VirtualMachineScaleSetVMs#reimage~options'
+  - uid: 'VirtualMachineScaleSetVMs#beginReimage'
+    id: beginReimage
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      beginReimage(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to re-image a virtual machine scale set instance.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginReimage(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.beginReimage(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#beginReimage~client'
+      - 'VirtualMachineScaleSetVMs#beginReimage~callback'
+      - 'VirtualMachineScaleSetVMs#beginReimage~options'
+      - 'VirtualMachineScaleSetVMs#beginReimage~apiVersion'
+      - 'VirtualMachineScaleSetVMs#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginReimage~queryParameters'
+      - 'VirtualMachineScaleSetVMs#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginReimage~regex'
+      - 'VirtualMachineScaleSetVMs#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginReimage~httpRequest'
+      - 'VirtualMachineScaleSetVMs#beginReimage~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#deallocate'
+    id: deallocate
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      deallocate(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to deallocate a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deallocate(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.deallocate(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#deallocate~client'
+      - 'VirtualMachineScaleSetVMs#deallocate~callback'
+      - 'VirtualMachineScaleSetVMs#deallocate~options'
+  - uid: 'VirtualMachineScaleSetVMs#beginDeallocate'
+    id: beginDeallocate
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      beginDeallocate(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to deallocate a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeallocate(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.beginDeallocate(resourceGroupName,
+      vmScaleSetName, instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~client'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~callback'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~options'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~apiVersion'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~queryParameters'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~regex'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~httpRequest'
+      - 'VirtualMachineScaleSetVMs#beginDeallocate~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#deleteMethod'
+    id: deleteMethod
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      deleteMethod(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to delete a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.deleteMethod(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#deleteMethod~client'
+      - 'VirtualMachineScaleSetVMs#deleteMethod~callback'
+      - 'VirtualMachineScaleSetVMs#deleteMethod~options'
+  - uid: 'VirtualMachineScaleSetVMs#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      beginDeleteMethod(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to delete a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, vmScaleSetName,
+        instanceId, options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.beginDeleteMethod(resourceGroupName,
+      vmScaleSetName, instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~client'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~callback'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~options'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~apiVersion'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~queryParameters'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~regex'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~httpRequest'
+      - 'VirtualMachineScaleSetVMs#beginDeleteMethod~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#get'
+    id: get
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      get(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to get a virtual machine scale set virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetVM} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, vmScaleSetName, instanceId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.get(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#get~client'
+      - 'VirtualMachineScaleSetVMs#get~callback'
+      - 'VirtualMachineScaleSetVMs#get~options'
+      - 'VirtualMachineScaleSetVMs#get~apiVersion'
+      - 'VirtualMachineScaleSetVMs#get~requestUrl'
+      - 'VirtualMachineScaleSetVMs#get~requestUrl'
+      - 'VirtualMachineScaleSetVMs#get~requestUrl'
+      - 'VirtualMachineScaleSetVMs#get~requestUrl'
+      - 'VirtualMachineScaleSetVMs#get~requestUrl'
+      - 'VirtualMachineScaleSetVMs#get~queryParameters'
+      - 'VirtualMachineScaleSetVMs#get~requestUrl'
+      - 'VirtualMachineScaleSetVMs#get~regex'
+      - 'VirtualMachineScaleSetVMs#get~requestUrl'
+      - 'VirtualMachineScaleSetVMs#get~httpRequest'
+      - 'VirtualMachineScaleSetVMs#get~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#getInstanceView'
+    id: getInstanceView
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      getInstanceView(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to get a virtual machine scale set virtual machine.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetVMInstanceView} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getInstanceView(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.getInstanceView(resourceGroupName,
+      vmScaleSetName, instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#getInstanceView~client'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~callback'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~options'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~apiVersion'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~queryParameters'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~regex'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~httpRequest'
+      - 'VirtualMachineScaleSetVMs#getInstanceView~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#list'
+    id: list
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      list(resourceGroupName, virtualMachineScaleSetName, options,
+      options.filter, options.select, options.expand, options.customHeaders,
+      callback)
+    summary: The operation to list virtual machine scale sets VMs.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualMachineScaleSetName
+          type: string
+          description: "The name of the virtual machine\rscale set."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.select
+          type: string
+          description: The list parameters.
+        - id: options.expand
+          type: string
+          description: "The expand expression to apply on the\roperation."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetVMListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, virtualMachineScaleSetName, options,
+        options.filter, options.select, options.expand, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.list(resourceGroupName,
+      virtualMachineScaleSetName, options, options.filter, options.select,
+      options.expand, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#list~client'
+      - 'VirtualMachineScaleSetVMs#list~callback'
+      - 'VirtualMachineScaleSetVMs#list~options'
+      - 'VirtualMachineScaleSetVMs#list~filter'
+      - 'VirtualMachineScaleSetVMs#list~select'
+      - 'VirtualMachineScaleSetVMs#list~expand'
+      - 'VirtualMachineScaleSetVMs#list~apiVersion'
+      - 'VirtualMachineScaleSetVMs#list~requestUrl'
+      - 'VirtualMachineScaleSetVMs#list~requestUrl'
+      - 'VirtualMachineScaleSetVMs#list~requestUrl'
+      - 'VirtualMachineScaleSetVMs#list~requestUrl'
+      - 'VirtualMachineScaleSetVMs#list~queryParameters'
+      - 'VirtualMachineScaleSetVMs#list~requestUrl'
+      - 'VirtualMachineScaleSetVMs#list~regex'
+      - 'VirtualMachineScaleSetVMs#list~requestUrl'
+      - 'VirtualMachineScaleSetVMs#list~httpRequest'
+      - 'VirtualMachineScaleSetVMs#list~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#powerOff'
+    id: powerOff
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      powerOff(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to power off (stop) a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function powerOff(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.powerOff(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#powerOff~client'
+      - 'VirtualMachineScaleSetVMs#powerOff~callback'
+      - 'VirtualMachineScaleSetVMs#powerOff~options'
+  - uid: 'VirtualMachineScaleSetVMs#beginPowerOff'
+    id: beginPowerOff
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      beginPowerOff(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to power off (stop) a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginPowerOff(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.beginPowerOff(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~client'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~callback'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~options'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~apiVersion'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~queryParameters'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~regex'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~httpRequest'
+      - 'VirtualMachineScaleSetVMs#beginPowerOff~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#restart'
+    id: restart
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      restart(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to restart a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function restart(resourceGroupName, vmScaleSetName, instanceId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.restart(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#restart~client'
+      - 'VirtualMachineScaleSetVMs#restart~callback'
+      - 'VirtualMachineScaleSetVMs#restart~options'
+  - uid: 'VirtualMachineScaleSetVMs#beginRestart'
+    id: beginRestart
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      beginRestart(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to restart a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginRestart(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.beginRestart(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#beginRestart~client'
+      - 'VirtualMachineScaleSetVMs#beginRestart~callback'
+      - 'VirtualMachineScaleSetVMs#beginRestart~options'
+      - 'VirtualMachineScaleSetVMs#beginRestart~apiVersion'
+      - 'VirtualMachineScaleSetVMs#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginRestart~queryParameters'
+      - 'VirtualMachineScaleSetVMs#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginRestart~regex'
+      - 'VirtualMachineScaleSetVMs#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginRestart~httpRequest'
+      - 'VirtualMachineScaleSetVMs#beginRestart~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#start'
+    id: start
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      start(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to start a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function start(resourceGroupName, vmScaleSetName, instanceId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.start(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#start~client'
+      - 'VirtualMachineScaleSetVMs#start~callback'
+      - 'VirtualMachineScaleSetVMs#start~options'
+  - uid: 'VirtualMachineScaleSetVMs#beginStart'
+    id: beginStart
+    parent: VirtualMachineScaleSetVMs
+    name: >-
+      beginStart(resourceGroupName, vmScaleSetName, instanceId, options,
+      options.customHeaders, callback)
+    summary: The operation to start a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceId
+          type: string
+          description: The instance id of the virtual machine.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginStart(resourceGroupName, vmScaleSetName, instanceId,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.beginStart(resourceGroupName, vmScaleSetName,
+      instanceId, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#beginStart~client'
+      - 'VirtualMachineScaleSetVMs#beginStart~callback'
+      - 'VirtualMachineScaleSetVMs#beginStart~options'
+      - 'VirtualMachineScaleSetVMs#beginStart~apiVersion'
+      - 'VirtualMachineScaleSetVMs#beginStart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginStart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginStart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginStart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginStart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginStart~queryParameters'
+      - 'VirtualMachineScaleSetVMs#beginStart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginStart~regex'
+      - 'VirtualMachineScaleSetVMs#beginStart~requestUrl'
+      - 'VirtualMachineScaleSetVMs#beginStart~httpRequest'
+      - 'VirtualMachineScaleSetVMs#beginStart~headerName'
+  - uid: 'VirtualMachineScaleSetVMs#listNext'
+    id: listNext
+    parent: VirtualMachineScaleSetVMs
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: The operation to list virtual machine scale sets VMs.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetVMListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSetVMs.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSetVMs#listNext~client'
+      - 'VirtualMachineScaleSetVMs#listNext~callback'
+      - 'VirtualMachineScaleSetVMs#listNext~options'
+      - 'VirtualMachineScaleSetVMs#listNext~requestUrl'
+      - 'VirtualMachineScaleSetVMs#listNext~requestUrl'
+      - 'VirtualMachineScaleSetVMs#listNext~regex'
+      - 'VirtualMachineScaleSetVMs#listNext~requestUrl'
+      - 'VirtualMachineScaleSetVMs#listNext~httpRequest'
+      - 'VirtualMachineScaleSetVMs#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

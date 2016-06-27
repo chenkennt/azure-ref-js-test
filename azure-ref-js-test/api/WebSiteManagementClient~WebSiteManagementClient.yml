@@ -1,0 +1,255 @@
+items:
+  - uid: WebSiteManagementClient~WebSiteManagementClient
+    id: WebSiteManagementClient
+    parent: WebSiteManagementClient
+    name: WebSiteManagementClient
+    type: Class
+    syntax:
+      content: WebSiteManagementClient
+    fullName: WebSiteManagementClient.WebSiteManagementClient
+    children:
+      - 'WebSiteManagementClient~WebSiteManagementClient#credentials'
+      - 'WebSiteManagementClient~WebSiteManagementClient#baseUri'
+      - 'WebSiteManagementClient~WebSiteManagementClient#baseUri'
+      - 'WebSiteManagementClient~WebSiteManagementClient#apiVersion'
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#longRunningOperationInitialTimeout
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#longRunningOperationRetryTimeout
+      - 'WebSiteManagementClient~WebSiteManagementClient#webHostingPlans'
+      - 'WebSiteManagementClient~WebSiteManagementClient#webSites'
+      - 'WebSiteManagementClient~WebSiteManagementClient#webSpaces'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus'
+      - 'WebSiteManagementClient~WebSiteManagementClient#registerSubscription'
+      - 'WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription'
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#credentials'
+    id: credentials
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: credentials
+    type: Field
+    syntax:
+      content: credentials
+    fullName: WebSiteManagementClient~WebSiteManagementClient.credentials
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#baseUri'
+    id: baseUri
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: baseUri
+    type: Field
+    syntax:
+      content: baseUri
+    fullName: WebSiteManagementClient~WebSiteManagementClient.baseUri
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#baseUri'
+    id: baseUri
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: baseUri
+    type: Field
+    syntax:
+      content: baseUri
+    fullName: WebSiteManagementClient~WebSiteManagementClient.baseUri
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#apiVersion'
+    id: apiVersion
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: apiVersion
+    type: Field
+    syntax:
+      content: apiVersion
+    fullName: WebSiteManagementClient~WebSiteManagementClient.apiVersion
+  - uid: >-
+      WebSiteManagementClient~WebSiteManagementClient#longRunningOperationInitialTimeout
+    id: longRunningOperationInitialTimeout
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: longRunningOperationInitialTimeout
+    type: Field
+    syntax:
+      content: longRunningOperationInitialTimeout
+    fullName: >-
+      WebSiteManagementClient~WebSiteManagementClient.longRunningOperationInitialTimeout
+  - uid: >-
+      WebSiteManagementClient~WebSiteManagementClient#longRunningOperationRetryTimeout
+    id: longRunningOperationRetryTimeout
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: longRunningOperationRetryTimeout
+    type: Field
+    syntax:
+      content: longRunningOperationRetryTimeout
+    fullName: >-
+      WebSiteManagementClient~WebSiteManagementClient.longRunningOperationRetryTimeout
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#webHostingPlans'
+    id: webHostingPlans
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: webHostingPlans
+    summary: "Provides an instance of the\r[WebHostingPlanOperations](-WebHostingPlanOperations.html) object."
+    type: Field
+    syntax:
+      return:
+        type: object
+      content: webHostingPlans
+    fullName: WebSiteManagementClient~WebSiteManagementClient.webHostingPlans
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#webSites'
+    id: webSites
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: webSites
+    summary: "Provides an instance of the [WebSiteOperations](-WebSiteOperations.html)\robject."
+    type: Field
+    syntax:
+      return:
+        type: object
+      content: webSites
+    fullName: WebSiteManagementClient~WebSiteManagementClient.webSites
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#webSpaces'
+    id: webSpaces
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: webSpaces
+    summary: "Provides an instance of the\r[WebSpaceOperations](-WebSpaceOperations.html) object."
+    type: Field
+    syntax:
+      return:
+        type: object
+      content: webSpaces
+    fullName: WebSiteManagementClient~WebSiteManagementClient.webSpaces
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus'
+    id: getOperationStatus
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: 'getOperationStatus(webSpaceName, siteName, operationId, callback)'
+    summary: "The Get Operation Status operation returns the status of the specified\roperation. After calling a long-running operation, you can call Get\rOperation Status to determine whether the operation has succeeded,\rfailed, timed out, or is still in progress.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: webSpaceName
+          type: string
+          description: "The name of the webspace for the website\rwhere the operation was targeted."
+        - id: siteName
+          type: string
+          description: "The name of the site where the operation was\rtargeted."
+        - id: operationId
+          type: string
+          description: "The operation ID for the operation you wish to\rtrack. The operation ID is returned in the ID field in the body of the\rresponse for long-running operations."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getOperationStatus(webSpaceName, siteName, operationId,
+        callback);
+    fullName: >-
+      WebSiteManagementClient~WebSiteManagementClient.getOperationStatus(webSpaceName,
+      siteName, operationId, callback)
+    children:
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~baseUrl
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~baseUrl
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - 'WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~url2'
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#getOperationStatus~httpRequest
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#registerSubscription'
+    id: registerSubscription
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: registerSubscription(callback)
+    summary: Register your subscription to use Azure Web Sites.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function registerSubscription(callback);
+    fullName: >-
+      WebSiteManagementClient~WebSiteManagementClient.registerSubscription(callback)
+    children:
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~queryParameters
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~baseUrl
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~baseUrl
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#registerSubscription~httpRequest
+  - uid: 'WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription'
+    id: unregisterSubscription
+    parent: WebSiteManagementClient~WebSiteManagementClient
+    name: unregisterSubscription(callback)
+    summary: Unregister your subscription to use Azure Web Sites.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function unregisterSubscription(callback);
+    fullName: >-
+      WebSiteManagementClient~WebSiteManagementClient.unregisterSubscription(callback)
+    children:
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~queryParameters
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~baseUrl
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~baseUrl
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~url2
+      - >-
+        WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription~httpRequest
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

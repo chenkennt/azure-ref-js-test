@@ -1,0 +1,334 @@
+items:
+  - uid: DNSServerOperations~DNSServerOperations
+    id: DNSServerOperations
+    parent: DNSServerOperations
+    name: DNSServerOperations
+    type: Class
+    syntax:
+      content: DNSServerOperations
+    fullName: DNSServerOperations.DNSServerOperations
+    children:
+      - 'DNSServerOperations~DNSServerOperations#client'
+      - 'DNSServerOperations~DNSServerOperations#addDNSServer'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer'
+      - 'DNSServerOperations~DNSServerOperations#deleteDNSServer'
+      - 'DNSServerOperations~DNSServerOperations#updateDNSServer'
+  - uid: 'DNSServerOperations~DNSServerOperations#client'
+    id: client
+    parent: DNSServerOperations~DNSServerOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: DNSServerOperations~DNSServerOperations.client
+  - uid: 'DNSServerOperations~DNSServerOperations#addDNSServer'
+    id: addDNSServer
+    parent: DNSServerOperations~DNSServerOperations
+    name: >-
+      addDNSServer(serviceName, deploymentName, parameters, parameters.name,
+      parameters.address, callback)
+    summary: "Add a definition for a DNS server to an existing deployment. VM's in this\rdeployment will be programmed to use this DNS server for all DNS\rresolutions"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: parameters
+          type: DNSAddParameters
+          description: "Parameters supplied to the Add DNS\rServer operation."
+        - id: parameters.name
+          type: string
+          description: Name of the DNS server.
+        - id: parameters.address
+          type: string
+          description: IP Address of the DNS server
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function addDNSServer(serviceName, deploymentName, parameters,
+        parameters.name, parameters.address, callback);
+    fullName: >-
+      DNSServerOperations~DNSServerOperations.addDNSServer(serviceName,
+      deploymentName, parameters, parameters.name, parameters.address, callback)
+    children:
+      - 'DNSServerOperations~DNSServerOperations#addDNSServer~client2'
+  - uid: 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer'
+    id: beginAddingDNSServer
+    parent: DNSServerOperations~DNSServerOperations
+    name: >-
+      beginAddingDNSServer(serviceName, deploymentName, parameters,
+      parameters.name, parameters.address, callback)
+    summary: "Add a definition for a DNS server to an existing deployment. VM's in this\rdeployment will be programmed to use this DNS server for all DNS\rresolutions"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: parameters
+          type: DNSAddParameters
+          description: "Parameters supplied to the Add DNS\rServer operation."
+        - id: parameters.name
+          type: string
+          description: Name of the DNS server.
+        - id: parameters.address
+          type: string
+          description: IP Address of the DNS server
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginAddingDNSServer(serviceName, deploymentName, parameters,
+        parameters.name, parameters.address, callback);
+    fullName: >-
+      DNSServerOperations~DNSServerOperations.beginAddingDNSServer(serviceName,
+      deploymentName, parameters, parameters.name, parameters.address, callback)
+    children:
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~baseUrl'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~baseUrl'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~httpRequest'
+      - >-
+        DNSServerOperations~DNSServerOperations#beginAddingDNSServer~requestContent
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~requestDoc'
+      - >-
+        DNSServerOperations~DNSServerOperations#beginAddingDNSServer~dnsServerElement
+      - 'DNSServerOperations~DNSServerOperations#beginAddingDNSServer~nameElement'
+      - >-
+        DNSServerOperations~DNSServerOperations#beginAddingDNSServer~addressElement
+      - >-
+        DNSServerOperations~DNSServerOperations#beginAddingDNSServer~requestContent
+  - uid: 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer'
+    id: beginDeletingDNSServer
+    parent: DNSServerOperations~DNSServerOperations
+    name: >-
+      beginDeletingDNSServer(serviceName, deploymentName, dnsServerName,
+      callback)
+    summary: Deletes a definition for an existing DNS server from the deployment
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: dnsServerName
+          type: string
+          description: The name of the dns server.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginDeletingDNSServer(serviceName, deploymentName,
+        dnsServerName, callback);
+    fullName: >-
+      DNSServerOperations~DNSServerOperations.beginDeletingDNSServer(serviceName,
+      deploymentName, dnsServerName, callback)
+    children:
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~baseUrl'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~baseUrl'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~url2'
+      - >-
+        DNSServerOperations~DNSServerOperations#beginDeletingDNSServer~httpRequest
+  - uid: 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer'
+    id: beginUpdatingDNSServer
+    parent: DNSServerOperations~DNSServerOperations
+    name: >-
+      beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName,
+      parameters, parameters.name, parameters.address, callback)
+    summary: "Updates a definition for an existing DNS server. Updates to address is the\ronly change allowed. DNS server name cannot be changed"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: dnsServerName
+          type: string
+          description: The name of the dns server.
+        - id: parameters
+          type: DNSUpdateParameters
+          description: "Parameters supplied to the Update\rDNS Server operation."
+        - id: parameters.name
+          type: string
+          description: Name of the DNS server.
+        - id: parameters.address
+          type: string
+          description: IP Address of the DNS server
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginUpdatingDNSServer(serviceName, deploymentName,
+        dnsServerName, parameters, parameters.name, parameters.address,
+        callback);
+    fullName: >-
+      DNSServerOperations~DNSServerOperations.beginUpdatingDNSServer(serviceName,
+      deploymentName, dnsServerName, parameters, parameters.name,
+      parameters.address, callback)
+    children:
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~baseUrl'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~baseUrl'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - 'DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~url2'
+      - >-
+        DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~httpRequest
+      - >-
+        DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~requestContent
+      - >-
+        DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~requestDoc
+      - >-
+        DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~dnsServerElement
+      - >-
+        DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~nameElement
+      - >-
+        DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~addressElement
+      - >-
+        DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer~requestContent
+  - uid: 'DNSServerOperations~DNSServerOperations#deleteDNSServer'
+    id: deleteDNSServer
+    parent: DNSServerOperations~DNSServerOperations
+    name: 'deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)'
+    summary: Deletes a definition for an existing DNS server from the deployment
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: dnsServerName
+          type: string
+          description: The name of the dns server.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteDNSServer(serviceName, deploymentName, dnsServerName,
+        callback);
+    fullName: >-
+      DNSServerOperations~DNSServerOperations.deleteDNSServer(serviceName,
+      deploymentName, dnsServerName, callback)
+    children:
+      - 'DNSServerOperations~DNSServerOperations#deleteDNSServer~client2'
+  - uid: 'DNSServerOperations~DNSServerOperations#updateDNSServer'
+    id: updateDNSServer
+    parent: DNSServerOperations~DNSServerOperations
+    name: >-
+      updateDNSServer(serviceName, deploymentName, dnsServerName, parameters,
+      parameters.name, parameters.address, callback)
+    summary: "Updates a definition for an existing DNS server. Updates to address is the\ronly change allowed. DNS server name cannot be changed"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: dnsServerName
+          type: string
+          description: The name of the dns server.
+        - id: parameters
+          type: DNSUpdateParameters
+          description: "Parameters supplied to the Update\rDNS Server operation."
+        - id: parameters.name
+          type: string
+          description: Name of the DNS server.
+        - id: parameters.address
+          type: string
+          description: IP Address of the DNS server
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateDNSServer(serviceName, deploymentName, dnsServerName,
+        parameters, parameters.name, parameters.address, callback);
+    fullName: >-
+      DNSServerOperations~DNSServerOperations.updateDNSServer(serviceName,
+      deploymentName, dnsServerName, parameters, parameters.name,
+      parameters.address, callback)
+    children:
+      - 'DNSServerOperations~DNSServerOperations#updateDNSServer~client2'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: DNSAddParameters
+    name: DNSAddParameters
+    fullName: DNSAddParameters
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: DNSUpdateParameters
+    name: DNSUpdateParameters
+    fullName: DNSUpdateParameters
+    isExternal: true

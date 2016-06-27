@@ -1,0 +1,58 @@
+items:
+  - uid: KeyBundle
+    id: KeyBundle
+    name: KeyBundle
+    type: Class
+    syntax:
+      content: KeyBundle
+    fullName: KeyBundle
+    children:
+      - 'KeyBundle#key'
+      - 'KeyBundle#attributes'
+      - 'KeyBundle#tags'
+  - uid: 'KeyBundle#key'
+    id: key
+    parent: KeyBundle
+    name: key
+    summary: The JWK object containig key information.
+    type: Field
+    syntax:
+      return:
+        type: JsonWebKey
+      content: key
+    fullName: KeyBundle.key
+  - uid: 'KeyBundle#attributes'
+    id: attributes
+    parent: KeyBundle
+    name: attributes
+    summary: Key attributes.
+    type: Field
+    syntax:
+      return:
+        type: KeyAttributes
+      content: attributes
+    fullName: KeyBundle.attributes
+  - uid: 'KeyBundle#tags'
+    id: tags
+    parent: KeyBundle
+    name: tags
+    summary: User defined tags. Each tag must be a string.
+    type: Field
+    syntax:
+      return:
+        type: object
+      content: tags
+    fullName: KeyBundle.tags
+references:
+  - uid: JsonWebKey
+    name: JsonWebKey
+    fullName: JsonWebKey
+    isExternal: false
+  - uid: KeyAttributes
+    name: KeyAttributes
+    fullName: KeyAttributes
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false

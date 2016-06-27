@@ -1,0 +1,735 @@
+items:
+  - uid: ScheduleOperations
+    id: ScheduleOperations
+    name: ScheduleOperations
+    type: Class
+    syntax:
+      content: ScheduleOperations
+    fullName: ScheduleOperations
+    children:
+      - 'ScheduleOperations#client'
+      - 'ScheduleOperations#list'
+      - 'ScheduleOperations#getResource'
+      - 'ScheduleOperations#createOrUpdateResource'
+      - 'ScheduleOperations#beginCreateOrUpdateResource'
+      - 'ScheduleOperations#deleteResource'
+      - 'ScheduleOperations#beginDeleteResource'
+      - 'ScheduleOperations#patchResource'
+      - 'ScheduleOperations#execute'
+      - 'ScheduleOperations#beginExecute'
+      - 'ScheduleOperations#listNext'
+  - uid: 'ScheduleOperations#client'
+    id: client
+    parent: ScheduleOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ScheduleOperations.client
+  - uid: 'ScheduleOperations#list'
+    id: list
+    parent: ScheduleOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List schedules.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationSchedule} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.list(resourceGroupName, labName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'ScheduleOperations#list~client'
+      - 'ScheduleOperations#list~callback'
+      - 'ScheduleOperations#list~options'
+      - 'ScheduleOperations#list~filter'
+      - 'ScheduleOperations#list~top'
+      - 'ScheduleOperations#list~orderBy'
+      - 'ScheduleOperations#list~requestUrl'
+      - 'ScheduleOperations#list~requestUrl'
+      - 'ScheduleOperations#list~requestUrl'
+      - 'ScheduleOperations#list~requestUrl'
+      - 'ScheduleOperations#list~queryParameters'
+      - 'ScheduleOperations#list~requestUrl'
+      - 'ScheduleOperations#list~regex'
+      - 'ScheduleOperations#list~requestUrl'
+      - 'ScheduleOperations#list~httpRequest'
+      - 'ScheduleOperations#list~headerName'
+  - uid: 'ScheduleOperations#getResource'
+    id: getResource
+    parent: ScheduleOperations
+    name: >-
+      getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Get schedule.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'ScheduleOperations#getResource~client'
+      - 'ScheduleOperations#getResource~callback'
+      - 'ScheduleOperations#getResource~options'
+      - 'ScheduleOperations#getResource~requestUrl'
+      - 'ScheduleOperations#getResource~requestUrl'
+      - 'ScheduleOperations#getResource~requestUrl'
+      - 'ScheduleOperations#getResource~requestUrl'
+      - 'ScheduleOperations#getResource~requestUrl'
+      - 'ScheduleOperations#getResource~queryParameters'
+      - 'ScheduleOperations#getResource~requestUrl'
+      - 'ScheduleOperations#getResource~regex'
+      - 'ScheduleOperations#getResource~requestUrl'
+      - 'ScheduleOperations#getResource~httpRequest'
+      - 'ScheduleOperations#getResource~headerName'
+  - uid: 'ScheduleOperations#createOrUpdateResource'
+    id: createOrUpdateResource
+    parent: ScheduleOperations
+    name: >-
+      createOrUpdateResource(resourceGroupName, labName, name, schedule,
+      schedule.status, schedule.taskType, schedule.weeklyRecurrence,
+      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
+      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
+      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
+      schedule.timeZoneId, schedule.provisioningState, schedule.id,
+      schedule.name, schedule.type, schedule.location, schedule.tags, options,
+      options.customHeaders, callback)
+    summary: "Create or replace an existing schedule. This operation can take a while to\rcomplete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: schedule
+          type: object
+        - id: schedule.status
+          type: string
+          description: "The status of the schedule. Possible\rvalues include: 'Enabled', 'Disabled'"
+        - id: schedule.taskType
+          type: string
+          description: "The task type of the schedule. Possible\rvalues include: 'LabVmsShutdownTask', 'LabVmsStartupTask', 'LabBillingTask'"
+        - id: schedule.weeklyRecurrence
+          type: object
+          description: "The weekly recurrence of the\rschedule."
+        - id: schedule.weeklyRecurrence.weekdays
+          type: array
+          description: The days of the week.
+        - id: schedule.weeklyRecurrence.time
+          type: string
+          description: The time of the day.
+        - id: schedule.dailyRecurrence
+          type: object
+          description: "The daily recurrence of the\rschedule."
+        - id: schedule.dailyRecurrence.time
+          type: string
+        - id: schedule.hourlyRecurrence
+          type: object
+          description: "The hourly recurrence of the\rschedule."
+        - id: schedule.hourlyRecurrence.minute
+          type: number
+          description: "Minutes of the hour the\rschedule will run."
+        - id: schedule.timeZoneId
+          type: string
+          description: The time zone id.
+        - id: schedule.provisioningState
+          type: string
+          description: "The provisioning status of the\rresource."
+        - id: schedule.id
+          type: string
+          description: The identifier of the resource.
+        - id: schedule.name
+          type: string
+          description: The name of the resource.
+        - id: schedule.type
+          type: string
+          description: The type of the resource.
+        - id: schedule.location
+          type: string
+          description: The location of the resource.
+        - id: schedule.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateResource(resourceGroupName, labName, name,
+        schedule, schedule.status, schedule.taskType, schedule.weeklyRecurrence,
+        schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
+        schedule.dailyRecurrence, schedule.dailyRecurrence.time,
+        schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
+        schedule.timeZoneId, schedule.provisioningState, schedule.id,
+        schedule.name, schedule.type, schedule.location, schedule.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.createOrUpdateResource(resourceGroupName, labName,
+      name, schedule, schedule.status, schedule.taskType,
+      schedule.weeklyRecurrence, schedule.weeklyRecurrence.weekdays,
+      schedule.weeklyRecurrence.time, schedule.dailyRecurrence,
+      schedule.dailyRecurrence.time, schedule.hourlyRecurrence,
+      schedule.hourlyRecurrence.minute, schedule.timeZoneId,
+      schedule.provisioningState, schedule.id, schedule.name, schedule.type,
+      schedule.location, schedule.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'ScheduleOperations#createOrUpdateResource~client'
+      - 'ScheduleOperations#createOrUpdateResource~callback'
+      - 'ScheduleOperations#createOrUpdateResource~options'
+  - uid: 'ScheduleOperations#beginCreateOrUpdateResource'
+    id: beginCreateOrUpdateResource
+    parent: ScheduleOperations
+    name: >-
+      beginCreateOrUpdateResource(resourceGroupName, labName, name, schedule,
+      schedule.status, schedule.taskType, schedule.weeklyRecurrence,
+      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
+      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
+      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
+      schedule.timeZoneId, schedule.provisioningState, schedule.id,
+      schedule.name, schedule.type, schedule.location, schedule.tags, options,
+      options.customHeaders, callback)
+    summary: "Create or replace an existing schedule. This operation can take a while to\rcomplete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: schedule
+          type: object
+        - id: schedule.status
+          type: string
+          description: "The status of the schedule. Possible\rvalues include: 'Enabled', 'Disabled'"
+        - id: schedule.taskType
+          type: string
+          description: "The task type of the schedule. Possible\rvalues include: 'LabVmsShutdownTask', 'LabVmsStartupTask', 'LabBillingTask'"
+        - id: schedule.weeklyRecurrence
+          type: object
+          description: "The weekly recurrence of the\rschedule."
+        - id: schedule.weeklyRecurrence.weekdays
+          type: array
+          description: The days of the week.
+        - id: schedule.weeklyRecurrence.time
+          type: string
+          description: The time of the day.
+        - id: schedule.dailyRecurrence
+          type: object
+          description: "The daily recurrence of the\rschedule."
+        - id: schedule.dailyRecurrence.time
+          type: string
+        - id: schedule.hourlyRecurrence
+          type: object
+          description: "The hourly recurrence of the\rschedule."
+        - id: schedule.hourlyRecurrence.minute
+          type: number
+          description: "Minutes of the hour the\rschedule will run."
+        - id: schedule.timeZoneId
+          type: string
+          description: The time zone id.
+        - id: schedule.provisioningState
+          type: string
+          description: "The provisioning status of the\rresource."
+        - id: schedule.id
+          type: string
+          description: The identifier of the resource.
+        - id: schedule.name
+          type: string
+          description: The name of the resource.
+        - id: schedule.type
+          type: string
+          description: The type of the resource.
+        - id: schedule.location
+          type: string
+          description: The location of the resource.
+        - id: schedule.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateResource(resourceGroupName, labName, name,
+        schedule, schedule.status, schedule.taskType, schedule.weeklyRecurrence,
+        schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
+        schedule.dailyRecurrence, schedule.dailyRecurrence.time,
+        schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
+        schedule.timeZoneId, schedule.provisioningState, schedule.id,
+        schedule.name, schedule.type, schedule.location, schedule.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.beginCreateOrUpdateResource(resourceGroupName, labName,
+      name, schedule, schedule.status, schedule.taskType,
+      schedule.weeklyRecurrence, schedule.weeklyRecurrence.weekdays,
+      schedule.weeklyRecurrence.time, schedule.dailyRecurrence,
+      schedule.dailyRecurrence.time, schedule.hourlyRecurrence,
+      schedule.hourlyRecurrence.minute, schedule.timeZoneId,
+      schedule.provisioningState, schedule.id, schedule.name, schedule.type,
+      schedule.location, schedule.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'ScheduleOperations#beginCreateOrUpdateResource~client'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~callback'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~options'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~queryParameters'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~regex'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~httpRequest'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~headerName'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestContent'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestModel'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestModelMapper'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestModel'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~requestContent'
+      - 'ScheduleOperations#beginCreateOrUpdateResource~serializationError'
+  - uid: 'ScheduleOperations#deleteResource'
+    id: deleteResource
+    parent: ScheduleOperations
+    name: >-
+      deleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete schedule. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.deleteResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'ScheduleOperations#deleteResource~client'
+      - 'ScheduleOperations#deleteResource~callback'
+      - 'ScheduleOperations#deleteResource~options'
+  - uid: 'ScheduleOperations#beginDeleteResource'
+    id: beginDeleteResource
+    parent: ScheduleOperations
+    name: >-
+      beginDeleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete schedule. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.beginDeleteResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'ScheduleOperations#beginDeleteResource~client'
+      - 'ScheduleOperations#beginDeleteResource~callback'
+      - 'ScheduleOperations#beginDeleteResource~options'
+      - 'ScheduleOperations#beginDeleteResource~requestUrl'
+      - 'ScheduleOperations#beginDeleteResource~requestUrl'
+      - 'ScheduleOperations#beginDeleteResource~requestUrl'
+      - 'ScheduleOperations#beginDeleteResource~requestUrl'
+      - 'ScheduleOperations#beginDeleteResource~requestUrl'
+      - 'ScheduleOperations#beginDeleteResource~queryParameters'
+      - 'ScheduleOperations#beginDeleteResource~requestUrl'
+      - 'ScheduleOperations#beginDeleteResource~regex'
+      - 'ScheduleOperations#beginDeleteResource~requestUrl'
+      - 'ScheduleOperations#beginDeleteResource~httpRequest'
+      - 'ScheduleOperations#beginDeleteResource~headerName'
+  - uid: 'ScheduleOperations#patchResource'
+    id: patchResource
+    parent: ScheduleOperations
+    name: >-
+      patchResource(resourceGroupName, labName, name, schedule, schedule.status,
+      schedule.taskType, schedule.weeklyRecurrence,
+      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
+      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
+      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
+      schedule.timeZoneId, schedule.provisioningState, schedule.id,
+      schedule.name, schedule.type, schedule.location, schedule.tags, options,
+      options.customHeaders, callback)
+    summary: Modify properties of schedules.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: schedule
+          type: object
+        - id: schedule.status
+          type: string
+          description: "The status of the schedule. Possible\rvalues include: 'Enabled', 'Disabled'"
+        - id: schedule.taskType
+          type: string
+          description: "The task type of the schedule. Possible\rvalues include: 'LabVmsShutdownTask', 'LabVmsStartupTask', 'LabBillingTask'"
+        - id: schedule.weeklyRecurrence
+          type: object
+          description: "The weekly recurrence of the\rschedule."
+        - id: schedule.weeklyRecurrence.weekdays
+          type: array
+          description: The days of the week.
+        - id: schedule.weeklyRecurrence.time
+          type: string
+          description: The time of the day.
+        - id: schedule.dailyRecurrence
+          type: object
+          description: "The daily recurrence of the\rschedule."
+        - id: schedule.dailyRecurrence.time
+          type: string
+        - id: schedule.hourlyRecurrence
+          type: object
+          description: "The hourly recurrence of the\rschedule."
+        - id: schedule.hourlyRecurrence.minute
+          type: number
+          description: "Minutes of the hour the\rschedule will run."
+        - id: schedule.timeZoneId
+          type: string
+          description: The time zone id.
+        - id: schedule.provisioningState
+          type: string
+          description: "The provisioning status of the\rresource."
+        - id: schedule.id
+          type: string
+          description: The identifier of the resource.
+        - id: schedule.name
+          type: string
+          description: The name of the resource.
+        - id: schedule.type
+          type: string
+          description: The type of the resource.
+        - id: schedule.location
+          type: string
+          description: The location of the resource.
+        - id: schedule.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function patchResource(resourceGroupName, labName, name, schedule,
+        schedule.status, schedule.taskType, schedule.weeklyRecurrence,
+        schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
+        schedule.dailyRecurrence, schedule.dailyRecurrence.time,
+        schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
+        schedule.timeZoneId, schedule.provisioningState, schedule.id,
+        schedule.name, schedule.type, schedule.location, schedule.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.patchResource(resourceGroupName, labName, name,
+      schedule, schedule.status, schedule.taskType, schedule.weeklyRecurrence,
+      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
+      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
+      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
+      schedule.timeZoneId, schedule.provisioningState, schedule.id,
+      schedule.name, schedule.type, schedule.location, schedule.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'ScheduleOperations#patchResource~client'
+      - 'ScheduleOperations#patchResource~callback'
+      - 'ScheduleOperations#patchResource~options'
+      - 'ScheduleOperations#patchResource~requestUrl'
+      - 'ScheduleOperations#patchResource~requestUrl'
+      - 'ScheduleOperations#patchResource~requestUrl'
+      - 'ScheduleOperations#patchResource~requestUrl'
+      - 'ScheduleOperations#patchResource~requestUrl'
+      - 'ScheduleOperations#patchResource~queryParameters'
+      - 'ScheduleOperations#patchResource~requestUrl'
+      - 'ScheduleOperations#patchResource~regex'
+      - 'ScheduleOperations#patchResource~requestUrl'
+      - 'ScheduleOperations#patchResource~httpRequest'
+      - 'ScheduleOperations#patchResource~headerName'
+      - 'ScheduleOperations#patchResource~requestContent'
+      - 'ScheduleOperations#patchResource~requestModel'
+      - 'ScheduleOperations#patchResource~requestModelMapper'
+      - 'ScheduleOperations#patchResource~requestModel'
+      - 'ScheduleOperations#patchResource~requestContent'
+      - 'ScheduleOperations#patchResource~serializationError'
+  - uid: 'ScheduleOperations#execute'
+    id: execute
+    parent: ScheduleOperations
+    name: >-
+      execute(resourceGroupName, labName, name, options, options.customHeaders,
+      callback)
+    summary: Execute a schedule. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function execute(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.execute(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'ScheduleOperations#execute~client'
+      - 'ScheduleOperations#execute~callback'
+      - 'ScheduleOperations#execute~options'
+  - uid: 'ScheduleOperations#beginExecute'
+    id: beginExecute
+    parent: ScheduleOperations
+    name: >-
+      beginExecute(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Execute a schedule. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the schedule.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginExecute(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ScheduleOperations.beginExecute(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'ScheduleOperations#beginExecute~client'
+      - 'ScheduleOperations#beginExecute~callback'
+      - 'ScheduleOperations#beginExecute~options'
+      - 'ScheduleOperations#beginExecute~requestUrl'
+      - 'ScheduleOperations#beginExecute~requestUrl'
+      - 'ScheduleOperations#beginExecute~requestUrl'
+      - 'ScheduleOperations#beginExecute~requestUrl'
+      - 'ScheduleOperations#beginExecute~requestUrl'
+      - 'ScheduleOperations#beginExecute~queryParameters'
+      - 'ScheduleOperations#beginExecute~requestUrl'
+      - 'ScheduleOperations#beginExecute~regex'
+      - 'ScheduleOperations#beginExecute~requestUrl'
+      - 'ScheduleOperations#beginExecute~httpRequest'
+      - 'ScheduleOperations#beginExecute~headerName'
+  - uid: 'ScheduleOperations#listNext'
+    id: listNext
+    parent: ScheduleOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List schedules.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationSchedule} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ScheduleOperations.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'ScheduleOperations#listNext~client'
+      - 'ScheduleOperations#listNext~callback'
+      - 'ScheduleOperations#listNext~options'
+      - 'ScheduleOperations#listNext~requestUrl'
+      - 'ScheduleOperations#listNext~requestUrl'
+      - 'ScheduleOperations#listNext~regex'
+      - 'ScheduleOperations#listNext~requestUrl'
+      - 'ScheduleOperations#listNext~httpRequest'
+      - 'ScheduleOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

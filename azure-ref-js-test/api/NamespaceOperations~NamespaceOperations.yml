@@ -1,0 +1,669 @@
+items:
+  - uid: NamespaceOperations~NamespaceOperations
+    id: NamespaceOperations
+    parent: NamespaceOperations
+    name: NamespaceOperations
+    type: Class
+    syntax:
+      content: NamespaceOperations
+    fullName: NamespaceOperations.NamespaceOperations
+    children:
+      - 'NamespaceOperations~NamespaceOperations#client'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability'
+      - 'NamespaceOperations~NamespaceOperations#create'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule'
+      - 'NamespaceOperations~NamespaceOperations#get'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription'
+      - 'NamespaceOperations~NamespaceOperations#list'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule'
+  - uid: 'NamespaceOperations~NamespaceOperations#client'
+    id: client
+    parent: NamespaceOperations~NamespaceOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: NamespaceOperations~NamespaceOperations.client
+  - uid: 'NamespaceOperations~NamespaceOperations#checkAvailability'
+    id: checkAvailability
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'checkAvailability(namespaceName, callback)'
+    summary: "Checks the availability of the given service namespace across all Windows\rAzure subscriptions. This is useful because the domain name is created\rbased on the service namespace name.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function checkAvailability(namespaceName, callback);'
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.checkAvailability(namespaceName,
+      callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - >-
+        NamespaceOperations~NamespaceOperations#checkAvailability~queryParameters
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~url2'
+      - 'NamespaceOperations~NamespaceOperations#checkAvailability~httpRequest'
+  - uid: 'NamespaceOperations~NamespaceOperations#create'
+    id: create
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'create(namespaceName, region, callback)'
+    summary: "Creates a new service namespace. Once created, this namespace's resource\rmanifest is immutable. This operation is idempotent.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: region
+          type: string
+          description: The namespace region.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function create(namespaceName, region, callback);'
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.create(namespaceName, region,
+      callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#create~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~url2'
+      - 'NamespaceOperations~NamespaceOperations#create~httpRequest'
+      - 'NamespaceOperations~NamespaceOperations#create~requestContent'
+      - 'NamespaceOperations~NamespaceOperations#create~requestDoc'
+      - 'NamespaceOperations~NamespaceOperations#create~entryElement'
+      - 'NamespaceOperations~NamespaceOperations#create~contentElement'
+      - 'NamespaceOperations~NamespaceOperations#create~typeAttribute'
+      - >-
+        NamespaceOperations~NamespaceOperations#create~namespaceDescriptionElement
+      - 'NamespaceOperations~NamespaceOperations#create~regionElement'
+      - 'NamespaceOperations~NamespaceOperations#create~requestContent'
+  - uid: 'NamespaceOperations~NamespaceOperations#createAuthorizationRule'
+    id: createAuthorizationRule
+    parent: NamespaceOperations~NamespaceOperations
+    name: >-
+      createAuthorizationRule(namespaceName, rule, rule.keyName,
+      rule.primaryKey, rule.secondaryKey, rule.claimType, rule.claimValue,
+      rule.rights, rule.createdTime, rule.modifiedTime, rule.revision, callback)
+    summary: "The create namespace authorization rule operation creates an authorization\rrule for a namespace"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: rule
+          type: ServiceBusSharedAccessAuthorizationRule
+          description: "The shared access\rauthorization rule."
+        - id: rule.keyName
+          type: string
+          description: The name of the key that was used.
+        - id: rule.primaryKey
+          type: string
+          description: The primary key that was used.
+        - id: rule.secondaryKey
+          type: string
+          description: The secondary key that was used.
+        - id: rule.claimType
+          type: string
+          description: The type of the claim.
+        - id: rule.claimValue
+          type: string
+          description: The value of the claim.
+        - id: rule.rights
+          type: array
+          description: The rights associated with the rule.
+        - id: rule.createdTime
+          type: date
+          description: "The time at which the authorization rule\rwas created."
+        - id: rule.modifiedTime
+          type: date
+          description: "The most recent time the rule was\rupdated."
+        - id: rule.revision
+          type: number
+          description: The revision number for the rule.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createAuthorizationRule(namespaceName, rule, rule.keyName,
+        rule.primaryKey, rule.secondaryKey, rule.claimType, rule.claimValue,
+        rule.rights, rule.createdTime, rule.modifiedTime, rule.revision,
+        callback);
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.createAuthorizationRule(namespaceName,
+      rule, rule.keyName, rule.primaryKey, rule.secondaryKey, rule.claimType,
+      rule.claimValue, rule.rights, rule.createdTime, rule.modifiedTime,
+      rule.revision, callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#createAuthorizationRule~url2'
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~httpRequest
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~requestContent
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~requestDoc
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~entryElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~contentElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~typeAttribute
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~sharedAccessAuthorizationRuleElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~claimTypeElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~claimValueElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~rightsSequenceElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~loweredIndex1
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~loweredIndex1
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~rightsItem
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~rightsItemElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~createdTimeElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~modifiedTimeElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~revisionElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~keyNameElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~primaryKeyElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createAuthorizationRule~requestContent
+  - uid: 'NamespaceOperations~NamespaceOperations#createNamespace'
+    id: createNamespace
+    parent: NamespaceOperations~NamespaceOperations
+    name: >-
+      createNamespace(namespaceName, namespaceEntity, namespaceEntity.region,
+      namespaceEntity.createACSNamespace, namespaceEntity.namespaceType,
+      callback)
+    summary: "Creates a new service namespace. Once created, this namespace's resource\rmanifest is immutable. This operation is idempotent.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: namespaceEntity
+          type: ServiceBusNamespaceCreateParameters
+          description: "The service\rbus namespace."
+        - id: namespaceEntity.region
+          type: string
+          description: The namespace region.
+        - id: namespaceEntity.createACSNamespace
+          type: boolean
+          description: "Whether or not ACS\rauthentication is needed for ServiceBus."
+        - id: namespaceEntity.namespaceType
+          type: NamespaceType
+          description: "Gets or sets the\rnamespace type."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createNamespace(namespaceName, namespaceEntity,
+        namespaceEntity.region, namespaceEntity.createACSNamespace,
+        namespaceEntity.namespaceType, callback);
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.createNamespace(namespaceName,
+      namespaceEntity, namespaceEntity.region,
+      namespaceEntity.createACSNamespace, namespaceEntity.namespaceType,
+      callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~url2'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~httpRequest'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~requestContent'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~requestDoc'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~entryElement'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~contentElement'
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~typeAttribute'
+      - >-
+        NamespaceOperations~NamespaceOperations#createNamespace~namespaceDescriptionElement
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~regionElement'
+      - >-
+        NamespaceOperations~NamespaceOperations#createNamespace~createACSNamespaceElement
+      - >-
+        NamespaceOperations~NamespaceOperations#createNamespace~namespaceTypeElement
+      - 'NamespaceOperations~NamespaceOperations#createNamespace~requestContent'
+  - uid: 'NamespaceOperations~NamespaceOperations#deleteMethod'
+    id: deleteMethod
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'deleteMethod(namespaceName, callback)'
+    summary: "Deletes an existing namespace. This operation also removes all associated\rentities including queues, topics, relay points, and messages stored\runder the namespace.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(namespaceName, callback);'
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.deleteMethod(namespaceName,
+      callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteMethod~httpRequest'
+  - uid: 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule'
+    id: deleteAuthorizationRule
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'deleteAuthorizationRule(namespaceName, ruleName, callback)'
+    summary: "The delete namespace authorization rule operation deletes an authorization\rrule for a namespace"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: ruleName
+          type: string
+          description: The rule name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteAuthorizationRule(namespaceName, ruleName, callback);'
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.deleteAuthorizationRule(namespaceName,
+      ruleName, callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~url2'
+      - >-
+        NamespaceOperations~NamespaceOperations#deleteAuthorizationRule~httpRequest
+  - uid: 'NamespaceOperations~NamespaceOperations#get'
+    id: get
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'get(namespaceName, callback)'
+    summary: "Returns the description for the specified namespace.  (see\rhttp://msdn.microsoft.com/library/azure/dn140232.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(namespaceName, callback);'
+    fullName: 'NamespaceOperations~NamespaceOperations.get(namespaceName, callback)'
+    children:
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#get~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~url2'
+      - 'NamespaceOperations~NamespaceOperations#get~httpRequest'
+  - uid: 'NamespaceOperations~NamespaceOperations#getAuthorizationRule'
+    id: getAuthorizationRule
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'getAuthorizationRule(namespaceName, entityName, callback)'
+    summary: "The get authorization rule operation gets an authorization rule for a\rnamespace by name."
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: "The namespace to get the authorization rule\rfor."
+        - id: entityName
+          type: string
+          description: "The entity name to get the authorization rule\rfor."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getAuthorizationRule(namespaceName, entityName, callback);'
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.getAuthorizationRule(namespaceName,
+      entityName, callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#getAuthorizationRule~httpRequest'
+  - uid: 'NamespaceOperations~NamespaceOperations#getNamespaceDescription'
+    id: getNamespaceDescription
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'getNamespaceDescription(namespaceName, callback)'
+    summary: "The namespace description is an XML AtomPub document that defines the\rdesired semantics for a service namespace. The namespace description\rcontains the following properties.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getNamespaceDescription(namespaceName, callback);'
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.getNamespaceDescription(namespaceName,
+      callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - 'NamespaceOperations~NamespaceOperations#getNamespaceDescription~url2'
+      - >-
+        NamespaceOperations~NamespaceOperations#getNamespaceDescription~httpRequest
+  - uid: 'NamespaceOperations~NamespaceOperations#list'
+    id: list
+    parent: NamespaceOperations~NamespaceOperations
+    name: list(callback)
+    summary: "Lists the available namespaces.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/hh780759.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: NamespaceOperations~NamespaceOperations.list(callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#list~url2'
+      - 'NamespaceOperations~NamespaceOperations#list~url2'
+      - 'NamespaceOperations~NamespaceOperations#list~url2'
+      - 'NamespaceOperations~NamespaceOperations#list~url2'
+      - 'NamespaceOperations~NamespaceOperations#list~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#list~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#list~url2'
+      - 'NamespaceOperations~NamespaceOperations#list~url2'
+      - 'NamespaceOperations~NamespaceOperations#list~url2'
+      - 'NamespaceOperations~NamespaceOperations#list~httpRequest'
+  - uid: 'NamespaceOperations~NamespaceOperations#listAuthorizationRules'
+    id: listAuthorizationRules
+    parent: NamespaceOperations~NamespaceOperations
+    name: 'listAuthorizationRules(namespaceName, callback)'
+    summary: "The get authorization rules operation gets the authorization rules for a\rnamespace."
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: "The namespace to get the authorization rule\rfor."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listAuthorizationRules(namespaceName, callback);'
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.listAuthorizationRules(namespaceName,
+      callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - 'NamespaceOperations~NamespaceOperations#listAuthorizationRules~url2'
+      - >-
+        NamespaceOperations~NamespaceOperations#listAuthorizationRules~httpRequest
+  - uid: 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule'
+    id: updateAuthorizationRule
+    parent: NamespaceOperations~NamespaceOperations
+    name: >-
+      updateAuthorizationRule(namespaceName, rule, rule.keyName,
+      rule.primaryKey, rule.secondaryKey, rule.claimType, rule.claimValue,
+      rule.rights, rule.createdTime, rule.modifiedTime, rule.revision, callback)
+    summary: "The update authorization rule operation updates an authorization rule for\ra namespace."
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: rule
+          type: ServiceBusSharedAccessAuthorizationRule
+          description: "Updated access\rauthorization rule."
+        - id: rule.keyName
+          type: string
+          description: The name of the key that was used.
+        - id: rule.primaryKey
+          type: string
+          description: The primary key that was used.
+        - id: rule.secondaryKey
+          type: string
+          description: The secondary key that was used.
+        - id: rule.claimType
+          type: string
+          description: The type of the claim.
+        - id: rule.claimValue
+          type: string
+          description: The value of the claim.
+        - id: rule.rights
+          type: array
+          description: The rights associated with the rule.
+        - id: rule.createdTime
+          type: date
+          description: "The time at which the authorization rule\rwas created."
+        - id: rule.modifiedTime
+          type: date
+          description: "The most recent time the rule was\rupdated."
+        - id: rule.revision
+          type: number
+          description: The revision number for the rule.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateAuthorizationRule(namespaceName, rule, rule.keyName,
+        rule.primaryKey, rule.secondaryKey, rule.claimType, rule.claimValue,
+        rule.rights, rule.createdTime, rule.modifiedTime, rule.revision,
+        callback);
+    fullName: >-
+      NamespaceOperations~NamespaceOperations.updateAuthorizationRule(namespaceName,
+      rule, rule.keyName, rule.primaryKey, rule.secondaryKey, rule.claimType,
+      rule.claimValue, rule.rights, rule.createdTime, rule.modifiedTime,
+      rule.revision, callback)
+    children:
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~baseUrl'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - 'NamespaceOperations~NamespaceOperations#updateAuthorizationRule~url2'
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~httpRequest
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~requestContent
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~requestDoc
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~entryElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~contentElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~typeAttribute
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~sharedAccessAuthorizationRuleElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~claimTypeElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~claimValueElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~rightsSequenceElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~loweredIndex1
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~loweredIndex1
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~rightsItem
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~rightsItemElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~createdTimeElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~modifiedTimeElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~revisionElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~keyNameElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~primaryKeyElement
+      - >-
+        NamespaceOperations~NamespaceOperations#updateAuthorizationRule~requestContent
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: ServiceBusSharedAccessAuthorizationRule
+    name: ServiceBusSharedAccessAuthorizationRule
+    fullName: ServiceBusSharedAccessAuthorizationRule
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: ServiceBusNamespaceCreateParameters
+    name: ServiceBusNamespaceCreateParameters
+    fullName: ServiceBusNamespaceCreateParameters
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: NamespaceType
+    name: NamespaceType
+    fullName: NamespaceType
+    isExternal: true

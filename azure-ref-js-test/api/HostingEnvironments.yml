@@ -1,0 +1,2993 @@
+items:
+  - uid: HostingEnvironments
+    id: HostingEnvironments
+    name: HostingEnvironments
+    type: Class
+    syntax:
+      content: HostingEnvironments
+    fullName: HostingEnvironments
+    children:
+      - 'HostingEnvironments#client'
+      - 'HostingEnvironments#getHostingEnvironment'
+      - 'HostingEnvironments#createOrUpdateHostingEnvironment'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment'
+      - 'HostingEnvironments#deleteHostingEnvironment'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities'
+      - 'HostingEnvironments#getHostingEnvironmentVips'
+      - 'HostingEnvironments#getHostingEnvironments'
+      - 'HostingEnvironments#rebootHostingEnvironment'
+      - 'HostingEnvironments#getHostingEnvironmentOperations'
+      - 'HostingEnvironments#getHostingEnvironmentOperation'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions'
+      - 'HostingEnvironments#getHostingEnvironmentUsages'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages'
+      - 'HostingEnvironments#getHostingEnvironmentSites'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms'
+      - 'HostingEnvironments#getMultiRolePools'
+      - 'HostingEnvironments#getMultiRolePool'
+      - 'HostingEnvironments#createOrUpdateMultiRolePool'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool'
+      - 'HostingEnvironments#getMultiRolePoolSkus'
+      - 'HostingEnvironments#getWorkerPools'
+      - 'HostingEnvironments#getWorkerPool'
+      - 'HostingEnvironments#createOrUpdateWorkerPool'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool'
+      - 'HostingEnvironments#getWorkerPoolSkus'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions'
+      - 'HostingEnvironments#suspendHostingEnvironment'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment'
+      - 'HostingEnvironments#resumeHostingEnvironment'
+      - 'HostingEnvironments#beginResumeHostingEnvironment'
+  - uid: 'HostingEnvironments#client'
+    id: client
+    parent: HostingEnvironments
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: HostingEnvironments.client
+  - uid: 'HostingEnvironments#getHostingEnvironment'
+    id: getHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironment(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironment(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironment(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironment~client'
+      - 'HostingEnvironments#getHostingEnvironment~callback'
+      - 'HostingEnvironments#getHostingEnvironment~options'
+      - 'HostingEnvironments#getHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironment~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironment~regex'
+      - 'HostingEnvironments#getHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironment~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironment~headerName'
+  - uid: 'HostingEnvironments#createOrUpdateHostingEnvironment'
+    id: createOrUpdateHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      createOrUpdateHostingEnvironment(resourceGroupName, name,
+      hostingEnvironmentEnvelope,
+      hostingEnvironmentEnvelope.hostingEnvironmentName,
+      hostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      hostingEnvironmentEnvelope.provisioningState,
+      hostingEnvironmentEnvelope.status, hostingEnvironmentEnvelope.vnetName,
+      hostingEnvironmentEnvelope.vnetResourceGroupName,
+      hostingEnvironmentEnvelope.vnetSubnetName,
+      hostingEnvironmentEnvelope.virtualNetwork,
+      hostingEnvironmentEnvelope.virtualNetwork.id,
+      hostingEnvironmentEnvelope.virtualNetwork.name,
+      hostingEnvironmentEnvelope.virtualNetwork.type,
+      hostingEnvironmentEnvelope.virtualNetwork.subnet,
+      hostingEnvironmentEnvelope.internalLoadBalancingMode,
+      hostingEnvironmentEnvelope.multiSize,
+      hostingEnvironmentEnvelope.multiRoleCount,
+      hostingEnvironmentEnvelope.workerPools,
+      hostingEnvironmentEnvelope.ipsslAddressCount,
+      hostingEnvironmentEnvelope.databaseEdition,
+      hostingEnvironmentEnvelope.databaseServiceObjective,
+      hostingEnvironmentEnvelope.upgradeDomains,
+      hostingEnvironmentEnvelope.subscriptionId,
+      hostingEnvironmentEnvelope.dnsSuffix,
+      hostingEnvironmentEnvelope.lastAction,
+      hostingEnvironmentEnvelope.lastActionResult,
+      hostingEnvironmentEnvelope.allowedMultiSizes,
+      hostingEnvironmentEnvelope.allowedWorkerSizes,
+      hostingEnvironmentEnvelope.maximumNumberOfMachines,
+      hostingEnvironmentEnvelope.vipMappings,
+      hostingEnvironmentEnvelope.environmentCapacities,
+      hostingEnvironmentEnvelope.networkAccessControlList,
+      hostingEnvironmentEnvelope.environmentIsHealthy,
+      hostingEnvironmentEnvelope.environmentStatus,
+      hostingEnvironmentEnvelope.resourceGroup,
+      hostingEnvironmentEnvelope.apiManagementAccountId,
+      hostingEnvironmentEnvelope.suspended,
+      hostingEnvironmentEnvelope.clusterSettings, hostingEnvironmentEnvelope.id,
+      hostingEnvironmentEnvelope.name, hostingEnvironmentEnvelope.kind,
+      hostingEnvironmentEnvelope.location, hostingEnvironmentEnvelope.type,
+      hostingEnvironmentEnvelope.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: hostingEnvironmentEnvelope
+          type: object
+          description: "Properties of hostingEnvironment\r(App Service Environment)"
+        - id: hostingEnvironmentEnvelope.hostingEnvironmentName
+          type: string
+          description: "Name of\rthe hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.hostingEnvironmentLocation
+          type: string
+          description: "Location of the hostingEnvironment (App Service Environment), e.g. \"West\rUS\""
+        - id: hostingEnvironmentEnvelope.provisioningState
+          type: string
+          description: "Provisioning\rstate of the hostingEnvironment (App Service Environment). Possible values\rinclude: 'Succeeded', 'Failed', 'Canceled', 'InProgress', 'Deleting'"
+        - id: hostingEnvironmentEnvelope.status
+          type: string
+          description: "Current status of the\rhostingEnvironment (App Service Environment). Possible values include:\r'Preparing', 'Ready', 'Scaling', 'Deleting'"
+        - id: hostingEnvironmentEnvelope.vnetName
+          type: string
+          description: "Name of the\rhostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.vnetResourceGroupName
+          type: string
+          description: "Resource\rgroup of the hostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.vnetSubnetName
+          type: string
+          description: "Subnet of the\rhostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.virtualNetwork
+          type: object
+          description: "Description of\rthe hostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.id
+          type: string
+          description: "Resource id\rof the virtual network"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.name
+          type: string
+          description: "Name of\rthe virtual network (read-only)"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.type
+          type: string
+          description: "Resource\rtype of the virtual network (read-only)"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.subnet
+          type: string
+          description: "Subnet\rwithin the virtual network"
+        - id: hostingEnvironmentEnvelope.internalLoadBalancingMode
+          type: string
+          description: "Specifies which endpoints to serve internally in the hostingEnvironment's\r(App Service Environment) VNET. Possible values include: 'None', 'Web',\r'Publishing'"
+        - id: hostingEnvironmentEnvelope.multiSize
+          type: string
+          description: "Front-end VM size,\re.g. \"Medium\", \"Large\""
+        - id: hostingEnvironmentEnvelope.multiRoleCount
+          type: number
+          description: "Number of\rfront-end instances"
+        - id: hostingEnvironmentEnvelope.workerPools
+          type: array
+          description: "Description of\rworker pools with worker size ids, VM sizes, and number of workers in each\rpool"
+        - id: hostingEnvironmentEnvelope.ipsslAddressCount
+          type: number
+          description: "Number of IP\rSSL addresses reserved for this hostingEnvironment (App Service\rEnvironment)"
+        - id: hostingEnvironmentEnvelope.databaseEdition
+          type: string
+          description: "Edition of the\rmetadata database for the hostingEnvironment (App Service Environment)\re.g. \"Standard\""
+        - id: hostingEnvironmentEnvelope.databaseServiceObjective
+          type: string
+          description: "Service objective of the metadata database for the hostingEnvironment (App\rService Environment) e.g. \"S0\""
+        - id: hostingEnvironmentEnvelope.upgradeDomains
+          type: number
+          description: "Number of\rupgrade domains of this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.subscriptionId
+          type: string
+          description: "Subscription of\rthe hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.dnsSuffix
+          type: string
+          description: "DNS suffix of the\rhostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.lastAction
+          type: string
+          description: "Last deployment\raction on this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.lastActionResult
+          type: string
+          description: "Result of the\rlast deployment action on this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.allowedMultiSizes
+          type: string
+          description: "List of\rcomma separated strings describing which VM sizes are allowed for\rfront-ends"
+        - id: hostingEnvironmentEnvelope.allowedWorkerSizes
+          type: string
+          description: "List of\rcomma separated strings describing which VM sizes are allowed for workers"
+        - id: hostingEnvironmentEnvelope.maximumNumberOfMachines
+          type: number
+          description: >-
+            Maximum number of VMs in this hostingEnvironment (App Service
+            Environment)
+        - id: hostingEnvironmentEnvelope.vipMappings
+          type: array
+          description: "Description of IP\rSSL mapping for this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.environmentCapacities
+          type: array
+          description: "Current\rtotal, used, and available worker capacities"
+        - id: hostingEnvironmentEnvelope.networkAccessControlList
+          type: array
+          description: "Access\rcontrol list for controlling traffic to the hostingEnvironment (App\rService Environment)"
+        - id: hostingEnvironmentEnvelope.environmentIsHealthy
+          type: boolean
+          description: "True/false indicating whether the hostingEnvironment (App Service\rEnvironment) is healthy"
+        - id: hostingEnvironmentEnvelope.environmentStatus
+          type: string
+          description: "Detailed\rmessage about with results of the last check of the hostingEnvironment\r(App Service Environment)"
+        - id: hostingEnvironmentEnvelope.resourceGroup
+          type: string
+          description: "Resource group\rof the hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.apiManagementAccountId
+          type: string
+          description: "Api\rManagement Account associated with this Hosting Environment"
+        - id: hostingEnvironmentEnvelope.suspended
+          type: boolean
+          description: "True/false\rindicating whether the hostingEnvironment is suspended. The environment\rcan be suspended e.g. when the management endpoint is no longer available\r(most likely because NSG blocked the incoming traffic)"
+        - id: hostingEnvironmentEnvelope.clusterSettings
+          type: array
+          description: "Custom settings\rfor changing the behavior of the hosting environment"
+        - id: hostingEnvironmentEnvelope.id
+          type: string
+          description: Resource Id
+        - id: hostingEnvironmentEnvelope.name
+          type: string
+          description: Resource Name
+        - id: hostingEnvironmentEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: hostingEnvironmentEnvelope.location
+          type: string
+          description: Resource Location
+        - id: hostingEnvironmentEnvelope.type
+          type: string
+          description: Resource type
+        - id: hostingEnvironmentEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateHostingEnvironment(resourceGroupName, name,
+        hostingEnvironmentEnvelope,
+        hostingEnvironmentEnvelope.hostingEnvironmentName,
+        hostingEnvironmentEnvelope.hostingEnvironmentLocation,
+        hostingEnvironmentEnvelope.provisioningState,
+        hostingEnvironmentEnvelope.status, hostingEnvironmentEnvelope.vnetName,
+        hostingEnvironmentEnvelope.vnetResourceGroupName,
+        hostingEnvironmentEnvelope.vnetSubnetName,
+        hostingEnvironmentEnvelope.virtualNetwork,
+        hostingEnvironmentEnvelope.virtualNetwork.id,
+        hostingEnvironmentEnvelope.virtualNetwork.name,
+        hostingEnvironmentEnvelope.virtualNetwork.type,
+        hostingEnvironmentEnvelope.virtualNetwork.subnet,
+        hostingEnvironmentEnvelope.internalLoadBalancingMode,
+        hostingEnvironmentEnvelope.multiSize,
+        hostingEnvironmentEnvelope.multiRoleCount,
+        hostingEnvironmentEnvelope.workerPools,
+        hostingEnvironmentEnvelope.ipsslAddressCount,
+        hostingEnvironmentEnvelope.databaseEdition,
+        hostingEnvironmentEnvelope.databaseServiceObjective,
+        hostingEnvironmentEnvelope.upgradeDomains,
+        hostingEnvironmentEnvelope.subscriptionId,
+        hostingEnvironmentEnvelope.dnsSuffix,
+        hostingEnvironmentEnvelope.lastAction,
+        hostingEnvironmentEnvelope.lastActionResult,
+        hostingEnvironmentEnvelope.allowedMultiSizes,
+        hostingEnvironmentEnvelope.allowedWorkerSizes,
+        hostingEnvironmentEnvelope.maximumNumberOfMachines,
+        hostingEnvironmentEnvelope.vipMappings,
+        hostingEnvironmentEnvelope.environmentCapacities,
+        hostingEnvironmentEnvelope.networkAccessControlList,
+        hostingEnvironmentEnvelope.environmentIsHealthy,
+        hostingEnvironmentEnvelope.environmentStatus,
+        hostingEnvironmentEnvelope.resourceGroup,
+        hostingEnvironmentEnvelope.apiManagementAccountId,
+        hostingEnvironmentEnvelope.suspended,
+        hostingEnvironmentEnvelope.clusterSettings,
+        hostingEnvironmentEnvelope.id, hostingEnvironmentEnvelope.name,
+        hostingEnvironmentEnvelope.kind, hostingEnvironmentEnvelope.location,
+        hostingEnvironmentEnvelope.type, hostingEnvironmentEnvelope.tags,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.createOrUpdateHostingEnvironment(resourceGroupName,
+      name, hostingEnvironmentEnvelope,
+      hostingEnvironmentEnvelope.hostingEnvironmentName,
+      hostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      hostingEnvironmentEnvelope.provisioningState,
+      hostingEnvironmentEnvelope.status, hostingEnvironmentEnvelope.vnetName,
+      hostingEnvironmentEnvelope.vnetResourceGroupName,
+      hostingEnvironmentEnvelope.vnetSubnetName,
+      hostingEnvironmentEnvelope.virtualNetwork,
+      hostingEnvironmentEnvelope.virtualNetwork.id,
+      hostingEnvironmentEnvelope.virtualNetwork.name,
+      hostingEnvironmentEnvelope.virtualNetwork.type,
+      hostingEnvironmentEnvelope.virtualNetwork.subnet,
+      hostingEnvironmentEnvelope.internalLoadBalancingMode,
+      hostingEnvironmentEnvelope.multiSize,
+      hostingEnvironmentEnvelope.multiRoleCount,
+      hostingEnvironmentEnvelope.workerPools,
+      hostingEnvironmentEnvelope.ipsslAddressCount,
+      hostingEnvironmentEnvelope.databaseEdition,
+      hostingEnvironmentEnvelope.databaseServiceObjective,
+      hostingEnvironmentEnvelope.upgradeDomains,
+      hostingEnvironmentEnvelope.subscriptionId,
+      hostingEnvironmentEnvelope.dnsSuffix,
+      hostingEnvironmentEnvelope.lastAction,
+      hostingEnvironmentEnvelope.lastActionResult,
+      hostingEnvironmentEnvelope.allowedMultiSizes,
+      hostingEnvironmentEnvelope.allowedWorkerSizes,
+      hostingEnvironmentEnvelope.maximumNumberOfMachines,
+      hostingEnvironmentEnvelope.vipMappings,
+      hostingEnvironmentEnvelope.environmentCapacities,
+      hostingEnvironmentEnvelope.networkAccessControlList,
+      hostingEnvironmentEnvelope.environmentIsHealthy,
+      hostingEnvironmentEnvelope.environmentStatus,
+      hostingEnvironmentEnvelope.resourceGroup,
+      hostingEnvironmentEnvelope.apiManagementAccountId,
+      hostingEnvironmentEnvelope.suspended,
+      hostingEnvironmentEnvelope.clusterSettings, hostingEnvironmentEnvelope.id,
+      hostingEnvironmentEnvelope.name, hostingEnvironmentEnvelope.kind,
+      hostingEnvironmentEnvelope.location, hostingEnvironmentEnvelope.type,
+      hostingEnvironmentEnvelope.tags, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#createOrUpdateHostingEnvironment~client'
+      - 'HostingEnvironments#createOrUpdateHostingEnvironment~callback'
+      - 'HostingEnvironments#createOrUpdateHostingEnvironment~options'
+  - uid: 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment'
+    id: beginCreateOrUpdateHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      beginCreateOrUpdateHostingEnvironment(resourceGroupName, name,
+      hostingEnvironmentEnvelope,
+      hostingEnvironmentEnvelope.hostingEnvironmentName,
+      hostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      hostingEnvironmentEnvelope.provisioningState,
+      hostingEnvironmentEnvelope.status, hostingEnvironmentEnvelope.vnetName,
+      hostingEnvironmentEnvelope.vnetResourceGroupName,
+      hostingEnvironmentEnvelope.vnetSubnetName,
+      hostingEnvironmentEnvelope.virtualNetwork,
+      hostingEnvironmentEnvelope.virtualNetwork.id,
+      hostingEnvironmentEnvelope.virtualNetwork.name,
+      hostingEnvironmentEnvelope.virtualNetwork.type,
+      hostingEnvironmentEnvelope.virtualNetwork.subnet,
+      hostingEnvironmentEnvelope.internalLoadBalancingMode,
+      hostingEnvironmentEnvelope.multiSize,
+      hostingEnvironmentEnvelope.multiRoleCount,
+      hostingEnvironmentEnvelope.workerPools,
+      hostingEnvironmentEnvelope.ipsslAddressCount,
+      hostingEnvironmentEnvelope.databaseEdition,
+      hostingEnvironmentEnvelope.databaseServiceObjective,
+      hostingEnvironmentEnvelope.upgradeDomains,
+      hostingEnvironmentEnvelope.subscriptionId,
+      hostingEnvironmentEnvelope.dnsSuffix,
+      hostingEnvironmentEnvelope.lastAction,
+      hostingEnvironmentEnvelope.lastActionResult,
+      hostingEnvironmentEnvelope.allowedMultiSizes,
+      hostingEnvironmentEnvelope.allowedWorkerSizes,
+      hostingEnvironmentEnvelope.maximumNumberOfMachines,
+      hostingEnvironmentEnvelope.vipMappings,
+      hostingEnvironmentEnvelope.environmentCapacities,
+      hostingEnvironmentEnvelope.networkAccessControlList,
+      hostingEnvironmentEnvelope.environmentIsHealthy,
+      hostingEnvironmentEnvelope.environmentStatus,
+      hostingEnvironmentEnvelope.resourceGroup,
+      hostingEnvironmentEnvelope.apiManagementAccountId,
+      hostingEnvironmentEnvelope.suspended,
+      hostingEnvironmentEnvelope.clusterSettings, hostingEnvironmentEnvelope.id,
+      hostingEnvironmentEnvelope.name, hostingEnvironmentEnvelope.kind,
+      hostingEnvironmentEnvelope.location, hostingEnvironmentEnvelope.type,
+      hostingEnvironmentEnvelope.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: hostingEnvironmentEnvelope
+          type: object
+          description: "Properties of hostingEnvironment\r(App Service Environment)"
+        - id: hostingEnvironmentEnvelope.hostingEnvironmentName
+          type: string
+          description: "Name of\rthe hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.hostingEnvironmentLocation
+          type: string
+          description: "Location of the hostingEnvironment (App Service Environment), e.g. \"West\rUS\""
+        - id: hostingEnvironmentEnvelope.provisioningState
+          type: string
+          description: "Provisioning\rstate of the hostingEnvironment (App Service Environment). Possible values\rinclude: 'Succeeded', 'Failed', 'Canceled', 'InProgress', 'Deleting'"
+        - id: hostingEnvironmentEnvelope.status
+          type: string
+          description: "Current status of the\rhostingEnvironment (App Service Environment). Possible values include:\r'Preparing', 'Ready', 'Scaling', 'Deleting'"
+        - id: hostingEnvironmentEnvelope.vnetName
+          type: string
+          description: "Name of the\rhostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.vnetResourceGroupName
+          type: string
+          description: "Resource\rgroup of the hostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.vnetSubnetName
+          type: string
+          description: "Subnet of the\rhostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.virtualNetwork
+          type: object
+          description: "Description of\rthe hostingEnvironment's (App Service Environment) virtual network"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.id
+          type: string
+          description: "Resource id\rof the virtual network"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.name
+          type: string
+          description: "Name of\rthe virtual network (read-only)"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.type
+          type: string
+          description: "Resource\rtype of the virtual network (read-only)"
+        - id: hostingEnvironmentEnvelope.virtualNetwork.subnet
+          type: string
+          description: "Subnet\rwithin the virtual network"
+        - id: hostingEnvironmentEnvelope.internalLoadBalancingMode
+          type: string
+          description: "Specifies which endpoints to serve internally in the hostingEnvironment's\r(App Service Environment) VNET. Possible values include: 'None', 'Web',\r'Publishing'"
+        - id: hostingEnvironmentEnvelope.multiSize
+          type: string
+          description: "Front-end VM size,\re.g. \"Medium\", \"Large\""
+        - id: hostingEnvironmentEnvelope.multiRoleCount
+          type: number
+          description: "Number of\rfront-end instances"
+        - id: hostingEnvironmentEnvelope.workerPools
+          type: array
+          description: "Description of\rworker pools with worker size ids, VM sizes, and number of workers in each\rpool"
+        - id: hostingEnvironmentEnvelope.ipsslAddressCount
+          type: number
+          description: "Number of IP\rSSL addresses reserved for this hostingEnvironment (App Service\rEnvironment)"
+        - id: hostingEnvironmentEnvelope.databaseEdition
+          type: string
+          description: "Edition of the\rmetadata database for the hostingEnvironment (App Service Environment)\re.g. \"Standard\""
+        - id: hostingEnvironmentEnvelope.databaseServiceObjective
+          type: string
+          description: "Service objective of the metadata database for the hostingEnvironment (App\rService Environment) e.g. \"S0\""
+        - id: hostingEnvironmentEnvelope.upgradeDomains
+          type: number
+          description: "Number of\rupgrade domains of this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.subscriptionId
+          type: string
+          description: "Subscription of\rthe hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.dnsSuffix
+          type: string
+          description: "DNS suffix of the\rhostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.lastAction
+          type: string
+          description: "Last deployment\raction on this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.lastActionResult
+          type: string
+          description: "Result of the\rlast deployment action on this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.allowedMultiSizes
+          type: string
+          description: "List of\rcomma separated strings describing which VM sizes are allowed for\rfront-ends"
+        - id: hostingEnvironmentEnvelope.allowedWorkerSizes
+          type: string
+          description: "List of\rcomma separated strings describing which VM sizes are allowed for workers"
+        - id: hostingEnvironmentEnvelope.maximumNumberOfMachines
+          type: number
+          description: >-
+            Maximum number of VMs in this hostingEnvironment (App Service
+            Environment)
+        - id: hostingEnvironmentEnvelope.vipMappings
+          type: array
+          description: "Description of IP\rSSL mapping for this hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.environmentCapacities
+          type: array
+          description: "Current\rtotal, used, and available worker capacities"
+        - id: hostingEnvironmentEnvelope.networkAccessControlList
+          type: array
+          description: "Access\rcontrol list for controlling traffic to the hostingEnvironment (App\rService Environment)"
+        - id: hostingEnvironmentEnvelope.environmentIsHealthy
+          type: boolean
+          description: "True/false indicating whether the hostingEnvironment (App Service\rEnvironment) is healthy"
+        - id: hostingEnvironmentEnvelope.environmentStatus
+          type: string
+          description: "Detailed\rmessage about with results of the last check of the hostingEnvironment\r(App Service Environment)"
+        - id: hostingEnvironmentEnvelope.resourceGroup
+          type: string
+          description: "Resource group\rof the hostingEnvironment (App Service Environment)"
+        - id: hostingEnvironmentEnvelope.apiManagementAccountId
+          type: string
+          description: "Api\rManagement Account associated with this Hosting Environment"
+        - id: hostingEnvironmentEnvelope.suspended
+          type: boolean
+          description: "True/false\rindicating whether the hostingEnvironment is suspended. The environment\rcan be suspended e.g. when the management endpoint is no longer available\r(most likely because NSG blocked the incoming traffic)"
+        - id: hostingEnvironmentEnvelope.clusterSettings
+          type: array
+          description: "Custom settings\rfor changing the behavior of the hosting environment"
+        - id: hostingEnvironmentEnvelope.id
+          type: string
+          description: Resource Id
+        - id: hostingEnvironmentEnvelope.name
+          type: string
+          description: Resource Name
+        - id: hostingEnvironmentEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: hostingEnvironmentEnvelope.location
+          type: string
+          description: Resource Location
+        - id: hostingEnvironmentEnvelope.type
+          type: string
+          description: Resource type
+        - id: hostingEnvironmentEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateHostingEnvironment(resourceGroupName, name,
+        hostingEnvironmentEnvelope,
+        hostingEnvironmentEnvelope.hostingEnvironmentName,
+        hostingEnvironmentEnvelope.hostingEnvironmentLocation,
+        hostingEnvironmentEnvelope.provisioningState,
+        hostingEnvironmentEnvelope.status, hostingEnvironmentEnvelope.vnetName,
+        hostingEnvironmentEnvelope.vnetResourceGroupName,
+        hostingEnvironmentEnvelope.vnetSubnetName,
+        hostingEnvironmentEnvelope.virtualNetwork,
+        hostingEnvironmentEnvelope.virtualNetwork.id,
+        hostingEnvironmentEnvelope.virtualNetwork.name,
+        hostingEnvironmentEnvelope.virtualNetwork.type,
+        hostingEnvironmentEnvelope.virtualNetwork.subnet,
+        hostingEnvironmentEnvelope.internalLoadBalancingMode,
+        hostingEnvironmentEnvelope.multiSize,
+        hostingEnvironmentEnvelope.multiRoleCount,
+        hostingEnvironmentEnvelope.workerPools,
+        hostingEnvironmentEnvelope.ipsslAddressCount,
+        hostingEnvironmentEnvelope.databaseEdition,
+        hostingEnvironmentEnvelope.databaseServiceObjective,
+        hostingEnvironmentEnvelope.upgradeDomains,
+        hostingEnvironmentEnvelope.subscriptionId,
+        hostingEnvironmentEnvelope.dnsSuffix,
+        hostingEnvironmentEnvelope.lastAction,
+        hostingEnvironmentEnvelope.lastActionResult,
+        hostingEnvironmentEnvelope.allowedMultiSizes,
+        hostingEnvironmentEnvelope.allowedWorkerSizes,
+        hostingEnvironmentEnvelope.maximumNumberOfMachines,
+        hostingEnvironmentEnvelope.vipMappings,
+        hostingEnvironmentEnvelope.environmentCapacities,
+        hostingEnvironmentEnvelope.networkAccessControlList,
+        hostingEnvironmentEnvelope.environmentIsHealthy,
+        hostingEnvironmentEnvelope.environmentStatus,
+        hostingEnvironmentEnvelope.resourceGroup,
+        hostingEnvironmentEnvelope.apiManagementAccountId,
+        hostingEnvironmentEnvelope.suspended,
+        hostingEnvironmentEnvelope.clusterSettings,
+        hostingEnvironmentEnvelope.id, hostingEnvironmentEnvelope.name,
+        hostingEnvironmentEnvelope.kind, hostingEnvironmentEnvelope.location,
+        hostingEnvironmentEnvelope.type, hostingEnvironmentEnvelope.tags,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.beginCreateOrUpdateHostingEnvironment(resourceGroupName,
+      name, hostingEnvironmentEnvelope,
+      hostingEnvironmentEnvelope.hostingEnvironmentName,
+      hostingEnvironmentEnvelope.hostingEnvironmentLocation,
+      hostingEnvironmentEnvelope.provisioningState,
+      hostingEnvironmentEnvelope.status, hostingEnvironmentEnvelope.vnetName,
+      hostingEnvironmentEnvelope.vnetResourceGroupName,
+      hostingEnvironmentEnvelope.vnetSubnetName,
+      hostingEnvironmentEnvelope.virtualNetwork,
+      hostingEnvironmentEnvelope.virtualNetwork.id,
+      hostingEnvironmentEnvelope.virtualNetwork.name,
+      hostingEnvironmentEnvelope.virtualNetwork.type,
+      hostingEnvironmentEnvelope.virtualNetwork.subnet,
+      hostingEnvironmentEnvelope.internalLoadBalancingMode,
+      hostingEnvironmentEnvelope.multiSize,
+      hostingEnvironmentEnvelope.multiRoleCount,
+      hostingEnvironmentEnvelope.workerPools,
+      hostingEnvironmentEnvelope.ipsslAddressCount,
+      hostingEnvironmentEnvelope.databaseEdition,
+      hostingEnvironmentEnvelope.databaseServiceObjective,
+      hostingEnvironmentEnvelope.upgradeDomains,
+      hostingEnvironmentEnvelope.subscriptionId,
+      hostingEnvironmentEnvelope.dnsSuffix,
+      hostingEnvironmentEnvelope.lastAction,
+      hostingEnvironmentEnvelope.lastActionResult,
+      hostingEnvironmentEnvelope.allowedMultiSizes,
+      hostingEnvironmentEnvelope.allowedWorkerSizes,
+      hostingEnvironmentEnvelope.maximumNumberOfMachines,
+      hostingEnvironmentEnvelope.vipMappings,
+      hostingEnvironmentEnvelope.environmentCapacities,
+      hostingEnvironmentEnvelope.networkAccessControlList,
+      hostingEnvironmentEnvelope.environmentIsHealthy,
+      hostingEnvironmentEnvelope.environmentStatus,
+      hostingEnvironmentEnvelope.resourceGroup,
+      hostingEnvironmentEnvelope.apiManagementAccountId,
+      hostingEnvironmentEnvelope.suspended,
+      hostingEnvironmentEnvelope.clusterSettings, hostingEnvironmentEnvelope.id,
+      hostingEnvironmentEnvelope.name, hostingEnvironmentEnvelope.kind,
+      hostingEnvironmentEnvelope.location, hostingEnvironmentEnvelope.type,
+      hostingEnvironmentEnvelope.tags, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~client'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~callback'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~options'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestUrl'
+      - >-
+        HostingEnvironments#beginCreateOrUpdateHostingEnvironment~queryParameters
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~regex'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~httpRequest'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~headerName'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestContent'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestModel'
+      - >-
+        HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestModelMapper
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestModel'
+      - 'HostingEnvironments#beginCreateOrUpdateHostingEnvironment~requestContent'
+      - >-
+        HostingEnvironments#beginCreateOrUpdateHostingEnvironment~serializationError
+  - uid: 'HostingEnvironments#deleteHostingEnvironment'
+    id: deleteHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      deleteHostingEnvironment(resourceGroupName, name, options,
+      options.forceDelete, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.forceDelete
+          type: boolean
+          description: "Delete even if the\rhostingEnvironment (App Service Environment) contains resources"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteHostingEnvironment(resourceGroupName, name, options,
+        options.forceDelete, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.deleteHostingEnvironment(resourceGroupName, name,
+      options, options.forceDelete, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#deleteHostingEnvironment~client'
+      - 'HostingEnvironments#deleteHostingEnvironment~callback'
+      - 'HostingEnvironments#deleteHostingEnvironment~options'
+  - uid: 'HostingEnvironments#beginDeleteHostingEnvironment'
+    id: beginDeleteHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      beginDeleteHostingEnvironment(resourceGroupName, name, options,
+      options.forceDelete, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.forceDelete
+          type: boolean
+          description: "Delete even if the\rhostingEnvironment (App Service Environment) contains resources"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteHostingEnvironment(resourceGroupName, name, options,
+        options.forceDelete, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.beginDeleteHostingEnvironment(resourceGroupName, name,
+      options, options.forceDelete, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~client'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~callback'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~options'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~forceDelete'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~queryParameters'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~regex'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~httpRequest'
+      - 'HostingEnvironments#beginDeleteHostingEnvironment~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentDiagnostics'
+    id: getHostingEnvironmentDiagnostics
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentDiagnostics(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentDiagnostics(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentDiagnostics(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~client'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~callback'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~options'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~regex'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnostics~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem'
+    id: getHostingEnvironmentDiagnosticsItem
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentDiagnosticsItem(resourceGroupName, name,
+      diagnosticsName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: diagnosticsName
+          type: string
+          description: Name of the diagnostics
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironmentDiagnostics} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentDiagnosticsItem(resourceGroupName, name,
+        diagnosticsName, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentDiagnosticsItem(resourceGroupName,
+      name, diagnosticsName, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~client'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~callback'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~options'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~regex'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentDiagnosticsItem~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentCapacities'
+    id: getHostingEnvironmentCapacities
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentCapacities(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StampCapacityCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentCapacities(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentCapacities(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~client'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~callback'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~options'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~regex'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentCapacities~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentVips'
+    id: getHostingEnvironmentVips
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentVips(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AddressResponse} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentVips(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentVips(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentVips~client'
+      - 'HostingEnvironments#getHostingEnvironmentVips~callback'
+      - 'HostingEnvironments#getHostingEnvironmentVips~options'
+      - 'HostingEnvironments#getHostingEnvironmentVips~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentVips~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentVips~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentVips~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentVips~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentVips~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentVips~regex'
+      - 'HostingEnvironments#getHostingEnvironmentVips~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentVips~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentVips~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironments'
+    id: getHostingEnvironments
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironments(resourceGroupName, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link HostingEnvironmentCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironments(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironments(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironments~client'
+      - 'HostingEnvironments#getHostingEnvironments~callback'
+      - 'HostingEnvironments#getHostingEnvironments~options'
+      - 'HostingEnvironments#getHostingEnvironments~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironments~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironments~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironments~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironments~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironments~regex'
+      - 'HostingEnvironments#getHostingEnvironments~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironments~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironments~headerName'
+  - uid: 'HostingEnvironments#rebootHostingEnvironment'
+    id: rebootHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      rebootHostingEnvironment(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function rebootHostingEnvironment(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.rebootHostingEnvironment(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#rebootHostingEnvironment~client'
+      - 'HostingEnvironments#rebootHostingEnvironment~callback'
+      - 'HostingEnvironments#rebootHostingEnvironment~options'
+      - 'HostingEnvironments#rebootHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#rebootHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#rebootHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#rebootHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#rebootHostingEnvironment~queryParameters'
+      - 'HostingEnvironments#rebootHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#rebootHostingEnvironment~regex'
+      - 'HostingEnvironments#rebootHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#rebootHostingEnvironment~httpRequest'
+      - 'HostingEnvironments#rebootHostingEnvironment~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentOperations'
+    id: getHostingEnvironmentOperations
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentOperations(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentOperations(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentOperations(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentOperations~client'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~callback'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~options'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~regex'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentOperations~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentOperation'
+    id: getHostingEnvironmentOperation
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentOperation(resourceGroupName, name, operationId,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: operationId
+          type: string
+          description: operation identifier GUID
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentOperation(resourceGroupName, name,
+        operationId, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentOperation(resourceGroupName,
+      name, operationId, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentOperation~client'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~callback'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~options'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~regex'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentOperation~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentMetrics'
+    id: getHostingEnvironmentMetrics
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentMetrics(resourceGroupName, name, options,
+      options.details, options.filter, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.details
+          type: boolean
+          description: Include instance details
+        - id: options.filter
+          type: string
+          description: "Return only usages/metrics specified in\rthe filter. Filter conforms to odata syntax. Example: $filter=(name.value\req 'Metric1' or name.value eq 'Metric2') and startTime eq\r'2014-01-01T00:00:00Z' and endTime eq '2014-12-31T23:59:59Z' and timeGrain\req duration'[Hour|Minute|Day]'."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceMetricCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentMetrics(resourceGroupName, name, options,
+        options.details, options.filter, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentMetrics(resourceGroupName, name,
+      options, options.details, options.filter, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~client'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~callback'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~options'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~details'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~filter'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~regex'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentMetrics~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentMetricDefinitions'
+    id: getHostingEnvironmentMetricDefinitions
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentMetricDefinitions(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link MetricDefinition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentMetricDefinitions(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentMetricDefinitions(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~client'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~callback'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~options'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~requestUrl'
+      - >-
+        HostingEnvironments#getHostingEnvironmentMetricDefinitions~queryParameters
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~regex'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentMetricDefinitions~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentUsages'
+    id: getHostingEnvironmentUsages
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentUsages(resourceGroupName, name, options,
+      options.filter, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: "Return only usages/metrics specified in\rthe filter. Filter conforms to odata syntax. Example: $filter=(name.value\req 'Metric1' or name.value eq 'Metric2') and startTime eq\r'2014-01-01T00:00:00Z' and endTime eq '2014-12-31T23:59:59Z' and timeGrain\req duration'[Hour|Minute|Day]'."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CsmUsageQuotaCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentUsages(resourceGroupName, name, options,
+        options.filter, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentUsages(resourceGroupName, name,
+      options, options.filter, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentUsages~client'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~callback'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~options'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~filter'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~regex'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentUsages~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics'
+    id: getHostingEnvironmentMultiRoleMetrics
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentMultiRoleMetrics(resourceGroupName, name, options,
+      options.startTime, options.endTime, options.timeGrain, options.details,
+      options.filter, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.startTime
+          type: string
+          description: Beginning time of metrics query
+        - id: options.endTime
+          type: string
+          description: End time of metrics query
+        - id: options.timeGrain
+          type: string
+          description: Time granularity of metrics query
+        - id: options.details
+          type: boolean
+          description: Include instance details
+        - id: options.filter
+          type: string
+          description: "Return only usages/metrics specified in\rthe filter. Filter conforms to odata syntax. Example: $filter=(name.value\req 'Metric1' or name.value eq 'Metric2') and startTime eq\r'2014-01-01T00:00:00Z' and endTime eq '2014-12-31T23:59:59Z' and timeGrain\req duration'[Hour|Minute|Day]'."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceMetricCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentMultiRoleMetrics(resourceGroupName, name,
+        options, options.startTime, options.endTime, options.timeGrain,
+        options.details, options.filter, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentMultiRoleMetrics(resourceGroupName,
+      name, options, options.startTime, options.endTime, options.timeGrain,
+      options.details, options.filter, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~client'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~callback'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~options'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~startTime'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~endTime'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~timeGrain'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~details'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~filter'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~requestUrl'
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~queryParameters
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~regex'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleMetrics~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics'
+    id: getHostingEnvironmentWebWorkerMetrics
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentWebWorkerMetrics(resourceGroupName, name,
+      workerPoolName, options, options.details, options.filter,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.details
+          type: boolean
+          description: Include instance details
+        - id: options.filter
+          type: string
+          description: "Return only usages/metrics specified in\rthe filter. Filter conforms to odata syntax. Example: $filter=(name.value\req 'Metric1' or name.value eq 'Metric2') and startTime eq\r'2014-01-01T00:00:00Z' and endTime eq '2014-12-31T23:59:59Z' and timeGrain\req duration'[Hour|Minute|Day]'."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceMetricCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentWebWorkerMetrics(resourceGroupName, name,
+        workerPoolName, options, options.details, options.filter,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentWebWorkerMetrics(resourceGroupName,
+      name, workerPoolName, options, options.details, options.filter,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~client'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~callback'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~options'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~details'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~filter'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~requestUrl'
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~queryParameters
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~regex'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerMetrics~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions'
+    id: getHostingEnvironmentMultiRoleMetricDefinitions
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentMultiRoleMetricDefinitions(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link MetricDefinitionCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function
+        getHostingEnvironmentMultiRoleMetricDefinitions(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentMultiRoleMetricDefinitions(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~client
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~callback
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~options
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~queryParameters
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~regex
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~httpRequest
+      - >-
+        HostingEnvironments#getHostingEnvironmentMultiRoleMetricDefinitions~headerName
+  - uid: 'HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions'
+    id: getHostingEnvironmentWebWorkerMetricDefinitions
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentWebWorkerMetricDefinitions(resourceGroupName, name,
+      workerPoolName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link MetricDefinitionCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function
+        getHostingEnvironmentWebWorkerMetricDefinitions(resourceGroupName, name,
+        workerPoolName, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentWebWorkerMetricDefinitions(resourceGroupName,
+      name, workerPoolName, options, options.customHeaders, callback)
+    children:
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~client
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~callback
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~options
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~queryParameters
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~regex
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~requestUrl
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~httpRequest
+      - >-
+        HostingEnvironments#getHostingEnvironmentWebWorkerMetricDefinitions~headerName
+  - uid: 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages'
+    id: getHostingEnvironmentMultiRoleUsages
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentMultiRoleUsages(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UsageCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentMultiRoleUsages(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentMultiRoleUsages(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~client'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~callback'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~options'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~regex'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentMultiRoleUsages~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages'
+    id: getHostingEnvironmentWebWorkerUsages
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentWebWorkerUsages(resourceGroupName, name,
+      workerPoolName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UsageCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentWebWorkerUsages(resourceGroupName, name,
+        workerPoolName, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentWebWorkerUsages(resourceGroupName,
+      name, workerPoolName, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~client'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~callback'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~options'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~regex'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentWebWorkerUsages~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentSites'
+    id: getHostingEnvironmentSites
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentSites(resourceGroupName, name, options,
+      options.propertiesToInclude, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.propertiesToInclude
+          type: string
+          description: "Comma separated list of site\rproperties to include"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentSites(resourceGroupName, name, options,
+        options.propertiesToInclude, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentSites(resourceGroupName, name,
+      options, options.propertiesToInclude, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentSites~client'
+      - 'HostingEnvironments#getHostingEnvironmentSites~callback'
+      - 'HostingEnvironments#getHostingEnvironmentSites~options'
+      - 'HostingEnvironments#getHostingEnvironmentSites~propertiesToInclude'
+      - 'HostingEnvironments#getHostingEnvironmentSites~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentSites~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentSites~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentSites~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentSites~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentSites~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentSites~regex'
+      - 'HostingEnvironments#getHostingEnvironmentSites~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentSites~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentSites~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentWebHostingPlans'
+    id: getHostingEnvironmentWebHostingPlans
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentWebHostingPlans(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentWebHostingPlans(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentWebHostingPlans(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~client'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~callback'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~options'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~regex'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentWebHostingPlans~headerName'
+  - uid: 'HostingEnvironments#getHostingEnvironmentServerFarms'
+    id: getHostingEnvironmentServerFarms
+    parent: HostingEnvironments
+    name: >-
+      getHostingEnvironmentServerFarms(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServerFarmCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getHostingEnvironmentServerFarms(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getHostingEnvironmentServerFarms(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~client'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~callback'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~options'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~queryParameters'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~regex'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~requestUrl'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~httpRequest'
+      - 'HostingEnvironments#getHostingEnvironmentServerFarms~headerName'
+  - uid: 'HostingEnvironments#getMultiRolePools'
+    id: getMultiRolePools
+    parent: HostingEnvironments
+    name: >-
+      getMultiRolePools(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPoolCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getMultiRolePools(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getMultiRolePools(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getMultiRolePools~client'
+      - 'HostingEnvironments#getMultiRolePools~callback'
+      - 'HostingEnvironments#getMultiRolePools~options'
+      - 'HostingEnvironments#getMultiRolePools~requestUrl'
+      - 'HostingEnvironments#getMultiRolePools~requestUrl'
+      - 'HostingEnvironments#getMultiRolePools~requestUrl'
+      - 'HostingEnvironments#getMultiRolePools~requestUrl'
+      - 'HostingEnvironments#getMultiRolePools~queryParameters'
+      - 'HostingEnvironments#getMultiRolePools~requestUrl'
+      - 'HostingEnvironments#getMultiRolePools~regex'
+      - 'HostingEnvironments#getMultiRolePools~requestUrl'
+      - 'HostingEnvironments#getMultiRolePools~httpRequest'
+      - 'HostingEnvironments#getMultiRolePools~headerName'
+  - uid: 'HostingEnvironments#getMultiRolePool'
+    id: getMultiRolePool
+    parent: HostingEnvironments
+    name: >-
+      getMultiRolePool(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getMultiRolePool(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getMultiRolePool(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getMultiRolePool~client'
+      - 'HostingEnvironments#getMultiRolePool~callback'
+      - 'HostingEnvironments#getMultiRolePool~options'
+      - 'HostingEnvironments#getMultiRolePool~requestUrl'
+      - 'HostingEnvironments#getMultiRolePool~requestUrl'
+      - 'HostingEnvironments#getMultiRolePool~requestUrl'
+      - 'HostingEnvironments#getMultiRolePool~requestUrl'
+      - 'HostingEnvironments#getMultiRolePool~queryParameters'
+      - 'HostingEnvironments#getMultiRolePool~requestUrl'
+      - 'HostingEnvironments#getMultiRolePool~regex'
+      - 'HostingEnvironments#getMultiRolePool~requestUrl'
+      - 'HostingEnvironments#getMultiRolePool~httpRequest'
+      - 'HostingEnvironments#getMultiRolePool~headerName'
+  - uid: 'HostingEnvironments#createOrUpdateMultiRolePool'
+    id: createOrUpdateMultiRolePool
+    parent: HostingEnvironments
+    name: >-
+      createOrUpdateMultiRolePool(resourceGroupName, name,
+      multiRolePoolEnvelope, multiRolePoolEnvelope.workerSizeId,
+      multiRolePoolEnvelope.computeMode, multiRolePoolEnvelope.workerSize,
+      multiRolePoolEnvelope.workerCount, multiRolePoolEnvelope.instanceNames,
+      multiRolePoolEnvelope.sku, multiRolePoolEnvelope.sku.name,
+      multiRolePoolEnvelope.sku.tier, multiRolePoolEnvelope.sku.size,
+      multiRolePoolEnvelope.sku.family, multiRolePoolEnvelope.sku.capacity,
+      multiRolePoolEnvelope.id, multiRolePoolEnvelope.name,
+      multiRolePoolEnvelope.kind, multiRolePoolEnvelope.location,
+      multiRolePoolEnvelope.type, multiRolePoolEnvelope.tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: multiRolePoolEnvelope
+          type: object
+          description: Properties of multiRole pool
+        - id: multiRolePoolEnvelope.workerSizeId
+          type: number
+          description: "Worker size id for\rreferencing this worker pool"
+        - id: multiRolePoolEnvelope.computeMode
+          type: string
+          description: "Shared or dedicated web\rapp hosting. Possible values include: 'Shared', 'Dedicated', 'Dynamic'"
+        - id: multiRolePoolEnvelope.workerSize
+          type: string
+          description: "VM size of the worker\rpool instances"
+        - id: multiRolePoolEnvelope.workerCount
+          type: number
+          description: "Number of instances in\rthe worker pool"
+        - id: multiRolePoolEnvelope.instanceNames
+          type: array
+          description: "Names of all instances\rin the worker pool (read only)"
+        - id: multiRolePoolEnvelope.sku
+          type: object
+        - id: multiRolePoolEnvelope.sku.name
+          type: string
+          description: Name of the resource sku
+        - id: multiRolePoolEnvelope.sku.tier
+          type: string
+          description: "Service Tier of the\rresource sku"
+        - id: multiRolePoolEnvelope.sku.size
+          type: string
+          description: "Size specifier of the\rresource sku"
+        - id: multiRolePoolEnvelope.sku.family
+          type: string
+          description: "Family code of the\rresource sku"
+        - id: multiRolePoolEnvelope.sku.capacity
+          type: number
+          description: "Current number of\rinstances assigned to the resource"
+        - id: multiRolePoolEnvelope.id
+          type: string
+          description: Resource Id
+        - id: multiRolePoolEnvelope.name
+          type: string
+          description: Resource Name
+        - id: multiRolePoolEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: multiRolePoolEnvelope.location
+          type: string
+          description: Resource Location
+        - id: multiRolePoolEnvelope.type
+          type: string
+          description: Resource type
+        - id: multiRolePoolEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateMultiRolePool(resourceGroupName, name,
+        multiRolePoolEnvelope, multiRolePoolEnvelope.workerSizeId,
+        multiRolePoolEnvelope.computeMode, multiRolePoolEnvelope.workerSize,
+        multiRolePoolEnvelope.workerCount, multiRolePoolEnvelope.instanceNames,
+        multiRolePoolEnvelope.sku, multiRolePoolEnvelope.sku.name,
+        multiRolePoolEnvelope.sku.tier, multiRolePoolEnvelope.sku.size,
+        multiRolePoolEnvelope.sku.family, multiRolePoolEnvelope.sku.capacity,
+        multiRolePoolEnvelope.id, multiRolePoolEnvelope.name,
+        multiRolePoolEnvelope.kind, multiRolePoolEnvelope.location,
+        multiRolePoolEnvelope.type, multiRolePoolEnvelope.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.createOrUpdateMultiRolePool(resourceGroupName, name,
+      multiRolePoolEnvelope, multiRolePoolEnvelope.workerSizeId,
+      multiRolePoolEnvelope.computeMode, multiRolePoolEnvelope.workerSize,
+      multiRolePoolEnvelope.workerCount, multiRolePoolEnvelope.instanceNames,
+      multiRolePoolEnvelope.sku, multiRolePoolEnvelope.sku.name,
+      multiRolePoolEnvelope.sku.tier, multiRolePoolEnvelope.sku.size,
+      multiRolePoolEnvelope.sku.family, multiRolePoolEnvelope.sku.capacity,
+      multiRolePoolEnvelope.id, multiRolePoolEnvelope.name,
+      multiRolePoolEnvelope.kind, multiRolePoolEnvelope.location,
+      multiRolePoolEnvelope.type, multiRolePoolEnvelope.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#createOrUpdateMultiRolePool~client'
+      - 'HostingEnvironments#createOrUpdateMultiRolePool~callback'
+      - 'HostingEnvironments#createOrUpdateMultiRolePool~options'
+  - uid: 'HostingEnvironments#beginCreateOrUpdateMultiRolePool'
+    id: beginCreateOrUpdateMultiRolePool
+    parent: HostingEnvironments
+    name: >-
+      beginCreateOrUpdateMultiRolePool(resourceGroupName, name,
+      multiRolePoolEnvelope, multiRolePoolEnvelope.workerSizeId,
+      multiRolePoolEnvelope.computeMode, multiRolePoolEnvelope.workerSize,
+      multiRolePoolEnvelope.workerCount, multiRolePoolEnvelope.instanceNames,
+      multiRolePoolEnvelope.sku, multiRolePoolEnvelope.sku.name,
+      multiRolePoolEnvelope.sku.tier, multiRolePoolEnvelope.sku.size,
+      multiRolePoolEnvelope.sku.family, multiRolePoolEnvelope.sku.capacity,
+      multiRolePoolEnvelope.id, multiRolePoolEnvelope.name,
+      multiRolePoolEnvelope.kind, multiRolePoolEnvelope.location,
+      multiRolePoolEnvelope.type, multiRolePoolEnvelope.tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: multiRolePoolEnvelope
+          type: object
+          description: Properties of multiRole pool
+        - id: multiRolePoolEnvelope.workerSizeId
+          type: number
+          description: "Worker size id for\rreferencing this worker pool"
+        - id: multiRolePoolEnvelope.computeMode
+          type: string
+          description: "Shared or dedicated web\rapp hosting. Possible values include: 'Shared', 'Dedicated', 'Dynamic'"
+        - id: multiRolePoolEnvelope.workerSize
+          type: string
+          description: "VM size of the worker\rpool instances"
+        - id: multiRolePoolEnvelope.workerCount
+          type: number
+          description: "Number of instances in\rthe worker pool"
+        - id: multiRolePoolEnvelope.instanceNames
+          type: array
+          description: "Names of all instances\rin the worker pool (read only)"
+        - id: multiRolePoolEnvelope.sku
+          type: object
+        - id: multiRolePoolEnvelope.sku.name
+          type: string
+          description: Name of the resource sku
+        - id: multiRolePoolEnvelope.sku.tier
+          type: string
+          description: "Service Tier of the\rresource sku"
+        - id: multiRolePoolEnvelope.sku.size
+          type: string
+          description: "Size specifier of the\rresource sku"
+        - id: multiRolePoolEnvelope.sku.family
+          type: string
+          description: "Family code of the\rresource sku"
+        - id: multiRolePoolEnvelope.sku.capacity
+          type: number
+          description: "Current number of\rinstances assigned to the resource"
+        - id: multiRolePoolEnvelope.id
+          type: string
+          description: Resource Id
+        - id: multiRolePoolEnvelope.name
+          type: string
+          description: Resource Name
+        - id: multiRolePoolEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: multiRolePoolEnvelope.location
+          type: string
+          description: Resource Location
+        - id: multiRolePoolEnvelope.type
+          type: string
+          description: Resource type
+        - id: multiRolePoolEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateMultiRolePool(resourceGroupName, name,
+        multiRolePoolEnvelope, multiRolePoolEnvelope.workerSizeId,
+        multiRolePoolEnvelope.computeMode, multiRolePoolEnvelope.workerSize,
+        multiRolePoolEnvelope.workerCount, multiRolePoolEnvelope.instanceNames,
+        multiRolePoolEnvelope.sku, multiRolePoolEnvelope.sku.name,
+        multiRolePoolEnvelope.sku.tier, multiRolePoolEnvelope.sku.size,
+        multiRolePoolEnvelope.sku.family, multiRolePoolEnvelope.sku.capacity,
+        multiRolePoolEnvelope.id, multiRolePoolEnvelope.name,
+        multiRolePoolEnvelope.kind, multiRolePoolEnvelope.location,
+        multiRolePoolEnvelope.type, multiRolePoolEnvelope.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.beginCreateOrUpdateMultiRolePool(resourceGroupName,
+      name, multiRolePoolEnvelope, multiRolePoolEnvelope.workerSizeId,
+      multiRolePoolEnvelope.computeMode, multiRolePoolEnvelope.workerSize,
+      multiRolePoolEnvelope.workerCount, multiRolePoolEnvelope.instanceNames,
+      multiRolePoolEnvelope.sku, multiRolePoolEnvelope.sku.name,
+      multiRolePoolEnvelope.sku.tier, multiRolePoolEnvelope.sku.size,
+      multiRolePoolEnvelope.sku.family, multiRolePoolEnvelope.sku.capacity,
+      multiRolePoolEnvelope.id, multiRolePoolEnvelope.name,
+      multiRolePoolEnvelope.kind, multiRolePoolEnvelope.location,
+      multiRolePoolEnvelope.type, multiRolePoolEnvelope.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~client'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~callback'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~options'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~queryParameters'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~regex'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~httpRequest'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~headerName'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestContent'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestModel'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestModelMapper'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestModel'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~requestContent'
+      - 'HostingEnvironments#beginCreateOrUpdateMultiRolePool~serializationError'
+  - uid: 'HostingEnvironments#getMultiRolePoolSkus'
+    id: getMultiRolePoolSkus
+    parent: HostingEnvironments
+    name: >-
+      getMultiRolePoolSkus(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SkuInfoCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getMultiRolePoolSkus(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getMultiRolePoolSkus(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getMultiRolePoolSkus~client'
+      - 'HostingEnvironments#getMultiRolePoolSkus~callback'
+      - 'HostingEnvironments#getMultiRolePoolSkus~options'
+      - 'HostingEnvironments#getMultiRolePoolSkus~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolSkus~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolSkus~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolSkus~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolSkus~queryParameters'
+      - 'HostingEnvironments#getMultiRolePoolSkus~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolSkus~regex'
+      - 'HostingEnvironments#getMultiRolePoolSkus~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolSkus~httpRequest'
+      - 'HostingEnvironments#getMultiRolePoolSkus~headerName'
+  - uid: 'HostingEnvironments#getWorkerPools'
+    id: getWorkerPools
+    parent: HostingEnvironments
+    name: >-
+      getWorkerPools(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPoolCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getWorkerPools(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getWorkerPools(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getWorkerPools~client'
+      - 'HostingEnvironments#getWorkerPools~callback'
+      - 'HostingEnvironments#getWorkerPools~options'
+      - 'HostingEnvironments#getWorkerPools~requestUrl'
+      - 'HostingEnvironments#getWorkerPools~requestUrl'
+      - 'HostingEnvironments#getWorkerPools~requestUrl'
+      - 'HostingEnvironments#getWorkerPools~requestUrl'
+      - 'HostingEnvironments#getWorkerPools~queryParameters'
+      - 'HostingEnvironments#getWorkerPools~requestUrl'
+      - 'HostingEnvironments#getWorkerPools~regex'
+      - 'HostingEnvironments#getWorkerPools~requestUrl'
+      - 'HostingEnvironments#getWorkerPools~httpRequest'
+      - 'HostingEnvironments#getWorkerPools~headerName'
+  - uid: 'HostingEnvironments#getWorkerPool'
+    id: getWorkerPool
+    parent: HostingEnvironments
+    name: >-
+      getWorkerPool(resourceGroupName, name, workerPoolName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getWorkerPool(resourceGroupName, name, workerPoolName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getWorkerPool(resourceGroupName, name, workerPoolName,
+      options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getWorkerPool~client'
+      - 'HostingEnvironments#getWorkerPool~callback'
+      - 'HostingEnvironments#getWorkerPool~options'
+      - 'HostingEnvironments#getWorkerPool~requestUrl'
+      - 'HostingEnvironments#getWorkerPool~requestUrl'
+      - 'HostingEnvironments#getWorkerPool~requestUrl'
+      - 'HostingEnvironments#getWorkerPool~requestUrl'
+      - 'HostingEnvironments#getWorkerPool~requestUrl'
+      - 'HostingEnvironments#getWorkerPool~queryParameters'
+      - 'HostingEnvironments#getWorkerPool~requestUrl'
+      - 'HostingEnvironments#getWorkerPool~regex'
+      - 'HostingEnvironments#getWorkerPool~requestUrl'
+      - 'HostingEnvironments#getWorkerPool~httpRequest'
+      - 'HostingEnvironments#getWorkerPool~headerName'
+  - uid: 'HostingEnvironments#createOrUpdateWorkerPool'
+    id: createOrUpdateWorkerPool
+    parent: HostingEnvironments
+    name: >-
+      createOrUpdateWorkerPool(resourceGroupName, name, workerPoolName,
+      workerPoolEnvelope, workerPoolEnvelope.workerSizeId,
+      workerPoolEnvelope.computeMode, workerPoolEnvelope.workerSize,
+      workerPoolEnvelope.workerCount, workerPoolEnvelope.instanceNames,
+      workerPoolEnvelope.sku, workerPoolEnvelope.sku.name,
+      workerPoolEnvelope.sku.tier, workerPoolEnvelope.sku.size,
+      workerPoolEnvelope.sku.family, workerPoolEnvelope.sku.capacity,
+      workerPoolEnvelope.id, workerPoolEnvelope.name, workerPoolEnvelope.kind,
+      workerPoolEnvelope.location, workerPoolEnvelope.type,
+      workerPoolEnvelope.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: workerPoolEnvelope
+          type: object
+          description: Properties of worker pool
+        - id: workerPoolEnvelope.workerSizeId
+          type: number
+          description: "Worker size id for\rreferencing this worker pool"
+        - id: workerPoolEnvelope.computeMode
+          type: string
+          description: "Shared or dedicated web\rapp hosting. Possible values include: 'Shared', 'Dedicated', 'Dynamic'"
+        - id: workerPoolEnvelope.workerSize
+          type: string
+          description: "VM size of the worker pool\rinstances"
+        - id: workerPoolEnvelope.workerCount
+          type: number
+          description: "Number of instances in the\rworker pool"
+        - id: workerPoolEnvelope.instanceNames
+          type: array
+          description: "Names of all instances in\rthe worker pool (read only)"
+        - id: workerPoolEnvelope.sku
+          type: object
+        - id: workerPoolEnvelope.sku.name
+          type: string
+          description: Name of the resource sku
+        - id: workerPoolEnvelope.sku.tier
+          type: string
+          description: "Service Tier of the resource\rsku"
+        - id: workerPoolEnvelope.sku.size
+          type: string
+          description: "Size specifier of the\rresource sku"
+        - id: workerPoolEnvelope.sku.family
+          type: string
+          description: "Family code of the resource\rsku"
+        - id: workerPoolEnvelope.sku.capacity
+          type: number
+          description: "Current number of\rinstances assigned to the resource"
+        - id: workerPoolEnvelope.id
+          type: string
+          description: Resource Id
+        - id: workerPoolEnvelope.name
+          type: string
+          description: Resource Name
+        - id: workerPoolEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: workerPoolEnvelope.location
+          type: string
+          description: Resource Location
+        - id: workerPoolEnvelope.type
+          type: string
+          description: Resource type
+        - id: workerPoolEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateWorkerPool(resourceGroupName, name,
+        workerPoolName, workerPoolEnvelope, workerPoolEnvelope.workerSizeId,
+        workerPoolEnvelope.computeMode, workerPoolEnvelope.workerSize,
+        workerPoolEnvelope.workerCount, workerPoolEnvelope.instanceNames,
+        workerPoolEnvelope.sku, workerPoolEnvelope.sku.name,
+        workerPoolEnvelope.sku.tier, workerPoolEnvelope.sku.size,
+        workerPoolEnvelope.sku.family, workerPoolEnvelope.sku.capacity,
+        workerPoolEnvelope.id, workerPoolEnvelope.name, workerPoolEnvelope.kind,
+        workerPoolEnvelope.location, workerPoolEnvelope.type,
+        workerPoolEnvelope.tags, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.createOrUpdateWorkerPool(resourceGroupName, name,
+      workerPoolName, workerPoolEnvelope, workerPoolEnvelope.workerSizeId,
+      workerPoolEnvelope.computeMode, workerPoolEnvelope.workerSize,
+      workerPoolEnvelope.workerCount, workerPoolEnvelope.instanceNames,
+      workerPoolEnvelope.sku, workerPoolEnvelope.sku.name,
+      workerPoolEnvelope.sku.tier, workerPoolEnvelope.sku.size,
+      workerPoolEnvelope.sku.family, workerPoolEnvelope.sku.capacity,
+      workerPoolEnvelope.id, workerPoolEnvelope.name, workerPoolEnvelope.kind,
+      workerPoolEnvelope.location, workerPoolEnvelope.type,
+      workerPoolEnvelope.tags, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#createOrUpdateWorkerPool~client'
+      - 'HostingEnvironments#createOrUpdateWorkerPool~callback'
+      - 'HostingEnvironments#createOrUpdateWorkerPool~options'
+  - uid: 'HostingEnvironments#beginCreateOrUpdateWorkerPool'
+    id: beginCreateOrUpdateWorkerPool
+    parent: HostingEnvironments
+    name: >-
+      beginCreateOrUpdateWorkerPool(resourceGroupName, name, workerPoolName,
+      workerPoolEnvelope, workerPoolEnvelope.workerSizeId,
+      workerPoolEnvelope.computeMode, workerPoolEnvelope.workerSize,
+      workerPoolEnvelope.workerCount, workerPoolEnvelope.instanceNames,
+      workerPoolEnvelope.sku, workerPoolEnvelope.sku.name,
+      workerPoolEnvelope.sku.tier, workerPoolEnvelope.sku.size,
+      workerPoolEnvelope.sku.family, workerPoolEnvelope.sku.capacity,
+      workerPoolEnvelope.id, workerPoolEnvelope.name, workerPoolEnvelope.kind,
+      workerPoolEnvelope.location, workerPoolEnvelope.type,
+      workerPoolEnvelope.tags, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: workerPoolEnvelope
+          type: object
+          description: Properties of worker pool
+        - id: workerPoolEnvelope.workerSizeId
+          type: number
+          description: "Worker size id for\rreferencing this worker pool"
+        - id: workerPoolEnvelope.computeMode
+          type: string
+          description: "Shared or dedicated web\rapp hosting. Possible values include: 'Shared', 'Dedicated', 'Dynamic'"
+        - id: workerPoolEnvelope.workerSize
+          type: string
+          description: "VM size of the worker pool\rinstances"
+        - id: workerPoolEnvelope.workerCount
+          type: number
+          description: "Number of instances in the\rworker pool"
+        - id: workerPoolEnvelope.instanceNames
+          type: array
+          description: "Names of all instances in\rthe worker pool (read only)"
+        - id: workerPoolEnvelope.sku
+          type: object
+        - id: workerPoolEnvelope.sku.name
+          type: string
+          description: Name of the resource sku
+        - id: workerPoolEnvelope.sku.tier
+          type: string
+          description: "Service Tier of the resource\rsku"
+        - id: workerPoolEnvelope.sku.size
+          type: string
+          description: "Size specifier of the\rresource sku"
+        - id: workerPoolEnvelope.sku.family
+          type: string
+          description: "Family code of the resource\rsku"
+        - id: workerPoolEnvelope.sku.capacity
+          type: number
+          description: "Current number of\rinstances assigned to the resource"
+        - id: workerPoolEnvelope.id
+          type: string
+          description: Resource Id
+        - id: workerPoolEnvelope.name
+          type: string
+          description: Resource Name
+        - id: workerPoolEnvelope.kind
+          type: string
+          description: Kind of resource
+        - id: workerPoolEnvelope.location
+          type: string
+          description: Resource Location
+        - id: workerPoolEnvelope.type
+          type: string
+          description: Resource type
+        - id: workerPoolEnvelope.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link WorkerPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateWorkerPool(resourceGroupName, name,
+        workerPoolName, workerPoolEnvelope, workerPoolEnvelope.workerSizeId,
+        workerPoolEnvelope.computeMode, workerPoolEnvelope.workerSize,
+        workerPoolEnvelope.workerCount, workerPoolEnvelope.instanceNames,
+        workerPoolEnvelope.sku, workerPoolEnvelope.sku.name,
+        workerPoolEnvelope.sku.tier, workerPoolEnvelope.sku.size,
+        workerPoolEnvelope.sku.family, workerPoolEnvelope.sku.capacity,
+        workerPoolEnvelope.id, workerPoolEnvelope.name, workerPoolEnvelope.kind,
+        workerPoolEnvelope.location, workerPoolEnvelope.type,
+        workerPoolEnvelope.tags, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.beginCreateOrUpdateWorkerPool(resourceGroupName, name,
+      workerPoolName, workerPoolEnvelope, workerPoolEnvelope.workerSizeId,
+      workerPoolEnvelope.computeMode, workerPoolEnvelope.workerSize,
+      workerPoolEnvelope.workerCount, workerPoolEnvelope.instanceNames,
+      workerPoolEnvelope.sku, workerPoolEnvelope.sku.name,
+      workerPoolEnvelope.sku.tier, workerPoolEnvelope.sku.size,
+      workerPoolEnvelope.sku.family, workerPoolEnvelope.sku.capacity,
+      workerPoolEnvelope.id, workerPoolEnvelope.name, workerPoolEnvelope.kind,
+      workerPoolEnvelope.location, workerPoolEnvelope.type,
+      workerPoolEnvelope.tags, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~client'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~callback'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~options'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~queryParameters'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~regex'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestUrl'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~httpRequest'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~headerName'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestContent'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestModel'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestModelMapper'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestModel'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~requestContent'
+      - 'HostingEnvironments#beginCreateOrUpdateWorkerPool~serializationError'
+  - uid: 'HostingEnvironments#getWorkerPoolSkus'
+    id: getWorkerPoolSkus
+    parent: HostingEnvironments
+    name: >-
+      getWorkerPoolSkus(resourceGroupName, name, workerPoolName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SkuInfoCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getWorkerPoolSkus(resourceGroupName, name, workerPoolName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getWorkerPoolSkus(resourceGroupName, name,
+      workerPoolName, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getWorkerPoolSkus~client'
+      - 'HostingEnvironments#getWorkerPoolSkus~callback'
+      - 'HostingEnvironments#getWorkerPoolSkus~options'
+      - 'HostingEnvironments#getWorkerPoolSkus~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolSkus~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolSkus~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolSkus~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolSkus~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolSkus~queryParameters'
+      - 'HostingEnvironments#getWorkerPoolSkus~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolSkus~regex'
+      - 'HostingEnvironments#getWorkerPoolSkus~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolSkus~httpRequest'
+      - 'HostingEnvironments#getWorkerPoolSkus~headerName'
+  - uid: 'HostingEnvironments#getWorkerPoolInstanceMetrics'
+    id: getWorkerPoolInstanceMetrics
+    parent: HostingEnvironments
+    name: >-
+      getWorkerPoolInstanceMetrics(resourceGroupName, name, workerPoolName,
+      instance, options, options.details, options.filter, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: instance
+          type: string
+          description: Name of instance in the worker pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.details
+          type: boolean
+          description: Include instance details
+        - id: options.filter
+          type: string
+          description: "Return only usages/metrics specified in\rthe filter. Filter conforms to odata syntax. Example: $filter=(name.value\req 'Metric1' or name.value eq 'Metric2') and startTime eq\r'2014-01-01T00:00:00Z' and endTime eq '2014-12-31T23:59:59Z' and timeGrain\req duration'[Hour|Minute|Day]'."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getWorkerPoolInstanceMetrics(resourceGroupName, name,
+        workerPoolName, instance, options, options.details, options.filter,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getWorkerPoolInstanceMetrics(resourceGroupName, name,
+      workerPoolName, instance, options, options.details, options.filter,
+      options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~client'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~callback'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~options'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~details'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~filter'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~queryParameters'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~regex'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~httpRequest'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetrics~headerName'
+  - uid: 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions'
+    id: getWorkerPoolInstanceMetricDefinitions
+    parent: HostingEnvironments
+    name: >-
+      getWorkerPoolInstanceMetricDefinitions(resourceGroupName, name,
+      workerPoolName, instance, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: workerPoolName
+          type: string
+          description: Name of worker pool
+        - id: instance
+          type: string
+          description: Name of instance in the worker pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getWorkerPoolInstanceMetricDefinitions(resourceGroupName, name,
+        workerPoolName, instance, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getWorkerPoolInstanceMetricDefinitions(resourceGroupName,
+      name, workerPoolName, instance, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~client'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~callback'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~options'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - >-
+        HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~queryParameters
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~regex'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~httpRequest'
+      - 'HostingEnvironments#getWorkerPoolInstanceMetricDefinitions~headerName'
+  - uid: 'HostingEnvironments#getMultiRolePoolInstanceMetrics'
+    id: getMultiRolePoolInstanceMetrics
+    parent: HostingEnvironments
+    name: >-
+      getMultiRolePoolInstanceMetrics(resourceGroupName, name, instance,
+      options, options.details, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: instance
+          type: string
+          description: Name of instance in the multiRole pool
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.details
+          type: boolean
+          description: Include instance details
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getMultiRolePoolInstanceMetrics(resourceGroupName, name,
+        instance, options, options.details, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getMultiRolePoolInstanceMetrics(resourceGroupName,
+      name, instance, options, options.details, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~client'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~callback'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~options'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~details'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~queryParameters'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~regex'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~httpRequest'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetrics~headerName'
+  - uid: 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions'
+    id: getMultiRolePoolInstanceMetricDefinitions
+    parent: HostingEnvironments
+    name: >-
+      getMultiRolePoolInstanceMetricDefinitions(resourceGroupName, name,
+      instance, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: instance
+          type: string
+          description: Name of instance in the multiRole pool&gt;
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getMultiRolePoolInstanceMetricDefinitions(resourceGroupName,
+        name, instance, options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.getMultiRolePoolInstanceMetricDefinitions(resourceGroupName,
+      name, instance, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~client'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~callback'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~options'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~requestUrl'
+      - >-
+        HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~queryParameters
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~requestUrl'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~regex'
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~requestUrl'
+      - >-
+        HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~httpRequest
+      - 'HostingEnvironments#getMultiRolePoolInstanceMetricDefinitions~headerName'
+  - uid: 'HostingEnvironments#suspendHostingEnvironment'
+    id: suspendHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      suspendHostingEnvironment(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function suspendHostingEnvironment(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.suspendHostingEnvironment(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#suspendHostingEnvironment~client'
+      - 'HostingEnvironments#suspendHostingEnvironment~callback'
+      - 'HostingEnvironments#suspendHostingEnvironment~options'
+  - uid: 'HostingEnvironments#beginSuspendHostingEnvironment'
+    id: beginSuspendHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      beginSuspendHostingEnvironment(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginSuspendHostingEnvironment(resourceGroupName, name,
+        options, options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.beginSuspendHostingEnvironment(resourceGroupName,
+      name, options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~client'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~callback'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~options'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~queryParameters'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~regex'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~httpRequest'
+      - 'HostingEnvironments#beginSuspendHostingEnvironment~headerName'
+  - uid: 'HostingEnvironments#resumeHostingEnvironment'
+    id: resumeHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      resumeHostingEnvironment(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function resumeHostingEnvironment(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.resumeHostingEnvironment(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#resumeHostingEnvironment~client'
+      - 'HostingEnvironments#resumeHostingEnvironment~callback'
+      - 'HostingEnvironments#resumeHostingEnvironment~options'
+  - uid: 'HostingEnvironments#beginResumeHostingEnvironment'
+    id: beginResumeHostingEnvironment
+    parent: HostingEnvironments
+    name: >-
+      beginResumeHostingEnvironment(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: name
+          type: string
+          description: Name of hostingEnvironment (App Service Environment)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SiteCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginResumeHostingEnvironment(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      HostingEnvironments.beginResumeHostingEnvironment(resourceGroupName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'HostingEnvironments#beginResumeHostingEnvironment~client'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~callback'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~options'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~queryParameters'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~regex'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~requestUrl'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~httpRequest'
+      - 'HostingEnvironments#beginResumeHostingEnvironment~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

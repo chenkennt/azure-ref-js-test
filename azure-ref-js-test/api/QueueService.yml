@@ -1,0 +1,617 @@
+items:
+  - uid: QueueService
+    id: QueueService
+    name: QueueService
+    summary: "Creates a new QueueService object.\rIf no storageAccount or storageAccessKey are provided, the AZURE_STORAGE_ACCOUNT and AZURE_STORAGE_ACCESS_KEY\renvironment variables will be used."
+    type: Class
+    syntax:
+      content: QueueService
+    fullName: QueueService
+    children:
+      - QueueService~storageServiceSettings
+      - 'QueueService#authenticationProvider'
+      - 'QueueService#getServiceProperties'
+      - 'QueueService#setServiceProperties'
+      - 'QueueService#listQueues'
+      - 'QueueService#createQueue'
+      - 'QueueService#createQueueIfNotExists'
+      - 'QueueService#deleteQueue'
+      - 'QueueService#getQueueMetadata'
+      - 'QueueService#setQueueMetadata'
+      - 'QueueService#createMessage'
+      - 'QueueService#getMessages'
+      - 'QueueService#peekMessages'
+      - 'QueueService#deleteMessage'
+      - 'QueueService#clearMessages'
+      - 'QueueService#updateMessage'
+  - uid: QueueService~storageServiceSettings
+    id: storageServiceSettings
+    parent: QueueService
+    name: storageServiceSettings
+    type: Field
+    syntax:
+      content: storageServiceSettings
+    fullName: QueueService.storageServiceSettings
+  - uid: 'QueueService#authenticationProvider'
+    id: authenticationProvider
+    parent: QueueService
+    name: authenticationProvider
+    type: Field
+    syntax:
+      content: authenticationProvider
+    fullName: QueueService.authenticationProvider
+  - uid: 'QueueService#getServiceProperties'
+    id: getServiceProperties
+    parent: QueueService
+    name: 'getServiceProperties(options, options.timeoutIntervalInMs, callback)'
+    summary: >-
+      Gets the properties of a storage account’s Queue service, including
+      Microsoft Azure Storage Analytics.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `serviceProperties`\r                                                                     will contain the properties and `response`\r                                                                     will contain information related to this operation."
+      content: >-
+        function getServiceProperties(options, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      QueueService.getServiceProperties(options, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'QueueService#getServiceProperties~options'
+      - 'QueueService#getServiceProperties~webResource'
+      - 'QueueService#getServiceProperties~processResponseCallback'
+  - uid: 'QueueService#setServiceProperties'
+    id: setServiceProperties
+    parent: QueueService
+    name: >-
+      setServiceProperties(serviceProperties, options,
+      options.timeoutIntervalInMs, callback)
+    summary: "Sets the properties of a storage account’s Queue service, including Microsoft Azure Storage Analytics.\rYou can also use this operation to set the default request version for all incoming requests that do not have a version specified."
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceProperties
+          type: object
+          description: The service properties.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `response`\r                                                                     will contain information related to this operation."
+      content: >-
+        function setServiceProperties(serviceProperties, options,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.setServiceProperties(serviceProperties, options,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#setServiceProperties~options'
+      - 'QueueService#setServiceProperties~servicePropertiesXml'
+      - 'QueueService#setServiceProperties~webResource'
+      - 'QueueService#setServiceProperties~processResponseCallback'
+  - uid: 'QueueService#listQueues'
+    id: listQueues
+    parent: QueueService
+    name: >-
+      listQueues(options, options.prefix, options.marker, options.maxresults,
+      options.include, options.timeoutIntervalInMs, callback)
+    summary: Lists all queues under the given account.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The listing and request options.
+        - id: options.prefix
+          type: string
+          description: >-
+            Filters the results to return only queues whose name begins with the
+            specified prefix.
+        - id: options.marker
+          type: string
+          description: >-
+            String value that identifies the portion of the list to be returned
+            with the next list operation.
+        - id: options.maxresults
+          type: int
+          description: >-
+            Specifies the maximum number of queues to return per call to Azure
+            storage. This does NOT affect list size returned by this function.
+            (maximum: 5000)
+        - id: options.include
+          type: string
+          description: >-
+            Include this parameter to specify that the queue's metadata be
+            returned as part of the response body. (allowed values: '',
+            'metadata')
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueResults` will contain a list of\r                                                                        queue objects,\r                                                                        and `response` will contain information related to this operation.\r                                                                        If not all queue information could be retrieved,\r                                                                        `nextMarker` will contain a value that can be used\r                                                                        to retrieve the next section of the queue list."
+      content: >-
+        function listQueues(options, options.prefix, options.marker,
+        options.maxresults, options.include, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      QueueService.listQueues(options, options.prefix, options.marker,
+      options.maxresults, options.include, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'QueueService#listQueues~options'
+      - 'QueueService#listQueues~webResource'
+      - 'QueueService#listQueues~self'
+      - 'QueueService#listQueues~processResponseCallback'
+  - uid: 'QueueService#createQueue'
+    id: createQueue
+    parent: QueueService
+    name: >-
+      createQueue(queue, options, options.metadata, options.timeoutIntervalInMs,
+      callback)
+    summary: Creates a new queue under the given account.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: options
+          type: object
+          description: The create and request options.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueResult` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function createQueue(queue, options, options.metadata,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.createQueue(queue, options, options.metadata,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#createQueue~options'
+      - 'QueueService#createQueue~webResource'
+      - 'QueueService#createQueue~processResponseCallback'
+  - uid: 'QueueService#createQueueIfNotExists'
+    id: createQueueIfNotExists
+    parent: QueueService
+    name: >-
+      createQueueIfNotExists(queue, options, options.metadata,
+      options.timeoutIntervalInMs, callback)
+    summary: Creates a new queue under the given account if it doesn't exist.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: options
+          type: object
+          description: The create and request options.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueCreated` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function createQueueIfNotExists(queue, options, options.metadata,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.createQueueIfNotExists(queue, options, options.metadata,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#createQueueIfNotExists~options'
+      - 'QueueService#createQueueIfNotExists~webResource'
+      - 'QueueService#createQueueIfNotExists~processResponseCallback'
+  - uid: 'QueueService#deleteQueue'
+    id: deleteQueue
+    parent: QueueService
+    name: 'deleteQueue(queue, options, options.timeoutIntervalInMs, callback)'
+    summary: Permanently deletes the specified queue.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: options
+          type: object
+          description: The delete and request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `deleted` will contain\r                                                              `true` if the operation was successful.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function deleteQueue(queue, options, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      QueueService.deleteQueue(queue, options, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'QueueService#deleteQueue~options'
+      - 'QueueService#deleteQueue~webResource'
+      - 'QueueService#deleteQueue~processResponseCallback'
+  - uid: 'QueueService#getQueueMetadata'
+    id: getQueueMetadata
+    parent: QueueService
+    name: 'getQueueMetadata(queue, options, options.timeoutIntervalInMs, callback)'
+    summary: 'Returns queue properties, including user-defined metadata.'
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: options
+          type: object
+          description: The get and request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueResult` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function getQueueMetadata(queue, options, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      QueueService.getQueueMetadata(queue, options, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'QueueService#getQueueMetadata~options'
+      - 'QueueService#getQueueMetadata~webResource'
+      - 'QueueService#getQueueMetadata~self'
+      - 'QueueService#getQueueMetadata~processResponseCallback'
+  - uid: 'QueueService#setQueueMetadata'
+    id: setQueueMetadata
+    parent: QueueService
+    name: >-
+      setQueueMetadata(queue, metadata, options, options.timeoutIntervalInMs,
+      callback)
+    summary: >-
+      Sets user-defined metadata on the specified queue. Metadata is associated
+      with the queue as name-value pairs.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options
+          type: object
+          description: The set and request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueResult` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function setQueueMetadata(queue, metadata, options,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.setQueueMetadata(queue, metadata, options,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#setQueueMetadata~options'
+      - 'QueueService#setQueueMetadata~webResource'
+      - 'QueueService#setQueueMetadata~processResponseCallback'
+  - uid: 'QueueService#createMessage'
+    id: createMessage
+    parent: QueueService
+    name: >-
+      createMessage(queue, messageText, options, options.messagettl,
+      options.visibilitytimeout, options.timeoutIntervalInMs, callback)
+    summary: "Adds a new message to the back of the message queue. A visibility timeout can also be specified to make the message\rinvisible until the visibility timeout expires. A message must be in a format that can be included in an XML request\rwith UTF-8 encoding. The encoded message can be up to 64KB in size for versions 2011-08-18 and newer, or 8KB in size\rfor previous versions."
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: messageText
+          type: object
+          description: The message text.
+        - id: options
+          type: object
+          description: The put and request options.
+        - id: options.messagettl
+          type: int
+          description: >-
+            The time-to-live interval for the message, in seconds. The maximum
+            time-to-live allowed is 7 days. If this parameter is omitted, the
+            default time-to-live is 7 days
+        - id: options.visibilitytimeout
+          type: int
+          description: >-
+            Specifies the new visibility timeout value, in seconds, relative to
+            server time. The new value must be larger than or equal to 0, and
+            cannot be larger than 7 days. The visibility timeout of a message
+            cannot be set to a value later than the expiry time.
+            visibilitytimeout should be set to a value smaller than the
+            time-to-live value.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResult` will contain\r                                                                        the result.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function createMessage(queue, messageText, options, options.messagettl,
+        options.visibilitytimeout, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.createMessage(queue, messageText, options,
+      options.messagettl, options.visibilitytimeout,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#createMessage~options'
+      - 'QueueService#createMessage~xmlMessageDescriptor'
+      - 'QueueService#createMessage~webResource'
+      - 'QueueService#createMessage~processResponseCallback'
+  - uid: 'QueueService#getMessages'
+    id: getMessages
+    parent: QueueService
+    name: >-
+      getMessages(queue, options, options.numofmessages, options.peekonly,
+      options.visibilitytimeout, options.timeoutIntervalInMs, callback)
+    summary: >-
+      Retrieves a message from the queue and makes it invisible to other
+      consumers.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: options
+          type: object
+          description: The get and request options.
+        - id: options.numofmessages
+          type: int
+          description: >-
+            A nonzero integer value that specifies the number of messages to
+            retrieve from the queue, up to a maximum of 32. By default, a single
+            message is retrieved from the queue with this operation.
+        - id: options.peekonly
+          type: bool
+          description: >-
+            Boolean value indicating wether the visibility of the message should
+            be changed or not.
+        - id: options.visibilitytimeout
+          type: int
+          description: >-
+            Required if not peek only. Specifies the new visibility timeout
+            value, in seconds, relative to server time. The new value must be
+            larger than or equal to 0, and cannot be larger than 7 days. The
+            visibility timeout of a message can be set to a value later than the
+            expiry time.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResults` will contain\r                                                                        the message.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function getMessages(queue, options, options.numofmessages,
+        options.peekonly, options.visibilitytimeout,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.getMessages(queue, options, options.numofmessages,
+      options.peekonly, options.visibilitytimeout, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'QueueService#getMessages~options'
+      - 'QueueService#getMessages~webResource'
+      - 'QueueService#getMessages~processResponseCallback'
+  - uid: 'QueueService#peekMessages'
+    id: peekMessages
+    parent: QueueService
+    name: >-
+      peekMessages(queue, options, options.numofmessages,
+      options.timeoutIntervalInMs, callback)
+    summary: >-
+      Retrieves a message from the front of the queue, without changing the
+      message visibility.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: options
+          type: object
+          description: The peek and request options.
+        - id: options.numofmessages
+          type: int
+          description: >-
+            A nonzero integer value that specifies the number of messages to
+            retrieve from the queue, up to a maximum of 32. By default, a single
+            message is retrieved from the queue with this operation.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResults` will contain\r                                                                        the message.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function peekMessages(queue, options, options.numofmessages,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.peekMessages(queue, options, options.numofmessages,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#peekMessages~options'
+      - 'QueueService#peekMessages~options'
+  - uid: 'QueueService#deleteMessage'
+    id: deleteMessage
+    parent: QueueService
+    name: >-
+      deleteMessage(queue, messageid, popreceipt, options,
+      options.timeoutIntervalInMs, callback)
+    summary: Deletes a specified message from the queue.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: messageid
+          type: string
+          description: The message identifier of the message to delete.
+        - id: popreceipt
+          type: string
+          description: >-
+            A valid pop receipt value returned from an earlier call to the Get
+            Messages or Update Message operation
+        - id: options
+          type: object
+          description: The delete and request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `successful` will contain\r                                                              `true` if the operation was successful.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function deleteMessage(queue, messageid, popreceipt, options,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.deleteMessage(queue, messageid, popreceipt, options,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#deleteMessage~options'
+      - 'QueueService#deleteMessage~webResource'
+      - 'QueueService#deleteMessage~processResponseCallback'
+  - uid: 'QueueService#clearMessages'
+    id: clearMessages
+    parent: QueueService
+    name: 'clearMessages(queue, options, options.timeoutIntervalInMs, callback)'
+    summary: Clears all messages from the queue.
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: options
+          type: object
+          description: The delete and request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
+      content: >-
+        function clearMessages(queue, options, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      QueueService.clearMessages(queue, options, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'QueueService#clearMessages~options'
+      - 'QueueService#clearMessages~webResource'
+      - 'QueueService#clearMessages~processResponseCallback'
+  - uid: 'QueueService#updateMessage'
+    id: updateMessage
+    parent: QueueService
+    name: >-
+      updateMessage(queue, messageid, popreceipt, visibilitytimeout, options,
+      options.messagetext, options.timeoutIntervalInMs, callback)
+    summary: "Updates the visibility timeout of a message. You can also use this operation to update the contents of a message.\rA message must be in a format that can be included in an XML request with UTF-8 encoding, and the encoded message can be up to 64KB in size."
+    type: Method
+    syntax:
+      parameters:
+        - id: queue
+          type: string
+          description: The queue name.
+        - id: messageid
+          type: string
+          description: The message identifier of the message to update.
+        - id: popreceipt
+          type: string
+          description: >-
+            A valid pop receipt value returned from an earlier call to the Get
+            Messages or Update Message operation
+        - id: visibilitytimeout
+          type: int
+          description: >-
+            Specifies the new visibility timeout value, in seconds, relative to
+            server time. The new value must be larger than or equal to 0, and
+            cannot be larger than 7 days. The visibility timeout of a message
+            can be set to a value later than the expiry time.
+        - id: options
+          type: object
+          description: The delete and request options.
+        - id: options.messagetext
+          type: object
+          description: The new message text.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResult` will contain\r                                                                        the message result information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function updateMessage(queue, messageid, popreceipt, visibilitytimeout,
+        options, options.messagetext, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      QueueService.updateMessage(queue, messageid, popreceipt,
+      visibilitytimeout, options, options.messagetext,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'QueueService#updateMessage~options'
+      - 'QueueService#updateMessage~content'
+      - 'QueueService#updateMessage~content'
+      - 'QueueService#updateMessage~contentLength'
+      - 'QueueService#updateMessage~webResource'
+      - 'QueueService#updateMessage~processResponseCallback'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: int
+    name: int
+    fullName: int
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: bool
+    name: bool
+    fullName: bool
+    isExternal: true

@@ -1,0 +1,894 @@
+items:
+  - uid: HostedServiceOperations~HostedServiceOperations
+    id: HostedServiceOperations
+    parent: HostedServiceOperations
+    name: HostedServiceOperations
+    type: Class
+    syntax:
+      content: HostedServiceOperations
+    fullName: HostedServiceOperations.HostedServiceOperations
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#client'
+      - 'HostedServiceOperations~HostedServiceOperations#addExtension'
+      - 'HostedServiceOperations~HostedServiceOperations#beginAddingExtension'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingExtension'
+      - 'HostedServiceOperations~HostedServiceOperations#checkNameAvailability'
+      - 'HostedServiceOperations~HostedServiceOperations#create'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteAll'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteExtension'
+      - 'HostedServiceOperations~HostedServiceOperations#get'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension'
+      - 'HostedServiceOperations~HostedServiceOperations#list'
+      - 'HostedServiceOperations~HostedServiceOperations#listAvailableExtensions'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensionVersions'
+      - 'HostedServiceOperations~HostedServiceOperations#listPublisherExtensions'
+      - 'HostedServiceOperations~HostedServiceOperations#update'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#client'
+    id: client
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: HostedServiceOperations~HostedServiceOperations.client
+  - uid: 'HostedServiceOperations~HostedServiceOperations#addExtension'
+    id: addExtension
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: >-
+      addExtension(serviceName, parameters, parameters.providerNamespace,
+      parameters.type, parameters.id, parameters.thumbprint,
+      parameters.thumbprintAlgorithm, parameters.publicConfiguration,
+      parameters.privateConfiguration, parameters.version, callback)
+    summary: "The Add Extension operation adds an available extension to your cloud\rservice. In Azure, a process can run as an extension of a cloud service.\rFor example, Remote Desktop Access or the Azure Diagnostics Agent can run\ras extensions to the cloud service. You can find the available extension\rby using the List Available Extensions operation.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: parameters
+          type: HostedServiceAddExtensionParameters
+          description: "Parameters\rsupplied to the Add Extension operation."
+        - id: parameters.providerNamespace
+          type: string
+          description: "The provider namespace of\rthe extension. The provider namespace for Azure extensions is\rMicrosoft.Windows.Azure.Extensions."
+        - id: parameters.type
+          type: string
+          description: The type of the extension.
+        - id: parameters.id
+          type: string
+          description: The identifier of the extension.
+        - id: parameters.thumbprint
+          type: string
+          description: "The thumbprint of the certificate\rthat is used to encrypt the configuration specified in\rPrivateConfiguration. If this element is not specified, a certificate may\rbe automatically generated and added to the cloud service."
+        - id: parameters.thumbprintAlgorithm
+          type: string
+          description: "The thumbprint algorithm\rof the certificate that is used to encrypt the configuration specified in\rPrivateConfiguration."
+        - id: parameters.publicConfiguration
+          type: string
+          description: "The public configuration\rthat is defined using the schema returned by the List Available\rExtensions operation."
+        - id: parameters.privateConfiguration
+          type: string
+          description: "The private\rconfiguration that is defined using the schema returned by the List\rAvailable Extensions operation."
+        - id: parameters.version
+          type: string
+          description: "Specifies the version of the\rextension. If this element is not specified or an asterisk (*) is used as\rthe value, the latest version of the extension is used. If the value is\rspecified with a major version number and an asterisk as the minor\rversion number (X.*), the latest minor version of the specified major\rversion is selected. If a major version number and a minor version number\rare specified (X.Y), the specific extension version is selected. If a\rversion is specified, an auto-upgrade is performed on the role instance."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function addExtension(serviceName, parameters,
+        parameters.providerNamespace, parameters.type, parameters.id,
+        parameters.thumbprint, parameters.thumbprintAlgorithm,
+        parameters.publicConfiguration, parameters.privateConfiguration,
+        parameters.version, callback);
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.addExtension(serviceName,
+      parameters, parameters.providerNamespace, parameters.type, parameters.id,
+      parameters.thumbprint, parameters.thumbprintAlgorithm,
+      parameters.publicConfiguration, parameters.privateConfiguration,
+      parameters.version, callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#addExtension~client2'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#beginAddingExtension'
+    id: beginAddingExtension
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: >-
+      beginAddingExtension(serviceName, parameters,
+      parameters.providerNamespace, parameters.type, parameters.id,
+      parameters.thumbprint, parameters.thumbprintAlgorithm,
+      parameters.publicConfiguration, parameters.privateConfiguration,
+      parameters.version, callback)
+    summary: "The Begin Adding Extension operation adds an available extension to your\rcloud service. In Azure, a process can run as an extension of a cloud\rservice. For example, Remote Desktop Access or the Azure Diagnostics\rAgent can run as extensions to the cloud service. You can find the\ravailable extension by using the List Available Extensions operation.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx\rfor more information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: parameters
+          type: HostedServiceAddExtensionParameters
+          description: "Parameters\rsupplied to the Begin Adding Extension operation."
+        - id: parameters.providerNamespace
+          type: string
+          description: "The provider namespace of\rthe extension. The provider namespace for Azure extensions is\rMicrosoft.Windows.Azure.Extensions."
+        - id: parameters.type
+          type: string
+          description: The type of the extension.
+        - id: parameters.id
+          type: string
+          description: The identifier of the extension.
+        - id: parameters.thumbprint
+          type: string
+          description: "The thumbprint of the certificate\rthat is used to encrypt the configuration specified in\rPrivateConfiguration. If this element is not specified, a certificate may\rbe automatically generated and added to the cloud service."
+        - id: parameters.thumbprintAlgorithm
+          type: string
+          description: "The thumbprint algorithm\rof the certificate that is used to encrypt the configuration specified in\rPrivateConfiguration."
+        - id: parameters.publicConfiguration
+          type: string
+          description: "The public configuration\rthat is defined using the schema returned by the List Available\rExtensions operation."
+        - id: parameters.privateConfiguration
+          type: string
+          description: "The private\rconfiguration that is defined using the schema returned by the List\rAvailable Extensions operation."
+        - id: parameters.version
+          type: string
+          description: "Specifies the version of the\rextension. If this element is not specified or an asterisk (*) is used as\rthe value, the latest version of the extension is used. If the value is\rspecified with a major version number and an asterisk as the minor\rversion number (X.*), the latest minor version of the specified major\rversion is selected. If a major version number and a minor version number\rare specified (X.Y), the specific extension version is selected. If a\rversion is specified, an auto-upgrade is performed on the role instance."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginAddingExtension(serviceName, parameters,
+        parameters.providerNamespace, parameters.type, parameters.id,
+        parameters.thumbprint, parameters.thumbprintAlgorithm,
+        parameters.publicConfiguration, parameters.privateConfiguration,
+        parameters.version, callback);
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.beginAddingExtension(serviceName,
+      parameters, parameters.providerNamespace, parameters.type, parameters.id,
+      parameters.thumbprint, parameters.thumbprintAlgorithm,
+      parameters.publicConfiguration, parameters.privateConfiguration,
+      parameters.version, callback)
+    children:
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~httpRequest
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~requestContent
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~requestDoc
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~extensionElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~providerNameSpaceElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~typeElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~idElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~thumbprintElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~thumbprintAlgorithmElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~publicConfigurationElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~privateConfigurationElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~versionElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginAddingExtension~requestContent
+  - uid: 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll'
+    id: beginDeletingAll
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'beginDeletingAll(serviceName, callback)'
+    summary: "The DeleteAll Hosted Service operation deletes the specified cloud service\ras well as operating system disk, attached data disks, and the source\rblobs for the disks from storage from Microsoft Azure. (see\r'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginDeletingAll(serviceName, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.beginDeletingAll(serviceName,
+      callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingAll~queryParameters
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#beginDeletingAll~url2'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingAll~httpRequest
+  - uid: 'HostedServiceOperations~HostedServiceOperations#beginDeletingExtension'
+    id: beginDeletingExtension
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'beginDeletingExtension(serviceName, extensionId, callback)'
+    summary: "The Begin Deleting Extension operation deletes the specified extension\rfrom a cloud service.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: extensionId
+          type: string
+          description: "The identifier that was assigned to the\rextension when it was added to the cloud service"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginDeletingExtension(serviceName, extensionId, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.beginDeletingExtension(serviceName,
+      extensionId, callback)
+    children:
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#beginDeletingExtension~httpRequest
+  - uid: 'HostedServiceOperations~HostedServiceOperations#checkNameAvailability'
+    id: checkNameAvailability
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'checkNameAvailability(serviceName, callback)'
+    summary: "The Check Hosted Service Name Availability operation checks for the\ravailability of the specified cloud service name.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: "The cloud service name that you would like to\ruse."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function checkNameAvailability(serviceName, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.checkNameAvailability(serviceName,
+      callback)
+    children:
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#checkNameAvailability~httpRequest
+  - uid: 'HostedServiceOperations~HostedServiceOperations#create'
+    id: create
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: >-
+      create(parameters, parameters.serviceName, parameters.label,
+      parameters.description, parameters.location, parameters.affinityGroup,
+      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+    summary: "The Create Hosted Service operation creates a new cloud service in Azure.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx\rfor more information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: HostedServiceCreateParameters
+          description: "Parameters supplied to\rthe Create Hosted Service operation."
+        - id: parameters.serviceName
+          type: string
+          description: "A name for the cloud service that\ris unique within Azure. This name is the DNS prefix name and can be used\rto access the service."
+        - id: parameters.label
+          type: string
+          description: "A name for the cloud service. The name\rcan be up to 100 characters in length. The name can be used to identify\rthe storage account for your tracking purposes."
+        - id: parameters.description
+          type: string
+          description: "A description for the cloud\rservice. The description can be up to 1024 characters in length."
+        - id: parameters.location
+          type: string
+          description: "The location where the cloud service\rwill be created. Required if AffinityGroup is not specified. Specify\reither Location or AffinityGroup, but not both. To list available\rlocations, use the List Locations operation."
+        - id: parameters.affinityGroup
+          type: string
+          description: "The name of an existing\raffinity group associated with this subscription. Required if Location is\rnot specified. This name is a GUID and can be retrieved by examining the\rname element of the response body returned by the List Affinity Groups\roperation. Specify either Location or AffinityGroup, but not both. To\rlist available affinity groups, use the List Affinity Groups operation."
+        - id: parameters.extendedProperties
+          type: object
+          description: "Represents the name of an\rextended cloud service property. Each extended property must have a\rdefined name and a value. You can have a maximum of 50 extended property\rname and value pairs. The maximum length of the name element is 64\rcharacters, only alphanumeric characters and underscores are valid in the\rname, and it must start with a letter. Attempting to use other\rcharacters, starting with a non-letter character, or entering a name that\ris identical to that of another extended property owned by the same\rservice will result in a status code 400 (Bad Request) error. Each\rextended property value has a maximum length of 255 characters."
+        - id: parameters.reverseDnsFqdn
+          type: string
+          description: "Dns address to which the cloud\rservice's IP address resolves when queried using a reverse Dns query."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.serviceName, parameters.label,
+        parameters.description, parameters.location, parameters.affinityGroup,
+        parameters.extendedProperties, parameters.reverseDnsFqdn, callback);
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.create(parameters,
+      parameters.serviceName, parameters.label, parameters.description,
+      parameters.location, parameters.affinityGroup,
+      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#create~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#create~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#create~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#create~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#create~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#create~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#create~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#create~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#create~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#create~httpRequest'
+      - 'HostedServiceOperations~HostedServiceOperations#create~requestContent'
+      - 'HostedServiceOperations~HostedServiceOperations#create~requestDoc'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~createHostedServiceElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~serviceNameElement
+      - 'HostedServiceOperations~HostedServiceOperations#create~labelElement'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~descriptionElement
+      - 'HostedServiceOperations~HostedServiceOperations#create~locationElement'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~affinityGroupElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~extendedPropertiesDictionaryElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~extendedPropertiesKey
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~extendedPropertiesValue
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~extendedPropertiesElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~extendedPropertiesKeyElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~extendedPropertiesValueElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#create~reverseDnsFqdnElement
+      - 'HostedServiceOperations~HostedServiceOperations#create~requestContent'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#deleteMethod'
+    id: deleteMethod
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'deleteMethod(serviceName, callback)'
+    summary: "The Delete Hosted Service operation deletes the specified cloud service\rfrom Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(serviceName, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.deleteMethod(serviceName,
+      callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#deleteMethod~httpRequest'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#deleteAll'
+    id: deleteAll
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'deleteAll(serviceName, callback)'
+    summary: "The DeleteAll Hosted Service operation deletes the specified cloud service\ras well as operating system disk, attached data disks, and the source\rblobs for the disks from storage from Microsoft Azure. (see\r'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteAll(serviceName, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.deleteAll(serviceName,
+      callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#deleteAll~client2'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#deleteExtension'
+    id: deleteExtension
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'deleteExtension(serviceName, extensionId, callback)'
+    summary: "The Delete Extension operation deletes the specified extension from a\rcloud service.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: extensionId
+          type: string
+          description: "The identifier that was assigned to the\rextension when it was added to the cloud service"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteExtension(serviceName, extensionId, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.deleteExtension(serviceName,
+      extensionId, callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#deleteExtension~client2'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#get'
+    id: get
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'get(serviceName, callback)'
+    summary: "The Get Hosted Service Properties operation retrieves system properties\rfor the specified cloud service. These properties include the service\rname and service type; and the name of the affinity group to which the\rservice belongs, or its location if it is not part of an affinity group.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx\rfor more information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(serviceName, callback);'
+    fullName: 'HostedServiceOperations~HostedServiceOperations.get(serviceName, callback)'
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#get~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#get~httpRequest'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#getDetailed'
+    id: getDetailed
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'getDetailed(serviceName, callback)'
+    summary: "The Get Detailed Hosted Service Properties operation retrieves system\rproperties for the specified cloud service. These properties include the\rservice name and service type; the name of the affinity group to which\rthe service belongs, or its location if it is not part of an affinity\rgroup; and information on the deployments of the service.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getDetailed(serviceName, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.getDetailed(serviceName,
+      callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#getDetailed~queryParameters
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getDetailed~httpRequest'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#getExtension'
+    id: getExtension
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'getExtension(serviceName, extensionId, callback)'
+    summary: "The Get Extension operation retrieves information about a specified\rextension that was added to a cloud service.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: extensionId
+          type: string
+          description: "The identifier that was assigned to the\rextension when it was added to the cloud service"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getExtension(serviceName, extensionId, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.getExtension(serviceName,
+      extensionId, callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#getExtension~httpRequest'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#list'
+    id: list
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: list(callback)
+    summary: "The List Hosted Services operation lists the cloud services available\runder the current subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: HostedServiceOperations~HostedServiceOperations.list(callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#list~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#list~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#list~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#list~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#list~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#list~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#list~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#list~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#list~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#list~httpRequest'
+  - uid: 'HostedServiceOperations~HostedServiceOperations#listAvailableExtensions'
+    id: listAvailableExtensions
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: listAvailableExtensions(callback)
+    summary: "The List Available Extensions operation lists the extensions that are\ravailable to add to your cloud service. In Windows Azure, a process can\rrun as an extension of a cloud service. For example, Remote Desktop\rAccess or the Azure Diagnostics Agent can run as extensions to the cloud\rservice.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function listAvailableExtensions(callback);
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.listAvailableExtensions(callback)
+    children:
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listAvailableExtensions~httpRequest
+  - uid: 'HostedServiceOperations~HostedServiceOperations#listExtensions'
+    id: listExtensions
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'listExtensions(serviceName, callback)'
+    summary: "The List Extensions operation lists all of the extensions that were added\rto a cloud service.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listExtensions(serviceName, callback);'
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.listExtensions(serviceName,
+      callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#listExtensions~url2'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensions~httpRequest
+  - uid: 'HostedServiceOperations~HostedServiceOperations#listExtensionVersions'
+    id: listExtensionVersions
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: 'listExtensionVersions(providerNamespace, extensionType, callback)'
+    summary: "The List Extension Versions operation lists the versions of an extension\rthat are available to add to a cloud service. In Azure, a process can run\ras an extension of a cloud service. For example, Remote Desktop Access or\rthe Azure Diagnostics Agent can run as extensions to the cloud service.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx\rfor more information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: providerNamespace
+          type: string
+          description: The provider namespace.
+        - id: extensionType
+          type: string
+          description: The extension type name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function listExtensionVersions(providerNamespace, extensionType,
+        callback);
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.listExtensionVersions(providerNamespace,
+      extensionType, callback)
+    children:
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listExtensionVersions~httpRequest
+  - uid: 'HostedServiceOperations~HostedServiceOperations#listPublisherExtensions'
+    id: listPublisherExtensions
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: listPublisherExtensions(callback)
+    summary: "The List Available Extensions operation lists the extensions that are\ravailable to add to your cloud service. In Windows Azure, a process can\rrun as an extension of a cloud service. For example, Remote Desktop\rAccess or the Azure Diagnostics Agent can run as extensions to the cloud\rservice.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function listPublisherExtensions(callback);
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.listPublisherExtensions(callback)
+    children:
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~baseUrl
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~url2
+      - >-
+        HostedServiceOperations~HostedServiceOperations#listPublisherExtensions~httpRequest
+  - uid: 'HostedServiceOperations~HostedServiceOperations#update'
+    id: update
+    parent: HostedServiceOperations~HostedServiceOperations
+    name: >-
+      update(serviceName, parameters, parameters.label, parameters.description,
+      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+    summary: "The Update Hosted Service operation can update the label or description of\ra cloud service in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the cloud service.
+        - id: parameters
+          type: HostedServiceUpdateParameters
+          description: "Parameters supplied to\rthe Update Hosted Service operation."
+        - id: parameters.label
+          type: string
+          description: "A name for the cloud service. The name\rmay be up to 100 characters in length. You must specify a value for at\rleast one of Label or Description. It is recommended that the label be\runique within the subscription. The name can be used identify the service\rfor your tracking purposes."
+        - id: parameters.description
+          type: string
+          description: "A description for the cloud\rservice. The description may be up to 1024 characters in length. You must\rspecify a value for at least one of Label or Description."
+        - id: parameters.extendedProperties
+          type: object
+          description: "Represents the name of an\rextended cloud service property. Each extended property must have a\rdefined name and a value. You can have a maximum of 50 extended property\rname and value pairs. The maximum length of the name element is 64\rcharacters, only alphanumeric characters and underscores are valid in the\rname, and it must start with a letter. Attempting to use other\rcharacters, starting with a non-letter character, or entering a name that\ris identical to that of another extended property owned by the same\rservice will result in a status code 400 (Bad Request) error. Each\rextended property value has a maximum length of 255 characters."
+        - id: parameters.reverseDnsFqdn
+          type: string
+          description: "Dns address to which the cloud\rservice's IP address resolves when queried using a reverse Dns query."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(serviceName, parameters, parameters.label,
+        parameters.description, parameters.extendedProperties,
+        parameters.reverseDnsFqdn, callback);
+    fullName: >-
+      HostedServiceOperations~HostedServiceOperations.update(serviceName,
+      parameters, parameters.label, parameters.description,
+      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+    children:
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#update~baseUrl'
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~url2'
+      - 'HostedServiceOperations~HostedServiceOperations#update~httpRequest'
+      - 'HostedServiceOperations~HostedServiceOperations#update~requestContent'
+      - 'HostedServiceOperations~HostedServiceOperations#update~requestDoc'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~updateHostedServiceElement
+      - 'HostedServiceOperations~HostedServiceOperations#update~labelElement'
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~descriptionElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~reverseDnsFqdnElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~extendedPropertiesDictionaryElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~extendedPropertiesKey
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~extendedPropertiesValue
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~extendedPropertiesElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~extendedPropertiesKeyElement
+      - >-
+        HostedServiceOperations~HostedServiceOperations#update~extendedPropertiesValueElement
+      - 'HostedServiceOperations~HostedServiceOperations#update~requestContent'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: HostedServiceAddExtensionParameters
+    name: HostedServiceAddExtensionParameters
+    fullName: HostedServiceAddExtensionParameters
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: HostedServiceCreateParameters
+    name: HostedServiceCreateParameters
+    fullName: HostedServiceCreateParameters
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: HostedServiceUpdateParameters
+    name: HostedServiceUpdateParameters
+    fullName: HostedServiceUpdateParameters
+    isExternal: true

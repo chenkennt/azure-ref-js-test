@@ -1,0 +1,619 @@
+items:
+  - uid: WebsiteManagementService
+    id: WebsiteManagementService
+    name: WebsiteManagementService
+    summary: Creates a new WebsiteManagementService object.
+    type: Class
+    syntax:
+      content: WebsiteManagementService
+    fullName: WebsiteManagementService
+    children:
+      - WebsiteManagementService~settings
+      - 'WebsiteManagementService#apiversion'
+      - 'WebsiteManagementService#subscriptionId'
+      - 'WebsiteManagementService#listWebspaces'
+      - 'WebsiteManagementService#listGeoRegions'
+      - 'WebsiteManagementService#listPublishingUsers'
+      - 'WebsiteManagementService#listDNSSuffix'
+      - 'WebsiteManagementService#createPublishingUser'
+      - 'WebsiteManagementService#listSites'
+      - 'WebsiteManagementService#getSite'
+      - 'WebsiteManagementService#createSite'
+      - 'WebsiteManagementService#deleteSite'
+      - 'WebsiteManagementService#updateSite'
+      - 'WebsiteManagementService#getSiteConfiguration'
+      - 'WebsiteManagementService#updateSiteConfiguration'
+      - 'WebsiteManagementService#createServerFarm'
+      - 'WebsiteManagementService#updateServerFarm'
+      - 'WebsiteManagementService#getServerFarm'
+      - 'WebsiteManagementService#createSiteRepository'
+      - 'WebsiteManagementService#deleteSiteRepository'
+      - 'WebsiteManagementService#syncSiteRepository'
+      - 'WebsiteManagementService#_makePath'
+  - uid: WebsiteManagementService~settings
+    id: settings
+    parent: WebsiteManagementService
+    name: settings
+    type: Field
+    syntax:
+      content: settings
+    fullName: WebsiteManagementService.settings
+  - uid: 'WebsiteManagementService#apiversion'
+    id: apiversion
+    parent: WebsiteManagementService
+    name: apiversion
+    type: Field
+    syntax:
+      content: apiversion
+    fullName: WebsiteManagementService.apiversion
+  - uid: 'WebsiteManagementService#subscriptionId'
+    id: subscriptionId
+    parent: WebsiteManagementService
+    name: subscriptionId
+    type: Field
+    syntax:
+      content: subscriptionId
+    fullName: WebsiteManagementService.subscriptionId
+  - uid: 'WebsiteManagementService#listWebspaces'
+    id: listWebspaces
+    parent: WebsiteManagementService
+    name: listWebspaces(callback)
+    summary: Lists the available webspaces.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `results` will contain\r                                                      the list of webspaces.\r                                                      `response` will contain information related to this operation."
+      content: function listWebspaces(callback);
+    fullName: WebsiteManagementService.listWebspaces(callback)
+    children:
+      - 'WebsiteManagementService#listWebspaces~webResource'
+  - uid: 'WebsiteManagementService#listGeoRegions'
+    id: listGeoRegions
+    parent: WebsiteManagementService
+    name: listGeoRegions(callback)
+    summary: >-
+      Lists the available geographic regions that are available for hosting web
+      sites.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `results` will contain\r                                                      the list of regions.\r                                                      `response` will contain information related to this operation."
+      content: function listGeoRegions(callback);
+    fullName: WebsiteManagementService.listGeoRegions(callback)
+    children:
+      - 'WebsiteManagementService#listGeoRegions~webResource'
+  - uid: 'WebsiteManagementService#listPublishingUsers'
+    id: listPublishingUsers
+    parent: WebsiteManagementService
+    name: listPublishingUsers(callback)
+    summary: Lists the available publishing users.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `results` will contain\r                                                      the list of users.\r                                                      `response` will contain information related to this operation."
+      content: function listPublishingUsers(callback);
+    fullName: WebsiteManagementService.listPublishingUsers(callback)
+    children:
+      - 'WebsiteManagementService#listPublishingUsers~webResource'
+  - uid: 'WebsiteManagementService#listDNSSuffix'
+    id: listDNSSuffix
+    parent: WebsiteManagementService
+    name: listDNSSuffix(callback)
+    summary: lists the DNS suffix.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `results` will contain\r                                                      the DNS suffix information.\r                                                      `response` will contain information related to this operation."
+      content: function listDNSSuffix(callback);
+    fullName: WebsiteManagementService.listDNSSuffix(callback)
+    children:
+      - 'WebsiteManagementService#listDNSSuffix~webResource'
+  - uid: 'WebsiteManagementService#createPublishingUser'
+    id: createPublishingUser
+    parent: WebsiteManagementService
+    name: 'createPublishingUser(username, password, options, options.name, callback)'
+    summary: Creates a new publishing user.
+    type: Method
+    syntax:
+      parameters:
+        - id: username
+          type: string
+          description: The publishing user username.
+        - id: password
+          type: string
+          description: The publishing user password.
+        - id: options
+          type: object
+          description: The options.
+        - id: options.name
+          type: int
+          description: The publishing user name.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: >-
+        function createPublishingUser(username, password, options, options.name,
+        callback);
+    fullName: >-
+      WebsiteManagementService.createPublishingUser(username, password, options,
+      options.name, callback)
+    children:
+      - 'WebsiteManagementService#createPublishingUser~options'
+      - 'WebsiteManagementService#createPublishingUser~callback'
+      - 'WebsiteManagementService#createPublishingUser~options'
+      - 'WebsiteManagementService#createPublishingUser~publishingUser'
+      - 'WebsiteManagementService#createPublishingUser~publishingUserXml'
+      - 'WebsiteManagementService#createPublishingUser~webResource'
+  - uid: 'WebsiteManagementService#listSites'
+    id: listSites
+    parent: WebsiteManagementService
+    name: 'listSites(webspaceName, options, options.propertiesToInclude, callback)'
+    summary: Retrieves the existing websites.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: options
+          type: object
+          description: The options.
+        - id: options.propertiesToInclude
+          type: array
+          description: The properties to include.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                            if an error occurs; otherwise `results` will contain\r                                                            the list of web sites.\r                                                            `response` will contain information related to this operation."
+      content: >-
+        function listSites(webspaceName, options, options.propertiesToInclude,
+        callback);
+    fullName: >-
+      WebsiteManagementService.listSites(webspaceName, options,
+      options.propertiesToInclude, callback)
+    children:
+      - 'WebsiteManagementService#listSites~options'
+      - 'WebsiteManagementService#listSites~callback'
+      - 'WebsiteManagementService#listSites~options'
+      - 'WebsiteManagementService#listSites~webResource'
+  - uid: 'WebsiteManagementService#getSite'
+    id: getSite
+    parent: WebsiteManagementService
+    name: >-
+      getSite(webspaceName, siteName, options, options.propertiesToInclude,
+      callback)
+    summary: Retrieves the existing web site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: options.propertiesToInclude
+          type: array
+          description: The properties to include.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                      if an error occurs; otherwise `results` will contain\r                                                                      the the web site information.\r                                                                      `response` will contain information related to this operation."
+      content: >-
+        function getSite(webspaceName, siteName, options,
+        options.propertiesToInclude, callback);
+    fullName: >-
+      WebsiteManagementService.getSite(webspaceName, siteName, options,
+      options.propertiesToInclude, callback)
+    children:
+      - 'WebsiteManagementService#getSite~options'
+      - 'WebsiteManagementService#getSite~callback'
+      - 'WebsiteManagementService#getSite~options'
+      - 'WebsiteManagementService#getSite~webResource'
+  - uid: 'WebsiteManagementService#createSite'
+    id: createSite
+    parent: WebsiteManagementService
+    name: >-
+      createSite(webspaceName, siteName, options, options.propertiesToInclude,
+      callback)
+    summary: Creates a new website.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: options.propertiesToInclude
+          type: array
+          description: The properties to include.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                            if an error occurs; otherwise `results` will contain\r                                                            the new site information.\r                                                            `response` will contain information related to this operation."
+      content: >-
+        function createSite(webspaceName, siteName, options,
+        options.propertiesToInclude, callback);
+    fullName: >-
+      WebsiteManagementService.createSite(webspaceName, siteName, options,
+      options.propertiesToInclude, callback)
+    children:
+      - 'WebsiteManagementService#createSite~options'
+      - 'WebsiteManagementService#createSite~callback'
+      - 'WebsiteManagementService#createSite~options'
+      - 'WebsiteManagementService#createSite~siteXml'
+      - 'WebsiteManagementService#createSite~webResource'
+  - uid: 'WebsiteManagementService#deleteSite'
+    id: deleteSite
+    parent: WebsiteManagementService
+    name: 'deleteSite(webspaceName, siteName, options, callback)'
+    summary: Deletes a website.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                               if an error occurs; otherwise `response` will contain information related to this operation."
+      content: 'function deleteSite(webspaceName, siteName, options, callback);'
+    fullName: >-
+      WebsiteManagementService.deleteSite(webspaceName, siteName, options,
+      callback)
+    children:
+      - 'WebsiteManagementService#deleteSite~options'
+      - 'WebsiteManagementService#deleteSite~callback'
+      - 'WebsiteManagementService#deleteSite~options'
+      - 'WebsiteManagementService#deleteSite~webResource'
+  - uid: 'WebsiteManagementService#updateSite'
+    id: updateSite
+    parent: WebsiteManagementService
+    name: >-
+      updateSite(webspaceName, siteName, options, options.propertiesToInclude,
+      callback)
+    summary: Updates an existing web site.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: options.propertiesToInclude
+          type: array
+          description: The properties to include.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                            if an error occurs; otherwise `results` will contain\r                                                            the updated web site information.\r                                                            `response` will contain information related to this operation."
+      content: >-
+        function updateSite(webspaceName, siteName, options,
+        options.propertiesToInclude, callback);
+    fullName: >-
+      WebsiteManagementService.updateSite(webspaceName, siteName, options,
+      options.propertiesToInclude, callback)
+    children:
+      - 'WebsiteManagementService#updateSite~options'
+      - 'WebsiteManagementService#updateSite~callback'
+      - 'WebsiteManagementService#updateSite~options'
+      - 'WebsiteManagementService#updateSite~siteXml'
+      - 'WebsiteManagementService#updateSite~webResource'
+  - uid: 'WebsiteManagementService#getSiteConfiguration'
+    id: getSiteConfiguration
+    parent: WebsiteManagementService
+    name: 'getSiteConfiguration(webspaceName, siteName, options, callback)'
+    summary: Retrieves a site configuration.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `results` will contain\r                                                      the site configuration.\r                                                      `response` will contain information related to this operation."
+      content: >-
+        function getSiteConfiguration(webspaceName, siteName, options,
+        callback);
+    fullName: >-
+      WebsiteManagementService.getSiteConfiguration(webspaceName, siteName,
+      options, callback)
+    children:
+      - 'WebsiteManagementService#getSiteConfiguration~options'
+      - 'WebsiteManagementService#getSiteConfiguration~callback'
+      - 'WebsiteManagementService#getSiteConfiguration~options'
+      - 'WebsiteManagementService#getSiteConfiguration~webResource'
+  - uid: 'WebsiteManagementService#updateSiteConfiguration'
+    id: updateSiteConfiguration
+    parent: WebsiteManagementService
+    name: 'updateSiteConfiguration(webspaceName, siteName, options, callback)'
+    summary: Updates a site configuration.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: >-
+        function updateSiteConfiguration(webspaceName, siteName, options,
+        callback);
+    fullName: >-
+      WebsiteManagementService.updateSiteConfiguration(webspaceName, siteName,
+      options, callback)
+    children:
+      - 'WebsiteManagementService#updateSiteConfiguration~options'
+      - 'WebsiteManagementService#updateSiteConfiguration~callback'
+      - 'WebsiteManagementService#updateSiteConfiguration~options'
+      - 'WebsiteManagementService#updateSiteConfiguration~website'
+      - 'WebsiteManagementService#updateSiteConfiguration~websiteXml'
+      - 'WebsiteManagementService#updateSiteConfiguration~webResource'
+  - uid: 'WebsiteManagementService#createServerFarm'
+    id: createServerFarm
+    parent: WebsiteManagementService
+    name: >-
+      createServerFarm(webspaceName, serverFarmName, numberOfWorkers,
+      workerSize, options, callback)
+    summary: Creates a new server farm.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: serverFarmName
+          type: string
+          description: The server farm name.
+        - id: numberOfWorkers
+          type: string
+          description: The number of workers.
+        - id: workerSize
+          type: string
+          description: The worker size.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: >-
+        function createServerFarm(webspaceName, serverFarmName, numberOfWorkers,
+        workerSize, options, callback);
+    fullName: >-
+      WebsiteManagementService.createServerFarm(webspaceName, serverFarmName,
+      numberOfWorkers, workerSize, options, callback)
+    children:
+      - 'WebsiteManagementService#createServerFarm~options'
+      - 'WebsiteManagementService#createServerFarm~callback'
+      - 'WebsiteManagementService#createServerFarm~options'
+      - 'WebsiteManagementService#createServerFarm~serverFarm'
+      - 'WebsiteManagementService#createServerFarm~serverFarmXml'
+      - 'WebsiteManagementService#createServerFarm~webResource'
+  - uid: 'WebsiteManagementService#updateServerFarm'
+    id: updateServerFarm
+    parent: WebsiteManagementService
+    name: >-
+      updateServerFarm(webspaceName, serverFarmName, numberOfWorkers,
+      workerSize, options, callback)
+    summary: Updates a server farm.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: serverFarmName
+          type: string
+          description: The server farm name.
+        - id: numberOfWorkers
+          type: string
+          description: The number of workers.
+        - id: workerSize
+          type: string
+          description: The worker size.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: >-
+        function updateServerFarm(webspaceName, serverFarmName, numberOfWorkers,
+        workerSize, options, callback);
+    fullName: >-
+      WebsiteManagementService.updateServerFarm(webspaceName, serverFarmName,
+      numberOfWorkers, workerSize, options, callback)
+    children:
+      - 'WebsiteManagementService#updateServerFarm~options'
+      - 'WebsiteManagementService#updateServerFarm~callback'
+      - 'WebsiteManagementService#updateServerFarm~options'
+      - 'WebsiteManagementService#updateServerFarm~serverFarm'
+      - 'WebsiteManagementService#updateServerFarm~serverFarmXml'
+      - 'WebsiteManagementService#updateServerFarm~webResource'
+  - uid: 'WebsiteManagementService#getServerFarm'
+    id: getServerFarm
+    parent: WebsiteManagementService
+    name: 'getServerFarm(webspaceName, serverFarmName, options, callback)'
+    summary: Retrieves a server farm.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: serverFarmName
+          type: string
+          description: The server farm name.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: 'function getServerFarm(webspaceName, serverFarmName, options, callback);'
+    fullName: >-
+      WebsiteManagementService.getServerFarm(webspaceName, serverFarmName,
+      options, callback)
+    children:
+      - 'WebsiteManagementService#getServerFarm~options'
+      - 'WebsiteManagementService#getServerFarm~callback'
+      - 'WebsiteManagementService#getServerFarm~options'
+      - 'WebsiteManagementService#getServerFarm~webResource'
+  - uid: 'WebsiteManagementService#createSiteRepository'
+    id: createSiteRepository
+    parent: WebsiteManagementService
+    name: 'createSiteRepository(webspaceName, siteName, options, callback)'
+    summary: Creates a website repository.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: >-
+        function createSiteRepository(webspaceName, siteName, options,
+        callback);
+    fullName: >-
+      WebsiteManagementService.createSiteRepository(webspaceName, siteName,
+      options, callback)
+    children:
+      - 'WebsiteManagementService#createSiteRepository~options'
+      - 'WebsiteManagementService#createSiteRepository~callback'
+      - 'WebsiteManagementService#createSiteRepository~options'
+      - 'WebsiteManagementService#createSiteRepository~webResource'
+  - uid: 'WebsiteManagementService#deleteSiteRepository'
+    id: deleteSiteRepository
+    parent: WebsiteManagementService
+    name: 'deleteSiteRepository(webspaceName, siteName, options, callback)'
+    summary: Deletes a website repository.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: >-
+        function deleteSiteRepository(webspaceName, siteName, options,
+        callback);
+    fullName: >-
+      WebsiteManagementService.deleteSiteRepository(webspaceName, siteName,
+      options, callback)
+    children:
+      - 'WebsiteManagementService#deleteSiteRepository~options'
+      - 'WebsiteManagementService#deleteSiteRepository~callback'
+      - 'WebsiteManagementService#deleteSiteRepository~options'
+      - 'WebsiteManagementService#deleteSiteRepository~webResource'
+  - uid: 'WebsiteManagementService#syncSiteRepository'
+    id: syncSiteRepository
+    parent: WebsiteManagementService
+    name: 'syncSiteRepository(webspaceName, siteName, options, callback)'
+    summary: Sync a website repository.
+    type: Method
+    syntax:
+      parameters:
+        - id: webspaceName
+          type: string
+          description: The webspace name.
+        - id: siteName
+          type: string
+          description: The site name.
+        - id: options
+          type: object
+          description: The options.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      content: 'function syncSiteRepository(webspaceName, siteName, options, callback);'
+    fullName: >-
+      WebsiteManagementService.syncSiteRepository(webspaceName, siteName,
+      options, callback)
+    children:
+      - 'WebsiteManagementService#syncSiteRepository~options'
+      - 'WebsiteManagementService#syncSiteRepository~callback'
+      - 'WebsiteManagementService#syncSiteRepository~options'
+      - 'WebsiteManagementService#syncSiteRepository~webResource'
+  - uid: 'WebsiteManagementService#_makePath'
+    id: _makePath
+    parent: WebsiteManagementService
+    name: _makePath()
+    type: Method
+    syntax:
+      content: function _makePath();
+    fullName: WebsiteManagementService._makePath()
+references:
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: int
+    name: int
+    fullName: int
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

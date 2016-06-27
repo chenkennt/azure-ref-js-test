@@ -1,0 +1,4082 @@
+items:
+  - uid: BlobService
+    id: BlobService
+    name: BlobService
+    summary: "Creates a new BlobService object.\rIf no storageaccount or storageaccesskey are provided,\rthe AZURE_STORAGE_ACCOUNT and AZURE_STORAGE_ACCESS_KEY environment variables will be used."
+    type: Class
+    syntax:
+      content: BlobService
+    fullName: BlobService
+    children:
+      - BlobService~storageServiceSettings
+      - 'BlobService#apiVersion'
+      - 'BlobService#authenticationProvider'
+      - 'BlobService#sharedAccessSignatureCredentials'
+      - 'BlobService#singleBlobPutThresholdInBytes'
+      - 'BlobService#writeBlockSizeInBytes'
+      - 'BlobService#pipeline'
+      - 'BlobService#getServiceProperties'
+      - 'BlobService#setServiceProperties'
+      - 'BlobService#listContainers'
+      - 'BlobService#createContainer'
+      - 'BlobService#createContainerIfNotExists'
+      - 'BlobService#getContainerProperties'
+      - 'BlobService#getContainerMetadata'
+      - 'BlobService#setContainerMetadata'
+      - 'BlobService#getContainerAcl'
+      - 'BlobService#setContainerAcl'
+      - 'BlobService#deleteContainer'
+      - 'BlobService#listBlobs'
+      - 'BlobService#createPageBlob'
+      - 'BlobService#putBlockBlobFromFile'
+      - 'BlobService#putBlockBlobFromStream'
+      - 'BlobService#createBlockBlobFromText'
+      - 'BlobService#getBlobProperties'
+      - 'BlobService#getBlobMetadata'
+      - 'BlobService#setBlobProperties'
+      - 'BlobService#setBlobMetadata'
+      - 'BlobService#getBlob'
+      - 'BlobService#getBlobToFile'
+      - 'BlobService#getBlobToStream'
+      - 'BlobService#getBlobToText'
+      - 'BlobService#deleteBlob'
+      - 'BlobService#createBlobSnapshot'
+      - 'BlobService#copyBlob'
+      - 'BlobService#abortCopyBlob'
+      - 'BlobService#statusOfCopyBlob'
+      - 'BlobService#acquireLease'
+      - 'BlobService#renewLease'
+      - 'BlobService#releaseLease'
+      - 'BlobService#breakLease'
+      - 'BlobService#clearBlobPages'
+      - 'BlobService#createBlobPagesFromStream'
+      - 'BlobService#createBlobPagesFromText'
+      - 'BlobService#listBlobRegions'
+      - 'BlobService#createBlobBlockFromText'
+      - 'BlobService#createBlobBlockFromStream'
+      - 'BlobService#commitBlobBlocks'
+      - 'BlobService#listBlobBlocks'
+      - 'BlobService#generateSharedAccessSignature'
+      - 'BlobService#getBlobUrl'
+      - 'BlobService#_leaseBlobImpl'
+      - 'BlobService#_updatePageBlobPagesImpl'
+      - 'BlobService#createBlob'
+      - 'BlobService#createBlockBlobFromFile'
+      - 'BlobService#createBlockBlobFromStream'
+      - 'BlobService#generateBlockIdPrefix'
+      - 'BlobService#getBlockId'
+      - 'BlobService#_getBlobToFile'
+      - 'BlobService#createPageBlobFromFile'
+      - 'BlobService#createPageBlobFromStream'
+      - 'BlobService#_createBlobFromStream'
+      - 'BlobService#_createBlobFromChunkStream'
+      - BlobService.SpeedSummary
+  - uid: BlobService~storageServiceSettings
+    id: storageServiceSettings
+    parent: BlobService
+    name: storageServiceSettings
+    type: Field
+    syntax:
+      content: storageServiceSettings
+    fullName: BlobService.storageServiceSettings
+  - uid: 'BlobService#apiVersion'
+    id: apiVersion
+    parent: BlobService
+    name: apiVersion
+    type: Field
+    syntax:
+      content: apiVersion
+    fullName: BlobService.apiVersion
+  - uid: 'BlobService#authenticationProvider'
+    id: authenticationProvider
+    parent: BlobService
+    name: authenticationProvider
+    type: Field
+    syntax:
+      content: authenticationProvider
+    fullName: BlobService.authenticationProvider
+  - uid: 'BlobService#sharedAccessSignatureCredentials'
+    id: sharedAccessSignatureCredentials
+    parent: BlobService
+    name: sharedAccessSignatureCredentials
+    type: Field
+    syntax:
+      content: sharedAccessSignatureCredentials
+    fullName: BlobService.sharedAccessSignatureCredentials
+  - uid: 'BlobService#singleBlobPutThresholdInBytes'
+    id: singleBlobPutThresholdInBytes
+    parent: BlobService
+    name: singleBlobPutThresholdInBytes
+    type: Field
+    syntax:
+      content: singleBlobPutThresholdInBytes
+    fullName: BlobService.singleBlobPutThresholdInBytes
+  - uid: 'BlobService#writeBlockSizeInBytes'
+    id: writeBlockSizeInBytes
+    parent: BlobService
+    name: writeBlockSizeInBytes
+    type: Field
+    syntax:
+      content: writeBlockSizeInBytes
+    fullName: BlobService.writeBlockSizeInBytes
+  - uid: 'BlobService#pipeline'
+    id: pipeline
+    parent: BlobService
+    name: pipeline
+    type: Field
+    syntax:
+      content: pipeline
+    fullName: BlobService.pipeline
+  - uid: 'BlobService#getServiceProperties'
+    id: getServiceProperties
+    parent: BlobService
+    name: 'getServiceProperties(options, options.timeoutIntervalInMs, callback)'
+    summary: >-
+      Gets the properties of a storage account’s Blob service, including
+      Microsoft Azure Storage Analytics.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `serviceProperties`\r                                                                     will contain the properties and `response`\r                                                                     will contain information related to this operation."
+      content: >-
+        function getServiceProperties(options, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.getServiceProperties(options, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#getServiceProperties~options'
+      - 'BlobService#getServiceProperties~webResource'
+      - 'BlobService#getServiceProperties~processResponseCallback'
+  - uid: 'BlobService#setServiceProperties'
+    id: setServiceProperties
+    parent: BlobService
+    name: >-
+      setServiceProperties(serviceProperties, options,
+      options.timeoutIntervalInMs, callback)
+    summary: "Sets the properties of a storage account’s Blob service, including Microsoft Azure Storage Analytics.\rYou can also use this operation to set the default request version for all incoming requests that do not have a version specified."
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceProperties
+          type: object
+          description: The service properties.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: "The timeout interval, in milliseconds,\r                                                                     to use for the request."
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `response`\r                                                                     will contain information related to this operation."
+      content: >-
+        function setServiceProperties(serviceProperties, options,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.setServiceProperties(serviceProperties, options,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#setServiceProperties~options'
+      - 'BlobService#setServiceProperties~servicePropertiesXml'
+      - 'BlobService#setServiceProperties~webResource'
+      - 'BlobService#setServiceProperties~processResponseCallback'
+  - uid: 'BlobService#listContainers'
+    id: listContainers
+    parent: BlobService
+    name: >-
+      listContainers(options, options.prefix, options.maxresults,
+      options.marker, options.include, options.timeoutIntervalInMs, callback)
+    summary: Returns a list of the containers under the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The list container options.
+        - id: options.prefix
+          type: string
+          description: >-
+            Filters the results to return only containers whose name begins with
+            the specified prefix.
+        - id: options.maxresults
+          type: int
+          description: >-
+            Specifies the maximum number of containers to return per call to
+            Azure storage.
+        - id: options.marker
+          type: string
+          description: >-
+            String value that identifies the portion of the list to be returned
+            with the next list operation.
+        - id: options.include
+          type: string
+          description: >-
+            Include this parameter to specify that the container's metadata be
+            returned as part of the response body. (allowed values: '',
+            'metadata')
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `containers` will contain a list of\r                                                                        {@link BlobService~containerResult} objects,\r                                                                        and `response` will contain information related to this operation.\r                                                                        If not all container information could be retrieved,\r                                                                        `nextMarker` will contain a value that can be used\r                                                                        to retrieve the next section of the containers list."
+      content: >-
+        function listContainers(options, options.prefix, options.maxresults,
+        options.marker, options.include, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.listContainers(options, options.prefix, options.maxresults,
+      options.marker, options.include, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#listContainers~options'
+      - 'BlobService#listContainers~webResource'
+      - 'BlobService#listContainers~self'
+      - 'BlobService#listContainers~processResponseCallback'
+  - uid: 'BlobService#createContainer'
+    id: createContainer
+    parent: BlobService
+    name: >-
+      createContainer(container, options, options.metadata,
+      options.publicAccessLevel, options.timeoutIntervalInMs, callback)
+    summary: "Creates a new container under the specified account.\rIf a container with the same name already exists, the operation fails."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: options
+          type: object
+          description: The optional container and request options.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.publicAccessLevel
+          type: string
+          description: >-
+            Specifies whether data in the container may be accessed publicly and
+            the level of access.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} for the container.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function createContainer(container, options, options.metadata,
+        options.publicAccessLevel, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createContainer(container, options, options.metadata,
+      options.publicAccessLevel, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createContainer~options'
+      - 'BlobService#createContainer~webResource'
+      - 'BlobService#createContainer~processResponseCallback'
+  - uid: 'BlobService#createContainerIfNotExists'
+    id: createContainerIfNotExists
+    parent: BlobService
+    name: >-
+      createContainerIfNotExists(container, options, options.metadata,
+      options.publicAccessLevel, options.timeoutIntervalInMs, callback)
+    summary: >-
+      Creates a new container under the specified account if the container does
+      not exists.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: options
+          type: object
+          description: The optional container and request options.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.publicAccessLevel
+          type: string
+          description: >-
+            Specifies whether data in the container may be accessed publicly and
+            the level of access.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `containerCreated` will contain\r                                                              be true if the container was created, or false if the container\r                                                              already exists.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function createContainerIfNotExists(container, options,
+        options.metadata, options.publicAccessLevel,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createContainerIfNotExists(container, options,
+      options.metadata, options.publicAccessLevel, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#createContainerIfNotExists~options'
+  - uid: 'BlobService#getContainerProperties'
+    id: getContainerProperties
+    parent: BlobService
+    name: >-
+      getContainerProperties(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    summary: Retrieves a container and its properties from a specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} information for the container.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function getContainerProperties(container, options, options.leaseId,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.getContainerProperties(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getContainerProperties~options'
+      - 'BlobService#getContainerProperties~webResource'
+      - 'BlobService#getContainerProperties~self'
+      - 'BlobService#getContainerProperties~processResponseCallback'
+  - uid: 'BlobService#getContainerMetadata'
+    id: getContainerMetadata
+    parent: BlobService
+    name: >-
+      getContainerMetadata(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    summary: Returns all user-defined metadata for the container.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `container` will contain\r                                                                        the {@link BlobService~containerResult} information for the container.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function getContainerMetadata(container, options, options.leaseId,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.getContainerMetadata(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getContainerMetadata~options'
+      - 'BlobService#getContainerMetadata~webResource'
+      - 'BlobService#getContainerMetadata~self'
+      - 'BlobService#getContainerMetadata~processResponseCallback'
+  - uid: 'BlobService#setContainerMetadata'
+    id: setContainerMetadata
+    parent: BlobService
+    name: >-
+      setContainerMetadata(container, metadata, options, options.leaseId,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: "Sets the container's metadata.\r\rCalling the Set Container Metadata operation overwrites all existing metadata that is associated with the container.\rIt's not possible to modify an individual name/value pair."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options
+          type: object
+          description: The container and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
+      content: >-
+        function setContainerMetadata(container, metadata, options,
+        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.setContainerMetadata(container, metadata, options,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#setContainerMetadata~options'
+      - 'BlobService#setContainerMetadata~webResource'
+      - 'BlobService#setContainerMetadata~processResponseCallback'
+  - uid: 'BlobService#getContainerAcl'
+    id: getContainerAcl
+    parent: BlobService
+    name: >-
+      getContainerAcl(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    summary: Gets the container's ACL.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: options
+          type: object
+          description: The container and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} information for the container.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function getContainerAcl(container, options, options.leaseId,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.getContainerAcl(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getContainerAcl~options'
+      - 'BlobService#getContainerAcl~webResource'
+      - 'BlobService#getContainerAcl~processResponseCallback'
+  - uid: 'BlobService#setContainerAcl'
+    id: setContainerAcl
+    parent: BlobService
+    name: >-
+      setContainerAcl(container, publicAccessLevel, options, options.leaseId,
+      options.signedIdentifiers, options.timeoutIntervalInMs, callback)
+    summary: Updates the container's ACL.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: publicAccessLevel
+          type: string
+          description: >-
+            Specifies whether data in the container may be accessed publicly and
+            the level of access.
+        - id: options
+          type: object
+          description: The container and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.signedIdentifiers
+          type: object
+          description: The signed identifiers.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} information for the container.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function setContainerAcl(container, publicAccessLevel, options,
+        options.leaseId, options.signedIdentifiers, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.setContainerAcl(container, publicAccessLevel, options,
+      options.leaseId, options.signedIdentifiers, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#setContainerAcl~options'
+      - 'BlobService#setContainerAcl~policies'
+      - 'BlobService#setContainerAcl~policies'
+      - 'BlobService#setContainerAcl~webResource'
+      - 'BlobService#setContainerAcl~processResponseCallback'
+  - uid: 'BlobService#deleteContainer'
+    id: deleteContainer
+    parent: BlobService
+    name: >-
+      deleteContainer(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    summary: "Marks the specified container for deletion.\rThe container and any blobs contained within it are later deleted during garbage collection."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: options
+          type: object
+          description: The container and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function deleteContainer(container, options, options.leaseId,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.deleteContainer(container, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#deleteContainer~options'
+      - 'BlobService#deleteContainer~webResource'
+      - 'BlobService#deleteContainer~processResponseCallback'
+  - uid: 'BlobService#listBlobs'
+    id: listBlobs
+    parent: BlobService
+    name: >-
+      listBlobs(container, options, options.prefix, options.delimiter,
+      options.maxresults, options.marker, options.include,
+      options.timeoutIntervalInMs, callback)
+    summary: Lists all of the blobs in the given container.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: options
+          type: object
+          description: The listing and request options.
+        - id: options.prefix
+          type: string
+          description: The blob name prefix.
+        - id: options.delimiter
+          type: string
+          description: 'Delimiter, i.e. ''/'', for specifying folder hierarchy.'
+        - id: options.maxresults
+          type: int
+          description: >-
+            Specifies the maximum number of blobs to return per call to Azure
+            ServiceClient. This does NOT affect list size returned by this
+            function. (maximum: 5000)
+        - id: options.marker
+          type: string
+          description: >-
+            String value that identifies the portion of the list to be returned
+            with the next list operation.
+        - id: options.include
+          type: string
+          description: >-
+            Specifies that the response should include one or more of the
+            following subsets: '', 'metadata', 'snapshots', 'uncommittedblobs').
+            Multiple values can be added separated with a comma (,)
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `blobs` will contain\r                                                              the blobs within the container.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function listBlobs(container, options, options.prefix,
+        options.delimiter, options.maxresults, options.marker, options.include,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.listBlobs(container, options, options.prefix,
+      options.delimiter, options.maxresults, options.marker, options.include,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#listBlobs~options'
+      - 'BlobService#listBlobs~webResource'
+      - 'BlobService#listBlobs~self'
+      - 'BlobService#listBlobs~processResponseCallback'
+  - uid: 'BlobService#createPageBlob'
+    id: createPageBlob
+    parent: BlobService
+    name: >-
+      createPageBlob(container, blob, length, options, options.metadata,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    summary: Writes a range of pages to a page blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: length
+          type: int
+          description: The length of the page blob in bytes.
+        - id: options
+          type: object
+          description: The page blob and request options.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
+      content: >-
+        function createPageBlob(container, blob, length, options,
+        options.metadata, options.leaseId, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createPageBlob(container, blob, length, options,
+      options.metadata, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createPageBlob~options'
+      - 'BlobService#createPageBlob~resourceName'
+      - 'BlobService#createPageBlob~webResource'
+      - 'BlobService#createPageBlob~processResponseCallback'
+  - uid: 'BlobService#putBlockBlobFromFile'
+    id: putBlockBlobFromFile
+    parent: BlobService
+    name: >-
+      putBlockBlobFromFile(container, blob, localFilename, options,
+      options.leaseId, options.metadata, options.setBlobContentMD5,
+      options.contentType, options.contentEncoding, options.contentLanguage,
+      options.contentMD5, options.cacheControl, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: "Creates a new block blob or page blob, or updates the content of an existing block blob.\rUpdating an existing block blob overwrites any existing metadata on the blob. Partial updates are not supported with Put Blob; the content of the existing blob is overwritten with the content of the new blob. To perform a partial update of the content of a block blob, use the Put Block List operation.\rCalling Put Blob to create a page blob only initializes the blob. To add content to a page blob, call the Put Page operation."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: localFilename
+          type: string
+          description: The local path to the file to be uploaded.
+        - id: options
+          type: object
+          description: The creating and request options.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blockBlob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function putBlockBlobFromFile(container, blob, localFilename, options,
+        options.leaseId, options.metadata, options.setBlobContentMD5,
+        options.contentType, options.contentEncoding, options.contentLanguage,
+        options.contentMD5, options.cacheControl, options.contentTypeHeader,
+        options.contentEncodingHeader, options.contentLanguageHeader,
+        options.contentMD5Header, options.cacheControlHeader,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.putBlockBlobFromFile(container, blob, localFilename, options,
+      options.leaseId, options.metadata, options.setBlobContentMD5,
+      options.contentType, options.contentEncoding, options.contentLanguage,
+      options.contentMD5, options.cacheControl, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#putBlockBlobFromFile~options'
+      - 'BlobService#putBlockBlobFromFile~self'
+      - 'BlobService#putBlockBlobFromFile~operation'
+      - 'BlobService#putBlockBlobFromFile~calculateMD5'
+      - 'BlobService#putBlockBlobFromFile~stream'
+  - uid: 'BlobService#putBlockBlobFromStream'
+    id: putBlockBlobFromStream
+    parent: BlobService
+    name: >-
+      putBlockBlobFromStream(container, blob, (Stream), streamLength, options,
+      options.leaseId, options.metadata, options.setBlobContentMD5,
+      options.contentType, options.contentEncoding, options.contentLanguage,
+      options.contentMD5, options.cacheControl, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: Uploads a block blob from a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: (Stream)
+          description: >-
+            stream                                      Stream to the data to
+            store.
+        - id: streamLength
+          type: int
+          description: The length of the stream to upload.
+        - id: options
+          type: object
+          description: The creating and request options.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blockBlob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function putBlockBlobFromStream(container, blob, (Stream), streamLength,
+        options, options.leaseId, options.metadata, options.setBlobContentMD5,
+        options.contentType, options.contentEncoding, options.contentLanguage,
+        options.contentMD5, options.cacheControl, options.contentTypeHeader,
+        options.contentEncodingHeader, options.contentLanguageHeader,
+        options.contentMD5Header, options.cacheControlHeader,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.putBlockBlobFromStream(container, blob, (Stream),
+      streamLength, options, options.leaseId, options.metadata,
+      options.setBlobContentMD5, options.contentType, options.contentEncoding,
+      options.contentLanguage, options.contentMD5, options.cacheControl,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.cacheControlHeader, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#putBlockBlobFromStream~options'
+      - 'BlobService#putBlockBlobFromStream~speedSummary'
+      - 'BlobService#putBlockBlobFromStream~resourceName'
+      - 'BlobService#putBlockBlobFromStream~webResource'
+      - 'BlobService#putBlockBlobFromStream~processResponseCallback'
+  - uid: 'BlobService#createBlockBlobFromText'
+    id: createBlockBlobFromText
+    parent: BlobService
+    name: >-
+      createBlockBlobFromText(container, blob, text, options, options.leaseId,
+      options.metadata, options.setBlobContentMD5, options.contentType,
+      options.contentEncoding, options.contentLanguage, options.contentMD5,
+      options.cacheControl, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: Uploads a block blob from a text string.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: text
+          type: string
+          description: The blob text.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blockBlob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createBlockBlobFromText(container, blob, text, options,
+        options.leaseId, options.metadata, options.setBlobContentMD5,
+        options.contentType, options.contentEncoding, options.contentLanguage,
+        options.contentMD5, options.cacheControl, options.contentTypeHeader,
+        options.contentEncodingHeader, options.contentLanguageHeader,
+        options.contentMD5Header, options.cacheControlHeader,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlockBlobFromText(container, blob, text, options,
+      options.leaseId, options.metadata, options.setBlobContentMD5,
+      options.contentType, options.contentEncoding, options.contentLanguage,
+      options.contentMD5, options.cacheControl, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createBlockBlobFromText~options'
+      - 'BlobService#createBlockBlobFromText~resourceName'
+      - 'BlobService#createBlockBlobFromText~webResource'
+      - 'BlobService#createBlockBlobFromText~processResponseCallback'
+  - uid: 'BlobService#getBlobProperties'
+    id: getBlobProperties
+    parent: BlobService
+    name: >-
+      getBlobProperties(container, blob, options, options.snapshotId,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    summary: "Returns all user-defined metadata, standard HTTP properties, and system properties for the blob.\rIt does not return the content of the blob."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function getBlobProperties(container, blob, options, options.snapshotId,
+        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.getBlobProperties(container, blob, options,
+      options.snapshotId, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getBlobProperties~options'
+      - 'BlobService#getBlobProperties~resourceName'
+      - 'BlobService#getBlobProperties~webResource'
+      - 'BlobService#getBlobProperties~self'
+      - 'BlobService#getBlobProperties~processResponseCallback'
+  - uid: 'BlobService#getBlobMetadata'
+    id: getBlobMetadata
+    parent: BlobService
+    name: >-
+      getBlobMetadata(container, blob, options, options.snapshotId,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    summary: Returns all user-defined metadata for the specified blob or snapshot.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function getBlobMetadata(container, blob, options, options.snapshotId,
+        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.getBlobMetadata(container, blob, options, options.snapshotId,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#getBlobMetadata~options'
+      - 'BlobService#getBlobMetadata~resourceName'
+      - 'BlobService#getBlobMetadata~webResource'
+      - 'BlobService#getBlobMetadata~self'
+      - 'BlobService#getBlobMetadata~processResponseCallback'
+  - uid: 'BlobService#setBlobProperties'
+    id: setBlobProperties
+    parent: BlobService
+    name: >-
+      setBlobProperties(container, blob, options, options.leaseId,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.cacheControlHeader, options.timeoutIntervalInMs,
+      options.accessConditions, callback)
+    summary: "Returns all user-defined metadata, standard HTTP properties, and system properties for the blob.\rIt does not return the content of the blob."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function setBlobProperties(container, blob, options, options.leaseId,
+        options.contentTypeHeader, options.contentEncodingHeader,
+        options.contentLanguageHeader, options.contentMD5Header,
+        options.cacheControlHeader, options.timeoutIntervalInMs,
+        options.accessConditions, callback);
+    fullName: >-
+      BlobService.setBlobProperties(container, blob, options, options.leaseId,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.cacheControlHeader, options.timeoutIntervalInMs,
+      options.accessConditions, callback)
+    children:
+      - 'BlobService#setBlobProperties~options'
+      - 'BlobService#setBlobProperties~resourceName'
+      - 'BlobService#setBlobProperties~webResource'
+      - 'BlobService#setBlobProperties~processResponseCallback'
+  - uid: 'BlobService#setBlobMetadata'
+    id: setBlobMetadata
+    parent: BlobService
+    name: >-
+      setBlobMetadata(container, blob, metadata, options, options.snapshotId,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    summary: >-
+      Sets user-defined metadata for the specified blob as one or more
+      name-value pairs.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information on the blob.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function setBlobMetadata(container, blob, metadata, options,
+        options.snapshotId, options.leaseId, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.setBlobMetadata(container, blob, metadata, options,
+      options.snapshotId, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#setBlobMetadata~options'
+      - 'BlobService#setBlobMetadata~resourceName'
+      - 'BlobService#setBlobMetadata~webResource'
+      - 'BlobService#setBlobMetadata~processResponseCallback'
+  - uid: 'BlobService#getBlob'
+    id: getBlob
+    parent: BlobService
+    name: >-
+      getBlob(container, blob, options, options.snapshotId, options.leaseId,
+      options.blobType, options.contentType, options.contentEncoding,
+      options.contentLanguage, options.contentMD5, options.cacheControl,
+      options.rangeStart, options.rangeEnd, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.rangeStartHeader,
+      options.rangeEndHeader, options.rangeGetContentMd5,
+      options.cacheControlHeader, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Downloads a blob into a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.blobType
+          type: string
+          description: 'The type of blob to create: block blob or page blob.'
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.rangeStart
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.rangeEnd
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.rangeStartHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeEndHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeGetContentMd5
+          type: string
+          description: >-
+            When this header is set to true and specified together with the
+            Range header, the service returns the MD5 hash for the range, as
+            long as the range is less than or equal to 4 MB in size.
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blockBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function getBlob(container, blob, options, options.snapshotId,
+        options.leaseId, options.blobType, options.contentType,
+        options.contentEncoding, options.contentLanguage, options.contentMD5,
+        options.cacheControl, options.rangeStart, options.rangeEnd,
+        options.contentTypeHeader, options.contentEncodingHeader,
+        options.contentLanguageHeader, options.contentMD5Header,
+        options.rangeStartHeader, options.rangeEndHeader,
+        options.rangeGetContentMd5, options.cacheControlHeader,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.getBlob(container, blob, options, options.snapshotId,
+      options.leaseId, options.blobType, options.contentType,
+      options.contentEncoding, options.contentLanguage, options.contentMD5,
+      options.cacheControl, options.rangeStart, options.rangeEnd,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.rangeStartHeader, options.rangeEndHeader,
+      options.rangeGetContentMd5, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getBlob~options'
+      - 'BlobService#getBlob~resourceName'
+      - 'BlobService#getBlob~webResource'
+      - 'BlobService#getBlob~self'
+  - uid: 'BlobService#getBlobToFile'
+    id: getBlobToFile
+    parent: BlobService
+    name: >-
+      getBlobToFile(container, blob, localFileName, options,
+      options.speedSummary, options.snapshotId, options.leaseId,
+      options.contentType, options.contentEncoding, options.contentLanguage,
+      options.contentMD5, options.cacheControl, options.rangeStart,
+      options.rangeEnd, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.rangeStartHeader,
+      options.rangeEndHeader, options.rangeGetContentMd5,
+      options.cacheControlHeader, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Downloads a blob into a file.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: localFileName
+          type: string
+          description: The local path to the file to be downloaded.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.speedSummary
+          type: SpeedSummary
+          description: The download tracker objects
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.rangeStart
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.rangeEnd
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.rangeStartHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeEndHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeGetContentMd5
+          type: string
+          description: >-
+            When this header is set to true and specified together with the
+            Range header, the service returns the MD5 hash for the range, as
+            long as the range is less than or equal to 4 MB in size.
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `blockBlob` will contain\r                                                              the blob information.\r                                                              `response` will contain information related to this operation."
+      return:
+        type: SpeedSummary
+      content: >-
+        function getBlobToFile(container, blob, localFileName, options,
+        options.speedSummary, options.snapshotId, options.leaseId,
+        options.contentType, options.contentEncoding, options.contentLanguage,
+        options.contentMD5, options.cacheControl, options.rangeStart,
+        options.rangeEnd, options.contentTypeHeader,
+        options.contentEncodingHeader, options.contentLanguageHeader,
+        options.contentMD5Header, options.rangeStartHeader,
+        options.rangeEndHeader, options.rangeGetContentMd5,
+        options.cacheControlHeader, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.getBlobToFile(container, blob, localFileName, options,
+      options.speedSummary, options.snapshotId, options.leaseId,
+      options.contentType, options.contentEncoding, options.contentLanguage,
+      options.contentMD5, options.cacheControl, options.rangeStart,
+      options.rangeEnd, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.rangeStartHeader,
+      options.rangeEndHeader, options.rangeGetContentMd5,
+      options.cacheControlHeader, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getBlobToFile~options'
+      - 'BlobService#getBlobToFile~propertiesRequestOptions'
+      - 'BlobService#getBlobToFile~self'
+  - uid: 'BlobService#getBlobToStream'
+    id: getBlobToStream
+    parent: BlobService
+    name: >-
+      getBlobToStream(container, blob, writeStream, options, options.snapshotId,
+      options.leaseId, options.blobType, options.contentType,
+      options.contentEncoding, options.contentLanguage, options.contentMD5,
+      options.cacheControl, options.rangeStart, options.rangeEnd,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.rangeStartHeader, options.rangeEndHeader,
+      options.rangeGetContentMd5, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: Downloads a blob into a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: writeStream
+          type: Stream
+          description: The write stream.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.blobType
+          type: string
+          description: 'The type of blob to create: block blob or page blob.'
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.rangeStart
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.rangeEnd
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.rangeStartHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeEndHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeGetContentMd5
+          type: string
+          description: >-
+            When this header is set to true and specified together with the
+            Range header, the service returns the MD5 hash for the range, as
+            long as the range is less than or equal to 4 MB in size.
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blockBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function getBlobToStream(container, blob, writeStream, options,
+        options.snapshotId, options.leaseId, options.blobType,
+        options.contentType, options.contentEncoding, options.contentLanguage,
+        options.contentMD5, options.cacheControl, options.rangeStart,
+        options.rangeEnd, options.contentTypeHeader,
+        options.contentEncodingHeader, options.contentLanguageHeader,
+        options.contentMD5Header, options.rangeStartHeader,
+        options.rangeEndHeader, options.rangeGetContentMd5,
+        options.cacheControlHeader, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.getBlobToStream(container, blob, writeStream, options,
+      options.snapshotId, options.leaseId, options.blobType,
+      options.contentType, options.contentEncoding, options.contentLanguage,
+      options.contentMD5, options.cacheControl, options.rangeStart,
+      options.rangeEnd, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.rangeStartHeader,
+      options.rangeEndHeader, options.rangeGetContentMd5,
+      options.cacheControlHeader, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getBlobToStream~options'
+  - uid: 'BlobService#getBlobToText'
+    id: getBlobToText
+    parent: BlobService
+    name: >-
+      getBlobToText(container, blob, options, options.snapshotId,
+      options.leaseId, options.blobType, options.contentType,
+      options.contentEncoding, options.contentLanguage, options.contentMD5,
+      options.cacheControl, options.rangeStart, options.rangeEnd,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.rangeStartHeader, options.rangeEndHeader,
+      options.rangeGetContentMd5, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: Downloads a blob into a text string.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.blobType
+          type: string
+          description: 'The type of blob to create: block blob or page blob.'
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.rangeStart
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.rangeEnd
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.rangeStartHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeEndHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: options.rangeGetContentMd5
+          type: string
+          description: >-
+            When this header is set to true and specified together with the
+            Range header, the service returns the MD5 hash for the range, as
+            long as the range is less than or equal to 4 MB in size.
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `text` will contain the blob contents,\r                                                                        and `blockBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function getBlobToText(container, blob, options, options.snapshotId,
+        options.leaseId, options.blobType, options.contentType,
+        options.contentEncoding, options.contentLanguage, options.contentMD5,
+        options.cacheControl, options.rangeStart, options.rangeEnd,
+        options.contentTypeHeader, options.contentEncodingHeader,
+        options.contentLanguageHeader, options.contentMD5Header,
+        options.rangeStartHeader, options.rangeEndHeader,
+        options.rangeGetContentMd5, options.cacheControlHeader,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.getBlobToText(container, blob, options, options.snapshotId,
+      options.leaseId, options.blobType, options.contentType,
+      options.contentEncoding, options.contentLanguage, options.contentMD5,
+      options.cacheControl, options.rangeStart, options.rangeEnd,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.rangeStartHeader, options.rangeEndHeader,
+      options.rangeGetContentMd5, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#getBlobToText~options'
+      - 'BlobService#getBlobToText~resourceName'
+      - 'BlobService#getBlobToText~webResource'
+      - 'BlobService#getBlobToText~processResponseCallback'
+  - uid: 'BlobService#deleteBlob'
+    id: deleteBlob
+    parent: BlobService
+    name: >-
+      deleteBlob(container, blob, options, options.snapshotId, options.leaseId,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: "Marks the specified blob or snapshot for deletion. The blob is later deleted during garbage collection.\rIn order to delete a blob, you must delete all of its snapshots. You can delete both at the same time with the Delete Blob operation."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `isSuccessful` will contain\r                                                              `true` if the operation was successful.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function deleteBlob(container, blob, options, options.snapshotId,
+        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.deleteBlob(container, blob, options, options.snapshotId,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#deleteBlob~options'
+      - 'BlobService#deleteBlob~resourceName'
+      - 'BlobService#deleteBlob~webResource'
+      - 'BlobService#deleteBlob~processResponseCallback'
+  - uid: 'BlobService#createBlobSnapshot'
+    id: createBlobSnapshot
+    parent: BlobService
+    name: >-
+      createBlobSnapshot(container, blob, options, options.snapshotId,
+      options.metadata, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Creates a read-only snapshot of a blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.leaseId
+          type: string
+          description: The lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `snapshotId` will contain\r                                                              the ID of the snapshot.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function createBlobSnapshot(container, blob, options,
+        options.snapshotId, options.metadata, options.leaseId,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlobSnapshot(container, blob, options,
+      options.snapshotId, options.metadata, options.leaseId,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createBlobSnapshot~options'
+      - 'BlobService#createBlobSnapshot~resourceName'
+      - 'BlobService#createBlobSnapshot~webResource'
+      - 'BlobService#createBlobSnapshot~processResponseCallback'
+  - uid: 'BlobService#copyBlob'
+    id: copyBlob
+    parent: BlobService
+    name: >-
+      copyBlob(sourceUri, targetContainer, targetBlob, options,
+      options.snapshotId, options.metadata, options.leaseId,
+      options.sourceLeaseId, options.accessConditions,
+      options.sourceAccessConditions, options.timeoutIntervalInMs, callback)
+    summary: >-
+      Copies a blob to a destination within the storage account. The Copy Blob
+      operation copies the entire committed blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: sourceUri
+          type: string
+          description: The source blob URI.
+        - id: targetContainer
+          type: string
+          description: The target container name.
+        - id: targetBlob
+          type: string
+          description: The target blob name.
+        - id: options
+          type: object
+          description: The blobs and request options.
+        - id: options.snapshotId
+          type: string
+          description: The source blob snapshot identifier.
+        - id: options.metadata
+          type: object
+          description: The target blob metadata key/value pairs.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.sourceLeaseId
+          type: string
+          description: The source blob lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.sourceAccessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function copyBlob(sourceUri, targetContainer, targetBlob, options,
+        options.snapshotId, options.metadata, options.leaseId,
+        options.sourceLeaseId, options.accessConditions,
+        options.sourceAccessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.copyBlob(sourceUri, targetContainer, targetBlob, options,
+      options.snapshotId, options.metadata, options.leaseId,
+      options.sourceLeaseId, options.accessConditions,
+      options.sourceAccessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#copyBlob~options'
+      - 'BlobService#copyBlob~targetResourceName'
+      - 'BlobService#copyBlob~webResource'
+      - 'BlobService#copyBlob~sourceUri'
+      - 'BlobService#copyBlob~processResponseCallback'
+  - uid: 'BlobService#abortCopyBlob'
+    id: abortCopyBlob
+    parent: BlobService
+    name: >-
+      abortCopyBlob(container, blob, copyId, options, options.leaseId,
+      options.timeoutIntervalInMs, callback)
+    summary: Abort a blob copy operation.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The destination container name.
+        - id: blob
+          type: string
+          description: The destination blob name.
+        - id: copyId
+          type: string
+          description: The copy operation identifier.
+        - id: options
+          type: object
+          description: The blobs and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function abortCopyBlob(container, blob, copyId, options,
+        options.leaseId, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.abortCopyBlob(container, blob, copyId, options,
+      options.leaseId, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#abortCopyBlob~options'
+      - 'BlobService#abortCopyBlob~resourceName'
+      - 'BlobService#abortCopyBlob~webResource'
+      - 'BlobService#abortCopyBlob~processResponseCallback'
+  - uid: 'BlobService#statusOfCopyBlob'
+    id: statusOfCopyBlob
+    parent: BlobService
+    name: >-
+      statusOfCopyBlob(targetContainer, targetBlob, options, options.metadata,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    summary: Gets the status of the copyBlob operation
+    type: Method
+    syntax:
+      parameters:
+        - id: targetContainer
+          type: string
+          description: The target container name.
+        - id: targetBlob
+          type: string
+          description: The target blob name.
+        - id: options
+          type: object
+          description: The blobs and request options.
+        - id: options.metadata
+          type: object
+          description: The target blob metadata key/value pairs.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function statusOfCopyBlob(targetContainer, targetBlob, options,
+        options.metadata, options.leaseId, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.statusOfCopyBlob(targetContainer, targetBlob, options,
+      options.metadata, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#statusOfCopyBlob~options'
+      - 'BlobService#statusOfCopyBlob~targetResourceName'
+      - 'BlobService#statusOfCopyBlob~webResource'
+      - 'BlobService#statusOfCopyBlob~processResponseCallback'
+  - uid: 'BlobService#acquireLease'
+    id: acquireLease
+    parent: BlobService
+    name: >-
+      acquireLease(container, blob, options, options.leaseDuration,
+      options.proposedLeaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Acquires a new lease on the blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.leaseDuration
+          type: string
+          description: The lease duration. Default is never to expire.
+        - id: options.proposedLeaseId
+          type: string
+          description: The proposed lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `lease` will contain\r                                                                        the lease information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function acquireLease(container, blob, options, options.leaseDuration,
+        options.proposedLeaseId, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.acquireLease(container, blob, options, options.leaseDuration,
+      options.proposedLeaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#acquireLease~options'
+  - uid: 'BlobService#renewLease'
+    id: renewLease
+    parent: BlobService
+    name: >-
+      renewLease(container, blob, leaseId, options, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Renews an existing lease.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: leaseId
+          type: string
+          description: The lease identifier.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `lease` will contain\r                                                              the lease information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function renewLease(container, blob, leaseId, options,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.renewLease(container, blob, leaseId, options,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#renewLease~options'
+  - uid: 'BlobService#releaseLease'
+    id: releaseLease
+    parent: BlobService
+    name: >-
+      releaseLease(container, blob, leaseId, options, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Releases the lease on the blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: leaseId
+          type: string
+          description: The lease identifier.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `lease` will contain\r                                                              the lease information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function releaseLease(container, blob, leaseId, options,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.releaseLease(container, blob, leaseId, options,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#releaseLease~options'
+  - uid: 'BlobService#breakLease'
+    id: breakLease
+    parent: BlobService
+    name: >-
+      breakLease(container, blob, leaseId, options, options.leaseBreakPeriod,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: >-
+      Breaks the lease but ensures that another client cannot acquire a new
+      lease until the current lease period has expired.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: leaseId
+          type: string
+          description: The lease identifier.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.leaseBreakPeriod
+          type: int
+          description: The lease break period.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `lease` will contain\r                                                                        the lease information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function breakLease(container, blob, leaseId, options,
+        options.leaseBreakPeriod, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.breakLease(container, blob, leaseId, options,
+      options.leaseBreakPeriod, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#breakLease~options'
+  - uid: 'BlobService#clearBlobPages'
+    id: clearBlobPages
+    parent: BlobService
+    name: >-
+      clearBlobPages(container, blob, rangeStart, rangeEnd, options,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    summary: Clears a page blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: rangeStart
+          type: int
+          description: The range start.
+        - id: rangeEnd
+          type: int
+          description: The range end.
+        - id: options
+          type: object
+          description: The page blob and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
+      content: >-
+        function clearBlobPages(container, blob, rangeStart, rangeEnd, options,
+        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.clearBlobPages(container, blob, rangeStart, rangeEnd, options,
+      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#clearBlobPages~options'
+      - 'BlobService#clearBlobPages~request'
+      - 'BlobService#clearBlobPages~self'
+      - 'BlobService#clearBlobPages~processResponseCallback'
+  - uid: 'BlobService#createBlobPagesFromStream'
+    id: createBlobPagesFromStream
+    parent: BlobService
+    name: >-
+      createBlobPagesFromStream(container, blob, readStream, rangeStart,
+      rangeEnd, options, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Updates a page blob from a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: readStream
+          type: Stream
+          description: The read stream.
+        - id: rangeStart
+          type: int
+          description: The range start.
+        - id: rangeEnd
+          type: int
+          description: The range end.
+        - id: options
+          type: object
+          description: The page blob and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `pageBlob` will contain\r                                                              the blob information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function createBlobPagesFromStream(container, blob, readStream,
+        rangeStart, rangeEnd, options, options.leaseId,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlobPagesFromStream(container, blob, readStream,
+      rangeStart, rangeEnd, options, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createBlobPagesFromStream~options'
+      - 'BlobService#createBlobPagesFromStream~webResource'
+      - 'BlobService#createBlobPagesFromStream~self'
+      - 'BlobService#createBlobPagesFromStream~processResponseCallback'
+  - uid: 'BlobService#createBlobPagesFromText'
+    id: createBlobPagesFromText
+    parent: BlobService
+    name: >-
+      createBlobPagesFromText(container, blob, text, rangeStart, rangeEnd,
+      options, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Updates a page blob from text.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: text
+          type: string
+          description: The text string.
+        - id: rangeStart
+          type: int
+          description: The range start.
+        - id: rangeEnd
+          type: int
+          description: The range end.
+        - id: options
+          type: object
+          description: The page blob and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                        if an error occurs; otherwise `pageBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
+      content: >-
+        function createBlobPagesFromText(container, blob, text, rangeStart,
+        rangeEnd, options, options.leaseId, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlobPagesFromText(container, blob, text, rangeStart,
+      rangeEnd, options, options.leaseId, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createBlobPagesFromText~options'
+      - 'BlobService#createBlobPagesFromText~request'
+      - 'BlobService#createBlobPagesFromText~self'
+      - 'BlobService#createBlobPagesFromText~processResponseCallback'
+  - uid: 'BlobService#listBlobRegions'
+    id: listBlobRegions
+    parent: BlobService
+    name: >-
+      listBlobRegions(container, blob, rangeStart, rangeEnd, options,
+      options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
+      callback)
+    summary: Lists page blob regions.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: rangeStart
+          type: int
+          description: The range start.
+        - id: rangeEnd
+          type: int
+          description: The range end.
+        - id: options
+          type: object
+          description: The page blob and request options.
+        - id: options.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `pageRegions` will contain\r                                                              the page region information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function listBlobRegions(container, blob, rangeStart, rangeEnd, options,
+        options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.listBlobRegions(container, blob, rangeStart, rangeEnd,
+      options, options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#listBlobRegions~options'
+      - 'BlobService#listBlobRegions~resourceName'
+      - 'BlobService#listBlobRegions~webResource'
+      - 'BlobService#listBlobRegions~options'
+      - 'BlobService#listBlobRegions~processResponseCallback'
+  - uid: 'BlobService#createBlobBlockFromText'
+    id: createBlobBlockFromText
+    parent: BlobService
+    name: >-
+      createBlobBlockFromText(blockId, container, blob, content, options,
+      options.leaseId, options.contentMD5, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: Creates a new block to be committed as part of a blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: blockId
+          type: string
+          description: The block identifier.
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: content
+          type: string
+          description: The block content.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.contentMD5
+          type: string
+          description: The blob’s MD5 hash.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                             if an error occurs; otherwise \r                                                             `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createBlobBlockFromText(blockId, container, blob, content,
+        options, options.leaseId, options.contentMD5, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlobBlockFromText(blockId, container, blob, content,
+      options, options.leaseId, options.contentMD5, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createBlobBlockFromText~options'
+      - 'BlobService#createBlobBlockFromText~resourceName'
+      - 'BlobService#createBlobBlockFromText~webResource'
+      - 'BlobService#createBlobBlockFromText~processResponseCallback'
+  - uid: 'BlobService#createBlobBlockFromStream'
+    id: createBlobBlockFromStream
+    parent: BlobService
+    name: >-
+      createBlobBlockFromStream(blockId, container, blob, readStream,
+      streamLength, options, options.leaseId, options.contentMD5,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: Creates a new block to be committed as part of a blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: blockId
+          type: string
+          description: The block identifier.
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: readStream
+          type: Stream
+          description: The read stream.
+        - id: streamLength
+          type: int
+          description: The stream length.
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.contentMD5
+          type: string
+          description: The blob’s MD5 hash.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                            if an error occurs; otherwise \r                                                            `response` will contain information related to this operation."
+      content: >-
+        function createBlobBlockFromStream(blockId, container, blob, readStream,
+        streamLength, options, options.leaseId, options.contentMD5,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlobBlockFromStream(blockId, container, blob,
+      readStream, streamLength, options, options.leaseId, options.contentMD5,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#createBlobBlockFromStream~options'
+      - 'BlobService#createBlobBlockFromStream~resourceName'
+      - 'BlobService#createBlobBlockFromStream~webResource'
+      - 'BlobService#createBlobBlockFromStream~processResponseCallback'
+  - uid: 'BlobService#commitBlobBlocks'
+    id: commitBlobBlocks
+    parent: BlobService
+    name: >-
+      commitBlobBlocks(container, blob, blockList, options, options.metadata,
+      options.leaseId, options.contentType, options.contentEncoding,
+      options.contentLanguage, options.contentMD5, options.cacheControl,
+      options.contentTypeHeader, options.contentEncodingHeader,
+      options.contentLanguageHeader, options.contentMD5Header,
+      options.cacheControlHeader, options.accessConditions,
+      options.timeoutIntervalInMs, callback)
+    summary: "Writes a blob by specifying the list of block IDs that make up the blob.\rIn order to be written as part of a blob, a block must have been successfully written to the server in a prior\rcreateBlobBlock operation."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: blockList
+          type: object
+          description: The block identifiers.
+        - id: options
+          type: object
+          description: The blocklist and request options.
+        - id: options.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: options.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: options.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: options.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: options.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: options.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: options.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: options.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: options.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: options.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `blocklist` will contain\r                                                              the blocklist information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function commitBlobBlocks(container, blob, blockList, options,
+        options.metadata, options.leaseId, options.contentType,
+        options.contentEncoding, options.contentLanguage, options.contentMD5,
+        options.cacheControl, options.contentTypeHeader,
+        options.contentEncodingHeader, options.contentLanguageHeader,
+        options.contentMD5Header, options.cacheControlHeader,
+        options.accessConditions, options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.commitBlobBlocks(container, blob, blockList, options,
+      options.metadata, options.leaseId, options.contentType,
+      options.contentEncoding, options.contentLanguage, options.contentMD5,
+      options.cacheControl, options.contentTypeHeader,
+      options.contentEncodingHeader, options.contentLanguageHeader,
+      options.contentMD5Header, options.cacheControlHeader,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#commitBlobBlocks~options'
+      - 'BlobService#commitBlobBlocks~blockListXml'
+      - 'BlobService#commitBlobBlocks~resourceName'
+      - 'BlobService#commitBlobBlocks~webResource'
+      - 'BlobService#commitBlobBlocks~processResponseCallback'
+  - uid: 'BlobService#listBlobBlocks'
+    id: listBlobBlocks
+    parent: BlobService
+    name: >-
+      listBlobBlocks(container, blob, blocklisttype, options,
+      options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
+      callback)
+    summary: >-
+      Retrieves the list of blocks that have been uploaded as part of a block
+      blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: blocklisttype
+          type: BlockListFilter
+          description: The type of block list to retrieve.
+        - id: options
+          type: object
+          description: The blocklist and request options.
+        - id: options.snapshotId
+          type: string
+          description: The source blob snapshot identifier.
+        - id: options.leaseId
+          type: string
+          description: The target blob lease identifier.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `blocklist` will contain\r                                                              the blocklist information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function listBlobBlocks(container, blob, blocklisttype, options,
+        options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
+        callback);
+    fullName: >-
+      BlobService.listBlobBlocks(container, blob, blocklisttype, options,
+      options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#listBlobBlocks~options'
+      - 'BlobService#listBlobBlocks~resourceName'
+      - 'BlobService#listBlobBlocks~webResource'
+      - 'BlobService#listBlobBlocks~processResponseCallback'
+  - uid: 'BlobService#generateSharedAccessSignature'
+    id: generateSharedAccessSignature
+    parent: BlobService
+    name: >-
+      generateSharedAccessSignature(container, blob, sharedAccessPolicy,
+      sharedAccessPolicy.Id, sharedAccessPolicy.AccessPolicy.Permissions,
+      sharedAccessPolicy.AccessPolicy.Start,
+      sharedAccessPolicy.AccessPolicy.Expiry)
+    summary: Retrieves a shared access URL.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: sharedAccessPolicy
+          type: object
+          description: The shared access policy.
+        - id: sharedAccessPolicy.Id
+          type: string
+          description: The signed identifier.
+        - id: sharedAccessPolicy.AccessPolicy.Permissions
+          type: object
+          description: The permission type.
+        - id: sharedAccessPolicy.AccessPolicy.Start
+          type: date
+          description: >-
+            The time at which the Shared Access Signature becomes valid (The UTC
+            value will be used).
+        - id: sharedAccessPolicy.AccessPolicy.Expiry
+          type: date
+          description: >-
+            The time at which the Shared Access Signature becomes expired (The
+            UTC value will be used).
+      return:
+        type: object
+        description: An object with the shared access signature.
+      content: >-
+        function generateSharedAccessSignature(container, blob,
+        sharedAccessPolicy, sharedAccessPolicy.Id,
+        sharedAccessPolicy.AccessPolicy.Permissions,
+        sharedAccessPolicy.AccessPolicy.Start,
+        sharedAccessPolicy.AccessPolicy.Expiry);
+    fullName: >-
+      BlobService.generateSharedAccessSignature(container, blob,
+      sharedAccessPolicy, sharedAccessPolicy.Id,
+      sharedAccessPolicy.AccessPolicy.Permissions,
+      sharedAccessPolicy.AccessPolicy.Start,
+      sharedAccessPolicy.AccessPolicy.Expiry)
+    children:
+      - 'BlobService#generateSharedAccessSignature~resourceType'
+      - 'BlobService#generateSharedAccessSignature~resourceType'
+      - 'BlobService#generateSharedAccessSignature~resourceName'
+      - 'BlobService#generateSharedAccessSignature~signedQueryString'
+      - 'BlobService#generateSharedAccessSignature~baseUrl'
+      - 'BlobService#generateSharedAccessSignature~path'
+  - uid: 'BlobService#getBlobUrl'
+    id: getBlobUrl
+    parent: BlobService
+    name: >-
+      getBlobUrl(container, blob, sharedAccessPolicy, sharedAccessPolicy.Id,
+      sharedAccessPolicy.AccessPolicy.Permissions,
+      sharedAccessPolicy.AccessPolicy.Start,
+      sharedAccessPolicy.AccessPolicy.Expiry)
+    summary: Retrieves a blob URL.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: sharedAccessPolicy
+          type: object
+          description: The shared access policy.
+        - id: sharedAccessPolicy.Id
+          type: string
+          description: The signed identifier.
+        - id: sharedAccessPolicy.AccessPolicy.Permissions
+          type: object
+          description: The permission type.
+        - id: sharedAccessPolicy.AccessPolicy.Start
+          type: date
+          description: >-
+            The time at which the Shared Access Signature becomes valid (The UTC
+            value will be used).
+        - id: sharedAccessPolicy.AccessPolicy.Expiry
+          type: date
+          description: >-
+            The time at which the Shared Access Signature becomes expired (The
+            UTC value will be used).
+      return:
+        type: object
+        description: An object with the blob URL.
+      content: >-
+        function getBlobUrl(container, blob, sharedAccessPolicy,
+        sharedAccessPolicy.Id, sharedAccessPolicy.AccessPolicy.Permissions,
+        sharedAccessPolicy.AccessPolicy.Start,
+        sharedAccessPolicy.AccessPolicy.Expiry);
+    fullName: >-
+      BlobService.getBlobUrl(container, blob, sharedAccessPolicy,
+      sharedAccessPolicy.Id, sharedAccessPolicy.AccessPolicy.Permissions,
+      sharedAccessPolicy.AccessPolicy.Start,
+      sharedAccessPolicy.AccessPolicy.Expiry)
+    children:
+      - 'BlobService#getBlobUrl~signedQueryString'
+      - 'BlobService#getBlobUrl~signedQueryString'
+  - uid: 'BlobService#_leaseBlobImpl'
+    id: _leaseBlobImpl
+    parent: BlobService
+    name: >-
+      _leaseBlobImpl(container, blob, leaseId, leaseAction, options,
+      options.leaseBreakPeriod, options.leaseDuration, options.proposedLeaseId,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    summary: Establishes and manages a one-minute lock on a blob for write operations.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: leaseId
+          type: string
+          description: The lease identifier.
+        - id: leaseAction
+          type: string
+          description: The lease action (BlobService.LEASE_*).
+        - id: options
+          type: object
+          description: The blob and request options.
+        - id: options.leaseBreakPeriod
+          type: int
+          description: The lease break period.
+        - id: options.leaseDuration
+          type: string
+          description: The lease duration. Default is never to expire.
+        - id: options.proposedLeaseId
+          type: string
+          description: The proposed lease identifier.
+        - id: options.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: options.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                              if an error occurs; otherwise `lease` will contain\r                                                              the lease information.\r                                                              `response` will contain information related to this operation."
+      content: >-
+        function _leaseBlobImpl(container, blob, leaseId, leaseAction, options,
+        options.leaseBreakPeriod, options.leaseDuration,
+        options.proposedLeaseId, options.accessConditions,
+        options.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService._leaseBlobImpl(container, blob, leaseId, leaseAction, options,
+      options.leaseBreakPeriod, options.leaseDuration, options.proposedLeaseId,
+      options.accessConditions, options.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#_leaseBlobImpl~options'
+      - 'BlobService#_leaseBlobImpl~resourceName'
+      - 'BlobService#_leaseBlobImpl~webResource'
+      - 'BlobService#_leaseBlobImpl~processResponseCallback'
+  - uid: 'BlobService#_updatePageBlobPagesImpl'
+    id: _updatePageBlobPagesImpl
+    parent: BlobService
+    name: _updatePageBlobPagesImpl()
+    type: Method
+    syntax:
+      content: function _updatePageBlobPagesImpl();
+    fullName: BlobService._updatePageBlobPagesImpl()
+    children:
+      - 'BlobService#_updatePageBlobPagesImpl~resourceName'
+      - 'BlobService#_updatePageBlobPagesImpl~webResource'
+      - 'BlobService#_updatePageBlobPagesImpl~options'
+      - 'BlobService#_updatePageBlobPagesImpl~size'
+      - 'BlobService#_updatePageBlobPagesImpl~size'
+  - uid: 'BlobService#createBlob'
+    id: createBlob
+    parent: BlobService
+    name: >-
+      createBlob(container, blob, blobType, optionsOrCallback,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
+      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
+      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
+      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    summary: Uploads a block blob.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: blobType
+          type: string
+          description: 'The type of blob to create: block blob or page blob.'
+        - id: optionsOrCallback
+          type: object
+          description: The creating and request options.
+        - id: optionsOrCallback.blockIdPrefix
+          type: string
+          description: The prefix for block id.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: optionsOrCallback.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: optionsOrCallback.useTransactionalMD5
+          type: bool
+          description: Calculate and send/validate content MD5 for transactions.
+        - id: optionsOrCallback.blobType
+          type: string
+          description: 'The type of blob to create: block blob or page blob.'
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: Stream
+      content: >-
+        function createBlob(container, blob, blobType, optionsOrCallback,
+        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
+        optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
+        optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
+        optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlob(container, blob, blobType, optionsOrCallback,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
+      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
+      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
+      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#createBlob~options'
+      - 'BlobService#createBlob~readOptions'
+      - 'BlobService#createBlob~stream'
+  - uid: 'BlobService#createBlockBlobFromFile'
+    id: createBlockBlobFromFile
+    parent: BlobService
+    name: >-
+      createBlockBlobFromFile(container, blob, localFilename, optionsOrCallback,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
+      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
+      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    summary: "Creates a new block blob or updates the content of an existing block blob.\rUpdating an existing block blob overwrites any existing metadata on the blob. Partial updates are not supported with Put Blob; the content of the existing blob is overwritten with the content of the new blob. To perform a partial update of the content of a block blob, use the Put Block List operation.\rCalling Put Blob to create a page blob only initializes the blob. To add content to a page blob, call the Put Page operation."
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: localFilename
+          type: string
+          description: The local path to the file to be uploaded.
+        - id: optionsOrCallback
+          type: object
+          description: The creating and request options.
+        - id: optionsOrCallback.blockIdPrefix
+          type: string
+          description: The prefix for block id.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: optionsOrCallback.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: SpeedSummary
+      content: >-
+        function createBlockBlobFromFile(container, blob, localFilename,
+        optionsOrCallback, optionsOrCallback.blockIdPrefix,
+        optionsOrCallback.leaseId, optionsOrCallback.metadata,
+        optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+        optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlockBlobFromFile(container, blob, localFilename,
+      optionsOrCallback, optionsOrCallback.blockIdPrefix,
+      optionsOrCallback.leaseId, optionsOrCallback.metadata,
+      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#createBlockBlobFromFile~options'
+      - 'BlobService#createBlockBlobFromFile~self'
+  - uid: 'BlobService#createBlockBlobFromStream'
+    id: createBlockBlobFromStream
+    parent: BlobService
+    name: >-
+      createBlockBlobFromStream(container, blob, (Stream), streamLength,
+      optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
+      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
+      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
+      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    summary: Uploads a block blob from a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: (Stream)
+          description: >-
+            stream                                      Stream to the data to
+            store.
+        - id: streamLength
+          type: int
+          description: The length of the stream to upload.
+        - id: optionsOrCallback
+          type: object
+          description: The creating and request options.
+        - id: optionsOrCallback.speedSummary
+          type: SpeedSummary
+          description: The download tracker objects;
+        - id: optionsOrCallback.blockIdPrefix
+          type: string
+          description: The prefix for block id.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: optionsOrCallback.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: optionsOrCallback.useTransactionalMD5
+          type: bool
+          description: Calculate and send/validate content MD5 for transactions.
+        - id: optionsOrCallback.blobType
+          type: string
+          description: 'The type of blob to create: block blob or page blob.'
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: SpeedSummary
+      content: >-
+        function createBlockBlobFromStream(container, blob, (Stream),
+        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
+        optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
+        optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
+        optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createBlockBlobFromStream(container, blob, (Stream),
+      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
+      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
+      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
+      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#createBlockBlobFromStream~options'
+  - uid: 'BlobService#generateBlockIdPrefix'
+    id: generateBlockIdPrefix
+    parent: BlobService
+    name: generateBlockIdPrefix()
+    summary: Generate an random block id prefix
+    type: Method
+    syntax:
+      content: function generateBlockIdPrefix();
+    fullName: BlobService.generateBlockIdPrefix()
+    children:
+      - 'BlobService#generateBlockIdPrefix~prefix'
+  - uid: 'BlobService#getBlockId'
+    id: getBlockId
+    parent: BlobService
+    name: getBlockId()
+    summary: Get an block id according to prefix and block number
+    type: Method
+    syntax:
+      content: function getBlockId();
+    fullName: BlobService.getBlockId()
+  - uid: 'BlobService#_getBlobToFile'
+    id: _getBlobToFile
+    parent: BlobService
+    name: >-
+      _getBlobToFile(container, blob, localFileName, optionsOrCallback,
+      optionsOrCallback.speedSummary, optionsOrCallback.checkMD5sum,
+      optionsOrCallback.ParallelOperationThreadCount,
+      optionsOrCallback.snapshotId, optionsOrCallback.leaseId,
+      optionsOrCallback.blobType, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.rangeStart, optionsOrCallback.rangeEnd,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.rangeStartHeader,
+      optionsOrCallback.rangeEndHeader, optionsOrCallback.rangeGetContentMd5,
+      optionsOrCallback.cacheControlHeader, optionsOrCallback.accessConditions,
+      optionsOrCallback.timeoutIntervalInMs, callback)
+    summary: Downloads a blockblob or pageblob into a file.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: localFileName
+          type: string
+          description: The local path to the file to be downloaded.
+        - id: optionsOrCallback
+          type: object
+          description: The blob and request options.
+        - id: optionsOrCallback.speedSummary
+          type: SpeedSummary
+          description: The download tracker objects;
+        - id: optionsOrCallback.checkMD5sum
+          type: bool
+          description: >-
+            Check download files's md5sum and save to the Blob parameter in the
+            callback.
+        - id: optionsOrCallback.ParallelOperationThreadCount
+          type: int
+          description: Parallel operation thread count
+        - id: optionsOrCallback.snapshotId
+          type: string
+          description: The snapshot identifier.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.blobType
+          type: string
+          description: 'The type of blob to create: block blob or page blob.'
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.rangeStart
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: optionsOrCallback.rangeEnd
+          type: string
+          description: Return only the bytes of the blob in the specified range.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.rangeStartHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: optionsOrCallback.rangeEndHeader
+          type: string
+          description: >-
+            Return only the bytes of the blob in the specified range. If both
+            Range and x-ms-range are specified, the service uses the value of
+            x-ms-range.
+        - id: optionsOrCallback.rangeGetContentMd5
+          type: string
+          description: >-
+            When this header is set to true and specified together with the
+            Range header, the service returns the MD5 hash for the range, as
+            long as the range is less than or equal to 4 MB in size.
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: SpeedSummary
+      content: >-
+        function _getBlobToFile(container, blob, localFileName,
+        optionsOrCallback, optionsOrCallback.speedSummary,
+        optionsOrCallback.checkMD5sum,
+        optionsOrCallback.ParallelOperationThreadCount,
+        optionsOrCallback.snapshotId, optionsOrCallback.leaseId,
+        optionsOrCallback.blobType, optionsOrCallback.contentType,
+        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+        optionsOrCallback.rangeStart, optionsOrCallback.rangeEnd,
+        optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header, optionsOrCallback.rangeStartHeader,
+        optionsOrCallback.rangeEndHeader, optionsOrCallback.rangeGetContentMd5,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService._getBlobToFile(container, blob, localFileName,
+      optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.checkMD5sum,
+      optionsOrCallback.ParallelOperationThreadCount,
+      optionsOrCallback.snapshotId, optionsOrCallback.leaseId,
+      optionsOrCallback.blobType, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.rangeStart, optionsOrCallback.rangeEnd,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.rangeStartHeader,
+      optionsOrCallback.rangeEndHeader, optionsOrCallback.rangeGetContentMd5,
+      optionsOrCallback.cacheControlHeader, optionsOrCallback.accessConditions,
+      optionsOrCallback.timeoutIntervalInMs, callback)
+    children:
+      - 'BlobService#_getBlobToFile~options'
+      - 'BlobService#_getBlobToFile~rangeStream'
+      - 'BlobService#_getBlobToFile~isBlockBlobDownload'
+      - 'BlobService#_getBlobToFile~rangeStream'
+      - 'BlobService#_getBlobToFile~isBlockBlobDownload'
+      - 'BlobService#_getBlobToFile~rangeStream'
+      - 'BlobService#_getBlobToFile~error'
+      - 'BlobService#_getBlobToFile~speedSummary'
+      - 'BlobService#_getBlobToFile~writeStream'
+      - 'BlobService#_getBlobToFile~batchOperations'
+      - 'BlobService#_getBlobToFile~self'
+      - 'BlobService#_getBlobToFile~checkMD5sum'
+      - 'BlobService#_getBlobToFile~md5Hash'
+      - 'BlobService#_getBlobToFile~md5Hash'
+      - 'BlobService#_getBlobToFile~savedBlobResult'
+      - 'BlobService#_getBlobToFile~savedBlobResponse'
+      - 'BlobService#_getBlobToFile~listOptions'
+  - uid: 'BlobService#createPageBlobFromFile'
+    id: createPageBlobFromFile
+    parent: BlobService
+    name: >-
+      createPageBlobFromFile(container, blob, (string), optionsOrCallback,
+      optionsOrCallback.speedSummary, optionsOrCallback.blockIdPrefix,
+      optionsOrCallback.leaseId, optionsOrCallback.metadata,
+      optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    summary: Uploads a page blob from file.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: (string)
+          description: >-
+            localFileName                               The local path to the
+            file to be uploaded.
+        - id: optionsOrCallback
+          type: object
+          description: The creating and request options.
+        - id: optionsOrCallback.speedSummary
+          type: SpeedSummary
+          description: The download tracker objects;
+        - id: optionsOrCallback.blockIdPrefix
+          type: string
+          description: The prefix for block id.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: optionsOrCallback.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: optionsOrCallback.useTransactionalMD5
+          type: bool
+          description: Calculate and send/validate content MD5 for transactions.
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: SpeedSummary
+      content: >-
+        function createPageBlobFromFile(container, blob, (string),
+        optionsOrCallback, optionsOrCallback.speedSummary,
+        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+        optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
+        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+        optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createPageBlobFromFile(container, blob, (string),
+      optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#createPageBlobFromFile~options'
+      - 'BlobService#createPageBlobFromFile~self'
+  - uid: 'BlobService#createPageBlobFromStream'
+    id: createPageBlobFromStream
+    parent: BlobService
+    name: >-
+      createPageBlobFromStream(container, blob, (Stream), streamLength,
+      optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    summary: Uploads a page blob from a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: (Stream)
+          description: >-
+            stream                                      Stream to the data to
+            store.
+        - id: streamLength
+          type: int
+          description: The length of the stream to upload.
+        - id: optionsOrCallback
+          type: object
+          description: The creating and request options.
+        - id: optionsOrCallback.speedSummary
+          type: SpeedSummary
+          description: The download tracker objects;
+        - id: optionsOrCallback.blockIdPrefix
+          type: string
+          description: The prefix for block id.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: optionsOrCallback.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads. This field is not supported for page blobs. The default
+            value is false.
+        - id: optionsOrCallback.useTransactionalMD5
+          type: bool
+          description: Calculate and send/validate content MD5 for transactions.
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: SpeedSummary
+      content: >-
+        function createPageBlobFromStream(container, blob, (Stream),
+        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+        optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
+        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+        optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService.createPageBlobFromStream(container, blob, (Stream),
+      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
+      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#createPageBlobFromStream~options'
+      - 'BlobService#createPageBlobFromStream~self'
+      - 'BlobService#createPageBlobFromStream~error'
+  - uid: 'BlobService#_createBlobFromStream'
+    id: _createBlobFromStream
+    parent: BlobService
+    name: >-
+      _createBlobFromStream(container, blob, blobType, (Stream), streamLength,
+      optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.ParallelOperationThreadCount,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
+      optionsOrCallback.leaseId, optionsOrCallback.metadata,
+      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    summary: Uploads a block blob or page blob from a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: blobType
+          type: string
+          description: The blob type.
+        - id: (Stream)
+          description: >-
+            stream                                      Stream to the data to
+            store.
+        - id: streamLength
+          type: int
+          description: The length of the stream to upload.
+        - id: optionsOrCallback
+          type: object
+          description: The creating and request options.
+        - id: optionsOrCallback.speedSummary
+          type: SpeedSummary
+          description: The download tracker objects;
+        - id: optionsOrCallback.ParallelOperationThreadCount
+          type: int
+          description: Parallel operation thread count
+        - id: optionsOrCallback.useTransactionalMD5
+          type: bool
+          description: Calculate and send/validate content MD5 for transactions.
+        - id: optionsOrCallback.blockIdPrefix
+          type: string
+          description: The prefix for block id.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: optionsOrCallback.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads.
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: SpeedSummary
+      content: >-
+        function _createBlobFromStream(container, blob, blobType, (Stream),
+        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+        optionsOrCallback.ParallelOperationThreadCount,
+        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
+        optionsOrCallback.leaseId, optionsOrCallback.metadata,
+        optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+        optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService._createBlobFromStream(container, blob, blobType, (Stream),
+      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.ParallelOperationThreadCount,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
+      optionsOrCallback.leaseId, optionsOrCallback.metadata,
+      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#_createBlobFromStream~options'
+      - 'BlobService#_createBlobFromStream~readOptions'
+      - 'BlobService#_createBlobFromStream~chunkStream'
+  - uid: 'BlobService#_createBlobFromChunkStream'
+    id: _createBlobFromChunkStream
+    parent: BlobService
+    name: >-
+      _createBlobFromChunkStream(container, blob, blobType, (Stream),
+      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.ParallelOperationThreadCount,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
+      optionsOrCallback.leaseId, optionsOrCallback.metadata,
+      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    summary: Uploads a block blob or page blob from a stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: container
+          type: string
+          description: The container name.
+        - id: blob
+          type: string
+          description: The blob name.
+        - id: blobType
+          type: string
+          description: The blob type.
+        - id: (Stream)
+          description: >-
+            stream                                      Stream to the data to
+            store.
+        - id: streamLength
+          type: int
+          description: The length of the stream to upload.
+        - id: optionsOrCallback
+          type: object
+          description: The creating and request options.
+        - id: optionsOrCallback.speedSummary
+          type: SpeedSummary
+          description: The download tracker objects;
+        - id: optionsOrCallback.ParallelOperationThreadCount
+          type: int
+          description: Parallel operation thread count
+        - id: optionsOrCallback.useTransactionalMD5
+          type: bool
+          description: Calculate and send/validate content MD5 for transactions.
+        - id: optionsOrCallback.blockIdPrefix
+          type: string
+          description: The prefix for block id.
+        - id: optionsOrCallback.leaseId
+          type: string
+          description: The lease identifier.
+        - id: optionsOrCallback.metadata
+          type: object
+          description: The metadata key/value pairs.
+        - id: optionsOrCallback.setBlobContentMD5
+          type: bool
+          description: >-
+            Specifies whether the blob's ContentMD5 header should be set on
+            uploads.
+        - id: optionsOrCallback.contentType
+          type: string
+          description: >-
+            The MIME content type of the blob. The default type is
+            application/octet-stream.
+        - id: optionsOrCallback.contentEncoding
+          type: string
+          description: The content encodings that have been applied to the blob.
+        - id: optionsOrCallback.contentLanguage
+          type: string
+          description: The natural languages used by this resource.
+        - id: optionsOrCallback.contentMD5
+          type: string
+          description: The MD5 hash of the blob content.
+        - id: optionsOrCallback.cacheControl
+          type: string
+          description: The Blob service stores this value but does not use or modify it.
+        - id: optionsOrCallback.contentTypeHeader
+          type: string
+          description: The blob’s content type. (x-ms-blob-content-type)
+        - id: optionsOrCallback.contentEncodingHeader
+          type: string
+          description: The blob’s content encoding. (x-ms-blob-content-encoding)
+        - id: optionsOrCallback.contentLanguageHeader
+          type: string
+          description: The blob's content language. (x-ms-blob-content-language)
+        - id: optionsOrCallback.contentMD5Header
+          type: string
+          description: The blob’s MD5 hash. (x-ms-blob-content-md5)
+        - id: optionsOrCallback.cacheControlHeader
+          type: string
+          description: The blob's cache control. (x-ms-blob-cache-control)
+        - id: optionsOrCallback.accessConditions
+          type: object
+          description: >-
+            The access conditions. See
+            http://msdn.microsoft.com/en-us/library/dd179371.aspx for more
+            information.
+        - id: optionsOrCallback.timeoutIntervalInMs
+          type: int
+          description: 'The timeout interval, in milliseconds, to use for the request.'
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: SpeedSummary
+      content: >-
+        function _createBlobFromChunkStream(container, blob, blobType, (Stream),
+        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+        optionsOrCallback.ParallelOperationThreadCount,
+        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
+        optionsOrCallback.leaseId, optionsOrCallback.metadata,
+        optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+        optionsOrCallback.contentTypeHeader,
+        optionsOrCallback.contentEncodingHeader,
+        optionsOrCallback.contentLanguageHeader,
+        optionsOrCallback.contentMD5Header,
+        optionsOrCallback.cacheControlHeader,
+        optionsOrCallback.accessConditions,
+        optionsOrCallback.timeoutIntervalInMs, callback);
+    fullName: >-
+      BlobService._createBlobFromChunkStream(container, blob, blobType,
+      (Stream), streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
+      optionsOrCallback.ParallelOperationThreadCount,
+      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
+      optionsOrCallback.leaseId, optionsOrCallback.metadata,
+      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
+      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
+      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
+      optionsOrCallback.contentTypeHeader,
+      optionsOrCallback.contentEncodingHeader,
+      optionsOrCallback.contentLanguageHeader,
+      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
+      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
+      callback)
+    children:
+      - 'BlobService#_createBlobFromChunkStream~options'
+      - 'BlobService#_createBlobFromChunkStream~sizeLimitation'
+      - 'BlobService#_createBlobFromChunkStream~originalContentMD5Header'
+      - 'BlobService#_createBlobFromChunkStream~apiName'
+      - 'BlobService#_createBlobFromChunkStream~isBlockBlobUpload'
+      - 'BlobService#_createBlobFromChunkStream~sizeLimitation'
+      - 'BlobService#_createBlobFromChunkStream~apiName'
+      - 'BlobService#_createBlobFromChunkStream~isBlockBlobUpload'
+      - 'BlobService#_createBlobFromChunkStream~sizeLimitation'
+      - 'BlobService#_createBlobFromChunkStream~error'
+      - 'BlobService#_createBlobFromChunkStream~speedSummary'
+      - 'BlobService#_createBlobFromChunkStream~blockIdPrefix'
+      - 'BlobService#_createBlobFromChunkStream~allocator'
+      - 'BlobService#_createBlobFromChunkStream~batchOperations'
+      - 'BlobService#_createBlobFromChunkStream~blockCount'
+      - 'BlobService#_createBlobFromChunkStream~blockIds'
+      - 'BlobService#_createBlobFromChunkStream~self'
+  - uid: BlobService.SpeedSummary
+    id: SpeedSummary
+    parent: BlobService
+    name: SpeedSummary
+    type: Field
+    syntax:
+      content: SpeedSummary
+    fullName: BlobService.SpeedSummary
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: int
+    name: int
+    fullName: int
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: bool
+    name: bool
+    fullName: bool
+    isExternal: true
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true
+  - uid: SpeedSummary
+    name: SpeedSummary
+    fullName: SpeedSummary
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: BlockListFilter
+    name: BlockListFilter
+    fullName: BlockListFilter
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false

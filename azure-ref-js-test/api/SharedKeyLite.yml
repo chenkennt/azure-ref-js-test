@@ -1,0 +1,110 @@
+items:
+  - uid: SharedKeyLite
+    id: SharedKeyLite
+    name: SharedKeyLite
+    summary: Creates a new SharedKey object.
+    type: Class
+    syntax:
+      content: SharedKeyLite
+    fullName: SharedKeyLite
+    children:
+      - 'SharedKeyLite#storageAccount'
+      - 'SharedKeyLite#storageAccessKey'
+      - 'SharedKeyLite#usePathStyleUri'
+      - 'SharedKeyLite#signer'
+      - 'SharedKeyLite#signRequest'
+      - 'SharedKeyLite#_getCanonicalizedResource'
+      - 'SharedKeyLite#_getCanonicalizedHeaders'
+  - uid: 'SharedKeyLite#storageAccount'
+    id: storageAccount
+    parent: SharedKeyLite
+    name: storageAccount
+    type: Field
+    syntax:
+      content: storageAccount
+    fullName: SharedKeyLite.storageAccount
+  - uid: 'SharedKeyLite#storageAccessKey'
+    id: storageAccessKey
+    parent: SharedKeyLite
+    name: storageAccessKey
+    type: Field
+    syntax:
+      content: storageAccessKey
+    fullName: SharedKeyLite.storageAccessKey
+  - uid: 'SharedKeyLite#usePathStyleUri'
+    id: usePathStyleUri
+    parent: SharedKeyLite
+    name: usePathStyleUri
+    type: Field
+    syntax:
+      content: usePathStyleUri
+    fullName: SharedKeyLite.usePathStyleUri
+  - uid: 'SharedKeyLite#signer'
+    id: signer
+    parent: SharedKeyLite
+    name: signer
+    type: Field
+    syntax:
+      content: signer
+    fullName: SharedKeyLite.signer
+  - uid: 'SharedKeyLite#signRequest'
+    id: signRequest
+    parent: SharedKeyLite
+    name: 'signRequest(The, callback)'
+    summary: Signs a request with the Authentication header.
+    type: Method
+    syntax:
+      parameters:
+        - id: The
+          type: WebResource
+          description: webresource to be signed.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: 'function signRequest(The, callback);'
+    fullName: 'SharedKeyLite.signRequest(The, callback)'
+    children:
+      - 'SharedKeyLite#signRequest~getvalueToAppend'
+      - 'SharedKeyLite#signRequest~stringToSign'
+      - 'SharedKeyLite#signRequest~signature'
+  - uid: 'SharedKeyLite#_getCanonicalizedResource'
+    id: _getCanonicalizedResource
+    parent: SharedKeyLite
+    name: _getCanonicalizedResource()
+    type: Method
+    syntax:
+      content: function _getCanonicalizedResource();
+    fullName: SharedKeyLite._getCanonicalizedResource()
+    children:
+      - 'SharedKeyLite#_getCanonicalizedResource~path'
+      - 'SharedKeyLite#_getCanonicalizedResource~path'
+      - 'SharedKeyLite#_getCanonicalizedResource~canonicalizedResource'
+      - 'SharedKeyLite#_getCanonicalizedResource~queryStringValues'
+      - 'SharedKeyLite#_getCanonicalizedResource~canonicalizedResource'
+  - uid: 'SharedKeyLite#_getCanonicalizedHeaders'
+    id: _getCanonicalizedHeaders
+    parent: SharedKeyLite
+    name: _getCanonicalizedHeaders()
+    type: Method
+    syntax:
+      content: function _getCanonicalizedHeaders();
+    fullName: SharedKeyLite._getCanonicalizedHeaders()
+    children:
+      - 'SharedKeyLite#_getCanonicalizedHeaders~canonicalizedHeaders'
+      - 'SharedKeyLite#_getCanonicalizedHeaders~canonicalizedHeadersArray'
+      - 'SharedKeyLite#_getCanonicalizedHeaders~header'
+references:
+  - uid: WebResource
+    name: WebResource
+    fullName: WebResource
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true

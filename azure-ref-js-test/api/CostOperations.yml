@@ -1,0 +1,277 @@
+items:
+  - uid: CostOperations
+    id: CostOperations
+    name: CostOperations
+    type: Class
+    syntax:
+      content: CostOperations
+    fullName: CostOperations
+    children:
+      - 'CostOperations#client'
+      - 'CostOperations#list'
+      - 'CostOperations#getResource'
+      - 'CostOperations#refreshData'
+      - 'CostOperations#beginRefreshData'
+      - 'CostOperations#listNext'
+  - uid: 'CostOperations#client'
+    id: client
+    parent: CostOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: CostOperations.client
+  - uid: 'CostOperations#list'
+    id: list
+    parent: CostOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List costs.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCost} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      CostOperations.list(resourceGroupName, labName, options, options.filter,
+      options.top, options.orderBy, options.customHeaders, callback)
+    children:
+      - 'CostOperations#list~client'
+      - 'CostOperations#list~callback'
+      - 'CostOperations#list~options'
+      - 'CostOperations#list~filter'
+      - 'CostOperations#list~top'
+      - 'CostOperations#list~orderBy'
+      - 'CostOperations#list~requestUrl'
+      - 'CostOperations#list~requestUrl'
+      - 'CostOperations#list~requestUrl'
+      - 'CostOperations#list~requestUrl'
+      - 'CostOperations#list~queryParameters'
+      - 'CostOperations#list~requestUrl'
+      - 'CostOperations#list~regex'
+      - 'CostOperations#list~requestUrl'
+      - 'CostOperations#list~httpRequest'
+      - 'CostOperations#list~headerName'
+  - uid: 'CostOperations#getResource'
+    id: getResource
+    parent: CostOperations
+    name: >-
+      getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Get cost.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the cost.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Cost} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CostOperations.getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'CostOperations#getResource~client'
+      - 'CostOperations#getResource~callback'
+      - 'CostOperations#getResource~options'
+      - 'CostOperations#getResource~requestUrl'
+      - 'CostOperations#getResource~requestUrl'
+      - 'CostOperations#getResource~requestUrl'
+      - 'CostOperations#getResource~requestUrl'
+      - 'CostOperations#getResource~requestUrl'
+      - 'CostOperations#getResource~queryParameters'
+      - 'CostOperations#getResource~requestUrl'
+      - 'CostOperations#getResource~regex'
+      - 'CostOperations#getResource~requestUrl'
+      - 'CostOperations#getResource~httpRequest'
+      - 'CostOperations#getResource~headerName'
+  - uid: 'CostOperations#refreshData'
+    id: refreshData
+    parent: CostOperations
+    name: >-
+      refreshData(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Refresh Lab's Cost Data. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the cost.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function refreshData(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CostOperations.refreshData(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'CostOperations#refreshData~client'
+      - 'CostOperations#refreshData~callback'
+      - 'CostOperations#refreshData~options'
+  - uid: 'CostOperations#beginRefreshData'
+    id: beginRefreshData
+    parent: CostOperations
+    name: >-
+      beginRefreshData(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Refresh Lab's Cost Data. This operation can take a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the cost.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginRefreshData(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CostOperations.beginRefreshData(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'CostOperations#beginRefreshData~client'
+      - 'CostOperations#beginRefreshData~callback'
+      - 'CostOperations#beginRefreshData~options'
+      - 'CostOperations#beginRefreshData~requestUrl'
+      - 'CostOperations#beginRefreshData~requestUrl'
+      - 'CostOperations#beginRefreshData~requestUrl'
+      - 'CostOperations#beginRefreshData~requestUrl'
+      - 'CostOperations#beginRefreshData~requestUrl'
+      - 'CostOperations#beginRefreshData~queryParameters'
+      - 'CostOperations#beginRefreshData~requestUrl'
+      - 'CostOperations#beginRefreshData~regex'
+      - 'CostOperations#beginRefreshData~requestUrl'
+      - 'CostOperations#beginRefreshData~httpRequest'
+      - 'CostOperations#beginRefreshData~headerName'
+  - uid: 'CostOperations#listNext'
+    id: listNext
+    parent: CostOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List costs.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCost} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      CostOperations.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'CostOperations#listNext~client'
+      - 'CostOperations#listNext~callback'
+      - 'CostOperations#listNext~options'
+      - 'CostOperations#listNext~requestUrl'
+      - 'CostOperations#listNext~requestUrl'
+      - 'CostOperations#listNext~regex'
+      - 'CostOperations#listNext~requestUrl'
+      - 'CostOperations#listNext~httpRequest'
+      - 'CostOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

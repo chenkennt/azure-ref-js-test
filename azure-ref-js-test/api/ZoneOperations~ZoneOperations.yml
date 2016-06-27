@@ -1,0 +1,337 @@
+items:
+  - uid: ZoneOperations~ZoneOperations
+    id: ZoneOperations
+    parent: ZoneOperations
+    name: ZoneOperations
+    type: Class
+    syntax:
+      content: ZoneOperations
+    fullName: ZoneOperations.ZoneOperations
+    children:
+      - 'ZoneOperations~ZoneOperations#client'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate'
+      - 'ZoneOperations~ZoneOperations#deleteMethod'
+      - 'ZoneOperations~ZoneOperations#get'
+      - 'ZoneOperations~ZoneOperations#list'
+      - 'ZoneOperations~ZoneOperations#listNext'
+  - uid: 'ZoneOperations~ZoneOperations#client'
+    id: client
+    parent: ZoneOperations~ZoneOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ZoneOperations~ZoneOperations.client
+  - uid: 'ZoneOperations~ZoneOperations#createOrUpdate'
+    id: createOrUpdate
+    parent: ZoneOperations~ZoneOperations
+    name: >-
+      createOrUpdate(resourceGroupName, zoneName, parameters, parameters.zone,
+      parameters.zone.eTag, parameters.zone.properties,
+      parameters.zone.properties.maxNumberOfRecordSets,
+      parameters.zone.properties.numberOfRecordSets, parameters.zone.id,
+      parameters.zone.name, parameters.zone.type, parameters.zone.location,
+      parameters.zone.tags, parameters.ifNoneMatch, callback)
+    summary: Creates a DNS zone within a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: zoneName
+          type: string
+          description: The name of the zone without a terminating dot.
+        - id: parameters
+          type: ZoneCreateOrUpdateParameters
+          description: "Parameters supplied to\rthe CreateOrUpdate operation."
+        - id: parameters.zone
+          type: Zone
+          description: "Gets or sets information about the zone\rbeing created or updated."
+        - id: parameters.zone.eTag
+          type: string
+          description: "Gets or sets the ETag of the zone\rthat is being updated, as received from a Get operation."
+        - id: parameters.zone.properties
+          type: ZoneProperties
+          description: "Gets or sets the\rproperties of the zone."
+        - id: parameters.zone.properties.maxNumberOfRecordSets
+          type: number
+          description: "Gets or\rsets the maximum number of record sets that can be created in this zone."
+        - id: parameters.zone.properties.numberOfRecordSets
+          type: number
+          description: "Gets or\rsets the current number of record sets in this zone."
+        - id: parameters.zone.id
+          type: string
+          description: Gets or sets the ID of the resource.
+        - id: parameters.zone.name
+          type: string
+          description: "Gets or sets the name of the\rresource."
+        - id: parameters.zone.type
+          type: string
+          description: "Gets or sets the type of the\rresource."
+        - id: parameters.zone.location
+          type: string
+          description: "Gets or sets the location of the\rresource."
+        - id: parameters.zone.tags
+          type: object
+          description: "Gets or sets the tags attached to\rthe resource."
+        - id: parameters.ifNoneMatch
+          type: string
+          description: "Gets or sets the If-None-Match\rprecondition. Set to '*' to force Create-If-Not-Exist. Other values will\rbe ignored."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createOrUpdate(resourceGroupName, zoneName, parameters,
+        parameters.zone, parameters.zone.eTag, parameters.zone.properties,
+        parameters.zone.properties.maxNumberOfRecordSets,
+        parameters.zone.properties.numberOfRecordSets, parameters.zone.id,
+        parameters.zone.name, parameters.zone.type, parameters.zone.location,
+        parameters.zone.tags, parameters.ifNoneMatch, callback);
+    fullName: >-
+      ZoneOperations~ZoneOperations.createOrUpdate(resourceGroupName, zoneName,
+      parameters, parameters.zone, parameters.zone.eTag,
+      parameters.zone.properties,
+      parameters.zone.properties.maxNumberOfRecordSets,
+      parameters.zone.properties.numberOfRecordSets, parameters.zone.id,
+      parameters.zone.name, parameters.zone.type, parameters.zone.location,
+      parameters.zone.tags, parameters.ifNoneMatch, callback)
+    children:
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~queryParameters'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~baseUrl'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~baseUrl'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~httpRequest'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~requestContent'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~requestDoc'
+      - >-
+        ZoneOperations~ZoneOperations#createOrUpdate~zoneCreateOrUpdateParametersValue
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~requestDoc'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~propertiesValue'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~tagsDictionary'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~tagsKey'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~tagsValue'
+      - 'ZoneOperations~ZoneOperations#createOrUpdate~requestContent'
+  - uid: 'ZoneOperations~ZoneOperations#deleteMethod'
+    id: deleteMethod
+    parent: ZoneOperations~ZoneOperations
+    name: >-
+      deleteMethod(resourceGroupName, zoneName, parameters, parameters.ifMatch,
+      callback)
+    summary: Removes a DNS zone from a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: zoneName
+          type: string
+          description: The name of the zone without a terminating dot.
+        - id: parameters
+          type: ZoneDeleteParameters
+          description: "The parameters supplied to delete\ra zone"
+        - id: parameters.ifMatch
+          type: string
+          description: "Gets or sets the If-Match\rpre-condition. The delete operation will be performedonly if the ETag of\rthe zone on the server matches this value."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteMethod(resourceGroupName, zoneName, parameters,
+        parameters.ifMatch, callback);
+    fullName: >-
+      ZoneOperations~ZoneOperations.deleteMethod(resourceGroupName, zoneName,
+      parameters, parameters.ifMatch, callback)
+    children:
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~queryParameters'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~baseUrl'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~baseUrl'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
+      - 'ZoneOperations~ZoneOperations#deleteMethod~httpRequest'
+  - uid: 'ZoneOperations~ZoneOperations#get'
+    id: get
+    parent: ZoneOperations~ZoneOperations
+    name: 'get(resourceGroupName, zoneName, callback)'
+    summary: Gets a DNS zone.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: zoneName
+          type: string
+          description: The name of the zone without a terminating dot.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(resourceGroupName, zoneName, callback);'
+    fullName: 'ZoneOperations~ZoneOperations.get(resourceGroupName, zoneName, callback)'
+    children:
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~queryParameters'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~baseUrl'
+      - 'ZoneOperations~ZoneOperations#get~baseUrl'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~url2'
+      - 'ZoneOperations~ZoneOperations#get~httpRequest'
+  - uid: 'ZoneOperations~ZoneOperations#list'
+    id: list
+    parent: ZoneOperations~ZoneOperations
+    name: >-
+      list(resourceGroupName, parametersOrCallback, parametersOrCallback.top,
+      parametersOrCallback.filter, callback)
+    summary: Lists the DNS zones within a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: parametersOrCallback
+          type: ZoneListParameters
+          description: "Query parameters. If\rnull is passed returns the default number of zones."
+        - id: parametersOrCallback.top
+          type: string
+          description: "Gets or sets the number of\relements to retrieve (first N elements)."
+        - id: parametersOrCallback.filter
+          type: string
+          description: "Gets or sets the filter for\rthe records enumeration."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function list(resourceGroupName, parametersOrCallback,
+        parametersOrCallback.top, parametersOrCallback.filter, callback);
+    fullName: >-
+      ZoneOperations~ZoneOperations.list(resourceGroupName,
+      parametersOrCallback, parametersOrCallback.top,
+      parametersOrCallback.filter, callback)
+    children:
+      - 'ZoneOperations~ZoneOperations#list~parameters'
+      - 'ZoneOperations~ZoneOperations#list~callback'
+      - 'ZoneOperations~ZoneOperations#list~parameters'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~queryParameters'
+      - 'ZoneOperations~ZoneOperations#list~odataFilter'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~baseUrl'
+      - 'ZoneOperations~ZoneOperations#list~baseUrl'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~url2'
+      - 'ZoneOperations~ZoneOperations#list~httpRequest'
+  - uid: 'ZoneOperations~ZoneOperations#listNext'
+    id: listNext
+    parent: ZoneOperations~ZoneOperations
+    name: 'listNext(nextLink, callback)'
+    summary: Lists the DNS zones within a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: "NextLink from the previous successful call to\rList operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listNext(nextLink, callback);'
+    fullName: 'ZoneOperations~ZoneOperations.listNext(nextLink, callback)'
+    children:
+      - 'ZoneOperations~ZoneOperations#listNext~url2'
+      - 'ZoneOperations~ZoneOperations#listNext~url2'
+      - 'ZoneOperations~ZoneOperations#listNext~url2'
+      - 'ZoneOperations~ZoneOperations#listNext~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: ZoneCreateOrUpdateParameters
+    name: ZoneCreateOrUpdateParameters
+    fullName: ZoneCreateOrUpdateParameters
+    isExternal: true
+  - uid: Zone
+    name: Zone
+    fullName: Zone
+    isExternal: true
+  - uid: ZoneProperties
+    name: ZoneProperties
+    fullName: ZoneProperties
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: ZoneDeleteParameters
+    name: ZoneDeleteParameters
+    fullName: ZoneDeleteParameters
+    isExternal: true
+  - uid: ZoneListParameters
+    name: ZoneListParameters
+    fullName: ZoneListParameters
+    isExternal: true

@@ -1,0 +1,417 @@
+items:
+  - uid: Users
+    id: Users
+    name: Users
+    type: Class
+    syntax:
+      content: Users
+    fullName: Users
+    children:
+      - 'Users#client'
+      - 'Users#create'
+      - 'Users#list'
+      - 'Users#get'
+      - 'Users#update'
+      - 'Users#deleteMethod'
+      - 'Users#getMemberGroups'
+      - 'Users#listNext'
+  - uid: 'Users#client'
+    id: client
+    parent: Users
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Users.client
+  - uid: 'Users#create'
+    id: create
+    parent: Users
+    name: >-
+      create(parameters, parameters.accountEnabled, parameters.displayName,
+      parameters.passwordProfile, parameters.passwordProfile.password,
+      parameters.passwordProfile.forceChangePasswordNextLogin,
+      parameters.userPrincipalName, parameters.mailNickname,
+      parameters.immutableId, options, options.customHeaders, callback)
+    summary: "Create a new user. Reference:\rhttps://msdn.microsoft.com/library/azure/ad/graph/api/users-operations#CreateUser"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: Parameters to create a user.
+        - id: parameters.accountEnabled
+          type: boolean
+          description: "Enable the account. If it is\renabled then true else false."
+        - id: parameters.displayName
+          type: string
+          description: User display name
+        - id: parameters.passwordProfile
+          type: object
+          description: Password Profile
+        - id: parameters.passwordProfile.password
+          type: string
+          description: Password
+        - id: parameters.passwordProfile.forceChangePasswordNextLogin
+          type: boolean
+          description: Force change password on next login
+        - id: parameters.userPrincipalName
+          type: string
+          description: "The user principal name\r(someuser@contoso.com). It must contain one of the verified domains for\rthe tenant."
+        - id: parameters.mailNickname
+          type: string
+          description: The mail alias for the user
+        - id: parameters.immutableId
+          type: string
+          description: "Needs to be specified if you are\rusing a federated domain for the user's userPrincipalName (UPN) property\rwhile creating a new user account. It is used to associate an on-premises\rActive Directory user account to their Azure AD user object."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(parameters, parameters.accountEnabled,
+        parameters.displayName, parameters.passwordProfile,
+        parameters.passwordProfile.password,
+        parameters.passwordProfile.forceChangePasswordNextLogin,
+        parameters.userPrincipalName, parameters.mailNickname,
+        parameters.immutableId, options, options.customHeaders, callback);
+    fullName: >-
+      Users.create(parameters, parameters.accountEnabled,
+      parameters.displayName, parameters.passwordProfile,
+      parameters.passwordProfile.password,
+      parameters.passwordProfile.forceChangePasswordNextLogin,
+      parameters.userPrincipalName, parameters.mailNickname,
+      parameters.immutableId, options, options.customHeaders, callback)
+    children:
+      - 'Users#create~client'
+      - 'Users#create~callback'
+      - 'Users#create~options'
+      - 'Users#create~apiVersion'
+      - 'Users#create~requestUrl'
+      - 'Users#create~requestUrl'
+      - 'Users#create~queryParameters'
+      - 'Users#create~requestUrl'
+      - 'Users#create~regex'
+      - 'Users#create~requestUrl'
+      - 'Users#create~httpRequest'
+      - 'Users#create~headerName'
+      - 'Users#create~requestContent'
+      - 'Users#create~requestModel'
+      - 'Users#create~requestModelMapper'
+      - 'Users#create~requestModel'
+      - 'Users#create~requestContent'
+      - 'Users#create~serializationError'
+  - uid: 'Users#list'
+    id: list
+    parent: Users
+    name: 'list(options, options.filter, options.customHeaders, callback)'
+    summary: "Gets list of users for the current tenant. Reference\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#GetUsers"
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UserListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.filter, options.customHeaders, callback);'
+    fullName: 'Users.list(options, options.filter, options.customHeaders, callback)'
+    children:
+      - 'Users#list~client'
+      - 'Users#list~callback'
+      - 'Users#list~options'
+      - 'Users#list~filter'
+      - 'Users#list~apiVersion'
+      - 'Users#list~requestUrl'
+      - 'Users#list~requestUrl'
+      - 'Users#list~queryParameters'
+      - 'Users#list~requestUrl'
+      - 'Users#list~regex'
+      - 'Users#list~requestUrl'
+      - 'Users#list~httpRequest'
+      - 'Users#list~headerName'
+  - uid: 'Users#get'
+    id: get
+    parent: Users
+    name: 'get(upnOrObjectId, options, options.customHeaders, callback)'
+    summary: "Gets user information from the directory. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#GetAUser"
+    type: Method
+    syntax:
+      parameters:
+        - id: upnOrObjectId
+          type: string
+          description: "User object Id or user principal name to get\ruser information."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function get(upnOrObjectId, options, options.customHeaders, callback);'
+    fullName: 'Users.get(upnOrObjectId, options, options.customHeaders, callback)'
+    children:
+      - 'Users#get~client'
+      - 'Users#get~callback'
+      - 'Users#get~options'
+      - 'Users#get~apiVersion'
+      - 'Users#get~requestUrl'
+      - 'Users#get~requestUrl'
+      - 'Users#get~requestUrl'
+      - 'Users#get~queryParameters'
+      - 'Users#get~requestUrl'
+      - 'Users#get~regex'
+      - 'Users#get~requestUrl'
+      - 'Users#get~httpRequest'
+      - 'Users#get~headerName'
+  - uid: 'Users#update'
+    id: update
+    parent: Users
+    name: >-
+      update(upnOrObjectId, parameters, parameters.accountEnabled,
+      parameters.displayName, parameters.passwordProfile,
+      parameters.passwordProfile.password,
+      parameters.passwordProfile.forceChangePasswordNextLogin,
+      parameters.mailNickname, options, options.customHeaders, callback)
+    summary: "Updates an exisitng user. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#UpdateUser"
+    type: Method
+    syntax:
+      parameters:
+        - id: upnOrObjectId
+          type: string
+          description: "User object Id or user principal name to get\ruser information."
+        - id: parameters
+          type: object
+          description: Parameters to update an exisitng user.
+        - id: parameters.accountEnabled
+          type: boolean
+          description: "Enable the account. If it is\renabled then true else false."
+        - id: parameters.displayName
+          type: string
+          description: User display name
+        - id: parameters.passwordProfile
+          type: object
+          description: Password Profile
+        - id: parameters.passwordProfile.password
+          type: string
+          description: Password
+        - id: parameters.passwordProfile.forceChangePasswordNextLogin
+          type: boolean
+          description: Force change password on next login
+        - id: parameters.mailNickname
+          type: string
+          description: The mail alias for the user
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(upnOrObjectId, parameters, parameters.accountEnabled,
+        parameters.displayName, parameters.passwordProfile,
+        parameters.passwordProfile.password,
+        parameters.passwordProfile.forceChangePasswordNextLogin,
+        parameters.mailNickname, options, options.customHeaders, callback);
+    fullName: >-
+      Users.update(upnOrObjectId, parameters, parameters.accountEnabled,
+      parameters.displayName, parameters.passwordProfile,
+      parameters.passwordProfile.password,
+      parameters.passwordProfile.forceChangePasswordNextLogin,
+      parameters.mailNickname, options, options.customHeaders, callback)
+    children:
+      - 'Users#update~client'
+      - 'Users#update~callback'
+      - 'Users#update~options'
+      - 'Users#update~apiVersion'
+      - 'Users#update~requestUrl'
+      - 'Users#update~requestUrl'
+      - 'Users#update~requestUrl'
+      - 'Users#update~queryParameters'
+      - 'Users#update~requestUrl'
+      - 'Users#update~regex'
+      - 'Users#update~requestUrl'
+      - 'Users#update~httpRequest'
+      - 'Users#update~headerName'
+      - 'Users#update~requestContent'
+      - 'Users#update~requestModel'
+      - 'Users#update~requestModelMapper'
+      - 'Users#update~requestModel'
+      - 'Users#update~requestContent'
+      - 'Users#update~serializationError'
+  - uid: 'Users#deleteMethod'
+    id: deleteMethod
+    parent: Users
+    name: 'deleteMethod(upnOrObjectId, options, options.customHeaders, callback)'
+    summary: "Delete a user. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#DeleteUser"
+    type: Method
+    syntax:
+      parameters:
+        - id: upnOrObjectId
+          type: string
+          description: user object id or user principal name (upn)
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(upnOrObjectId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Users.deleteMethod(upnOrObjectId, options, options.customHeaders,
+      callback)
+    children:
+      - 'Users#deleteMethod~client'
+      - 'Users#deleteMethod~callback'
+      - 'Users#deleteMethod~options'
+      - 'Users#deleteMethod~apiVersion'
+      - 'Users#deleteMethod~requestUrl'
+      - 'Users#deleteMethod~requestUrl'
+      - 'Users#deleteMethod~requestUrl'
+      - 'Users#deleteMethod~queryParameters'
+      - 'Users#deleteMethod~requestUrl'
+      - 'Users#deleteMethod~regex'
+      - 'Users#deleteMethod~requestUrl'
+      - 'Users#deleteMethod~httpRequest'
+      - 'Users#deleteMethod~headerName'
+  - uid: 'Users#getMemberGroups'
+    id: getMemberGroups
+    parent: Users
+    name: >-
+      getMemberGroups(objectId, securityEnabledOnly, options,
+      options.customHeaders, callback)
+    summary: "Gets a collection that contains the Object IDs of the groups of which the\ruser is a member."
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: User filtering parameters.
+        - id: securityEnabledOnly
+          type: boolean
+          description: "If true only membership in security\renabled groups should be checked. Otherwise membership in all groups\rshould be checked"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UserGetMemberGroupsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getMemberGroups(objectId, securityEnabledOnly, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Users.getMemberGroups(objectId, securityEnabledOnly, options,
+      options.customHeaders, callback)
+    children:
+      - 'Users#getMemberGroups~client'
+      - 'Users#getMemberGroups~callback'
+      - 'Users#getMemberGroups~options'
+      - 'Users#getMemberGroups~apiVersion'
+      - 'Users#getMemberGroups~parameters'
+      - 'Users#getMemberGroups~parameters'
+      - 'Users#getMemberGroups~requestUrl'
+      - 'Users#getMemberGroups~requestUrl'
+      - 'Users#getMemberGroups~requestUrl'
+      - 'Users#getMemberGroups~queryParameters'
+      - 'Users#getMemberGroups~requestUrl'
+      - 'Users#getMemberGroups~regex'
+      - 'Users#getMemberGroups~requestUrl'
+      - 'Users#getMemberGroups~httpRequest'
+      - 'Users#getMemberGroups~headerName'
+      - 'Users#getMemberGroups~requestContent'
+      - 'Users#getMemberGroups~requestModel'
+      - 'Users#getMemberGroups~requestModelMapper'
+      - 'Users#getMemberGroups~requestModel'
+      - 'Users#getMemberGroups~requestContent'
+      - 'Users#getMemberGroups~serializationError'
+  - uid: 'Users#listNext'
+    id: listNext
+    parent: Users
+    name: 'listNext(nextLink, options, options.customHeaders, callback)'
+    summary: Gets list of users for the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: Next link for list operation.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UserListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listNext(nextLink, options, options.customHeaders, callback);'
+    fullName: 'Users.listNext(nextLink, options, options.customHeaders, callback)'
+    children:
+      - 'Users#listNext~client'
+      - 'Users#listNext~callback'
+      - 'Users#listNext~options'
+      - 'Users#listNext~apiVersion'
+      - 'Users#listNext~requestUrl'
+      - 'Users#listNext~requestUrl'
+      - 'Users#listNext~requestUrl'
+      - 'Users#listNext~queryParameters'
+      - 'Users#listNext~requestUrl'
+      - 'Users#listNext~regex'
+      - 'Users#listNext~requestUrl'
+      - 'Users#listNext~httpRequest'
+      - 'Users#listNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

@@ -1,0 +1,101 @@
+items:
+  - uid: Tenants
+    id: Tenants
+    name: Tenants
+    type: Class
+    syntax:
+      content: Tenants
+    fullName: Tenants
+    children:
+      - 'Tenants#client'
+      - 'Tenants#list'
+      - 'Tenants#listNext'
+  - uid: 'Tenants#client'
+    id: client
+    parent: Tenants
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Tenants.client
+  - uid: 'Tenants#list'
+    id: list
+    parent: Tenants
+    name: 'list(options, options.customHeaders, callback)'
+    summary: Gets a list of the tenantIds.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link TenantListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.customHeaders, callback);'
+    fullName: 'Tenants.list(options, options.customHeaders, callback)'
+    children:
+      - 'Tenants#list~client'
+      - 'Tenants#list~callback'
+      - 'Tenants#list~options'
+      - 'Tenants#list~requestUrl'
+      - 'Tenants#list~queryParameters'
+      - 'Tenants#list~requestUrl'
+      - 'Tenants#list~regex'
+      - 'Tenants#list~requestUrl'
+      - 'Tenants#list~httpRequest'
+      - 'Tenants#list~headerName'
+  - uid: 'Tenants#listNext'
+    id: listNext
+    parent: Tenants
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets a list of the tenantIds.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link TenantListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: 'Tenants.listNext(nextPageLink, options, options.customHeaders, callback)'
+    children:
+      - 'Tenants#listNext~client'
+      - 'Tenants#listNext~callback'
+      - 'Tenants#listNext~options'
+      - 'Tenants#listNext~requestUrl'
+      - 'Tenants#listNext~requestUrl'
+      - 'Tenants#listNext~regex'
+      - 'Tenants#listNext~requestUrl'
+      - 'Tenants#listNext~httpRequest'
+      - 'Tenants#listNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false

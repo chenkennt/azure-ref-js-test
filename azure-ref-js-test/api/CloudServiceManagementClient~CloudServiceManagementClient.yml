@@ -1,0 +1,210 @@
+items:
+  - uid: CloudServiceManagementClient~CloudServiceManagementClient
+    id: CloudServiceManagementClient
+    parent: CloudServiceManagementClient
+    name: CloudServiceManagementClient
+    type: Class
+    syntax:
+      content: CloudServiceManagementClient
+    fullName: CloudServiceManagementClient.CloudServiceManagementClient
+    children:
+      - 'CloudServiceManagementClient~CloudServiceManagementClient#credentials'
+      - 'CloudServiceManagementClient~CloudServiceManagementClient#baseUri'
+      - 'CloudServiceManagementClient~CloudServiceManagementClient#baseUri'
+      - 'CloudServiceManagementClient~CloudServiceManagementClient#apiVersion'
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#longRunningOperationInitialTimeout
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#longRunningOperationRetryTimeout
+      - 'CloudServiceManagementClient~CloudServiceManagementClient#cloudServices'
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  - uid: 'CloudServiceManagementClient~CloudServiceManagementClient#credentials'
+    id: credentials
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: credentials
+    type: Field
+    syntax:
+      content: credentials
+    fullName: CloudServiceManagementClient~CloudServiceManagementClient.credentials
+  - uid: 'CloudServiceManagementClient~CloudServiceManagementClient#baseUri'
+    id: baseUri
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: baseUri
+    type: Field
+    syntax:
+      content: baseUri
+    fullName: CloudServiceManagementClient~CloudServiceManagementClient.baseUri
+  - uid: 'CloudServiceManagementClient~CloudServiceManagementClient#baseUri'
+    id: baseUri
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: baseUri
+    type: Field
+    syntax:
+      content: baseUri
+    fullName: CloudServiceManagementClient~CloudServiceManagementClient.baseUri
+  - uid: 'CloudServiceManagementClient~CloudServiceManagementClient#apiVersion'
+    id: apiVersion
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: apiVersion
+    type: Field
+    syntax:
+      content: apiVersion
+    fullName: CloudServiceManagementClient~CloudServiceManagementClient.apiVersion
+  - uid: >-
+      CloudServiceManagementClient~CloudServiceManagementClient#longRunningOperationInitialTimeout
+    id: longRunningOperationInitialTimeout
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: longRunningOperationInitialTimeout
+    type: Field
+    syntax:
+      content: longRunningOperationInitialTimeout
+    fullName: >-
+      CloudServiceManagementClient~CloudServiceManagementClient.longRunningOperationInitialTimeout
+  - uid: >-
+      CloudServiceManagementClient~CloudServiceManagementClient#longRunningOperationRetryTimeout
+    id: longRunningOperationRetryTimeout
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: longRunningOperationRetryTimeout
+    type: Field
+    syntax:
+      content: longRunningOperationRetryTimeout
+    fullName: >-
+      CloudServiceManagementClient~CloudServiceManagementClient.longRunningOperationRetryTimeout
+  - uid: 'CloudServiceManagementClient~CloudServiceManagementClient#cloudServices'
+    id: cloudServices
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: cloudServices
+    summary: "Provides an instance of the\r[CloudServiceOperations](-CloudServiceOperations.html) object."
+    type: Field
+    syntax:
+      return:
+        type: object
+      content: cloudServices
+    fullName: CloudServiceManagementClient~CloudServiceManagementClient.cloudServices
+  - uid: 'CloudServiceManagementClient~CloudServiceManagementClient#entitleResource'
+    id: entitleResource
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: >-
+      entitleResource(parameters, parameters.resourceNamespace,
+      parameters.resourceType, parameters.registrationDate, callback)
+    summary: "EntitleResource is used only for 3rd party Store providers. Each\rsubscription must be entitled for the resource before creating that\rparticular type of resource."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: EntitleResourceParameters
+          description: "Parameters provided to the\rEntitleResource method."
+        - id: parameters.resourceNamespace
+          type: string
+          description: "Required NameSpace identifier\rfor the resource provider."
+        - id: parameters.resourceType
+          type: string
+          description: Required type for the resource.
+        - id: parameters.registrationDate
+          type: date
+          description: "The required data when the\rentitlement is performed."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function entitleResource(parameters, parameters.resourceNamespace,
+        parameters.resourceType, parameters.registrationDate, callback);
+    fullName: >-
+      CloudServiceManagementClient~CloudServiceManagementClient.entitleResource(parameters,
+      parameters.resourceNamespace, parameters.resourceType,
+      parameters.registrationDate, callback)
+    children:
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~baseUrl
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~baseUrl
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~httpRequest
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~requestContent
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~requestDoc
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~entitleResourceElement
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~resourceProviderNameSpaceElement
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~typeElement
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~registrationDateElement
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#entitleResource~requestContent
+  - uid: >-
+      CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+    id: getOperationStatus
+    parent: CloudServiceManagementClient~CloudServiceManagementClient
+    name: 'getOperationStatus(requestId, callback)'
+    summary: "The Get Operation Status operation returns the status of thespecified\roperation. After calling an asynchronous operation, you can call Get\rOperation Status to determine whether the operation has succeeded,\rfailed, or is still in progress.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: requestId
+          type: string
+          description: "The request ID for the request you wish to\rtrack. The request ID is returned in the x-ms-request-id response header\rfor every request."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getOperationStatus(requestId, callback);'
+    fullName: >-
+      CloudServiceManagementClient~CloudServiceManagementClient.getOperationStatus(requestId,
+      callback)
+    children:
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus~baseUrl
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus~baseUrl
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus~url2
+      - >-
+        CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus~httpRequest
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: EntitleResourceParameters
+    name: EntitleResourceParameters
+    fullName: EntitleResourceParameters
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

@@ -1,0 +1,596 @@
+items:
+  - uid: NotificationHubService
+    id: NotificationHubService
+    name: NotificationHubService
+    summary: Creates a new NotificationHubService object.
+    type: Class
+    syntax:
+      content: NotificationHubService
+    fullName: NotificationHubService
+    children:
+      - NotificationHubService~settingsOrConnectionString
+      - NotificationHubService~settingsOrConnectionString
+      - 'NotificationHubService#hubName'
+      - 'NotificationHubService#wns'
+      - 'NotificationHubService#apns'
+      - 'NotificationHubService#gcm'
+      - 'NotificationHubService#mpns'
+      - 'NotificationHubService#send'
+      - 'NotificationHubService#createRegistrationId'
+      - 'NotificationHubService#getRegistration'
+      - 'NotificationHubService#deleteRegistration'
+      - 'NotificationHubService#updateRegistration'
+      - 'NotificationHubService#createOrUpdateRegistration'
+      - 'NotificationHubService#listRegistrations'
+      - 'NotificationHubService#listRegistrationsByTag'
+      - 'NotificationHubService#_sendNotification'
+      - 'NotificationHubService#createOrUpdateInstallation'
+      - 'NotificationHubService#patchInstallation'
+      - 'NotificationHubService#deleteInstallation'
+      - 'NotificationHubService#getInstallation'
+      - 'NotificationHubService#_joinTags'
+      - 'NotificationHubService#_joinTagsSend'
+  - uid: NotificationHubService~settingsOrConnectionString
+    id: settingsOrConnectionString
+    parent: NotificationHubService
+    name: settingsOrConnectionString
+    type: Field
+    syntax:
+      content: settingsOrConnectionString
+    fullName: NotificationHubService.settingsOrConnectionString
+  - uid: NotificationHubService~settingsOrConnectionString
+    id: settingsOrConnectionString
+    parent: NotificationHubService
+    name: settingsOrConnectionString
+    type: Field
+    syntax:
+      content: settingsOrConnectionString
+    fullName: NotificationHubService.settingsOrConnectionString
+  - uid: 'NotificationHubService#hubName'
+    id: hubName
+    parent: NotificationHubService
+    name: hubName
+    type: Field
+    syntax:
+      content: hubName
+    fullName: NotificationHubService.hubName
+  - uid: 'NotificationHubService#wns'
+    id: wns
+    parent: NotificationHubService
+    name: wns
+    summary: >-
+      Provides access to methods to send notifications to WNS (for Windows Store
+      apps) and create/update registrations for Windows Store apps.
+    type: Field
+    syntax:
+      return:
+        type: WnsService
+      content: wns
+    fullName: NotificationHubService.wns
+  - uid: 'NotificationHubService#apns'
+    id: apns
+    parent: NotificationHubService
+    name: apns
+    summary: >-
+      Provides access to methods to send notifications to APNs (for iOS apps)
+      and create/update registrations for iOS apps.
+    type: Field
+    syntax:
+      return:
+        type: ApnsService
+      content: apns
+    fullName: NotificationHubService.apns
+  - uid: 'NotificationHubService#gcm'
+    id: gcm
+    parent: NotificationHubService
+    name: gcm
+    summary: >-
+      Provides access to methods to send notifications to GCM (for Android apps)
+      and create/update registrations for Android apps.
+    type: Field
+    syntax:
+      return:
+        type: GcmService
+      content: gcm
+    fullName: NotificationHubService.gcm
+  - uid: 'NotificationHubService#mpns'
+    id: mpns
+    parent: NotificationHubService
+    name: mpns
+    summary: >-
+      Provides access to methods to send notifications to MPNS (for Windows
+      Phone apps) and create/update registrations for Windows Phone apps.
+    type: Field
+    syntax:
+      return:
+        type: MpnsService
+      content: mpns
+    fullName: NotificationHubService.mpns
+  - uid: 'NotificationHubService#send'
+    id: send
+    parent: NotificationHubService
+    name: 'send(tags, payload, options, options.headers, callback)'
+    summary: Sends a template message.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: "A single tag or tag expression.\r                                                         If null it will broadcast to all registrations in this hub"
+        - id: payload
+          type: object
+          description: The message's payload.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: options.headers
+          type: string
+          description: Additional headers.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: 'function send(tags, payload, options, options.headers, callback);'
+    fullName: >-
+      NotificationHubService.send(tags, payload, options, options.headers,
+      callback)
+    children:
+      - 'NotificationHubService#send~options'
+      - 'NotificationHubService#send~headers'
+      - 'NotificationHubService#send~tags'
+      - 'NotificationHubService#send~payload'
+  - uid: 'NotificationHubService#createRegistrationId'
+    id: createRegistrationId
+    parent: NotificationHubService
+    name: createRegistrationId(callback)
+    summary: Creates a registration identifier.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                 if an error occurs; otherwise, `response`\r                                                 will contain information related to this operation."
+      content: function createRegistrationId(callback);
+    fullName: NotificationHubService.createRegistrationId(callback)
+    children:
+      - 'NotificationHubService#createRegistrationId~webResource'
+  - uid: 'NotificationHubService#getRegistration'
+    id: getRegistration
+    parent: NotificationHubService
+    name: 'getRegistration(registrationId, options, callback)'
+    summary: Retrieves a registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                 if an error occurs; otherwise, `response`\r                                                 will contain information related to this operation."
+      content: 'function getRegistration(registrationId, options, callback);'
+    fullName: 'NotificationHubService.getRegistration(registrationId, options, callback)'
+    children:
+      - 'NotificationHubService#getRegistration~options'
+      - 'NotificationHubService#getRegistration~webResource'
+  - uid: 'NotificationHubService#deleteRegistration'
+    id: deleteRegistration
+    parent: NotificationHubService
+    name: 'deleteRegistration(registrationId, options, options.etag, callback)'
+    summary: Deletes a registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: options.etag
+          type: object
+          description: The etag.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: >-
+        function deleteRegistration(registrationId, options, options.etag,
+        callback);
+    fullName: >-
+      NotificationHubService.deleteRegistration(registrationId, options,
+      options.etag, callback)
+    children:
+      - 'NotificationHubService#deleteRegistration~options'
+      - 'NotificationHubService#deleteRegistration~webResource'
+  - uid: 'NotificationHubService#updateRegistration'
+    id: updateRegistration
+    parent: NotificationHubService
+    name: >-
+      updateRegistration(registration, registration.RegistrationId,
+      registration._.ContentRootElement, registration.ChannelUri,
+      registration.DeviceToken, registration.GcmRegistrationId,
+      registration.Tags, registration.BodyTemplate, registration.WnsHeaders,
+      registration.MpnsHeaders, registration.Expiry, options, options.etag,
+      callback)
+    summary: Updates a registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registration
+          type: object
+          description: The registration to update.
+        - id: registration.RegistrationId
+          type: object
+          description: Registration id to update
+        - id: registration._.ContentRootElement
+          type: object
+          description: "Type of the registration. Types allowed: WindowsRegistrationDescription, WindowsTemplateRegistrationDescription,\r                                                      AppleRegistrationDescription, AppleTemplateRegistrationDescription,\r                                                      GcmRegistrationDescription, GcmTemplateRegistrationDescription,\r                                                      MpnsRegistrationDescription, MpnsTemplateRegistrationDescription."
+        - id: registration.ChannelUri
+          type: object
+          description: Only if Windows or Mpns registration
+        - id: registration.DeviceToken
+          type: object
+          description: Only if Apple registration
+        - id: registration.GcmRegistrationId
+          type: object
+          description: Only if Gcm registration
+        - id: registration.Tags
+          type: object
+          description: Comma-separated list of tags (no spaces)
+        - id: registration.BodyTemplate
+          type: object
+          description: Only if template registration
+        - id: registration.WnsHeaders
+          type: object
+          description: Only if Windows template registration
+        - id: registration.MpnsHeaders
+          type: object
+          description: Only if Mpns template registration
+        - id: registration.Expiry
+          type: object
+          description: Only if Apple template registration
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: options.etag
+          type: object
+          description: The etag.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: >-
+        function updateRegistration(registration, registration.RegistrationId,
+        registration._.ContentRootElement, registration.ChannelUri,
+        registration.DeviceToken, registration.GcmRegistrationId,
+        registration.Tags, registration.BodyTemplate, registration.WnsHeaders,
+        registration.MpnsHeaders, registration.Expiry, options, options.etag,
+        callback);
+    fullName: >-
+      NotificationHubService.updateRegistration(registration,
+      registration.RegistrationId, registration._.ContentRootElement,
+      registration.ChannelUri, registration.DeviceToken,
+      registration.GcmRegistrationId, registration.Tags,
+      registration.BodyTemplate, registration.WnsHeaders,
+      registration.MpnsHeaders, registration.Expiry, options, options.etag,
+      callback)
+    children:
+      - 'NotificationHubService#updateRegistration~options'
+      - 'NotificationHubService#updateRegistration~webResource'
+      - 'NotificationHubService#updateRegistration~registration'
+      - 'NotificationHubService#updateRegistration~registrationType'
+      - 'NotificationHubService#updateRegistration~registrationXml'
+  - uid: 'NotificationHubService#createOrUpdateRegistration'
+    id: createOrUpdateRegistration
+    parent: NotificationHubService
+    name: 'createOrUpdateRegistration(registration, options, options.etag, callback)'
+    summary: Creates or updates a registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registration
+          type: string
+          description: The registration to update.
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: options.etag
+          type: object
+          description: The etag.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: >-
+        function createOrUpdateRegistration(registration, options, options.etag,
+        callback);
+    fullName: >-
+      NotificationHubService.createOrUpdateRegistration(registration, options,
+      options.etag, callback)
+    children:
+      - 'NotificationHubService#createOrUpdateRegistration~options'
+      - 'NotificationHubService#createOrUpdateRegistration~webResource'
+      - 'NotificationHubService#createOrUpdateRegistration~registration'
+      - 'NotificationHubService#createOrUpdateRegistration~registrationType'
+      - 'NotificationHubService#createOrUpdateRegistration~registrationXml'
+  - uid: 'NotificationHubService#listRegistrations'
+    id: listRegistrations
+    parent: NotificationHubService
+    name: 'listRegistrations(options, options.top, options.skip, callback)'
+    summary: List registrations.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: options.top
+          type: object
+          description: >-
+            Specifies the maximum number of registration to obtain from the
+            call.
+        - id: options.skip
+          type: object
+          description: Specifies the number of registrations to skip in the call.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: >-
+        function listRegistrations(options, options.top, options.skip,
+        callback);
+    fullName: >-
+      NotificationHubService.listRegistrations(options, options.top,
+      options.skip, callback)
+    children:
+      - 'NotificationHubService#listRegistrations~options'
+      - 'NotificationHubService#listRegistrations~webResource'
+  - uid: 'NotificationHubService#listRegistrationsByTag'
+    id: listRegistrationsByTag
+    parent: NotificationHubService
+    name: 'listRegistrationsByTag(tag, options, options.top, options.skip, callback)'
+    summary: Retrieves a registration by tag.
+    type: Method
+    syntax:
+      parameters:
+        - id: tag
+          type: string
+          description: The registration tag.
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: options.top
+          type: object
+          description: >-
+            Specifies the maximum number of registration to obtain from the
+            call.
+        - id: options.skip
+          type: object
+          description: Specifies the number of registrations to skip in the call.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: >-
+        function listRegistrationsByTag(tag, options, options.top, options.skip,
+        callback);
+    fullName: >-
+      NotificationHubService.listRegistrationsByTag(tag, options, options.top,
+      options.skip, callback)
+    children:
+      - 'NotificationHubService#listRegistrationsByTag~options'
+      - 'NotificationHubService#listRegistrationsByTag~webResource'
+  - uid: 'NotificationHubService#_sendNotification'
+    id: _sendNotification
+    parent: NotificationHubService
+    name: >-
+      _sendNotification(payload, options, options.ServiceBusNotification-Tags,
+      options.ServiceBusNotification-Format,
+      options.ServiceBusNotification-ApnsExpiry, callback)
+    summary: Sends a message.
+    type: Method
+    syntax:
+      parameters:
+        - id: payload
+          type: object
+          description: The message's payload.
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: options.ServiceBusNotification-Tags
+          type: string
+          description: Comma-separated list of tag identifiers.
+        - id: options.ServiceBusNotification-Format
+          type: string
+          description: 'String. ''apple'', ''windows'', ''gcm'', or ''windowsphone''.'
+        - id: options.ServiceBusNotification-ApnsExpiry
+          type: string
+          description: The expiry date.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                         if an error occurs; otherwise, `response`\r                                                                         will contain information related to this operation."
+      content: >-
+        function _sendNotification(payload, options,
+        options.ServiceBusNotification-Tags,
+        options.ServiceBusNotification-Format,
+        options.ServiceBusNotification-ApnsExpiry, callback);
+    fullName: >-
+      NotificationHubService._sendNotification(payload, options,
+      options.ServiceBusNotification-Tags,
+      options.ServiceBusNotification-Format,
+      options.ServiceBusNotification-ApnsExpiry, callback)
+    children:
+      - 'NotificationHubService#_sendNotification~options'
+      - 'NotificationHubService#_sendNotification~webResource'
+  - uid: 'NotificationHubService#createOrUpdateInstallation'
+    id: createOrUpdateInstallation
+    parent: NotificationHubService
+    name: 'createOrUpdateInstallation(installation, options, callback)'
+    summary: Creates or updates a installation.
+    type: Method
+    syntax:
+      parameters:
+        - id: installation
+          type: string
+          description: The installation to create/update.
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: 'function createOrUpdateInstallation(installation, options, callback);'
+    fullName: >-
+      NotificationHubService.createOrUpdateInstallation(installation, options,
+      callback)
+    children:
+      - 'NotificationHubService#createOrUpdateInstallation~options'
+      - 'NotificationHubService#createOrUpdateInstallation~webResource'
+      - 'NotificationHubService#createOrUpdateInstallation~requestContent'
+  - uid: 'NotificationHubService#patchInstallation'
+    id: patchInstallation
+    parent: NotificationHubService
+    name: >-
+      patchInstallation(installationId, partialUpdateOperations, options,
+      callback)
+    summary: Patches an existing installation.
+    type: Method
+    syntax:
+      parameters:
+        - id: installationId
+          type: string
+          description: Installation Id
+        - id: partialUpdateOperations
+          type: array
+          description: List of partial operations to patch an existing installation
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: >-
+        function patchInstallation(installationId, partialUpdateOperations,
+        options, callback);
+    fullName: >-
+      NotificationHubService.patchInstallation(installationId,
+      partialUpdateOperations, options, callback)
+    children:
+      - 'NotificationHubService#patchInstallation~options'
+      - 'NotificationHubService#patchInstallation~webResource'
+      - 'NotificationHubService#patchInstallation~requestContent'
+  - uid: 'NotificationHubService#deleteInstallation'
+    id: deleteInstallation
+    parent: NotificationHubService
+    name: 'deleteInstallation(installationId, options, callback)'
+    summary: Deletes an existing installation.
+    type: Method
+    syntax:
+      parameters:
+        - id: installationId
+          type: string
+          description: Installation Id
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: 'function deleteInstallation(installationId, options, callback);'
+    fullName: >-
+      NotificationHubService.deleteInstallation(installationId, options,
+      callback)
+    children:
+      - 'NotificationHubService#deleteInstallation~options'
+      - 'NotificationHubService#deleteInstallation~webResource'
+  - uid: 'NotificationHubService#getInstallation'
+    id: getInstallation
+    parent: NotificationHubService
+    name: 'getInstallation(installationId, options, callback)'
+    summary: Gets an installation by its Id
+    type: Method
+    syntax:
+      parameters:
+        - id: installationId
+          type: string
+          description: Installation Id
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
+      content: 'function getInstallation(installationId, options, callback);'
+    fullName: 'NotificationHubService.getInstallation(installationId, options, callback)'
+    children:
+      - 'NotificationHubService#getInstallation~options'
+      - 'NotificationHubService#getInstallation~webResource'
+  - uid: 'NotificationHubService#_joinTags'
+    id: _joinTags
+    parent: NotificationHubService
+    name: _joinTags()
+    type: Method
+    syntax:
+      content: function _joinTags();
+    fullName: NotificationHubService._joinTags()
+  - uid: 'NotificationHubService#_joinTagsSend'
+    id: _joinTagsSend
+    parent: NotificationHubService
+    name: _joinTagsSend()
+    type: Method
+    syntax:
+      content: function _joinTagsSend();
+    fullName: NotificationHubService._joinTagsSend()
+references:
+  - uid: WnsService
+    name: WnsService
+    fullName: WnsService
+    isExternal: false
+  - uid: ApnsService
+    name: ApnsService
+    fullName: ApnsService
+    isExternal: false
+  - uid: GcmService
+    name: GcmService
+    fullName: GcmService
+    isExternal: false
+  - uid: MpnsService
+    name: MpnsService
+    fullName: MpnsService
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

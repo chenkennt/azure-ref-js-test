@@ -1,0 +1,229 @@
+items:
+  - uid: ManagementCertificateOperations~ManagementCertificateOperations
+    id: ManagementCertificateOperations
+    parent: ManagementCertificateOperations
+    name: ManagementCertificateOperations
+    type: Class
+    syntax:
+      content: ManagementCertificateOperations
+    fullName: ManagementCertificateOperations.ManagementCertificateOperations
+    children:
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#client'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#create'
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#list'
+  - uid: 'ManagementCertificateOperations~ManagementCertificateOperations#client'
+    id: client
+    parent: ManagementCertificateOperations~ManagementCertificateOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ManagementCertificateOperations~ManagementCertificateOperations.client
+  - uid: 'ManagementCertificateOperations~ManagementCertificateOperations#create'
+    id: create
+    parent: ManagementCertificateOperations~ManagementCertificateOperations
+    name: >-
+      create(parameters, parameters.publicKey, parameters.thumbprint,
+      parameters.data, callback)
+    summary: "The Create Management Certificate operation adds a certificate to the list\rof management certificates. Management certificates, which are also known\ras subscription certificates, authenticate clients attempting to connect\rto resources associated with your Azure subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154123.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: ManagementCertificateCreateParameters
+          description: "Parameters\rsupplied to the Create Management Certificate operation."
+        - id: parameters.publicKey
+          type: buffer
+          description: "A base-64-representation of the\rmanagement certificate public key."
+        - id: parameters.thumbprint
+          type: string
+          description: "The thumbprint that uniquely\ridentifies the management certificate."
+        - id: parameters.data
+          type: buffer
+          description: "The certificate's raw data in\rbase-64-encoded cer format."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.publicKey, parameters.thumbprint,
+        parameters.data, callback);
+    fullName: >-
+      ManagementCertificateOperations~ManagementCertificateOperations.create(parameters,
+      parameters.publicKey, parameters.thumbprint, parameters.data, callback)
+    children:
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~baseUrl
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~baseUrl
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~httpRequest
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~requestContent
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~requestDoc
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~subscriptionCertificateElement
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~subscriptionCertificatePublicKeyElement
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~subscriptionCertificateThumbprintElement
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~subscriptionCertificateDataElement
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#create~requestContent
+  - uid: >-
+      ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+    id: deleteMethod
+    parent: ManagementCertificateOperations~ManagementCertificateOperations
+    name: 'deleteMethod(thumbprint, callback)'
+    summary: "The Delete Management Certificate operation deletes a certificate from the\rlist of management certificates. Management certificates, which are also\rknown as subscription certificates, authenticate clients attempting to\rconnect to resources associated with your Azure subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154127.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: thumbprint
+          type: string
+          description: "The thumbprint value of the certificate to\rdelete."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(thumbprint, callback);'
+    fullName: >-
+      ManagementCertificateOperations~ManagementCertificateOperations.deleteMethod(thumbprint,
+      callback)
+    children:
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~baseUrl
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~baseUrl
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod~httpRequest
+  - uid: 'ManagementCertificateOperations~ManagementCertificateOperations#get'
+    id: get
+    parent: ManagementCertificateOperations~ManagementCertificateOperations
+    name: 'get(thumbprint, callback)'
+    summary: "The Get Management Certificate operation retrieves information about the\rmanagement certificate with the specified thumbprint. Management\rcertificates, which are also known as subscription certificates,\rauthenticate clients attempting to connect to resources associated with\ryour Azure subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154131.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: thumbprint
+          type: string
+          description: "The thumbprint value of the certificate to\rretrieve information about."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(thumbprint, callback);'
+    fullName: >-
+      ManagementCertificateOperations~ManagementCertificateOperations.get(thumbprint,
+      callback)
+    children:
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#get~baseUrl
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#get~baseUrl
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - 'ManagementCertificateOperations~ManagementCertificateOperations#get~url2'
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#get~httpRequest
+  - uid: 'ManagementCertificateOperations~ManagementCertificateOperations#list'
+    id: list
+    parent: ManagementCertificateOperations~ManagementCertificateOperations
+    name: list(callback)
+    summary: "The List Management Certificates operation lists and returns basic\rinformation about all of the management certificates associated with the\rspecified subscription. Management certificates, which are also known as\rsubscription certificates, authenticate clients attempting to connect to\rresources associated with your Azure subscription.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: >-
+      ManagementCertificateOperations~ManagementCertificateOperations.list(callback)
+    children:
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~baseUrl
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~baseUrl
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~url2
+      - >-
+        ManagementCertificateOperations~ManagementCertificateOperations#list~httpRequest
+references:
+  - uid: ManagementCertificateCreateParameters
+    name: ManagementCertificateCreateParameters
+    fullName: ManagementCertificateCreateParameters
+    isExternal: true
+  - uid: buffer
+    name: buffer
+    fullName: buffer
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

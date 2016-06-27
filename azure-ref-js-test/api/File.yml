@@ -1,0 +1,1026 @@
+items:
+  - uid: File
+    id: File
+    name: File
+    type: Class
+    syntax:
+      content: File
+    fullName: File
+    children:
+      - 'File#client'
+      - 'File#deleteFromTask'
+      - 'File#getFromTask'
+      - 'File#getNodeFilePropertiesFromTask'
+      - 'File#deleteFromComputeNode'
+      - 'File#getFromComputeNode'
+      - 'File#getNodeFilePropertiesFromComputeNode'
+      - 'File#listFromTask'
+      - 'File#listFromComputeNode'
+      - 'File#listFromTaskNext'
+      - 'File#listFromComputeNodeNext'
+  - uid: 'File#client'
+    id: client
+    parent: File
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: File.client
+  - uid: 'File#deleteFromTask'
+    id: deleteFromTask
+    parent: File
+    name: >-
+      deleteFromTask(jobId, taskId, fileName, options, options.recursive,
+      options.fileDeleteFromTaskOptions,
+      options.fileDeleteFromTaskOptions.timeout,
+      options.fileDeleteFromTaskOptions.clientRequestId,
+      options.fileDeleteFromTaskOptions.returnClientRequestId,
+      options.fileDeleteFromTaskOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Deletes the specified task file from the compute node where the task ran.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: The id of the job that contains the task.
+        - id: taskId
+          type: string
+          description: The id of the task whose file you want to delete.
+        - id: fileName
+          type: string
+          description: The path to the task file that you want to delete.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.recursive
+          type: boolean
+          description: "Whether to delete children of a\rdirectory. If the fileName parameter represents a directory instead of a\rfile, you can set Recursive to true to delete the directory and all of the\rfiles and subdirectories in it. If Recursive is false then the directory\rmust be empty or deletion will fail."
+        - id: options.fileDeleteFromTaskOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.fileDeleteFromTaskOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.fileDeleteFromTaskOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileDeleteFromTaskOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.fileDeleteFromTaskOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteFromTask(jobId, taskId, fileName, options,
+        options.recursive, options.fileDeleteFromTaskOptions,
+        options.fileDeleteFromTaskOptions.timeout,
+        options.fileDeleteFromTaskOptions.clientRequestId,
+        options.fileDeleteFromTaskOptions.returnClientRequestId,
+        options.fileDeleteFromTaskOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      File.deleteFromTask(jobId, taskId, fileName, options, options.recursive,
+      options.fileDeleteFromTaskOptions,
+      options.fileDeleteFromTaskOptions.timeout,
+      options.fileDeleteFromTaskOptions.clientRequestId,
+      options.fileDeleteFromTaskOptions.returnClientRequestId,
+      options.fileDeleteFromTaskOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'File#deleteFromTask~client'
+      - 'File#deleteFromTask~callback'
+      - 'File#deleteFromTask~options'
+      - 'File#deleteFromTask~recursive'
+      - 'File#deleteFromTask~fileDeleteFromTaskOptions'
+      - 'File#deleteFromTask~timeout'
+      - 'File#deleteFromTask~clientRequestId'
+      - 'File#deleteFromTask~returnClientRequestId'
+      - 'File#deleteFromTask~ocpDate'
+      - 'File#deleteFromTask~timeout'
+      - 'File#deleteFromTask~clientRequestId'
+      - 'File#deleteFromTask~returnClientRequestId'
+      - 'File#deleteFromTask~ocpDate'
+      - 'File#deleteFromTask~requestUrl'
+      - 'File#deleteFromTask~requestUrl'
+      - 'File#deleteFromTask~requestUrl'
+      - 'File#deleteFromTask~requestUrl'
+      - 'File#deleteFromTask~queryParameters'
+      - 'File#deleteFromTask~requestUrl'
+      - 'File#deleteFromTask~regex'
+      - 'File#deleteFromTask~requestUrl'
+      - 'File#deleteFromTask~httpRequest'
+      - 'File#deleteFromTask~headerName'
+  - uid: 'File#getFromTask'
+    id: getFromTask
+    parent: File
+    name: >-
+      getFromTask(jobId, taskId, fileName, options,
+      options.fileGetFromTaskOptions, options.fileGetFromTaskOptions.timeout,
+      options.fileGetFromTaskOptions.clientRequestId,
+      options.fileGetFromTaskOptions.returnClientRequestId,
+      options.fileGetFromTaskOptions.ocpDate,
+      options.fileGetFromTaskOptions.ocpRange,
+      options.fileGetFromTaskOptions.ifModifiedSince,
+      options.fileGetFromTaskOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: Returns the content of the specified task file.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: The id of the job that contains the task.
+        - id: taskId
+          type: string
+          description: The id of the task whose file you want to retrieve.
+        - id: fileName
+          type: string
+          description: "The path to the task file that you want to get the\rcontent of."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.fileGetFromTaskOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.fileGetFromTaskOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.fileGetFromTaskOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileGetFromTaskOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.fileGetFromTaskOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.fileGetFromTaskOptions.ocpRange
+          type: string
+          description: "The byte range to\rbe retrieved. The default is to retrieve the entire file. The format is\rstartRange-endRange."
+        - id: options.fileGetFromTaskOptions.ifModifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has been modified\rsince the specified date/time."
+        - id: options.fileGetFromTaskOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify\rthis header to perform the operation only if the resource has not been\rmodified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getFromTask(jobId, taskId, fileName, options,
+        options.fileGetFromTaskOptions, options.fileGetFromTaskOptions.timeout,
+        options.fileGetFromTaskOptions.clientRequestId,
+        options.fileGetFromTaskOptions.returnClientRequestId,
+        options.fileGetFromTaskOptions.ocpDate,
+        options.fileGetFromTaskOptions.ocpRange,
+        options.fileGetFromTaskOptions.ifModifiedSince,
+        options.fileGetFromTaskOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      File.getFromTask(jobId, taskId, fileName, options,
+      options.fileGetFromTaskOptions, options.fileGetFromTaskOptions.timeout,
+      options.fileGetFromTaskOptions.clientRequestId,
+      options.fileGetFromTaskOptions.returnClientRequestId,
+      options.fileGetFromTaskOptions.ocpDate,
+      options.fileGetFromTaskOptions.ocpRange,
+      options.fileGetFromTaskOptions.ifModifiedSince,
+      options.fileGetFromTaskOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'File#getFromTask~client'
+      - 'File#getFromTask~callback'
+      - 'File#getFromTask~options'
+      - 'File#getFromTask~fileGetFromTaskOptions'
+      - 'File#getFromTask~timeout'
+      - 'File#getFromTask~clientRequestId'
+      - 'File#getFromTask~returnClientRequestId'
+      - 'File#getFromTask~ocpDate'
+      - 'File#getFromTask~ocpRange'
+      - 'File#getFromTask~ifModifiedSince'
+      - 'File#getFromTask~ifUnmodifiedSince'
+      - 'File#getFromTask~timeout'
+      - 'File#getFromTask~clientRequestId'
+      - 'File#getFromTask~returnClientRequestId'
+      - 'File#getFromTask~ocpDate'
+      - 'File#getFromTask~ocpRange'
+      - 'File#getFromTask~ifModifiedSince'
+      - 'File#getFromTask~ifUnmodifiedSince'
+      - 'File#getFromTask~requestUrl'
+      - 'File#getFromTask~requestUrl'
+      - 'File#getFromTask~requestUrl'
+      - 'File#getFromTask~requestUrl'
+      - 'File#getFromTask~queryParameters'
+      - 'File#getFromTask~requestUrl'
+      - 'File#getFromTask~regex'
+      - 'File#getFromTask~requestUrl'
+      - 'File#getFromTask~httpRequest'
+      - 'File#getFromTask~headerName'
+  - uid: 'File#getNodeFilePropertiesFromTask'
+    id: getNodeFilePropertiesFromTask
+    parent: File
+    name: >-
+      getNodeFilePropertiesFromTask(jobId, taskId, fileName, options,
+      options.fileGetNodeFilePropertiesFromTaskOptions,
+      options.fileGetNodeFilePropertiesFromTaskOptions.timeout,
+      options.fileGetNodeFilePropertiesFromTaskOptions.clientRequestId,
+      options.fileGetNodeFilePropertiesFromTaskOptions.returnClientRequestId,
+      options.fileGetNodeFilePropertiesFromTaskOptions.ocpDate,
+      options.fileGetNodeFilePropertiesFromTaskOptions.ifModifiedSince,
+      options.fileGetNodeFilePropertiesFromTaskOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    summary: Gets the properties of the specified task file.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: The id of the job that contains the task.
+        - id: taskId
+          type: string
+          description: "The id of the task whose file you want to get the\rproperties of."
+        - id: fileName
+          type: string
+          description: "The path to the task file that you want to get the\rproperties of."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.fileGetNodeFilePropertiesFromTaskOptions
+          type: object
+          description: Additional parameters for the operation
+        - id: options.fileGetNodeFilePropertiesFromTaskOptions.timeout
+          type: number
+          description: "The maximum time that the server can spend processing the request, in\rseconds. The default is 30 seconds."
+        - id: options.fileGetNodeFilePropertiesFromTaskOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: >-
+            options.fileGetNodeFilePropertiesFromTaskOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.fileGetNodeFilePropertiesFromTaskOptions.ocpDate
+          type: date
+          description: "The time the request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.fileGetNodeFilePropertiesFromTaskOptions.ifModifiedSince
+          type: date
+          description: "Specify\rthis header to perform the operation only if the resource has been\rmodified since the specified date/time."
+        - id: options.fileGetNodeFilePropertiesFromTaskOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this header to perform the operation only if the resource has not\rbeen modified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getNodeFilePropertiesFromTask(jobId, taskId, fileName, options,
+        options.fileGetNodeFilePropertiesFromTaskOptions,
+        options.fileGetNodeFilePropertiesFromTaskOptions.timeout,
+        options.fileGetNodeFilePropertiesFromTaskOptions.clientRequestId,
+        options.fileGetNodeFilePropertiesFromTaskOptions.returnClientRequestId,
+        options.fileGetNodeFilePropertiesFromTaskOptions.ocpDate,
+        options.fileGetNodeFilePropertiesFromTaskOptions.ifModifiedSince,
+        options.fileGetNodeFilePropertiesFromTaskOptions.ifUnmodifiedSince,
+        options.customHeaders, callback);
+    fullName: >-
+      File.getNodeFilePropertiesFromTask(jobId, taskId, fileName, options,
+      options.fileGetNodeFilePropertiesFromTaskOptions,
+      options.fileGetNodeFilePropertiesFromTaskOptions.timeout,
+      options.fileGetNodeFilePropertiesFromTaskOptions.clientRequestId,
+      options.fileGetNodeFilePropertiesFromTaskOptions.returnClientRequestId,
+      options.fileGetNodeFilePropertiesFromTaskOptions.ocpDate,
+      options.fileGetNodeFilePropertiesFromTaskOptions.ifModifiedSince,
+      options.fileGetNodeFilePropertiesFromTaskOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    children:
+      - 'File#getNodeFilePropertiesFromTask~client'
+      - 'File#getNodeFilePropertiesFromTask~callback'
+      - 'File#getNodeFilePropertiesFromTask~options'
+      - >-
+        File#getNodeFilePropertiesFromTask~fileGetNodeFilePropertiesFromTaskOptions
+      - 'File#getNodeFilePropertiesFromTask~timeout'
+      - 'File#getNodeFilePropertiesFromTask~clientRequestId'
+      - 'File#getNodeFilePropertiesFromTask~returnClientRequestId'
+      - 'File#getNodeFilePropertiesFromTask~ocpDate'
+      - 'File#getNodeFilePropertiesFromTask~ifModifiedSince'
+      - 'File#getNodeFilePropertiesFromTask~ifUnmodifiedSince'
+      - 'File#getNodeFilePropertiesFromTask~timeout'
+      - 'File#getNodeFilePropertiesFromTask~clientRequestId'
+      - 'File#getNodeFilePropertiesFromTask~returnClientRequestId'
+      - 'File#getNodeFilePropertiesFromTask~ocpDate'
+      - 'File#getNodeFilePropertiesFromTask~ifModifiedSince'
+      - 'File#getNodeFilePropertiesFromTask~ifUnmodifiedSince'
+      - 'File#getNodeFilePropertiesFromTask~requestUrl'
+      - 'File#getNodeFilePropertiesFromTask~requestUrl'
+      - 'File#getNodeFilePropertiesFromTask~requestUrl'
+      - 'File#getNodeFilePropertiesFromTask~requestUrl'
+      - 'File#getNodeFilePropertiesFromTask~queryParameters'
+      - 'File#getNodeFilePropertiesFromTask~requestUrl'
+      - 'File#getNodeFilePropertiesFromTask~regex'
+      - 'File#getNodeFilePropertiesFromTask~requestUrl'
+      - 'File#getNodeFilePropertiesFromTask~httpRequest'
+      - 'File#getNodeFilePropertiesFromTask~headerName'
+  - uid: 'File#deleteFromComputeNode'
+    id: deleteFromComputeNode
+    parent: File
+    name: >-
+      deleteFromComputeNode(poolId, nodeId, fileName, options,
+      options.recursive, options.fileDeleteFromComputeNodeOptions,
+      options.fileDeleteFromComputeNodeOptions.timeout,
+      options.fileDeleteFromComputeNodeOptions.clientRequestId,
+      options.fileDeleteFromComputeNodeOptions.returnClientRequestId,
+      options.fileDeleteFromComputeNodeOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Deletes the specified task file from the compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the compute node from which you want to\rdelete the file."
+        - id: fileName
+          type: string
+          description: The path to the file that you want to delete.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.recursive
+          type: boolean
+          description: "Whether to delete children of a\rdirectory. If the fileName parameter represents a directory instead of a\rfile, you can set Recursive to true to delete the directory and all of the\rfiles and subdirectories in it. If Recursive is false then the directory\rmust be empty or deletion will fail."
+        - id: options.fileDeleteFromComputeNodeOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.fileDeleteFromComputeNodeOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.fileDeleteFromComputeNodeOptions.clientRequestId
+          type: string
+          description: "The caller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileDeleteFromComputeNodeOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.fileDeleteFromComputeNodeOptions.ocpDate
+          type: date
+          description: "The time\rthe request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteFromComputeNode(poolId, nodeId, fileName, options,
+        options.recursive, options.fileDeleteFromComputeNodeOptions,
+        options.fileDeleteFromComputeNodeOptions.timeout,
+        options.fileDeleteFromComputeNodeOptions.clientRequestId,
+        options.fileDeleteFromComputeNodeOptions.returnClientRequestId,
+        options.fileDeleteFromComputeNodeOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      File.deleteFromComputeNode(poolId, nodeId, fileName, options,
+      options.recursive, options.fileDeleteFromComputeNodeOptions,
+      options.fileDeleteFromComputeNodeOptions.timeout,
+      options.fileDeleteFromComputeNodeOptions.clientRequestId,
+      options.fileDeleteFromComputeNodeOptions.returnClientRequestId,
+      options.fileDeleteFromComputeNodeOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'File#deleteFromComputeNode~client'
+      - 'File#deleteFromComputeNode~callback'
+      - 'File#deleteFromComputeNode~options'
+      - 'File#deleteFromComputeNode~recursive'
+      - 'File#deleteFromComputeNode~fileDeleteFromComputeNodeOptions'
+      - 'File#deleteFromComputeNode~timeout'
+      - 'File#deleteFromComputeNode~clientRequestId'
+      - 'File#deleteFromComputeNode~returnClientRequestId'
+      - 'File#deleteFromComputeNode~ocpDate'
+      - 'File#deleteFromComputeNode~timeout'
+      - 'File#deleteFromComputeNode~clientRequestId'
+      - 'File#deleteFromComputeNode~returnClientRequestId'
+      - 'File#deleteFromComputeNode~ocpDate'
+      - 'File#deleteFromComputeNode~requestUrl'
+      - 'File#deleteFromComputeNode~requestUrl'
+      - 'File#deleteFromComputeNode~requestUrl'
+      - 'File#deleteFromComputeNode~requestUrl'
+      - 'File#deleteFromComputeNode~queryParameters'
+      - 'File#deleteFromComputeNode~requestUrl'
+      - 'File#deleteFromComputeNode~regex'
+      - 'File#deleteFromComputeNode~requestUrl'
+      - 'File#deleteFromComputeNode~httpRequest'
+      - 'File#deleteFromComputeNode~headerName'
+  - uid: 'File#getFromComputeNode'
+    id: getFromComputeNode
+    parent: File
+    name: >-
+      getFromComputeNode(poolId, nodeId, fileName, options,
+      options.fileGetFromComputeNodeOptions,
+      options.fileGetFromComputeNodeOptions.timeout,
+      options.fileGetFromComputeNodeOptions.clientRequestId,
+      options.fileGetFromComputeNodeOptions.returnClientRequestId,
+      options.fileGetFromComputeNodeOptions.ocpDate,
+      options.fileGetFromComputeNodeOptions.ocpRange,
+      options.fileGetFromComputeNodeOptions.ifModifiedSince,
+      options.fileGetFromComputeNodeOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    summary: Returns the content of the specified task file.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: The id of the compute node that contains the file.
+        - id: fileName
+          type: string
+          description: "The path to the task file that you want to get the\rcontent of."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.fileGetFromComputeNodeOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.fileGetFromComputeNodeOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.fileGetFromComputeNodeOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileGetFromComputeNodeOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.fileGetFromComputeNodeOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.fileGetFromComputeNodeOptions.ocpRange
+          type: string
+          description: "The byte\rrange to be retrieved. The default is to retrieve the entire file. The\rformat is startRange-endRange."
+        - id: options.fileGetFromComputeNodeOptions.ifModifiedSince
+          type: date
+          description: "Specify this header to perform the operation only if the resource has been\rmodified since the specified date/time."
+        - id: options.fileGetFromComputeNodeOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this header to perform the operation only if the resource has not\rbeen modified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getFromComputeNode(poolId, nodeId, fileName, options,
+        options.fileGetFromComputeNodeOptions,
+        options.fileGetFromComputeNodeOptions.timeout,
+        options.fileGetFromComputeNodeOptions.clientRequestId,
+        options.fileGetFromComputeNodeOptions.returnClientRequestId,
+        options.fileGetFromComputeNodeOptions.ocpDate,
+        options.fileGetFromComputeNodeOptions.ocpRange,
+        options.fileGetFromComputeNodeOptions.ifModifiedSince,
+        options.fileGetFromComputeNodeOptions.ifUnmodifiedSince,
+        options.customHeaders, callback);
+    fullName: >-
+      File.getFromComputeNode(poolId, nodeId, fileName, options,
+      options.fileGetFromComputeNodeOptions,
+      options.fileGetFromComputeNodeOptions.timeout,
+      options.fileGetFromComputeNodeOptions.clientRequestId,
+      options.fileGetFromComputeNodeOptions.returnClientRequestId,
+      options.fileGetFromComputeNodeOptions.ocpDate,
+      options.fileGetFromComputeNodeOptions.ocpRange,
+      options.fileGetFromComputeNodeOptions.ifModifiedSince,
+      options.fileGetFromComputeNodeOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    children:
+      - 'File#getFromComputeNode~client'
+      - 'File#getFromComputeNode~callback'
+      - 'File#getFromComputeNode~options'
+      - 'File#getFromComputeNode~fileGetFromComputeNodeOptions'
+      - 'File#getFromComputeNode~timeout'
+      - 'File#getFromComputeNode~clientRequestId'
+      - 'File#getFromComputeNode~returnClientRequestId'
+      - 'File#getFromComputeNode~ocpDate'
+      - 'File#getFromComputeNode~ocpRange'
+      - 'File#getFromComputeNode~ifModifiedSince'
+      - 'File#getFromComputeNode~ifUnmodifiedSince'
+      - 'File#getFromComputeNode~timeout'
+      - 'File#getFromComputeNode~clientRequestId'
+      - 'File#getFromComputeNode~returnClientRequestId'
+      - 'File#getFromComputeNode~ocpDate'
+      - 'File#getFromComputeNode~ocpRange'
+      - 'File#getFromComputeNode~ifModifiedSince'
+      - 'File#getFromComputeNode~ifUnmodifiedSince'
+      - 'File#getFromComputeNode~requestUrl'
+      - 'File#getFromComputeNode~requestUrl'
+      - 'File#getFromComputeNode~requestUrl'
+      - 'File#getFromComputeNode~requestUrl'
+      - 'File#getFromComputeNode~queryParameters'
+      - 'File#getFromComputeNode~requestUrl'
+      - 'File#getFromComputeNode~regex'
+      - 'File#getFromComputeNode~requestUrl'
+      - 'File#getFromComputeNode~httpRequest'
+      - 'File#getFromComputeNode~headerName'
+  - uid: 'File#getNodeFilePropertiesFromComputeNode'
+    id: getNodeFilePropertiesFromComputeNode
+    parent: File
+    name: >-
+      getNodeFilePropertiesFromComputeNode(poolId, nodeId, fileName, options,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.timeout,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.clientRequestId,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.returnClientRequestId,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.ocpDate,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifModifiedSince,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    summary: Gets the properties of the specified compute node file.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: The id of the compute node that contains the file.
+        - id: fileName
+          type: string
+          description: "The path to the compute node file that you want to\rget the properties of."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.fileGetNodeFilePropertiesFromComputeNodeOptions
+          type: object
+          description: Additional parameters for the operation
+        - id: options.fileGetNodeFilePropertiesFromComputeNodeOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: >-
+            options.fileGetNodeFilePropertiesFromComputeNodeOptions.clientRequestId
+          type: string
+          description: "The caller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: >-
+            options.fileGetNodeFilePropertiesFromComputeNodeOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.fileGetNodeFilePropertiesFromComputeNodeOptions.ocpDate
+          type: date
+          description: "The time\rthe request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: >-
+            options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifModifiedSince
+          type: date
+          description: "Specify this header to perform the operation only if the resource has been\rmodified since the specified date/time."
+        - id: >-
+            options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this header to perform the operation only if the resource has not\rbeen modified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getNodeFilePropertiesFromComputeNode(poolId, nodeId, fileName,
+        options, options.fileGetNodeFilePropertiesFromComputeNodeOptions,
+        options.fileGetNodeFilePropertiesFromComputeNodeOptions.timeout,
+        options.fileGetNodeFilePropertiesFromComputeNodeOptions.clientRequestId,
+        options.fileGetNodeFilePropertiesFromComputeNodeOptions.returnClientRequestId,
+        options.fileGetNodeFilePropertiesFromComputeNodeOptions.ocpDate,
+        options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifModifiedSince,
+        options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifUnmodifiedSince,
+        options.customHeaders, callback);
+    fullName: >-
+      File.getNodeFilePropertiesFromComputeNode(poolId, nodeId, fileName,
+      options, options.fileGetNodeFilePropertiesFromComputeNodeOptions,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.timeout,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.clientRequestId,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.returnClientRequestId,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.ocpDate,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifModifiedSince,
+      options.fileGetNodeFilePropertiesFromComputeNodeOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    children:
+      - 'File#getNodeFilePropertiesFromComputeNode~client'
+      - 'File#getNodeFilePropertiesFromComputeNode~callback'
+      - 'File#getNodeFilePropertiesFromComputeNode~options'
+      - >-
+        File#getNodeFilePropertiesFromComputeNode~fileGetNodeFilePropertiesFromComputeNodeOptions
+      - 'File#getNodeFilePropertiesFromComputeNode~timeout'
+      - 'File#getNodeFilePropertiesFromComputeNode~clientRequestId'
+      - 'File#getNodeFilePropertiesFromComputeNode~returnClientRequestId'
+      - 'File#getNodeFilePropertiesFromComputeNode~ocpDate'
+      - 'File#getNodeFilePropertiesFromComputeNode~ifModifiedSince'
+      - 'File#getNodeFilePropertiesFromComputeNode~ifUnmodifiedSince'
+      - 'File#getNodeFilePropertiesFromComputeNode~timeout'
+      - 'File#getNodeFilePropertiesFromComputeNode~clientRequestId'
+      - 'File#getNodeFilePropertiesFromComputeNode~returnClientRequestId'
+      - 'File#getNodeFilePropertiesFromComputeNode~ocpDate'
+      - 'File#getNodeFilePropertiesFromComputeNode~ifModifiedSince'
+      - 'File#getNodeFilePropertiesFromComputeNode~ifUnmodifiedSince'
+      - 'File#getNodeFilePropertiesFromComputeNode~requestUrl'
+      - 'File#getNodeFilePropertiesFromComputeNode~requestUrl'
+      - 'File#getNodeFilePropertiesFromComputeNode~requestUrl'
+      - 'File#getNodeFilePropertiesFromComputeNode~requestUrl'
+      - 'File#getNodeFilePropertiesFromComputeNode~queryParameters'
+      - 'File#getNodeFilePropertiesFromComputeNode~requestUrl'
+      - 'File#getNodeFilePropertiesFromComputeNode~regex'
+      - 'File#getNodeFilePropertiesFromComputeNode~requestUrl'
+      - 'File#getNodeFilePropertiesFromComputeNode~httpRequest'
+      - 'File#getNodeFilePropertiesFromComputeNode~headerName'
+  - uid: 'File#listFromTask'
+    id: listFromTask
+    parent: File
+    name: >-
+      listFromTask(jobId, taskId, options, options.recursive,
+      options.fileListFromTaskOptions, options.fileListFromTaskOptions.filter,
+      options.fileListFromTaskOptions.maxResults,
+      options.fileListFromTaskOptions.timeout,
+      options.fileListFromTaskOptions.clientRequestId,
+      options.fileListFromTaskOptions.returnClientRequestId,
+      options.fileListFromTaskOptions.ocpDate, options.customHeaders, callback)
+    summary: Lists the files in a task's directory on its compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: jobId
+          type: string
+          description: The id of the job that contains the task.
+        - id: taskId
+          type: string
+          description: The id of the task whose files you want to list.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.recursive
+          type: boolean
+          description: "Whether to list children of a\rdirectory."
+        - id: options.fileListFromTaskOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.fileListFromTaskOptions.filter
+          type: string
+          description: "An OData $filter\rclause."
+        - id: options.fileListFromTaskOptions.maxResults
+          type: number
+          description: "The maximum\rnumber of items to return in the response."
+        - id: options.fileListFromTaskOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.fileListFromTaskOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileListFromTaskOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.fileListFromTaskOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeFileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listFromTask(jobId, taskId, options, options.recursive,
+        options.fileListFromTaskOptions, options.fileListFromTaskOptions.filter,
+        options.fileListFromTaskOptions.maxResults,
+        options.fileListFromTaskOptions.timeout,
+        options.fileListFromTaskOptions.clientRequestId,
+        options.fileListFromTaskOptions.returnClientRequestId,
+        options.fileListFromTaskOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      File.listFromTask(jobId, taskId, options, options.recursive,
+      options.fileListFromTaskOptions, options.fileListFromTaskOptions.filter,
+      options.fileListFromTaskOptions.maxResults,
+      options.fileListFromTaskOptions.timeout,
+      options.fileListFromTaskOptions.clientRequestId,
+      options.fileListFromTaskOptions.returnClientRequestId,
+      options.fileListFromTaskOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'File#listFromTask~client'
+      - 'File#listFromTask~callback'
+      - 'File#listFromTask~options'
+      - 'File#listFromTask~recursive'
+      - 'File#listFromTask~fileListFromTaskOptions'
+      - 'File#listFromTask~filter'
+      - 'File#listFromTask~maxResults'
+      - 'File#listFromTask~timeout'
+      - 'File#listFromTask~clientRequestId'
+      - 'File#listFromTask~returnClientRequestId'
+      - 'File#listFromTask~ocpDate'
+      - 'File#listFromTask~filter'
+      - 'File#listFromTask~maxResults'
+      - 'File#listFromTask~timeout'
+      - 'File#listFromTask~clientRequestId'
+      - 'File#listFromTask~returnClientRequestId'
+      - 'File#listFromTask~ocpDate'
+      - 'File#listFromTask~requestUrl'
+      - 'File#listFromTask~requestUrl'
+      - 'File#listFromTask~requestUrl'
+      - 'File#listFromTask~queryParameters'
+      - 'File#listFromTask~requestUrl'
+      - 'File#listFromTask~regex'
+      - 'File#listFromTask~requestUrl'
+      - 'File#listFromTask~httpRequest'
+      - 'File#listFromTask~headerName'
+  - uid: 'File#listFromComputeNode'
+    id: listFromComputeNode
+    parent: File
+    name: >-
+      listFromComputeNode(poolId, nodeId, options, options.recursive,
+      options.fileListFromComputeNodeOptions,
+      options.fileListFromComputeNodeOptions.filter,
+      options.fileListFromComputeNodeOptions.maxResults,
+      options.fileListFromComputeNodeOptions.timeout,
+      options.fileListFromComputeNodeOptions.clientRequestId,
+      options.fileListFromComputeNodeOptions.returnClientRequestId,
+      options.fileListFromComputeNodeOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Lists all of the files in task directories on the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the compute node whose files you want to\rlist."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.recursive
+          type: boolean
+          description: "Whether to list children of a\rdirectory."
+        - id: options.fileListFromComputeNodeOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.fileListFromComputeNodeOptions.filter
+          type: string
+          description: "An OData\r$filter clause."
+        - id: options.fileListFromComputeNodeOptions.maxResults
+          type: number
+          description: "The\rmaximum number of items to return in the response."
+        - id: options.fileListFromComputeNodeOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.fileListFromComputeNodeOptions.clientRequestId
+          type: string
+          description: "The caller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileListFromComputeNodeOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.fileListFromComputeNodeOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeFileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listFromComputeNode(poolId, nodeId, options, options.recursive,
+        options.fileListFromComputeNodeOptions,
+        options.fileListFromComputeNodeOptions.filter,
+        options.fileListFromComputeNodeOptions.maxResults,
+        options.fileListFromComputeNodeOptions.timeout,
+        options.fileListFromComputeNodeOptions.clientRequestId,
+        options.fileListFromComputeNodeOptions.returnClientRequestId,
+        options.fileListFromComputeNodeOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      File.listFromComputeNode(poolId, nodeId, options, options.recursive,
+      options.fileListFromComputeNodeOptions,
+      options.fileListFromComputeNodeOptions.filter,
+      options.fileListFromComputeNodeOptions.maxResults,
+      options.fileListFromComputeNodeOptions.timeout,
+      options.fileListFromComputeNodeOptions.clientRequestId,
+      options.fileListFromComputeNodeOptions.returnClientRequestId,
+      options.fileListFromComputeNodeOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'File#listFromComputeNode~client'
+      - 'File#listFromComputeNode~callback'
+      - 'File#listFromComputeNode~options'
+      - 'File#listFromComputeNode~recursive'
+      - 'File#listFromComputeNode~fileListFromComputeNodeOptions'
+      - 'File#listFromComputeNode~filter'
+      - 'File#listFromComputeNode~maxResults'
+      - 'File#listFromComputeNode~timeout'
+      - 'File#listFromComputeNode~clientRequestId'
+      - 'File#listFromComputeNode~returnClientRequestId'
+      - 'File#listFromComputeNode~ocpDate'
+      - 'File#listFromComputeNode~filter'
+      - 'File#listFromComputeNode~maxResults'
+      - 'File#listFromComputeNode~timeout'
+      - 'File#listFromComputeNode~clientRequestId'
+      - 'File#listFromComputeNode~returnClientRequestId'
+      - 'File#listFromComputeNode~ocpDate'
+      - 'File#listFromComputeNode~requestUrl'
+      - 'File#listFromComputeNode~requestUrl'
+      - 'File#listFromComputeNode~requestUrl'
+      - 'File#listFromComputeNode~queryParameters'
+      - 'File#listFromComputeNode~requestUrl'
+      - 'File#listFromComputeNode~regex'
+      - 'File#listFromComputeNode~requestUrl'
+      - 'File#listFromComputeNode~httpRequest'
+      - 'File#listFromComputeNode~headerName'
+  - uid: 'File#listFromTaskNext'
+    id: listFromTaskNext
+    parent: File
+    name: >-
+      listFromTaskNext(nextPageLink, options,
+      options.fileListFromTaskNextOptions,
+      options.fileListFromTaskNextOptions.clientRequestId,
+      options.fileListFromTaskNextOptions.returnClientRequestId,
+      options.fileListFromTaskNextOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Lists the files in a task's directory on its compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.fileListFromTaskNextOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.fileListFromTaskNextOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileListFromTaskNextOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.fileListFromTaskNextOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeFileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listFromTaskNext(nextPageLink, options,
+        options.fileListFromTaskNextOptions,
+        options.fileListFromTaskNextOptions.clientRequestId,
+        options.fileListFromTaskNextOptions.returnClientRequestId,
+        options.fileListFromTaskNextOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      File.listFromTaskNext(nextPageLink, options,
+      options.fileListFromTaskNextOptions,
+      options.fileListFromTaskNextOptions.clientRequestId,
+      options.fileListFromTaskNextOptions.returnClientRequestId,
+      options.fileListFromTaskNextOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'File#listFromTaskNext~client'
+      - 'File#listFromTaskNext~callback'
+      - 'File#listFromTaskNext~options'
+      - 'File#listFromTaskNext~fileListFromTaskNextOptions'
+      - 'File#listFromTaskNext~clientRequestId'
+      - 'File#listFromTaskNext~returnClientRequestId'
+      - 'File#listFromTaskNext~ocpDate'
+      - 'File#listFromTaskNext~clientRequestId'
+      - 'File#listFromTaskNext~returnClientRequestId'
+      - 'File#listFromTaskNext~ocpDate'
+      - 'File#listFromTaskNext~requestUrl'
+      - 'File#listFromTaskNext~requestUrl'
+      - 'File#listFromTaskNext~regex'
+      - 'File#listFromTaskNext~requestUrl'
+      - 'File#listFromTaskNext~httpRequest'
+      - 'File#listFromTaskNext~headerName'
+  - uid: 'File#listFromComputeNodeNext'
+    id: listFromComputeNodeNext
+    parent: File
+    name: >-
+      listFromComputeNodeNext(nextPageLink, options,
+      options.fileListFromComputeNodeNextOptions,
+      options.fileListFromComputeNodeNextOptions.clientRequestId,
+      options.fileListFromComputeNodeNextOptions.returnClientRequestId,
+      options.fileListFromComputeNodeNextOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Lists all of the files in task directories on the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.fileListFromComputeNodeNextOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.fileListFromComputeNodeNextOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.fileListFromComputeNodeNextOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.fileListFromComputeNodeNextOptions.ocpDate
+          type: date
+          description: "The time\rthe request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeFileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listFromComputeNodeNext(nextPageLink, options,
+        options.fileListFromComputeNodeNextOptions,
+        options.fileListFromComputeNodeNextOptions.clientRequestId,
+        options.fileListFromComputeNodeNextOptions.returnClientRequestId,
+        options.fileListFromComputeNodeNextOptions.ocpDate,
+        options.customHeaders, callback);
+    fullName: >-
+      File.listFromComputeNodeNext(nextPageLink, options,
+      options.fileListFromComputeNodeNextOptions,
+      options.fileListFromComputeNodeNextOptions.clientRequestId,
+      options.fileListFromComputeNodeNextOptions.returnClientRequestId,
+      options.fileListFromComputeNodeNextOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'File#listFromComputeNodeNext~client'
+      - 'File#listFromComputeNodeNext~callback'
+      - 'File#listFromComputeNodeNext~options'
+      - 'File#listFromComputeNodeNext~fileListFromComputeNodeNextOptions'
+      - 'File#listFromComputeNodeNext~clientRequestId'
+      - 'File#listFromComputeNodeNext~returnClientRequestId'
+      - 'File#listFromComputeNodeNext~ocpDate'
+      - 'File#listFromComputeNodeNext~clientRequestId'
+      - 'File#listFromComputeNodeNext~returnClientRequestId'
+      - 'File#listFromComputeNodeNext~ocpDate'
+      - 'File#listFromComputeNodeNext~requestUrl'
+      - 'File#listFromComputeNodeNext~requestUrl'
+      - 'File#listFromComputeNodeNext~regex'
+      - 'File#listFromComputeNodeNext~requestUrl'
+      - 'File#listFromComputeNodeNext~httpRequest'
+      - 'File#listFromComputeNodeNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

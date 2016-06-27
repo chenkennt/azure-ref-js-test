@@ -1,0 +1,1020 @@
+items:
+  - uid: ExpressRouteCircuits
+    id: ExpressRouteCircuits
+    name: ExpressRouteCircuits
+    type: Class
+    syntax:
+      content: ExpressRouteCircuits
+    fullName: ExpressRouteCircuits
+    children:
+      - 'ExpressRouteCircuits#client'
+      - 'ExpressRouteCircuits#deleteMethod'
+      - 'ExpressRouteCircuits#beginDeleteMethod'
+      - 'ExpressRouteCircuits#get'
+      - 'ExpressRouteCircuits#createOrUpdate'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate'
+      - 'ExpressRouteCircuits#listArpTable'
+      - 'ExpressRouteCircuits#beginListArpTable'
+      - 'ExpressRouteCircuits#listRoutesTable'
+      - 'ExpressRouteCircuits#beginListRoutesTable'
+      - 'ExpressRouteCircuits#listRoutesTableSummary'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary'
+      - 'ExpressRouteCircuits#getStats'
+      - 'ExpressRouteCircuits#getPeeringStats'
+      - 'ExpressRouteCircuits#list'
+      - 'ExpressRouteCircuits#listAll'
+      - 'ExpressRouteCircuits#listNext'
+      - 'ExpressRouteCircuits#listAllNext'
+  - uid: 'ExpressRouteCircuits#client'
+    id: client
+    parent: ExpressRouteCircuits
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ExpressRouteCircuits.client
+  - uid: 'ExpressRouteCircuits#deleteMethod'
+    id: deleteMethod
+    parent: ExpressRouteCircuits
+    name: >-
+      deleteMethod(resourceGroupName, circuitName, options,
+      options.customHeaders, callback)
+    summary: "The delete ExpressRouteCircuit operation deletes the specified\rExpressRouteCircuit."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the express route Circuit.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, circuitName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.deleteMethod(resourceGroupName, circuitName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#deleteMethod~client'
+      - 'ExpressRouteCircuits#deleteMethod~callback'
+      - 'ExpressRouteCircuits#deleteMethod~options'
+  - uid: 'ExpressRouteCircuits#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: ExpressRouteCircuits
+    name: >-
+      beginDeleteMethod(resourceGroupName, circuitName, options,
+      options.customHeaders, callback)
+    summary: "The delete ExpressRouteCircuit operation deletes the specified\rExpressRouteCircuit."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the express route Circuit.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, circuitName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.beginDeleteMethod(resourceGroupName, circuitName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#beginDeleteMethod~client'
+      - 'ExpressRouteCircuits#beginDeleteMethod~callback'
+      - 'ExpressRouteCircuits#beginDeleteMethod~options'
+      - 'ExpressRouteCircuits#beginDeleteMethod~requestUrl'
+      - 'ExpressRouteCircuits#beginDeleteMethod~requestUrl'
+      - 'ExpressRouteCircuits#beginDeleteMethod~requestUrl'
+      - 'ExpressRouteCircuits#beginDeleteMethod~requestUrl'
+      - 'ExpressRouteCircuits#beginDeleteMethod~queryParameters'
+      - 'ExpressRouteCircuits#beginDeleteMethod~requestUrl'
+      - 'ExpressRouteCircuits#beginDeleteMethod~regex'
+      - 'ExpressRouteCircuits#beginDeleteMethod~requestUrl'
+      - 'ExpressRouteCircuits#beginDeleteMethod~httpRequest'
+      - 'ExpressRouteCircuits#beginDeleteMethod~headerName'
+  - uid: 'ExpressRouteCircuits#get'
+    id: get
+    parent: ExpressRouteCircuits
+    name: >-
+      get(resourceGroupName, circuitName, options, options.customHeaders,
+      callback)
+    summary: "The Get ExpressRouteCircuit operation retreives information about the\rspecified ExpressRouteCircuit."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuit} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, circuitName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.get(resourceGroupName, circuitName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#get~client'
+      - 'ExpressRouteCircuits#get~callback'
+      - 'ExpressRouteCircuits#get~options'
+      - 'ExpressRouteCircuits#get~requestUrl'
+      - 'ExpressRouteCircuits#get~requestUrl'
+      - 'ExpressRouteCircuits#get~requestUrl'
+      - 'ExpressRouteCircuits#get~requestUrl'
+      - 'ExpressRouteCircuits#get~queryParameters'
+      - 'ExpressRouteCircuits#get~requestUrl'
+      - 'ExpressRouteCircuits#get~regex'
+      - 'ExpressRouteCircuits#get~requestUrl'
+      - 'ExpressRouteCircuits#get~httpRequest'
+      - 'ExpressRouteCircuits#get~headerName'
+  - uid: 'ExpressRouteCircuits#createOrUpdate'
+    id: createOrUpdate
+    parent: ExpressRouteCircuits
+    name: >-
+      createOrUpdate(resourceGroupName, circuitName, parameters, parameters.sku,
+      parameters.sku.name, parameters.sku.tier, parameters.sku.family,
+      parameters.allowClassicOperations, parameters.circuitProvisioningState,
+      parameters.serviceProviderProvisioningState, parameters.authorizations,
+      parameters.peerings, parameters.serviceKey,
+      parameters.serviceProviderNotes, parameters.serviceProviderProperties,
+      parameters.serviceProviderProperties.serviceProviderName,
+      parameters.serviceProviderProperties.peeringLocation,
+      parameters.serviceProviderProperties.bandwidthInMbps,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: >-
+      The Put ExpressRouteCircuit operation creates/updates a
+      ExpressRouteCircuit
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/delete\rExpressRouteCircuit operation"
+        - id: parameters.sku
+          type: object
+          description: Gets or sets sku
+        - id: parameters.sku.name
+          type: string
+          description: Gets or sets name of the sku.
+        - id: parameters.sku.tier
+          type: string
+          description: "Gets or sets tier of the sku.\rPossible values include: 'Standard', 'Premium'"
+        - id: parameters.sku.family
+          type: string
+          description: "Gets or sets family of the sku.\rPossible values include: 'UnlimitedData', 'MeteredData'"
+        - id: parameters.allowClassicOperations
+          type: boolean
+          description: "allow classic\roperations"
+        - id: parameters.circuitProvisioningState
+          type: string
+          description: "Gets or sets\rCircuitProvisioningState state of the resource"
+        - id: parameters.serviceProviderProvisioningState
+          type: string
+          description: "Gets or sets\rServiceProviderProvisioningState state of the resource . Possible values\rinclude: 'NotProvisioned', 'Provisioning', 'Provisioned', 'Deprovisioning'"
+        - id: parameters.authorizations
+          type: array
+          description: "Gets or sets list of\rauthorizations"
+        - id: parameters.peerings
+          type: array
+          description: Gets or sets list of peerings
+        - id: parameters.serviceKey
+          type: string
+          description: Gets or sets ServiceKey
+        - id: parameters.serviceProviderNotes
+          type: string
+          description: "Gets or sets\rServiceProviderNotes"
+        - id: parameters.serviceProviderProperties
+          type: object
+          description: "Gets or sets\rServiceProviderProperties"
+        - id: parameters.serviceProviderProperties.serviceProviderName
+          type: string
+          description: Gets or sets serviceProviderName.
+        - id: parameters.serviceProviderProperties.peeringLocation
+          type: string
+          description: "Gets\ror sets peering location."
+        - id: parameters.serviceProviderProperties.bandwidthInMbps
+          type: number
+          description: "Gets\ror sets BandwidthInMbps."
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuit} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, circuitName, parameters,
+        parameters.sku, parameters.sku.name, parameters.sku.tier,
+        parameters.sku.family, parameters.allowClassicOperations,
+        parameters.circuitProvisioningState,
+        parameters.serviceProviderProvisioningState, parameters.authorizations,
+        parameters.peerings, parameters.serviceKey,
+        parameters.serviceProviderNotes, parameters.serviceProviderProperties,
+        parameters.serviceProviderProperties.serviceProviderName,
+        parameters.serviceProviderProperties.peeringLocation,
+        parameters.serviceProviderProperties.bandwidthInMbps,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ExpressRouteCircuits.createOrUpdate(resourceGroupName, circuitName,
+      parameters, parameters.sku, parameters.sku.name, parameters.sku.tier,
+      parameters.sku.family, parameters.allowClassicOperations,
+      parameters.circuitProvisioningState,
+      parameters.serviceProviderProvisioningState, parameters.authorizations,
+      parameters.peerings, parameters.serviceKey,
+      parameters.serviceProviderNotes, parameters.serviceProviderProperties,
+      parameters.serviceProviderProperties.serviceProviderName,
+      parameters.serviceProviderProperties.peeringLocation,
+      parameters.serviceProviderProperties.bandwidthInMbps,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'ExpressRouteCircuits#createOrUpdate~client'
+      - 'ExpressRouteCircuits#createOrUpdate~callback'
+      - 'ExpressRouteCircuits#createOrUpdate~options'
+  - uid: 'ExpressRouteCircuits#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: ExpressRouteCircuits
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, circuitName, parameters,
+      parameters.sku, parameters.sku.name, parameters.sku.tier,
+      parameters.sku.family, parameters.allowClassicOperations,
+      parameters.circuitProvisioningState,
+      parameters.serviceProviderProvisioningState, parameters.authorizations,
+      parameters.peerings, parameters.serviceKey,
+      parameters.serviceProviderNotes, parameters.serviceProviderProperties,
+      parameters.serviceProviderProperties.serviceProviderName,
+      parameters.serviceProviderProperties.peeringLocation,
+      parameters.serviceProviderProperties.bandwidthInMbps,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: >-
+      The Put ExpressRouteCircuit operation creates/updates a
+      ExpressRouteCircuit
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/delete\rExpressRouteCircuit operation"
+        - id: parameters.sku
+          type: object
+          description: Gets or sets sku
+        - id: parameters.sku.name
+          type: string
+          description: Gets or sets name of the sku.
+        - id: parameters.sku.tier
+          type: string
+          description: "Gets or sets tier of the sku.\rPossible values include: 'Standard', 'Premium'"
+        - id: parameters.sku.family
+          type: string
+          description: "Gets or sets family of the sku.\rPossible values include: 'UnlimitedData', 'MeteredData'"
+        - id: parameters.allowClassicOperations
+          type: boolean
+          description: "allow classic\roperations"
+        - id: parameters.circuitProvisioningState
+          type: string
+          description: "Gets or sets\rCircuitProvisioningState state of the resource"
+        - id: parameters.serviceProviderProvisioningState
+          type: string
+          description: "Gets or sets\rServiceProviderProvisioningState state of the resource . Possible values\rinclude: 'NotProvisioned', 'Provisioning', 'Provisioned', 'Deprovisioning'"
+        - id: parameters.authorizations
+          type: array
+          description: "Gets or sets list of\rauthorizations"
+        - id: parameters.peerings
+          type: array
+          description: Gets or sets list of peerings
+        - id: parameters.serviceKey
+          type: string
+          description: Gets or sets ServiceKey
+        - id: parameters.serviceProviderNotes
+          type: string
+          description: "Gets or sets\rServiceProviderNotes"
+        - id: parameters.serviceProviderProperties
+          type: object
+          description: "Gets or sets\rServiceProviderProperties"
+        - id: parameters.serviceProviderProperties.serviceProviderName
+          type: string
+          description: Gets or sets serviceProviderName.
+        - id: parameters.serviceProviderProperties.peeringLocation
+          type: string
+          description: "Gets\ror sets peering location."
+        - id: parameters.serviceProviderProperties.bandwidthInMbps
+          type: number
+          description: "Gets\ror sets BandwidthInMbps."
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuit} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, circuitName, parameters,
+        parameters.sku, parameters.sku.name, parameters.sku.tier,
+        parameters.sku.family, parameters.allowClassicOperations,
+        parameters.circuitProvisioningState,
+        parameters.serviceProviderProvisioningState, parameters.authorizations,
+        parameters.peerings, parameters.serviceKey,
+        parameters.serviceProviderNotes, parameters.serviceProviderProperties,
+        parameters.serviceProviderProperties.serviceProviderName,
+        parameters.serviceProviderProperties.peeringLocation,
+        parameters.serviceProviderProperties.bandwidthInMbps,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ExpressRouteCircuits.beginCreateOrUpdate(resourceGroupName, circuitName,
+      parameters, parameters.sku, parameters.sku.name, parameters.sku.tier,
+      parameters.sku.family, parameters.allowClassicOperations,
+      parameters.circuitProvisioningState,
+      parameters.serviceProviderProvisioningState, parameters.authorizations,
+      parameters.peerings, parameters.serviceKey,
+      parameters.serviceProviderNotes, parameters.serviceProviderProperties,
+      parameters.serviceProviderProperties.serviceProviderName,
+      parameters.serviceProviderProperties.peeringLocation,
+      parameters.serviceProviderProperties.bandwidthInMbps,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~client'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~callback'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~options'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestUrl'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestUrl'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestUrl'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestUrl'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~queryParameters'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestUrl'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~regex'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestUrl'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~httpRequest'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~headerName'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestContent'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestModel'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestModelMapper'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestModel'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~requestContent'
+      - 'ExpressRouteCircuits#beginCreateOrUpdate~serializationError'
+  - uid: 'ExpressRouteCircuits#listArpTable'
+    id: listArpTable
+    parent: ExpressRouteCircuits
+    name: >-
+      listArpTable(resourceGroupName, circuitName, peeringName, devicePath,
+      options, options.customHeaders, callback)
+    summary: "The ListArpTable from ExpressRouteCircuit opertion retrieves the currently\radvertised arp table associated with the ExpressRouteCircuits in a\rresource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: peeringName
+          type: string
+          description: The name of the peering.
+        - id: devicePath
+          type: string
+          description: The path of the device.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitsArpTableListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listArpTable(resourceGroupName, circuitName, peeringName,
+        devicePath, options, options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.listArpTable(resourceGroupName, circuitName,
+      peeringName, devicePath, options, options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#listArpTable~client'
+      - 'ExpressRouteCircuits#listArpTable~callback'
+      - 'ExpressRouteCircuits#listArpTable~options'
+  - uid: 'ExpressRouteCircuits#beginListArpTable'
+    id: beginListArpTable
+    parent: ExpressRouteCircuits
+    name: >-
+      beginListArpTable(resourceGroupName, circuitName, peeringName, devicePath,
+      options, options.customHeaders, callback)
+    summary: "The ListArpTable from ExpressRouteCircuit opertion retrieves the currently\radvertised arp table associated with the ExpressRouteCircuits in a\rresource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: peeringName
+          type: string
+          description: The name of the peering.
+        - id: devicePath
+          type: string
+          description: The path of the device.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitsArpTableListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginListArpTable(resourceGroupName, circuitName, peeringName,
+        devicePath, options, options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.beginListArpTable(resourceGroupName, circuitName,
+      peeringName, devicePath, options, options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#beginListArpTable~client'
+      - 'ExpressRouteCircuits#beginListArpTable~callback'
+      - 'ExpressRouteCircuits#beginListArpTable~options'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~queryParameters'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~regex'
+      - 'ExpressRouteCircuits#beginListArpTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListArpTable~httpRequest'
+      - 'ExpressRouteCircuits#beginListArpTable~headerName'
+  - uid: 'ExpressRouteCircuits#listRoutesTable'
+    id: listRoutesTable
+    parent: ExpressRouteCircuits
+    name: >-
+      listRoutesTable(resourceGroupName, circuitName, peeringName, devicePath,
+      options, options.customHeaders, callback)
+    summary: "The ListRoutesTable from ExpressRouteCircuit opertion retrieves the\rcurrently advertised routes table associated with the ExpressRouteCircuits\rin a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: peeringName
+          type: string
+          description: The name of the peering.
+        - id: devicePath
+          type: string
+          description: The path of the device.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitsRoutesTableListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listRoutesTable(resourceGroupName, circuitName, peeringName,
+        devicePath, options, options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.listRoutesTable(resourceGroupName, circuitName,
+      peeringName, devicePath, options, options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#listRoutesTable~client'
+      - 'ExpressRouteCircuits#listRoutesTable~callback'
+      - 'ExpressRouteCircuits#listRoutesTable~options'
+  - uid: 'ExpressRouteCircuits#beginListRoutesTable'
+    id: beginListRoutesTable
+    parent: ExpressRouteCircuits
+    name: >-
+      beginListRoutesTable(resourceGroupName, circuitName, peeringName,
+      devicePath, options, options.customHeaders, callback)
+    summary: "The ListRoutesTable from ExpressRouteCircuit opertion retrieves the\rcurrently advertised routes table associated with the ExpressRouteCircuits\rin a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: peeringName
+          type: string
+          description: The name of the peering.
+        - id: devicePath
+          type: string
+          description: The path of the device.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitsRoutesTableListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginListRoutesTable(resourceGroupName, circuitName,
+        peeringName, devicePath, options, options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.beginListRoutesTable(resourceGroupName, circuitName,
+      peeringName, devicePath, options, options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#beginListRoutesTable~client'
+      - 'ExpressRouteCircuits#beginListRoutesTable~callback'
+      - 'ExpressRouteCircuits#beginListRoutesTable~options'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~queryParameters'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~regex'
+      - 'ExpressRouteCircuits#beginListRoutesTable~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTable~httpRequest'
+      - 'ExpressRouteCircuits#beginListRoutesTable~headerName'
+  - uid: 'ExpressRouteCircuits#listRoutesTableSummary'
+    id: listRoutesTableSummary
+    parent: ExpressRouteCircuits
+    name: >-
+      listRoutesTableSummary(resourceGroupName, circuitName, peeringName,
+      devicePath, options, options.customHeaders, callback)
+    summary: "The ListRoutesTable from ExpressRouteCircuit opertion retrieves the\rcurrently advertised routes table associated with the ExpressRouteCircuits\rin a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: peeringName
+          type: string
+          description: The name of the peering.
+        - id: devicePath
+          type: string
+          description: The path of the device.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link\r                     ExpressRouteCircuitsRoutesTableSummaryListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listRoutesTableSummary(resourceGroupName, circuitName,
+        peeringName, devicePath, options, options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.listRoutesTableSummary(resourceGroupName,
+      circuitName, peeringName, devicePath, options, options.customHeaders,
+      callback)
+    children:
+      - 'ExpressRouteCircuits#listRoutesTableSummary~client'
+      - 'ExpressRouteCircuits#listRoutesTableSummary~callback'
+      - 'ExpressRouteCircuits#listRoutesTableSummary~options'
+  - uid: 'ExpressRouteCircuits#beginListRoutesTableSummary'
+    id: beginListRoutesTableSummary
+    parent: ExpressRouteCircuits
+    name: >-
+      beginListRoutesTableSummary(resourceGroupName, circuitName, peeringName,
+      devicePath, options, options.customHeaders, callback)
+    summary: "The ListRoutesTable from ExpressRouteCircuit opertion retrieves the\rcurrently advertised routes table associated with the ExpressRouteCircuits\rin a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: peeringName
+          type: string
+          description: The name of the peering.
+        - id: devicePath
+          type: string
+          description: The path of the device.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link\r                     ExpressRouteCircuitsRoutesTableSummaryListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginListRoutesTableSummary(resourceGroupName, circuitName,
+        peeringName, devicePath, options, options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.beginListRoutesTableSummary(resourceGroupName,
+      circuitName, peeringName, devicePath, options, options.customHeaders,
+      callback)
+    children:
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~client'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~callback'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~options'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~queryParameters'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~regex'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~requestUrl'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~httpRequest'
+      - 'ExpressRouteCircuits#beginListRoutesTableSummary~headerName'
+  - uid: 'ExpressRouteCircuits#getStats'
+    id: getStats
+    parent: ExpressRouteCircuits
+    name: >-
+      getStats(resourceGroupName, circuitName, options, options.customHeaders,
+      callback)
+    summary: "The Liststats ExpressRouteCircuit opertion retrieves all the stats from a\rExpressRouteCircuits in a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitStats} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getStats(resourceGroupName, circuitName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.getStats(resourceGroupName, circuitName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#getStats~client'
+      - 'ExpressRouteCircuits#getStats~callback'
+      - 'ExpressRouteCircuits#getStats~options'
+      - 'ExpressRouteCircuits#getStats~requestUrl'
+      - 'ExpressRouteCircuits#getStats~requestUrl'
+      - 'ExpressRouteCircuits#getStats~requestUrl'
+      - 'ExpressRouteCircuits#getStats~requestUrl'
+      - 'ExpressRouteCircuits#getStats~queryParameters'
+      - 'ExpressRouteCircuits#getStats~requestUrl'
+      - 'ExpressRouteCircuits#getStats~regex'
+      - 'ExpressRouteCircuits#getStats~requestUrl'
+      - 'ExpressRouteCircuits#getStats~httpRequest'
+      - 'ExpressRouteCircuits#getStats~headerName'
+  - uid: 'ExpressRouteCircuits#getPeeringStats'
+    id: getPeeringStats
+    parent: ExpressRouteCircuits
+    name: >-
+      getPeeringStats(resourceGroupName, circuitName, peeringName, options,
+      options.customHeaders, callback)
+    summary: "The Liststats ExpressRouteCircuit opertion retrieves all the stats from a\rExpressRouteCircuits in a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: circuitName
+          type: string
+          description: The name of the circuit.
+        - id: peeringName
+          type: string
+          description: The name of the peering.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitStats} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getPeeringStats(resourceGroupName, circuitName, peeringName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ExpressRouteCircuits.getPeeringStats(resourceGroupName, circuitName,
+      peeringName, options, options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#getPeeringStats~client'
+      - 'ExpressRouteCircuits#getPeeringStats~callback'
+      - 'ExpressRouteCircuits#getPeeringStats~options'
+      - 'ExpressRouteCircuits#getPeeringStats~requestUrl'
+      - 'ExpressRouteCircuits#getPeeringStats~requestUrl'
+      - 'ExpressRouteCircuits#getPeeringStats~requestUrl'
+      - 'ExpressRouteCircuits#getPeeringStats~requestUrl'
+      - 'ExpressRouteCircuits#getPeeringStats~requestUrl'
+      - 'ExpressRouteCircuits#getPeeringStats~queryParameters'
+      - 'ExpressRouteCircuits#getPeeringStats~requestUrl'
+      - 'ExpressRouteCircuits#getPeeringStats~regex'
+      - 'ExpressRouteCircuits#getPeeringStats~requestUrl'
+      - 'ExpressRouteCircuits#getPeeringStats~httpRequest'
+      - 'ExpressRouteCircuits#getPeeringStats~headerName'
+  - uid: 'ExpressRouteCircuits#list'
+    id: list
+    parent: ExpressRouteCircuits
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: "The List ExpressRouteCircuit opertion retrieves all the\rExpressRouteCircuits in a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ExpressRouteCircuits.list(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#list~client'
+      - 'ExpressRouteCircuits#list~callback'
+      - 'ExpressRouteCircuits#list~options'
+      - 'ExpressRouteCircuits#list~requestUrl'
+      - 'ExpressRouteCircuits#list~requestUrl'
+      - 'ExpressRouteCircuits#list~requestUrl'
+      - 'ExpressRouteCircuits#list~queryParameters'
+      - 'ExpressRouteCircuits#list~requestUrl'
+      - 'ExpressRouteCircuits#list~regex'
+      - 'ExpressRouteCircuits#list~requestUrl'
+      - 'ExpressRouteCircuits#list~httpRequest'
+      - 'ExpressRouteCircuits#list~headerName'
+  - uid: 'ExpressRouteCircuits#listAll'
+    id: listAll
+    parent: ExpressRouteCircuits
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "The List ExpressRouteCircuit opertion retrieves all the\rExpressRouteCircuits in a subscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'ExpressRouteCircuits.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'ExpressRouteCircuits#listAll~client'
+      - 'ExpressRouteCircuits#listAll~callback'
+      - 'ExpressRouteCircuits#listAll~options'
+      - 'ExpressRouteCircuits#listAll~requestUrl'
+      - 'ExpressRouteCircuits#listAll~requestUrl'
+      - 'ExpressRouteCircuits#listAll~queryParameters'
+      - 'ExpressRouteCircuits#listAll~requestUrl'
+      - 'ExpressRouteCircuits#listAll~regex'
+      - 'ExpressRouteCircuits#listAll~requestUrl'
+      - 'ExpressRouteCircuits#listAll~httpRequest'
+      - 'ExpressRouteCircuits#listAll~headerName'
+  - uid: 'ExpressRouteCircuits#listNext'
+    id: listNext
+    parent: ExpressRouteCircuits
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List ExpressRouteCircuit opertion retrieves all the\rExpressRouteCircuits in a resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ExpressRouteCircuits.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#listNext~client'
+      - 'ExpressRouteCircuits#listNext~callback'
+      - 'ExpressRouteCircuits#listNext~options'
+      - 'ExpressRouteCircuits#listNext~requestUrl'
+      - 'ExpressRouteCircuits#listNext~requestUrl'
+      - 'ExpressRouteCircuits#listNext~regex'
+      - 'ExpressRouteCircuits#listNext~requestUrl'
+      - 'ExpressRouteCircuits#listNext~httpRequest'
+      - 'ExpressRouteCircuits#listNext~headerName'
+  - uid: 'ExpressRouteCircuits#listAllNext'
+    id: listAllNext
+    parent: ExpressRouteCircuits
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List ExpressRouteCircuit opertion retrieves all the\rExpressRouteCircuits in a subscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ExpressRouteCircuits.listAllNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ExpressRouteCircuits#listAllNext~client'
+      - 'ExpressRouteCircuits#listAllNext~callback'
+      - 'ExpressRouteCircuits#listAllNext~options'
+      - 'ExpressRouteCircuits#listAllNext~requestUrl'
+      - 'ExpressRouteCircuits#listAllNext~requestUrl'
+      - 'ExpressRouteCircuits#listAllNext~regex'
+      - 'ExpressRouteCircuits#listAllNext~requestUrl'
+      - 'ExpressRouteCircuits#listAllNext~httpRequest'
+      - 'ExpressRouteCircuits#listAllNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

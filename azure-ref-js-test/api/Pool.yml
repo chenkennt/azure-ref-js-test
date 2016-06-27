@@ -1,0 +1,2193 @@
+items:
+  - uid: Pool
+    id: Pool
+    name: Pool
+    type: Class
+    syntax:
+      content: Pool
+    fullName: Pool
+    children:
+      - 'Pool#client'
+      - 'Pool#listPoolUsageMetrics'
+      - 'Pool#getAllPoolsLifetimeStatistics'
+      - 'Pool#add'
+      - 'Pool#list'
+      - 'Pool#deleteMethod'
+      - 'Pool#exists'
+      - 'Pool#get'
+      - 'Pool#patch'
+      - 'Pool#disableAutoScale'
+      - 'Pool#enableAutoScale'
+      - 'Pool#evaluateAutoScale'
+      - 'Pool#resize'
+      - 'Pool#stopResize'
+      - 'Pool#updateProperties'
+      - 'Pool#upgradeOS'
+      - 'Pool#removeNodes'
+      - 'Pool#listPoolUsageMetricsNext'
+      - 'Pool#listNext'
+  - uid: 'Pool#client'
+    id: client
+    parent: Pool
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Pool.client
+  - uid: 'Pool#listPoolUsageMetrics'
+    id: listPoolUsageMetrics
+    parent: Pool
+    name: >-
+      listPoolUsageMetrics(options, options.poolListPoolUsageMetricsOptions,
+      options.poolListPoolUsageMetricsOptions.startTime,
+      options.poolListPoolUsageMetricsOptions.endTime,
+      options.poolListPoolUsageMetricsOptions.filter,
+      options.poolListPoolUsageMetricsOptions.maxResults,
+      options.poolListPoolUsageMetricsOptions.timeout,
+      options.poolListPoolUsageMetricsOptions.clientRequestId,
+      options.poolListPoolUsageMetricsOptions.returnClientRequestId,
+      options.poolListPoolUsageMetricsOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: "Lists the usage metrics, aggregated by pool across individual time\rintervals, for the specified account."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolListPoolUsageMetricsOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.poolListPoolUsageMetricsOptions.startTime
+          type: date
+          description: "The\rearliest time from which to include metrics. This must be at least two and\ra half hours before the current time."
+        - id: options.poolListPoolUsageMetricsOptions.endTime
+          type: date
+          description: "The latest\rtime from which to include metrics. This must be at least two hours before\rthe current time."
+        - id: options.poolListPoolUsageMetricsOptions.filter
+          type: string
+          description: "An OData\r$filter clause."
+        - id: options.poolListPoolUsageMetricsOptions.maxResults
+          type: number
+          description: "The\rmaximum number of items to return in the response."
+        - id: options.poolListPoolUsageMetricsOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.poolListPoolUsageMetricsOptions.clientRequestId
+          type: string
+          description: "The caller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolListPoolUsageMetricsOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.poolListPoolUsageMetricsOptions.ocpDate
+          type: date
+          description: "The time\rthe request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PoolListPoolUsageMetricsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listPoolUsageMetrics(options,
+        options.poolListPoolUsageMetricsOptions,
+        options.poolListPoolUsageMetricsOptions.startTime,
+        options.poolListPoolUsageMetricsOptions.endTime,
+        options.poolListPoolUsageMetricsOptions.filter,
+        options.poolListPoolUsageMetricsOptions.maxResults,
+        options.poolListPoolUsageMetricsOptions.timeout,
+        options.poolListPoolUsageMetricsOptions.clientRequestId,
+        options.poolListPoolUsageMetricsOptions.returnClientRequestId,
+        options.poolListPoolUsageMetricsOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.listPoolUsageMetrics(options,
+      options.poolListPoolUsageMetricsOptions,
+      options.poolListPoolUsageMetricsOptions.startTime,
+      options.poolListPoolUsageMetricsOptions.endTime,
+      options.poolListPoolUsageMetricsOptions.filter,
+      options.poolListPoolUsageMetricsOptions.maxResults,
+      options.poolListPoolUsageMetricsOptions.timeout,
+      options.poolListPoolUsageMetricsOptions.clientRequestId,
+      options.poolListPoolUsageMetricsOptions.returnClientRequestId,
+      options.poolListPoolUsageMetricsOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#listPoolUsageMetrics~client'
+      - 'Pool#listPoolUsageMetrics~callback'
+      - 'Pool#listPoolUsageMetrics~options'
+      - 'Pool#listPoolUsageMetrics~poolListPoolUsageMetricsOptions'
+      - 'Pool#listPoolUsageMetrics~startTime'
+      - 'Pool#listPoolUsageMetrics~endTime'
+      - 'Pool#listPoolUsageMetrics~filter'
+      - 'Pool#listPoolUsageMetrics~maxResults'
+      - 'Pool#listPoolUsageMetrics~timeout'
+      - 'Pool#listPoolUsageMetrics~clientRequestId'
+      - 'Pool#listPoolUsageMetrics~returnClientRequestId'
+      - 'Pool#listPoolUsageMetrics~ocpDate'
+      - 'Pool#listPoolUsageMetrics~startTime'
+      - 'Pool#listPoolUsageMetrics~endTime'
+      - 'Pool#listPoolUsageMetrics~filter'
+      - 'Pool#listPoolUsageMetrics~maxResults'
+      - 'Pool#listPoolUsageMetrics~timeout'
+      - 'Pool#listPoolUsageMetrics~clientRequestId'
+      - 'Pool#listPoolUsageMetrics~returnClientRequestId'
+      - 'Pool#listPoolUsageMetrics~ocpDate'
+      - 'Pool#listPoolUsageMetrics~requestUrl'
+      - 'Pool#listPoolUsageMetrics~queryParameters'
+      - 'Pool#listPoolUsageMetrics~requestUrl'
+      - 'Pool#listPoolUsageMetrics~regex'
+      - 'Pool#listPoolUsageMetrics~requestUrl'
+      - 'Pool#listPoolUsageMetrics~httpRequest'
+      - 'Pool#listPoolUsageMetrics~headerName'
+  - uid: 'Pool#getAllPoolsLifetimeStatistics'
+    id: getAllPoolsLifetimeStatistics
+    parent: Pool
+    name: >-
+      getAllPoolsLifetimeStatistics(options,
+      options.poolGetAllPoolsLifetimeStatisticsOptions,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.timeout,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.clientRequestId,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.returnClientRequestId,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.ocpDate,
+      options.customHeaders, callback)
+    summary: "Gets lifetime summary statistics for all of the pools in the specified\raccount. Statistics are aggregated across all pools that have ever existed\rin the account, from account creation to the last update time of the\rstatistics."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolGetAllPoolsLifetimeStatisticsOptions
+          type: object
+          description: Additional parameters for the operation
+        - id: options.poolGetAllPoolsLifetimeStatisticsOptions.timeout
+          type: number
+          description: "The maximum time that the server can spend processing the request, in\rseconds. The default is 30 seconds."
+        - id: options.poolGetAllPoolsLifetimeStatisticsOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: >-
+            options.poolGetAllPoolsLifetimeStatisticsOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolGetAllPoolsLifetimeStatisticsOptions.ocpDate
+          type: date
+          description: "The time the request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PoolStatistics} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getAllPoolsLifetimeStatistics(options,
+        options.poolGetAllPoolsLifetimeStatisticsOptions,
+        options.poolGetAllPoolsLifetimeStatisticsOptions.timeout,
+        options.poolGetAllPoolsLifetimeStatisticsOptions.clientRequestId,
+        options.poolGetAllPoolsLifetimeStatisticsOptions.returnClientRequestId,
+        options.poolGetAllPoolsLifetimeStatisticsOptions.ocpDate,
+        options.customHeaders, callback);
+    fullName: >-
+      Pool.getAllPoolsLifetimeStatistics(options,
+      options.poolGetAllPoolsLifetimeStatisticsOptions,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.timeout,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.clientRequestId,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.returnClientRequestId,
+      options.poolGetAllPoolsLifetimeStatisticsOptions.ocpDate,
+      options.customHeaders, callback)
+    children:
+      - 'Pool#getAllPoolsLifetimeStatistics~client'
+      - 'Pool#getAllPoolsLifetimeStatistics~callback'
+      - 'Pool#getAllPoolsLifetimeStatistics~options'
+      - >-
+        Pool#getAllPoolsLifetimeStatistics~poolGetAllPoolsLifetimeStatisticsOptions
+      - 'Pool#getAllPoolsLifetimeStatistics~timeout'
+      - 'Pool#getAllPoolsLifetimeStatistics~clientRequestId'
+      - 'Pool#getAllPoolsLifetimeStatistics~returnClientRequestId'
+      - 'Pool#getAllPoolsLifetimeStatistics~ocpDate'
+      - 'Pool#getAllPoolsLifetimeStatistics~timeout'
+      - 'Pool#getAllPoolsLifetimeStatistics~clientRequestId'
+      - 'Pool#getAllPoolsLifetimeStatistics~returnClientRequestId'
+      - 'Pool#getAllPoolsLifetimeStatistics~ocpDate'
+      - 'Pool#getAllPoolsLifetimeStatistics~requestUrl'
+      - 'Pool#getAllPoolsLifetimeStatistics~queryParameters'
+      - 'Pool#getAllPoolsLifetimeStatistics~requestUrl'
+      - 'Pool#getAllPoolsLifetimeStatistics~regex'
+      - 'Pool#getAllPoolsLifetimeStatistics~requestUrl'
+      - 'Pool#getAllPoolsLifetimeStatistics~httpRequest'
+      - 'Pool#getAllPoolsLifetimeStatistics~headerName'
+  - uid: 'Pool#add'
+    id: add
+    parent: Pool
+    name: >-
+      add(pool, pool.id, pool.displayName, pool.vmSize,
+      pool.cloudServiceConfiguration, pool.cloudServiceConfiguration.osFamily,
+      pool.cloudServiceConfiguration.targetOSVersion,
+      pool.cloudServiceConfiguration.currentOSVersion,
+      pool.virtualMachineConfiguration,
+      pool.virtualMachineConfiguration.imageReference,
+      pool.virtualMachineConfiguration.imageReference.publisher,
+      pool.virtualMachineConfiguration.imageReference.offer,
+      pool.virtualMachineConfiguration.imageReference.sku,
+      pool.virtualMachineConfiguration.imageReference.version,
+      pool.virtualMachineConfiguration.nodeAgentSKUId,
+      pool.virtualMachineConfiguration.windowsConfiguration,
+      pool.virtualMachineConfiguration.windowsConfiguration.enableAutomaticUpdates,
+      pool.resizeTimeout, pool.targetDedicated, pool.enableAutoScale,
+      pool.autoScaleFormula, pool.autoScaleEvaluationInterval,
+      pool.enableInterNodeCommunication, pool.startTask,
+      pool.startTask.commandLine, pool.startTask.resourceFiles,
+      pool.startTask.environmentSettings, pool.startTask.runElevated,
+      pool.startTask.maxTaskRetryCount, pool.startTask.waitForSuccess,
+      pool.certificateReferences, pool.applicationPackageReferences,
+      pool.maxTasksPerNode, pool.taskSchedulingPolicy,
+      pool.taskSchedulingPolicy.nodeFillType, pool.metadata, options,
+      options.poolAddOptions, options.poolAddOptions.timeout,
+      options.poolAddOptions.clientRequestId,
+      options.poolAddOptions.returnClientRequestId,
+      options.poolAddOptions.ocpDate, options.customHeaders, callback)
+    summary: Adds a pool to the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: pool
+          type: object
+          description: The pool to be added.
+        - id: pool.id
+          type: string
+          description: "A string that uniquely identifies the pool within\rthe account. The id can contain any combination of alphanumeric characters\rincluding hyphens and underscores, and cannot contain more than 64\rcharacters."
+        - id: pool.displayName
+          type: string
+          description: The display name for the pool.
+        - id: pool.vmSize
+          type: string
+          description: "The size of virtual machines in the pool. All\rvirtual machines in a pool are the same size."
+        - id: pool.cloudServiceConfiguration
+          type: object
+          description: "The cloud service\rconfiguration for the pool. This property and VirtualMachineConfiguration\rare mutually exclusive and one of the properties must be specified."
+        - id: pool.cloudServiceConfiguration.osFamily
+          type: string
+          description: "The Azure Guest\rOS family to be installed on the virtual machines in the pool."
+        - id: pool.cloudServiceConfiguration.targetOSVersion
+          type: string
+          description: "The Azure\rGuest OS version to be installed on the virtual machines in the pool. The\rdefault value is * which specifies the latest operating system version for\rthe specified OS family."
+        - id: pool.cloudServiceConfiguration.currentOSVersion
+          type: string
+          description: "The Azure\rGuest OS Version currently installed on the virtual machines in the pool.\rThis may differ from TargetOSVersion if the pool state is Upgrading."
+        - id: pool.virtualMachineConfiguration
+          type: object
+          description: "The virtual machine\rconfiguration for the pool. This property and CloudServiceConfiguration\rare mutually exclusive and one of the properties must be specified."
+        - id: pool.virtualMachineConfiguration.imageReference
+          type: object
+          description: "A\rreference to the Azure Virtual Machines Marketplace image to use."
+        - id: pool.virtualMachineConfiguration.imageReference.publisher
+          type: string
+          description: "The publisher of the Azure Virtual Machines Marketplace image. For\rexample, Canonical or MicrosoftWindowsServer."
+        - id: pool.virtualMachineConfiguration.imageReference.offer
+          type: string
+          description: "The\roffer type of the Azure Virtual Machines Marketplace image. For example,\rUbuntuServer or WindowsServer."
+        - id: pool.virtualMachineConfiguration.imageReference.sku
+          type: string
+          description: "The\rSKU of the Azure Virtual Machines Marketplace image. For example,\r14.04.0-LTS or 2012-R2-Datacenter."
+        - id: pool.virtualMachineConfiguration.imageReference.version
+          type: string
+          description: "The version of the Azure Virtual Machines Marketplace image. A value of\r'latest' can be specified to select the latest version of an image. If\romitted, the default is 'latest'."
+        - id: pool.virtualMachineConfiguration.nodeAgentSKUId
+          type: string
+          description: "The SKU\rof Batch Node Agent to be provisioned on the compute node. The Batch node\ragent is a program that runs on each node in the pool, and provides the\rcommand-and-control interface between the node and the Batch service.\rThere are different implementations of the node agent, known as SKUs, for\rdifferent operating systems."
+        - id: pool.virtualMachineConfiguration.windowsConfiguration
+          type: object
+          description: "Windows operating system settings on the virtual machine. This property\rmust not be specified if the ImageReference property specifies a Linux OS\rimage."
+        - id: >-
+            pool.virtualMachineConfiguration.windowsConfiguration.enableAutomaticUpdates
+          type: boolean
+          description: "Whether automatic updates are enabled on the virtual machine. If omitted,\rthe default value is true."
+        - id: pool.resizeTimeout
+          type: moment.duration
+          description: "The timeout for allocation of\rcompute nodes to the pool. In a Get Pool operation, this is the timeout\rfor the most recent resize operation. The default value is 10 minutes."
+        - id: pool.targetDedicated
+          type: number
+          description: "The desired number of compute nodes\rin the pool. This property must have the default value if EnableAutoScale\ris true. It is required if EnableAutoScale is false."
+        - id: pool.enableAutoScale
+          type: boolean
+          description: "Whether the pool size should\rautomatically adjust over time. If true, the AutoScaleFormula property\rmust be set. If false, the TargetDedicated property must be set."
+        - id: pool.autoScaleFormula
+          type: string
+          description: "A formula for the desired number of\rcompute nodes in the pool."
+        - id: pool.autoScaleEvaluationInterval
+          type: moment.duration
+          description: "A time interval\rfor the desired autoscale evaluation period in the pool."
+        - id: pool.enableInterNodeCommunication
+          type: boolean
+          description: "Whether the pool\rpermits direct communication between nodes."
+        - id: pool.startTask
+          type: object
+          description: "A task specified to run on each compute\rnode as it joins the pool."
+        - id: pool.startTask.commandLine
+          type: string
+          description: "The command line of the start\rtask."
+        - id: pool.startTask.resourceFiles
+          type: array
+          description: "A list of files that the\rBatch service will download to the compute node before running the command\rline."
+        - id: pool.startTask.environmentSettings
+          type: array
+          description: "A list of environment\rvariable settings for the start task."
+        - id: pool.startTask.runElevated
+          type: boolean
+          description: "Whether to run the start task\rin elevated mode. The default value is false."
+        - id: pool.startTask.maxTaskRetryCount
+          type: number
+          description: "The maximum number of\rtimes the task may be retried."
+        - id: pool.startTask.waitForSuccess
+          type: boolean
+          description: "Whether the Batch service\rshould wait for the start task to complete successfully (that is, to exit\rwith exit code 0) before scheduling any tasks on the compute node."
+        - id: pool.certificateReferences
+          type: array
+          description: "The list of certificates to be\rinstalled on each compute node in the pool."
+        - id: pool.applicationPackageReferences
+          type: array
+          description: "The list of application\rpackages to be installed on each compute node in the pool."
+        - id: pool.maxTasksPerNode
+          type: number
+          description: "The maximum number of tasks that can\rrun concurrently on a single compute node in the pool."
+        - id: pool.taskSchedulingPolicy
+          type: object
+          description: "How the Batch service\rdistributes tasks between compute nodes in the pool."
+        - id: pool.taskSchedulingPolicy.nodeFillType
+          type: string
+          description: "How tasks should\rbe distributed across compute nodes. Possible values include: 'spread',\r'pack', 'unmapped'"
+        - id: pool.metadata
+          type: array
+          description: "A list of name-value pairs associated with\rthe pool as metadata."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolAddOptions
+          type: object
+          description: "Additional parameters for the\roperation"
+        - id: options.poolAddOptions.timeout
+          type: number
+          description: "The maximum time that the\rserver can spend processing the request, in seconds. The default is 30\rseconds."
+        - id: options.poolAddOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolAddOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.poolAddOptions.ocpDate
+          type: date
+          description: "The time the request was\rissued. If not specified, this header will be automatically populated with\rthe current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function add(pool, pool.id, pool.displayName, pool.vmSize,
+        pool.cloudServiceConfiguration, pool.cloudServiceConfiguration.osFamily,
+        pool.cloudServiceConfiguration.targetOSVersion,
+        pool.cloudServiceConfiguration.currentOSVersion,
+        pool.virtualMachineConfiguration,
+        pool.virtualMachineConfiguration.imageReference,
+        pool.virtualMachineConfiguration.imageReference.publisher,
+        pool.virtualMachineConfiguration.imageReference.offer,
+        pool.virtualMachineConfiguration.imageReference.sku,
+        pool.virtualMachineConfiguration.imageReference.version,
+        pool.virtualMachineConfiguration.nodeAgentSKUId,
+        pool.virtualMachineConfiguration.windowsConfiguration,
+        pool.virtualMachineConfiguration.windowsConfiguration.enableAutomaticUpdates,
+        pool.resizeTimeout, pool.targetDedicated, pool.enableAutoScale,
+        pool.autoScaleFormula, pool.autoScaleEvaluationInterval,
+        pool.enableInterNodeCommunication, pool.startTask,
+        pool.startTask.commandLine, pool.startTask.resourceFiles,
+        pool.startTask.environmentSettings, pool.startTask.runElevated,
+        pool.startTask.maxTaskRetryCount, pool.startTask.waitForSuccess,
+        pool.certificateReferences, pool.applicationPackageReferences,
+        pool.maxTasksPerNode, pool.taskSchedulingPolicy,
+        pool.taskSchedulingPolicy.nodeFillType, pool.metadata, options,
+        options.poolAddOptions, options.poolAddOptions.timeout,
+        options.poolAddOptions.clientRequestId,
+        options.poolAddOptions.returnClientRequestId,
+        options.poolAddOptions.ocpDate, options.customHeaders, callback);
+    fullName: >-
+      Pool.add(pool, pool.id, pool.displayName, pool.vmSize,
+      pool.cloudServiceConfiguration, pool.cloudServiceConfiguration.osFamily,
+      pool.cloudServiceConfiguration.targetOSVersion,
+      pool.cloudServiceConfiguration.currentOSVersion,
+      pool.virtualMachineConfiguration,
+      pool.virtualMachineConfiguration.imageReference,
+      pool.virtualMachineConfiguration.imageReference.publisher,
+      pool.virtualMachineConfiguration.imageReference.offer,
+      pool.virtualMachineConfiguration.imageReference.sku,
+      pool.virtualMachineConfiguration.imageReference.version,
+      pool.virtualMachineConfiguration.nodeAgentSKUId,
+      pool.virtualMachineConfiguration.windowsConfiguration,
+      pool.virtualMachineConfiguration.windowsConfiguration.enableAutomaticUpdates,
+      pool.resizeTimeout, pool.targetDedicated, pool.enableAutoScale,
+      pool.autoScaleFormula, pool.autoScaleEvaluationInterval,
+      pool.enableInterNodeCommunication, pool.startTask,
+      pool.startTask.commandLine, pool.startTask.resourceFiles,
+      pool.startTask.environmentSettings, pool.startTask.runElevated,
+      pool.startTask.maxTaskRetryCount, pool.startTask.waitForSuccess,
+      pool.certificateReferences, pool.applicationPackageReferences,
+      pool.maxTasksPerNode, pool.taskSchedulingPolicy,
+      pool.taskSchedulingPolicy.nodeFillType, pool.metadata, options,
+      options.poolAddOptions, options.poolAddOptions.timeout,
+      options.poolAddOptions.clientRequestId,
+      options.poolAddOptions.returnClientRequestId,
+      options.poolAddOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'Pool#add~client'
+      - 'Pool#add~callback'
+      - 'Pool#add~options'
+      - 'Pool#add~poolAddOptions'
+      - 'Pool#add~timeout'
+      - 'Pool#add~clientRequestId'
+      - 'Pool#add~returnClientRequestId'
+      - 'Pool#add~ocpDate'
+      - 'Pool#add~timeout'
+      - 'Pool#add~clientRequestId'
+      - 'Pool#add~returnClientRequestId'
+      - 'Pool#add~ocpDate'
+      - 'Pool#add~requestUrl'
+      - 'Pool#add~queryParameters'
+      - 'Pool#add~requestUrl'
+      - 'Pool#add~regex'
+      - 'Pool#add~requestUrl'
+      - 'Pool#add~httpRequest'
+      - 'Pool#add~headerName'
+      - 'Pool#add~requestContent'
+      - 'Pool#add~requestModel'
+      - 'Pool#add~requestModelMapper'
+      - 'Pool#add~requestModel'
+      - 'Pool#add~requestContent'
+      - 'Pool#add~serializationError'
+  - uid: 'Pool#list'
+    id: list
+    parent: Pool
+    name: >-
+      list(options, options.poolListOptions, options.poolListOptions.filter,
+      options.poolListOptions.select, options.poolListOptions.expand,
+      options.poolListOptions.maxResults, options.poolListOptions.timeout,
+      options.poolListOptions.clientRequestId,
+      options.poolListOptions.returnClientRequestId,
+      options.poolListOptions.ocpDate, options.customHeaders, callback)
+    summary: Lists all of the pools in the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolListOptions
+          type: object
+          description: "Additional parameters for the\roperation"
+        - id: options.poolListOptions.filter
+          type: string
+          description: An OData $filter clause.
+        - id: options.poolListOptions.select
+          type: string
+          description: An OData $select clause.
+        - id: options.poolListOptions.expand
+          type: string
+          description: An OData $expand clause.
+        - id: options.poolListOptions.maxResults
+          type: number
+          description: "The maximum number of\ritems to return in the response."
+        - id: options.poolListOptions.timeout
+          type: number
+          description: "The maximum time that the\rserver can spend processing the request, in seconds. The default is 30\rseconds."
+        - id: options.poolListOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolListOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.poolListOptions.ocpDate
+          type: date
+          description: "The time the request was\rissued. If not specified, this header will be automatically populated with\rthe current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudPoolListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(options, options.poolListOptions,
+        options.poolListOptions.filter, options.poolListOptions.select,
+        options.poolListOptions.expand, options.poolListOptions.maxResults,
+        options.poolListOptions.timeout,
+        options.poolListOptions.clientRequestId,
+        options.poolListOptions.returnClientRequestId,
+        options.poolListOptions.ocpDate, options.customHeaders, callback);
+    fullName: >-
+      Pool.list(options, options.poolListOptions,
+      options.poolListOptions.filter, options.poolListOptions.select,
+      options.poolListOptions.expand, options.poolListOptions.maxResults,
+      options.poolListOptions.timeout, options.poolListOptions.clientRequestId,
+      options.poolListOptions.returnClientRequestId,
+      options.poolListOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'Pool#list~client'
+      - 'Pool#list~callback'
+      - 'Pool#list~options'
+      - 'Pool#list~poolListOptions'
+      - 'Pool#list~filter'
+      - 'Pool#list~select'
+      - 'Pool#list~expand'
+      - 'Pool#list~maxResults'
+      - 'Pool#list~timeout'
+      - 'Pool#list~clientRequestId'
+      - 'Pool#list~returnClientRequestId'
+      - 'Pool#list~ocpDate'
+      - 'Pool#list~filter'
+      - 'Pool#list~select'
+      - 'Pool#list~expand'
+      - 'Pool#list~maxResults'
+      - 'Pool#list~timeout'
+      - 'Pool#list~clientRequestId'
+      - 'Pool#list~returnClientRequestId'
+      - 'Pool#list~ocpDate'
+      - 'Pool#list~requestUrl'
+      - 'Pool#list~queryParameters'
+      - 'Pool#list~requestUrl'
+      - 'Pool#list~regex'
+      - 'Pool#list~requestUrl'
+      - 'Pool#list~httpRequest'
+      - 'Pool#list~headerName'
+  - uid: 'Pool#deleteMethod'
+    id: deleteMethod
+    parent: Pool
+    name: >-
+      deleteMethod(poolId, options, options.poolDeleteMethodOptions,
+      options.poolDeleteMethodOptions.timeout,
+      options.poolDeleteMethodOptions.clientRequestId,
+      options.poolDeleteMethodOptions.returnClientRequestId,
+      options.poolDeleteMethodOptions.ocpDate,
+      options.poolDeleteMethodOptions.ifMatch,
+      options.poolDeleteMethodOptions.ifNoneMatch,
+      options.poolDeleteMethodOptions.ifModifiedSince,
+      options.poolDeleteMethodOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: Deletes a pool from the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool to delete.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolDeleteMethodOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.poolDeleteMethodOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.poolDeleteMethodOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolDeleteMethodOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolDeleteMethodOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.poolDeleteMethodOptions.ifMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag is an exact match as specified."
+        - id: options.poolDeleteMethodOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolDeleteMethodOptions.ifModifiedSince
+          type: date
+          description: "Specify\rthis header to perform the operation only if the resource has been\rmodified since the specified date/time."
+        - id: options.poolDeleteMethodOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify\rthis header to perform the operation only if the resource has not been\rmodified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(poolId, options, options.poolDeleteMethodOptions,
+        options.poolDeleteMethodOptions.timeout,
+        options.poolDeleteMethodOptions.clientRequestId,
+        options.poolDeleteMethodOptions.returnClientRequestId,
+        options.poolDeleteMethodOptions.ocpDate,
+        options.poolDeleteMethodOptions.ifMatch,
+        options.poolDeleteMethodOptions.ifNoneMatch,
+        options.poolDeleteMethodOptions.ifModifiedSince,
+        options.poolDeleteMethodOptions.ifUnmodifiedSince,
+        options.customHeaders, callback);
+    fullName: >-
+      Pool.deleteMethod(poolId, options, options.poolDeleteMethodOptions,
+      options.poolDeleteMethodOptions.timeout,
+      options.poolDeleteMethodOptions.clientRequestId,
+      options.poolDeleteMethodOptions.returnClientRequestId,
+      options.poolDeleteMethodOptions.ocpDate,
+      options.poolDeleteMethodOptions.ifMatch,
+      options.poolDeleteMethodOptions.ifNoneMatch,
+      options.poolDeleteMethodOptions.ifModifiedSince,
+      options.poolDeleteMethodOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#deleteMethod~client'
+      - 'Pool#deleteMethod~callback'
+      - 'Pool#deleteMethod~options'
+      - 'Pool#deleteMethod~poolDeleteMethodOptions'
+      - 'Pool#deleteMethod~timeout'
+      - 'Pool#deleteMethod~clientRequestId'
+      - 'Pool#deleteMethod~returnClientRequestId'
+      - 'Pool#deleteMethod~ocpDate'
+      - 'Pool#deleteMethod~ifMatch'
+      - 'Pool#deleteMethod~ifNoneMatch'
+      - 'Pool#deleteMethod~ifModifiedSince'
+      - 'Pool#deleteMethod~ifUnmodifiedSince'
+      - 'Pool#deleteMethod~timeout'
+      - 'Pool#deleteMethod~clientRequestId'
+      - 'Pool#deleteMethod~returnClientRequestId'
+      - 'Pool#deleteMethod~ocpDate'
+      - 'Pool#deleteMethod~ifMatch'
+      - 'Pool#deleteMethod~ifNoneMatch'
+      - 'Pool#deleteMethod~ifModifiedSince'
+      - 'Pool#deleteMethod~ifUnmodifiedSince'
+      - 'Pool#deleteMethod~requestUrl'
+      - 'Pool#deleteMethod~requestUrl'
+      - 'Pool#deleteMethod~queryParameters'
+      - 'Pool#deleteMethod~requestUrl'
+      - 'Pool#deleteMethod~regex'
+      - 'Pool#deleteMethod~requestUrl'
+      - 'Pool#deleteMethod~httpRequest'
+      - 'Pool#deleteMethod~headerName'
+  - uid: 'Pool#exists'
+    id: exists
+    parent: Pool
+    name: >-
+      exists(poolId, options, options.poolExistsOptions,
+      options.poolExistsOptions.timeout,
+      options.poolExistsOptions.clientRequestId,
+      options.poolExistsOptions.returnClientRequestId,
+      options.poolExistsOptions.ocpDate, options.poolExistsOptions.ifMatch,
+      options.poolExistsOptions.ifNoneMatch,
+      options.poolExistsOptions.ifModifiedSince,
+      options.poolExistsOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: Gets basic properties of a pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool to get.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolExistsOptions
+          type: object
+          description: "Additional parameters for the\roperation"
+        - id: options.poolExistsOptions.timeout
+          type: number
+          description: "The maximum time that\rthe server can spend processing the request, in seconds. The default is 30\rseconds."
+        - id: options.poolExistsOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolExistsOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.poolExistsOptions.ocpDate
+          type: date
+          description: "The time the request was\rissued. If not specified, this header will be automatically populated with\rthe current system clock time."
+        - id: options.poolExistsOptions.ifMatch
+          type: string
+          description: "An ETag is specified.\rSpecify this header to perform the operation only if the resource's ETag\ris an exact match as specified."
+        - id: options.poolExistsOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolExistsOptions.ifModifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has been modified\rsince the specified date/time."
+        - id: options.poolExistsOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has not been modified\rsince the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {boolean} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function exists(poolId, options, options.poolExistsOptions,
+        options.poolExistsOptions.timeout,
+        options.poolExistsOptions.clientRequestId,
+        options.poolExistsOptions.returnClientRequestId,
+        options.poolExistsOptions.ocpDate, options.poolExistsOptions.ifMatch,
+        options.poolExistsOptions.ifNoneMatch,
+        options.poolExistsOptions.ifModifiedSince,
+        options.poolExistsOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.exists(poolId, options, options.poolExistsOptions,
+      options.poolExistsOptions.timeout,
+      options.poolExistsOptions.clientRequestId,
+      options.poolExistsOptions.returnClientRequestId,
+      options.poolExistsOptions.ocpDate, options.poolExistsOptions.ifMatch,
+      options.poolExistsOptions.ifNoneMatch,
+      options.poolExistsOptions.ifModifiedSince,
+      options.poolExistsOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#exists~client'
+      - 'Pool#exists~callback'
+      - 'Pool#exists~options'
+      - 'Pool#exists~poolExistsOptions'
+      - 'Pool#exists~timeout'
+      - 'Pool#exists~clientRequestId'
+      - 'Pool#exists~returnClientRequestId'
+      - 'Pool#exists~ocpDate'
+      - 'Pool#exists~ifMatch'
+      - 'Pool#exists~ifNoneMatch'
+      - 'Pool#exists~ifModifiedSince'
+      - 'Pool#exists~ifUnmodifiedSince'
+      - 'Pool#exists~timeout'
+      - 'Pool#exists~clientRequestId'
+      - 'Pool#exists~returnClientRequestId'
+      - 'Pool#exists~ocpDate'
+      - 'Pool#exists~ifMatch'
+      - 'Pool#exists~ifNoneMatch'
+      - 'Pool#exists~ifModifiedSince'
+      - 'Pool#exists~ifUnmodifiedSince'
+      - 'Pool#exists~requestUrl'
+      - 'Pool#exists~requestUrl'
+      - 'Pool#exists~queryParameters'
+      - 'Pool#exists~requestUrl'
+      - 'Pool#exists~regex'
+      - 'Pool#exists~requestUrl'
+      - 'Pool#exists~httpRequest'
+      - 'Pool#exists~headerName'
+  - uid: 'Pool#get'
+    id: get
+    parent: Pool
+    name: >-
+      get(poolId, options, options.poolGetOptions,
+      options.poolGetOptions.select, options.poolGetOptions.expand,
+      options.poolGetOptions.timeout, options.poolGetOptions.clientRequestId,
+      options.poolGetOptions.returnClientRequestId,
+      options.poolGetOptions.ocpDate, options.poolGetOptions.ifMatch,
+      options.poolGetOptions.ifNoneMatch,
+      options.poolGetOptions.ifModifiedSince,
+      options.poolGetOptions.ifUnmodifiedSince, options.customHeaders, callback)
+    summary: Gets information about the specified pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool to get.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolGetOptions
+          type: object
+          description: "Additional parameters for the\roperation"
+        - id: options.poolGetOptions.select
+          type: string
+          description: An OData $select clause.
+        - id: options.poolGetOptions.expand
+          type: string
+          description: An OData $expand clause.
+        - id: options.poolGetOptions.timeout
+          type: number
+          description: "The maximum time that the\rserver can spend processing the request, in seconds. The default is 30\rseconds."
+        - id: options.poolGetOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolGetOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.poolGetOptions.ocpDate
+          type: date
+          description: "The time the request was\rissued. If not specified, this header will be automatically populated with\rthe current system clock time."
+        - id: options.poolGetOptions.ifMatch
+          type: string
+          description: "An ETag is specified.\rSpecify this header to perform the operation only if the resource's ETag\ris an exact match as specified."
+        - id: options.poolGetOptions.ifNoneMatch
+          type: string
+          description: "An ETag is specified.\rSpecify this header to perform the operation only if the resource's ETag\rdoes not match the specified ETag."
+        - id: options.poolGetOptions.ifModifiedSince
+          type: date
+          description: "Specify this header\rto perform the operation only if the resource has been modified since the\rspecified date/time."
+        - id: options.poolGetOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has not been modified\rsince the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(poolId, options, options.poolGetOptions,
+        options.poolGetOptions.select, options.poolGetOptions.expand,
+        options.poolGetOptions.timeout, options.poolGetOptions.clientRequestId,
+        options.poolGetOptions.returnClientRequestId,
+        options.poolGetOptions.ocpDate, options.poolGetOptions.ifMatch,
+        options.poolGetOptions.ifNoneMatch,
+        options.poolGetOptions.ifModifiedSince,
+        options.poolGetOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.get(poolId, options, options.poolGetOptions,
+      options.poolGetOptions.select, options.poolGetOptions.expand,
+      options.poolGetOptions.timeout, options.poolGetOptions.clientRequestId,
+      options.poolGetOptions.returnClientRequestId,
+      options.poolGetOptions.ocpDate, options.poolGetOptions.ifMatch,
+      options.poolGetOptions.ifNoneMatch,
+      options.poolGetOptions.ifModifiedSince,
+      options.poolGetOptions.ifUnmodifiedSince, options.customHeaders, callback)
+    children:
+      - 'Pool#get~client'
+      - 'Pool#get~callback'
+      - 'Pool#get~options'
+      - 'Pool#get~poolGetOptions'
+      - 'Pool#get~select'
+      - 'Pool#get~expand'
+      - 'Pool#get~timeout'
+      - 'Pool#get~clientRequestId'
+      - 'Pool#get~returnClientRequestId'
+      - 'Pool#get~ocpDate'
+      - 'Pool#get~ifMatch'
+      - 'Pool#get~ifNoneMatch'
+      - 'Pool#get~ifModifiedSince'
+      - 'Pool#get~ifUnmodifiedSince'
+      - 'Pool#get~select'
+      - 'Pool#get~expand'
+      - 'Pool#get~timeout'
+      - 'Pool#get~clientRequestId'
+      - 'Pool#get~returnClientRequestId'
+      - 'Pool#get~ocpDate'
+      - 'Pool#get~ifMatch'
+      - 'Pool#get~ifNoneMatch'
+      - 'Pool#get~ifModifiedSince'
+      - 'Pool#get~ifUnmodifiedSince'
+      - 'Pool#get~requestUrl'
+      - 'Pool#get~requestUrl'
+      - 'Pool#get~queryParameters'
+      - 'Pool#get~requestUrl'
+      - 'Pool#get~regex'
+      - 'Pool#get~requestUrl'
+      - 'Pool#get~httpRequest'
+      - 'Pool#get~headerName'
+  - uid: 'Pool#patch'
+    id: patch
+    parent: Pool
+    name: >-
+      patch(poolId, poolPatchParameter, poolPatchParameter.startTask,
+      poolPatchParameter.startTask.commandLine,
+      poolPatchParameter.startTask.resourceFiles,
+      poolPatchParameter.startTask.environmentSettings,
+      poolPatchParameter.startTask.runElevated,
+      poolPatchParameter.startTask.maxTaskRetryCount,
+      poolPatchParameter.startTask.waitForSuccess,
+      poolPatchParameter.certificateReferences,
+      poolPatchParameter.applicationPackageReferences,
+      poolPatchParameter.metadata, options, options.poolPatchOptions,
+      options.poolPatchOptions.timeout,
+      options.poolPatchOptions.clientRequestId,
+      options.poolPatchOptions.returnClientRequestId,
+      options.poolPatchOptions.ocpDate, options.poolPatchOptions.ifMatch,
+      options.poolPatchOptions.ifNoneMatch,
+      options.poolPatchOptions.ifModifiedSince,
+      options.poolPatchOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: Updates the properties of a pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool to update.
+        - id: poolPatchParameter
+          type: object
+          description: The parameters for the request.
+        - id: poolPatchParameter.startTask
+          type: object
+          description: "A task to run on each\rcompute node as it joins the pool. If omitted, any existing start task is\rleft unchanged."
+        - id: poolPatchParameter.startTask.commandLine
+          type: string
+          description: "The command line\rof the start task."
+        - id: poolPatchParameter.startTask.resourceFiles
+          type: array
+          description: "A list of files\rthat the Batch service will download to the compute node before running\rthe command line."
+        - id: poolPatchParameter.startTask.environmentSettings
+          type: array
+          description: "A list of\renvironment variable settings for the start task."
+        - id: poolPatchParameter.startTask.runElevated
+          type: boolean
+          description: "Whether to run\rthe start task in elevated mode. The default value is false."
+        - id: poolPatchParameter.startTask.maxTaskRetryCount
+          type: number
+          description: "The\rmaximum number of times the task may be retried."
+        - id: poolPatchParameter.startTask.waitForSuccess
+          type: boolean
+          description: "Whether the\rBatch service should wait for the start task to complete successfully\r(that is, to exit with exit code 0) before scheduling any tasks on the\rcompute node."
+        - id: poolPatchParameter.certificateReferences
+          type: array
+          description: "A list of\rcertificates to be installed on each compute node in the pool. If omitted,\rany existing certificate references are left unchanged."
+        - id: poolPatchParameter.applicationPackageReferences
+          type: array
+          description: "A list of\rapplication packages to be installed on each compute node in the pool. If\romitted, any existing application package references are left unchanged."
+        - id: poolPatchParameter.metadata
+          type: array
+          description: "A list of name-value pairs\rassociated with the pool as metadata. If omitted, any existing metadata is\rleft unchanged."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolPatchOptions
+          type: object
+          description: "Additional parameters for the\roperation"
+        - id: options.poolPatchOptions.timeout
+          type: number
+          description: "The maximum time that\rthe server can spend processing the request, in seconds. The default is 30\rseconds."
+        - id: options.poolPatchOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolPatchOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.poolPatchOptions.ocpDate
+          type: date
+          description: "The time the request was\rissued. If not specified, this header will be automatically populated with\rthe current system clock time."
+        - id: options.poolPatchOptions.ifMatch
+          type: string
+          description: "An ETag is specified.\rSpecify this header to perform the operation only if the resource's ETag\ris an exact match as specified."
+        - id: options.poolPatchOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolPatchOptions.ifModifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has been modified\rsince the specified date/time."
+        - id: options.poolPatchOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has not been modified\rsince the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function patch(poolId, poolPatchParameter, poolPatchParameter.startTask,
+        poolPatchParameter.startTask.commandLine,
+        poolPatchParameter.startTask.resourceFiles,
+        poolPatchParameter.startTask.environmentSettings,
+        poolPatchParameter.startTask.runElevated,
+        poolPatchParameter.startTask.maxTaskRetryCount,
+        poolPatchParameter.startTask.waitForSuccess,
+        poolPatchParameter.certificateReferences,
+        poolPatchParameter.applicationPackageReferences,
+        poolPatchParameter.metadata, options, options.poolPatchOptions,
+        options.poolPatchOptions.timeout,
+        options.poolPatchOptions.clientRequestId,
+        options.poolPatchOptions.returnClientRequestId,
+        options.poolPatchOptions.ocpDate, options.poolPatchOptions.ifMatch,
+        options.poolPatchOptions.ifNoneMatch,
+        options.poolPatchOptions.ifModifiedSince,
+        options.poolPatchOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.patch(poolId, poolPatchParameter, poolPatchParameter.startTask,
+      poolPatchParameter.startTask.commandLine,
+      poolPatchParameter.startTask.resourceFiles,
+      poolPatchParameter.startTask.environmentSettings,
+      poolPatchParameter.startTask.runElevated,
+      poolPatchParameter.startTask.maxTaskRetryCount,
+      poolPatchParameter.startTask.waitForSuccess,
+      poolPatchParameter.certificateReferences,
+      poolPatchParameter.applicationPackageReferences,
+      poolPatchParameter.metadata, options, options.poolPatchOptions,
+      options.poolPatchOptions.timeout,
+      options.poolPatchOptions.clientRequestId,
+      options.poolPatchOptions.returnClientRequestId,
+      options.poolPatchOptions.ocpDate, options.poolPatchOptions.ifMatch,
+      options.poolPatchOptions.ifNoneMatch,
+      options.poolPatchOptions.ifModifiedSince,
+      options.poolPatchOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#patch~client'
+      - 'Pool#patch~callback'
+      - 'Pool#patch~options'
+      - 'Pool#patch~poolPatchOptions'
+      - 'Pool#patch~timeout'
+      - 'Pool#patch~clientRequestId'
+      - 'Pool#patch~returnClientRequestId'
+      - 'Pool#patch~ocpDate'
+      - 'Pool#patch~ifMatch'
+      - 'Pool#patch~ifNoneMatch'
+      - 'Pool#patch~ifModifiedSince'
+      - 'Pool#patch~ifUnmodifiedSince'
+      - 'Pool#patch~timeout'
+      - 'Pool#patch~clientRequestId'
+      - 'Pool#patch~returnClientRequestId'
+      - 'Pool#patch~ocpDate'
+      - 'Pool#patch~ifMatch'
+      - 'Pool#patch~ifNoneMatch'
+      - 'Pool#patch~ifModifiedSince'
+      - 'Pool#patch~ifUnmodifiedSince'
+      - 'Pool#patch~requestUrl'
+      - 'Pool#patch~requestUrl'
+      - 'Pool#patch~queryParameters'
+      - 'Pool#patch~requestUrl'
+      - 'Pool#patch~regex'
+      - 'Pool#patch~requestUrl'
+      - 'Pool#patch~httpRequest'
+      - 'Pool#patch~headerName'
+      - 'Pool#patch~requestContent'
+      - 'Pool#patch~requestModel'
+      - 'Pool#patch~requestModelMapper'
+      - 'Pool#patch~requestModel'
+      - 'Pool#patch~requestContent'
+      - 'Pool#patch~serializationError'
+  - uid: 'Pool#disableAutoScale'
+    id: disableAutoScale
+    parent: Pool
+    name: >-
+      disableAutoScale(poolId, options, options.poolDisableAutoScaleOptions,
+      options.poolDisableAutoScaleOptions.timeout,
+      options.poolDisableAutoScaleOptions.clientRequestId,
+      options.poolDisableAutoScaleOptions.returnClientRequestId,
+      options.poolDisableAutoScaleOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Disables automatic scaling for a pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: "The id of the pool on which to disable automatic\rscaling."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolDisableAutoScaleOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.poolDisableAutoScaleOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.poolDisableAutoScaleOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolDisableAutoScaleOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.poolDisableAutoScaleOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function disableAutoScale(poolId, options,
+        options.poolDisableAutoScaleOptions,
+        options.poolDisableAutoScaleOptions.timeout,
+        options.poolDisableAutoScaleOptions.clientRequestId,
+        options.poolDisableAutoScaleOptions.returnClientRequestId,
+        options.poolDisableAutoScaleOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.disableAutoScale(poolId, options,
+      options.poolDisableAutoScaleOptions,
+      options.poolDisableAutoScaleOptions.timeout,
+      options.poolDisableAutoScaleOptions.clientRequestId,
+      options.poolDisableAutoScaleOptions.returnClientRequestId,
+      options.poolDisableAutoScaleOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#disableAutoScale~client'
+      - 'Pool#disableAutoScale~callback'
+      - 'Pool#disableAutoScale~options'
+      - 'Pool#disableAutoScale~poolDisableAutoScaleOptions'
+      - 'Pool#disableAutoScale~timeout'
+      - 'Pool#disableAutoScale~clientRequestId'
+      - 'Pool#disableAutoScale~returnClientRequestId'
+      - 'Pool#disableAutoScale~ocpDate'
+      - 'Pool#disableAutoScale~timeout'
+      - 'Pool#disableAutoScale~clientRequestId'
+      - 'Pool#disableAutoScale~returnClientRequestId'
+      - 'Pool#disableAutoScale~ocpDate'
+      - 'Pool#disableAutoScale~requestUrl'
+      - 'Pool#disableAutoScale~requestUrl'
+      - 'Pool#disableAutoScale~queryParameters'
+      - 'Pool#disableAutoScale~requestUrl'
+      - 'Pool#disableAutoScale~regex'
+      - 'Pool#disableAutoScale~requestUrl'
+      - 'Pool#disableAutoScale~httpRequest'
+      - 'Pool#disableAutoScale~headerName'
+  - uid: 'Pool#enableAutoScale'
+    id: enableAutoScale
+    parent: Pool
+    name: >-
+      enableAutoScale(poolId, poolEnableAutoScaleParameter,
+      poolEnableAutoScaleParameter.autoScaleFormula,
+      poolEnableAutoScaleParameter.autoScaleEvaluationInterval, options,
+      options.poolEnableAutoScaleOptions,
+      options.poolEnableAutoScaleOptions.timeout,
+      options.poolEnableAutoScaleOptions.clientRequestId,
+      options.poolEnableAutoScaleOptions.returnClientRequestId,
+      options.poolEnableAutoScaleOptions.ocpDate,
+      options.poolEnableAutoScaleOptions.ifMatch,
+      options.poolEnableAutoScaleOptions.ifNoneMatch,
+      options.poolEnableAutoScaleOptions.ifModifiedSince,
+      options.poolEnableAutoScaleOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    summary: Enables automatic scaling for a pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: "The id of the pool on which to enable automatic\rscaling."
+        - id: poolEnableAutoScaleParameter
+          type: object
+          description: The parameters for the request.
+        - id: poolEnableAutoScaleParameter.autoScaleFormula
+          type: string
+          description: "The formula\rfor the desired number of compute nodes in the pool."
+        - id: poolEnableAutoScaleParameter.autoScaleEvaluationInterval
+          type: moment.duration
+          description: "A time interval\rfor the desired autoscale evaluation period in the pool."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolEnableAutoScaleOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.poolEnableAutoScaleOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.poolEnableAutoScaleOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolEnableAutoScaleOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolEnableAutoScaleOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.poolEnableAutoScaleOptions.ifMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag is an exact match as specified."
+        - id: options.poolEnableAutoScaleOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolEnableAutoScaleOptions.ifModifiedSince
+          type: date
+          description: "Specify\rthis header to perform the operation only if the resource has been\rmodified since the specified date/time."
+        - id: options.poolEnableAutoScaleOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this header to perform the operation only if the resource has not\rbeen modified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function enableAutoScale(poolId, poolEnableAutoScaleParameter,
+        poolEnableAutoScaleParameter.autoScaleFormula,
+        poolEnableAutoScaleParameter.autoScaleEvaluationInterval, options,
+        options.poolEnableAutoScaleOptions,
+        options.poolEnableAutoScaleOptions.timeout,
+        options.poolEnableAutoScaleOptions.clientRequestId,
+        options.poolEnableAutoScaleOptions.returnClientRequestId,
+        options.poolEnableAutoScaleOptions.ocpDate,
+        options.poolEnableAutoScaleOptions.ifMatch,
+        options.poolEnableAutoScaleOptions.ifNoneMatch,
+        options.poolEnableAutoScaleOptions.ifModifiedSince,
+        options.poolEnableAutoScaleOptions.ifUnmodifiedSince,
+        options.customHeaders, callback);
+    fullName: >-
+      Pool.enableAutoScale(poolId, poolEnableAutoScaleParameter,
+      poolEnableAutoScaleParameter.autoScaleFormula,
+      poolEnableAutoScaleParameter.autoScaleEvaluationInterval, options,
+      options.poolEnableAutoScaleOptions,
+      options.poolEnableAutoScaleOptions.timeout,
+      options.poolEnableAutoScaleOptions.clientRequestId,
+      options.poolEnableAutoScaleOptions.returnClientRequestId,
+      options.poolEnableAutoScaleOptions.ocpDate,
+      options.poolEnableAutoScaleOptions.ifMatch,
+      options.poolEnableAutoScaleOptions.ifNoneMatch,
+      options.poolEnableAutoScaleOptions.ifModifiedSince,
+      options.poolEnableAutoScaleOptions.ifUnmodifiedSince,
+      options.customHeaders, callback)
+    children:
+      - 'Pool#enableAutoScale~client'
+      - 'Pool#enableAutoScale~callback'
+      - 'Pool#enableAutoScale~options'
+      - 'Pool#enableAutoScale~poolEnableAutoScaleOptions'
+      - 'Pool#enableAutoScale~timeout'
+      - 'Pool#enableAutoScale~clientRequestId'
+      - 'Pool#enableAutoScale~returnClientRequestId'
+      - 'Pool#enableAutoScale~ocpDate'
+      - 'Pool#enableAutoScale~ifMatch'
+      - 'Pool#enableAutoScale~ifNoneMatch'
+      - 'Pool#enableAutoScale~ifModifiedSince'
+      - 'Pool#enableAutoScale~ifUnmodifiedSince'
+      - 'Pool#enableAutoScale~timeout'
+      - 'Pool#enableAutoScale~clientRequestId'
+      - 'Pool#enableAutoScale~returnClientRequestId'
+      - 'Pool#enableAutoScale~ocpDate'
+      - 'Pool#enableAutoScale~ifMatch'
+      - 'Pool#enableAutoScale~ifNoneMatch'
+      - 'Pool#enableAutoScale~ifModifiedSince'
+      - 'Pool#enableAutoScale~ifUnmodifiedSince'
+      - 'Pool#enableAutoScale~requestUrl'
+      - 'Pool#enableAutoScale~requestUrl'
+      - 'Pool#enableAutoScale~queryParameters'
+      - 'Pool#enableAutoScale~requestUrl'
+      - 'Pool#enableAutoScale~regex'
+      - 'Pool#enableAutoScale~requestUrl'
+      - 'Pool#enableAutoScale~httpRequest'
+      - 'Pool#enableAutoScale~headerName'
+      - 'Pool#enableAutoScale~requestContent'
+      - 'Pool#enableAutoScale~requestModel'
+      - 'Pool#enableAutoScale~requestModelMapper'
+      - 'Pool#enableAutoScale~requestModel'
+      - 'Pool#enableAutoScale~requestContent'
+      - 'Pool#enableAutoScale~serializationError'
+  - uid: 'Pool#evaluateAutoScale'
+    id: evaluateAutoScale
+    parent: Pool
+    name: >-
+      evaluateAutoScale(poolId, autoScaleFormula, options,
+      options.poolEvaluateAutoScaleOptions,
+      options.poolEvaluateAutoScaleOptions.timeout,
+      options.poolEvaluateAutoScaleOptions.clientRequestId,
+      options.poolEvaluateAutoScaleOptions.returnClientRequestId,
+      options.poolEvaluateAutoScaleOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Gets the result of evaluating an automatic scaling formula on the pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: "The id of the pool on which to evaluate the\rautomatic scaling formula."
+        - id: autoScaleFormula
+          type: string
+          description: "A formula for the desired number of\rcompute nodes in the pool."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolEvaluateAutoScaleOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.poolEvaluateAutoScaleOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.poolEvaluateAutoScaleOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolEvaluateAutoScaleOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.poolEvaluateAutoScaleOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AutoScaleRun} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function evaluateAutoScale(poolId, autoScaleFormula, options,
+        options.poolEvaluateAutoScaleOptions,
+        options.poolEvaluateAutoScaleOptions.timeout,
+        options.poolEvaluateAutoScaleOptions.clientRequestId,
+        options.poolEvaluateAutoScaleOptions.returnClientRequestId,
+        options.poolEvaluateAutoScaleOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.evaluateAutoScale(poolId, autoScaleFormula, options,
+      options.poolEvaluateAutoScaleOptions,
+      options.poolEvaluateAutoScaleOptions.timeout,
+      options.poolEvaluateAutoScaleOptions.clientRequestId,
+      options.poolEvaluateAutoScaleOptions.returnClientRequestId,
+      options.poolEvaluateAutoScaleOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#evaluateAutoScale~client'
+      - 'Pool#evaluateAutoScale~callback'
+      - 'Pool#evaluateAutoScale~options'
+      - 'Pool#evaluateAutoScale~poolEvaluateAutoScaleOptions'
+      - 'Pool#evaluateAutoScale~timeout'
+      - 'Pool#evaluateAutoScale~clientRequestId'
+      - 'Pool#evaluateAutoScale~returnClientRequestId'
+      - 'Pool#evaluateAutoScale~ocpDate'
+      - 'Pool#evaluateAutoScale~poolEvaluateAutoScaleParameter'
+      - 'Pool#evaluateAutoScale~timeout'
+      - 'Pool#evaluateAutoScale~clientRequestId'
+      - 'Pool#evaluateAutoScale~returnClientRequestId'
+      - 'Pool#evaluateAutoScale~ocpDate'
+      - 'Pool#evaluateAutoScale~requestUrl'
+      - 'Pool#evaluateAutoScale~requestUrl'
+      - 'Pool#evaluateAutoScale~queryParameters'
+      - 'Pool#evaluateAutoScale~requestUrl'
+      - 'Pool#evaluateAutoScale~regex'
+      - 'Pool#evaluateAutoScale~requestUrl'
+      - 'Pool#evaluateAutoScale~httpRequest'
+      - 'Pool#evaluateAutoScale~headerName'
+      - 'Pool#evaluateAutoScale~requestContent'
+      - 'Pool#evaluateAutoScale~requestModel'
+      - 'Pool#evaluateAutoScale~requestModelMapper'
+      - 'Pool#evaluateAutoScale~requestModel'
+      - 'Pool#evaluateAutoScale~requestContent'
+      - 'Pool#evaluateAutoScale~serializationError'
+  - uid: 'Pool#resize'
+    id: resize
+    parent: Pool
+    name: >-
+      resize(poolId, poolResizeParameter, poolResizeParameter.targetDedicated,
+      poolResizeParameter.resizeTimeout,
+      poolResizeParameter.nodeDeallocationOption, options,
+      options.poolResizeOptions, options.poolResizeOptions.timeout,
+      options.poolResizeOptions.clientRequestId,
+      options.poolResizeOptions.returnClientRequestId,
+      options.poolResizeOptions.ocpDate, options.poolResizeOptions.ifMatch,
+      options.poolResizeOptions.ifNoneMatch,
+      options.poolResizeOptions.ifModifiedSince,
+      options.poolResizeOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: Changes the number of compute nodes that are assigned to a pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool to resize.
+        - id: poolResizeParameter
+          type: object
+          description: The parameters for the request.
+        - id: poolResizeParameter.targetDedicated
+          type: number
+          description: "The desired number of\rcompute nodes in the pool."
+        - id: poolResizeParameter.resizeTimeout
+          type: moment.duration
+          description: "The timeout\rfor allocation of compute nodes to the pool or removal of compute nodes\rfrom the pool. The default value is 10 minutes."
+        - id: poolResizeParameter.nodeDeallocationOption
+          type: string
+          description: "When nodes may\rbe removed from the pool, if the pool size is decreasing. Possible values\rinclude: 'requeue', 'terminate', 'taskcompletion', 'retaineddata'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolResizeOptions
+          type: object
+          description: "Additional parameters for the\roperation"
+        - id: options.poolResizeOptions.timeout
+          type: number
+          description: "The maximum time that\rthe server can spend processing the request, in seconds. The default is 30\rseconds."
+        - id: options.poolResizeOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolResizeOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.poolResizeOptions.ocpDate
+          type: date
+          description: "The time the request was\rissued. If not specified, this header will be automatically populated with\rthe current system clock time."
+        - id: options.poolResizeOptions.ifMatch
+          type: string
+          description: "An ETag is specified.\rSpecify this header to perform the operation only if the resource's ETag\ris an exact match as specified."
+        - id: options.poolResizeOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolResizeOptions.ifModifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has been modified\rsince the specified date/time."
+        - id: options.poolResizeOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has not been modified\rsince the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function resize(poolId, poolResizeParameter,
+        poolResizeParameter.targetDedicated, poolResizeParameter.resizeTimeout,
+        poolResizeParameter.nodeDeallocationOption, options,
+        options.poolResizeOptions, options.poolResizeOptions.timeout,
+        options.poolResizeOptions.clientRequestId,
+        options.poolResizeOptions.returnClientRequestId,
+        options.poolResizeOptions.ocpDate, options.poolResizeOptions.ifMatch,
+        options.poolResizeOptions.ifNoneMatch,
+        options.poolResizeOptions.ifModifiedSince,
+        options.poolResizeOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.resize(poolId, poolResizeParameter,
+      poolResizeParameter.targetDedicated, poolResizeParameter.resizeTimeout,
+      poolResizeParameter.nodeDeallocationOption, options,
+      options.poolResizeOptions, options.poolResizeOptions.timeout,
+      options.poolResizeOptions.clientRequestId,
+      options.poolResizeOptions.returnClientRequestId,
+      options.poolResizeOptions.ocpDate, options.poolResizeOptions.ifMatch,
+      options.poolResizeOptions.ifNoneMatch,
+      options.poolResizeOptions.ifModifiedSince,
+      options.poolResizeOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#resize~client'
+      - 'Pool#resize~callback'
+      - 'Pool#resize~options'
+      - 'Pool#resize~poolResizeOptions'
+      - 'Pool#resize~timeout'
+      - 'Pool#resize~clientRequestId'
+      - 'Pool#resize~returnClientRequestId'
+      - 'Pool#resize~ocpDate'
+      - 'Pool#resize~ifMatch'
+      - 'Pool#resize~ifNoneMatch'
+      - 'Pool#resize~ifModifiedSince'
+      - 'Pool#resize~ifUnmodifiedSince'
+      - 'Pool#resize~timeout'
+      - 'Pool#resize~clientRequestId'
+      - 'Pool#resize~returnClientRequestId'
+      - 'Pool#resize~ocpDate'
+      - 'Pool#resize~ifMatch'
+      - 'Pool#resize~ifNoneMatch'
+      - 'Pool#resize~ifModifiedSince'
+      - 'Pool#resize~ifUnmodifiedSince'
+      - 'Pool#resize~requestUrl'
+      - 'Pool#resize~requestUrl'
+      - 'Pool#resize~queryParameters'
+      - 'Pool#resize~requestUrl'
+      - 'Pool#resize~regex'
+      - 'Pool#resize~requestUrl'
+      - 'Pool#resize~httpRequest'
+      - 'Pool#resize~headerName'
+      - 'Pool#resize~requestContent'
+      - 'Pool#resize~requestModel'
+      - 'Pool#resize~requestModelMapper'
+      - 'Pool#resize~requestModel'
+      - 'Pool#resize~requestContent'
+      - 'Pool#resize~serializationError'
+  - uid: 'Pool#stopResize'
+    id: stopResize
+    parent: Pool
+    name: >-
+      stopResize(poolId, options, options.poolStopResizeOptions,
+      options.poolStopResizeOptions.timeout,
+      options.poolStopResizeOptions.clientRequestId,
+      options.poolStopResizeOptions.returnClientRequestId,
+      options.poolStopResizeOptions.ocpDate,
+      options.poolStopResizeOptions.ifMatch,
+      options.poolStopResizeOptions.ifNoneMatch,
+      options.poolStopResizeOptions.ifModifiedSince,
+      options.poolStopResizeOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: "Stops an ongoing resize operation on the pool. This does not restore the\rpool to its previous state before the resize operation: it only stops any\rfurther changes being made, and the pool maintains its current state."
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool whose resizing you want to stop.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolStopResizeOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.poolStopResizeOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.poolStopResizeOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolStopResizeOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolStopResizeOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.poolStopResizeOptions.ifMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag is an exact match as specified."
+        - id: options.poolStopResizeOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolStopResizeOptions.ifModifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has been modified\rsince the specified date/time."
+        - id: options.poolStopResizeOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify\rthis header to perform the operation only if the resource has not been\rmodified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function stopResize(poolId, options, options.poolStopResizeOptions,
+        options.poolStopResizeOptions.timeout,
+        options.poolStopResizeOptions.clientRequestId,
+        options.poolStopResizeOptions.returnClientRequestId,
+        options.poolStopResizeOptions.ocpDate,
+        options.poolStopResizeOptions.ifMatch,
+        options.poolStopResizeOptions.ifNoneMatch,
+        options.poolStopResizeOptions.ifModifiedSince,
+        options.poolStopResizeOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.stopResize(poolId, options, options.poolStopResizeOptions,
+      options.poolStopResizeOptions.timeout,
+      options.poolStopResizeOptions.clientRequestId,
+      options.poolStopResizeOptions.returnClientRequestId,
+      options.poolStopResizeOptions.ocpDate,
+      options.poolStopResizeOptions.ifMatch,
+      options.poolStopResizeOptions.ifNoneMatch,
+      options.poolStopResizeOptions.ifModifiedSince,
+      options.poolStopResizeOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#stopResize~client'
+      - 'Pool#stopResize~callback'
+      - 'Pool#stopResize~options'
+      - 'Pool#stopResize~poolStopResizeOptions'
+      - 'Pool#stopResize~timeout'
+      - 'Pool#stopResize~clientRequestId'
+      - 'Pool#stopResize~returnClientRequestId'
+      - 'Pool#stopResize~ocpDate'
+      - 'Pool#stopResize~ifMatch'
+      - 'Pool#stopResize~ifNoneMatch'
+      - 'Pool#stopResize~ifModifiedSince'
+      - 'Pool#stopResize~ifUnmodifiedSince'
+      - 'Pool#stopResize~timeout'
+      - 'Pool#stopResize~clientRequestId'
+      - 'Pool#stopResize~returnClientRequestId'
+      - 'Pool#stopResize~ocpDate'
+      - 'Pool#stopResize~ifMatch'
+      - 'Pool#stopResize~ifNoneMatch'
+      - 'Pool#stopResize~ifModifiedSince'
+      - 'Pool#stopResize~ifUnmodifiedSince'
+      - 'Pool#stopResize~requestUrl'
+      - 'Pool#stopResize~requestUrl'
+      - 'Pool#stopResize~queryParameters'
+      - 'Pool#stopResize~requestUrl'
+      - 'Pool#stopResize~regex'
+      - 'Pool#stopResize~requestUrl'
+      - 'Pool#stopResize~httpRequest'
+      - 'Pool#stopResize~headerName'
+  - uid: 'Pool#updateProperties'
+    id: updateProperties
+    parent: Pool
+    name: >-
+      updateProperties(poolId, poolUpdatePropertiesParameter,
+      poolUpdatePropertiesParameter.startTask,
+      poolUpdatePropertiesParameter.startTask.commandLine,
+      poolUpdatePropertiesParameter.startTask.resourceFiles,
+      poolUpdatePropertiesParameter.startTask.environmentSettings,
+      poolUpdatePropertiesParameter.startTask.runElevated,
+      poolUpdatePropertiesParameter.startTask.maxTaskRetryCount,
+      poolUpdatePropertiesParameter.startTask.waitForSuccess,
+      poolUpdatePropertiesParameter.certificateReferences,
+      poolUpdatePropertiesParameter.applicationPackageReferences,
+      poolUpdatePropertiesParameter.metadata, options,
+      options.poolUpdatePropertiesOptions,
+      options.poolUpdatePropertiesOptions.timeout,
+      options.poolUpdatePropertiesOptions.clientRequestId,
+      options.poolUpdatePropertiesOptions.returnClientRequestId,
+      options.poolUpdatePropertiesOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Updates the properties of a pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool to update.
+        - id: poolUpdatePropertiesParameter
+          type: object
+          description: "The parameters for the\rrequest."
+        - id: poolUpdatePropertiesParameter.startTask
+          type: object
+          description: "A task to run on\reach compute node as it joins the pool. If omitted, any existing start\rtask is removed from the pool."
+        - id: poolUpdatePropertiesParameter.startTask.commandLine
+          type: string
+          description: "The\rcommand line of the start task."
+        - id: poolUpdatePropertiesParameter.startTask.resourceFiles
+          type: array
+          description: "A\rlist of files that the Batch service will download to the compute node\rbefore running the command line."
+        - id: poolUpdatePropertiesParameter.startTask.environmentSettings
+          type: array
+          description: "A list of\renvironment variable settings for the start task."
+        - id: poolUpdatePropertiesParameter.startTask.runElevated
+          type: boolean
+          description: >-
+            Whether to run the start task in elevated mode. The default value is
+            false.
+        - id: poolUpdatePropertiesParameter.startTask.maxTaskRetryCount
+          type: number
+          description: The maximum number of times the task may be retried.
+        - id: poolUpdatePropertiesParameter.startTask.waitForSuccess
+          type: boolean
+          description: "Whether the Batch service should wait for the start task to complete\rsuccessfully (that is, to exit with exit code 0) before scheduling any\rtasks on the compute node."
+        - id: poolUpdatePropertiesParameter.certificateReferences
+          type: array
+          description: "A list\rof certificates to be installed on each compute node in the pool. If you\rspecify an empty collection, any existing certificate references are\rremoved from the pool."
+        - id: poolUpdatePropertiesParameter.applicationPackageReferences
+          type: array
+          description: "A list of application packages to be installed on each compute node in the\rpool. If you specify an empty collection, any existing application\rpackages references are removed from the pool."
+        - id: poolUpdatePropertiesParameter.metadata
+          type: array
+          description: "A list of\rname-value pairs associated with the pool as metadata. If you specify an\rempty collection, any existing metadata is removed from the pool."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolUpdatePropertiesOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.poolUpdatePropertiesOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.poolUpdatePropertiesOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolUpdatePropertiesOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.poolUpdatePropertiesOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateProperties(poolId, poolUpdatePropertiesParameter,
+        poolUpdatePropertiesParameter.startTask,
+        poolUpdatePropertiesParameter.startTask.commandLine,
+        poolUpdatePropertiesParameter.startTask.resourceFiles,
+        poolUpdatePropertiesParameter.startTask.environmentSettings,
+        poolUpdatePropertiesParameter.startTask.runElevated,
+        poolUpdatePropertiesParameter.startTask.maxTaskRetryCount,
+        poolUpdatePropertiesParameter.startTask.waitForSuccess,
+        poolUpdatePropertiesParameter.certificateReferences,
+        poolUpdatePropertiesParameter.applicationPackageReferences,
+        poolUpdatePropertiesParameter.metadata, options,
+        options.poolUpdatePropertiesOptions,
+        options.poolUpdatePropertiesOptions.timeout,
+        options.poolUpdatePropertiesOptions.clientRequestId,
+        options.poolUpdatePropertiesOptions.returnClientRequestId,
+        options.poolUpdatePropertiesOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.updateProperties(poolId, poolUpdatePropertiesParameter,
+      poolUpdatePropertiesParameter.startTask,
+      poolUpdatePropertiesParameter.startTask.commandLine,
+      poolUpdatePropertiesParameter.startTask.resourceFiles,
+      poolUpdatePropertiesParameter.startTask.environmentSettings,
+      poolUpdatePropertiesParameter.startTask.runElevated,
+      poolUpdatePropertiesParameter.startTask.maxTaskRetryCount,
+      poolUpdatePropertiesParameter.startTask.waitForSuccess,
+      poolUpdatePropertiesParameter.certificateReferences,
+      poolUpdatePropertiesParameter.applicationPackageReferences,
+      poolUpdatePropertiesParameter.metadata, options,
+      options.poolUpdatePropertiesOptions,
+      options.poolUpdatePropertiesOptions.timeout,
+      options.poolUpdatePropertiesOptions.clientRequestId,
+      options.poolUpdatePropertiesOptions.returnClientRequestId,
+      options.poolUpdatePropertiesOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#updateProperties~client'
+      - 'Pool#updateProperties~callback'
+      - 'Pool#updateProperties~options'
+      - 'Pool#updateProperties~poolUpdatePropertiesOptions'
+      - 'Pool#updateProperties~timeout'
+      - 'Pool#updateProperties~clientRequestId'
+      - 'Pool#updateProperties~returnClientRequestId'
+      - 'Pool#updateProperties~ocpDate'
+      - 'Pool#updateProperties~timeout'
+      - 'Pool#updateProperties~clientRequestId'
+      - 'Pool#updateProperties~returnClientRequestId'
+      - 'Pool#updateProperties~ocpDate'
+      - 'Pool#updateProperties~requestUrl'
+      - 'Pool#updateProperties~requestUrl'
+      - 'Pool#updateProperties~queryParameters'
+      - 'Pool#updateProperties~requestUrl'
+      - 'Pool#updateProperties~regex'
+      - 'Pool#updateProperties~requestUrl'
+      - 'Pool#updateProperties~httpRequest'
+      - 'Pool#updateProperties~headerName'
+      - 'Pool#updateProperties~requestContent'
+      - 'Pool#updateProperties~requestModel'
+      - 'Pool#updateProperties~requestModelMapper'
+      - 'Pool#updateProperties~requestModel'
+      - 'Pool#updateProperties~requestContent'
+      - 'Pool#updateProperties~serializationError'
+  - uid: 'Pool#upgradeOS'
+    id: upgradeOS
+    parent: Pool
+    name: >-
+      upgradeOS(poolId, targetOSVersion, options, options.poolUpgradeOSOptions,
+      options.poolUpgradeOSOptions.timeout,
+      options.poolUpgradeOSOptions.clientRequestId,
+      options.poolUpgradeOSOptions.returnClientRequestId,
+      options.poolUpgradeOSOptions.ocpDate,
+      options.poolUpgradeOSOptions.ifMatch,
+      options.poolUpgradeOSOptions.ifNoneMatch,
+      options.poolUpgradeOSOptions.ifModifiedSince,
+      options.poolUpgradeOSOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: Upgrades the operating system of the specified pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool to upgrade.
+        - id: targetOSVersion
+          type: string
+          description: "The Azure Guest OS version to be installed\ron the virtual machines in the pool."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolUpgradeOSOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.poolUpgradeOSOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.poolUpgradeOSOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolUpgradeOSOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolUpgradeOSOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.poolUpgradeOSOptions.ifMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag is an exact match as specified."
+        - id: options.poolUpgradeOSOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolUpgradeOSOptions.ifModifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has been modified\rsince the specified date/time."
+        - id: options.poolUpgradeOSOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has not been modified\rsince the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function upgradeOS(poolId, targetOSVersion, options,
+        options.poolUpgradeOSOptions, options.poolUpgradeOSOptions.timeout,
+        options.poolUpgradeOSOptions.clientRequestId,
+        options.poolUpgradeOSOptions.returnClientRequestId,
+        options.poolUpgradeOSOptions.ocpDate,
+        options.poolUpgradeOSOptions.ifMatch,
+        options.poolUpgradeOSOptions.ifNoneMatch,
+        options.poolUpgradeOSOptions.ifModifiedSince,
+        options.poolUpgradeOSOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.upgradeOS(poolId, targetOSVersion, options,
+      options.poolUpgradeOSOptions, options.poolUpgradeOSOptions.timeout,
+      options.poolUpgradeOSOptions.clientRequestId,
+      options.poolUpgradeOSOptions.returnClientRequestId,
+      options.poolUpgradeOSOptions.ocpDate,
+      options.poolUpgradeOSOptions.ifMatch,
+      options.poolUpgradeOSOptions.ifNoneMatch,
+      options.poolUpgradeOSOptions.ifModifiedSince,
+      options.poolUpgradeOSOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#upgradeOS~client'
+      - 'Pool#upgradeOS~callback'
+      - 'Pool#upgradeOS~options'
+      - 'Pool#upgradeOS~poolUpgradeOSOptions'
+      - 'Pool#upgradeOS~timeout'
+      - 'Pool#upgradeOS~clientRequestId'
+      - 'Pool#upgradeOS~returnClientRequestId'
+      - 'Pool#upgradeOS~ocpDate'
+      - 'Pool#upgradeOS~ifMatch'
+      - 'Pool#upgradeOS~ifNoneMatch'
+      - 'Pool#upgradeOS~ifModifiedSince'
+      - 'Pool#upgradeOS~ifUnmodifiedSince'
+      - 'Pool#upgradeOS~poolUpgradeOSParameter'
+      - 'Pool#upgradeOS~timeout'
+      - 'Pool#upgradeOS~clientRequestId'
+      - 'Pool#upgradeOS~returnClientRequestId'
+      - 'Pool#upgradeOS~ocpDate'
+      - 'Pool#upgradeOS~ifMatch'
+      - 'Pool#upgradeOS~ifNoneMatch'
+      - 'Pool#upgradeOS~ifModifiedSince'
+      - 'Pool#upgradeOS~ifUnmodifiedSince'
+      - 'Pool#upgradeOS~requestUrl'
+      - 'Pool#upgradeOS~requestUrl'
+      - 'Pool#upgradeOS~queryParameters'
+      - 'Pool#upgradeOS~requestUrl'
+      - 'Pool#upgradeOS~regex'
+      - 'Pool#upgradeOS~requestUrl'
+      - 'Pool#upgradeOS~httpRequest'
+      - 'Pool#upgradeOS~headerName'
+      - 'Pool#upgradeOS~requestContent'
+      - 'Pool#upgradeOS~requestModel'
+      - 'Pool#upgradeOS~requestModelMapper'
+      - 'Pool#upgradeOS~requestModel'
+      - 'Pool#upgradeOS~requestContent'
+      - 'Pool#upgradeOS~serializationError'
+  - uid: 'Pool#removeNodes'
+    id: removeNodes
+    parent: Pool
+    name: >-
+      removeNodes(poolId, nodeRemoveParameter, nodeRemoveParameter.nodeList,
+      nodeRemoveParameter.resizeTimeout,
+      nodeRemoveParameter.nodeDeallocationOption, options,
+      options.poolRemoveNodesOptions, options.poolRemoveNodesOptions.timeout,
+      options.poolRemoveNodesOptions.clientRequestId,
+      options.poolRemoveNodesOptions.returnClientRequestId,
+      options.poolRemoveNodesOptions.ocpDate,
+      options.poolRemoveNodesOptions.ifMatch,
+      options.poolRemoveNodesOptions.ifNoneMatch,
+      options.poolRemoveNodesOptions.ifModifiedSince,
+      options.poolRemoveNodesOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    summary: Removes compute nodes from the specified pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: "The id of the pool from which you want to remove\rnodes."
+        - id: nodeRemoveParameter
+          type: object
+          description: The parameters for the request.
+        - id: nodeRemoveParameter.nodeList
+          type: array
+          description: "A list containing the id of\rthe compute nodes to be removed from the specified pool."
+        - id: nodeRemoveParameter.resizeTimeout
+          type: moment.duration
+          description: "The timeout\rfor removal of compute nodes to the pool. The default value is 10 minutes."
+        - id: nodeRemoveParameter.nodeDeallocationOption
+          type: string
+          description: "When compute\rnodes may be removed from the pool. Possible values include: 'requeue',\r'terminate', 'taskcompletion', 'retaineddata'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolRemoveNodesOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.poolRemoveNodesOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.poolRemoveNodesOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolRemoveNodesOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolRemoveNodesOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.poolRemoveNodesOptions.ifMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag is an exact match as specified."
+        - id: options.poolRemoveNodesOptions.ifNoneMatch
+          type: string
+          description: "An ETag is\rspecified. Specify this header to perform the operation only if the\rresource's ETag does not match the specified ETag."
+        - id: options.poolRemoveNodesOptions.ifModifiedSince
+          type: date
+          description: "Specify this\rheader to perform the operation only if the resource has been modified\rsince the specified date/time."
+        - id: options.poolRemoveNodesOptions.ifUnmodifiedSince
+          type: date
+          description: "Specify\rthis header to perform the operation only if the resource has not been\rmodified since the specified date/time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function removeNodes(poolId, nodeRemoveParameter,
+        nodeRemoveParameter.nodeList, nodeRemoveParameter.resizeTimeout,
+        nodeRemoveParameter.nodeDeallocationOption, options,
+        options.poolRemoveNodesOptions, options.poolRemoveNodesOptions.timeout,
+        options.poolRemoveNodesOptions.clientRequestId,
+        options.poolRemoveNodesOptions.returnClientRequestId,
+        options.poolRemoveNodesOptions.ocpDate,
+        options.poolRemoveNodesOptions.ifMatch,
+        options.poolRemoveNodesOptions.ifNoneMatch,
+        options.poolRemoveNodesOptions.ifModifiedSince,
+        options.poolRemoveNodesOptions.ifUnmodifiedSince, options.customHeaders,
+        callback);
+    fullName: >-
+      Pool.removeNodes(poolId, nodeRemoveParameter,
+      nodeRemoveParameter.nodeList, nodeRemoveParameter.resizeTimeout,
+      nodeRemoveParameter.nodeDeallocationOption, options,
+      options.poolRemoveNodesOptions, options.poolRemoveNodesOptions.timeout,
+      options.poolRemoveNodesOptions.clientRequestId,
+      options.poolRemoveNodesOptions.returnClientRequestId,
+      options.poolRemoveNodesOptions.ocpDate,
+      options.poolRemoveNodesOptions.ifMatch,
+      options.poolRemoveNodesOptions.ifNoneMatch,
+      options.poolRemoveNodesOptions.ifModifiedSince,
+      options.poolRemoveNodesOptions.ifUnmodifiedSince, options.customHeaders,
+      callback)
+    children:
+      - 'Pool#removeNodes~client'
+      - 'Pool#removeNodes~callback'
+      - 'Pool#removeNodes~options'
+      - 'Pool#removeNodes~poolRemoveNodesOptions'
+      - 'Pool#removeNodes~timeout'
+      - 'Pool#removeNodes~clientRequestId'
+      - 'Pool#removeNodes~returnClientRequestId'
+      - 'Pool#removeNodes~ocpDate'
+      - 'Pool#removeNodes~ifMatch'
+      - 'Pool#removeNodes~ifNoneMatch'
+      - 'Pool#removeNodes~ifModifiedSince'
+      - 'Pool#removeNodes~ifUnmodifiedSince'
+      - 'Pool#removeNodes~timeout'
+      - 'Pool#removeNodes~clientRequestId'
+      - 'Pool#removeNodes~returnClientRequestId'
+      - 'Pool#removeNodes~ocpDate'
+      - 'Pool#removeNodes~ifMatch'
+      - 'Pool#removeNodes~ifNoneMatch'
+      - 'Pool#removeNodes~ifModifiedSince'
+      - 'Pool#removeNodes~ifUnmodifiedSince'
+      - 'Pool#removeNodes~requestUrl'
+      - 'Pool#removeNodes~requestUrl'
+      - 'Pool#removeNodes~queryParameters'
+      - 'Pool#removeNodes~requestUrl'
+      - 'Pool#removeNodes~regex'
+      - 'Pool#removeNodes~requestUrl'
+      - 'Pool#removeNodes~httpRequest'
+      - 'Pool#removeNodes~headerName'
+      - 'Pool#removeNodes~requestContent'
+      - 'Pool#removeNodes~requestModel'
+      - 'Pool#removeNodes~requestModelMapper'
+      - 'Pool#removeNodes~requestModel'
+      - 'Pool#removeNodes~requestContent'
+      - 'Pool#removeNodes~serializationError'
+  - uid: 'Pool#listPoolUsageMetricsNext'
+    id: listPoolUsageMetricsNext
+    parent: Pool
+    name: >-
+      listPoolUsageMetricsNext(nextPageLink, options,
+      options.poolListPoolUsageMetricsNextOptions,
+      options.poolListPoolUsageMetricsNextOptions.clientRequestId,
+      options.poolListPoolUsageMetricsNextOptions.returnClientRequestId,
+      options.poolListPoolUsageMetricsNextOptions.ocpDate,
+      options.customHeaders, callback)
+    summary: "Lists the usage metrics, aggregated by pool across individual time\rintervals, for the specified account."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolListPoolUsageMetricsNextOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.poolListPoolUsageMetricsNextOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolListPoolUsageMetricsNextOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolListPoolUsageMetricsNextOptions.ocpDate
+          type: date
+          description: "The\rtime the request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PoolListPoolUsageMetricsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listPoolUsageMetricsNext(nextPageLink, options,
+        options.poolListPoolUsageMetricsNextOptions,
+        options.poolListPoolUsageMetricsNextOptions.clientRequestId,
+        options.poolListPoolUsageMetricsNextOptions.returnClientRequestId,
+        options.poolListPoolUsageMetricsNextOptions.ocpDate,
+        options.customHeaders, callback);
+    fullName: >-
+      Pool.listPoolUsageMetricsNext(nextPageLink, options,
+      options.poolListPoolUsageMetricsNextOptions,
+      options.poolListPoolUsageMetricsNextOptions.clientRequestId,
+      options.poolListPoolUsageMetricsNextOptions.returnClientRequestId,
+      options.poolListPoolUsageMetricsNextOptions.ocpDate,
+      options.customHeaders, callback)
+    children:
+      - 'Pool#listPoolUsageMetricsNext~client'
+      - 'Pool#listPoolUsageMetricsNext~callback'
+      - 'Pool#listPoolUsageMetricsNext~options'
+      - 'Pool#listPoolUsageMetricsNext~poolListPoolUsageMetricsNextOptions'
+      - 'Pool#listPoolUsageMetricsNext~clientRequestId'
+      - 'Pool#listPoolUsageMetricsNext~returnClientRequestId'
+      - 'Pool#listPoolUsageMetricsNext~ocpDate'
+      - 'Pool#listPoolUsageMetricsNext~clientRequestId'
+      - 'Pool#listPoolUsageMetricsNext~returnClientRequestId'
+      - 'Pool#listPoolUsageMetricsNext~ocpDate'
+      - 'Pool#listPoolUsageMetricsNext~requestUrl'
+      - 'Pool#listPoolUsageMetricsNext~requestUrl'
+      - 'Pool#listPoolUsageMetricsNext~regex'
+      - 'Pool#listPoolUsageMetricsNext~requestUrl'
+      - 'Pool#listPoolUsageMetricsNext~httpRequest'
+      - 'Pool#listPoolUsageMetricsNext~headerName'
+  - uid: 'Pool#listNext'
+    id: listNext
+    parent: Pool
+    name: >-
+      listNext(nextPageLink, options, options.poolListNextOptions,
+      options.poolListNextOptions.clientRequestId,
+      options.poolListNextOptions.returnClientRequestId,
+      options.poolListNextOptions.ocpDate, options.customHeaders, callback)
+    summary: Lists all of the pools in the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.poolListNextOptions
+          type: object
+          description: "Additional parameters for the\roperation"
+        - id: options.poolListNextOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.poolListNextOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.poolListNextOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudPoolListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.poolListNextOptions,
+        options.poolListNextOptions.clientRequestId,
+        options.poolListNextOptions.returnClientRequestId,
+        options.poolListNextOptions.ocpDate, options.customHeaders, callback);
+    fullName: >-
+      Pool.listNext(nextPageLink, options, options.poolListNextOptions,
+      options.poolListNextOptions.clientRequestId,
+      options.poolListNextOptions.returnClientRequestId,
+      options.poolListNextOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'Pool#listNext~client'
+      - 'Pool#listNext~callback'
+      - 'Pool#listNext~options'
+      - 'Pool#listNext~poolListNextOptions'
+      - 'Pool#listNext~clientRequestId'
+      - 'Pool#listNext~returnClientRequestId'
+      - 'Pool#listNext~ocpDate'
+      - 'Pool#listNext~clientRequestId'
+      - 'Pool#listNext~returnClientRequestId'
+      - 'Pool#listNext~ocpDate'
+      - 'Pool#listNext~requestUrl'
+      - 'Pool#listNext~requestUrl'
+      - 'Pool#listNext~regex'
+      - 'Pool#listNext~requestUrl'
+      - 'Pool#listNext~httpRequest'
+      - 'Pool#listNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: moment.duration
+    name: moment.duration
+    fullName: moment.duration
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

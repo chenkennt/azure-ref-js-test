@@ -1,0 +1,178 @@
+items:
+  - uid: DeploymentOperations
+    id: DeploymentOperations
+    name: DeploymentOperations
+    type: Class
+    syntax:
+      content: DeploymentOperations
+    fullName: DeploymentOperations
+    children:
+      - 'DeploymentOperations#client'
+      - 'DeploymentOperations#get'
+      - 'DeploymentOperations#list'
+      - 'DeploymentOperations#listNext'
+  - uid: 'DeploymentOperations#client'
+    id: client
+    parent: DeploymentOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: DeploymentOperations.client
+  - uid: 'DeploymentOperations#get'
+    id: get
+    parent: DeploymentOperations
+    name: >-
+      get(resourceGroupName, deploymentName, operationId, options,
+      options.customHeaders, callback)
+    summary: Get a list of deployments operations.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group. The name\ris case insensitive."
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: operationId
+          type: string
+          description: Operation Id.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DeploymentOperation} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, deploymentName, operationId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      DeploymentOperations.get(resourceGroupName, deploymentName, operationId,
+      options, options.customHeaders, callback)
+    children:
+      - 'DeploymentOperations#get~client'
+      - 'DeploymentOperations#get~callback'
+      - 'DeploymentOperations#get~options'
+      - 'DeploymentOperations#get~requestUrl'
+      - 'DeploymentOperations#get~requestUrl'
+      - 'DeploymentOperations#get~requestUrl'
+      - 'DeploymentOperations#get~requestUrl'
+      - 'DeploymentOperations#get~requestUrl'
+      - 'DeploymentOperations#get~queryParameters'
+      - 'DeploymentOperations#get~requestUrl'
+      - 'DeploymentOperations#get~regex'
+      - 'DeploymentOperations#get~requestUrl'
+      - 'DeploymentOperations#get~httpRequest'
+      - 'DeploymentOperations#get~headerName'
+  - uid: 'DeploymentOperations#list'
+    id: list
+    parent: DeploymentOperations
+    name: >-
+      list(resourceGroupName, deploymentName, options, options.top,
+      options.customHeaders, callback)
+    summary: Gets a list of deployments operations.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group. The name\ris case insensitive."
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.top
+          type: number
+          description: Query parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DeploymentOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, deploymentName, options, options.top,
+        options.customHeaders, callback);
+    fullName: >-
+      DeploymentOperations.list(resourceGroupName, deploymentName, options,
+      options.top, options.customHeaders, callback)
+    children:
+      - 'DeploymentOperations#list~client'
+      - 'DeploymentOperations#list~callback'
+      - 'DeploymentOperations#list~options'
+      - 'DeploymentOperations#list~top'
+      - 'DeploymentOperations#list~requestUrl'
+      - 'DeploymentOperations#list~requestUrl'
+      - 'DeploymentOperations#list~requestUrl'
+      - 'DeploymentOperations#list~requestUrl'
+      - 'DeploymentOperations#list~queryParameters'
+      - 'DeploymentOperations#list~requestUrl'
+      - 'DeploymentOperations#list~regex'
+      - 'DeploymentOperations#list~requestUrl'
+      - 'DeploymentOperations#list~httpRequest'
+      - 'DeploymentOperations#list~headerName'
+  - uid: 'DeploymentOperations#listNext'
+    id: listNext
+    parent: DeploymentOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets a list of deployments operations.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DeploymentOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      DeploymentOperations.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'DeploymentOperations#listNext~client'
+      - 'DeploymentOperations#listNext~callback'
+      - 'DeploymentOperations#listNext~options'
+      - 'DeploymentOperations#listNext~requestUrl'
+      - 'DeploymentOperations#listNext~requestUrl'
+      - 'DeploymentOperations#listNext~regex'
+      - 'DeploymentOperations#listNext~requestUrl'
+      - 'DeploymentOperations#listNext~httpRequest'
+      - 'DeploymentOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

@@ -1,0 +1,472 @@
+items:
+  - uid: LocalNetworkGateways
+    id: LocalNetworkGateways
+    name: LocalNetworkGateways
+    type: Class
+    syntax:
+      content: LocalNetworkGateways
+    fullName: LocalNetworkGateways
+    children:
+      - 'LocalNetworkGateways#client'
+      - 'LocalNetworkGateways#createOrUpdate'
+      - 'LocalNetworkGateways#beginCreateOrUpdate'
+      - 'LocalNetworkGateways#get'
+      - 'LocalNetworkGateways#deleteMethod'
+      - 'LocalNetworkGateways#beginDeleteMethod'
+      - 'LocalNetworkGateways#list'
+      - 'LocalNetworkGateways#listNext'
+  - uid: 'LocalNetworkGateways#client'
+    id: client
+    parent: LocalNetworkGateways
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: LocalNetworkGateways.client
+  - uid: 'LocalNetworkGateways#createOrUpdate'
+    id: createOrUpdate
+    parent: LocalNetworkGateways
+    name: >-
+      createOrUpdate(resourceGroupName, localNetworkGatewayName, parameters,
+      parameters.localNetworkAddressSpace,
+      parameters.localNetworkAddressSpace.addressPrefixes,
+      parameters.gatewayIpAddress, parameters.bgpSettings,
+      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
+      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put LocalNetworkGateway operation creates/updates a local network\rgateway in the specified resource group through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: localNetworkGatewayName
+          type: string
+          description: "The name of the local network\rgateway."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Begin Create or\rupdate Local Network Gateway operation through Network resource provider."
+        - id: parameters.localNetworkAddressSpace
+          type: object
+          description: "Local network site\rAddress space"
+        - id: parameters.localNetworkAddressSpace.addressPrefixes
+          type: array
+          description: "Gets\ror sets List of address blocks reserved for this virtual network in CIDR\rnotation"
+        - id: parameters.gatewayIpAddress
+          type: string
+          description: "IP address of local network\rgateway."
+        - id: parameters.bgpSettings
+          type: object
+          description: "Local network gateway's BGP\rspeaker settings"
+        - id: parameters.bgpSettings.asn
+          type: number
+          description: "Gets or sets this BGP\rspeaker's ASN"
+        - id: parameters.bgpSettings.bgpPeeringAddress
+          type: string
+          description: "Gets or sets the\rBGP peering address and BGP identifier of this BGP speaker"
+        - id: parameters.bgpSettings.peerWeight
+          type: number
+          description: "Gets or sets the weight\radded to routes learned from this BGP speaker"
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the LocalNetworkGateway resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the LocalNetworkGateway resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, localNetworkGatewayName,
+        parameters, parameters.localNetworkAddressSpace,
+        parameters.localNetworkAddressSpace.addressPrefixes,
+        parameters.gatewayIpAddress, parameters.bgpSettings,
+        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
+        parameters.bgpSettings.peerWeight, parameters.resourceGuid,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      LocalNetworkGateways.createOrUpdate(resourceGroupName,
+      localNetworkGatewayName, parameters, parameters.localNetworkAddressSpace,
+      parameters.localNetworkAddressSpace.addressPrefixes,
+      parameters.gatewayIpAddress, parameters.bgpSettings,
+      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
+      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'LocalNetworkGateways#createOrUpdate~client'
+      - 'LocalNetworkGateways#createOrUpdate~callback'
+      - 'LocalNetworkGateways#createOrUpdate~options'
+  - uid: 'LocalNetworkGateways#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: LocalNetworkGateways
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, localNetworkGatewayName,
+      parameters, parameters.localNetworkAddressSpace,
+      parameters.localNetworkAddressSpace.addressPrefixes,
+      parameters.gatewayIpAddress, parameters.bgpSettings,
+      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
+      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put LocalNetworkGateway operation creates/updates a local network\rgateway in the specified resource group through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: localNetworkGatewayName
+          type: string
+          description: "The name of the local network\rgateway."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Begin Create or\rupdate Local Network Gateway operation through Network resource provider."
+        - id: parameters.localNetworkAddressSpace
+          type: object
+          description: "Local network site\rAddress space"
+        - id: parameters.localNetworkAddressSpace.addressPrefixes
+          type: array
+          description: "Gets\ror sets List of address blocks reserved for this virtual network in CIDR\rnotation"
+        - id: parameters.gatewayIpAddress
+          type: string
+          description: "IP address of local network\rgateway."
+        - id: parameters.bgpSettings
+          type: object
+          description: "Local network gateway's BGP\rspeaker settings"
+        - id: parameters.bgpSettings.asn
+          type: number
+          description: "Gets or sets this BGP\rspeaker's ASN"
+        - id: parameters.bgpSettings.bgpPeeringAddress
+          type: string
+          description: "Gets or sets the\rBGP peering address and BGP identifier of this BGP speaker"
+        - id: parameters.bgpSettings.peerWeight
+          type: number
+          description: "Gets or sets the weight\radded to routes learned from this BGP speaker"
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the LocalNetworkGateway resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the LocalNetworkGateway resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, localNetworkGatewayName,
+        parameters, parameters.localNetworkAddressSpace,
+        parameters.localNetworkAddressSpace.addressPrefixes,
+        parameters.gatewayIpAddress, parameters.bgpSettings,
+        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
+        parameters.bgpSettings.peerWeight, parameters.resourceGuid,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      LocalNetworkGateways.beginCreateOrUpdate(resourceGroupName,
+      localNetworkGatewayName, parameters, parameters.localNetworkAddressSpace,
+      parameters.localNetworkAddressSpace.addressPrefixes,
+      parameters.gatewayIpAddress, parameters.bgpSettings,
+      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
+      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'LocalNetworkGateways#beginCreateOrUpdate~client'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~callback'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~options'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestUrl'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestUrl'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestUrl'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestUrl'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~queryParameters'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestUrl'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~regex'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestUrl'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~httpRequest'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~headerName'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestContent'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestModel'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestModelMapper'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestModel'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~requestContent'
+      - 'LocalNetworkGateways#beginCreateOrUpdate~serializationError'
+  - uid: 'LocalNetworkGateways#get'
+    id: get
+    parent: LocalNetworkGateways
+    name: >-
+      get(resourceGroupName, localNetworkGatewayName, options,
+      options.customHeaders, callback)
+    summary: "The Get LocalNetworkGateway operation retrieves information about the\rspecified local network gateway through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: localNetworkGatewayName
+          type: string
+          description: "The name of the local network\rgateway."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, localNetworkGatewayName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      LocalNetworkGateways.get(resourceGroupName, localNetworkGatewayName,
+      options, options.customHeaders, callback)
+    children:
+      - 'LocalNetworkGateways#get~client'
+      - 'LocalNetworkGateways#get~callback'
+      - 'LocalNetworkGateways#get~options'
+      - 'LocalNetworkGateways#get~requestUrl'
+      - 'LocalNetworkGateways#get~requestUrl'
+      - 'LocalNetworkGateways#get~requestUrl'
+      - 'LocalNetworkGateways#get~requestUrl'
+      - 'LocalNetworkGateways#get~queryParameters'
+      - 'LocalNetworkGateways#get~requestUrl'
+      - 'LocalNetworkGateways#get~regex'
+      - 'LocalNetworkGateways#get~requestUrl'
+      - 'LocalNetworkGateways#get~httpRequest'
+      - 'LocalNetworkGateways#get~headerName'
+  - uid: 'LocalNetworkGateways#deleteMethod'
+    id: deleteMethod
+    parent: LocalNetworkGateways
+    name: >-
+      deleteMethod(resourceGroupName, localNetworkGatewayName, options,
+      options.customHeaders, callback)
+    summary: "The Delete LocalNetworkGateway operation deletes the specifed local network\rGateway through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: localNetworkGatewayName
+          type: string
+          description: "The name of the local network\rgateway."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, localNetworkGatewayName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      LocalNetworkGateways.deleteMethod(resourceGroupName,
+      localNetworkGatewayName, options, options.customHeaders, callback)
+    children:
+      - 'LocalNetworkGateways#deleteMethod~client'
+      - 'LocalNetworkGateways#deleteMethod~callback'
+      - 'LocalNetworkGateways#deleteMethod~options'
+  - uid: 'LocalNetworkGateways#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: LocalNetworkGateways
+    name: >-
+      beginDeleteMethod(resourceGroupName, localNetworkGatewayName, options,
+      options.customHeaders, callback)
+    summary: "The Delete LocalNetworkGateway operation deletes the specifed local network\rGateway through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: localNetworkGatewayName
+          type: string
+          description: "The name of the local network\rgateway."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, localNetworkGatewayName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      LocalNetworkGateways.beginDeleteMethod(resourceGroupName,
+      localNetworkGatewayName, options, options.customHeaders, callback)
+    children:
+      - 'LocalNetworkGateways#beginDeleteMethod~client'
+      - 'LocalNetworkGateways#beginDeleteMethod~callback'
+      - 'LocalNetworkGateways#beginDeleteMethod~options'
+      - 'LocalNetworkGateways#beginDeleteMethod~requestUrl'
+      - 'LocalNetworkGateways#beginDeleteMethod~requestUrl'
+      - 'LocalNetworkGateways#beginDeleteMethod~requestUrl'
+      - 'LocalNetworkGateways#beginDeleteMethod~requestUrl'
+      - 'LocalNetworkGateways#beginDeleteMethod~queryParameters'
+      - 'LocalNetworkGateways#beginDeleteMethod~requestUrl'
+      - 'LocalNetworkGateways#beginDeleteMethod~regex'
+      - 'LocalNetworkGateways#beginDeleteMethod~requestUrl'
+      - 'LocalNetworkGateways#beginDeleteMethod~httpRequest'
+      - 'LocalNetworkGateways#beginDeleteMethod~headerName'
+  - uid: 'LocalNetworkGateways#list'
+    id: list
+    parent: LocalNetworkGateways
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: "The List LocalNetworkGateways opertion retrieves all the local network\rgateways stored."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGatewayListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      LocalNetworkGateways.list(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'LocalNetworkGateways#list~client'
+      - 'LocalNetworkGateways#list~callback'
+      - 'LocalNetworkGateways#list~options'
+      - 'LocalNetworkGateways#list~requestUrl'
+      - 'LocalNetworkGateways#list~requestUrl'
+      - 'LocalNetworkGateways#list~requestUrl'
+      - 'LocalNetworkGateways#list~queryParameters'
+      - 'LocalNetworkGateways#list~requestUrl'
+      - 'LocalNetworkGateways#list~regex'
+      - 'LocalNetworkGateways#list~requestUrl'
+      - 'LocalNetworkGateways#list~httpRequest'
+      - 'LocalNetworkGateways#list~headerName'
+  - uid: 'LocalNetworkGateways#listNext'
+    id: listNext
+    parent: LocalNetworkGateways
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List LocalNetworkGateways opertion retrieves all the local network\rgateways stored."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGatewayListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      LocalNetworkGateways.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'LocalNetworkGateways#listNext~client'
+      - 'LocalNetworkGateways#listNext~callback'
+      - 'LocalNetworkGateways#listNext~options'
+      - 'LocalNetworkGateways#listNext~requestUrl'
+      - 'LocalNetworkGateways#listNext~requestUrl'
+      - 'LocalNetworkGateways#listNext~regex'
+      - 'LocalNetworkGateways#listNext~requestUrl'
+      - 'LocalNetworkGateways#listNext~httpRequest'
+      - 'LocalNetworkGateways#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

@@ -1,0 +1,111 @@
+items:
+  - uid: SharedKey
+    id: SharedKey
+    name: SharedKey
+    summary: Creates a new SharedKey object.
+    type: Class
+    syntax:
+      content: SharedKey
+    fullName: SharedKey
+    children:
+      - 'SharedKey#storageAccount'
+      - 'SharedKey#storageAccessKey'
+      - 'SharedKey#usePathStyleUri'
+      - 'SharedKey#signer'
+      - 'SharedKey#signRequest'
+      - 'SharedKey#_getCanonicalizedResource'
+      - 'SharedKey#_getCanonicalizedHeaders'
+  - uid: 'SharedKey#storageAccount'
+    id: storageAccount
+    parent: SharedKey
+    name: storageAccount
+    type: Field
+    syntax:
+      content: storageAccount
+    fullName: SharedKey.storageAccount
+  - uid: 'SharedKey#storageAccessKey'
+    id: storageAccessKey
+    parent: SharedKey
+    name: storageAccessKey
+    type: Field
+    syntax:
+      content: storageAccessKey
+    fullName: SharedKey.storageAccessKey
+  - uid: 'SharedKey#usePathStyleUri'
+    id: usePathStyleUri
+    parent: SharedKey
+    name: usePathStyleUri
+    type: Field
+    syntax:
+      content: usePathStyleUri
+    fullName: SharedKey.usePathStyleUri
+  - uid: 'SharedKey#signer'
+    id: signer
+    parent: SharedKey
+    name: signer
+    type: Field
+    syntax:
+      content: signer
+    fullName: SharedKey.signer
+  - uid: 'SharedKey#signRequest'
+    id: signRequest
+    parent: SharedKey
+    name: 'signRequest(The, callback)'
+    summary: Signs a request with the Authentication header.
+    type: Method
+    syntax:
+      parameters:
+        - id: The
+          type: WebResource
+          description: webresource to be signed.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: 'function signRequest(The, callback);'
+    fullName: 'SharedKey.signRequest(The, callback)'
+    children:
+      - 'SharedKey#signRequest~getvalueToAppend'
+      - 'SharedKey#signRequest~stringToSign'
+      - 'SharedKey#signRequest~signature'
+  - uid: 'SharedKey#_getCanonicalizedResource'
+    id: _getCanonicalizedResource
+    parent: SharedKey
+    name: _getCanonicalizedResource()
+    type: Method
+    syntax:
+      content: function _getCanonicalizedResource();
+    fullName: SharedKey._getCanonicalizedResource()
+    children:
+      - 'SharedKey#_getCanonicalizedResource~path'
+      - 'SharedKey#_getCanonicalizedResource~path'
+      - 'SharedKey#_getCanonicalizedResource~canonicalizedResource'
+      - 'SharedKey#_getCanonicalizedResource~queryStringValues'
+      - 'SharedKey#_getCanonicalizedResource~paramNames'
+      - 'SharedKey#_getCanonicalizedResource~paramNames'
+  - uid: 'SharedKey#_getCanonicalizedHeaders'
+    id: _getCanonicalizedHeaders
+    parent: SharedKey
+    name: _getCanonicalizedHeaders()
+    type: Method
+    syntax:
+      content: function _getCanonicalizedHeaders();
+    fullName: SharedKey._getCanonicalizedHeaders()
+    children:
+      - 'SharedKey#_getCanonicalizedHeaders~canonicalizedHeaders'
+      - 'SharedKey#_getCanonicalizedHeaders~canonicalizedHeadersArray'
+      - 'SharedKey#_getCanonicalizedHeaders~header'
+references:
+  - uid: WebResource
+    name: WebResource
+    fullName: WebResource
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true

@@ -1,0 +1,77 @@
+items:
+  - uid: ObjectIdentifier
+    id: ObjectIdentifier
+    name: ObjectIdentifier
+    summary: An identifier for an Azure Key Vault resource.
+    type: Class
+    syntax:
+      content: ObjectIdentifier
+    fullName: ObjectIdentifier
+    children:
+      - 'ObjectIdentifier#vault'
+      - 'ObjectIdentifier#name'
+      - 'ObjectIdentifier#version'
+      - 'ObjectIdentifier#baseIdentifier'
+      - 'ObjectIdentifier#identifier'
+  - uid: 'ObjectIdentifier#vault'
+    id: vault
+    parent: ObjectIdentifier
+    name: vault
+    summary: The vault URI.
+    type: Field
+    syntax:
+      return:
+        type: string
+      content: vault
+    fullName: ObjectIdentifier.vault
+  - uid: 'ObjectIdentifier#name'
+    id: name
+    parent: ObjectIdentifier
+    name: name
+    summary: The key name.
+    type: Field
+    syntax:
+      return:
+        type: string
+      content: name
+    fullName: ObjectIdentifier.name
+  - uid: 'ObjectIdentifier#version'
+    id: version
+    parent: ObjectIdentifier
+    name: version
+    summary: The key version. May be null.
+    type: Field
+    syntax:
+      return:
+        type: string
+      content: version
+    fullName: ObjectIdentifier.version
+  - uid: 'ObjectIdentifier#baseIdentifier'
+    id: baseIdentifier
+    parent: ObjectIdentifier
+    name: baseIdentifier
+    summary: The base identifier (i.e. without the version).
+    type: Field
+    syntax:
+      return:
+        type: string
+      content: baseIdentifier
+    fullName: ObjectIdentifier.baseIdentifier
+  - uid: 'ObjectIdentifier#identifier'
+    id: identifier
+    parent: ObjectIdentifier
+    name: identifier
+    summary: >-
+      The full identifier if a version was informed; otherwise is the same value
+      of baseIdentifier.
+    type: Field
+    syntax:
+      return:
+        type: string
+      content: identifier
+    fullName: ObjectIdentifier.identifier
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false

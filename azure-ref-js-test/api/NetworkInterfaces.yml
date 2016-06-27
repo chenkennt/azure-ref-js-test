@@ -1,0 +1,1001 @@
+items:
+  - uid: NetworkInterfaces
+    id: NetworkInterfaces
+    name: NetworkInterfaces
+    type: Class
+    syntax:
+      content: NetworkInterfaces
+    fullName: NetworkInterfaces
+    children:
+      - 'NetworkInterfaces#client'
+      - 'NetworkInterfaces#deleteMethod'
+      - 'NetworkInterfaces#beginDeleteMethod'
+      - 'NetworkInterfaces#get'
+      - 'NetworkInterfaces#createOrUpdate'
+      - 'NetworkInterfaces#beginCreateOrUpdate'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface'
+      - 'NetworkInterfaces#listAll'
+      - 'NetworkInterfaces#list'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext'
+      - 'NetworkInterfaces#listAllNext'
+      - 'NetworkInterfaces#listNext'
+  - uid: 'NetworkInterfaces#client'
+    id: client
+    parent: NetworkInterfaces
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: NetworkInterfaces.client
+  - uid: 'NetworkInterfaces#deleteMethod'
+    id: deleteMethod
+    parent: NetworkInterfaces
+    name: >-
+      deleteMethod(resourceGroupName, networkInterfaceName, options,
+      options.customHeaders, callback)
+    summary: >-
+      The delete netwokInterface operation deletes the specified
+      netwokInterface.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkInterfaceName
+          type: string
+          description: The name of the network interface.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, networkInterfaceName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.deleteMethod(resourceGroupName, networkInterfaceName,
+      options, options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#deleteMethod~client'
+      - 'NetworkInterfaces#deleteMethod~callback'
+      - 'NetworkInterfaces#deleteMethod~options'
+  - uid: 'NetworkInterfaces#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: NetworkInterfaces
+    name: >-
+      beginDeleteMethod(resourceGroupName, networkInterfaceName, options,
+      options.customHeaders, callback)
+    summary: >-
+      The delete netwokInterface operation deletes the specified
+      netwokInterface.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkInterfaceName
+          type: string
+          description: The name of the network interface.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, networkInterfaceName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.beginDeleteMethod(resourceGroupName,
+      networkInterfaceName, options, options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#beginDeleteMethod~client'
+      - 'NetworkInterfaces#beginDeleteMethod~callback'
+      - 'NetworkInterfaces#beginDeleteMethod~options'
+      - 'NetworkInterfaces#beginDeleteMethod~requestUrl'
+      - 'NetworkInterfaces#beginDeleteMethod~requestUrl'
+      - 'NetworkInterfaces#beginDeleteMethod~requestUrl'
+      - 'NetworkInterfaces#beginDeleteMethod~requestUrl'
+      - 'NetworkInterfaces#beginDeleteMethod~queryParameters'
+      - 'NetworkInterfaces#beginDeleteMethod~requestUrl'
+      - 'NetworkInterfaces#beginDeleteMethod~regex'
+      - 'NetworkInterfaces#beginDeleteMethod~requestUrl'
+      - 'NetworkInterfaces#beginDeleteMethod~httpRequest'
+      - 'NetworkInterfaces#beginDeleteMethod~headerName'
+  - uid: 'NetworkInterfaces#get'
+    id: get
+    parent: NetworkInterfaces
+    name: >-
+      get(resourceGroupName, networkInterfaceName, options, options.expand,
+      options.customHeaders, callback)
+    summary: "The Get ntework interface operation retreives information about the\rspecified network interface."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkInterfaceName
+          type: string
+          description: The name of the network interface.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.expand
+          type: string
+          description: expand references resources.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterface} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, networkInterfaceName, options,
+        options.expand, options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.get(resourceGroupName, networkInterfaceName, options,
+      options.expand, options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#get~client'
+      - 'NetworkInterfaces#get~callback'
+      - 'NetworkInterfaces#get~options'
+      - 'NetworkInterfaces#get~expand'
+      - 'NetworkInterfaces#get~requestUrl'
+      - 'NetworkInterfaces#get~requestUrl'
+      - 'NetworkInterfaces#get~requestUrl'
+      - 'NetworkInterfaces#get~requestUrl'
+      - 'NetworkInterfaces#get~queryParameters'
+      - 'NetworkInterfaces#get~requestUrl'
+      - 'NetworkInterfaces#get~regex'
+      - 'NetworkInterfaces#get~requestUrl'
+      - 'NetworkInterfaces#get~httpRequest'
+      - 'NetworkInterfaces#get~headerName'
+  - uid: 'NetworkInterfaces#createOrUpdate'
+    id: createOrUpdate
+    parent: NetworkInterfaces
+    name: >-
+      createOrUpdate(resourceGroupName, networkInterfaceName, parameters,
+      parameters.virtualMachine, parameters.virtualMachine.id,
+      parameters.networkSecurityGroup,
+      parameters.networkSecurityGroup.securityRules,
+      parameters.networkSecurityGroup.defaultSecurityRules,
+      parameters.networkSecurityGroup.networkInterfaces,
+      parameters.networkSecurityGroup.subnets,
+      parameters.networkSecurityGroup.resourceGuid,
+      parameters.networkSecurityGroup.provisioningState,
+      parameters.networkSecurityGroup.etag, parameters.networkSecurityGroup.id,
+      parameters.networkSecurityGroup.location,
+      parameters.networkSecurityGroup.tags, parameters.ipConfigurations,
+      parameters.dnsSettings, parameters.dnsSettings.dnsServers,
+      parameters.dnsSettings.appliedDnsServers,
+      parameters.dnsSettings.internalDnsNameLabel,
+      parameters.dnsSettings.internalFqdn,
+      parameters.dnsSettings.internalDomainNameSuffix, parameters.macAddress,
+      parameters.primary, parameters.enableIPForwarding,
+      parameters.resourceGuid, parameters.provisioningState, parameters.etag,
+      parameters.id, parameters.location, parameters.tags, options,
+      options.customHeaders, callback)
+    summary: The Put NetworkInterface operation creates/updates a networkInterface
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkInterfaceName
+          type: string
+          description: The name of the network interface.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/update\rNetworkInterface operation"
+        - id: parameters.virtualMachine
+          type: object
+          description: "Gets or sets the reference of a\rVirtualMachine"
+        - id: parameters.virtualMachine.id
+          type: string
+          description: Resource Id
+        - id: parameters.networkSecurityGroup
+          type: object
+          description: "Gets or sets the\rreference of the NetworkSecurityGroup resource"
+        - id: parameters.networkSecurityGroup.securityRules
+          type: array
+          description: "Gets or sets\rSecurity rules of network security group"
+        - id: parameters.networkSecurityGroup.defaultSecurityRules
+          type: array
+          description: "Gets\ror sets Default security rules of network security group"
+        - id: parameters.networkSecurityGroup.networkInterfaces
+          type: array
+          description: "Gets\rcollection of references to Network Interfaces"
+        - id: parameters.networkSecurityGroup.subnets
+          type: array
+          description: "Gets collection of\rreferences to subnets"
+        - id: parameters.networkSecurityGroup.resourceGuid
+          type: string
+          description: "Gets or sets\rresource guid property of the network security group resource"
+        - id: parameters.networkSecurityGroup.provisioningState
+          type: string
+          description: "Gets or\rsets Provisioning state of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.networkSecurityGroup.etag
+          type: string
+          description: "Gets a unique\rread-only string that changes whenever the resource is updated"
+        - id: parameters.networkSecurityGroup.id
+          type: string
+          description: Resource Id
+        - id: parameters.networkSecurityGroup.location
+          type: string
+          description: Resource location
+        - id: parameters.networkSecurityGroup.tags
+          type: object
+          description: Resource tags
+        - id: parameters.ipConfigurations
+          type: array
+          description: "Gets or sets list of\rIPConfigurations of the NetworkInterface"
+        - id: parameters.dnsSettings
+          type: object
+          description: "Gets or sets DNS Settings in\rNetworkInterface"
+        - id: parameters.dnsSettings.dnsServers
+          type: array
+          description: "Gets or sets list of DNS\rservers IP addresses"
+        - id: parameters.dnsSettings.appliedDnsServers
+          type: array
+          description: "Gets or sets list\rof Applied DNS servers IP addresses"
+        - id: parameters.dnsSettings.internalDnsNameLabel
+          type: string
+          description: "Gets or sets\rthe Internal DNS name"
+        - id: parameters.dnsSettings.internalFqdn
+          type: string
+          description: "Gets or sets the\rinternal fqdn."
+        - id: parameters.dnsSettings.internalDomainNameSuffix
+          type: string
+          description: "Gets or\rsets internal domain name suffix of the NIC."
+        - id: parameters.macAddress
+          type: string
+          description: "Gets the MAC Address of the network\rinterface"
+        - id: parameters.primary
+          type: boolean
+          description: "Gets whether this is a primary NIC on\ra virtual machine"
+        - id: parameters.enableIPForwarding
+          type: boolean
+          description: "Gets or sets whether\rIPForwarding is enabled on the NIC"
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the network interface resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterface} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, networkInterfaceName,
+        parameters, parameters.virtualMachine, parameters.virtualMachine.id,
+        parameters.networkSecurityGroup,
+        parameters.networkSecurityGroup.securityRules,
+        parameters.networkSecurityGroup.defaultSecurityRules,
+        parameters.networkSecurityGroup.networkInterfaces,
+        parameters.networkSecurityGroup.subnets,
+        parameters.networkSecurityGroup.resourceGuid,
+        parameters.networkSecurityGroup.provisioningState,
+        parameters.networkSecurityGroup.etag,
+        parameters.networkSecurityGroup.id,
+        parameters.networkSecurityGroup.location,
+        parameters.networkSecurityGroup.tags, parameters.ipConfigurations,
+        parameters.dnsSettings, parameters.dnsSettings.dnsServers,
+        parameters.dnsSettings.appliedDnsServers,
+        parameters.dnsSettings.internalDnsNameLabel,
+        parameters.dnsSettings.internalFqdn,
+        parameters.dnsSettings.internalDomainNameSuffix, parameters.macAddress,
+        parameters.primary, parameters.enableIPForwarding,
+        parameters.resourceGuid, parameters.provisioningState, parameters.etag,
+        parameters.id, parameters.location, parameters.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.createOrUpdate(resourceGroupName, networkInterfaceName,
+      parameters, parameters.virtualMachine, parameters.virtualMachine.id,
+      parameters.networkSecurityGroup,
+      parameters.networkSecurityGroup.securityRules,
+      parameters.networkSecurityGroup.defaultSecurityRules,
+      parameters.networkSecurityGroup.networkInterfaces,
+      parameters.networkSecurityGroup.subnets,
+      parameters.networkSecurityGroup.resourceGuid,
+      parameters.networkSecurityGroup.provisioningState,
+      parameters.networkSecurityGroup.etag, parameters.networkSecurityGroup.id,
+      parameters.networkSecurityGroup.location,
+      parameters.networkSecurityGroup.tags, parameters.ipConfigurations,
+      parameters.dnsSettings, parameters.dnsSettings.dnsServers,
+      parameters.dnsSettings.appliedDnsServers,
+      parameters.dnsSettings.internalDnsNameLabel,
+      parameters.dnsSettings.internalFqdn,
+      parameters.dnsSettings.internalDomainNameSuffix, parameters.macAddress,
+      parameters.primary, parameters.enableIPForwarding,
+      parameters.resourceGuid, parameters.provisioningState, parameters.etag,
+      parameters.id, parameters.location, parameters.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#createOrUpdate~client'
+      - 'NetworkInterfaces#createOrUpdate~callback'
+      - 'NetworkInterfaces#createOrUpdate~options'
+  - uid: 'NetworkInterfaces#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: NetworkInterfaces
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, networkInterfaceName, parameters,
+      parameters.virtualMachine, parameters.virtualMachine.id,
+      parameters.networkSecurityGroup,
+      parameters.networkSecurityGroup.securityRules,
+      parameters.networkSecurityGroup.defaultSecurityRules,
+      parameters.networkSecurityGroup.networkInterfaces,
+      parameters.networkSecurityGroup.subnets,
+      parameters.networkSecurityGroup.resourceGuid,
+      parameters.networkSecurityGroup.provisioningState,
+      parameters.networkSecurityGroup.etag, parameters.networkSecurityGroup.id,
+      parameters.networkSecurityGroup.location,
+      parameters.networkSecurityGroup.tags, parameters.ipConfigurations,
+      parameters.dnsSettings, parameters.dnsSettings.dnsServers,
+      parameters.dnsSettings.appliedDnsServers,
+      parameters.dnsSettings.internalDnsNameLabel,
+      parameters.dnsSettings.internalFqdn,
+      parameters.dnsSettings.internalDomainNameSuffix, parameters.macAddress,
+      parameters.primary, parameters.enableIPForwarding,
+      parameters.resourceGuid, parameters.provisioningState, parameters.etag,
+      parameters.id, parameters.location, parameters.tags, options,
+      options.customHeaders, callback)
+    summary: The Put NetworkInterface operation creates/updates a networkInterface
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkInterfaceName
+          type: string
+          description: The name of the network interface.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/update\rNetworkInterface operation"
+        - id: parameters.virtualMachine
+          type: object
+          description: "Gets or sets the reference of a\rVirtualMachine"
+        - id: parameters.virtualMachine.id
+          type: string
+          description: Resource Id
+        - id: parameters.networkSecurityGroup
+          type: object
+          description: "Gets or sets the\rreference of the NetworkSecurityGroup resource"
+        - id: parameters.networkSecurityGroup.securityRules
+          type: array
+          description: "Gets or sets\rSecurity rules of network security group"
+        - id: parameters.networkSecurityGroup.defaultSecurityRules
+          type: array
+          description: "Gets\ror sets Default security rules of network security group"
+        - id: parameters.networkSecurityGroup.networkInterfaces
+          type: array
+          description: "Gets\rcollection of references to Network Interfaces"
+        - id: parameters.networkSecurityGroup.subnets
+          type: array
+          description: "Gets collection of\rreferences to subnets"
+        - id: parameters.networkSecurityGroup.resourceGuid
+          type: string
+          description: "Gets or sets\rresource guid property of the network security group resource"
+        - id: parameters.networkSecurityGroup.provisioningState
+          type: string
+          description: "Gets or\rsets Provisioning state of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.networkSecurityGroup.etag
+          type: string
+          description: "Gets a unique\rread-only string that changes whenever the resource is updated"
+        - id: parameters.networkSecurityGroup.id
+          type: string
+          description: Resource Id
+        - id: parameters.networkSecurityGroup.location
+          type: string
+          description: Resource location
+        - id: parameters.networkSecurityGroup.tags
+          type: object
+          description: Resource tags
+        - id: parameters.ipConfigurations
+          type: array
+          description: "Gets or sets list of\rIPConfigurations of the NetworkInterface"
+        - id: parameters.dnsSettings
+          type: object
+          description: "Gets or sets DNS Settings in\rNetworkInterface"
+        - id: parameters.dnsSettings.dnsServers
+          type: array
+          description: "Gets or sets list of DNS\rservers IP addresses"
+        - id: parameters.dnsSettings.appliedDnsServers
+          type: array
+          description: "Gets or sets list\rof Applied DNS servers IP addresses"
+        - id: parameters.dnsSettings.internalDnsNameLabel
+          type: string
+          description: "Gets or sets\rthe Internal DNS name"
+        - id: parameters.dnsSettings.internalFqdn
+          type: string
+          description: "Gets or sets the\rinternal fqdn."
+        - id: parameters.dnsSettings.internalDomainNameSuffix
+          type: string
+          description: "Gets or\rsets internal domain name suffix of the NIC."
+        - id: parameters.macAddress
+          type: string
+          description: "Gets the MAC Address of the network\rinterface"
+        - id: parameters.primary
+          type: boolean
+          description: "Gets whether this is a primary NIC on\ra virtual machine"
+        - id: parameters.enableIPForwarding
+          type: boolean
+          description: "Gets or sets whether\rIPForwarding is enabled on the NIC"
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the network interface resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterface} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, networkInterfaceName,
+        parameters, parameters.virtualMachine, parameters.virtualMachine.id,
+        parameters.networkSecurityGroup,
+        parameters.networkSecurityGroup.securityRules,
+        parameters.networkSecurityGroup.defaultSecurityRules,
+        parameters.networkSecurityGroup.networkInterfaces,
+        parameters.networkSecurityGroup.subnets,
+        parameters.networkSecurityGroup.resourceGuid,
+        parameters.networkSecurityGroup.provisioningState,
+        parameters.networkSecurityGroup.etag,
+        parameters.networkSecurityGroup.id,
+        parameters.networkSecurityGroup.location,
+        parameters.networkSecurityGroup.tags, parameters.ipConfigurations,
+        parameters.dnsSettings, parameters.dnsSettings.dnsServers,
+        parameters.dnsSettings.appliedDnsServers,
+        parameters.dnsSettings.internalDnsNameLabel,
+        parameters.dnsSettings.internalFqdn,
+        parameters.dnsSettings.internalDomainNameSuffix, parameters.macAddress,
+        parameters.primary, parameters.enableIPForwarding,
+        parameters.resourceGuid, parameters.provisioningState, parameters.etag,
+        parameters.id, parameters.location, parameters.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.beginCreateOrUpdate(resourceGroupName,
+      networkInterfaceName, parameters, parameters.virtualMachine,
+      parameters.virtualMachine.id, parameters.networkSecurityGroup,
+      parameters.networkSecurityGroup.securityRules,
+      parameters.networkSecurityGroup.defaultSecurityRules,
+      parameters.networkSecurityGroup.networkInterfaces,
+      parameters.networkSecurityGroup.subnets,
+      parameters.networkSecurityGroup.resourceGuid,
+      parameters.networkSecurityGroup.provisioningState,
+      parameters.networkSecurityGroup.etag, parameters.networkSecurityGroup.id,
+      parameters.networkSecurityGroup.location,
+      parameters.networkSecurityGroup.tags, parameters.ipConfigurations,
+      parameters.dnsSettings, parameters.dnsSettings.dnsServers,
+      parameters.dnsSettings.appliedDnsServers,
+      parameters.dnsSettings.internalDnsNameLabel,
+      parameters.dnsSettings.internalFqdn,
+      parameters.dnsSettings.internalDomainNameSuffix, parameters.macAddress,
+      parameters.primary, parameters.enableIPForwarding,
+      parameters.resourceGuid, parameters.provisioningState, parameters.etag,
+      parameters.id, parameters.location, parameters.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#beginCreateOrUpdate~client'
+      - 'NetworkInterfaces#beginCreateOrUpdate~callback'
+      - 'NetworkInterfaces#beginCreateOrUpdate~options'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestUrl'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestUrl'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestUrl'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestUrl'
+      - 'NetworkInterfaces#beginCreateOrUpdate~queryParameters'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestUrl'
+      - 'NetworkInterfaces#beginCreateOrUpdate~regex'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestUrl'
+      - 'NetworkInterfaces#beginCreateOrUpdate~httpRequest'
+      - 'NetworkInterfaces#beginCreateOrUpdate~headerName'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestContent'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestModel'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestModelMapper'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestModel'
+      - 'NetworkInterfaces#beginCreateOrUpdate~requestContent'
+      - 'NetworkInterfaces#beginCreateOrUpdate~serializationError'
+  - uid: 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces'
+    id: listVirtualMachineScaleSetVMNetworkInterfaces
+    parent: NetworkInterfaces
+    name: >-
+      listVirtualMachineScaleSetVMNetworkInterfaces(resourceGroupName,
+      virtualMachineScaleSetName, virtualmachineIndex, options,
+      options.customHeaders, callback)
+    summary: "The list network interface operation retrieves information about all\rnetwork interfaces in a virtual machine from a virtual machine scale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualMachineScaleSetName
+          type: string
+          description: "The name of the virtual machine\rscale set."
+        - id: virtualmachineIndex
+          type: string
+          description: The virtual machine index.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function
+        listVirtualMachineScaleSetVMNetworkInterfaces(resourceGroupName,
+        virtualMachineScaleSetName, virtualmachineIndex, options,
+        options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.listVirtualMachineScaleSetVMNetworkInterfaces(resourceGroupName,
+      virtualMachineScaleSetName, virtualmachineIndex, options,
+      options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~client'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~callback'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~options'
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~queryParameters
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~requestUrl
+      - 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~regex'
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~httpRequest
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfaces~headerName
+  - uid: 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces'
+    id: listVirtualMachineScaleSetNetworkInterfaces
+    parent: NetworkInterfaces
+    name: >-
+      listVirtualMachineScaleSetNetworkInterfaces(resourceGroupName,
+      virtualMachineScaleSetName, options, options.customHeaders, callback)
+    summary: "The list network interface operation retrieves information about all\rnetwork interfaces in a virtual machine scale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualMachineScaleSetName
+          type: string
+          description: "The name of the virtual machine\rscale set."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listVirtualMachineScaleSetNetworkInterfaces(resourceGroupName,
+        virtualMachineScaleSetName, options, options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.listVirtualMachineScaleSetNetworkInterfaces(resourceGroupName,
+      virtualMachineScaleSetName, options, options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~client'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~callback'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~options'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~requestUrl'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~requestUrl'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~requestUrl'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~requestUrl'
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~queryParameters
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~requestUrl'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~regex'
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~requestUrl'
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~httpRequest
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfaces~headerName'
+  - uid: 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface'
+    id: getVirtualMachineScaleSetNetworkInterface
+    parent: NetworkInterfaces
+    name: >-
+      getVirtualMachineScaleSetNetworkInterface(resourceGroupName,
+      virtualMachineScaleSetName, virtualmachineIndex, networkInterfaceName,
+      options, options.expand, options.customHeaders, callback)
+    summary: "The Get ntework interface operation retreives information about the\rspecified network interface in a virtual machine scale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualMachineScaleSetName
+          type: string
+          description: "The name of the virtual machine\rscale set."
+        - id: virtualmachineIndex
+          type: string
+          description: The virtual machine index.
+        - id: networkInterfaceName
+          type: string
+          description: The name of the network interface.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.expand
+          type: string
+          description: expand references resources.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterface} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getVirtualMachineScaleSetNetworkInterface(resourceGroupName,
+        virtualMachineScaleSetName, virtualmachineIndex, networkInterfaceName,
+        options, options.expand, options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.getVirtualMachineScaleSetNetworkInterface(resourceGroupName,
+      virtualMachineScaleSetName, virtualmachineIndex, networkInterfaceName,
+      options, options.expand, options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~client'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~callback'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~options'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~expand'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - >-
+        NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~queryParameters
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~regex'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~requestUrl'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~httpRequest'
+      - 'NetworkInterfaces#getVirtualMachineScaleSetNetworkInterface~headerName'
+  - uid: 'NetworkInterfaces#listAll'
+    id: listAll
+    parent: NetworkInterfaces
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "The List networkInterfaces opertion retrieves all the networkInterfaces in\ra subscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'NetworkInterfaces.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'NetworkInterfaces#listAll~client'
+      - 'NetworkInterfaces#listAll~callback'
+      - 'NetworkInterfaces#listAll~options'
+      - 'NetworkInterfaces#listAll~requestUrl'
+      - 'NetworkInterfaces#listAll~requestUrl'
+      - 'NetworkInterfaces#listAll~queryParameters'
+      - 'NetworkInterfaces#listAll~requestUrl'
+      - 'NetworkInterfaces#listAll~regex'
+      - 'NetworkInterfaces#listAll~requestUrl'
+      - 'NetworkInterfaces#listAll~httpRequest'
+      - 'NetworkInterfaces#listAll~headerName'
+  - uid: 'NetworkInterfaces#list'
+    id: list
+    parent: NetworkInterfaces
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: "The List networkInterfaces opertion retrieves all the networkInterfaces in\ra resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      NetworkInterfaces.list(resourceGroupName, options, options.customHeaders,
+      callback)
+    children:
+      - 'NetworkInterfaces#list~client'
+      - 'NetworkInterfaces#list~callback'
+      - 'NetworkInterfaces#list~options'
+      - 'NetworkInterfaces#list~requestUrl'
+      - 'NetworkInterfaces#list~requestUrl'
+      - 'NetworkInterfaces#list~requestUrl'
+      - 'NetworkInterfaces#list~queryParameters'
+      - 'NetworkInterfaces#list~requestUrl'
+      - 'NetworkInterfaces#list~regex'
+      - 'NetworkInterfaces#list~requestUrl'
+      - 'NetworkInterfaces#list~httpRequest'
+      - 'NetworkInterfaces#list~headerName'
+  - uid: 'NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext'
+    id: listVirtualMachineScaleSetVMNetworkInterfacesNext
+    parent: NetworkInterfaces
+    name: >-
+      listVirtualMachineScaleSetVMNetworkInterfacesNext(nextPageLink, options,
+      options.customHeaders, callback)
+    summary: "The list network interface operation retrieves information about all\rnetwork interfaces in a virtual machine from a virtual machine scale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listVirtualMachineScaleSetVMNetworkInterfacesNext(nextPageLink,
+        options, options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.listVirtualMachineScaleSetVMNetworkInterfacesNext(nextPageLink,
+      options, options.customHeaders, callback)
+    children:
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~client
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~callback
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~options
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~regex
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~httpRequest
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetVMNetworkInterfacesNext~headerName
+  - uid: 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext'
+    id: listVirtualMachineScaleSetNetworkInterfacesNext
+    parent: NetworkInterfaces
+    name: >-
+      listVirtualMachineScaleSetNetworkInterfacesNext(nextPageLink, options,
+      options.customHeaders, callback)
+    summary: "The list network interface operation retrieves information about all\rnetwork interfaces in a virtual machine scale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listVirtualMachineScaleSetNetworkInterfacesNext(nextPageLink,
+        options, options.customHeaders, callback);
+    fullName: >-
+      NetworkInterfaces.listVirtualMachineScaleSetNetworkInterfacesNext(nextPageLink,
+      options, options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~client'
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~callback
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~options
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~requestUrl
+      - 'NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~regex'
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~requestUrl
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~httpRequest
+      - >-
+        NetworkInterfaces#listVirtualMachineScaleSetNetworkInterfacesNext~headerName
+  - uid: 'NetworkInterfaces#listAllNext'
+    id: listAllNext
+    parent: NetworkInterfaces
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List networkInterfaces opertion retrieves all the networkInterfaces in\ra subscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      NetworkInterfaces.listAllNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'NetworkInterfaces#listAllNext~client'
+      - 'NetworkInterfaces#listAllNext~callback'
+      - 'NetworkInterfaces#listAllNext~options'
+      - 'NetworkInterfaces#listAllNext~requestUrl'
+      - 'NetworkInterfaces#listAllNext~requestUrl'
+      - 'NetworkInterfaces#listAllNext~regex'
+      - 'NetworkInterfaces#listAllNext~requestUrl'
+      - 'NetworkInterfaces#listAllNext~httpRequest'
+      - 'NetworkInterfaces#listAllNext~headerName'
+  - uid: 'NetworkInterfaces#listNext'
+    id: listNext
+    parent: NetworkInterfaces
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List networkInterfaces opertion retrieves all the networkInterfaces in\ra resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkInterfaceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      NetworkInterfaces.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'NetworkInterfaces#listNext~client'
+      - 'NetworkInterfaces#listNext~callback'
+      - 'NetworkInterfaces#listNext~options'
+      - 'NetworkInterfaces#listNext~requestUrl'
+      - 'NetworkInterfaces#listNext~requestUrl'
+      - 'NetworkInterfaces#listNext~regex'
+      - 'NetworkInterfaces#listNext~requestUrl'
+      - 'NetworkInterfaces#listNext~httpRequest'
+      - 'NetworkInterfaces#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

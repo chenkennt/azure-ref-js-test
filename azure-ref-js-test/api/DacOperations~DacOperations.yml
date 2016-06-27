@@ -1,0 +1,388 @@
+items:
+  - uid: DacOperations~DacOperations
+    id: DacOperations
+    parent: DacOperations
+    name: DacOperations
+    type: Class
+    syntax:
+      content: DacOperations
+    fullName: DacOperations.DacOperations
+    children:
+      - 'DacOperations~DacOperations#client'
+      - 'DacOperations~DacOperations#exportMethod'
+      - 'DacOperations~DacOperations#getStatus'
+      - 'DacOperations~DacOperations#getStatusPost'
+      - 'DacOperations~DacOperations#importMethod'
+  - uid: 'DacOperations~DacOperations#client'
+    id: client
+    parent: DacOperations~DacOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: DacOperations~DacOperations.client
+  - uid: 'DacOperations~DacOperations#exportMethod'
+    id: exportMethod
+    parent: DacOperations~DacOperations
+    name: >-
+      exportMethod(serverName, parametersOrCallback,
+      parametersOrCallback.blobCredentials,
+      parametersOrCallback.blobCredentials.uri,
+      parametersOrCallback.blobCredentials.storageAccessKey,
+      parametersOrCallback.connectionInfo,
+      parametersOrCallback.connectionInfo.databaseName,
+      parametersOrCallback.connectionInfo.password,
+      parametersOrCallback.connectionInfo.serverName,
+      parametersOrCallback.connectionInfo.userName, callback)
+    summary: Exports an Azure SQL Database into a DACPAC file in Azure Blob Storage.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server in\rwhich the database to export resides."
+        - id: parametersOrCallback
+          type: DacExportParameters
+          description: "The parameters needed\rto initiate the export request."
+        - id: parametersOrCallback.blobCredentials
+          type: BlobCredentialsParameter
+          description: "Gets or sets the credentials information needed for setting where the\rDACPAC file will be exported to in Azure Blob Storage."
+        - id: parametersOrCallback.blobCredentials.uri
+          type: string
+          description: "Gets or sets\rthe URI of where the DACPAC file should be stored in Azure Blob Storage."
+        - id: parametersOrCallback.blobCredentials.storageAccessKey
+          type: string
+          description: Gets or sets the access key for the Azure Storage account.
+        - id: parametersOrCallback.connectionInfo
+          type: ConnectionInfoParameter
+          description: >-
+            Gets or sets the connection information needed for the Azure SQL
+            Database.
+        - id: parametersOrCallback.connectionInfo.databaseName
+          type: string
+          description: "Gets or\rsets the name of the database to be exported."
+        - id: parametersOrCallback.connectionInfo.password
+          type: string
+          description: "Gets or\rsets the password for the database administrator user."
+        - id: parametersOrCallback.connectionInfo.serverName
+          type: string
+          description: "Gets or\rsets the Azure SQL Database Server name where the database resides."
+        - id: parametersOrCallback.connectionInfo.userName
+          type: string
+          description: "Gets or\rsets the username of the database administrator user."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function exportMethod(serverName, parametersOrCallback,
+        parametersOrCallback.blobCredentials,
+        parametersOrCallback.blobCredentials.uri,
+        parametersOrCallback.blobCredentials.storageAccessKey,
+        parametersOrCallback.connectionInfo,
+        parametersOrCallback.connectionInfo.databaseName,
+        parametersOrCallback.connectionInfo.password,
+        parametersOrCallback.connectionInfo.serverName,
+        parametersOrCallback.connectionInfo.userName, callback);
+    fullName: >-
+      DacOperations~DacOperations.exportMethod(serverName, parametersOrCallback,
+      parametersOrCallback.blobCredentials,
+      parametersOrCallback.blobCredentials.uri,
+      parametersOrCallback.blobCredentials.storageAccessKey,
+      parametersOrCallback.connectionInfo,
+      parametersOrCallback.connectionInfo.databaseName,
+      parametersOrCallback.connectionInfo.password,
+      parametersOrCallback.connectionInfo.serverName,
+      parametersOrCallback.connectionInfo.userName, callback)
+    children:
+      - 'DacOperations~DacOperations#exportMethod~parameters'
+      - 'DacOperations~DacOperations#exportMethod~callback'
+      - 'DacOperations~DacOperations#exportMethod~parameters'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~baseUrl'
+      - 'DacOperations~DacOperations#exportMethod~baseUrl'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~url2'
+      - 'DacOperations~DacOperations#exportMethod~httpRequest'
+      - 'DacOperations~DacOperations#exportMethod~requestContent'
+      - 'DacOperations~DacOperations#exportMethod~requestDoc'
+      - 'DacOperations~DacOperations#exportMethod~exportInputElement'
+      - 'DacOperations~DacOperations#exportMethod~blobCredentialsElement'
+      - 'DacOperations~DacOperations#exportMethod~typeAttribute'
+      - 'DacOperations~DacOperations#exportMethod~uriElement'
+      - 'DacOperations~DacOperations#exportMethod~storageAccessKeyElement'
+      - 'DacOperations~DacOperations#exportMethod~connectionInfoElement'
+      - 'DacOperations~DacOperations#exportMethod~databaseNameElement'
+      - 'DacOperations~DacOperations#exportMethod~passwordElement'
+      - 'DacOperations~DacOperations#exportMethod~serverNameElement'
+      - 'DacOperations~DacOperations#exportMethod~userNameElement'
+      - 'DacOperations~DacOperations#exportMethod~requestContent'
+  - uid: 'DacOperations~DacOperations#getStatus'
+    id: getStatus
+    parent: DacOperations~DacOperations
+    name: >-
+      getStatus(serverName, fullyQualifiedServerName, username, password,
+      requestId, callback)
+    summary: "Gets the status of the import or export operation in the specified server\rwith the corresponding request ID.  The request ID is provided in the\rresponses of the import or export operation."
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the server in which the import or\rexport operation is taking place."
+        - id: fullyQualifiedServerName
+          type: string
+          description: "The fully qualified domain name\rof the Azure SQL Database Server where the operation is taking place.\rExample: a9s7f7s9d3.database.windows.net"
+        - id: username
+          type: string
+          description: "The administrator username for the Azure SQL\rDatabase Server."
+        - id: password
+          type: string
+          description: "The administrator password for the Azure SQL\rDatabase Server."
+        - id: requestId
+          type: string
+          description: "The request ID of the operation being queried.\rThe request ID is obtained from the responses of the import and export\roperations."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getStatus(serverName, fullyQualifiedServerName, username,
+        password, requestId, callback);
+    fullName: >-
+      DacOperations~DacOperations.getStatus(serverName,
+      fullyQualifiedServerName, username, password, requestId, callback)
+    children:
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~queryParameters'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~baseUrl'
+      - 'DacOperations~DacOperations#getStatus~baseUrl'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~url2'
+      - 'DacOperations~DacOperations#getStatus~httpRequest'
+  - uid: 'DacOperations~DacOperations#getStatusPost'
+    id: getStatusPost
+    parent: DacOperations~DacOperations
+    name: >-
+      getStatusPost(serverName, parameters, parameters.serverName,
+      parameters.userName, parameters.password, parameters.requestId, callback)
+    summary: "Gets the status of the import or export operation in the specified server\rwith the corresponding request ID.  The request ID is provided in the\rresponses of the import or export operation."
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the server in which the import or\rexport operation is taking place."
+        - id: parameters
+          type: DacGetStatusParameters
+          description: "The parameters needed to get\rthe status of an import or export operation."
+        - id: parameters.serverName
+          type: string
+          description: "Gets or sets the fully qualified\rname of the Azure SQL Database server where the import or export\roperation is occurring."
+        - id: parameters.userName
+          type: string
+          description: "Gets or sets the username for the\rAzure SQL Database server where the import or export operation is\roccurring."
+        - id: parameters.password
+          type: string
+          description: "Gets or sets the password for the\rAzure SQL Database server where the import or export operation is\roccurring."
+        - id: parameters.requestId
+          type: string
+          description: "Gets or sets the Id for the import or\rexport operation of which to query the status."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getStatusPost(serverName, parameters, parameters.serverName,
+        parameters.userName, parameters.password, parameters.requestId,
+        callback);
+    fullName: >-
+      DacOperations~DacOperations.getStatusPost(serverName, parameters,
+      parameters.serverName, parameters.userName, parameters.password,
+      parameters.requestId, callback)
+    children:
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~baseUrl'
+      - 'DacOperations~DacOperations#getStatusPost~baseUrl'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~url2'
+      - 'DacOperations~DacOperations#getStatusPost~httpRequest'
+      - 'DacOperations~DacOperations#getStatusPost~requestContent'
+      - 'DacOperations~DacOperations#getStatusPost~requestDoc'
+      - 'DacOperations~DacOperations#getStatusPost~statusInputElement'
+      - 'DacOperations~DacOperations#getStatusPost~passwordElement'
+      - 'DacOperations~DacOperations#getStatusPost~requestIdElement'
+      - 'DacOperations~DacOperations#getStatusPost~serverNameElement'
+      - 'DacOperations~DacOperations#getStatusPost~userNameElement'
+      - 'DacOperations~DacOperations#getStatusPost~requestContent'
+  - uid: 'DacOperations~DacOperations#importMethod'
+    id: importMethod
+    parent: DacOperations~DacOperations
+    name: >-
+      importMethod(serverName, parametersOrCallback,
+      parametersOrCallback.azureEdition, parametersOrCallback.blobCredentials,
+      parametersOrCallback.blobCredentials.uri,
+      parametersOrCallback.blobCredentials.storageAccessKey,
+      parametersOrCallback.connectionInfo,
+      parametersOrCallback.connectionInfo.databaseName,
+      parametersOrCallback.connectionInfo.password,
+      parametersOrCallback.connectionInfo.serverName,
+      parametersOrCallback.connectionInfo.userName,
+      parametersOrCallback.databaseSizeInGB, callback)
+    summary: "Initiates an Import of a DACPAC file from Azure Blob Storage into a Azure\rSQL Database."
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server into\rwhich the database is being imported."
+        - id: parametersOrCallback
+          type: DacImportParameters
+          description: "The parameters needed\rto initiated the Import request."
+        - id: parametersOrCallback.azureEdition
+          type: string
+          description: "Gets or sets the\redition for the database that will be created upon import."
+        - id: parametersOrCallback.blobCredentials
+          type: BlobCredentialsParameter
+          description: "Gets or sets the credentials for retrieving the DACPAC from Azure Blob\rStorage."
+        - id: parametersOrCallback.blobCredentials.uri
+          type: string
+          description: "Gets or sets\rthe URI of the DACPAC file stored in Azure Blob Storage to be imported."
+        - id: parametersOrCallback.blobCredentials.storageAccessKey
+          type: string
+          description: "Gets or sets the access key for the Azure Blob Storage account where the\rDACPAC file is stored."
+        - id: parametersOrCallback.connectionInfo
+          type: ConnectionInfoParameter
+          description: "Gets or sets the connection information needed for connecting to SQL\rAzure and creating a database to import into."
+        - id: parametersOrCallback.connectionInfo.databaseName
+          type: string
+          description: "Gets or\rsets the name of the database into which the DACPAC file will be imported."
+        - id: parametersOrCallback.connectionInfo.password
+          type: string
+          description: "Gets or\rsets the password for the server administrator."
+        - id: parametersOrCallback.connectionInfo.serverName
+          type: string
+          description: "Gets or\rsets the Azure SQL Database Server name where the imported database will\rbe created."
+        - id: parametersOrCallback.connectionInfo.userName
+          type: string
+          description: "Gets or\rsets the username of the server administration."
+        - id: parametersOrCallback.databaseSizeInGB
+          type: number
+          description: "Gets or sets the\rsize for the database that will be created upon import."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function importMethod(serverName, parametersOrCallback,
+        parametersOrCallback.azureEdition, parametersOrCallback.blobCredentials,
+        parametersOrCallback.blobCredentials.uri,
+        parametersOrCallback.blobCredentials.storageAccessKey,
+        parametersOrCallback.connectionInfo,
+        parametersOrCallback.connectionInfo.databaseName,
+        parametersOrCallback.connectionInfo.password,
+        parametersOrCallback.connectionInfo.serverName,
+        parametersOrCallback.connectionInfo.userName,
+        parametersOrCallback.databaseSizeInGB, callback);
+    fullName: >-
+      DacOperations~DacOperations.importMethod(serverName, parametersOrCallback,
+      parametersOrCallback.azureEdition, parametersOrCallback.blobCredentials,
+      parametersOrCallback.blobCredentials.uri,
+      parametersOrCallback.blobCredentials.storageAccessKey,
+      parametersOrCallback.connectionInfo,
+      parametersOrCallback.connectionInfo.databaseName,
+      parametersOrCallback.connectionInfo.password,
+      parametersOrCallback.connectionInfo.serverName,
+      parametersOrCallback.connectionInfo.userName,
+      parametersOrCallback.databaseSizeInGB, callback)
+    children:
+      - 'DacOperations~DacOperations#importMethod~parameters'
+      - 'DacOperations~DacOperations#importMethod~callback'
+      - 'DacOperations~DacOperations#importMethod~parameters'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~baseUrl'
+      - 'DacOperations~DacOperations#importMethod~baseUrl'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~url2'
+      - 'DacOperations~DacOperations#importMethod~httpRequest'
+      - 'DacOperations~DacOperations#importMethod~requestContent'
+      - 'DacOperations~DacOperations#importMethod~requestDoc'
+      - 'DacOperations~DacOperations#importMethod~importInputElement'
+      - 'DacOperations~DacOperations#importMethod~azureEditionElement'
+      - 'DacOperations~DacOperations#importMethod~blobCredentialsElement'
+      - 'DacOperations~DacOperations#importMethod~typeAttribute'
+      - 'DacOperations~DacOperations#importMethod~uriElement'
+      - 'DacOperations~DacOperations#importMethod~storageAccessKeyElement'
+      - 'DacOperations~DacOperations#importMethod~connectionInfoElement'
+      - 'DacOperations~DacOperations#importMethod~databaseNameElement'
+      - 'DacOperations~DacOperations#importMethod~passwordElement'
+      - 'DacOperations~DacOperations#importMethod~serverNameElement'
+      - 'DacOperations~DacOperations#importMethod~userNameElement'
+      - 'DacOperations~DacOperations#importMethod~databaseSizeInGBElement'
+      - 'DacOperations~DacOperations#importMethod~requestContent'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: DacExportParameters
+    name: DacExportParameters
+    fullName: DacExportParameters
+    isExternal: true
+  - uid: BlobCredentialsParameter
+    name: BlobCredentialsParameter
+    fullName: BlobCredentialsParameter
+    isExternal: true
+  - uid: ConnectionInfoParameter
+    name: ConnectionInfoParameter
+    fullName: ConnectionInfoParameter
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: DacGetStatusParameters
+    name: DacGetStatusParameters
+    fullName: DacGetStatusParameters
+    isExternal: true
+  - uid: DacImportParameters
+    name: DacImportParameters
+    fullName: DacImportParameters
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

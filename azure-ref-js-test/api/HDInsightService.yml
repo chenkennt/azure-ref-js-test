@@ -1,0 +1,426 @@
+items:
+  - uid: HDInsightService
+    id: HDInsightService
+    name: HDInsightService
+    summary: Creates a new HDInsightService object
+    type: Class
+    syntax:
+      content: HDInsightService
+    fullName: HDInsightService
+    children:
+      - HDInsightService~settings
+      - 'HDInsightService#subscriptionId'
+      - 'HDInsightService#convertCreationObject'
+      - 'HDInsightService#registerLocation'
+      - 'HDInsightService#unregisterLocation'
+      - 'HDInsightService#validateLocation'
+      - 'HDInsightService#manageLocation'
+      - 'HDInsightService#deleteCluster'
+      - 'HDInsightService#createCluster'
+      - 'HDInsightService#listClusters'
+  - uid: HDInsightService~settings
+    id: settings
+    parent: HDInsightService
+    name: settings
+    type: Field
+    syntax:
+      content: settings
+    fullName: HDInsightService.settings
+  - uid: 'HDInsightService#subscriptionId'
+    id: subscriptionId
+    parent: HDInsightService
+    name: subscriptionId
+    type: Field
+    syntax:
+      content: subscriptionId
+    fullName: HDInsightService.subscriptionId
+  - uid: 'HDInsightService#convertCreationObject'
+    id: convertCreationObject
+    parent: HDInsightService
+    name: >-
+      convertCreationObject(clusterCreationObject, clusterCreationObject.name,
+      clusterCreationObject.location,
+      clusterCreationObject.defaultStorageAccountName,
+      clusterCreationObject.defaultStorageAccountKey,
+      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
+      clusterCreationObject.password, clusterCreationObject.nodes,
+      clusterCreationObject.additionalStorageAccounts,
+      clusterCreationObject.additionalStorageAccounts.name,
+      clusterCreationObject.additionalStorageAccounts.key,
+      clusterCreationObject.oozieMetastore,
+      clusterCreationObject.oozieMetastore.server,
+      clusterCreationObject.oozieMetastore.database,
+      clusterCreationObject.oozieMetastore.user,
+      clusterCreationObject.oozieMetastore.password,
+      clusterCreationObject.hiveMetastore,
+      clusterCreationObject.hiveMetastore.server,
+      clusterCreationObject.hiveMetastore.database,
+      clusterCreationObject.hiveMetastore.user,
+      clusterCreationObject.hiveMetastore.password)
+    summary: >-
+      Converts a cluster creation object into a playload that is actually sent
+      to the server to create the cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: clusterCreationObject
+          type: object
+          description: The object used to supply all parameters needed to create a cluster.
+        - id: clusterCreationObject.name
+          type: string
+          description: The name of the cluster (dns name) all lower case
+        - id: clusterCreationObject.location
+          type: string
+          description: The Azure data center where the cluster is to be created
+        - id: clusterCreationObject.defaultStorageAccountName
+          type: string
+          description: The name of the default Azure storage account
+        - id: clusterCreationObject.defaultStorageAccountKey
+          type: string
+          description: The secret key for the default Azure storage account
+        - id: clusterCreationObject.defaultStorageContainer
+          type: string
+          description: The container for the default Azure storage account
+        - id: clusterCreationObject.user
+          type: string
+          description: The username to use for the cluster
+        - id: clusterCreationObject.password
+          type: string
+          description: The password to use for the cluster
+        - id: clusterCreationObject.nodes
+          type: int
+          description: The number of nodes to use
+        - id: clusterCreationObject.additionalStorageAccounts
+          type: array
+          description: >-
+            The array of objects used to supply additional storage account
+            information
+        - id: clusterCreationObject.additionalStorageAccounts.name
+          type: string
+          description: The name of the storage account
+        - id: clusterCreationObject.additionalStorageAccounts.key
+          type: string
+          description: The key for the storage account
+        - id: clusterCreationObject.oozieMetastore
+          type: object
+          description: The object used to supply parameters for the Oozie metastore
+        - id: clusterCreationObject.oozieMetastore.server
+          type: string
+          description: The name of the SQL Database server to use
+        - id: clusterCreationObject.oozieMetastore.database
+          type: string
+          description: The name of the database to use
+        - id: clusterCreationObject.oozieMetastore.user
+          type: string
+          description: The user name to use when authenticating to the database/server
+        - id: clusterCreationObject.oozieMetastore.password
+          type: string
+          description: The user password
+        - id: clusterCreationObject.hiveMetastore
+          type: object
+          description: The object used to supply parameters for the Hive metastore
+        - id: clusterCreationObject.hiveMetastore.server
+          type: string
+          description: The name of the SQL Database server to use
+        - id: clusterCreationObject.hiveMetastore.database
+          type: string
+          description: The name of the database to use
+        - id: clusterCreationObject.hiveMetastore.user
+          type: string
+          description: The user name to use when authenticating to the database/server
+        - id: clusterCreationObject.hiveMetastore.password
+          type: string
+          description: The user password
+      content: >-
+        function convertCreationObject(clusterCreationObject,
+        clusterCreationObject.name, clusterCreationObject.location,
+        clusterCreationObject.defaultStorageAccountName,
+        clusterCreationObject.defaultStorageAccountKey,
+        clusterCreationObject.defaultStorageContainer,
+        clusterCreationObject.user, clusterCreationObject.password,
+        clusterCreationObject.nodes,
+        clusterCreationObject.additionalStorageAccounts,
+        clusterCreationObject.additionalStorageAccounts.name,
+        clusterCreationObject.additionalStorageAccounts.key,
+        clusterCreationObject.oozieMetastore,
+        clusterCreationObject.oozieMetastore.server,
+        clusterCreationObject.oozieMetastore.database,
+        clusterCreationObject.oozieMetastore.user,
+        clusterCreationObject.oozieMetastore.password,
+        clusterCreationObject.hiveMetastore,
+        clusterCreationObject.hiveMetastore.server,
+        clusterCreationObject.hiveMetastore.database,
+        clusterCreationObject.hiveMetastore.user,
+        clusterCreationObject.hiveMetastore.password);
+    fullName: >-
+      HDInsightService.convertCreationObject(clusterCreationObject,
+      clusterCreationObject.name, clusterCreationObject.location,
+      clusterCreationObject.defaultStorageAccountName,
+      clusterCreationObject.defaultStorageAccountKey,
+      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
+      clusterCreationObject.password, clusterCreationObject.nodes,
+      clusterCreationObject.additionalStorageAccounts,
+      clusterCreationObject.additionalStorageAccounts.name,
+      clusterCreationObject.additionalStorageAccounts.key,
+      clusterCreationObject.oozieMetastore,
+      clusterCreationObject.oozieMetastore.server,
+      clusterCreationObject.oozieMetastore.database,
+      clusterCreationObject.oozieMetastore.user,
+      clusterCreationObject.oozieMetastore.password,
+      clusterCreationObject.hiveMetastore,
+      clusterCreationObject.hiveMetastore.server,
+      clusterCreationObject.hiveMetastore.database,
+      clusterCreationObject.hiveMetastore.user,
+      clusterCreationObject.hiveMetastore.password)
+    children:
+      - 'HDInsightService#convertCreationObject~payload'
+      - 'HDInsightService#convertCreationObject~i'
+      - 'HDInsightService#convertCreationObject~account'
+      - 'HDInsightService#convertCreationObject~oozieMetastore'
+      - 'HDInsightService#convertCreationObject~hiveMetastore'
+  - uid: 'HDInsightService#registerLocation'
+    id: registerLocation
+    parent: HDInsightService
+    name: registerLocation()
+    type: Method
+    syntax:
+      content: function registerLocation();
+    fullName: HDInsightService.registerLocation()
+  - uid: 'HDInsightService#unregisterLocation'
+    id: unregisterLocation
+    parent: HDInsightService
+    name: unregisterLocation()
+    type: Method
+    syntax:
+      content: function unregisterLocation();
+    fullName: HDInsightService.unregisterLocation()
+  - uid: 'HDInsightService#validateLocation'
+    id: validateLocation
+    parent: HDInsightService
+    name: validateLocation()
+    type: Method
+    syntax:
+      content: function validateLocation();
+    fullName: HDInsightService.validateLocation()
+  - uid: 'HDInsightService#manageLocation'
+    id: manageLocation
+    parent: HDInsightService
+    name: manageLocation()
+    type: Method
+    syntax:
+      content: function manageLocation();
+    fullName: HDInsightService.manageLocation()
+    children:
+      - 'HDInsightService#manageLocation~regionCloudServiceName'
+      - 'HDInsightService#manageLocation~path'
+      - 'HDInsightService#manageLocation~webResource'
+      - 'HDInsightService#manageLocation~content'
+      - 'HDInsightService#manageLocation~webResource'
+      - 'HDInsightService#manageLocation~webResource'
+      - 'HDInsightService#manageLocation~webResource'
+      - 'HDInsightService#manageLocation~content'
+      - 'HDInsightService#manageLocation~content'
+  - uid: 'HDInsightService#deleteCluster'
+    id: deleteCluster
+    parent: HDInsightService
+    name: 'deleteCluster(name, location, callback)'
+    summary: Deletes an HDInsight Cluster
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+        - id: location
+          type: string
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: 'function deleteCluster(name, location, callback);'
+    fullName: 'HDInsightService.deleteCluster(name, location, callback)'
+    children:
+      - 'HDInsightService#deleteCluster~regionCloudServiceName'
+      - 'HDInsightService#deleteCluster~path'
+      - 'HDInsightService#deleteCluster~webResource'
+  - uid: 'HDInsightService#createCluster'
+    id: createCluster
+    parent: HDInsightService
+    name: >-
+      createCluster(clusterCreationObject, clusterCreationObject.name,
+      clusterCreationObject.location,
+      clusterCreationObject.defaultStorageAccountName,
+      clusterCreationObject.defaultStorageAccountKey,
+      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
+      clusterCreationObject.password, clusterCreationObject.nodes,
+      clusterCreationObject.additionalStorageAccounts,
+      clusterCreationObject.additionalStorageAccounts.name,
+      clusterCreationObject.additionalStorageAccounts.key,
+      clusterCreationObject.oozieMetastore,
+      clusterCreationObject.oozieMetastore.server,
+      clusterCreationObject.oozieMetastore.database,
+      clusterCreationObject.oozieMetastore.user,
+      clusterCreationObject.oozieMetastore.password,
+      clusterCreationObject.hiveMetastore,
+      clusterCreationObject.hiveMetastore.server,
+      clusterCreationObject.hiveMetastore.database,
+      clusterCreationObject.hiveMetastore.user,
+      clusterCreationObject.hiveMetastore.password, callback)
+    summary: Creates a new HDInsight Cluster
+    type: Method
+    syntax:
+      parameters:
+        - id: clusterCreationObject
+          type: object
+          description: The details of the cluster to create.
+        - id: clusterCreationObject.name
+          type: string
+          description: The name of the cluster (dns name) all lower case
+        - id: clusterCreationObject.location
+          type: string
+          description: The Azure data center where the cluster is to be created
+        - id: clusterCreationObject.defaultStorageAccountName
+          type: string
+          description: The name of the default Azure storage account
+        - id: clusterCreationObject.defaultStorageAccountKey
+          type: string
+          description: The secret key for the default Azure storage account
+        - id: clusterCreationObject.defaultStorageContainer
+          type: string
+          description: The container for the default Azure storage account
+        - id: clusterCreationObject.user
+          type: string
+          description: The username to use for the cluster
+        - id: clusterCreationObject.password
+          type: string
+          description: The password to use for the cluster
+        - id: clusterCreationObject.nodes
+          type: number
+          description: The number of nodes to use
+        - id: clusterCreationObject.additionalStorageAccounts
+          type: array
+          description: The additional storage accounts
+        - id: clusterCreationObject.additionalStorageAccounts.name
+          type: string
+          description: The name of the storage acount
+        - id: clusterCreationObject.additionalStorageAccounts.key
+          type: string
+          description: The secret key for the storage acount
+        - id: clusterCreationObject.oozieMetastore
+          type: object
+          description: The Oozie metastore information
+        - id: clusterCreationObject.oozieMetastore.server
+          type: string
+          description: The name of the sql server to use
+        - id: clusterCreationObject.oozieMetastore.database
+          type: string
+          description: The sql databse to use
+        - id: clusterCreationObject.oozieMetastore.user
+          type: string
+          description: The user name to use when logging into the database
+        - id: clusterCreationObject.oozieMetastore.password
+          type: string
+          description: The password to use when logging into the database
+        - id: clusterCreationObject.hiveMetastore
+          type: object
+          description: The Hive metastore information
+        - id: clusterCreationObject.hiveMetastore.server
+          type: string
+          description: The name of the sql server to use
+        - id: clusterCreationObject.hiveMetastore.database
+          type: string
+          description: The sql databse to use
+        - id: clusterCreationObject.hiveMetastore.user
+          type: string
+          description: The user name to use when logging into the database
+        - id: clusterCreationObject.hiveMetastore.password
+          type: string
+          description: The password to use when logging into the database
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: >-
+        function createCluster(clusterCreationObject,
+        clusterCreationObject.name, clusterCreationObject.location,
+        clusterCreationObject.defaultStorageAccountName,
+        clusterCreationObject.defaultStorageAccountKey,
+        clusterCreationObject.defaultStorageContainer,
+        clusterCreationObject.user, clusterCreationObject.password,
+        clusterCreationObject.nodes,
+        clusterCreationObject.additionalStorageAccounts,
+        clusterCreationObject.additionalStorageAccounts.name,
+        clusterCreationObject.additionalStorageAccounts.key,
+        clusterCreationObject.oozieMetastore,
+        clusterCreationObject.oozieMetastore.server,
+        clusterCreationObject.oozieMetastore.database,
+        clusterCreationObject.oozieMetastore.user,
+        clusterCreationObject.oozieMetastore.password,
+        clusterCreationObject.hiveMetastore,
+        clusterCreationObject.hiveMetastore.server,
+        clusterCreationObject.hiveMetastore.database,
+        clusterCreationObject.hiveMetastore.user,
+        clusterCreationObject.hiveMetastore.password, callback);
+    fullName: >-
+      HDInsightService.createCluster(clusterCreationObject,
+      clusterCreationObject.name, clusterCreationObject.location,
+      clusterCreationObject.defaultStorageAccountName,
+      clusterCreationObject.defaultStorageAccountKey,
+      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
+      clusterCreationObject.password, clusterCreationObject.nodes,
+      clusterCreationObject.additionalStorageAccounts,
+      clusterCreationObject.additionalStorageAccounts.name,
+      clusterCreationObject.additionalStorageAccounts.key,
+      clusterCreationObject.oozieMetastore,
+      clusterCreationObject.oozieMetastore.server,
+      clusterCreationObject.oozieMetastore.database,
+      clusterCreationObject.oozieMetastore.user,
+      clusterCreationObject.oozieMetastore.password,
+      clusterCreationObject.hiveMetastore,
+      clusterCreationObject.hiveMetastore.server,
+      clusterCreationObject.hiveMetastore.database,
+      clusterCreationObject.hiveMetastore.user,
+      clusterCreationObject.hiveMetastore.password, callback)
+    children:
+      - 'HDInsightService#createCluster~payload'
+      - 'HDInsightService#createCluster~regionCloudServiceName'
+      - 'HDInsightService#createCluster~path'
+      - 'HDInsightService#createCluster~webResource'
+  - uid: 'HDInsightService#listClusters'
+    id: listClusters
+    parent: HDInsightService
+    name: listClusters(callback)
+    summary: Lists all HDInsight clusters current existing on the subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      content: function listClusters(callback);
+    fullName: HDInsightService.listClusters(callback)
+    children:
+      - 'HDInsightService#listClusters~path'
+      - 'HDInsightService#listClusters~webResource'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: int
+    name: int
+    fullName: int
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

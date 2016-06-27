@@ -1,0 +1,955 @@
+items:
+  - uid: PublicIPAddresses
+    id: PublicIPAddresses
+    name: PublicIPAddresses
+    type: Class
+    syntax:
+      content: PublicIPAddresses
+    fullName: PublicIPAddresses
+    children:
+      - 'PublicIPAddresses#client'
+      - 'PublicIPAddresses#deleteMethod'
+      - 'PublicIPAddresses#beginDeleteMethod'
+      - 'PublicIPAddresses#get'
+      - 'PublicIPAddresses#createOrUpdate'
+      - 'PublicIPAddresses#beginCreateOrUpdate'
+      - 'PublicIPAddresses#listAll'
+      - 'PublicIPAddresses#list'
+      - 'PublicIPAddresses#listAllNext'
+      - 'PublicIPAddresses#listNext'
+  - uid: 'PublicIPAddresses#client'
+    id: client
+    parent: PublicIPAddresses
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: PublicIPAddresses.client
+  - uid: 'PublicIPAddresses#deleteMethod'
+    id: deleteMethod
+    parent: PublicIPAddresses
+    name: >-
+      deleteMethod(resourceGroupName, publicIpAddressName, options,
+      options.customHeaders, callback)
+    summary: >-
+      The delete publicIpAddress operation deletes the specified
+      publicIpAddress.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: publicIpAddressName
+          type: string
+          description: The name of the subnet.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, publicIpAddressName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      PublicIPAddresses.deleteMethod(resourceGroupName, publicIpAddressName,
+      options, options.customHeaders, callback)
+    children:
+      - 'PublicIPAddresses#deleteMethod~client'
+      - 'PublicIPAddresses#deleteMethod~callback'
+      - 'PublicIPAddresses#deleteMethod~options'
+  - uid: 'PublicIPAddresses#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: PublicIPAddresses
+    name: >-
+      beginDeleteMethod(resourceGroupName, publicIpAddressName, options,
+      options.customHeaders, callback)
+    summary: >-
+      The delete publicIpAddress operation deletes the specified
+      publicIpAddress.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: publicIpAddressName
+          type: string
+          description: The name of the subnet.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, publicIpAddressName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      PublicIPAddresses.beginDeleteMethod(resourceGroupName,
+      publicIpAddressName, options, options.customHeaders, callback)
+    children:
+      - 'PublicIPAddresses#beginDeleteMethod~client'
+      - 'PublicIPAddresses#beginDeleteMethod~callback'
+      - 'PublicIPAddresses#beginDeleteMethod~options'
+      - 'PublicIPAddresses#beginDeleteMethod~requestUrl'
+      - 'PublicIPAddresses#beginDeleteMethod~requestUrl'
+      - 'PublicIPAddresses#beginDeleteMethod~requestUrl'
+      - 'PublicIPAddresses#beginDeleteMethod~requestUrl'
+      - 'PublicIPAddresses#beginDeleteMethod~queryParameters'
+      - 'PublicIPAddresses#beginDeleteMethod~requestUrl'
+      - 'PublicIPAddresses#beginDeleteMethod~regex'
+      - 'PublicIPAddresses#beginDeleteMethod~requestUrl'
+      - 'PublicIPAddresses#beginDeleteMethod~httpRequest'
+      - 'PublicIPAddresses#beginDeleteMethod~headerName'
+  - uid: 'PublicIPAddresses#get'
+    id: get
+    parent: PublicIPAddresses
+    name: >-
+      get(resourceGroupName, publicIpAddressName, options, options.expand,
+      options.customHeaders, callback)
+    summary: "The Get publicIpAddress operation retreives information about the specified\rpubicIpAddress"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: publicIpAddressName
+          type: string
+          description: The name of the subnet.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.expand
+          type: string
+          description: expand references resources.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddress} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, publicIpAddressName, options,
+        options.expand, options.customHeaders, callback);
+    fullName: >-
+      PublicIPAddresses.get(resourceGroupName, publicIpAddressName, options,
+      options.expand, options.customHeaders, callback)
+    children:
+      - 'PublicIPAddresses#get~client'
+      - 'PublicIPAddresses#get~callback'
+      - 'PublicIPAddresses#get~options'
+      - 'PublicIPAddresses#get~expand'
+      - 'PublicIPAddresses#get~requestUrl'
+      - 'PublicIPAddresses#get~requestUrl'
+      - 'PublicIPAddresses#get~requestUrl'
+      - 'PublicIPAddresses#get~requestUrl'
+      - 'PublicIPAddresses#get~queryParameters'
+      - 'PublicIPAddresses#get~requestUrl'
+      - 'PublicIPAddresses#get~regex'
+      - 'PublicIPAddresses#get~requestUrl'
+      - 'PublicIPAddresses#get~httpRequest'
+      - 'PublicIPAddresses#get~headerName'
+  - uid: 'PublicIPAddresses#createOrUpdate'
+    id: createOrUpdate
+    parent: PublicIPAddresses
+    name: >-
+      createOrUpdate(resourceGroupName, publicIpAddressName, parameters,
+      parameters.publicIPAllocationMethod, parameters.publicIPAddressVersion,
+      parameters.ipConfiguration, parameters.ipConfiguration.privateIPAddress,
+      parameters.ipConfiguration.privateIPAllocationMethod,
+      parameters.ipConfiguration.subnet,
+      parameters.ipConfiguration.subnet.addressPrefix,
+      parameters.ipConfiguration.subnet.networkSecurityGroup,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
+      parameters.ipConfiguration.subnet.routeTable,
+      parameters.ipConfiguration.subnet.routeTable.routes,
+      parameters.ipConfiguration.subnet.routeTable.subnets,
+      parameters.ipConfiguration.subnet.routeTable.provisioningState,
+      parameters.ipConfiguration.subnet.routeTable.etag,
+      parameters.ipConfiguration.subnet.routeTable.id,
+      parameters.ipConfiguration.subnet.routeTable.location,
+      parameters.ipConfiguration.subnet.routeTable.tags,
+      parameters.ipConfiguration.subnet.ipConfigurations,
+      parameters.ipConfiguration.subnet.provisioningState,
+      parameters.ipConfiguration.subnet.name,
+      parameters.ipConfiguration.subnet.etag,
+      parameters.ipConfiguration.subnet.id,
+      parameters.ipConfiguration.publicIPAddress,
+      parameters.ipConfiguration.provisioningState,
+      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
+      parameters.ipConfiguration.id, parameters.dnsSettings,
+      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
+      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
+      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put PublicIPAddress operation creates/updates a stable/dynamic PublicIP\raddress"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: publicIpAddressName
+          type: string
+          description: The name of the publicIpAddress.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/update\rPublicIPAddress operation"
+        - id: parameters.publicIPAllocationMethod
+          type: string
+          description: "Gets or sets PublicIP\rallocation method (Static/Dynamic). Possible values include: 'Static',\r'Dynamic'"
+        - id: parameters.publicIPAddressVersion
+          type: string
+          description: "Gets or sets PublicIP\raddress version (IPv4/IPv6). Possible values include: 'IPv4', 'IPv6'"
+        - id: parameters.ipConfiguration
+          type: object
+        - id: parameters.ipConfiguration.privateIPAddress
+          type: string
+          description: "Gets or sets\rthe privateIPAddress of the IP Configuration"
+        - id: parameters.ipConfiguration.privateIPAllocationMethod
+          type: string
+          description: "Gets\ror sets PrivateIP allocation method (Static/Dynamic). Possible values\rinclude: 'Static', 'Dynamic'"
+        - id: parameters.ipConfiguration.subnet
+          type: object
+          description: "Gets or sets the\rreference of the subnet resource"
+        - id: parameters.ipConfiguration.subnet.addressPrefix
+          type: string
+          description: "Gets or\rsets Address prefix for the subnet."
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup
+          type: object
+          description: Gets or sets the reference of the NetworkSecurityGroup resource
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules
+          type: array
+          description: Gets or sets Security rules of network security group
+        - id: >-
+            parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules
+          type: array
+          description: Gets or sets Default security rules of network security group
+        - id: >-
+            parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces
+          type: array
+          description: Gets collection of references to Network Interfaces
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.subnets
+          type: array
+          description: "Gets\rcollection of references to subnets"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid
+          type: string
+          description: "Gets\ror sets resource guid property of the network security group resource"
+        - id: >-
+            parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState
+          type: string
+          description: "Gets or sets Provisioning state of the PublicIP resource\rUpdating/Deleting/Failed"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.etag
+          type: string
+          description: "Gets a\runique read-only string that changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.id
+          type: string
+          description: Resource Id
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.location
+          type: string
+          description: "Resource\rlocation"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.tags
+          type: object
+          description: Resource tags
+        - id: parameters.ipConfiguration.subnet.routeTable
+          type: object
+          description: "Gets or sets\rthe reference of the RouteTable resource"
+        - id: parameters.ipConfiguration.subnet.routeTable.routes
+          type: array
+          description: "Gets\ror sets Routes in a Route Table"
+        - id: parameters.ipConfiguration.subnet.routeTable.subnets
+          type: array
+          description: "Gets\rcollection of references to subnets"
+        - id: parameters.ipConfiguration.subnet.routeTable.provisioningState
+          type: string
+          description: "Gets or\rsets Provisioning state of the resource Updating/Deleting/Failed"
+        - id: parameters.ipConfiguration.subnet.routeTable.etag
+          type: string
+          description: "Gets a\runique read-only string that changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.subnet.routeTable.id
+          type: string
+          description: "Resource\rId"
+        - id: parameters.ipConfiguration.subnet.routeTable.location
+          type: string
+          description: Resource location
+        - id: parameters.ipConfiguration.subnet.routeTable.tags
+          type: object
+          description: Resource tags
+        - id: parameters.ipConfiguration.subnet.ipConfigurations
+          type: array
+          description: "Gets\rarray of references to the network interface IP configurations using subnet"
+        - id: parameters.ipConfiguration.subnet.provisioningState
+          type: string
+          description: "Gets\ror sets Provisioning state of the PublicIP resource\rUpdating/Deleting/Failed"
+        - id: parameters.ipConfiguration.subnet.name
+          type: string
+          description: "Gets name of the\rresource that is unique within a resource group. This name can be used to\raccess the resource"
+        - id: parameters.ipConfiguration.subnet.etag
+          type: string
+          description: "A unique read-only\rstring that changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.subnet.id
+          type: string
+          description: Resource Id
+        - id: parameters.ipConfiguration.publicIPAddress
+          type: object
+          description: "Gets or sets\rthe reference of the PublicIP resource"
+        - id: parameters.ipConfiguration.provisioningState
+          type: string
+          description: "Gets or sets\rProvisioning state of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.ipConfiguration.name
+          type: string
+          description: "Gets name of the resource\rthat is unique within a resource group. This name can be used to access\rthe resource"
+        - id: parameters.ipConfiguration.etag
+          type: string
+          description: "A unique read-only string\rthat changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.id
+          type: string
+          description: Resource Id
+        - id: parameters.dnsSettings
+          type: object
+          description: "Gets or sets FQDN of the DNS\rrecord associated with the public IP address"
+        - id: parameters.dnsSettings.domainNameLabel
+          type: string
+          description: "Gets or sets the\rDomain name label.The concatenation of the domain name label and the\rregionalized DNS zone make up the fully qualified domain name associated\rwith the public IP address. If a domain name label is specified, an A DNS\rrecord is created for the public IP in the Microsoft Azure DNS system."
+        - id: parameters.dnsSettings.fqdn
+          type: string
+          description: "Gets the FQDN, Fully\rqualified domain name of the A DNS record associated with the public IP.\rThis is the concatenation of the domainNameLabel and the regionalized DNS\rzone."
+        - id: parameters.dnsSettings.reverseFqdn
+          type: string
+          description: "Gets or Sests the\rReverse FQDN. A user-visible, fully qualified domain name that resolves to\rthis public IP address. If the reverseFqdn is specified, then a PTR DNS\rrecord is created pointing from the IP address in the in-addr.arpa domain\rto the reverse FQDN."
+        - id: parameters.ipAddress
+          type: string
+        - id: parameters.idleTimeoutInMinutes
+          type: number
+          description: "Gets or sets the\rIdletimeout of the public IP address"
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the PublicIP resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddress} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, publicIpAddressName,
+        parameters, parameters.publicIPAllocationMethod,
+        parameters.publicIPAddressVersion, parameters.ipConfiguration,
+        parameters.ipConfiguration.privateIPAddress,
+        parameters.ipConfiguration.privateIPAllocationMethod,
+        parameters.ipConfiguration.subnet,
+        parameters.ipConfiguration.subnet.addressPrefix,
+        parameters.ipConfiguration.subnet.networkSecurityGroup,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.id,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.location,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
+        parameters.ipConfiguration.subnet.routeTable,
+        parameters.ipConfiguration.subnet.routeTable.routes,
+        parameters.ipConfiguration.subnet.routeTable.subnets,
+        parameters.ipConfiguration.subnet.routeTable.provisioningState,
+        parameters.ipConfiguration.subnet.routeTable.etag,
+        parameters.ipConfiguration.subnet.routeTable.id,
+        parameters.ipConfiguration.subnet.routeTable.location,
+        parameters.ipConfiguration.subnet.routeTable.tags,
+        parameters.ipConfiguration.subnet.ipConfigurations,
+        parameters.ipConfiguration.subnet.provisioningState,
+        parameters.ipConfiguration.subnet.name,
+        parameters.ipConfiguration.subnet.etag,
+        parameters.ipConfiguration.subnet.id,
+        parameters.ipConfiguration.publicIPAddress,
+        parameters.ipConfiguration.provisioningState,
+        parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
+        parameters.ipConfiguration.id, parameters.dnsSettings,
+        parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
+        parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
+        parameters.idleTimeoutInMinutes, parameters.resourceGuid,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      PublicIPAddresses.createOrUpdate(resourceGroupName, publicIpAddressName,
+      parameters, parameters.publicIPAllocationMethod,
+      parameters.publicIPAddressVersion, parameters.ipConfiguration,
+      parameters.ipConfiguration.privateIPAddress,
+      parameters.ipConfiguration.privateIPAllocationMethod,
+      parameters.ipConfiguration.subnet,
+      parameters.ipConfiguration.subnet.addressPrefix,
+      parameters.ipConfiguration.subnet.networkSecurityGroup,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
+      parameters.ipConfiguration.subnet.routeTable,
+      parameters.ipConfiguration.subnet.routeTable.routes,
+      parameters.ipConfiguration.subnet.routeTable.subnets,
+      parameters.ipConfiguration.subnet.routeTable.provisioningState,
+      parameters.ipConfiguration.subnet.routeTable.etag,
+      parameters.ipConfiguration.subnet.routeTable.id,
+      parameters.ipConfiguration.subnet.routeTable.location,
+      parameters.ipConfiguration.subnet.routeTable.tags,
+      parameters.ipConfiguration.subnet.ipConfigurations,
+      parameters.ipConfiguration.subnet.provisioningState,
+      parameters.ipConfiguration.subnet.name,
+      parameters.ipConfiguration.subnet.etag,
+      parameters.ipConfiguration.subnet.id,
+      parameters.ipConfiguration.publicIPAddress,
+      parameters.ipConfiguration.provisioningState,
+      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
+      parameters.ipConfiguration.id, parameters.dnsSettings,
+      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
+      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
+      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'PublicIPAddresses#createOrUpdate~client'
+      - 'PublicIPAddresses#createOrUpdate~callback'
+      - 'PublicIPAddresses#createOrUpdate~options'
+  - uid: 'PublicIPAddresses#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: PublicIPAddresses
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, publicIpAddressName, parameters,
+      parameters.publicIPAllocationMethod, parameters.publicIPAddressVersion,
+      parameters.ipConfiguration, parameters.ipConfiguration.privateIPAddress,
+      parameters.ipConfiguration.privateIPAllocationMethod,
+      parameters.ipConfiguration.subnet,
+      parameters.ipConfiguration.subnet.addressPrefix,
+      parameters.ipConfiguration.subnet.networkSecurityGroup,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
+      parameters.ipConfiguration.subnet.routeTable,
+      parameters.ipConfiguration.subnet.routeTable.routes,
+      parameters.ipConfiguration.subnet.routeTable.subnets,
+      parameters.ipConfiguration.subnet.routeTable.provisioningState,
+      parameters.ipConfiguration.subnet.routeTable.etag,
+      parameters.ipConfiguration.subnet.routeTable.id,
+      parameters.ipConfiguration.subnet.routeTable.location,
+      parameters.ipConfiguration.subnet.routeTable.tags,
+      parameters.ipConfiguration.subnet.ipConfigurations,
+      parameters.ipConfiguration.subnet.provisioningState,
+      parameters.ipConfiguration.subnet.name,
+      parameters.ipConfiguration.subnet.etag,
+      parameters.ipConfiguration.subnet.id,
+      parameters.ipConfiguration.publicIPAddress,
+      parameters.ipConfiguration.provisioningState,
+      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
+      parameters.ipConfiguration.id, parameters.dnsSettings,
+      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
+      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
+      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put PublicIPAddress operation creates/updates a stable/dynamic PublicIP\raddress"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: publicIpAddressName
+          type: string
+          description: The name of the publicIpAddress.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/update\rPublicIPAddress operation"
+        - id: parameters.publicIPAllocationMethod
+          type: string
+          description: "Gets or sets PublicIP\rallocation method (Static/Dynamic). Possible values include: 'Static',\r'Dynamic'"
+        - id: parameters.publicIPAddressVersion
+          type: string
+          description: "Gets or sets PublicIP\raddress version (IPv4/IPv6). Possible values include: 'IPv4', 'IPv6'"
+        - id: parameters.ipConfiguration
+          type: object
+        - id: parameters.ipConfiguration.privateIPAddress
+          type: string
+          description: "Gets or sets\rthe privateIPAddress of the IP Configuration"
+        - id: parameters.ipConfiguration.privateIPAllocationMethod
+          type: string
+          description: "Gets\ror sets PrivateIP allocation method (Static/Dynamic). Possible values\rinclude: 'Static', 'Dynamic'"
+        - id: parameters.ipConfiguration.subnet
+          type: object
+          description: "Gets or sets the\rreference of the subnet resource"
+        - id: parameters.ipConfiguration.subnet.addressPrefix
+          type: string
+          description: "Gets or\rsets Address prefix for the subnet."
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup
+          type: object
+          description: Gets or sets the reference of the NetworkSecurityGroup resource
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules
+          type: array
+          description: Gets or sets Security rules of network security group
+        - id: >-
+            parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules
+          type: array
+          description: Gets or sets Default security rules of network security group
+        - id: >-
+            parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces
+          type: array
+          description: Gets collection of references to Network Interfaces
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.subnets
+          type: array
+          description: "Gets\rcollection of references to subnets"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid
+          type: string
+          description: "Gets\ror sets resource guid property of the network security group resource"
+        - id: >-
+            parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState
+          type: string
+          description: "Gets or sets Provisioning state of the PublicIP resource\rUpdating/Deleting/Failed"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.etag
+          type: string
+          description: "Gets a\runique read-only string that changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.id
+          type: string
+          description: Resource Id
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.location
+          type: string
+          description: "Resource\rlocation"
+        - id: parameters.ipConfiguration.subnet.networkSecurityGroup.tags
+          type: object
+          description: Resource tags
+        - id: parameters.ipConfiguration.subnet.routeTable
+          type: object
+          description: "Gets or sets\rthe reference of the RouteTable resource"
+        - id: parameters.ipConfiguration.subnet.routeTable.routes
+          type: array
+          description: "Gets\ror sets Routes in a Route Table"
+        - id: parameters.ipConfiguration.subnet.routeTable.subnets
+          type: array
+          description: "Gets\rcollection of references to subnets"
+        - id: parameters.ipConfiguration.subnet.routeTable.provisioningState
+          type: string
+          description: "Gets or\rsets Provisioning state of the resource Updating/Deleting/Failed"
+        - id: parameters.ipConfiguration.subnet.routeTable.etag
+          type: string
+          description: "Gets a\runique read-only string that changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.subnet.routeTable.id
+          type: string
+          description: "Resource\rId"
+        - id: parameters.ipConfiguration.subnet.routeTable.location
+          type: string
+          description: Resource location
+        - id: parameters.ipConfiguration.subnet.routeTable.tags
+          type: object
+          description: Resource tags
+        - id: parameters.ipConfiguration.subnet.ipConfigurations
+          type: array
+          description: "Gets\rarray of references to the network interface IP configurations using subnet"
+        - id: parameters.ipConfiguration.subnet.provisioningState
+          type: string
+          description: "Gets\ror sets Provisioning state of the PublicIP resource\rUpdating/Deleting/Failed"
+        - id: parameters.ipConfiguration.subnet.name
+          type: string
+          description: "Gets name of the\rresource that is unique within a resource group. This name can be used to\raccess the resource"
+        - id: parameters.ipConfiguration.subnet.etag
+          type: string
+          description: "A unique read-only\rstring that changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.subnet.id
+          type: string
+          description: Resource Id
+        - id: parameters.ipConfiguration.publicIPAddress
+          type: object
+          description: "Gets or sets\rthe reference of the PublicIP resource"
+        - id: parameters.ipConfiguration.provisioningState
+          type: string
+          description: "Gets or sets\rProvisioning state of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.ipConfiguration.name
+          type: string
+          description: "Gets name of the resource\rthat is unique within a resource group. This name can be used to access\rthe resource"
+        - id: parameters.ipConfiguration.etag
+          type: string
+          description: "A unique read-only string\rthat changes whenever the resource is updated"
+        - id: parameters.ipConfiguration.id
+          type: string
+          description: Resource Id
+        - id: parameters.dnsSettings
+          type: object
+          description: "Gets or sets FQDN of the DNS\rrecord associated with the public IP address"
+        - id: parameters.dnsSettings.domainNameLabel
+          type: string
+          description: "Gets or sets the\rDomain name label.The concatenation of the domain name label and the\rregionalized DNS zone make up the fully qualified domain name associated\rwith the public IP address. If a domain name label is specified, an A DNS\rrecord is created for the public IP in the Microsoft Azure DNS system."
+        - id: parameters.dnsSettings.fqdn
+          type: string
+          description: "Gets the FQDN, Fully\rqualified domain name of the A DNS record associated with the public IP.\rThis is the concatenation of the domainNameLabel and the regionalized DNS\rzone."
+        - id: parameters.dnsSettings.reverseFqdn
+          type: string
+          description: "Gets or Sests the\rReverse FQDN. A user-visible, fully qualified domain name that resolves to\rthis public IP address. If the reverseFqdn is specified, then a PTR DNS\rrecord is created pointing from the IP address in the in-addr.arpa domain\rto the reverse FQDN."
+        - id: parameters.ipAddress
+          type: string
+        - id: parameters.idleTimeoutInMinutes
+          type: number
+          description: "Gets or sets the\rIdletimeout of the public IP address"
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the PublicIP resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddress} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, publicIpAddressName,
+        parameters, parameters.publicIPAllocationMethod,
+        parameters.publicIPAddressVersion, parameters.ipConfiguration,
+        parameters.ipConfiguration.privateIPAddress,
+        parameters.ipConfiguration.privateIPAllocationMethod,
+        parameters.ipConfiguration.subnet,
+        parameters.ipConfiguration.subnet.addressPrefix,
+        parameters.ipConfiguration.subnet.networkSecurityGroup,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.id,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.location,
+        parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
+        parameters.ipConfiguration.subnet.routeTable,
+        parameters.ipConfiguration.subnet.routeTable.routes,
+        parameters.ipConfiguration.subnet.routeTable.subnets,
+        parameters.ipConfiguration.subnet.routeTable.provisioningState,
+        parameters.ipConfiguration.subnet.routeTable.etag,
+        parameters.ipConfiguration.subnet.routeTable.id,
+        parameters.ipConfiguration.subnet.routeTable.location,
+        parameters.ipConfiguration.subnet.routeTable.tags,
+        parameters.ipConfiguration.subnet.ipConfigurations,
+        parameters.ipConfiguration.subnet.provisioningState,
+        parameters.ipConfiguration.subnet.name,
+        parameters.ipConfiguration.subnet.etag,
+        parameters.ipConfiguration.subnet.id,
+        parameters.ipConfiguration.publicIPAddress,
+        parameters.ipConfiguration.provisioningState,
+        parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
+        parameters.ipConfiguration.id, parameters.dnsSettings,
+        parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
+        parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
+        parameters.idleTimeoutInMinutes, parameters.resourceGuid,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      PublicIPAddresses.beginCreateOrUpdate(resourceGroupName,
+      publicIpAddressName, parameters, parameters.publicIPAllocationMethod,
+      parameters.publicIPAddressVersion, parameters.ipConfiguration,
+      parameters.ipConfiguration.privateIPAddress,
+      parameters.ipConfiguration.privateIPAllocationMethod,
+      parameters.ipConfiguration.subnet,
+      parameters.ipConfiguration.subnet.addressPrefix,
+      parameters.ipConfiguration.subnet.networkSecurityGroup,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
+      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
+      parameters.ipConfiguration.subnet.routeTable,
+      parameters.ipConfiguration.subnet.routeTable.routes,
+      parameters.ipConfiguration.subnet.routeTable.subnets,
+      parameters.ipConfiguration.subnet.routeTable.provisioningState,
+      parameters.ipConfiguration.subnet.routeTable.etag,
+      parameters.ipConfiguration.subnet.routeTable.id,
+      parameters.ipConfiguration.subnet.routeTable.location,
+      parameters.ipConfiguration.subnet.routeTable.tags,
+      parameters.ipConfiguration.subnet.ipConfigurations,
+      parameters.ipConfiguration.subnet.provisioningState,
+      parameters.ipConfiguration.subnet.name,
+      parameters.ipConfiguration.subnet.etag,
+      parameters.ipConfiguration.subnet.id,
+      parameters.ipConfiguration.publicIPAddress,
+      parameters.ipConfiguration.provisioningState,
+      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
+      parameters.ipConfiguration.id, parameters.dnsSettings,
+      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
+      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
+      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'PublicIPAddresses#beginCreateOrUpdate~client'
+      - 'PublicIPAddresses#beginCreateOrUpdate~callback'
+      - 'PublicIPAddresses#beginCreateOrUpdate~options'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestUrl'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestUrl'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestUrl'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestUrl'
+      - 'PublicIPAddresses#beginCreateOrUpdate~queryParameters'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestUrl'
+      - 'PublicIPAddresses#beginCreateOrUpdate~regex'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestUrl'
+      - 'PublicIPAddresses#beginCreateOrUpdate~httpRequest'
+      - 'PublicIPAddresses#beginCreateOrUpdate~headerName'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestContent'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestModel'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestModelMapper'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestModel'
+      - 'PublicIPAddresses#beginCreateOrUpdate~requestContent'
+      - 'PublicIPAddresses#beginCreateOrUpdate~serializationError'
+  - uid: 'PublicIPAddresses#listAll'
+    id: listAll
+    parent: PublicIPAddresses
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rsubscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'PublicIPAddresses.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'PublicIPAddresses#listAll~client'
+      - 'PublicIPAddresses#listAll~callback'
+      - 'PublicIPAddresses#listAll~options'
+      - 'PublicIPAddresses#listAll~requestUrl'
+      - 'PublicIPAddresses#listAll~requestUrl'
+      - 'PublicIPAddresses#listAll~queryParameters'
+      - 'PublicIPAddresses#listAll~requestUrl'
+      - 'PublicIPAddresses#listAll~regex'
+      - 'PublicIPAddresses#listAll~requestUrl'
+      - 'PublicIPAddresses#listAll~httpRequest'
+      - 'PublicIPAddresses#listAll~headerName'
+  - uid: 'PublicIPAddresses#list'
+    id: list
+    parent: PublicIPAddresses
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rresource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      PublicIPAddresses.list(resourceGroupName, options, options.customHeaders,
+      callback)
+    children:
+      - 'PublicIPAddresses#list~client'
+      - 'PublicIPAddresses#list~callback'
+      - 'PublicIPAddresses#list~options'
+      - 'PublicIPAddresses#list~requestUrl'
+      - 'PublicIPAddresses#list~requestUrl'
+      - 'PublicIPAddresses#list~requestUrl'
+      - 'PublicIPAddresses#list~queryParameters'
+      - 'PublicIPAddresses#list~requestUrl'
+      - 'PublicIPAddresses#list~regex'
+      - 'PublicIPAddresses#list~requestUrl'
+      - 'PublicIPAddresses#list~httpRequest'
+      - 'PublicIPAddresses#list~headerName'
+  - uid: 'PublicIPAddresses#listAllNext'
+    id: listAllNext
+    parent: PublicIPAddresses
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rsubscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      PublicIPAddresses.listAllNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'PublicIPAddresses#listAllNext~client'
+      - 'PublicIPAddresses#listAllNext~callback'
+      - 'PublicIPAddresses#listAllNext~options'
+      - 'PublicIPAddresses#listAllNext~requestUrl'
+      - 'PublicIPAddresses#listAllNext~requestUrl'
+      - 'PublicIPAddresses#listAllNext~regex'
+      - 'PublicIPAddresses#listAllNext~requestUrl'
+      - 'PublicIPAddresses#listAllNext~httpRequest'
+      - 'PublicIPAddresses#listAllNext~headerName'
+  - uid: 'PublicIPAddresses#listNext'
+    id: listNext
+    parent: PublicIPAddresses
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rresource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      PublicIPAddresses.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'PublicIPAddresses#listNext~client'
+      - 'PublicIPAddresses#listNext~callback'
+      - 'PublicIPAddresses#listNext~options'
+      - 'PublicIPAddresses#listNext~requestUrl'
+      - 'PublicIPAddresses#listNext~requestUrl'
+      - 'PublicIPAddresses#listNext~regex'
+      - 'PublicIPAddresses#listNext~requestUrl'
+      - 'PublicIPAddresses#listNext~httpRequest'
+      - 'PublicIPAddresses#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

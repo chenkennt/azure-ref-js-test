@@ -1,0 +1,212 @@
+items:
+  - uid: ServerOperations~ServerOperations
+    id: ServerOperations
+    parent: ServerOperations
+    name: ServerOperations
+    type: Class
+    syntax:
+      content: ServerOperations
+    fullName: ServerOperations.ServerOperations
+    children:
+      - 'ServerOperations~ServerOperations#client'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword'
+      - 'ServerOperations~ServerOperations#create'
+      - 'ServerOperations~ServerOperations#deleteMethod'
+      - 'ServerOperations~ServerOperations#list'
+  - uid: 'ServerOperations~ServerOperations#client'
+    id: client
+    parent: ServerOperations~ServerOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ServerOperations~ServerOperations.client
+  - uid: 'ServerOperations~ServerOperations#changeAdministratorPassword'
+    id: changeAdministratorPassword
+    parent: ServerOperations~ServerOperations
+    name: >-
+      changeAdministratorPassword(serverName, parameters,
+      parameters.newPassword, callback)
+    summary: "Changes the administrative password of an existing Azure SQL Database\rServer for a given subscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server that\rwill have the administrator password changed."
+        - id: parameters
+          type: ServerChangeAdministratorPasswordParameters
+          description: "The\rnecessary parameters for modifying the adminstrator password for a server."
+        - id: parameters.newPassword
+          type: string
+          description: "Gets or sets the new password for\rthe administrator."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function changeAdministratorPassword(serverName, parameters,
+        parameters.newPassword, callback);
+    fullName: >-
+      ServerOperations~ServerOperations.changeAdministratorPassword(serverName,
+      parameters, parameters.newPassword, callback)
+    children:
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - >-
+        ServerOperations~ServerOperations#changeAdministratorPassword~queryParameters
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~baseUrl'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~baseUrl'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~url2'
+      - >-
+        ServerOperations~ServerOperations#changeAdministratorPassword~httpRequest
+      - >-
+        ServerOperations~ServerOperations#changeAdministratorPassword~requestContent
+      - 'ServerOperations~ServerOperations#changeAdministratorPassword~requestDoc'
+      - >-
+        ServerOperations~ServerOperations#changeAdministratorPassword~administratorLoginPasswordElement
+      - >-
+        ServerOperations~ServerOperations#changeAdministratorPassword~requestContent
+  - uid: 'ServerOperations~ServerOperations#create'
+    id: create
+    parent: ServerOperations~ServerOperations
+    name: >-
+      create(parameters, parameters.administratorUserName,
+      parameters.administratorPassword, parameters.location, parameters.version,
+      callback)
+    summary: Provisions a new SQL Database server in a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: ServerCreateParameters
+          description: "The parameters needed to\rprovision a server."
+        - id: parameters.administratorUserName
+          type: string
+          description: "Gets or sets the\radministrator username that will be used for the new server."
+        - id: parameters.administratorPassword
+          type: string
+          description: "Gets or sets the\radministrator password for the new server."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the region in which this\rserver will be created.  See\rhttp://azure.microsoft.com/en-us/regions/#services for a list of all the\ravailable regions."
+        - id: parameters.version
+          type: string
+          description: "Gets or sets the version of server to\rcreate.  Valid values are: 1.0, 2.0."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.administratorUserName,
+        parameters.administratorPassword, parameters.location,
+        parameters.version, callback);
+    fullName: >-
+      ServerOperations~ServerOperations.create(parameters,
+      parameters.administratorUserName, parameters.administratorPassword,
+      parameters.location, parameters.version, callback)
+    children:
+      - 'ServerOperations~ServerOperations#create~url2'
+      - 'ServerOperations~ServerOperations#create~url2'
+      - 'ServerOperations~ServerOperations#create~url2'
+      - 'ServerOperations~ServerOperations#create~url2'
+      - 'ServerOperations~ServerOperations#create~baseUrl'
+      - 'ServerOperations~ServerOperations#create~baseUrl'
+      - 'ServerOperations~ServerOperations#create~url2'
+      - 'ServerOperations~ServerOperations#create~url2'
+      - 'ServerOperations~ServerOperations#create~url2'
+      - 'ServerOperations~ServerOperations#create~httpRequest'
+      - 'ServerOperations~ServerOperations#create~requestContent'
+      - 'ServerOperations~ServerOperations#create~requestDoc'
+      - 'ServerOperations~ServerOperations#create~serverElement'
+      - 'ServerOperations~ServerOperations#create~administratorLoginElement'
+      - >-
+        ServerOperations~ServerOperations#create~administratorLoginPasswordElement
+      - 'ServerOperations~ServerOperations#create~locationElement'
+      - 'ServerOperations~ServerOperations#create~versionElement'
+      - 'ServerOperations~ServerOperations#create~requestContent'
+  - uid: 'ServerOperations~ServerOperations#deleteMethod'
+    id: deleteMethod
+    parent: ServerOperations~ServerOperations
+    name: 'deleteMethod(serverName, callback)'
+    summary: Deletes the specified Azure SQL Database Server from a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server to be\rdeleted."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(serverName, callback);'
+    fullName: 'ServerOperations~ServerOperations.deleteMethod(serverName, callback)'
+    children:
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~baseUrl'
+      - 'ServerOperations~ServerOperations#deleteMethod~baseUrl'
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~url2'
+      - 'ServerOperations~ServerOperations#deleteMethod~httpRequest'
+  - uid: 'ServerOperations~ServerOperations#list'
+    id: list
+    parent: ServerOperations~ServerOperations
+    name: list(callback)
+    summary: Returns all SQL Database Servers that are provisioned for a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: ServerOperations~ServerOperations.list(callback)
+    children:
+      - 'ServerOperations~ServerOperations#list~url2'
+      - 'ServerOperations~ServerOperations#list~url2'
+      - 'ServerOperations~ServerOperations#list~url2'
+      - 'ServerOperations~ServerOperations#list~url2'
+      - 'ServerOperations~ServerOperations#list~baseUrl'
+      - 'ServerOperations~ServerOperations#list~baseUrl'
+      - 'ServerOperations~ServerOperations#list~url2'
+      - 'ServerOperations~ServerOperations#list~url2'
+      - 'ServerOperations~ServerOperations#list~url2'
+      - 'ServerOperations~ServerOperations#list~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: ServerChangeAdministratorPasswordParameters
+    name: ServerChangeAdministratorPasswordParameters
+    fullName: ServerChangeAdministratorPasswordParameters
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: ServerCreateParameters
+    name: ServerCreateParameters
+    fullName: ServerCreateParameters
+    isExternal: true

@@ -1,0 +1,514 @@
+items:
+  - uid: Profiles
+    id: Profiles
+    name: Profiles
+    type: Class
+    syntax:
+      content: Profiles
+    fullName: Profiles
+    children:
+      - 'Profiles#client'
+      - 'Profiles#listBySubscriptionId'
+      - 'Profiles#listByResourceGroup'
+      - 'Profiles#get'
+      - 'Profiles#create'
+      - 'Profiles#beginCreate'
+      - 'Profiles#update'
+      - 'Profiles#beginUpdate'
+      - 'Profiles#deleteIfExists'
+      - 'Profiles#beginDeleteIfExists'
+      - 'Profiles#generateSsoUri'
+  - uid: 'Profiles#client'
+    id: client
+    parent: Profiles
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Profiles.client
+  - uid: 'Profiles#listBySubscriptionId'
+    id: listBySubscriptionId
+    parent: Profiles
+    name: 'listBySubscriptionId(options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ProfileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listBySubscriptionId(options, options.customHeaders, callback);'
+    fullName: 'Profiles.listBySubscriptionId(options, options.customHeaders, callback)'
+    children:
+      - 'Profiles#listBySubscriptionId~client'
+      - 'Profiles#listBySubscriptionId~callback'
+      - 'Profiles#listBySubscriptionId~options'
+      - 'Profiles#listBySubscriptionId~requestUrl'
+      - 'Profiles#listBySubscriptionId~requestUrl'
+      - 'Profiles#listBySubscriptionId~queryParameters'
+      - 'Profiles#listBySubscriptionId~requestUrl'
+      - 'Profiles#listBySubscriptionId~regex'
+      - 'Profiles#listBySubscriptionId~requestUrl'
+      - 'Profiles#listBySubscriptionId~httpRequest'
+      - 'Profiles#listBySubscriptionId~headerName'
+  - uid: 'Profiles#listByResourceGroup'
+    id: listByResourceGroup
+    parent: Profiles
+    name: >-
+      listByResourceGroup(resourceGroupName, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ProfileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByResourceGroup(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Profiles.listByResourceGroup(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#listByResourceGroup~client'
+      - 'Profiles#listByResourceGroup~callback'
+      - 'Profiles#listByResourceGroup~options'
+      - 'Profiles#listByResourceGroup~requestUrl'
+      - 'Profiles#listByResourceGroup~requestUrl'
+      - 'Profiles#listByResourceGroup~requestUrl'
+      - 'Profiles#listByResourceGroup~queryParameters'
+      - 'Profiles#listByResourceGroup~requestUrl'
+      - 'Profiles#listByResourceGroup~regex'
+      - 'Profiles#listByResourceGroup~requestUrl'
+      - 'Profiles#listByResourceGroup~httpRequest'
+      - 'Profiles#listByResourceGroup~headerName'
+  - uid: 'Profiles#get'
+    id: get
+    parent: Profiles
+    name: >-
+      get(profileName, resourceGroupName, options, options.customHeaders,
+      callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Profiles.get(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#get~client'
+      - 'Profiles#get~callback'
+      - 'Profiles#get~options'
+      - 'Profiles#get~requestUrl'
+      - 'Profiles#get~requestUrl'
+      - 'Profiles#get~requestUrl'
+      - 'Profiles#get~requestUrl'
+      - 'Profiles#get~queryParameters'
+      - 'Profiles#get~requestUrl'
+      - 'Profiles#get~regex'
+      - 'Profiles#get~requestUrl'
+      - 'Profiles#get~httpRequest'
+      - 'Profiles#get~headerName'
+  - uid: 'Profiles#create'
+    id: create
+    parent: Profiles
+    name: >-
+      create(profileName, profileProperties, profileProperties.location,
+      profileProperties.tags, profileProperties.sku, profileProperties.sku.name,
+      resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: profileProperties
+          type: object
+          description: Profile properties needed for creation.
+        - id: profileProperties.location
+          type: string
+          description: Profile location
+        - id: profileProperties.tags
+          type: object
+          description: Profile tags
+        - id: profileProperties.sku
+          type: object
+          description: "The SKU (pricing tier) of the CDN\rprofile."
+        - id: profileProperties.sku.name
+          type: string
+          description: "Name of the pricing tier.\rPossible values include: 'Standard_Verizon', 'Premium_Verizon',\r'Custom_Verizon', 'Standard_Akamai'"
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(profileName, profileProperties,
+        profileProperties.location, profileProperties.tags,
+        profileProperties.sku, profileProperties.sku.name, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Profiles.create(profileName, profileProperties,
+      profileProperties.location, profileProperties.tags, profileProperties.sku,
+      profileProperties.sku.name, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#create~client'
+      - 'Profiles#create~callback'
+      - 'Profiles#create~options'
+  - uid: 'Profiles#beginCreate'
+    id: beginCreate
+    parent: Profiles
+    name: >-
+      beginCreate(profileName, profileProperties, profileProperties.location,
+      profileProperties.tags, profileProperties.sku, profileProperties.sku.name,
+      resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: profileProperties
+          type: object
+          description: Profile properties needed for creation.
+        - id: profileProperties.location
+          type: string
+          description: Profile location
+        - id: profileProperties.tags
+          type: object
+          description: Profile tags
+        - id: profileProperties.sku
+          type: object
+          description: "The SKU (pricing tier) of the CDN\rprofile."
+        - id: profileProperties.sku.name
+          type: string
+          description: "Name of the pricing tier.\rPossible values include: 'Standard_Verizon', 'Premium_Verizon',\r'Custom_Verizon', 'Standard_Akamai'"
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(profileName, profileProperties,
+        profileProperties.location, profileProperties.tags,
+        profileProperties.sku, profileProperties.sku.name, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Profiles.beginCreate(profileName, profileProperties,
+      profileProperties.location, profileProperties.tags, profileProperties.sku,
+      profileProperties.sku.name, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#beginCreate~client'
+      - 'Profiles#beginCreate~callback'
+      - 'Profiles#beginCreate~options'
+      - 'Profiles#beginCreate~requestUrl'
+      - 'Profiles#beginCreate~requestUrl'
+      - 'Profiles#beginCreate~requestUrl'
+      - 'Profiles#beginCreate~requestUrl'
+      - 'Profiles#beginCreate~queryParameters'
+      - 'Profiles#beginCreate~requestUrl'
+      - 'Profiles#beginCreate~regex'
+      - 'Profiles#beginCreate~requestUrl'
+      - 'Profiles#beginCreate~httpRequest'
+      - 'Profiles#beginCreate~headerName'
+      - 'Profiles#beginCreate~requestContent'
+      - 'Profiles#beginCreate~requestModel'
+      - 'Profiles#beginCreate~requestModelMapper'
+      - 'Profiles#beginCreate~requestModel'
+      - 'Profiles#beginCreate~requestContent'
+      - 'Profiles#beginCreate~serializationError'
+  - uid: 'Profiles#update'
+    id: update
+    parent: Profiles
+    name: >-
+      update(profileName, resourceGroupName, tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: tags
+          type: object
+          description: Profile tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(profileName, resourceGroupName, tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Profiles.update(profileName, resourceGroupName, tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#update~client'
+      - 'Profiles#update~callback'
+      - 'Profiles#update~options'
+  - uid: 'Profiles#beginUpdate'
+    id: beginUpdate
+    parent: Profiles
+    name: >-
+      beginUpdate(profileName, resourceGroupName, tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: tags
+          type: object
+          description: Profile tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginUpdate(profileName, resourceGroupName, tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Profiles.beginUpdate(profileName, resourceGroupName, tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#beginUpdate~client'
+      - 'Profiles#beginUpdate~callback'
+      - 'Profiles#beginUpdate~options'
+      - 'Profiles#beginUpdate~valueElement'
+      - 'Profiles#beginUpdate~profileProperties'
+      - 'Profiles#beginUpdate~profileProperties'
+      - 'Profiles#beginUpdate~requestUrl'
+      - 'Profiles#beginUpdate~requestUrl'
+      - 'Profiles#beginUpdate~requestUrl'
+      - 'Profiles#beginUpdate~requestUrl'
+      - 'Profiles#beginUpdate~queryParameters'
+      - 'Profiles#beginUpdate~requestUrl'
+      - 'Profiles#beginUpdate~regex'
+      - 'Profiles#beginUpdate~requestUrl'
+      - 'Profiles#beginUpdate~httpRequest'
+      - 'Profiles#beginUpdate~headerName'
+      - 'Profiles#beginUpdate~requestContent'
+      - 'Profiles#beginUpdate~requestModel'
+      - 'Profiles#beginUpdate~requestModelMapper'
+      - 'Profiles#beginUpdate~requestModel'
+      - 'Profiles#beginUpdate~requestContent'
+      - 'Profiles#beginUpdate~serializationError'
+  - uid: 'Profiles#deleteIfExists'
+    id: deleteIfExists
+    parent: Profiles
+    name: >-
+      deleteIfExists(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteIfExists(profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Profiles.deleteIfExists(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#deleteIfExists~client'
+      - 'Profiles#deleteIfExists~callback'
+      - 'Profiles#deleteIfExists~options'
+  - uid: 'Profiles#beginDeleteIfExists'
+    id: beginDeleteIfExists
+    parent: Profiles
+    name: >-
+      beginDeleteIfExists(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteIfExists(profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Profiles.beginDeleteIfExists(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#beginDeleteIfExists~client'
+      - 'Profiles#beginDeleteIfExists~callback'
+      - 'Profiles#beginDeleteIfExists~options'
+      - 'Profiles#beginDeleteIfExists~requestUrl'
+      - 'Profiles#beginDeleteIfExists~requestUrl'
+      - 'Profiles#beginDeleteIfExists~requestUrl'
+      - 'Profiles#beginDeleteIfExists~requestUrl'
+      - 'Profiles#beginDeleteIfExists~queryParameters'
+      - 'Profiles#beginDeleteIfExists~requestUrl'
+      - 'Profiles#beginDeleteIfExists~regex'
+      - 'Profiles#beginDeleteIfExists~requestUrl'
+      - 'Profiles#beginDeleteIfExists~httpRequest'
+      - 'Profiles#beginDeleteIfExists~headerName'
+  - uid: 'Profiles#generateSsoUri'
+    id: generateSsoUri
+    parent: Profiles
+    name: >-
+      generateSsoUri(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SsoUri} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function generateSsoUri(profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Profiles.generateSsoUri(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Profiles#generateSsoUri~client'
+      - 'Profiles#generateSsoUri~callback'
+      - 'Profiles#generateSsoUri~options'
+      - 'Profiles#generateSsoUri~requestUrl'
+      - 'Profiles#generateSsoUri~requestUrl'
+      - 'Profiles#generateSsoUri~requestUrl'
+      - 'Profiles#generateSsoUri~requestUrl'
+      - 'Profiles#generateSsoUri~queryParameters'
+      - 'Profiles#generateSsoUri~requestUrl'
+      - 'Profiles#generateSsoUri~regex'
+      - 'Profiles#generateSsoUri~requestUrl'
+      - 'Profiles#generateSsoUri~httpRequest'
+      - 'Profiles#generateSsoUri~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false

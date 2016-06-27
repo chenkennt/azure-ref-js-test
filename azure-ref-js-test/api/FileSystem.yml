@@ -1,0 +1,1069 @@
+items:
+  - uid: FileSystem
+    id: FileSystem
+    name: FileSystem
+    type: Class
+    syntax:
+      content: FileSystem
+    fullName: FileSystem
+    children:
+      - 'FileSystem#client'
+      - 'FileSystem#concurrentAppend'
+      - 'FileSystem#checkAccess'
+      - 'FileSystem#mkdirs'
+      - 'FileSystem#concat'
+      - 'FileSystem#msConcat'
+      - 'FileSystem#listFileStatus'
+      - 'FileSystem#getContentSummary'
+      - 'FileSystem#getFileStatus'
+      - 'FileSystem#append'
+      - 'FileSystem#create'
+      - 'FileSystem#open'
+      - 'FileSystem#setAcl'
+      - 'FileSystem#modifyAclEntries'
+      - 'FileSystem#removeAclEntries'
+      - 'FileSystem#getAclStatus'
+      - 'FileSystem#deleteMethod'
+      - 'FileSystem#rename'
+      - 'FileSystem#setOwner'
+      - 'FileSystem#setPermission'
+  - uid: 'FileSystem#client'
+    id: client
+    parent: FileSystem
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: FileSystem.client
+  - uid: 'FileSystem#concurrentAppend'
+    id: concurrentAppend
+    parent: FileSystem
+    name: >-
+      concurrentAppend(accountName, filePath, streamContents, options,
+      options.appendMode, options.customHeaders, callback)
+    summary: "Appends to the specified file. This method supports multiple concurrent\rappends to the file. NOTE: Concurrent append and normal (serial) append\rCANNOT be used interchangeably. Once a file has been appended to using\reither append option, it can only be appended to using that append option."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: filePath
+          type: string
+          description: "The Data Lake Store path (starting with '/') of\rthe file to which to append using concurrent append."
+        - id: streamContents
+          type: object
+          description: "The file contents to include when appending\rto the file."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.appendMode
+          type: string
+          description: "Indicates the concurrent append call\rshould create the file if it doesn't exist or just open the existing file\rfor append. Possible values include: 'autocreate'"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function concurrentAppend(accountName, filePath, streamContents,
+        options, options.appendMode, options.customHeaders, callback);
+    fullName: >-
+      FileSystem.concurrentAppend(accountName, filePath, streamContents,
+      options, options.appendMode, options.customHeaders, callback)
+    children:
+      - 'FileSystem#concurrentAppend~client'
+      - 'FileSystem#concurrentAppend~callback'
+      - 'FileSystem#concurrentAppend~options'
+      - 'FileSystem#concurrentAppend~appendMode'
+      - 'FileSystem#concurrentAppend~op'
+      - 'FileSystem#concurrentAppend~transferEncoding'
+      - 'FileSystem#concurrentAppend~allowedValues'
+      - 'FileSystem#concurrentAppend~requestUrl'
+      - 'FileSystem#concurrentAppend~requestUrl'
+      - 'FileSystem#concurrentAppend~requestUrl'
+      - 'FileSystem#concurrentAppend~requestUrl'
+      - 'FileSystem#concurrentAppend~queryParameters'
+      - 'FileSystem#concurrentAppend~requestUrl'
+      - 'FileSystem#concurrentAppend~regex'
+      - 'FileSystem#concurrentAppend~requestUrl'
+      - 'FileSystem#concurrentAppend~httpRequest'
+      - 'FileSystem#concurrentAppend~headerName'
+      - 'FileSystem#concurrentAppend~requestContent'
+  - uid: 'FileSystem#checkAccess'
+    id: checkAccess
+    parent: FileSystem
+    name: >-
+      checkAccess(accountName, path, options, options.fsaction,
+      options.customHeaders, callback)
+    summary: Checks if the specified access is available at the given path.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: path
+          type: string
+          description: "The Data Lake Store path (starting with '/') of the\rfile or directory for which to check access."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.fsaction
+          type: string
+          description: "File system operation read/write/execute\rin string form, matching regex pattern '[rwx-]{3}'"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function checkAccess(accountName, path, options, options.fsaction,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.checkAccess(accountName, path, options, options.fsaction,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#checkAccess~client'
+      - 'FileSystem#checkAccess~callback'
+      - 'FileSystem#checkAccess~options'
+      - 'FileSystem#checkAccess~fsaction'
+      - 'FileSystem#checkAccess~op'
+      - 'FileSystem#checkAccess~requestUrl'
+      - 'FileSystem#checkAccess~requestUrl'
+      - 'FileSystem#checkAccess~requestUrl'
+      - 'FileSystem#checkAccess~requestUrl'
+      - 'FileSystem#checkAccess~queryParameters'
+      - 'FileSystem#checkAccess~requestUrl'
+      - 'FileSystem#checkAccess~regex'
+      - 'FileSystem#checkAccess~requestUrl'
+      - 'FileSystem#checkAccess~httpRequest'
+      - 'FileSystem#checkAccess~headerName'
+  - uid: 'FileSystem#mkdirs'
+    id: mkdirs
+    parent: FileSystem
+    name: 'mkdirs(accountName, path, options, options.customHeaders, callback)'
+    summary: Creates a directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: path
+          type: string
+          description: "The Data Lake Store path (starting with '/') of the\rdirectory to create."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileOperationResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function mkdirs(accountName, path, options, options.customHeaders,
+        callback);
+    fullName: >-
+      FileSystem.mkdirs(accountName, path, options, options.customHeaders,
+      callback)
+    children:
+      - 'FileSystem#mkdirs~client'
+      - 'FileSystem#mkdirs~callback'
+      - 'FileSystem#mkdirs~options'
+      - 'FileSystem#mkdirs~op'
+      - 'FileSystem#mkdirs~requestUrl'
+      - 'FileSystem#mkdirs~requestUrl'
+      - 'FileSystem#mkdirs~requestUrl'
+      - 'FileSystem#mkdirs~requestUrl'
+      - 'FileSystem#mkdirs~queryParameters'
+      - 'FileSystem#mkdirs~requestUrl'
+      - 'FileSystem#mkdirs~regex'
+      - 'FileSystem#mkdirs~requestUrl'
+      - 'FileSystem#mkdirs~httpRequest'
+      - 'FileSystem#mkdirs~headerName'
+  - uid: 'FileSystem#concat'
+    id: concat
+    parent: FileSystem
+    name: >-
+      concat(accountName, destinationPath, sources, options,
+      options.customHeaders, callback)
+    summary: "Concatenates the list of source files into the destination file, removing\rall source files upon success."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: destinationPath
+          type: string
+          description: "The Data Lake Store path (starting with\r'/') of the destination file resulting from the concatenation."
+        - id: sources
+          type: array
+          description: "A list of comma seperated Data Lake Store paths\r(starting with '/') of the files to concatenate, in the order in which\rthey should be concatenated."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function concat(accountName, destinationPath, sources, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.concat(accountName, destinationPath, sources, options,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#concat~client'
+      - 'FileSystem#concat~callback'
+      - 'FileSystem#concat~options'
+      - 'FileSystem#concat~op'
+      - 'FileSystem#concat~i'
+      - 'FileSystem#concat~requestUrl'
+      - 'FileSystem#concat~requestUrl'
+      - 'FileSystem#concat~requestUrl'
+      - 'FileSystem#concat~requestUrl'
+      - 'FileSystem#concat~queryParameters'
+      - 'FileSystem#concat~requestUrl'
+      - 'FileSystem#concat~regex'
+      - 'FileSystem#concat~requestUrl'
+      - 'FileSystem#concat~httpRequest'
+      - 'FileSystem#concat~headerName'
+  - uid: 'FileSystem#msConcat'
+    id: msConcat
+    parent: FileSystem
+    name: >-
+      msConcat(accountName, msConcatDestinationPath, streamContents, options,
+      options.deleteSourceDirectory, options.customHeaders, callback)
+    summary: "Concatenates the list of source files into the destination file, deleting\rall source files upon success. This method accepts more source file paths\rthan the Concat method. This method and the parameters it accepts are\rsubject to change for usability in an upcoming version."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: msConcatDestinationPath
+          type: string
+          description: "The Data Lake Store path (starting\rwith '/') of the destination file resulting from the concatenation."
+        - id: streamContents
+          type: object
+          description: "A list of Data Lake Store paths (starting\rwith '/') of the source files. Must be in the format: sources=<comma\rseparated list>"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.deleteSourceDirectory
+          type: boolean
+          description: "Indicates that as an\roptimization instead of deleting each individual source stream, delete the\rsource stream folder if all streams are in the same folder instead. This\rresults in a substantial performance improvement when the only streams in\rthe folder are part of the concatenation operation. WARNING: This includes\rthe deletion of any other files that are not source files. Only set this\rto true when source files are the only files in the source directory."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function msConcat(accountName, msConcatDestinationPath, streamContents,
+        options, options.deleteSourceDirectory, options.customHeaders,
+        callback);
+    fullName: >-
+      FileSystem.msConcat(accountName, msConcatDestinationPath, streamContents,
+      options, options.deleteSourceDirectory, options.customHeaders, callback)
+    children:
+      - 'FileSystem#msConcat~client'
+      - 'FileSystem#msConcat~callback'
+      - 'FileSystem#msConcat~options'
+      - 'FileSystem#msConcat~deleteSourceDirectory'
+      - 'FileSystem#msConcat~op'
+      - 'FileSystem#msConcat~requestUrl'
+      - 'FileSystem#msConcat~requestUrl'
+      - 'FileSystem#msConcat~requestUrl'
+      - 'FileSystem#msConcat~requestUrl'
+      - 'FileSystem#msConcat~queryParameters'
+      - 'FileSystem#msConcat~requestUrl'
+      - 'FileSystem#msConcat~regex'
+      - 'FileSystem#msConcat~requestUrl'
+      - 'FileSystem#msConcat~httpRequest'
+      - 'FileSystem#msConcat~headerName'
+      - 'FileSystem#msConcat~requestContent'
+  - uid: 'FileSystem#listFileStatus'
+    id: listFileStatus
+    parent: FileSystem
+    name: >-
+      listFileStatus(accountName, listFilePath, options, options.listSize,
+      options.listAfter, options.listBefore, options.customHeaders, callback)
+    summary: "Get the list of file status objects specified by the file path, with\roptional pagination parameters"
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: listFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/')\rof the directory to list."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.listSize
+          type: number
+          description: "Gets or sets the number of items to\rreturn. Optional."
+        - id: options.listAfter
+          type: string
+          description: "Gets or sets the item or lexographical\rindex after which to begin returning results. For example, a file list of\r'a','b','d' and listAfter='b' will return 'd', and a listAfter='c' will\ralso return 'd'. Optional."
+        - id: options.listBefore
+          type: string
+          description: "Gets or sets the item or lexographical\rindex before which to begin returning results. For example, a file list of\r'a','b','d' and listBefore='d' will return 'a','b', and a listBefore='c'\rwill also return 'a','b'. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileStatusesResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listFileStatus(accountName, listFilePath, options,
+        options.listSize, options.listAfter, options.listBefore,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.listFileStatus(accountName, listFilePath, options,
+      options.listSize, options.listAfter, options.listBefore,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#listFileStatus~client'
+      - 'FileSystem#listFileStatus~callback'
+      - 'FileSystem#listFileStatus~options'
+      - 'FileSystem#listFileStatus~listSize'
+      - 'FileSystem#listFileStatus~listAfter'
+      - 'FileSystem#listFileStatus~listBefore'
+      - 'FileSystem#listFileStatus~op'
+      - 'FileSystem#listFileStatus~requestUrl'
+      - 'FileSystem#listFileStatus~requestUrl'
+      - 'FileSystem#listFileStatus~requestUrl'
+      - 'FileSystem#listFileStatus~requestUrl'
+      - 'FileSystem#listFileStatus~queryParameters'
+      - 'FileSystem#listFileStatus~requestUrl'
+      - 'FileSystem#listFileStatus~regex'
+      - 'FileSystem#listFileStatus~requestUrl'
+      - 'FileSystem#listFileStatus~httpRequest'
+      - 'FileSystem#listFileStatus~headerName'
+  - uid: 'FileSystem#getContentSummary'
+    id: getContentSummary
+    parent: FileSystem
+    name: >-
+      getContentSummary(accountName, getContentSummaryFilePath, options,
+      options.customHeaders, callback)
+    summary: Gets the file content summary object specified by the file path.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: getContentSummaryFilePath
+          type: string
+          description: "The Data Lake Store path\r(starting with '/') of the file for which to retrieve the summary."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContentSummaryResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getContentSummary(accountName, getContentSummaryFilePath,
+        options, options.customHeaders, callback);
+    fullName: >-
+      FileSystem.getContentSummary(accountName, getContentSummaryFilePath,
+      options, options.customHeaders, callback)
+    children:
+      - 'FileSystem#getContentSummary~client'
+      - 'FileSystem#getContentSummary~callback'
+      - 'FileSystem#getContentSummary~options'
+      - 'FileSystem#getContentSummary~op'
+      - 'FileSystem#getContentSummary~requestUrl'
+      - 'FileSystem#getContentSummary~requestUrl'
+      - 'FileSystem#getContentSummary~requestUrl'
+      - 'FileSystem#getContentSummary~requestUrl'
+      - 'FileSystem#getContentSummary~queryParameters'
+      - 'FileSystem#getContentSummary~requestUrl'
+      - 'FileSystem#getContentSummary~regex'
+      - 'FileSystem#getContentSummary~requestUrl'
+      - 'FileSystem#getContentSummary~httpRequest'
+      - 'FileSystem#getContentSummary~headerName'
+  - uid: 'FileSystem#getFileStatus'
+    id: getFileStatus
+    parent: FileSystem
+    name: >-
+      getFileStatus(accountName, getFilePath, options, options.customHeaders,
+      callback)
+    summary: Get the file status object specified by the file path.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: getFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/') of\rthe file or directory for which to retrieve the status."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileStatusResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getFileStatus(accountName, getFilePath, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.getFileStatus(accountName, getFilePath, options,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#getFileStatus~client'
+      - 'FileSystem#getFileStatus~callback'
+      - 'FileSystem#getFileStatus~options'
+      - 'FileSystem#getFileStatus~op'
+      - 'FileSystem#getFileStatus~requestUrl'
+      - 'FileSystem#getFileStatus~requestUrl'
+      - 'FileSystem#getFileStatus~requestUrl'
+      - 'FileSystem#getFileStatus~requestUrl'
+      - 'FileSystem#getFileStatus~queryParameters'
+      - 'FileSystem#getFileStatus~requestUrl'
+      - 'FileSystem#getFileStatus~regex'
+      - 'FileSystem#getFileStatus~requestUrl'
+      - 'FileSystem#getFileStatus~httpRequest'
+      - 'FileSystem#getFileStatus~headerName'
+  - uid: 'FileSystem#append'
+    id: append
+    parent: FileSystem
+    name: >-
+      append(accountName, directFilePath, streamContents, options,
+      options.customHeaders, callback)
+    summary: "Appends to the specified file. This method does not support multiple\rconcurrent appends to the file. NOTE: Concurrent append and normal\r(serial) append CANNOT be used interchangeably. Once a file has been\rappended to using either append option, it can only be appended to using\rthat append option. Use the ConcurrentAppend option if you would like\rsupport for concurrent appends."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: directFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/')\rof the file to which to append."
+        - id: streamContents
+          type: object
+          description: "The file contents to include when appending\rto the file."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function append(accountName, directFilePath, streamContents, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.append(accountName, directFilePath, streamContents, options,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#append~client'
+      - 'FileSystem#append~callback'
+      - 'FileSystem#append~options'
+      - 'FileSystem#append~op'
+      - 'FileSystem#append~append'
+      - 'FileSystem#append~transferEncoding'
+      - 'FileSystem#append~requestUrl'
+      - 'FileSystem#append~requestUrl'
+      - 'FileSystem#append~requestUrl'
+      - 'FileSystem#append~requestUrl'
+      - 'FileSystem#append~queryParameters'
+      - 'FileSystem#append~requestUrl'
+      - 'FileSystem#append~regex'
+      - 'FileSystem#append~requestUrl'
+      - 'FileSystem#append~httpRequest'
+      - 'FileSystem#append~headerName'
+      - 'FileSystem#append~requestContent'
+  - uid: 'FileSystem#create'
+    id: create
+    parent: FileSystem
+    name: >-
+      create(accountName, directFilePath, options, options.streamContents,
+      options.overwrite, options.customHeaders, callback)
+    summary: Creates a file with optionally specified content.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: directFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/')\rof the file to create."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.streamContents
+          type: object
+          description: "The file contents to include when\rcreating the file. This parameter is optional, resulting in an empty file\rif not specified."
+        - id: options.overwrite
+          type: boolean
+          description: "The indication of if the file should\rbe overwritten."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(accountName, directFilePath, options,
+        options.streamContents, options.overwrite, options.customHeaders,
+        callback);
+    fullName: >-
+      FileSystem.create(accountName, directFilePath, options,
+      options.streamContents, options.overwrite, options.customHeaders,
+      callback)
+    children:
+      - 'FileSystem#create~client'
+      - 'FileSystem#create~callback'
+      - 'FileSystem#create~options'
+      - 'FileSystem#create~streamContents'
+      - 'FileSystem#create~overwrite'
+      - 'FileSystem#create~op'
+      - 'FileSystem#create~write'
+      - 'FileSystem#create~transferEncoding'
+      - 'FileSystem#create~requestUrl'
+      - 'FileSystem#create~requestUrl'
+      - 'FileSystem#create~requestUrl'
+      - 'FileSystem#create~requestUrl'
+      - 'FileSystem#create~queryParameters'
+      - 'FileSystem#create~requestUrl'
+      - 'FileSystem#create~regex'
+      - 'FileSystem#create~requestUrl'
+      - 'FileSystem#create~httpRequest'
+      - 'FileSystem#create~headerName'
+      - 'FileSystem#create~requestContent'
+  - uid: 'FileSystem#open'
+    id: open
+    parent: FileSystem
+    name: >-
+      open(accountName, directFilePath, options, options.length, options.offset,
+      options.customHeaders, callback)
+    summary: Opens and reads from the specified file.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: directFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/')\rof the file to open."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.length
+          type: number
+        - id: options.offset
+          type: number
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function open(accountName, directFilePath, options, options.length,
+        options.offset, options.customHeaders, callback);
+    fullName: >-
+      FileSystem.open(accountName, directFilePath, options, options.length,
+      options.offset, options.customHeaders, callback)
+    children:
+      - 'FileSystem#open~client'
+      - 'FileSystem#open~callback'
+      - 'FileSystem#open~options'
+      - 'FileSystem#open~length'
+      - 'FileSystem#open~offset'
+      - 'FileSystem#open~op'
+      - 'FileSystem#open~read'
+      - 'FileSystem#open~requestUrl'
+      - 'FileSystem#open~requestUrl'
+      - 'FileSystem#open~requestUrl'
+      - 'FileSystem#open~requestUrl'
+      - 'FileSystem#open~queryParameters'
+      - 'FileSystem#open~requestUrl'
+      - 'FileSystem#open~regex'
+      - 'FileSystem#open~requestUrl'
+      - 'FileSystem#open~httpRequest'
+      - 'FileSystem#open~headerName'
+  - uid: 'FileSystem#setAcl'
+    id: setAcl
+    parent: FileSystem
+    name: >-
+      setAcl(accountName, setAclFilePath, aclspec, options,
+      options.customHeaders, callback)
+    summary: Sets the Access Control List (ACL) for a file or folder.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: setAclFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/')\rof the file or directory on which to set the ACL."
+        - id: aclspec
+          type: string
+          description: "The ACL spec included in ACL creation operations in\rthe format '[default:]user|group|other::r|-w|-x|-'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function setAcl(accountName, setAclFilePath, aclspec, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.setAcl(accountName, setAclFilePath, aclspec, options,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#setAcl~client'
+      - 'FileSystem#setAcl~callback'
+      - 'FileSystem#setAcl~options'
+      - 'FileSystem#setAcl~op'
+      - 'FileSystem#setAcl~requestUrl'
+      - 'FileSystem#setAcl~requestUrl'
+      - 'FileSystem#setAcl~requestUrl'
+      - 'FileSystem#setAcl~requestUrl'
+      - 'FileSystem#setAcl~queryParameters'
+      - 'FileSystem#setAcl~requestUrl'
+      - 'FileSystem#setAcl~regex'
+      - 'FileSystem#setAcl~requestUrl'
+      - 'FileSystem#setAcl~httpRequest'
+      - 'FileSystem#setAcl~headerName'
+  - uid: 'FileSystem#modifyAclEntries'
+    id: modifyAclEntries
+    parent: FileSystem
+    name: >-
+      modifyAclEntries(accountName, modifyAclFilePath, aclspec, options,
+      options.customHeaders, callback)
+    summary: Modifies existing Access Control List (ACL) entries on a file or folder.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: modifyAclFilePath
+          type: string
+          description: "The Data Lake Store path (starting with\r'/') of the file or directory with the ACL being modified."
+        - id: aclspec
+          type: string
+          description: "The ACL specification included in ACL modification\roperations in the format '[default:]user|group|other::r|-w|-x|-'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function modifyAclEntries(accountName, modifyAclFilePath, aclspec,
+        options, options.customHeaders, callback);
+    fullName: >-
+      FileSystem.modifyAclEntries(accountName, modifyAclFilePath, aclspec,
+      options, options.customHeaders, callback)
+    children:
+      - 'FileSystem#modifyAclEntries~client'
+      - 'FileSystem#modifyAclEntries~callback'
+      - 'FileSystem#modifyAclEntries~options'
+      - 'FileSystem#modifyAclEntries~op'
+      - 'FileSystem#modifyAclEntries~requestUrl'
+      - 'FileSystem#modifyAclEntries~requestUrl'
+      - 'FileSystem#modifyAclEntries~requestUrl'
+      - 'FileSystem#modifyAclEntries~requestUrl'
+      - 'FileSystem#modifyAclEntries~queryParameters'
+      - 'FileSystem#modifyAclEntries~requestUrl'
+      - 'FileSystem#modifyAclEntries~regex'
+      - 'FileSystem#modifyAclEntries~requestUrl'
+      - 'FileSystem#modifyAclEntries~httpRequest'
+      - 'FileSystem#modifyAclEntries~headerName'
+  - uid: 'FileSystem#removeAclEntries'
+    id: removeAclEntries
+    parent: FileSystem
+    name: >-
+      removeAclEntries(accountName, removeAclFilePath, aclspec, options,
+      options.customHeaders, callback)
+    summary: Removes existing Access Control List (ACL) entries for a file or folder.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: removeAclFilePath
+          type: string
+          description: "The Data Lake Store path (starting with\r'/') of the file or directory with the ACL being removed."
+        - id: aclspec
+          type: string
+          description: "The ACL spec included in ACL removal operations in\rthe format '[default:]user|group|other'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function removeAclEntries(accountName, removeAclFilePath, aclspec,
+        options, options.customHeaders, callback);
+    fullName: >-
+      FileSystem.removeAclEntries(accountName, removeAclFilePath, aclspec,
+      options, options.customHeaders, callback)
+    children:
+      - 'FileSystem#removeAclEntries~client'
+      - 'FileSystem#removeAclEntries~callback'
+      - 'FileSystem#removeAclEntries~options'
+      - 'FileSystem#removeAclEntries~op'
+      - 'FileSystem#removeAclEntries~requestUrl'
+      - 'FileSystem#removeAclEntries~requestUrl'
+      - 'FileSystem#removeAclEntries~requestUrl'
+      - 'FileSystem#removeAclEntries~requestUrl'
+      - 'FileSystem#removeAclEntries~queryParameters'
+      - 'FileSystem#removeAclEntries~requestUrl'
+      - 'FileSystem#removeAclEntries~regex'
+      - 'FileSystem#removeAclEntries~requestUrl'
+      - 'FileSystem#removeAclEntries~httpRequest'
+      - 'FileSystem#removeAclEntries~headerName'
+  - uid: 'FileSystem#getAclStatus'
+    id: getAclStatus
+    parent: FileSystem
+    name: >-
+      getAclStatus(accountName, aclFilePath, options, options.customHeaders,
+      callback)
+    summary: >-
+      Gets Access Control List (ACL) entries for the specified file or
+      directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: aclFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/') of\rthe file or directory for which to get the ACL."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AclStatusResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getAclStatus(accountName, aclFilePath, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.getAclStatus(accountName, aclFilePath, options,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#getAclStatus~client'
+      - 'FileSystem#getAclStatus~callback'
+      - 'FileSystem#getAclStatus~options'
+      - 'FileSystem#getAclStatus~op'
+      - 'FileSystem#getAclStatus~requestUrl'
+      - 'FileSystem#getAclStatus~requestUrl'
+      - 'FileSystem#getAclStatus~requestUrl'
+      - 'FileSystem#getAclStatus~requestUrl'
+      - 'FileSystem#getAclStatus~queryParameters'
+      - 'FileSystem#getAclStatus~requestUrl'
+      - 'FileSystem#getAclStatus~regex'
+      - 'FileSystem#getAclStatus~requestUrl'
+      - 'FileSystem#getAclStatus~httpRequest'
+      - 'FileSystem#getAclStatus~headerName'
+  - uid: 'FileSystem#deleteMethod'
+    id: deleteMethod
+    parent: FileSystem
+    name: >-
+      deleteMethod(accountName, filePath, options, options.recursive,
+      options.customHeaders, callback)
+    summary: 'Deletes the requested file or directory, optionally recursively.'
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: filePath
+          type: string
+          description: "The Data Lake Store path (starting with '/') of\rthe file or directory to delete."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.recursive
+          type: boolean
+          description: "The optional switch indicating if the\rdelete should be recursive"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileOperationResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(accountName, filePath, options, options.recursive,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.deleteMethod(accountName, filePath, options, options.recursive,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#deleteMethod~client'
+      - 'FileSystem#deleteMethod~callback'
+      - 'FileSystem#deleteMethod~options'
+      - 'FileSystem#deleteMethod~recursive'
+      - 'FileSystem#deleteMethod~op'
+      - 'FileSystem#deleteMethod~requestUrl'
+      - 'FileSystem#deleteMethod~requestUrl'
+      - 'FileSystem#deleteMethod~requestUrl'
+      - 'FileSystem#deleteMethod~requestUrl'
+      - 'FileSystem#deleteMethod~queryParameters'
+      - 'FileSystem#deleteMethod~requestUrl'
+      - 'FileSystem#deleteMethod~regex'
+      - 'FileSystem#deleteMethod~requestUrl'
+      - 'FileSystem#deleteMethod~httpRequest'
+      - 'FileSystem#deleteMethod~headerName'
+  - uid: 'FileSystem#rename'
+    id: rename
+    parent: FileSystem
+    name: >-
+      rename(accountName, renameFilePath, destination, options,
+      options.customHeaders, callback)
+    summary: Rename a file or directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: renameFilePath
+          type: string
+          description: "The Data Lake Store path (starting with '/')\rof the file or directory to move/rename."
+        - id: destination
+          type: string
+          description: The path to move/rename the file or folder to
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileOperationResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function rename(accountName, renameFilePath, destination, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FileSystem.rename(accountName, renameFilePath, destination, options,
+      options.customHeaders, callback)
+    children:
+      - 'FileSystem#rename~client'
+      - 'FileSystem#rename~callback'
+      - 'FileSystem#rename~options'
+      - 'FileSystem#rename~op'
+      - 'FileSystem#rename~requestUrl'
+      - 'FileSystem#rename~requestUrl'
+      - 'FileSystem#rename~requestUrl'
+      - 'FileSystem#rename~requestUrl'
+      - 'FileSystem#rename~queryParameters'
+      - 'FileSystem#rename~requestUrl'
+      - 'FileSystem#rename~regex'
+      - 'FileSystem#rename~requestUrl'
+      - 'FileSystem#rename~httpRequest'
+      - 'FileSystem#rename~headerName'
+  - uid: 'FileSystem#setOwner'
+    id: setOwner
+    parent: FileSystem
+    name: >-
+      setOwner(accountName, setOwnerFilePath, options, options.owner,
+      options.group, options.customHeaders, callback)
+    summary: Sets the owner of a file or directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: setOwnerFilePath
+          type: string
+          description: "The Data Lake Store path (starting with\r'/') of the file or directory for which to set the owner."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.owner
+          type: string
+          description: "The AAD Object ID of the user owner of the\rfile or directory. If empty, the property will remain unchanged."
+        - id: options.group
+          type: string
+          description: "The AAD Object ID of the group owner of the\rfile or directory. If empty, the property will remain unchanged."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function setOwner(accountName, setOwnerFilePath, options, options.owner,
+        options.group, options.customHeaders, callback);
+    fullName: >-
+      FileSystem.setOwner(accountName, setOwnerFilePath, options, options.owner,
+      options.group, options.customHeaders, callback)
+    children:
+      - 'FileSystem#setOwner~client'
+      - 'FileSystem#setOwner~callback'
+      - 'FileSystem#setOwner~options'
+      - 'FileSystem#setOwner~owner'
+      - 'FileSystem#setOwner~group'
+      - 'FileSystem#setOwner~op'
+      - 'FileSystem#setOwner~requestUrl'
+      - 'FileSystem#setOwner~requestUrl'
+      - 'FileSystem#setOwner~requestUrl'
+      - 'FileSystem#setOwner~requestUrl'
+      - 'FileSystem#setOwner~queryParameters'
+      - 'FileSystem#setOwner~requestUrl'
+      - 'FileSystem#setOwner~regex'
+      - 'FileSystem#setOwner~requestUrl'
+      - 'FileSystem#setOwner~httpRequest'
+      - 'FileSystem#setOwner~headerName'
+  - uid: 'FileSystem#setPermission'
+    id: setPermission
+    parent: FileSystem
+    name: >-
+      setPermission(accountName, setPermissionFilePath, options,
+      options.permission, options.customHeaders, callback)
+    summary: Sets the permission of the file or folder.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Store account to execute\rfilesystem operations on."
+        - id: setPermissionFilePath
+          type: string
+          description: "The Data Lake Store path (starting\rwith '/') of the file or directory for which to set the permission."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.permission
+          type: string
+          description: "A string representation of the\rpermission (i.e 'rwx'). If empty, this property remains unchanged."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function setPermission(accountName, setPermissionFilePath, options,
+        options.permission, options.customHeaders, callback);
+    fullName: >-
+      FileSystem.setPermission(accountName, setPermissionFilePath, options,
+      options.permission, options.customHeaders, callback)
+    children:
+      - 'FileSystem#setPermission~client'
+      - 'FileSystem#setPermission~callback'
+      - 'FileSystem#setPermission~options'
+      - 'FileSystem#setPermission~permission'
+      - 'FileSystem#setPermission~op'
+      - 'FileSystem#setPermission~requestUrl'
+      - 'FileSystem#setPermission~requestUrl'
+      - 'FileSystem#setPermission~requestUrl'
+      - 'FileSystem#setPermission~requestUrl'
+      - 'FileSystem#setPermission~queryParameters'
+      - 'FileSystem#setPermission~requestUrl'
+      - 'FileSystem#setPermission~regex'
+      - 'FileSystem#setPermission~requestUrl'
+      - 'FileSystem#setPermission~httpRequest'
+      - 'FileSystem#setPermission~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

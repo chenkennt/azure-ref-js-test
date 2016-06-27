@@ -1,0 +1,366 @@
+items:
+  - uid: GcmService
+    id: GcmService
+    name: GcmService
+    summary: "Creates a new GcmService object.\r\r\r__Note__: An instance of this object is created automatically when a {@link NotificationHubService}\robject is created. See {@link NotificationHubService#gcm}."
+    type: Class
+    syntax:
+      content: GcmService
+    fullName: GcmService
+    children:
+      - 'GcmService#notificationHubService'
+      - 'GcmService#send'
+      - 'GcmService#createNativeRegistration'
+      - 'GcmService#createOrUpdateNativeRegistration'
+      - 'GcmService#createTemplateRegistration'
+      - 'GcmService#createOrUpdateTemplateRegistration'
+      - 'GcmService#updateTemplateRegistration'
+      - 'GcmService#listRegistrationsByGcmRegistrationId'
+      - 'GcmService#_createBody'
+      - 'GcmService#_createTemplateBody'
+  - uid: 'GcmService#notificationHubService'
+    id: notificationHubService
+    parent: GcmService
+    name: notificationHubService
+    type: Field
+    syntax:
+      content: notificationHubService
+    fullName: GcmService.notificationHubService
+  - uid: 'GcmService#send'
+    id: send
+    parent: GcmService
+    name: 'send(tags, payload, callback)'
+    summary: Sends a GCM notification.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: A single tag or tag expression.
+        - id: payload
+          type: object
+          description: The message's JSON or string payload.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function send(tags, payload, callback);'
+    fullName: 'GcmService.send(tags, payload, callback)'
+    children:
+      - 'GcmService#send~headers'
+      - 'GcmService#send~tags'
+      - 'GcmService#send~payload'
+  - uid: 'GcmService#createNativeRegistration'
+    id: createNativeRegistration
+    parent: GcmService
+    name: 'createNativeRegistration(gcmRegistrationId, tags, options, callback)'
+    summary: Creates a native registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: gcmRegistrationId
+          type: string
+          description: The gcm registration identifier.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                if an error occurs; otherwise, `response`\r                                                                will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createNativeRegistration(gcmRegistrationId, tags, options,
+        callback);
+    fullName: >-
+      GcmService.createNativeRegistration(gcmRegistrationId, tags, options,
+      callback)
+    children:
+      - 'GcmService#createNativeRegistration~options'
+      - 'GcmService#createNativeRegistration~registrationXml'
+      - 'GcmService#createNativeRegistration~webResource'
+  - uid: 'GcmService#createOrUpdateNativeRegistration'
+    id: createOrUpdateNativeRegistration
+    parent: GcmService
+    name: >-
+      createOrUpdateNativeRegistration(registrationId, gcmRegistrationId, tags,
+      options, callback)
+    summary: Creates or updates a native registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: gcmRegistrationId
+          type: string
+          description: The gcm registration identifier.
+        - id: tags
+          type: string
+          description: 'The tags (comma-separated list, no spaces).'
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                if an error occurs; otherwise, `response`\r                                                                will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createOrUpdateNativeRegistration(registrationId,
+        gcmRegistrationId, tags, options, callback);
+    fullName: >-
+      GcmService.createOrUpdateNativeRegistration(registrationId,
+      gcmRegistrationId, tags, options, callback)
+    children:
+      - 'GcmService#createOrUpdateNativeRegistration~options'
+      - 'GcmService#createOrUpdateNativeRegistration~registrationXml'
+      - 'GcmService#createOrUpdateNativeRegistration~webResource'
+  - uid: 'GcmService#createTemplateRegistration'
+    id: createTemplateRegistration
+    parent: GcmService
+    name: >-
+      createTemplateRegistration(gcmRegistrationId, tags, template, options,
+      callback)
+    summary: Creates a template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: gcmRegistrationId
+          type: string
+          description: The gcm registration identifier.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: object
+          description: The message's JSON or string payload.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createTemplateRegistration(gcmRegistrationId, tags, template,
+        options, callback);
+    fullName: >-
+      GcmService.createTemplateRegistration(gcmRegistrationId, tags, template,
+      options, callback)
+    children:
+      - 'GcmService#createTemplateRegistration~options'
+      - 'GcmService#createTemplateRegistration~registrationXml'
+      - 'GcmService#createTemplateRegistration~webResource'
+  - uid: 'GcmService#createOrUpdateTemplateRegistration'
+    id: createOrUpdateTemplateRegistration
+    parent: GcmService
+    name: >-
+      createOrUpdateTemplateRegistration(registrationId, gcmRegistrationId,
+      tags, template, options, callback)
+    summary: Creates or updates a template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: gcmRegistrationId
+          type: string
+          description: The gcm registration identifier.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: object
+          description: The message's JSON or string payload.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createOrUpdateTemplateRegistration(registrationId,
+        gcmRegistrationId, tags, template, options, callback);
+    fullName: >-
+      GcmService.createOrUpdateTemplateRegistration(registrationId,
+      gcmRegistrationId, tags, template, options, callback)
+    children:
+      - 'GcmService#createOrUpdateTemplateRegistration~options'
+      - 'GcmService#createOrUpdateTemplateRegistration~registrationXml'
+      - 'GcmService#createOrUpdateTemplateRegistration~webResource'
+  - uid: 'GcmService#updateTemplateRegistration'
+    id: updateTemplateRegistration
+    parent: GcmService
+    name: >-
+      updateTemplateRegistration(registrationId, gcmRegistrationId, template,
+      options, callback)
+    summary: Updates a template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: gcmRegistrationId
+          type: string
+          description: The gcm registration identifier.
+        - id: template
+          type: object
+          description: The message's JSON or string payload.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function updateTemplateRegistration(registrationId, gcmRegistrationId,
+        template, options, callback);
+    fullName: >-
+      GcmService.updateTemplateRegistration(registrationId, gcmRegistrationId,
+      template, options, callback)
+    children:
+      - 'GcmService#updateTemplateRegistration~options'
+      - 'GcmService#updateTemplateRegistration~registrationXml'
+      - 'GcmService#updateTemplateRegistration~webResource'
+  - uid: 'GcmService#listRegistrationsByGcmRegistrationId'
+    id: listRegistrationsByGcmRegistrationId
+    parent: GcmService
+    name: >-
+      listRegistrationsByGcmRegistrationId(gcmRegistrationId, options,
+      options.top, options.skip, callback)
+    summary: Retrieves a registration by device token.
+    type: Method
+    syntax:
+      parameters:
+        - id: gcmRegistrationId
+          type: string
+          description: The gcm registration identifier.
+        - id: options
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: options.top
+          type: object
+          description: >-
+            Specifies the maximum number of registration to obtain from the
+            call.
+        - id: options.skip
+          type: object
+          description: Specifies the number of registrations to skip in the call.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function listRegistrationsByGcmRegistrationId(gcmRegistrationId,
+        options, options.top, options.skip, callback);
+    fullName: >-
+      GcmService.listRegistrationsByGcmRegistrationId(gcmRegistrationId,
+      options, options.top, options.skip, callback)
+    children:
+      - 'GcmService#listRegistrationsByGcmRegistrationId~options'
+      - 'GcmService#listRegistrationsByGcmRegistrationId~webResource'
+  - uid: 'GcmService#_createBody'
+    id: _createBody
+    parent: GcmService
+    name: >-
+      _createBody(elementName, gcmRegistrationId, tags, template, options,
+      options.pnsCredentialName)
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: elementName
+          type: string
+          description: The element name.
+        - id: gcmRegistrationId
+          type: string
+          description: The registration identifier.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: options.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+      return:
+        type: string
+        description: The template body.
+      content: >-
+        function _createBody(elementName, gcmRegistrationId, tags, template,
+        options, options.pnsCredentialName);
+    fullName: >-
+      GcmService._createBody(elementName, gcmRegistrationId, tags, template,
+      options, options.pnsCredentialName)
+    children:
+      - 'GcmService#_createBody~registration'
+      - 'GcmService#_createBody~tags'
+      - 'GcmService#_createBody~payload'
+      - 'GcmService#_createBody~payload'
+  - uid: 'GcmService#_createTemplateBody'
+    id: _createTemplateBody
+    parent: GcmService
+    name: '_createTemplateBody(gcmRegistrationId, tags, template, options)'
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: gcmRegistrationId
+          type: string
+          description: The registration identifier.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options or callback function.
+      return:
+        type: string
+        description: The template body.
+      content: >-
+        function _createTemplateBody(gcmRegistrationId, tags, template,
+        options);
+    fullName: 'GcmService._createTemplateBody(gcmRegistrationId, tags, template, options)'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true
+  - uid: json
+    name: json
+    fullName: json
+    isExternal: true

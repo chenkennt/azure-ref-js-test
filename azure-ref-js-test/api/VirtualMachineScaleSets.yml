@@ -1,0 +1,1824 @@
+items:
+  - uid: VirtualMachineScaleSets
+    id: VirtualMachineScaleSets
+    name: VirtualMachineScaleSets
+    type: Class
+    syntax:
+      content: VirtualMachineScaleSets
+    fullName: VirtualMachineScaleSets
+    children:
+      - 'VirtualMachineScaleSets#client'
+      - 'VirtualMachineScaleSets#createOrUpdate'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate'
+      - 'VirtualMachineScaleSets#deallocate'
+      - 'VirtualMachineScaleSets#beginDeallocate'
+      - 'VirtualMachineScaleSets#deleteMethod'
+      - 'VirtualMachineScaleSets#beginDeleteMethod'
+      - 'VirtualMachineScaleSets#get'
+      - 'VirtualMachineScaleSets#deleteInstances'
+      - 'VirtualMachineScaleSets#beginDeleteInstances'
+      - 'VirtualMachineScaleSets#getInstanceView'
+      - 'VirtualMachineScaleSets#list'
+      - 'VirtualMachineScaleSets#listAll'
+      - 'VirtualMachineScaleSets#listSkus'
+      - 'VirtualMachineScaleSets#powerOff'
+      - 'VirtualMachineScaleSets#beginPowerOff'
+      - 'VirtualMachineScaleSets#restart'
+      - 'VirtualMachineScaleSets#beginRestart'
+      - 'VirtualMachineScaleSets#start'
+      - 'VirtualMachineScaleSets#beginStart'
+      - 'VirtualMachineScaleSets#updateInstances'
+      - 'VirtualMachineScaleSets#beginUpdateInstances'
+      - 'VirtualMachineScaleSets#reimage'
+      - 'VirtualMachineScaleSets#beginReimage'
+      - 'VirtualMachineScaleSets#listNext'
+      - 'VirtualMachineScaleSets#listAllNext'
+      - 'VirtualMachineScaleSets#listSkusNext'
+  - uid: 'VirtualMachineScaleSets#client'
+    id: client
+    parent: VirtualMachineScaleSets
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualMachineScaleSets.client
+  - uid: 'VirtualMachineScaleSets#createOrUpdate'
+    id: createOrUpdate
+    parent: VirtualMachineScaleSets
+    name: >-
+      createOrUpdate(resourceGroupName, name, parameters, parameters.sku,
+      parameters.sku.name, parameters.sku.tier, parameters.sku.capacity,
+      parameters.upgradePolicy, parameters.upgradePolicy.mode,
+      parameters.virtualMachineProfile,
+      parameters.virtualMachineProfile.osProfile,
+      parameters.virtualMachineProfile.osProfile.computerNamePrefix,
+      parameters.virtualMachineProfile.osProfile.adminUsername,
+      parameters.virtualMachineProfile.osProfile.adminPassword,
+      parameters.virtualMachineProfile.osProfile.customData,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.virtualMachineProfile.osProfile.secrets,
+      parameters.virtualMachineProfile.storageProfile,
+      parameters.virtualMachineProfile.storageProfile.imageReference,
+      parameters.virtualMachineProfile.storageProfile.imageReference.publisher,
+      parameters.virtualMachineProfile.storageProfile.imageReference.offer,
+      parameters.virtualMachineProfile.storageProfile.imageReference.sku,
+      parameters.virtualMachineProfile.storageProfile.imageReference.version,
+      parameters.virtualMachineProfile.storageProfile.osDisk,
+      parameters.virtualMachineProfile.storageProfile.osDisk.name,
+      parameters.virtualMachineProfile.storageProfile.osDisk.caching,
+      parameters.virtualMachineProfile.storageProfile.osDisk.createOption,
+      parameters.virtualMachineProfile.storageProfile.osDisk.osType,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image.uri,
+      parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers,
+      parameters.virtualMachineProfile.networkProfile,
+      parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations,
+      parameters.virtualMachineProfile.extensionProfile,
+      parameters.virtualMachineProfile.extensionProfile.extensions,
+      parameters.provisioningState, parameters.overProvision,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: The operation to create or update a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: name
+          type: string
+          description: "Parameters supplied to the Create Virtual Machine\rScale Set operation."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Create Virtual\rMachine Scale Set operation."
+        - id: parameters.sku
+          type: object
+          description: "Gets or sets the virtual machine scale set\rsku."
+        - id: parameters.sku.name
+          type: string
+          description: Gets or sets the sku name.
+        - id: parameters.sku.tier
+          type: string
+          description: Gets or sets the sku tier.
+        - id: parameters.sku.capacity
+          type: number
+          description: Gets or sets the sku capacity.
+        - id: parameters.upgradePolicy
+          type: object
+          description: Gets or sets the upgrade policy.
+        - id: parameters.upgradePolicy.mode
+          type: string
+          description: "Gets or sets the upgrade\rmode. Possible values include: 'Automatic', 'Manual'"
+        - id: parameters.virtualMachineProfile
+          type: object
+          description: "Gets or sets the virtual\rmachine profile."
+        - id: parameters.virtualMachineProfile.osProfile
+          type: object
+          description: "Gets or sets\rthe virtual machine scale set OS profile."
+        - id: parameters.virtualMachineProfile.osProfile.computerNamePrefix
+          type: string
+          description: "Gets or\rsets the computer name prefix."
+        - id: parameters.virtualMachineProfile.osProfile.adminUsername
+          type: string
+          description: Gets or sets the admin user name.
+        - id: parameters.virtualMachineProfile.osProfile.adminPassword
+          type: string
+          description: Gets or sets the admin user password.
+        - id: parameters.virtualMachineProfile.osProfile.customData
+          type: string
+          description: Gets or sets a base-64 encoded string of custom data.
+        - id: parameters.virtualMachineProfile.osProfile.windowsConfiguration
+          type: object
+          description: "Gets or\rsets the Windows Configuration of the OS profile."
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent
+          type: boolean
+          description: >-
+            Gets or sets whether VM Agent should be provisioned on the Virtual
+            Machine.
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates
+          type: boolean
+          description: >-
+            Gets or sets whether Windows updates are automatically installed on
+            the VM
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone
+          type: string
+          description: Gets or sets the Time Zone of the VM
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent
+          type: array
+          description: "Gets or sets the additional base-64 encoded XML formatted information that\rcan be included in the Unattend.xml file."
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM
+          type: object
+          description: Gets or sets the Windows Remote Management configuration of the VM
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners
+          type: array
+          description: Gets or sets the list of Windows Remote Management listeners
+        - id: parameters.virtualMachineProfile.osProfile.linuxConfiguration
+          type: object
+          description: "Gets or\rsets the Linux Configuration of the OS profile."
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication
+          type: boolean
+          description: "Gets or sets whether Authentication using user name and password is\rallowed or not"
+        - id: parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh
+          type: object
+          description: "Gets\ror sets the SSH configuration for linux VMs"
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys
+          type: array
+          description: "Gets or sets the list of SSH public keys used to authenticate with linux\rbased VMs"
+        - id: parameters.virtualMachineProfile.osProfile.secrets
+          type: array
+          description: "Gets or\rsets the List of certificates for addition to the VM."
+        - id: parameters.virtualMachineProfile.storageProfile
+          type: object
+          description: "Gets or\rsets the virtual machine scale set storage profile."
+        - id: parameters.virtualMachineProfile.storageProfile.imageReference
+          type: object
+          description: "Gets or\rsets the image reference."
+        - id: >-
+            parameters.virtualMachineProfile.storageProfile.imageReference.publisher
+          type: string
+          description: Gets or sets the image publisher.
+        - id: parameters.virtualMachineProfile.storageProfile.imageReference.offer
+          type: string
+          description: Gets or sets the image offer.
+        - id: parameters.virtualMachineProfile.storageProfile.imageReference.sku
+          type: string
+          description: "Gets\ror sets the image sku."
+        - id: >-
+            parameters.virtualMachineProfile.storageProfile.imageReference.version
+          type: string
+          description: "Gets or sets the image version. The allowed formats are Major.Minor.Build\ror 'latest'. Major, Minor and Build being decimal numbers. Specify\r'latest' to use the latest version of image."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk
+          type: object
+          description: Gets or sets the OS disk.
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.name
+          type: string
+          description: "Gets or sets\rthe disk name."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.caching
+          type: string
+          description: "Gets or\rsets the caching type. Possible values include: 'None', 'ReadOnly',\r'ReadWrite'"
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.createOption
+          type: string
+          description: "Gets\ror sets the create option. Possible values include: 'fromImage', 'empty',\r'attach'"
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.osType
+          type: string
+          description: "Gets or\rsets the Operating System type. Possible values include: 'Windows', 'Linux'"
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.image
+          type: object
+          description: "Gets or\rsets the Source User Image VirtualHardDisk. This VirtualHardDisk will be\rcopied before using it to attach to the Virtual Machine.If SourceImage is\rprovided, the destination VirtualHardDisk should not exist."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.image.uri
+          type: string
+          description: "Gets or\rsets the virtual hard disk's uri. It should be a valid Uri to a virtual\rhard disk."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers
+          type: array
+          description: Gets or sets the list of virtual hard disk container uris.
+        - id: parameters.virtualMachineProfile.networkProfile
+          type: object
+          description: "Gets or\rsets the virtual machine scale set network profile."
+        - id: >-
+            parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations
+          type: array
+          description: Gets or sets the list of network configurations.
+        - id: parameters.virtualMachineProfile.extensionProfile
+          type: object
+          description: "Gets\rthe virtual machine scale set extension profile."
+        - id: parameters.virtualMachineProfile.extensionProfile.extensions
+          type: array
+          description: "Gets the\rvirtual machine scale set child extension resources."
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets the\rprovisioning state, which only appears in the response."
+        - id: parameters.overProvision
+          type: boolean
+          description: "Specifies whether the Virtual\rMachine Scale Set should be overprovisioned."
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSet} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, name, parameters,
+        parameters.sku, parameters.sku.name, parameters.sku.tier,
+        parameters.sku.capacity, parameters.upgradePolicy,
+        parameters.upgradePolicy.mode, parameters.virtualMachineProfile,
+        parameters.virtualMachineProfile.osProfile,
+        parameters.virtualMachineProfile.osProfile.computerNamePrefix,
+        parameters.virtualMachineProfile.osProfile.adminUsername,
+        parameters.virtualMachineProfile.osProfile.adminPassword,
+        parameters.virtualMachineProfile.osProfile.customData,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys,
+        parameters.virtualMachineProfile.osProfile.secrets,
+        parameters.virtualMachineProfile.storageProfile,
+        parameters.virtualMachineProfile.storageProfile.imageReference,
+        parameters.virtualMachineProfile.storageProfile.imageReference.publisher,
+        parameters.virtualMachineProfile.storageProfile.imageReference.offer,
+        parameters.virtualMachineProfile.storageProfile.imageReference.sku,
+        parameters.virtualMachineProfile.storageProfile.imageReference.version,
+        parameters.virtualMachineProfile.storageProfile.osDisk,
+        parameters.virtualMachineProfile.storageProfile.osDisk.name,
+        parameters.virtualMachineProfile.storageProfile.osDisk.caching,
+        parameters.virtualMachineProfile.storageProfile.osDisk.createOption,
+        parameters.virtualMachineProfile.storageProfile.osDisk.osType,
+        parameters.virtualMachineProfile.storageProfile.osDisk.image,
+        parameters.virtualMachineProfile.storageProfile.osDisk.image.uri,
+        parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers,
+        parameters.virtualMachineProfile.networkProfile,
+        parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations,
+        parameters.virtualMachineProfile.extensionProfile,
+        parameters.virtualMachineProfile.extensionProfile.extensions,
+        parameters.provisioningState, parameters.overProvision,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSets.createOrUpdate(resourceGroupName, name,
+      parameters, parameters.sku, parameters.sku.name, parameters.sku.tier,
+      parameters.sku.capacity, parameters.upgradePolicy,
+      parameters.upgradePolicy.mode, parameters.virtualMachineProfile,
+      parameters.virtualMachineProfile.osProfile,
+      parameters.virtualMachineProfile.osProfile.computerNamePrefix,
+      parameters.virtualMachineProfile.osProfile.adminUsername,
+      parameters.virtualMachineProfile.osProfile.adminPassword,
+      parameters.virtualMachineProfile.osProfile.customData,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.virtualMachineProfile.osProfile.secrets,
+      parameters.virtualMachineProfile.storageProfile,
+      parameters.virtualMachineProfile.storageProfile.imageReference,
+      parameters.virtualMachineProfile.storageProfile.imageReference.publisher,
+      parameters.virtualMachineProfile.storageProfile.imageReference.offer,
+      parameters.virtualMachineProfile.storageProfile.imageReference.sku,
+      parameters.virtualMachineProfile.storageProfile.imageReference.version,
+      parameters.virtualMachineProfile.storageProfile.osDisk,
+      parameters.virtualMachineProfile.storageProfile.osDisk.name,
+      parameters.virtualMachineProfile.storageProfile.osDisk.caching,
+      parameters.virtualMachineProfile.storageProfile.osDisk.createOption,
+      parameters.virtualMachineProfile.storageProfile.osDisk.osType,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image.uri,
+      parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers,
+      parameters.virtualMachineProfile.networkProfile,
+      parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations,
+      parameters.virtualMachineProfile.extensionProfile,
+      parameters.virtualMachineProfile.extensionProfile.extensions,
+      parameters.provisioningState, parameters.overProvision,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualMachineScaleSets#createOrUpdate~client'
+      - 'VirtualMachineScaleSets#createOrUpdate~callback'
+      - 'VirtualMachineScaleSets#createOrUpdate~options'
+  - uid: 'VirtualMachineScaleSets#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, name, parameters, parameters.sku,
+      parameters.sku.name, parameters.sku.tier, parameters.sku.capacity,
+      parameters.upgradePolicy, parameters.upgradePolicy.mode,
+      parameters.virtualMachineProfile,
+      parameters.virtualMachineProfile.osProfile,
+      parameters.virtualMachineProfile.osProfile.computerNamePrefix,
+      parameters.virtualMachineProfile.osProfile.adminUsername,
+      parameters.virtualMachineProfile.osProfile.adminPassword,
+      parameters.virtualMachineProfile.osProfile.customData,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.virtualMachineProfile.osProfile.secrets,
+      parameters.virtualMachineProfile.storageProfile,
+      parameters.virtualMachineProfile.storageProfile.imageReference,
+      parameters.virtualMachineProfile.storageProfile.imageReference.publisher,
+      parameters.virtualMachineProfile.storageProfile.imageReference.offer,
+      parameters.virtualMachineProfile.storageProfile.imageReference.sku,
+      parameters.virtualMachineProfile.storageProfile.imageReference.version,
+      parameters.virtualMachineProfile.storageProfile.osDisk,
+      parameters.virtualMachineProfile.storageProfile.osDisk.name,
+      parameters.virtualMachineProfile.storageProfile.osDisk.caching,
+      parameters.virtualMachineProfile.storageProfile.osDisk.createOption,
+      parameters.virtualMachineProfile.storageProfile.osDisk.osType,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image.uri,
+      parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers,
+      parameters.virtualMachineProfile.networkProfile,
+      parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations,
+      parameters.virtualMachineProfile.extensionProfile,
+      parameters.virtualMachineProfile.extensionProfile.extensions,
+      parameters.provisioningState, parameters.overProvision,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: The operation to create or update a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: name
+          type: string
+          description: "Parameters supplied to the Create Virtual Machine\rScale Set operation."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Create Virtual\rMachine Scale Set operation."
+        - id: parameters.sku
+          type: object
+          description: "Gets or sets the virtual machine scale set\rsku."
+        - id: parameters.sku.name
+          type: string
+          description: Gets or sets the sku name.
+        - id: parameters.sku.tier
+          type: string
+          description: Gets or sets the sku tier.
+        - id: parameters.sku.capacity
+          type: number
+          description: Gets or sets the sku capacity.
+        - id: parameters.upgradePolicy
+          type: object
+          description: Gets or sets the upgrade policy.
+        - id: parameters.upgradePolicy.mode
+          type: string
+          description: "Gets or sets the upgrade\rmode. Possible values include: 'Automatic', 'Manual'"
+        - id: parameters.virtualMachineProfile
+          type: object
+          description: "Gets or sets the virtual\rmachine profile."
+        - id: parameters.virtualMachineProfile.osProfile
+          type: object
+          description: "Gets or sets\rthe virtual machine scale set OS profile."
+        - id: parameters.virtualMachineProfile.osProfile.computerNamePrefix
+          type: string
+          description: "Gets or\rsets the computer name prefix."
+        - id: parameters.virtualMachineProfile.osProfile.adminUsername
+          type: string
+          description: Gets or sets the admin user name.
+        - id: parameters.virtualMachineProfile.osProfile.adminPassword
+          type: string
+          description: Gets or sets the admin user password.
+        - id: parameters.virtualMachineProfile.osProfile.customData
+          type: string
+          description: Gets or sets a base-64 encoded string of custom data.
+        - id: parameters.virtualMachineProfile.osProfile.windowsConfiguration
+          type: object
+          description: "Gets or\rsets the Windows Configuration of the OS profile."
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent
+          type: boolean
+          description: >-
+            Gets or sets whether VM Agent should be provisioned on the Virtual
+            Machine.
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates
+          type: boolean
+          description: >-
+            Gets or sets whether Windows updates are automatically installed on
+            the VM
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone
+          type: string
+          description: Gets or sets the Time Zone of the VM
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent
+          type: array
+          description: "Gets or sets the additional base-64 encoded XML formatted information that\rcan be included in the Unattend.xml file."
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM
+          type: object
+          description: Gets or sets the Windows Remote Management configuration of the VM
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners
+          type: array
+          description: Gets or sets the list of Windows Remote Management listeners
+        - id: parameters.virtualMachineProfile.osProfile.linuxConfiguration
+          type: object
+          description: "Gets or\rsets the Linux Configuration of the OS profile."
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication
+          type: boolean
+          description: "Gets or sets whether Authentication using user name and password is\rallowed or not"
+        - id: parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh
+          type: object
+          description: "Gets\ror sets the SSH configuration for linux VMs"
+        - id: >-
+            parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys
+          type: array
+          description: "Gets or sets the list of SSH public keys used to authenticate with linux\rbased VMs"
+        - id: parameters.virtualMachineProfile.osProfile.secrets
+          type: array
+          description: "Gets or\rsets the List of certificates for addition to the VM."
+        - id: parameters.virtualMachineProfile.storageProfile
+          type: object
+          description: "Gets or\rsets the virtual machine scale set storage profile."
+        - id: parameters.virtualMachineProfile.storageProfile.imageReference
+          type: object
+          description: "Gets or\rsets the image reference."
+        - id: >-
+            parameters.virtualMachineProfile.storageProfile.imageReference.publisher
+          type: string
+          description: Gets or sets the image publisher.
+        - id: parameters.virtualMachineProfile.storageProfile.imageReference.offer
+          type: string
+          description: Gets or sets the image offer.
+        - id: parameters.virtualMachineProfile.storageProfile.imageReference.sku
+          type: string
+          description: "Gets\ror sets the image sku."
+        - id: >-
+            parameters.virtualMachineProfile.storageProfile.imageReference.version
+          type: string
+          description: "Gets or sets the image version. The allowed formats are Major.Minor.Build\ror 'latest'. Major, Minor and Build being decimal numbers. Specify\r'latest' to use the latest version of image."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk
+          type: object
+          description: Gets or sets the OS disk.
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.name
+          type: string
+          description: "Gets or sets\rthe disk name."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.caching
+          type: string
+          description: "Gets or\rsets the caching type. Possible values include: 'None', 'ReadOnly',\r'ReadWrite'"
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.createOption
+          type: string
+          description: "Gets\ror sets the create option. Possible values include: 'fromImage', 'empty',\r'attach'"
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.osType
+          type: string
+          description: "Gets or\rsets the Operating System type. Possible values include: 'Windows', 'Linux'"
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.image
+          type: object
+          description: "Gets or\rsets the Source User Image VirtualHardDisk. This VirtualHardDisk will be\rcopied before using it to attach to the Virtual Machine.If SourceImage is\rprovided, the destination VirtualHardDisk should not exist."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.image.uri
+          type: string
+          description: "Gets or\rsets the virtual hard disk's uri. It should be a valid Uri to a virtual\rhard disk."
+        - id: parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers
+          type: array
+          description: Gets or sets the list of virtual hard disk container uris.
+        - id: parameters.virtualMachineProfile.networkProfile
+          type: object
+          description: "Gets or\rsets the virtual machine scale set network profile."
+        - id: >-
+            parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations
+          type: array
+          description: Gets or sets the list of network configurations.
+        - id: parameters.virtualMachineProfile.extensionProfile
+          type: object
+          description: "Gets\rthe virtual machine scale set extension profile."
+        - id: parameters.virtualMachineProfile.extensionProfile.extensions
+          type: array
+          description: "Gets the\rvirtual machine scale set child extension resources."
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets the\rprovisioning state, which only appears in the response."
+        - id: parameters.overProvision
+          type: boolean
+          description: "Specifies whether the Virtual\rMachine Scale Set should be overprovisioned."
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSet} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, name, parameters,
+        parameters.sku, parameters.sku.name, parameters.sku.tier,
+        parameters.sku.capacity, parameters.upgradePolicy,
+        parameters.upgradePolicy.mode, parameters.virtualMachineProfile,
+        parameters.virtualMachineProfile.osProfile,
+        parameters.virtualMachineProfile.osProfile.computerNamePrefix,
+        parameters.virtualMachineProfile.osProfile.adminUsername,
+        parameters.virtualMachineProfile.osProfile.adminPassword,
+        parameters.virtualMachineProfile.osProfile.customData,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM,
+        parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh,
+        parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys,
+        parameters.virtualMachineProfile.osProfile.secrets,
+        parameters.virtualMachineProfile.storageProfile,
+        parameters.virtualMachineProfile.storageProfile.imageReference,
+        parameters.virtualMachineProfile.storageProfile.imageReference.publisher,
+        parameters.virtualMachineProfile.storageProfile.imageReference.offer,
+        parameters.virtualMachineProfile.storageProfile.imageReference.sku,
+        parameters.virtualMachineProfile.storageProfile.imageReference.version,
+        parameters.virtualMachineProfile.storageProfile.osDisk,
+        parameters.virtualMachineProfile.storageProfile.osDisk.name,
+        parameters.virtualMachineProfile.storageProfile.osDisk.caching,
+        parameters.virtualMachineProfile.storageProfile.osDisk.createOption,
+        parameters.virtualMachineProfile.storageProfile.osDisk.osType,
+        parameters.virtualMachineProfile.storageProfile.osDisk.image,
+        parameters.virtualMachineProfile.storageProfile.osDisk.image.uri,
+        parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers,
+        parameters.virtualMachineProfile.networkProfile,
+        parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations,
+        parameters.virtualMachineProfile.extensionProfile,
+        parameters.virtualMachineProfile.extensionProfile.extensions,
+        parameters.provisioningState, parameters.overProvision,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginCreateOrUpdate(resourceGroupName, name,
+      parameters, parameters.sku, parameters.sku.name, parameters.sku.tier,
+      parameters.sku.capacity, parameters.upgradePolicy,
+      parameters.upgradePolicy.mode, parameters.virtualMachineProfile,
+      parameters.virtualMachineProfile.osProfile,
+      parameters.virtualMachineProfile.osProfile.computerNamePrefix,
+      parameters.virtualMachineProfile.osProfile.adminUsername,
+      parameters.virtualMachineProfile.osProfile.adminPassword,
+      parameters.virtualMachineProfile.osProfile.customData,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.timeZone,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM,
+      parameters.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh,
+      parameters.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys,
+      parameters.virtualMachineProfile.osProfile.secrets,
+      parameters.virtualMachineProfile.storageProfile,
+      parameters.virtualMachineProfile.storageProfile.imageReference,
+      parameters.virtualMachineProfile.storageProfile.imageReference.publisher,
+      parameters.virtualMachineProfile.storageProfile.imageReference.offer,
+      parameters.virtualMachineProfile.storageProfile.imageReference.sku,
+      parameters.virtualMachineProfile.storageProfile.imageReference.version,
+      parameters.virtualMachineProfile.storageProfile.osDisk,
+      parameters.virtualMachineProfile.storageProfile.osDisk.name,
+      parameters.virtualMachineProfile.storageProfile.osDisk.caching,
+      parameters.virtualMachineProfile.storageProfile.osDisk.createOption,
+      parameters.virtualMachineProfile.storageProfile.osDisk.osType,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image,
+      parameters.virtualMachineProfile.storageProfile.osDisk.image.uri,
+      parameters.virtualMachineProfile.storageProfile.osDisk.vhdContainers,
+      parameters.virtualMachineProfile.networkProfile,
+      parameters.virtualMachineProfile.networkProfile.networkInterfaceConfigurations,
+      parameters.virtualMachineProfile.extensionProfile,
+      parameters.virtualMachineProfile.extensionProfile.extensions,
+      parameters.provisioningState, parameters.overProvision,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~client'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~callback'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~options'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~apiVersion'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~queryParameters'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~regex'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~httpRequest'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~headerName'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestContent'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestModel'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestModelMapper'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestModel'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~requestContent'
+      - 'VirtualMachineScaleSets#beginCreateOrUpdate~serializationError'
+  - uid: 'VirtualMachineScaleSets#deallocate'
+    id: deallocate
+    parent: VirtualMachineScaleSets
+    name: >-
+      deallocate(resourceGroupName, vmScaleSetName, options,
+      options.instanceIds, options.customHeaders, callback)
+    summary: >-
+      The operation to deallocate virtual machines in a virtual machine scale
+      set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deallocate(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.deallocate(resourceGroupName, vmScaleSetName,
+      options, options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#deallocate~client'
+      - 'VirtualMachineScaleSets#deallocate~callback'
+      - 'VirtualMachineScaleSets#deallocate~options'
+  - uid: 'VirtualMachineScaleSets#beginDeallocate'
+    id: beginDeallocate
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginDeallocate(resourceGroupName, vmScaleSetName, options,
+      options.instanceIds, options.customHeaders, callback)
+    summary: >-
+      The operation to deallocate virtual machines in a virtual machine scale
+      set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeallocate(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginDeallocate(resourceGroupName, vmScaleSetName,
+      options, options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginDeallocate~client'
+      - 'VirtualMachineScaleSets#beginDeallocate~callback'
+      - 'VirtualMachineScaleSets#beginDeallocate~options'
+      - 'VirtualMachineScaleSets#beginDeallocate~instanceIds'
+      - 'VirtualMachineScaleSets#beginDeallocate~apiVersion'
+      - 'VirtualMachineScaleSets#beginDeallocate~i'
+      - 'VirtualMachineScaleSets#beginDeallocate~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginDeallocate~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeallocate~queryParameters'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeallocate~regex'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeallocate~httpRequest'
+      - 'VirtualMachineScaleSets#beginDeallocate~headerName'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestContent'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestModel'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestModelMapper'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestModel'
+      - 'VirtualMachineScaleSets#beginDeallocate~requestContent'
+      - 'VirtualMachineScaleSets#beginDeallocate~serializationError'
+  - uid: 'VirtualMachineScaleSets#deleteMethod'
+    id: deleteMethod
+    parent: VirtualMachineScaleSets
+    name: >-
+      deleteMethod(resourceGroupName, vmScaleSetName, options,
+      options.customHeaders, callback)
+    summary: The operation to delete a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, vmScaleSetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.deleteMethod(resourceGroupName, vmScaleSetName,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#deleteMethod~client'
+      - 'VirtualMachineScaleSets#deleteMethod~callback'
+      - 'VirtualMachineScaleSets#deleteMethod~options'
+  - uid: 'VirtualMachineScaleSets#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginDeleteMethod(resourceGroupName, vmScaleSetName, options,
+      options.customHeaders, callback)
+    summary: The operation to delete a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, vmScaleSetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginDeleteMethod(resourceGroupName,
+      vmScaleSetName, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginDeleteMethod~client'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~callback'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~options'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~apiVersion'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~queryParameters'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~regex'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~httpRequest'
+      - 'VirtualMachineScaleSets#beginDeleteMethod~headerName'
+  - uid: 'VirtualMachineScaleSets#get'
+    id: get
+    parent: VirtualMachineScaleSets
+    name: >-
+      get(resourceGroupName, vmScaleSetName, options, options.customHeaders,
+      callback)
+    summary: The operation to get a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSet} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, vmScaleSetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.get(resourceGroupName, vmScaleSetName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#get~client'
+      - 'VirtualMachineScaleSets#get~callback'
+      - 'VirtualMachineScaleSets#get~options'
+      - 'VirtualMachineScaleSets#get~apiVersion'
+      - 'VirtualMachineScaleSets#get~requestUrl'
+      - 'VirtualMachineScaleSets#get~requestUrl'
+      - 'VirtualMachineScaleSets#get~requestUrl'
+      - 'VirtualMachineScaleSets#get~requestUrl'
+      - 'VirtualMachineScaleSets#get~queryParameters'
+      - 'VirtualMachineScaleSets#get~requestUrl'
+      - 'VirtualMachineScaleSets#get~regex'
+      - 'VirtualMachineScaleSets#get~requestUrl'
+      - 'VirtualMachineScaleSets#get~httpRequest'
+      - 'VirtualMachineScaleSets#get~headerName'
+  - uid: 'VirtualMachineScaleSets#deleteInstances'
+    id: deleteInstances
+    parent: VirtualMachineScaleSets
+    name: >-
+      deleteInstances(resourceGroupName, vmScaleSetName, instanceIds, options,
+      options.customHeaders, callback)
+    summary: The operation to delete virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale set\rinstance ids."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteInstances(resourceGroupName, vmScaleSetName, instanceIds,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.deleteInstances(resourceGroupName, vmScaleSetName,
+      instanceIds, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#deleteInstances~client'
+      - 'VirtualMachineScaleSets#deleteInstances~callback'
+      - 'VirtualMachineScaleSets#deleteInstances~options'
+  - uid: 'VirtualMachineScaleSets#beginDeleteInstances'
+    id: beginDeleteInstances
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginDeleteInstances(resourceGroupName, vmScaleSetName, instanceIds,
+      options, options.customHeaders, callback)
+    summary: The operation to delete virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale set\rinstance ids."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteInstances(resourceGroupName, vmScaleSetName,
+        instanceIds, options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginDeleteInstances(resourceGroupName,
+      vmScaleSetName, instanceIds, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginDeleteInstances~client'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~callback'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~options'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~apiVersion'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~i'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~queryParameters'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~regex'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~httpRequest'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~headerName'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestContent'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestModel'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestModelMapper'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestModel'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~requestContent'
+      - 'VirtualMachineScaleSets#beginDeleteInstances~serializationError'
+  - uid: 'VirtualMachineScaleSets#getInstanceView'
+    id: getInstanceView
+    parent: VirtualMachineScaleSets
+    name: >-
+      getInstanceView(resourceGroupName, vmScaleSetName, options,
+      options.customHeaders, callback)
+    summary: The operation to get a virtual machine scale set instance view.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetInstanceView} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getInstanceView(resourceGroupName, vmScaleSetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.getInstanceView(resourceGroupName, vmScaleSetName,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#getInstanceView~client'
+      - 'VirtualMachineScaleSets#getInstanceView~callback'
+      - 'VirtualMachineScaleSets#getInstanceView~options'
+      - 'VirtualMachineScaleSets#getInstanceView~apiVersion'
+      - 'VirtualMachineScaleSets#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSets#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSets#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSets#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSets#getInstanceView~queryParameters'
+      - 'VirtualMachineScaleSets#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSets#getInstanceView~regex'
+      - 'VirtualMachineScaleSets#getInstanceView~requestUrl'
+      - 'VirtualMachineScaleSets#getInstanceView~httpRequest'
+      - 'VirtualMachineScaleSets#getInstanceView~headerName'
+  - uid: 'VirtualMachineScaleSets#list'
+    id: list
+    parent: VirtualMachineScaleSets
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: The operation to list virtual machine scale sets under a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSets.list(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#list~client'
+      - 'VirtualMachineScaleSets#list~callback'
+      - 'VirtualMachineScaleSets#list~options'
+      - 'VirtualMachineScaleSets#list~apiVersion'
+      - 'VirtualMachineScaleSets#list~requestUrl'
+      - 'VirtualMachineScaleSets#list~requestUrl'
+      - 'VirtualMachineScaleSets#list~requestUrl'
+      - 'VirtualMachineScaleSets#list~queryParameters'
+      - 'VirtualMachineScaleSets#list~requestUrl'
+      - 'VirtualMachineScaleSets#list~regex'
+      - 'VirtualMachineScaleSets#list~requestUrl'
+      - 'VirtualMachineScaleSets#list~httpRequest'
+      - 'VirtualMachineScaleSets#list~headerName'
+  - uid: 'VirtualMachineScaleSets#listAll'
+    id: listAll
+    parent: VirtualMachineScaleSets
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "Gets the list of Virtual Machine Scale Sets in the subscription. Use\rnextLink property in the response to get the next page of Virtual Machine\rScale Sets. Do this till nextLink is not null to fetch all the Virtual\rMachine Scale Sets."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetListWithLinkResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'VirtualMachineScaleSets.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'VirtualMachineScaleSets#listAll~client'
+      - 'VirtualMachineScaleSets#listAll~callback'
+      - 'VirtualMachineScaleSets#listAll~options'
+      - 'VirtualMachineScaleSets#listAll~apiVersion'
+      - 'VirtualMachineScaleSets#listAll~requestUrl'
+      - 'VirtualMachineScaleSets#listAll~requestUrl'
+      - 'VirtualMachineScaleSets#listAll~queryParameters'
+      - 'VirtualMachineScaleSets#listAll~requestUrl'
+      - 'VirtualMachineScaleSets#listAll~regex'
+      - 'VirtualMachineScaleSets#listAll~requestUrl'
+      - 'VirtualMachineScaleSets#listAll~httpRequest'
+      - 'VirtualMachineScaleSets#listAll~headerName'
+  - uid: 'VirtualMachineScaleSets#listSkus'
+    id: listSkus
+    parent: VirtualMachineScaleSets
+    name: >-
+      listSkus(resourceGroupName, vmScaleSetName, options,
+      options.customHeaders, callback)
+    summary: The operation to list available skus for a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetListSkusResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listSkus(resourceGroupName, vmScaleSetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.listSkus(resourceGroupName, vmScaleSetName,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#listSkus~client'
+      - 'VirtualMachineScaleSets#listSkus~callback'
+      - 'VirtualMachineScaleSets#listSkus~options'
+      - 'VirtualMachineScaleSets#listSkus~apiVersion'
+      - 'VirtualMachineScaleSets#listSkus~requestUrl'
+      - 'VirtualMachineScaleSets#listSkus~requestUrl'
+      - 'VirtualMachineScaleSets#listSkus~requestUrl'
+      - 'VirtualMachineScaleSets#listSkus~requestUrl'
+      - 'VirtualMachineScaleSets#listSkus~queryParameters'
+      - 'VirtualMachineScaleSets#listSkus~requestUrl'
+      - 'VirtualMachineScaleSets#listSkus~regex'
+      - 'VirtualMachineScaleSets#listSkus~requestUrl'
+      - 'VirtualMachineScaleSets#listSkus~httpRequest'
+      - 'VirtualMachineScaleSets#listSkus~headerName'
+  - uid: 'VirtualMachineScaleSets#powerOff'
+    id: powerOff
+    parent: VirtualMachineScaleSets
+    name: >-
+      powerOff(resourceGroupName, vmScaleSetName, options, options.instanceIds,
+      options.customHeaders, callback)
+    summary: "The operation to power off (stop) virtual machines in a virtual machine\rscale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function powerOff(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.powerOff(resourceGroupName, vmScaleSetName,
+      options, options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#powerOff~client'
+      - 'VirtualMachineScaleSets#powerOff~callback'
+      - 'VirtualMachineScaleSets#powerOff~options'
+  - uid: 'VirtualMachineScaleSets#beginPowerOff'
+    id: beginPowerOff
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginPowerOff(resourceGroupName, vmScaleSetName, options,
+      options.instanceIds, options.customHeaders, callback)
+    summary: "The operation to power off (stop) virtual machines in a virtual machine\rscale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginPowerOff(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginPowerOff(resourceGroupName, vmScaleSetName,
+      options, options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginPowerOff~client'
+      - 'VirtualMachineScaleSets#beginPowerOff~callback'
+      - 'VirtualMachineScaleSets#beginPowerOff~options'
+      - 'VirtualMachineScaleSets#beginPowerOff~instanceIds'
+      - 'VirtualMachineScaleSets#beginPowerOff~apiVersion'
+      - 'VirtualMachineScaleSets#beginPowerOff~i'
+      - 'VirtualMachineScaleSets#beginPowerOff~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginPowerOff~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSets#beginPowerOff~queryParameters'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSets#beginPowerOff~regex'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestUrl'
+      - 'VirtualMachineScaleSets#beginPowerOff~httpRequest'
+      - 'VirtualMachineScaleSets#beginPowerOff~headerName'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestContent'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestModel'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestModelMapper'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestModel'
+      - 'VirtualMachineScaleSets#beginPowerOff~requestContent'
+      - 'VirtualMachineScaleSets#beginPowerOff~serializationError'
+  - uid: 'VirtualMachineScaleSets#restart'
+    id: restart
+    parent: VirtualMachineScaleSets
+    name: >-
+      restart(resourceGroupName, vmScaleSetName, options, options.instanceIds,
+      options.customHeaders, callback)
+    summary: The operation to restart virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function restart(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.restart(resourceGroupName, vmScaleSetName,
+      options, options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#restart~client'
+      - 'VirtualMachineScaleSets#restart~callback'
+      - 'VirtualMachineScaleSets#restart~options'
+  - uid: 'VirtualMachineScaleSets#beginRestart'
+    id: beginRestart
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginRestart(resourceGroupName, vmScaleSetName, options,
+      options.instanceIds, options.customHeaders, callback)
+    summary: The operation to restart virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginRestart(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginRestart(resourceGroupName, vmScaleSetName,
+      options, options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginRestart~client'
+      - 'VirtualMachineScaleSets#beginRestart~callback'
+      - 'VirtualMachineScaleSets#beginRestart~options'
+      - 'VirtualMachineScaleSets#beginRestart~instanceIds'
+      - 'VirtualMachineScaleSets#beginRestart~apiVersion'
+      - 'VirtualMachineScaleSets#beginRestart~i'
+      - 'VirtualMachineScaleSets#beginRestart~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginRestart~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSets#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSets#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSets#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSets#beginRestart~queryParameters'
+      - 'VirtualMachineScaleSets#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSets#beginRestart~regex'
+      - 'VirtualMachineScaleSets#beginRestart~requestUrl'
+      - 'VirtualMachineScaleSets#beginRestart~httpRequest'
+      - 'VirtualMachineScaleSets#beginRestart~headerName'
+      - 'VirtualMachineScaleSets#beginRestart~requestContent'
+      - 'VirtualMachineScaleSets#beginRestart~requestModel'
+      - 'VirtualMachineScaleSets#beginRestart~requestModelMapper'
+      - 'VirtualMachineScaleSets#beginRestart~requestModel'
+      - 'VirtualMachineScaleSets#beginRestart~requestContent'
+      - 'VirtualMachineScaleSets#beginRestart~serializationError'
+  - uid: 'VirtualMachineScaleSets#start'
+    id: start
+    parent: VirtualMachineScaleSets
+    name: >-
+      start(resourceGroupName, vmScaleSetName, options, options.instanceIds,
+      options.customHeaders, callback)
+    summary: The operation to start virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function start(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.start(resourceGroupName, vmScaleSetName, options,
+      options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#start~client'
+      - 'VirtualMachineScaleSets#start~callback'
+      - 'VirtualMachineScaleSets#start~options'
+  - uid: 'VirtualMachineScaleSets#beginStart'
+    id: beginStart
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginStart(resourceGroupName, vmScaleSetName, options,
+      options.instanceIds, options.customHeaders, callback)
+    summary: The operation to start virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale\rset instance ids."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginStart(resourceGroupName, vmScaleSetName, options,
+        options.instanceIds, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginStart(resourceGroupName, vmScaleSetName,
+      options, options.instanceIds, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginStart~client'
+      - 'VirtualMachineScaleSets#beginStart~callback'
+      - 'VirtualMachineScaleSets#beginStart~options'
+      - 'VirtualMachineScaleSets#beginStart~instanceIds'
+      - 'VirtualMachineScaleSets#beginStart~apiVersion'
+      - 'VirtualMachineScaleSets#beginStart~i'
+      - 'VirtualMachineScaleSets#beginStart~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginStart~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginStart~requestUrl'
+      - 'VirtualMachineScaleSets#beginStart~requestUrl'
+      - 'VirtualMachineScaleSets#beginStart~requestUrl'
+      - 'VirtualMachineScaleSets#beginStart~requestUrl'
+      - 'VirtualMachineScaleSets#beginStart~queryParameters'
+      - 'VirtualMachineScaleSets#beginStart~requestUrl'
+      - 'VirtualMachineScaleSets#beginStart~regex'
+      - 'VirtualMachineScaleSets#beginStart~requestUrl'
+      - 'VirtualMachineScaleSets#beginStart~httpRequest'
+      - 'VirtualMachineScaleSets#beginStart~headerName'
+      - 'VirtualMachineScaleSets#beginStart~requestContent'
+      - 'VirtualMachineScaleSets#beginStart~requestModel'
+      - 'VirtualMachineScaleSets#beginStart~requestModelMapper'
+      - 'VirtualMachineScaleSets#beginStart~requestModel'
+      - 'VirtualMachineScaleSets#beginStart~requestContent'
+      - 'VirtualMachineScaleSets#beginStart~serializationError'
+  - uid: 'VirtualMachineScaleSets#updateInstances'
+    id: updateInstances
+    parent: VirtualMachineScaleSets
+    name: >-
+      updateInstances(resourceGroupName, vmScaleSetName, instanceIds, options,
+      options.customHeaders, callback)
+    summary: "The operation to manually upgrade virtual machines in a virtual machine\rscale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale set\rinstance ids."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateInstances(resourceGroupName, vmScaleSetName, instanceIds,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.updateInstances(resourceGroupName, vmScaleSetName,
+      instanceIds, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#updateInstances~client'
+      - 'VirtualMachineScaleSets#updateInstances~callback'
+      - 'VirtualMachineScaleSets#updateInstances~options'
+  - uid: 'VirtualMachineScaleSets#beginUpdateInstances'
+    id: beginUpdateInstances
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginUpdateInstances(resourceGroupName, vmScaleSetName, instanceIds,
+      options, options.customHeaders, callback)
+    summary: "The operation to manually upgrade virtual machines in a virtual machine\rscale set."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: instanceIds
+          type: array
+          description: "Gets or sets the virtual machine scale set\rinstance ids."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginUpdateInstances(resourceGroupName, vmScaleSetName,
+        instanceIds, options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginUpdateInstances(resourceGroupName,
+      vmScaleSetName, instanceIds, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginUpdateInstances~client'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~callback'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~options'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~apiVersion'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~i'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~vmInstanceIDs'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~queryParameters'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~regex'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestUrl'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~httpRequest'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~headerName'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestContent'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestModel'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestModelMapper'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestModel'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~requestContent'
+      - 'VirtualMachineScaleSets#beginUpdateInstances~serializationError'
+  - uid: 'VirtualMachineScaleSets#reimage'
+    id: reimage
+    parent: VirtualMachineScaleSets
+    name: >-
+      reimage(resourceGroupName, vmScaleSetName, options, options.customHeaders,
+      callback)
+    summary: The operation to re-image virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function reimage(resourceGroupName, vmScaleSetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.reimage(resourceGroupName, vmScaleSetName,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#reimage~client'
+      - 'VirtualMachineScaleSets#reimage~callback'
+      - 'VirtualMachineScaleSets#reimage~options'
+  - uid: 'VirtualMachineScaleSets#beginReimage'
+    id: beginReimage
+    parent: VirtualMachineScaleSets
+    name: >-
+      beginReimage(resourceGroupName, vmScaleSetName, options,
+      options.customHeaders, callback)
+    summary: The operation to re-image virtual machines in a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the virtual machine scale set.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginReimage(resourceGroupName, vmScaleSetName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineScaleSets.beginReimage(resourceGroupName, vmScaleSetName,
+      options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#beginReimage~client'
+      - 'VirtualMachineScaleSets#beginReimage~callback'
+      - 'VirtualMachineScaleSets#beginReimage~options'
+      - 'VirtualMachineScaleSets#beginReimage~apiVersion'
+      - 'VirtualMachineScaleSets#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSets#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSets#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSets#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSets#beginReimage~queryParameters'
+      - 'VirtualMachineScaleSets#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSets#beginReimage~regex'
+      - 'VirtualMachineScaleSets#beginReimage~requestUrl'
+      - 'VirtualMachineScaleSets#beginReimage~httpRequest'
+      - 'VirtualMachineScaleSets#beginReimage~headerName'
+  - uid: 'VirtualMachineScaleSets#listNext'
+    id: listNext
+    parent: VirtualMachineScaleSets
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: The operation to list virtual machine scale sets under a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSets.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#listNext~client'
+      - 'VirtualMachineScaleSets#listNext~callback'
+      - 'VirtualMachineScaleSets#listNext~options'
+      - 'VirtualMachineScaleSets#listNext~requestUrl'
+      - 'VirtualMachineScaleSets#listNext~requestUrl'
+      - 'VirtualMachineScaleSets#listNext~regex'
+      - 'VirtualMachineScaleSets#listNext~requestUrl'
+      - 'VirtualMachineScaleSets#listNext~httpRequest'
+      - 'VirtualMachineScaleSets#listNext~headerName'
+  - uid: 'VirtualMachineScaleSets#listAllNext'
+    id: listAllNext
+    parent: VirtualMachineScaleSets
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "Gets the list of Virtual Machine Scale Sets in the subscription. Use\rnextLink property in the response to get the next page of Virtual Machine\rScale Sets. Do this till nextLink is not null to fetch all the Virtual\rMachine Scale Sets."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetListWithLinkResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSets.listAllNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#listAllNext~client'
+      - 'VirtualMachineScaleSets#listAllNext~callback'
+      - 'VirtualMachineScaleSets#listAllNext~options'
+      - 'VirtualMachineScaleSets#listAllNext~requestUrl'
+      - 'VirtualMachineScaleSets#listAllNext~requestUrl'
+      - 'VirtualMachineScaleSets#listAllNext~regex'
+      - 'VirtualMachineScaleSets#listAllNext~requestUrl'
+      - 'VirtualMachineScaleSets#listAllNext~httpRequest'
+      - 'VirtualMachineScaleSets#listAllNext~headerName'
+  - uid: 'VirtualMachineScaleSets#listSkusNext'
+    id: listSkusNext
+    parent: VirtualMachineScaleSets
+    name: 'listSkusNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: The operation to list available skus for a virtual machine scale set.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineScaleSetListSkusResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listSkusNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualMachineScaleSets.listSkusNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualMachineScaleSets#listSkusNext~client'
+      - 'VirtualMachineScaleSets#listSkusNext~callback'
+      - 'VirtualMachineScaleSets#listSkusNext~options'
+      - 'VirtualMachineScaleSets#listSkusNext~requestUrl'
+      - 'VirtualMachineScaleSets#listSkusNext~requestUrl'
+      - 'VirtualMachineScaleSets#listSkusNext~regex'
+      - 'VirtualMachineScaleSets#listSkusNext~requestUrl'
+      - 'VirtualMachineScaleSets#listSkusNext~httpRequest'
+      - 'VirtualMachineScaleSets#listSkusNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

@@ -1,0 +1,117 @@
+items:
+  - uid: ItemOperations~ItemOperations
+    id: ItemOperations
+    parent: ItemOperations
+    name: ItemOperations
+    type: Class
+    syntax:
+      content: ItemOperations
+    fullName: ItemOperations.ItemOperations
+    children:
+      - 'ItemOperations~ItemOperations#client'
+      - 'ItemOperations~ItemOperations#get'
+      - 'ItemOperations~ItemOperations#list'
+  - uid: 'ItemOperations~ItemOperations#client'
+    id: client
+    parent: ItemOperations~ItemOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ItemOperations~ItemOperations.client
+  - uid: 'ItemOperations~ItemOperations#get'
+    id: get
+    parent: ItemOperations~ItemOperations
+    name: 'get(itemIdentity, callback)'
+    summary: Gets a gallery items.
+    type: Method
+    syntax:
+      parameters:
+        - id: itemIdentity
+          type: string
+          description: Gallery item identity.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(itemIdentity, callback);'
+    fullName: 'ItemOperations~ItemOperations.get(itemIdentity, callback)'
+    children:
+      - 'ItemOperations~ItemOperations#get~url2'
+      - 'ItemOperations~ItemOperations#get~url2'
+      - 'ItemOperations~ItemOperations#get~url2'
+      - 'ItemOperations~ItemOperations#get~queryParameters'
+      - 'ItemOperations~ItemOperations#get~url2'
+      - 'ItemOperations~ItemOperations#get~baseUrl'
+      - 'ItemOperations~ItemOperations#get~baseUrl'
+      - 'ItemOperations~ItemOperations#get~url2'
+      - 'ItemOperations~ItemOperations#get~url2'
+      - 'ItemOperations~ItemOperations#get~url2'
+      - 'ItemOperations~ItemOperations#get~httpRequest'
+  - uid: 'ItemOperations~ItemOperations#list'
+    id: list
+    parent: ItemOperations~ItemOperations
+    name: >-
+      list(parametersOrCallback, parametersOrCallback.filter,
+      parametersOrCallback.top, callback)
+    summary: Gets collection of gallery items.
+    type: Method
+    syntax:
+      parameters:
+        - id: parametersOrCallback
+          type: ItemListParameters
+          description: "Query parameters. If\rnull is passed returns all gallery items."
+        - id: parametersOrCallback.filter
+          type: string
+          description: "Gets or sets OData filter.\rOptional."
+        - id: parametersOrCallback.top
+          type: number
+          description: "Number of items to return.\rOptional."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function list(parametersOrCallback, parametersOrCallback.filter,
+        parametersOrCallback.top, callback);
+    fullName: >-
+      ItemOperations~ItemOperations.list(parametersOrCallback,
+      parametersOrCallback.filter, parametersOrCallback.top, callback)
+    children:
+      - 'ItemOperations~ItemOperations#list~parameters'
+      - 'ItemOperations~ItemOperations#list~callback'
+      - 'ItemOperations~ItemOperations#list~parameters'
+      - 'ItemOperations~ItemOperations#list~url2'
+      - 'ItemOperations~ItemOperations#list~url2'
+      - 'ItemOperations~ItemOperations#list~queryParameters'
+      - 'ItemOperations~ItemOperations#list~odataFilter'
+      - 'ItemOperations~ItemOperations#list~url2'
+      - 'ItemOperations~ItemOperations#list~baseUrl'
+      - 'ItemOperations~ItemOperations#list~baseUrl'
+      - 'ItemOperations~ItemOperations#list~url2'
+      - 'ItemOperations~ItemOperations#list~url2'
+      - 'ItemOperations~ItemOperations#list~url2'
+      - 'ItemOperations~ItemOperations#list~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: ItemListParameters
+    name: ItemListParameters
+    fullName: ItemListParameters
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

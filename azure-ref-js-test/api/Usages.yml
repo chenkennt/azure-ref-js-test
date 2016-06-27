@@ -1,0 +1,106 @@
+items:
+  - uid: Usages
+    id: Usages
+    name: Usages
+    type: Class
+    syntax:
+      content: Usages
+    fullName: Usages
+    children:
+      - 'Usages#client'
+      - 'Usages#list'
+      - 'Usages#listNext'
+  - uid: 'Usages#client'
+    id: client
+    parent: Usages
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Usages.client
+  - uid: 'Usages#list'
+    id: list
+    parent: Usages
+    name: 'list(location, options, options.customHeaders, callback)'
+    summary: Lists compute usages for a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: location
+          type: string
+          description: The location upon which resource usage is queried.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UsagesListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(location, options, options.customHeaders, callback);'
+    fullName: 'Usages.list(location, options, options.customHeaders, callback)'
+    children:
+      - 'Usages#list~client'
+      - 'Usages#list~callback'
+      - 'Usages#list~options'
+      - 'Usages#list~requestUrl'
+      - 'Usages#list~requestUrl'
+      - 'Usages#list~requestUrl'
+      - 'Usages#list~queryParameters'
+      - 'Usages#list~requestUrl'
+      - 'Usages#list~regex'
+      - 'Usages#list~requestUrl'
+      - 'Usages#list~httpRequest'
+      - 'Usages#list~headerName'
+  - uid: 'Usages#listNext'
+    id: listNext
+    parent: Usages
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Lists compute usages for a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UsagesListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: 'Usages.listNext(nextPageLink, options, options.customHeaders, callback)'
+    children:
+      - 'Usages#listNext~client'
+      - 'Usages#listNext~callback'
+      - 'Usages#listNext~options'
+      - 'Usages#listNext~requestUrl'
+      - 'Usages#listNext~requestUrl'
+      - 'Usages#listNext~regex'
+      - 'Usages#listNext~requestUrl'
+      - 'Usages#listNext~httpRequest'
+      - 'Usages#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

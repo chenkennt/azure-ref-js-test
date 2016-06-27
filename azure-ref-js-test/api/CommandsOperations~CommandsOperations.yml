@@ -1,0 +1,80 @@
+items:
+  - uid: CommandsOperations~CommandsOperations
+    id: CommandsOperations
+    parent: CommandsOperations
+    name: CommandsOperations
+    type: Class
+    syntax:
+      content: CommandsOperations
+    fullName: CommandsOperations.CommandsOperations
+    children:
+      - 'CommandsOperations~CommandsOperations#client'
+      - 'CommandsOperations~CommandsOperations#invoke'
+  - uid: 'CommandsOperations~CommandsOperations#client'
+    id: client
+    parent: CommandsOperations~CommandsOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: CommandsOperations~CommandsOperations.client
+  - uid: 'CommandsOperations~CommandsOperations#invoke'
+    id: invoke
+    parent: CommandsOperations~CommandsOperations
+    name: 'invoke(parameters, parameters.command, parameters.directory, callback)'
+    summary: Invoke a command on the website's VM.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: InvokeCommandParameters
+          description: The invoke command parameters.
+        - id: parameters.command
+          type: string
+          description: The command to invoke.
+        - id: parameters.directory
+          type: string
+          description: The directory to invoke command in.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function invoke(parameters, parameters.command, parameters.directory,
+        callback);
+    fullName: >-
+      CommandsOperations~CommandsOperations.invoke(parameters,
+      parameters.command, parameters.directory, callback)
+    children:
+      - 'CommandsOperations~CommandsOperations#invoke~url2'
+      - 'CommandsOperations~CommandsOperations#invoke~url2'
+      - 'CommandsOperations~CommandsOperations#invoke~baseUrl'
+      - 'CommandsOperations~CommandsOperations#invoke~baseUrl'
+      - 'CommandsOperations~CommandsOperations#invoke~url2'
+      - 'CommandsOperations~CommandsOperations#invoke~url2'
+      - 'CommandsOperations~CommandsOperations#invoke~url2'
+      - 'CommandsOperations~CommandsOperations#invoke~httpRequest'
+      - 'CommandsOperations~CommandsOperations#invoke~requestContent'
+      - 'CommandsOperations~CommandsOperations#invoke~requestDoc'
+      - >-
+        CommandsOperations~CommandsOperations#invoke~invokeCommandParametersValue
+      - 'CommandsOperations~CommandsOperations#invoke~requestDoc'
+      - 'CommandsOperations~CommandsOperations#invoke~requestContent'
+references:
+  - uid: InvokeCommandParameters
+    name: InvokeCommandParameters
+    fullName: InvokeCommandParameters
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

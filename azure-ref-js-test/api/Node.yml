@@ -1,0 +1,579 @@
+items:
+  - uid: Node
+    id: Node
+    name: Node
+    type: Class
+    syntax:
+      content: Node
+    fullName: Node
+    children:
+      - 'Node#client'
+      - 'Node#create'
+      - 'Node#beginCreate'
+      - 'Node#update'
+      - 'Node#beginUpdate'
+      - 'Node#deleteMethod'
+      - 'Node#get'
+      - 'Node#list'
+      - 'Node#listForResourceGroup'
+      - 'Node#listNext'
+      - 'Node#listForResourceGroupNext'
+  - uid: 'Node#client'
+    id: client
+    parent: Node
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Node.client
+  - uid: 'Node#create'
+    id: create
+    parent: Node
+    name: >-
+      create(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    summary: Creates or updates a management node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.location
+          type: string
+          description: location of the resource?
+        - id: options.tags
+          type: object
+          description: resource tags
+        - id: options.gatewayId
+          type: string
+          description: Gateway id which will manage this node
+        - id: options.connectionName
+          type: string
+          description: myhost.domain.com
+        - id: options.userName
+          type: string
+          description: User name to be used to connect to node
+        - id: options.password
+          type: string
+          description: Password associated with user name
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(resourceGroupName, nodeName, options, options.location,
+        options.tags, options.gatewayId, options.connectionName,
+        options.userName, options.password, options.customHeaders, callback);
+    fullName: >-
+      Node.create(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    children:
+      - 'Node#create~client'
+      - 'Node#create~callback'
+      - 'Node#create~options'
+  - uid: 'Node#beginCreate'
+    id: beginCreate
+    parent: Node
+    name: >-
+      beginCreate(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    summary: Creates or updates a management node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.location
+          type: string
+          description: location of the resource?
+        - id: options.tags
+          type: object
+          description: resource tags
+        - id: options.gatewayId
+          type: string
+          description: Gateway id which will manage this node
+        - id: options.connectionName
+          type: string
+          description: myhost.domain.com
+        - id: options.userName
+          type: string
+          description: User name to be used to connect to node
+        - id: options.password
+          type: string
+          description: Password associated with user name
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(resourceGroupName, nodeName, options,
+        options.location, options.tags, options.gatewayId,
+        options.connectionName, options.userName, options.password,
+        options.customHeaders, callback);
+    fullName: >-
+      Node.beginCreate(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    children:
+      - 'Node#beginCreate~client'
+      - 'Node#beginCreate~callback'
+      - 'Node#beginCreate~options'
+      - 'Node#beginCreate~location'
+      - 'Node#beginCreate~tags'
+      - 'Node#beginCreate~gatewayId'
+      - 'Node#beginCreate~connectionName'
+      - 'Node#beginCreate~userName'
+      - 'Node#beginCreate~password'
+      - 'Node#beginCreate~gatewayParameters'
+      - 'Node#beginCreate~gatewayParameters'
+      - 'Node#beginCreate~requestUrl'
+      - 'Node#beginCreate~requestUrl'
+      - 'Node#beginCreate~requestUrl'
+      - 'Node#beginCreate~requestUrl'
+      - 'Node#beginCreate~queryParameters'
+      - 'Node#beginCreate~requestUrl'
+      - 'Node#beginCreate~regex'
+      - 'Node#beginCreate~requestUrl'
+      - 'Node#beginCreate~httpRequest'
+      - 'Node#beginCreate~headerName'
+      - 'Node#beginCreate~requestContent'
+      - 'Node#beginCreate~requestModel'
+      - 'Node#beginCreate~requestModelMapper'
+      - 'Node#beginCreate~requestModel'
+      - 'Node#beginCreate~requestContent'
+      - 'Node#beginCreate~serializationError'
+  - uid: 'Node#update'
+    id: update
+    parent: Node
+    name: >-
+      update(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    summary: Updates a management node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.location
+          type: string
+          description: location of the resource?
+        - id: options.tags
+          type: object
+          description: resource tags
+        - id: options.gatewayId
+          type: string
+          description: Gateway id which will manage this node
+        - id: options.connectionName
+          type: string
+          description: myhost.domain.com
+        - id: options.userName
+          type: string
+          description: User name to be used to connect to node
+        - id: options.password
+          type: string
+          description: Password associated with user name
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(resourceGroupName, nodeName, options, options.location,
+        options.tags, options.gatewayId, options.connectionName,
+        options.userName, options.password, options.customHeaders, callback);
+    fullName: >-
+      Node.update(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    children:
+      - 'Node#update~client'
+      - 'Node#update~callback'
+      - 'Node#update~options'
+  - uid: 'Node#beginUpdate'
+    id: beginUpdate
+    parent: Node
+    name: >-
+      beginUpdate(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    summary: Updates a management node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.location
+          type: string
+          description: location of the resource?
+        - id: options.tags
+          type: object
+          description: resource tags
+        - id: options.gatewayId
+          type: string
+          description: Gateway id which will manage this node
+        - id: options.connectionName
+          type: string
+          description: myhost.domain.com
+        - id: options.userName
+          type: string
+          description: User name to be used to connect to node
+        - id: options.password
+          type: string
+          description: Password associated with user name
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginUpdate(resourceGroupName, nodeName, options,
+        options.location, options.tags, options.gatewayId,
+        options.connectionName, options.userName, options.password,
+        options.customHeaders, callback);
+    fullName: >-
+      Node.beginUpdate(resourceGroupName, nodeName, options, options.location,
+      options.tags, options.gatewayId, options.connectionName, options.userName,
+      options.password, options.customHeaders, callback)
+    children:
+      - 'Node#beginUpdate~client'
+      - 'Node#beginUpdate~callback'
+      - 'Node#beginUpdate~options'
+      - 'Node#beginUpdate~location'
+      - 'Node#beginUpdate~tags'
+      - 'Node#beginUpdate~gatewayId'
+      - 'Node#beginUpdate~connectionName'
+      - 'Node#beginUpdate~userName'
+      - 'Node#beginUpdate~password'
+      - 'Node#beginUpdate~nodeParameters'
+      - 'Node#beginUpdate~nodeParameters'
+      - 'Node#beginUpdate~requestUrl'
+      - 'Node#beginUpdate~requestUrl'
+      - 'Node#beginUpdate~requestUrl'
+      - 'Node#beginUpdate~requestUrl'
+      - 'Node#beginUpdate~queryParameters'
+      - 'Node#beginUpdate~requestUrl'
+      - 'Node#beginUpdate~regex'
+      - 'Node#beginUpdate~requestUrl'
+      - 'Node#beginUpdate~httpRequest'
+      - 'Node#beginUpdate~headerName'
+      - 'Node#beginUpdate~requestContent'
+      - 'Node#beginUpdate~requestModel'
+      - 'Node#beginUpdate~requestModelMapper'
+      - 'Node#beginUpdate~requestModel'
+      - 'Node#beginUpdate~requestContent'
+      - 'Node#beginUpdate~serializationError'
+  - uid: 'Node#deleteMethod'
+    id: deleteMethod
+    parent: Node
+    name: >-
+      deleteMethod(resourceGroupName, nodeName, options, options.customHeaders,
+      callback)
+    summary: deletes a management node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, nodeName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Node.deleteMethod(resourceGroupName, nodeName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Node#deleteMethod~client'
+      - 'Node#deleteMethod~callback'
+      - 'Node#deleteMethod~options'
+      - 'Node#deleteMethod~requestUrl'
+      - 'Node#deleteMethod~requestUrl'
+      - 'Node#deleteMethod~requestUrl'
+      - 'Node#deleteMethod~requestUrl'
+      - 'Node#deleteMethod~queryParameters'
+      - 'Node#deleteMethod~requestUrl'
+      - 'Node#deleteMethod~regex'
+      - 'Node#deleteMethod~requestUrl'
+      - 'Node#deleteMethod~httpRequest'
+      - 'Node#deleteMethod~headerName'
+  - uid: 'Node#get'
+    id: get
+    parent: Node
+    name: 'get(resourceGroupName, nodeName, options, options.customHeaders, callback)'
+    summary: gets a management node
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: nodeName
+          type: string
+          description: The node name (256 characters maximum).
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, nodeName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Node.get(resourceGroupName, nodeName, options, options.customHeaders,
+      callback)
+    children:
+      - 'Node#get~client'
+      - 'Node#get~callback'
+      - 'Node#get~options'
+      - 'Node#get~requestUrl'
+      - 'Node#get~requestUrl'
+      - 'Node#get~requestUrl'
+      - 'Node#get~requestUrl'
+      - 'Node#get~queryParameters'
+      - 'Node#get~requestUrl'
+      - 'Node#get~regex'
+      - 'Node#get~requestUrl'
+      - 'Node#get~httpRequest'
+      - 'Node#get~headerName'
+  - uid: 'Node#list'
+    id: list
+    parent: Node
+    name: 'list(options, options.customHeaders, callback)'
+    summary: Returns nodes in a subscription
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResources} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.customHeaders, callback);'
+    fullName: 'Node.list(options, options.customHeaders, callback)'
+    children:
+      - 'Node#list~client'
+      - 'Node#list~callback'
+      - 'Node#list~options'
+      - 'Node#list~requestUrl'
+      - 'Node#list~requestUrl'
+      - 'Node#list~queryParameters'
+      - 'Node#list~requestUrl'
+      - 'Node#list~regex'
+      - 'Node#list~requestUrl'
+      - 'Node#list~httpRequest'
+      - 'Node#list~headerName'
+  - uid: 'Node#listForResourceGroup'
+    id: listForResourceGroup
+    parent: Node
+    name: >-
+      listForResourceGroup(resourceGroupName, options, options.customHeaders,
+      callback)
+    summary: Returns nodes in a resource group
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The resource group name uniquely\ridentifies the resource group within the user subscriptionId."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResources} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForResourceGroup(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Node.listForResourceGroup(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Node#listForResourceGroup~client'
+      - 'Node#listForResourceGroup~callback'
+      - 'Node#listForResourceGroup~options'
+      - 'Node#listForResourceGroup~requestUrl'
+      - 'Node#listForResourceGroup~requestUrl'
+      - 'Node#listForResourceGroup~requestUrl'
+      - 'Node#listForResourceGroup~queryParameters'
+      - 'Node#listForResourceGroup~requestUrl'
+      - 'Node#listForResourceGroup~regex'
+      - 'Node#listForResourceGroup~requestUrl'
+      - 'Node#listForResourceGroup~httpRequest'
+      - 'Node#listForResourceGroup~headerName'
+  - uid: 'Node#listNext'
+    id: listNext
+    parent: Node
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Returns nodes in a subscription
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResources} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: 'Node.listNext(nextPageLink, options, options.customHeaders, callback)'
+    children:
+      - 'Node#listNext~client'
+      - 'Node#listNext~callback'
+      - 'Node#listNext~options'
+      - 'Node#listNext~requestUrl'
+      - 'Node#listNext~requestUrl'
+      - 'Node#listNext~regex'
+      - 'Node#listNext~requestUrl'
+      - 'Node#listNext~httpRequest'
+      - 'Node#listNext~headerName'
+  - uid: 'Node#listForResourceGroupNext'
+    id: listForResourceGroupNext
+    parent: Node
+    name: >-
+      listForResourceGroupNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Returns nodes in a resource group
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeResources} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForResourceGroupNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Node.listForResourceGroupNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Node#listForResourceGroupNext~client'
+      - 'Node#listForResourceGroupNext~callback'
+      - 'Node#listForResourceGroupNext~options'
+      - 'Node#listForResourceGroupNext~requestUrl'
+      - 'Node#listForResourceGroupNext~requestUrl'
+      - 'Node#listForResourceGroupNext~regex'
+      - 'Node#listForResourceGroupNext~requestUrl'
+      - 'Node#listForResourceGroupNext~httpRequest'
+      - 'Node#listForResourceGroupNext~headerName'
+  - uid: 'Node#mapper'
+    id: mapper
+    parent: Node
+    name: mapper()
+    summary: Defines the metadata of Node
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: metadata of Node
+      content: function mapper();
+    fullName: Node.mapper()
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

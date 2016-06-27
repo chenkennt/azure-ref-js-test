@@ -1,0 +1,190 @@
+items:
+  - uid: ConnectionStringParser
+    id: ConnectionStringParser
+    name: ConnectionStringParser
+    summary: Creates a new 'ConnectionString' instance.
+    type: Class
+    syntax:
+      content: ConnectionStringParser
+    fullName: ConnectionStringParser
+    children:
+      - 'ConnectionStringParser#_value'
+      - 'ConnectionStringParser#_pos'
+      - 'ConnectionStringParser#_state'
+      - 'ConnectionStringParser#_parse'
+      - 'ConnectionStringParser#_state'
+      - 'ConnectionStringParser#_state'
+      - 'ConnectionStringParser#_state'
+      - 'ConnectionStringParser#_state'
+      - 'ConnectionStringParser#_skipWhitespaces'
+      - 'ConnectionStringParser#_extractKey'
+      - 'ConnectionStringParser#_extractString'
+      - 'ConnectionStringParser#_skipOperator'
+      - 'ConnectionStringParser#_extractValue'
+  - uid: 'ConnectionStringParser#_value'
+    id: _value
+    parent: ConnectionStringParser
+    name: _value
+    type: Field
+    syntax:
+      content: _value
+    fullName: ConnectionStringParser._value
+  - uid: 'ConnectionStringParser#_pos'
+    id: _pos
+    parent: ConnectionStringParser
+    name: _pos
+    type: Field
+    syntax:
+      content: _pos
+    fullName: ConnectionStringParser._pos
+  - uid: 'ConnectionStringParser#_state'
+    id: _state
+    parent: ConnectionStringParser
+    name: _state
+    type: Field
+    syntax:
+      content: _state
+    fullName: ConnectionStringParser._state
+  - uid: 'ConnectionStringParser#_parse'
+    id: _parse
+    parent: ConnectionStringParser
+    name: _parse()
+    summary: Parses a connection string into an object.
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: The query string object.
+      content: function _parse();
+    fullName: ConnectionStringParser._parse()
+    children:
+      - 'ConnectionStringParser#_parse~key'
+      - 'ConnectionStringParser#_parse~value'
+      - 'ConnectionStringParser#_parse~parsedConnectionString'
+      - 'ConnectionStringParser#_parse~key'
+      - 'ConnectionStringParser#_parse~value'
+      - 'ConnectionStringParser#_parse~key'
+      - 'ConnectionStringParser#_parse~value'
+  - uid: 'ConnectionStringParser#_state'
+    id: _state
+    parent: ConnectionStringParser
+    name: _state
+    type: Field
+    syntax:
+      content: _state
+    fullName: ConnectionStringParser._state
+  - uid: 'ConnectionStringParser#_state'
+    id: _state
+    parent: ConnectionStringParser
+    name: _state
+    type: Field
+    syntax:
+      content: _state
+    fullName: ConnectionStringParser._state
+  - uid: 'ConnectionStringParser#_state'
+    id: _state
+    parent: ConnectionStringParser
+    name: _state
+    type: Field
+    syntax:
+      content: _state
+    fullName: ConnectionStringParser._state
+  - uid: 'ConnectionStringParser#_state'
+    id: _state
+    parent: ConnectionStringParser
+    name: _state
+    type: Field
+    syntax:
+      content: _state
+    fullName: ConnectionStringParser._state
+  - uid: 'ConnectionStringParser#_skipWhitespaces'
+    id: _skipWhitespaces
+    parent: ConnectionStringParser
+    name: _skipWhitespaces()
+    summary: Skips whitespaces at the current position.
+    type: Method
+    syntax:
+      content: function _skipWhitespaces();
+    fullName: ConnectionStringParser._skipWhitespaces()
+  - uid: 'ConnectionStringParser#_extractKey'
+    id: _extractKey
+    parent: ConnectionStringParser
+    name: _extractKey()
+    summary: Extracts key at the current position.
+    type: Method
+    syntax:
+      return:
+        type: string
+        description: Key.
+      content: function _extractKey();
+    fullName: ConnectionStringParser._extractKey()
+    children:
+      - 'ConnectionStringParser#_extractKey~key'
+      - 'ConnectionStringParser#_extractKey~firstPos'
+      - 'ConnectionStringParser#_extractKey~ch'
+      - 'ConnectionStringParser#_extractKey~key'
+      - 'ConnectionStringParser#_extractKey~ch'
+      - 'ConnectionStringParser#_extractKey~key'
+  - uid: 'ConnectionStringParser#_extractString'
+    id: _extractString
+    parent: ConnectionStringParser
+    name: _extractString(quote)
+    summary: Extracts the string until the given quotation mark.
+    type: Method
+    syntax:
+      parameters:
+        - id: quote
+          type: string
+          description: Quotation mark terminating the string.
+      return:
+        type: string
+        description: string.
+      content: function _extractString(quote);
+    fullName: ConnectionStringParser._extractString(quote)
+    children:
+      - 'ConnectionStringParser#_extractString~firstPos'
+  - uid: 'ConnectionStringParser#_skipOperator'
+    id: _skipOperator
+    parent: ConnectionStringParser
+    name: _skipOperator(operatorChar)
+    summary: Skips specified operator.
+    type: Method
+    syntax:
+      parameters:
+        - id: operatorChar
+          type: string
+          description: The oeprator to skip.
+      content: function _skipOperator(operatorChar);
+    fullName: ConnectionStringParser._skipOperator(operatorChar)
+    children:
+      - 'ConnectionStringParser#_skipOperator~currentChar'
+  - uid: 'ConnectionStringParser#_extractValue'
+    id: _extractValue
+    parent: ConnectionStringParser
+    name: _extractValue()
+    summary: Extracts key's value.
+    type: Method
+    syntax:
+      return:
+        type: string
+        description: The key value.
+      content: function _extractValue();
+    fullName: ConnectionStringParser._extractValue()
+    children:
+      - 'ConnectionStringParser#_extractValue~value'
+      - 'ConnectionStringParser#_extractValue~ch'
+      - 'ConnectionStringParser#_extractValue~value'
+      - 'ConnectionStringParser#_extractValue~firstPos'
+      - 'ConnectionStringParser#_extractValue~isFound'
+      - 'ConnectionStringParser#_extractValue~ch'
+      - 'ConnectionStringParser#_extractValue~isFound'
+      - 'ConnectionStringParser#_extractValue~value'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false

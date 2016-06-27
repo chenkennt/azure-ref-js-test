@@ -1,0 +1,821 @@
+items:
+  - uid: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    id: VirtualMachineOSImageOperations
+    parent: VirtualMachineOSImageOperations
+    name: VirtualMachineOSImageOperations
+    type: Class
+    syntax:
+      content: VirtualMachineOSImageOperations
+    fullName: VirtualMachineOSImageOperations.VirtualMachineOSImageOperations
+    children:
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#client'
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create'
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get'
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list'
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share'
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update'
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#client'
+    id: client
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.client
+  - uid: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+    id: beginSharing
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: 'beginSharing(imageName, permission, callback)'
+    summary: "Share an already replicated OS image. This operation is only for\rpublishers. You have to be registered as image publisher with Windows\rAzure to be able to call this."
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: The name of the virtual machine image to share.
+        - id: permission
+          type: string
+          description: "The sharing permission: public, msdn, or\rprivate."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginSharing(imageName, permission, callback);'
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginSharing(imageName,
+      permission, callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~queryParameters
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing~httpRequest
+  - uid: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+    id: beginUnreplicating
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: 'beginUnreplicating(imageName, callback)'
+    summary: "Unreplicate an OS image to multiple target locations. This operation is\ronly for publishers. You have to be registered as image publisher with\rWindows Azure to be able to call this. Note: The operation removes the\rpublished copies of the user OS Image. It does not remove the actual user\rOS Image. To remove the actual user OS Image, the publisher will have to\rcall Delete OS Image."
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: "The name of the virtual machine image to\rreplicate. Note: The OS Image Name should be the user OS Image, not the\rpublished name of the OS Image."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginUnreplicating(imageName, callback);'
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginUnreplicating(imageName,
+      callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating~httpRequest
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create'
+    id: create
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: >-
+      create(parameters, parameters.label, parameters.mediaLinkUri,
+      parameters.name, parameters.operatingSystemType, parameters.eula,
+      parameters.description, parameters.imageFamily, parameters.publishedDate,
+      parameters.isPremium, parameters.showInGui, parameters.privacyUri,
+      parameters.iconUri, parameters.recommendedVMSize, parameters.smallIconUri,
+      parameters.language, callback)
+    summary: "The Create OS Image operation adds an operating system image that is\rstored in a storage account and is available from the image repository.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157192.aspx\rfor more information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: VirtualMachineOSImageCreateParameters
+          description: "Parameters\rsupplied to the Create Virtual Machine Image operation."
+        - id: parameters.label
+          type: string
+          description: Specifies the friendly name of the image.
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the blob\rin Azure storage. The blob location must belong to a storage account in\rthe subscription specified by the SubscriptionId value in the operation\rcall. Example: http://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: parameters.name
+          type: string
+          description: "Specifies a name that Azure uses to\ridentify the image when creating one or more virtual machines."
+        - id: parameters.operatingSystemType
+          type: string
+          description: "The operating system type\rof the OS image. Possible values are: Linux or Windows."
+        - id: parameters.eula
+          type: string
+          description: "Specifies the End User License Agreement\rthat is associated with the image. The value for this element is a\rstring, but it is recommended that the value be a URL that points to a\rEULA."
+        - id: parameters.description
+          type: string
+          description: "Specifies the description of the\rOS image."
+        - id: parameters.imageFamily
+          type: string
+          description: "Specifies a value that can be\rused to group OS images."
+        - id: parameters.publishedDate
+          type: date
+          description: "Specifies the date when the OS\rimage was added to the image repository."
+        - id: parameters.isPremium
+          type: boolean
+          description: "Indicates if the image contains\rsoftware or associated services that will incur charges above the core\rprice for the virtual machine."
+        - id: parameters.showInGui
+          type: boolean
+          description: "Specifies whether the image should\rappear in the image gallery."
+        - id: parameters.privacyUri
+          type: string
+          description: "Specifies the URI that points to a\rdocument that contains the privacy policy related to the OS image."
+        - id: parameters.iconUri
+          type: string
+          description: "Specifies the URI to the icon that is\rdisplayed for the image in the Management Portal."
+        - id: parameters.recommendedVMSize
+          type: string
+          description: "Specifies the size to use\rfor the virtual machine that is created from the OS image."
+        - id: parameters.smallIconUri
+          type: string
+          description: "Specifies the URI to the small\ricon that is displayed when the image is presented in the Azure\rManagement Portal. The SmallIconUri element is only available using\rversion 2013-03-01 or higher."
+        - id: parameters.language
+          type: string
+          description: "Specifies the language of the image.\rThe Language element is only available using version 2013-03-01 or higher."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.label, parameters.mediaLinkUri,
+        parameters.name, parameters.operatingSystemType, parameters.eula,
+        parameters.description, parameters.imageFamily,
+        parameters.publishedDate, parameters.isPremium, parameters.showInGui,
+        parameters.privacyUri, parameters.iconUri, parameters.recommendedVMSize,
+        parameters.smallIconUri, parameters.language, callback);
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.create(parameters,
+      parameters.label, parameters.mediaLinkUri, parameters.name,
+      parameters.operatingSystemType, parameters.eula, parameters.description,
+      parameters.imageFamily, parameters.publishedDate, parameters.isPremium,
+      parameters.showInGui, parameters.privacyUri, parameters.iconUri,
+      parameters.recommendedVMSize, parameters.smallIconUri,
+      parameters.language, callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~httpRequest
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~requestContent
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~requestDoc
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~oSImageElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~labelElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~mediaLinkElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~nameElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~osElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~eulaElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~descriptionElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~imageFamilyElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~publishedDateElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~isPremiumElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~showInGuiElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~privacyUriElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~iconUriElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~recommendedVMSizeElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~smallIconUriElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~languageElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~requestContent
+  - uid: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+    id: deleteMethod
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: 'deleteMethod(imageName, deleteFromStorage, callback)'
+    summary: "The Delete OS Image operation deletes the specified OS image from your\rimage repository.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157203.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: The name of the image to delete.
+        - id: deleteFromStorage
+          type: boolean
+          description: "Specifies that the source blob for\rthe image should also be deleted from storage."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(imageName, deleteFromStorage, callback);'
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.deleteMethod(imageName,
+      deleteFromStorage, callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~queryParameters
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod~httpRequest
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get'
+    id: get
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: 'get(imageName, callback)'
+    summary: "The Get OS Image operation retrieves the details for an operating system\rimage from the image repository.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: The name of the OS image to retrieve.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(imageName, callback);'
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.get(imageName,
+      callback)
+    children:
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~baseUrl
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~url2'
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get~httpRequest
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails'
+    id: getDetails
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: 'getDetails(imageName, callback)'
+    summary: "Gets OS Image's properties and its replication details. This operation is\ronly for publishers. You have to be registered as image publisher with\rWindows Azure to be able to call this."
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: "The name of the virtual machine image to\rreplicate."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getDetails(imageName, callback);'
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.getDetails(imageName,
+      callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails~httpRequest
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list'
+    id: list
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: list(callback)
+    summary: "The List OS Images operation retrieves a list of the operating system\rimages from the image repository.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.list(callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list~httpRequest
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate'
+    id: replicate
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: >-
+      replicate(imageName, parameters, parameters.targetLocations,
+      parameters.computeImageAttributes,
+      parameters.computeImageAttributes.offer,
+      parameters.computeImageAttributes.sku,
+      parameters.computeImageAttributes.version,
+      parameters.marketplaceImageAttributes,
+      parameters.marketplaceImageAttributes.publisherId,
+      parameters.marketplaceImageAttributes.plan,
+      parameters.marketplaceImageAttributes.plan.name,
+      parameters.marketplaceImageAttributes.plan.publisher,
+      parameters.marketplaceImageAttributes.plan.product, callback)
+    summary: "Replicate an OS image to multiple target locations. This operation is only\rfor publishers. You have to be registered as image publisher with Windows\rAzure to be able to call this."
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: "The name of the virtual machine OS image to\rreplicate."
+        - id: parameters
+          type: VirtualMachineOSImageReplicateParameters
+          description: "Parameters\rsupplied to the Replicate Virtual Machine Image operation."
+        - id: parameters.targetLocations
+          type: array
+          description: "The replication target\rregional locations.Note: The regions in the request body are not\radditive. If an OS Image has already been replicated to Regions A, B, and\rC, and a request is made to replicate to Regions A and D, the VM Image\rwill remain in Region A, will be replicated in Region D, and will be\runreplicated from Regions B and C."
+        - id: parameters.computeImageAttributes
+          type: ComputeImageAttributes
+          description: "The\rcompute image attributes. Metadata which is required for this image to be\ruseablein the Microsoft.Compute Provider.The combination of values\rprovided for Offer, Sku, and Verison must be unique for a publisher."
+        - id: parameters.computeImageAttributes.offer
+          type: string
+          description: "Gets or sets the\rpublisher defined name of the offer.The allowed characters are uppercase\ror lowercase letters, digit, hypen(-), period (.).The maximum allowed\rlength is 64 characters."
+        - id: parameters.computeImageAttributes.sku
+          type: string
+          description: "Gets or sets the\rpublisher defined name of the Sku. The allowed characters are uppercase\ror lowercase letters, digit, hypen(-), period (.). The maximum allowed\rlength is 64 characters."
+        - id: parameters.computeImageAttributes.version
+          type: string
+          description: "Gets or sets the\rpublisher defined version of the image. The allowed characters are digit\rand period. Format: <MajorVersion>.<MinorVersion>.<Patch>Example: '1.0.0'\ror '1.1.0' The 3 version number to follow standard of most of the RPs.See\rhttp://semver.org/."
+        - id: parameters.marketplaceImageAttributes
+          type: MarketplaceImageAttributes
+          description: "The market place image\rattributes.Metadata which is required for VM Marketplace sourced imagesto\rbe useable in the Microsoft.Compute Provider."
+        - id: parameters.marketplaceImageAttributes.publisherId
+          type: string
+          description: "Gets\ror sets the publisher Id. This is the Microsoft.Compute Provider\rpublisher name to use for image."
+        - id: parameters.marketplaceImageAttributes.plan
+          type: Plan
+          description: "Gets or sets\rthe purchase context of any 3rd party artifact."
+        - id: parameters.marketplaceImageAttributes.plan.name
+          type: string
+          description: "Gets or\rsets a user defined name of the 3rd party artifact that is being procured."
+        - id: parameters.marketplaceImageAttributes.plan.publisher
+          type: string
+          description: "Gets or sets the publisher of the 3rd party artifact that is being\rbought.E.g. Contoso."
+        - id: parameters.marketplaceImageAttributes.plan.product
+          type: string
+          description: "Gets\ror sets the 3rd party artifact that is being procured.E.g. Northwind."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function replicate(imageName, parameters, parameters.targetLocations,
+        parameters.computeImageAttributes,
+        parameters.computeImageAttributes.offer,
+        parameters.computeImageAttributes.sku,
+        parameters.computeImageAttributes.version,
+        parameters.marketplaceImageAttributes,
+        parameters.marketplaceImageAttributes.publisherId,
+        parameters.marketplaceImageAttributes.plan,
+        parameters.marketplaceImageAttributes.plan.name,
+        parameters.marketplaceImageAttributes.plan.publisher,
+        parameters.marketplaceImageAttributes.plan.product, callback);
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.replicate(imageName,
+      parameters, parameters.targetLocations, parameters.computeImageAttributes,
+      parameters.computeImageAttributes.offer,
+      parameters.computeImageAttributes.sku,
+      parameters.computeImageAttributes.version,
+      parameters.marketplaceImageAttributes,
+      parameters.marketplaceImageAttributes.publisherId,
+      parameters.marketplaceImageAttributes.plan,
+      parameters.marketplaceImageAttributes.plan.name,
+      parameters.marketplaceImageAttributes.plan.publisher,
+      parameters.marketplaceImageAttributes.plan.product, callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~httpRequest
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~requestContent
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~requestDoc
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~replicationInputElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~targetLocationsSequenceElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~loweredIndex1
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~loweredIndex1
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~targetLocationsItem
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~targetLocationsItemElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~computeImageAttributesElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~offerElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~skuElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~versionElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~marketplaceImageAttributesElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~publisherIdElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~planElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~nameElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~publisherElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~productElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~requestContent
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share'
+    id: share
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: 'share(imageName, permission, callback)'
+    summary: "Share an already replicated OS image. This operation is only for\rpublishers. You have to be registered as image publisher with Windows\rAzure to be able to call this."
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: The name of the virtual machine image to share.
+        - id: permission
+          type: string
+          description: "The sharing permission: public, msdn, or\rprivate."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function share(imageName, permission, callback);'
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.share(imageName,
+      permission, callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share~client2
+  - uid: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+    id: unreplicate
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: 'unreplicate(imageName, callback)'
+    summary: "Unreplicate an OS image to multiple target locations. This operation is\ronly for publishers. You have to be registered as image publisher with\rWindows Azure to be able to call this. Note: The operation removes the\rpublished copies of the user OS Image. It does not remove the actual user\rOS Image. To remove the actual user OS Image, the publisher will have to\rcall Delete OS Image."
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: "The name of the virtual machine image to\rreplicate. Note: The OS Image Name should be the user OS Image, not the\rpublished name of the OS Image."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function unreplicate(imageName, callback);'
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.unreplicate(imageName,
+      callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate~client2
+  - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update'
+    id: update
+    parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+    name: >-
+      update(imageName, parameters, parameters.label, parameters.eula,
+      parameters.description, parameters.imageFamily, parameters.showInGui,
+      parameters.publishedDate, parameters.isPremium, parameters.privacyUri,
+      parameters.iconUri, parameters.recommendedVMSize, parameters.smallIconUri,
+      parameters.language, callback)
+    summary: "The Update OS Image operation updates an OS image that in your image\rrepository.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157198.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: imageName
+          type: string
+          description: "The name of the virtual machine image to be\rupdated."
+        - id: parameters
+          type: VirtualMachineOSImageUpdateParameters
+          description: "Parameters\rsupplied to the Update Virtual Machine Image operation."
+        - id: parameters.label
+          type: string
+          description: "Specifies the friendly name of the image\rto be updated. You cannot use this operation to update images provided by\rthe Azure platform."
+        - id: parameters.eula
+          type: string
+          description: "Specifies the End User License Agreement\rthat is associated with the image. The value for this element is a\rstring, but it is recommended that the value be a URL that points to a\rEULA."
+        - id: parameters.description
+          type: string
+          description: "Specifies the description of the\rOS image."
+        - id: parameters.imageFamily
+          type: string
+          description: "Specifies a value that can be\rused to group OS images."
+        - id: parameters.showInGui
+          type: boolean
+          description: "When published, should this image\rshow up in the windows azure image gallery or not. True by default."
+        - id: parameters.publishedDate
+          type: date
+          description: "Specifies the date when the OS\rimage was added to the image repository."
+        - id: parameters.isPremium
+          type: boolean
+          description: "Indicates if the image contains\rsoftware or associated services that will incur charges above the core\rprice for the virtual machine."
+        - id: parameters.privacyUri
+          type: string
+          description: "Specifies the URI that points to a\rdocument that contains the privacy policy related to the OS image."
+        - id: parameters.iconUri
+          type: string
+          description: "Specifies the URI to the icon that is\rdisplayed for the image in the Management Portal."
+        - id: parameters.recommendedVMSize
+          type: string
+          description: "Specifies the size to use\rfor the virtual machine that is created from the OS image."
+        - id: parameters.smallIconUri
+          type: string
+          description: "Specifies the URI to the small\ricon that is displayed when the image is presented in the Azure\rManagement Portal. The SmallIconUri element is only available using\rversion 2013-03-01 or higher."
+        - id: parameters.language
+          type: string
+          description: "Specifies the language of the image.\rThe Language element is only available using version 2013-03-01 or higher."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(imageName, parameters, parameters.label,
+        parameters.eula, parameters.description, parameters.imageFamily,
+        parameters.showInGui, parameters.publishedDate, parameters.isPremium,
+        parameters.privacyUri, parameters.iconUri, parameters.recommendedVMSize,
+        parameters.smallIconUri, parameters.language, callback);
+    fullName: >-
+      VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.update(imageName,
+      parameters, parameters.label, parameters.eula, parameters.description,
+      parameters.imageFamily, parameters.showInGui, parameters.publishedDate,
+      parameters.isPremium, parameters.privacyUri, parameters.iconUri,
+      parameters.recommendedVMSize, parameters.smallIconUri,
+      parameters.language, callback)
+    children:
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~baseUrl
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~httpRequest
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~requestContent
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~requestDoc
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~oSImageElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~labelElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~eulaElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~descriptionElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~imageFamilyElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~showInGuiElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~publishedDateElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~isPremiumElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~privacyUriElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~iconUriElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~recommendedVMSizeElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~smallIconUriElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~languageElement
+      - >-
+        VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~requestContent
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: VirtualMachineOSImageCreateParameters
+    name: VirtualMachineOSImageCreateParameters
+    fullName: VirtualMachineOSImageCreateParameters
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: VirtualMachineOSImageReplicateParameters
+    name: VirtualMachineOSImageReplicateParameters
+    fullName: VirtualMachineOSImageReplicateParameters
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: ComputeImageAttributes
+    name: ComputeImageAttributes
+    fullName: ComputeImageAttributes
+    isExternal: true
+  - uid: MarketplaceImageAttributes
+    name: MarketplaceImageAttributes
+    fullName: MarketplaceImageAttributes
+    isExternal: true
+  - uid: Plan
+    name: Plan
+    fullName: Plan
+    isExternal: false
+  - uid: VirtualMachineOSImageUpdateParameters
+    name: VirtualMachineOSImageUpdateParameters
+    fullName: VirtualMachineOSImageUpdateParameters
+    isExternal: true

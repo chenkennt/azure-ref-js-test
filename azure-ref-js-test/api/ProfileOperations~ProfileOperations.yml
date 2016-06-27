@@ -1,0 +1,626 @@
+items:
+  - uid: ProfileOperations~ProfileOperations
+    id: ProfileOperations
+    parent: ProfileOperations
+    name: ProfileOperations
+    type: Class
+    syntax:
+      content: ProfileOperations
+    fullName: ProfileOperations.ProfileOperations
+    children:
+      - 'ProfileOperations~ProfileOperations#client'
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability
+      - 'ProfileOperations~ProfileOperations#createOrUpdate'
+      - 'ProfileOperations~ProfileOperations#deleteMethod'
+      - 'ProfileOperations~ProfileOperations#get'
+      - 'ProfileOperations~ProfileOperations#listAll'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup'
+      - 'ProfileOperations~ProfileOperations#update'
+  - uid: 'ProfileOperations~ProfileOperations#client'
+    id: client
+    parent: ProfileOperations~ProfileOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ProfileOperations~ProfileOperations.client
+  - uid: >-
+      ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability
+    id: checkTrafficManagerRelativeDnsNameAvailability
+    parent: ProfileOperations~ProfileOperations
+    name: >-
+      checkTrafficManagerRelativeDnsNameAvailability(parameters,
+      parameters.name, parameters.type, callback)
+    summary: Create or update a Traffic Manager endpoint.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: CheckTrafficManagerRelativeDnsNameAvailabilityParameters
+          description: "The Traffic Manager name parameters supplied to the\rCheckTrafficManagerNameAvailability operation."
+        - id: parameters.name
+          type: string
+          description: Gets or sets the name of the resource.
+        - id: parameters.type
+          type: string
+          description: Gets or sets the type of the resource.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function checkTrafficManagerRelativeDnsNameAvailability(parameters,
+        parameters.name, parameters.type, callback);
+    fullName: >-
+      ProfileOperations~ProfileOperations.checkTrafficManagerRelativeDnsNameAvailability(parameters,
+      parameters.name, parameters.type, callback)
+    children:
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~queryParameters
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~baseUrl
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~baseUrl
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~url2
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~httpRequest
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~requestContent
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~requestDoc
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~checkTrafficManagerRelativeDnsNameAvailabilityParametersValue
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~requestDoc
+      - >-
+        ProfileOperations~ProfileOperations#checkTrafficManagerRelativeDnsNameAvailability~requestContent
+  - uid: 'ProfileOperations~ProfileOperations#createOrUpdate'
+    id: createOrUpdate
+    parent: ProfileOperations~ProfileOperations
+    name: >-
+      createOrUpdate(resourceGroupName, profileName, parameters,
+      parameters.profile, parameters.profile.properties,
+      parameters.profile.properties.profileStatus,
+      parameters.profile.properties.trafficRoutingMethod,
+      parameters.profile.properties.dnsConfig,
+      parameters.profile.properties.dnsConfig.relativeName,
+      parameters.profile.properties.dnsConfig.fqdn,
+      parameters.profile.properties.dnsConfig.ttl,
+      parameters.profile.properties.monitorConfig,
+      parameters.profile.properties.monitorConfig.profileMonitorStatus,
+      parameters.profile.properties.monitorConfig.protocol,
+      parameters.profile.properties.monitorConfig.port,
+      parameters.profile.properties.monitorConfig.path,
+      parameters.profile.properties.endpoints, parameters.profile.id,
+      parameters.profile.name, parameters.profile.type,
+      parameters.profile.location, parameters.profile.tags, callback)
+    summary: Create or update a Traffic Manager profile.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager profile."
+        - id: profileName
+          type: string
+          description: The name of the Traffic Manager profile.
+        - id: parameters
+          type: ProfileCreateOrUpdateParameters
+          description: "The Traffic Manager\rprofile parameters supplied to the CreateOrUpdate operation."
+        - id: parameters.profile
+          type: Profile
+          description: "Gets or sets parameters for the\rTraffic Manager profile being created or updated."
+        - id: parameters.profile.properties
+          type: ProfileProperties
+          description: "Gets or sets\rthe properties of the profile."
+        - id: parameters.profile.properties.profileStatus
+          type: string
+          description: "Gets or sets\rthe status of the Traffic Manager profile.  Possible values are 'Enabled'\rand 'Disabled'."
+        - id: parameters.profile.properties.trafficRoutingMethod
+          type: string
+          description: "Gets\ror sets the traffic routing method of the Traffic Manager profile.\rPossible values are 'Performance', 'Weighted', or 'Priority'."
+        - id: parameters.profile.properties.dnsConfig
+          type: DnsConfig
+          description: "Gets or sets\rthe DNS settings of the Traffic Manager profile."
+        - id: parameters.profile.properties.dnsConfig.relativeName
+          type: string
+          description: "Gets or sets the relative DNS name provided by this Traffic Manager\rprofile.  This value is combined with the DNS domain name used by Azure\rTraffic Manager to form the fully-qualified domain name (FQDN) of the\rprofile."
+        - id: parameters.profile.properties.dnsConfig.fqdn
+          type: string
+          description: "Gets or\rsets the fully-qualified domain name (FQDN) of the Traffic Manager\rprofile.  This is formed from the concatenation of the RelativeName with\rthe DNS domain used by Azure Traffic Manager."
+        - id: parameters.profile.properties.dnsConfig.ttl
+          type: number
+          description: "Gets or sets\rthe DNS Ttime-To-Live (TTL), in seconds.  This informs the local DNS\rresolvers and DNS clients how long to cache DNS responses provided by\rthis Traffic Manager profile."
+        - id: parameters.profile.properties.monitorConfig
+          type: MonitorConfig
+          description: "Gets\ror sets the endpoint monitoring settings of the Traffic Manager profile."
+        - id: parameters.profile.properties.monitorConfig.profileMonitorStatus
+          type: string
+          description: "Gets\ror sets the profile-level monitoring status of the Traffic Manager\rprofile."
+        - id: parameters.profile.properties.monitorConfig.protocol
+          type: string
+          description: "Gets or sets the protocol (HTTP or HTTPS) used to probe for endpoint\rhealth."
+        - id: parameters.profile.properties.monitorConfig.port
+          type: number
+          description: "Gets or\rsets the TCP port used to probe for endpoint health."
+        - id: parameters.profile.properties.monitorConfig.path
+          type: string
+          description: "Gets or\rsets the path relative to the endpoint domain name used to probe for\rendpoint health."
+        - id: parameters.profile.properties.endpoints
+          type: array
+          description: "Gets or sets the\rlist of endpoints in the Traffic Manager profile."
+        - id: parameters.profile.id
+          type: string
+          description: "Gets or sets the ID of the\rresource."
+        - id: parameters.profile.name
+          type: string
+          description: "Gets or sets the name of the\rresource."
+        - id: parameters.profile.type
+          type: string
+          description: "Gets or sets the type of the\rresource."
+        - id: parameters.profile.location
+          type: string
+          description: "Gets or sets the location of\rthe resource."
+        - id: parameters.profile.tags
+          type: object
+          description: "Gets or sets the tags attached\rto the resource."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createOrUpdate(resourceGroupName, profileName, parameters,
+        parameters.profile, parameters.profile.properties,
+        parameters.profile.properties.profileStatus,
+        parameters.profile.properties.trafficRoutingMethod,
+        parameters.profile.properties.dnsConfig,
+        parameters.profile.properties.dnsConfig.relativeName,
+        parameters.profile.properties.dnsConfig.fqdn,
+        parameters.profile.properties.dnsConfig.ttl,
+        parameters.profile.properties.monitorConfig,
+        parameters.profile.properties.monitorConfig.profileMonitorStatus,
+        parameters.profile.properties.monitorConfig.protocol,
+        parameters.profile.properties.monitorConfig.port,
+        parameters.profile.properties.monitorConfig.path,
+        parameters.profile.properties.endpoints, parameters.profile.id,
+        parameters.profile.name, parameters.profile.type,
+        parameters.profile.location, parameters.profile.tags, callback);
+    fullName: >-
+      ProfileOperations~ProfileOperations.createOrUpdate(resourceGroupName,
+      profileName, parameters, parameters.profile,
+      parameters.profile.properties,
+      parameters.profile.properties.profileStatus,
+      parameters.profile.properties.trafficRoutingMethod,
+      parameters.profile.properties.dnsConfig,
+      parameters.profile.properties.dnsConfig.relativeName,
+      parameters.profile.properties.dnsConfig.fqdn,
+      parameters.profile.properties.dnsConfig.ttl,
+      parameters.profile.properties.monitorConfig,
+      parameters.profile.properties.monitorConfig.profileMonitorStatus,
+      parameters.profile.properties.monitorConfig.protocol,
+      parameters.profile.properties.monitorConfig.port,
+      parameters.profile.properties.monitorConfig.path,
+      parameters.profile.properties.endpoints, parameters.profile.id,
+      parameters.profile.name, parameters.profile.type,
+      parameters.profile.location, parameters.profile.tags, callback)
+    children:
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~queryParameters'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~baseUrl'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~baseUrl'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~url2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~httpRequest'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~requestContent'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~requestDoc'
+      - >-
+        ProfileOperations~ProfileOperations#createOrUpdate~profileCreateOrUpdateParametersValue
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~requestDoc'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~propertiesValue'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~dnsConfigValue'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~monitorConfigValue'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~endpointsArray'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~loweredIndex1'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~loweredIndex1'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~endpointsItem'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~endpointValue'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~propertiesValue2'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~tagsDictionary'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~tagsKey'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~tagsValue'
+      - 'ProfileOperations~ProfileOperations#createOrUpdate~requestContent'
+  - uid: 'ProfileOperations~ProfileOperations#deleteMethod'
+    id: deleteMethod
+    parent: ProfileOperations~ProfileOperations
+    name: 'deleteMethod(resourceGroupName, profileName, callback)'
+    summary: Deletes a Traffic Manager profile.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager profile to be deleted."
+        - id: profileName
+          type: string
+          description: "The name of the Traffic Manager profile to be\rdeleted."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(resourceGroupName, profileName, callback);'
+    fullName: >-
+      ProfileOperations~ProfileOperations.deleteMethod(resourceGroupName,
+      profileName, callback)
+    children:
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~queryParameters'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~baseUrl'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~baseUrl'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~url2'
+      - 'ProfileOperations~ProfileOperations#deleteMethod~httpRequest'
+  - uid: 'ProfileOperations~ProfileOperations#get'
+    id: get
+    parent: ProfileOperations~ProfileOperations
+    name: 'get(resourceGroupName, profileName, callback)'
+    summary: Gets a Traffic Manager profile.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager profile."
+        - id: profileName
+          type: string
+          description: The name of the Traffic Manager profile.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(resourceGroupName, profileName, callback);'
+    fullName: >-
+      ProfileOperations~ProfileOperations.get(resourceGroupName, profileName,
+      callback)
+    children:
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~queryParameters'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~baseUrl'
+      - 'ProfileOperations~ProfileOperations#get~baseUrl'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~url2'
+      - 'ProfileOperations~ProfileOperations#get~httpRequest'
+  - uid: 'ProfileOperations~ProfileOperations#listAll'
+    id: listAll
+    parent: ProfileOperations~ProfileOperations
+    name: listAll(callback)
+    summary: Lists all Traffic Manager profiles within a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function listAll(callback);
+    fullName: ProfileOperations~ProfileOperations.listAll(callback)
+    children:
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~queryParameters'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~baseUrl'
+      - 'ProfileOperations~ProfileOperations#listAll~baseUrl'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~url2'
+      - 'ProfileOperations~ProfileOperations#listAll~httpRequest'
+  - uid: 'ProfileOperations~ProfileOperations#listAllInResourceGroup'
+    id: listAllInResourceGroup
+    parent: ProfileOperations~ProfileOperations
+    name: 'listAllInResourceGroup(resourceGroupName, callback)'
+    summary: Lists all Traffic Manager profiles within a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager profiles to be listed."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listAllInResourceGroup(resourceGroupName, callback);'
+    fullName: >-
+      ProfileOperations~ProfileOperations.listAllInResourceGroup(resourceGroupName,
+      callback)
+    children:
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - >-
+        ProfileOperations~ProfileOperations#listAllInResourceGroup~queryParameters
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~baseUrl'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~baseUrl'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~url2'
+      - 'ProfileOperations~ProfileOperations#listAllInResourceGroup~httpRequest'
+  - uid: 'ProfileOperations~ProfileOperations#update'
+    id: update
+    parent: ProfileOperations~ProfileOperations
+    name: >-
+      update(resourceGroupName, profileName, parameters, parameters.profile,
+      parameters.profile.properties,
+      parameters.profile.properties.profileStatus,
+      parameters.profile.properties.trafficRoutingMethod,
+      parameters.profile.properties.dnsConfig,
+      parameters.profile.properties.dnsConfig.relativeName,
+      parameters.profile.properties.dnsConfig.fqdn,
+      parameters.profile.properties.dnsConfig.ttl,
+      parameters.profile.properties.monitorConfig,
+      parameters.profile.properties.monitorConfig.profileMonitorStatus,
+      parameters.profile.properties.monitorConfig.protocol,
+      parameters.profile.properties.monitorConfig.port,
+      parameters.profile.properties.monitorConfig.path,
+      parameters.profile.properties.endpoints, parameters.profile.id,
+      parameters.profile.name, parameters.profile.type,
+      parameters.profile.location, parameters.profile.tags, callback)
+    summary: Update a Traffic Manager profile.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group\rcontaining the Traffic Manager profile."
+        - id: profileName
+          type: string
+          description: The name of the Traffic Manager profile.
+        - id: parameters
+          type: ProfileUpdateParameters
+          description: "The Traffic Manager profile\rparameters supplied to the Update operation."
+        - id: parameters.profile
+          type: Profile
+          description: "Gets or sets parameters for the\rTraffic Manager profile being updated."
+        - id: parameters.profile.properties
+          type: ProfileProperties
+          description: "Gets or sets\rthe properties of the profile."
+        - id: parameters.profile.properties.profileStatus
+          type: string
+          description: "Gets or sets\rthe status of the Traffic Manager profile.  Possible values are 'Enabled'\rand 'Disabled'."
+        - id: parameters.profile.properties.trafficRoutingMethod
+          type: string
+          description: "Gets\ror sets the traffic routing method of the Traffic Manager profile.\rPossible values are 'Performance', 'Weighted', or 'Priority'."
+        - id: parameters.profile.properties.dnsConfig
+          type: DnsConfig
+          description: "Gets or sets\rthe DNS settings of the Traffic Manager profile."
+        - id: parameters.profile.properties.dnsConfig.relativeName
+          type: string
+          description: "Gets or sets the relative DNS name provided by this Traffic Manager\rprofile.  This value is combined with the DNS domain name used by Azure\rTraffic Manager to form the fully-qualified domain name (FQDN) of the\rprofile."
+        - id: parameters.profile.properties.dnsConfig.fqdn
+          type: string
+          description: "Gets or\rsets the fully-qualified domain name (FQDN) of the Traffic Manager\rprofile.  This is formed from the concatenation of the RelativeName with\rthe DNS domain used by Azure Traffic Manager."
+        - id: parameters.profile.properties.dnsConfig.ttl
+          type: number
+          description: "Gets or sets\rthe DNS Ttime-To-Live (TTL), in seconds.  This informs the local DNS\rresolvers and DNS clients how long to cache DNS responses provided by\rthis Traffic Manager profile."
+        - id: parameters.profile.properties.monitorConfig
+          type: MonitorConfig
+          description: "Gets\ror sets the endpoint monitoring settings of the Traffic Manager profile."
+        - id: parameters.profile.properties.monitorConfig.profileMonitorStatus
+          type: string
+          description: "Gets\ror sets the profile-level monitoring status of the Traffic Manager\rprofile."
+        - id: parameters.profile.properties.monitorConfig.protocol
+          type: string
+          description: "Gets or sets the protocol (HTTP or HTTPS) used to probe for endpoint\rhealth."
+        - id: parameters.profile.properties.monitorConfig.port
+          type: number
+          description: "Gets or\rsets the TCP port used to probe for endpoint health."
+        - id: parameters.profile.properties.monitorConfig.path
+          type: string
+          description: "Gets or\rsets the path relative to the endpoint domain name used to probe for\rendpoint health."
+        - id: parameters.profile.properties.endpoints
+          type: array
+          description: "Gets or sets the\rlist of endpoints in the Traffic Manager profile."
+        - id: parameters.profile.id
+          type: string
+          description: "Gets or sets the ID of the\rresource."
+        - id: parameters.profile.name
+          type: string
+          description: "Gets or sets the name of the\rresource."
+        - id: parameters.profile.type
+          type: string
+          description: "Gets or sets the type of the\rresource."
+        - id: parameters.profile.location
+          type: string
+          description: "Gets or sets the location of\rthe resource."
+        - id: parameters.profile.tags
+          type: object
+          description: "Gets or sets the tags attached\rto the resource."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(resourceGroupName, profileName, parameters,
+        parameters.profile, parameters.profile.properties,
+        parameters.profile.properties.profileStatus,
+        parameters.profile.properties.trafficRoutingMethod,
+        parameters.profile.properties.dnsConfig,
+        parameters.profile.properties.dnsConfig.relativeName,
+        parameters.profile.properties.dnsConfig.fqdn,
+        parameters.profile.properties.dnsConfig.ttl,
+        parameters.profile.properties.monitorConfig,
+        parameters.profile.properties.monitorConfig.profileMonitorStatus,
+        parameters.profile.properties.monitorConfig.protocol,
+        parameters.profile.properties.monitorConfig.port,
+        parameters.profile.properties.monitorConfig.path,
+        parameters.profile.properties.endpoints, parameters.profile.id,
+        parameters.profile.name, parameters.profile.type,
+        parameters.profile.location, parameters.profile.tags, callback);
+    fullName: >-
+      ProfileOperations~ProfileOperations.update(resourceGroupName, profileName,
+      parameters, parameters.profile, parameters.profile.properties,
+      parameters.profile.properties.profileStatus,
+      parameters.profile.properties.trafficRoutingMethod,
+      parameters.profile.properties.dnsConfig,
+      parameters.profile.properties.dnsConfig.relativeName,
+      parameters.profile.properties.dnsConfig.fqdn,
+      parameters.profile.properties.dnsConfig.ttl,
+      parameters.profile.properties.monitorConfig,
+      parameters.profile.properties.monitorConfig.profileMonitorStatus,
+      parameters.profile.properties.monitorConfig.protocol,
+      parameters.profile.properties.monitorConfig.port,
+      parameters.profile.properties.monitorConfig.path,
+      parameters.profile.properties.endpoints, parameters.profile.id,
+      parameters.profile.name, parameters.profile.type,
+      parameters.profile.location, parameters.profile.tags, callback)
+    children:
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~queryParameters'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~baseUrl'
+      - 'ProfileOperations~ProfileOperations#update~baseUrl'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~url2'
+      - 'ProfileOperations~ProfileOperations#update~httpRequest'
+      - 'ProfileOperations~ProfileOperations#update~requestContent'
+      - 'ProfileOperations~ProfileOperations#update~requestDoc'
+      - 'ProfileOperations~ProfileOperations#update~profileUpdateParametersValue'
+      - 'ProfileOperations~ProfileOperations#update~requestDoc'
+      - 'ProfileOperations~ProfileOperations#update~propertiesValue'
+      - 'ProfileOperations~ProfileOperations#update~dnsConfigValue'
+      - 'ProfileOperations~ProfileOperations#update~monitorConfigValue'
+      - 'ProfileOperations~ProfileOperations#update~endpointsArray'
+      - 'ProfileOperations~ProfileOperations#update~loweredIndex1'
+      - 'ProfileOperations~ProfileOperations#update~loweredIndex1'
+      - 'ProfileOperations~ProfileOperations#update~endpointsItem'
+      - 'ProfileOperations~ProfileOperations#update~endpointValue'
+      - 'ProfileOperations~ProfileOperations#update~propertiesValue2'
+      - 'ProfileOperations~ProfileOperations#update~tagsDictionary'
+      - 'ProfileOperations~ProfileOperations#update~tagsKey'
+      - 'ProfileOperations~ProfileOperations#update~tagsValue'
+      - 'ProfileOperations~ProfileOperations#update~requestContent'
+references:
+  - uid: CheckTrafficManagerRelativeDnsNameAvailabilityParameters
+    name: CheckTrafficManagerRelativeDnsNameAvailabilityParameters
+    fullName: CheckTrafficManagerRelativeDnsNameAvailabilityParameters
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: ProfileCreateOrUpdateParameters
+    name: ProfileCreateOrUpdateParameters
+    fullName: ProfileCreateOrUpdateParameters
+    isExternal: true
+  - uid: Profile
+    name: Profile
+    fullName: Profile
+    isExternal: false
+  - uid: ProfileProperties
+    name: ProfileProperties
+    fullName: ProfileProperties
+    isExternal: true
+  - uid: DnsConfig
+    name: DnsConfig
+    fullName: DnsConfig
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: MonitorConfig
+    name: MonitorConfig
+    fullName: MonitorConfig
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: ProfileUpdateParameters
+    name: ProfileUpdateParameters
+    fullName: ProfileUpdateParameters
+    isExternal: false

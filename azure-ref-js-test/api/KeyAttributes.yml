@@ -1,0 +1,102 @@
+items:
+  - uid: KeyAttributes
+    id: KeyAttributes
+    name: KeyAttributes
+    type: Class
+    syntax:
+      content: KeyAttributes
+    fullName: KeyAttributes
+    children:
+      - 'KeyAttributes#enabled'
+      - 'KeyAttributes#created'
+      - 'KeyAttributes#updated'
+      - 'KeyAttributes#nbf'
+      - 'KeyAttributes#exp'
+  - uid: 'KeyAttributes#enabled'
+    id: enabled
+    parent: KeyAttributes
+    name: enabled
+    summary: 'true if the object is explicitly enabled, false otherwise.'
+    type: Field
+    syntax:
+      return:
+        type: boolean
+      content: enabled
+    fullName: KeyAttributes.enabled
+  - uid: 'KeyAttributes#created'
+    id: created
+    parent: KeyAttributes
+    name: created
+    summary: Date when the object was created in the service.
+    type: Field
+    syntax:
+      return:
+        type: Date
+      content: created
+    fullName: KeyAttributes.created
+  - uid: 'KeyAttributes#updated'
+    id: updated
+    parent: KeyAttributes
+    name: updated
+    summary: Last time the object was updated in the service.
+    type: Field
+    syntax:
+      return:
+        type: Date
+      content: updated
+    fullName: KeyAttributes.updated
+  - uid: 'KeyAttributes#nbf'
+    id: nbf
+    parent: KeyAttributes
+    name: nbf
+    summary: >-
+      The date when the object becomes available for operations (the
+      "not-before" date).
+    type: Field
+    syntax:
+      return:
+        type: Date
+      content: nbf
+    fullName: KeyAttributes.nbf
+  - uid: 'KeyAttributes#exp'
+    id: exp
+    parent: KeyAttributes
+    name: exp
+    summary: >-
+      The date when the object becomes unavailable for operations (the
+      "expiration" date).
+    type: Field
+    syntax:
+      return:
+        type: Date
+      content: exp
+    fullName: KeyAttributes.exp
+  - uid: KeyAttributes.fromJson
+    id: fromJson
+    parent: KeyAttributes
+    name: fromJson()
+    type: Method
+    syntax:
+      content: function fromJson();
+    fullName: KeyAttributes.fromJson()
+    children:
+      - KeyAttributes.fromJson~result
+  - uid: 'KeyAttributes#toJson'
+    id: toJson
+    parent: KeyAttributes
+    name: toJson()
+    type: Method
+    syntax:
+      content: function toJson();
+    fullName: KeyAttributes.toJson()
+    children:
+      - 'KeyAttributes#toJson~result'
+references:
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: Date
+    name: Date
+    fullName: Date
+    isExternal: true

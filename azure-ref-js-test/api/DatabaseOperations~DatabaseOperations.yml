@@ -1,0 +1,371 @@
+items:
+  - uid: DatabaseOperations~DatabaseOperations
+    id: DatabaseOperations
+    parent: DatabaseOperations
+    name: DatabaseOperations
+    type: Class
+    syntax:
+      content: DatabaseOperations
+    fullName: DatabaseOperations.DatabaseOperations
+    children:
+      - 'DatabaseOperations~DatabaseOperations#client'
+      - 'DatabaseOperations~DatabaseOperations#create'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod'
+      - 'DatabaseOperations~DatabaseOperations#get'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs'
+      - 'DatabaseOperations~DatabaseOperations#list'
+      - 'DatabaseOperations~DatabaseOperations#update'
+  - uid: 'DatabaseOperations~DatabaseOperations#client'
+    id: client
+    parent: DatabaseOperations~DatabaseOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: DatabaseOperations~DatabaseOperations.client
+  - uid: 'DatabaseOperations~DatabaseOperations#create'
+    id: create
+    parent: DatabaseOperations~DatabaseOperations
+    name: >-
+      create(serverName, parameters, parameters.name, parameters.edition,
+      parameters.maximumDatabaseSizeInGB, parameters.collationName,
+      parameters.maximumDatabaseSizeInBytes, parameters.serviceObjectiveId,
+      callback)
+    summary: Creates a database in an Azure SQL Database Server.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server where\rthe database will be created."
+        - id: parameters
+          type: DatabaseCreateParameters
+          description: "The parameters for the create\rdatabase operation."
+        - id: parameters.name
+          type: string
+          description: Gets or sets the name for the new database.
+        - id: parameters.edition
+          type: string
+          description: "Gets or sets the edition for the new\rdatabase.  The DatabaseEditions enumeration contains the valid values for\rthis property."
+        - id: parameters.maximumDatabaseSizeInGB
+          type: number
+          description: "Gets or sets the\rmaximum size of this database expressed in gigabytes.  If this is used in\rconjunction with MaximumDatabaseSizeInBytes they must agree."
+        - id: parameters.collationName
+          type: string
+          description: "Gets or sets the collation name\rfor the new database."
+        - id: parameters.maximumDatabaseSizeInBytes
+          type: number
+          description: "Gets or sets the\rmaximum size of this database expressed in bytes.  If this is used in\rconjunction with MaximumDatabaseSizeInGB they must agree."
+        - id: parameters.serviceObjectiveId
+          type: string
+          description: "Gets or sets the service\robjective ID to be applied to the database."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(serverName, parameters, parameters.name,
+        parameters.edition, parameters.maximumDatabaseSizeInGB,
+        parameters.collationName, parameters.maximumDatabaseSizeInBytes,
+        parameters.serviceObjectiveId, callback);
+    fullName: >-
+      DatabaseOperations~DatabaseOperations.create(serverName, parameters,
+      parameters.name, parameters.edition, parameters.maximumDatabaseSizeInGB,
+      parameters.collationName, parameters.maximumDatabaseSizeInBytes,
+      parameters.serviceObjectiveId, callback)
+    children:
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#create~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~url2'
+      - 'DatabaseOperations~DatabaseOperations#create~httpRequest'
+      - 'DatabaseOperations~DatabaseOperations#create~requestContent'
+      - 'DatabaseOperations~DatabaseOperations#create~requestDoc'
+      - 'DatabaseOperations~DatabaseOperations#create~serviceResourceElement'
+      - 'DatabaseOperations~DatabaseOperations#create~nameElement'
+      - 'DatabaseOperations~DatabaseOperations#create~editionElement'
+      - 'DatabaseOperations~DatabaseOperations#create~maxSizeGBElement'
+      - 'DatabaseOperations~DatabaseOperations#create~collationNameElement'
+      - 'DatabaseOperations~DatabaseOperations#create~maxSizeBytesElement'
+      - 'DatabaseOperations~DatabaseOperations#create~serviceObjectiveIdElement'
+      - 'DatabaseOperations~DatabaseOperations#create~requestContent'
+  - uid: 'DatabaseOperations~DatabaseOperations#deleteMethod'
+    id: deleteMethod
+    parent: DatabaseOperations~DatabaseOperations
+    name: 'deleteMethod(serverName, databaseName, callback)'
+    summary: Drops a database from an Azure SQL Database Server.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server on\rwhich the database is hosted."
+        - id: databaseName
+          type: string
+          description: "The name of the Azure SQL Database to be\rdeleted."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(serverName, databaseName, callback);'
+    fullName: >-
+      DatabaseOperations~DatabaseOperations.deleteMethod(serverName,
+      databaseName, callback)
+    children:
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~url2'
+      - 'DatabaseOperations~DatabaseOperations#deleteMethod~httpRequest'
+  - uid: 'DatabaseOperations~DatabaseOperations#get'
+    id: get
+    parent: DatabaseOperations~DatabaseOperations
+    name: 'get(serverName, databaseName, callback)'
+    summary: Returns information about an Azure SQL Database.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server on\rwhich the database is hosted."
+        - id: databaseName
+          type: string
+          description: "The name of the Azure SQL Database to be\rretrieved."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(serverName, databaseName, callback);'
+    fullName: >-
+      DatabaseOperations~DatabaseOperations.get(serverName, databaseName,
+      callback)
+    children:
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#get~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~url2'
+      - 'DatabaseOperations~DatabaseOperations#get~httpRequest'
+  - uid: 'DatabaseOperations~DatabaseOperations#getEventLogs'
+    id: getEventLogs
+    parent: DatabaseOperations~DatabaseOperations
+    name: >-
+      getEventLogs(serverName, databaseName, parameters, parameters.startDate,
+      parameters.intervalSizeInMinutes, parameters.eventTypes, callback)
+    summary: Returns information about an Azure SQL Database event logs.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server on\rwhich the database is hosted."
+        - id: databaseName
+          type: string
+          description: "The name of the Azure SQL Database to be\rretrieved."
+        - id: parameters
+          type: DatabaseGetEventLogsParameters
+          description: "The parameters for the\rGet Database Event Logs operation."
+        - id: parameters.startDate
+          type: date
+          description: "Gets or sets the start date for the\revent log."
+        - id: parameters.intervalSizeInMinutes
+          type: number
+          description: "Gets or sets the interval\rsize in minutes."
+        - id: parameters.eventTypes
+          type: string
+          description: "Gets or sets the event types to\rretrieve."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getEventLogs(serverName, databaseName, parameters,
+        parameters.startDate, parameters.intervalSizeInMinutes,
+        parameters.eventTypes, callback);
+    fullName: >-
+      DatabaseOperations~DatabaseOperations.getEventLogs(serverName,
+      databaseName, parameters, parameters.startDate,
+      parameters.intervalSizeInMinutes, parameters.eventTypes, callback)
+    children:
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~queryParameters'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~url2'
+      - 'DatabaseOperations~DatabaseOperations#getEventLogs~httpRequest'
+  - uid: 'DatabaseOperations~DatabaseOperations#list'
+    id: list
+    parent: DatabaseOperations~DatabaseOperations
+    name: 'list(serverName, callback)'
+    summary: Returns a collection of Azure SQL Databases.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server from\rwhich to retrieve the database."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function list(serverName, callback);'
+    fullName: 'DatabaseOperations~DatabaseOperations.list(serverName, callback)'
+    children:
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~queryParameters'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#list~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~url2'
+      - 'DatabaseOperations~DatabaseOperations#list~httpRequest'
+  - uid: 'DatabaseOperations~DatabaseOperations#update'
+    id: update
+    parent: DatabaseOperations~DatabaseOperations
+    name: >-
+      update(serverName, databaseName, parameters, parameters.name,
+      parameters.edition, parameters.maximumDatabaseSizeInGB,
+      parameters.maximumDatabaseSizeInBytes, parameters.serviceObjectiveId,
+      callback)
+    summary: Updates the properties of an Azure SQL Database.
+    type: Method
+    syntax:
+      parameters:
+        - id: serverName
+          type: string
+          description: "The name of the Azure SQL Database Server where\rthe database is hosted."
+        - id: databaseName
+          type: string
+          description: "The name of the Azure SQL Database to be\rupdated."
+        - id: parameters
+          type: DatabaseUpdateParameters
+          description: "The parameters for the Update\rDatabase operation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets the new name of the\rdatabase."
+        - id: parameters.edition
+          type: string
+          description: "Gets or sets the new edition for the\rdatabase."
+        - id: parameters.maximumDatabaseSizeInGB
+          type: number
+          description: "Gets or sets the\rmaximum size of this database expressed in gigabytes.  If this is used\rwith MaximumDatabaseSizeInBytes they must agree."
+        - id: parameters.maximumDatabaseSizeInBytes
+          type: number
+          description: "Gets or sets the\rmaximum size of this database expressed in bytes.  If this is used with\rMaximumDatabaseSizeInGB they must agree."
+        - id: parameters.serviceObjectiveId
+          type: string
+          description: "Gets or sets the unique\ridentifier for the service objective to apply to the database."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(serverName, databaseName, parameters, parameters.name,
+        parameters.edition, parameters.maximumDatabaseSizeInGB,
+        parameters.maximumDatabaseSizeInBytes, parameters.serviceObjectiveId,
+        callback);
+    fullName: >-
+      DatabaseOperations~DatabaseOperations.update(serverName, databaseName,
+      parameters, parameters.name, parameters.edition,
+      parameters.maximumDatabaseSizeInGB, parameters.maximumDatabaseSizeInBytes,
+      parameters.serviceObjectiveId, callback)
+    children:
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#update~baseUrl'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~url2'
+      - 'DatabaseOperations~DatabaseOperations#update~httpRequest'
+      - 'DatabaseOperations~DatabaseOperations#update~requestContent'
+      - 'DatabaseOperations~DatabaseOperations#update~requestDoc'
+      - 'DatabaseOperations~DatabaseOperations#update~serviceResourceElement'
+      - 'DatabaseOperations~DatabaseOperations#update~nameElement'
+      - 'DatabaseOperations~DatabaseOperations#update~editionElement'
+      - 'DatabaseOperations~DatabaseOperations#update~maxSizeGBElement'
+      - 'DatabaseOperations~DatabaseOperations#update~maxSizeBytesElement'
+      - 'DatabaseOperations~DatabaseOperations#update~serviceObjectiveIdElement'
+      - 'DatabaseOperations~DatabaseOperations#update~requestContent'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: DatabaseCreateParameters
+    name: DatabaseCreateParameters
+    fullName: DatabaseCreateParameters
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: DatabaseGetEventLogsParameters
+    name: DatabaseGetEventLogsParameters
+    fullName: DatabaseGetEventLogsParameters
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: DatabaseUpdateParameters
+    name: DatabaseUpdateParameters
+    fullName: DatabaseUpdateParameters
+    isExternal: true

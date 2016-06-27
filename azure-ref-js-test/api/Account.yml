@@ -1,0 +1,995 @@
+items:
+  - uid: Account
+    id: Account
+    name: Account
+    type: Class
+    syntax:
+      content: Account
+    fullName: Account
+    children:
+      - 'Account#client'
+      - 'Account#deleteFirewallRule'
+      - 'Account#getFirewallRule'
+      - 'Account#listFirewallRules'
+      - 'Account#createOrUpdateFirewallRule'
+      - 'Account#create'
+      - 'Account#beginCreate'
+      - 'Account#update'
+      - 'Account#beginUpdate'
+      - 'Account#deleteMethod'
+      - 'Account#beginDeleteMethod'
+      - 'Account#get'
+      - 'Account#listByResourceGroup'
+      - 'Account#list'
+      - 'Account#listFirewallRulesNext'
+      - 'Account#listByResourceGroupNext'
+      - 'Account#listNext'
+  - uid: 'Account#client'
+    id: client
+    parent: Account
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Account.client
+  - uid: 'Account#deleteFirewallRule'
+    id: deleteFirewallRule
+    parent: Account
+    name: >-
+      deleteFirewallRule(resourceGroupName, accountName, firewallRuleName,
+      options, options.customHeaders, callback)
+    summary: "Deletes the specified firewall rule from the specified Data Lake Store\raccount"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: accountName
+          type: string
+          description: "The name of the Data Lake Store account from\rwhich to delete the firewall rule."
+        - id: firewallRuleName
+          type: string
+          description: The name of the firewall rule to delete.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteFirewallRule(resourceGroupName, accountName,
+        firewallRuleName, options, options.customHeaders, callback);
+    fullName: >-
+      Account.deleteFirewallRule(resourceGroupName, accountName,
+      firewallRuleName, options, options.customHeaders, callback)
+    children:
+      - 'Account#deleteFirewallRule~client'
+      - 'Account#deleteFirewallRule~callback'
+      - 'Account#deleteFirewallRule~options'
+      - 'Account#deleteFirewallRule~requestUrl'
+      - 'Account#deleteFirewallRule~requestUrl'
+      - 'Account#deleteFirewallRule~requestUrl'
+      - 'Account#deleteFirewallRule~requestUrl'
+      - 'Account#deleteFirewallRule~requestUrl'
+      - 'Account#deleteFirewallRule~queryParameters'
+      - 'Account#deleteFirewallRule~requestUrl'
+      - 'Account#deleteFirewallRule~regex'
+      - 'Account#deleteFirewallRule~requestUrl'
+      - 'Account#deleteFirewallRule~httpRequest'
+      - 'Account#deleteFirewallRule~headerName'
+  - uid: 'Account#getFirewallRule'
+    id: getFirewallRule
+    parent: Account
+    name: >-
+      getFirewallRule(resourceGroupName, accountName, firewallRuleName, options,
+      options.customHeaders, callback)
+    summary: Gets the specified Data Lake Store firewall rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: accountName
+          type: string
+          description: "The name of the Data Lake Store account from\rwhich to get the firewall rule."
+        - id: firewallRuleName
+          type: string
+          description: The name of the firewall rule to retrieve.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FirewallRule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getFirewallRule(resourceGroupName, accountName,
+        firewallRuleName, options, options.customHeaders, callback);
+    fullName: >-
+      Account.getFirewallRule(resourceGroupName, accountName, firewallRuleName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Account#getFirewallRule~client'
+      - 'Account#getFirewallRule~callback'
+      - 'Account#getFirewallRule~options'
+      - 'Account#getFirewallRule~requestUrl'
+      - 'Account#getFirewallRule~requestUrl'
+      - 'Account#getFirewallRule~requestUrl'
+      - 'Account#getFirewallRule~requestUrl'
+      - 'Account#getFirewallRule~requestUrl'
+      - 'Account#getFirewallRule~queryParameters'
+      - 'Account#getFirewallRule~requestUrl'
+      - 'Account#getFirewallRule~regex'
+      - 'Account#getFirewallRule~requestUrl'
+      - 'Account#getFirewallRule~httpRequest'
+      - 'Account#getFirewallRule~headerName'
+  - uid: 'Account#listFirewallRules'
+    id: listFirewallRules
+    parent: Account
+    name: >-
+      listFirewallRules(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    summary: "Lists the Data Lake Store firewall rules within the specified Data Lake\rStore account."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: accountName
+          type: string
+          description: "The name of the Data Lake Store account from\rwhich to get the firewall rules."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreFirewallRuleListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listFirewallRules(resourceGroupName, accountName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Account.listFirewallRules(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Account#listFirewallRules~client'
+      - 'Account#listFirewallRules~callback'
+      - 'Account#listFirewallRules~options'
+      - 'Account#listFirewallRules~requestUrl'
+      - 'Account#listFirewallRules~requestUrl'
+      - 'Account#listFirewallRules~requestUrl'
+      - 'Account#listFirewallRules~requestUrl'
+      - 'Account#listFirewallRules~queryParameters'
+      - 'Account#listFirewallRules~requestUrl'
+      - 'Account#listFirewallRules~regex'
+      - 'Account#listFirewallRules~requestUrl'
+      - 'Account#listFirewallRules~httpRequest'
+      - 'Account#listFirewallRules~headerName'
+  - uid: 'Account#createOrUpdateFirewallRule'
+    id: createOrUpdateFirewallRule
+    parent: Account
+    name: >-
+      createOrUpdateFirewallRule(resourceGroupName, accountName, name,
+      parameters, parameters.name, parameters.id, parameters.location,
+      parameters.properties, parameters.properties.startIpAddress,
+      parameters.properties.endIpAddress, options, options.customHeaders,
+      callback)
+    summary: Creates or updates the specified firewall rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: accountName
+          type: string
+          description: "The name of the Data Lake Store account to\rwhich to add the firewall rule."
+        - id: name
+          type: string
+          description: The name of the firewall rule to create or update.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to create the create\rfirewall rule."
+        - id: parameters.name
+          type: string
+          description: Gets or sets the firewall rule's name.
+        - id: parameters.id
+          type: string
+          description: "Gets or sets the firewall rule's\rsubscription ID."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the firewall rule's\rregional location."
+        - id: parameters.properties
+          type: object
+          description: "Gets or sets the properties of the\rfirewall rule."
+        - id: parameters.properties.startIpAddress
+          type: string
+          description: "Gets or sets the\rstart IP address for the firewall rule."
+        - id: parameters.properties.endIpAddress
+          type: string
+          description: "Gets or sets the end\rIP address for the firewall rule."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FirewallRule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateFirewallRule(resourceGroupName, accountName,
+        name, parameters, parameters.name, parameters.id, parameters.location,
+        parameters.properties, parameters.properties.startIpAddress,
+        parameters.properties.endIpAddress, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Account.createOrUpdateFirewallRule(resourceGroupName, accountName, name,
+      parameters, parameters.name, parameters.id, parameters.location,
+      parameters.properties, parameters.properties.startIpAddress,
+      parameters.properties.endIpAddress, options, options.customHeaders,
+      callback)
+    children:
+      - 'Account#createOrUpdateFirewallRule~client'
+      - 'Account#createOrUpdateFirewallRule~callback'
+      - 'Account#createOrUpdateFirewallRule~options'
+      - 'Account#createOrUpdateFirewallRule~requestUrl'
+      - 'Account#createOrUpdateFirewallRule~requestUrl'
+      - 'Account#createOrUpdateFirewallRule~requestUrl'
+      - 'Account#createOrUpdateFirewallRule~requestUrl'
+      - 'Account#createOrUpdateFirewallRule~requestUrl'
+      - 'Account#createOrUpdateFirewallRule~queryParameters'
+      - 'Account#createOrUpdateFirewallRule~requestUrl'
+      - 'Account#createOrUpdateFirewallRule~regex'
+      - 'Account#createOrUpdateFirewallRule~requestUrl'
+      - 'Account#createOrUpdateFirewallRule~httpRequest'
+      - 'Account#createOrUpdateFirewallRule~headerName'
+      - 'Account#createOrUpdateFirewallRule~requestContent'
+      - 'Account#createOrUpdateFirewallRule~requestModel'
+      - 'Account#createOrUpdateFirewallRule~requestModelMapper'
+      - 'Account#createOrUpdateFirewallRule~requestModel'
+      - 'Account#createOrUpdateFirewallRule~requestContent'
+      - 'Account#createOrUpdateFirewallRule~serializationError'
+  - uid: 'Account#create'
+    id: create
+    parent: Account
+    name: >-
+      create(resourceGroupName, name, parameters, parameters.location,
+      parameters.name, parameters.tags, parameters.properties,
+      parameters.properties.endpoint, parameters.properties.defaultGroup,
+      options, options.customHeaders, callback)
+    summary: Creates the specified Data Lake Store account.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: name
+          type: string
+          description: The name of the Data Lake Store account to create.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to create the Data Lake\rStore account."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the account regional\rlocation."
+        - id: parameters.name
+          type: string
+          description: Gets or sets the account name.
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets the value of custom\rproperties."
+        - id: parameters.properties
+          type: object
+          description: "Gets or sets the Data Lake Store\raccount properties."
+        - id: parameters.properties.endpoint
+          type: string
+          description: "Gets or sets the gateway\rhost."
+        - id: parameters.properties.defaultGroup
+          type: string
+          description: "Gets or sets the\rdefault owner group for all new folders and files created in the Data Lake\rStore account."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(resourceGroupName, name, parameters,
+        parameters.location, parameters.name, parameters.tags,
+        parameters.properties, parameters.properties.endpoint,
+        parameters.properties.defaultGroup, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Account.create(resourceGroupName, name, parameters, parameters.location,
+      parameters.name, parameters.tags, parameters.properties,
+      parameters.properties.endpoint, parameters.properties.defaultGroup,
+      options, options.customHeaders, callback)
+    children:
+      - 'Account#create~client'
+      - 'Account#create~callback'
+      - 'Account#create~options'
+  - uid: 'Account#beginCreate'
+    id: beginCreate
+    parent: Account
+    name: >-
+      beginCreate(resourceGroupName, name, parameters, parameters.location,
+      parameters.name, parameters.tags, parameters.properties,
+      parameters.properties.endpoint, parameters.properties.defaultGroup,
+      options, options.customHeaders, callback)
+    summary: Creates the specified Data Lake Store account.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: name
+          type: string
+          description: The name of the Data Lake Store account to create.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to create the Data Lake\rStore account."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the account regional\rlocation."
+        - id: parameters.name
+          type: string
+          description: Gets or sets the account name.
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets the value of custom\rproperties."
+        - id: parameters.properties
+          type: object
+          description: "Gets or sets the Data Lake Store\raccount properties."
+        - id: parameters.properties.endpoint
+          type: string
+          description: "Gets or sets the gateway\rhost."
+        - id: parameters.properties.defaultGroup
+          type: string
+          description: "Gets or sets the\rdefault owner group for all new folders and files created in the Data Lake\rStore account."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(resourceGroupName, name, parameters,
+        parameters.location, parameters.name, parameters.tags,
+        parameters.properties, parameters.properties.endpoint,
+        parameters.properties.defaultGroup, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Account.beginCreate(resourceGroupName, name, parameters,
+      parameters.location, parameters.name, parameters.tags,
+      parameters.properties, parameters.properties.endpoint,
+      parameters.properties.defaultGroup, options, options.customHeaders,
+      callback)
+    children:
+      - 'Account#beginCreate~client'
+      - 'Account#beginCreate~callback'
+      - 'Account#beginCreate~options'
+      - 'Account#beginCreate~requestUrl'
+      - 'Account#beginCreate~requestUrl'
+      - 'Account#beginCreate~requestUrl'
+      - 'Account#beginCreate~requestUrl'
+      - 'Account#beginCreate~queryParameters'
+      - 'Account#beginCreate~requestUrl'
+      - 'Account#beginCreate~regex'
+      - 'Account#beginCreate~requestUrl'
+      - 'Account#beginCreate~httpRequest'
+      - 'Account#beginCreate~headerName'
+      - 'Account#beginCreate~requestContent'
+      - 'Account#beginCreate~requestModel'
+      - 'Account#beginCreate~requestModelMapper'
+      - 'Account#beginCreate~requestModel'
+      - 'Account#beginCreate~requestContent'
+      - 'Account#beginCreate~serializationError'
+  - uid: 'Account#update'
+    id: update
+    parent: Account
+    name: >-
+      update(resourceGroupName, name, parameters, parameters.location,
+      parameters.name, parameters.tags, parameters.properties,
+      parameters.properties.endpoint, parameters.properties.defaultGroup,
+      options, options.customHeaders, callback)
+    summary: Updates the specified Data Lake Store account information.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: name
+          type: string
+          description: The name of the Data Lake Store account to update.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to update the Data Lake\rStore account."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the account regional\rlocation."
+        - id: parameters.name
+          type: string
+          description: Gets or sets the account name.
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets the value of custom\rproperties."
+        - id: parameters.properties
+          type: object
+          description: "Gets or sets the Data Lake Store\raccount properties."
+        - id: parameters.properties.endpoint
+          type: string
+          description: "Gets or sets the gateway\rhost."
+        - id: parameters.properties.defaultGroup
+          type: string
+          description: "Gets or sets the\rdefault owner group for all new folders and files created in the Data Lake\rStore account."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(resourceGroupName, name, parameters,
+        parameters.location, parameters.name, parameters.tags,
+        parameters.properties, parameters.properties.endpoint,
+        parameters.properties.defaultGroup, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Account.update(resourceGroupName, name, parameters, parameters.location,
+      parameters.name, parameters.tags, parameters.properties,
+      parameters.properties.endpoint, parameters.properties.defaultGroup,
+      options, options.customHeaders, callback)
+    children:
+      - 'Account#update~client'
+      - 'Account#update~callback'
+      - 'Account#update~options'
+  - uid: 'Account#beginUpdate'
+    id: beginUpdate
+    parent: Account
+    name: >-
+      beginUpdate(resourceGroupName, name, parameters, parameters.location,
+      parameters.name, parameters.tags, parameters.properties,
+      parameters.properties.endpoint, parameters.properties.defaultGroup,
+      options, options.customHeaders, callback)
+    summary: Updates the specified Data Lake Store account information.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: name
+          type: string
+          description: The name of the Data Lake Store account to update.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to update the Data Lake\rStore account."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the account regional\rlocation."
+        - id: parameters.name
+          type: string
+          description: Gets or sets the account name.
+        - id: parameters.tags
+          type: object
+          description: "Gets or sets the value of custom\rproperties."
+        - id: parameters.properties
+          type: object
+          description: "Gets or sets the Data Lake Store\raccount properties."
+        - id: parameters.properties.endpoint
+          type: string
+          description: "Gets or sets the gateway\rhost."
+        - id: parameters.properties.defaultGroup
+          type: string
+          description: "Gets or sets the\rdefault owner group for all new folders and files created in the Data Lake\rStore account."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginUpdate(resourceGroupName, name, parameters,
+        parameters.location, parameters.name, parameters.tags,
+        parameters.properties, parameters.properties.endpoint,
+        parameters.properties.defaultGroup, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Account.beginUpdate(resourceGroupName, name, parameters,
+      parameters.location, parameters.name, parameters.tags,
+      parameters.properties, parameters.properties.endpoint,
+      parameters.properties.defaultGroup, options, options.customHeaders,
+      callback)
+    children:
+      - 'Account#beginUpdate~client'
+      - 'Account#beginUpdate~callback'
+      - 'Account#beginUpdate~options'
+      - 'Account#beginUpdate~requestUrl'
+      - 'Account#beginUpdate~requestUrl'
+      - 'Account#beginUpdate~requestUrl'
+      - 'Account#beginUpdate~requestUrl'
+      - 'Account#beginUpdate~queryParameters'
+      - 'Account#beginUpdate~requestUrl'
+      - 'Account#beginUpdate~regex'
+      - 'Account#beginUpdate~requestUrl'
+      - 'Account#beginUpdate~httpRequest'
+      - 'Account#beginUpdate~headerName'
+      - 'Account#beginUpdate~requestContent'
+      - 'Account#beginUpdate~requestModel'
+      - 'Account#beginUpdate~requestModelMapper'
+      - 'Account#beginUpdate~requestModel'
+      - 'Account#beginUpdate~requestContent'
+      - 'Account#beginUpdate~serializationError'
+  - uid: 'Account#deleteMethod'
+    id: deleteMethod
+    parent: Account
+    name: >-
+      deleteMethod(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    summary: Deletes the specified Data Lake Store account.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: accountName
+          type: string
+          description: "The name of the Data Lake Store account to\rdelete."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, accountName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Account.deleteMethod(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Account#deleteMethod~client'
+      - 'Account#deleteMethod~callback'
+      - 'Account#deleteMethod~options'
+  - uid: 'Account#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: Account
+    name: >-
+      beginDeleteMethod(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    summary: Deletes the specified Data Lake Store account.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: accountName
+          type: string
+          description: "The name of the Data Lake Store account to\rdelete."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, accountName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Account.beginDeleteMethod(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Account#beginDeleteMethod~client'
+      - 'Account#beginDeleteMethod~callback'
+      - 'Account#beginDeleteMethod~options'
+      - 'Account#beginDeleteMethod~requestUrl'
+      - 'Account#beginDeleteMethod~requestUrl'
+      - 'Account#beginDeleteMethod~requestUrl'
+      - 'Account#beginDeleteMethod~requestUrl'
+      - 'Account#beginDeleteMethod~queryParameters'
+      - 'Account#beginDeleteMethod~requestUrl'
+      - 'Account#beginDeleteMethod~regex'
+      - 'Account#beginDeleteMethod~requestUrl'
+      - 'Account#beginDeleteMethod~httpRequest'
+      - 'Account#beginDeleteMethod~headerName'
+  - uid: 'Account#get'
+    id: get
+    parent: Account
+    name: >-
+      get(resourceGroupName, accountName, options, options.customHeaders,
+      callback)
+    summary: Gets the specified Data Lake Store account.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account."
+        - id: accountName
+          type: string
+          description: "The name of the Data Lake Store account to\rretrieve."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, accountName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Account.get(resourceGroupName, accountName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Account#get~client'
+      - 'Account#get~callback'
+      - 'Account#get~options'
+      - 'Account#get~requestUrl'
+      - 'Account#get~requestUrl'
+      - 'Account#get~requestUrl'
+      - 'Account#get~requestUrl'
+      - 'Account#get~queryParameters'
+      - 'Account#get~requestUrl'
+      - 'Account#get~regex'
+      - 'Account#get~requestUrl'
+      - 'Account#get~httpRequest'
+      - 'Account#get~headerName'
+  - uid: 'Account#listByResourceGroup'
+    id: listByResourceGroup
+    parent: Account
+    name: >-
+      listByResourceGroup(resourceGroupName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.search, options.format,
+      options.customHeaders, callback)
+    summary: "Lists the Data Lake Store accounts within a specific resource group. The\rresponse includes a link to the next page of results, if any."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the Azure resource group that\rcontains the Data Lake Store account(s)."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories/$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "A Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.search
+          type: string
+          description: "A free form search. A free-text search\rexpression to match for whether a particular entry should be included in\rthe feed, e.g. Categories?$search=blue OR green. Optional."
+        - id: options.format
+          type: string
+          description: "The desired return format. Return the\rresponse in particular formatxii without access to request headers for\rstandard content-type negotiation (e.g Orders?$format=json). Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByResourceGroup(resourceGroupName, options, options.filter,
+        options.top, options.skip, options.expand, options.select,
+        options.orderby, options.count, options.search, options.format,
+        options.customHeaders, callback);
+    fullName: >-
+      Account.listByResourceGroup(resourceGroupName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.search, options.format,
+      options.customHeaders, callback)
+    children:
+      - 'Account#listByResourceGroup~client'
+      - 'Account#listByResourceGroup~callback'
+      - 'Account#listByResourceGroup~options'
+      - 'Account#listByResourceGroup~filter'
+      - 'Account#listByResourceGroup~top'
+      - 'Account#listByResourceGroup~skip'
+      - 'Account#listByResourceGroup~expand'
+      - 'Account#listByResourceGroup~select'
+      - 'Account#listByResourceGroup~orderby'
+      - 'Account#listByResourceGroup~count'
+      - 'Account#listByResourceGroup~search'
+      - 'Account#listByResourceGroup~format'
+      - 'Account#listByResourceGroup~requestUrl'
+      - 'Account#listByResourceGroup~requestUrl'
+      - 'Account#listByResourceGroup~requestUrl'
+      - 'Account#listByResourceGroup~queryParameters'
+      - 'Account#listByResourceGroup~requestUrl'
+      - 'Account#listByResourceGroup~regex'
+      - 'Account#listByResourceGroup~requestUrl'
+      - 'Account#listByResourceGroup~httpRequest'
+      - 'Account#listByResourceGroup~headerName'
+  - uid: 'Account#list'
+    id: list
+    parent: Account
+    name: >-
+      list(options, options.filter, options.top, options.skip, options.expand,
+      options.select, options.orderby, options.count, options.search,
+      options.format, options.customHeaders, callback)
+    summary: "Lists the Data Lake Store accounts within the subscription. The response\rincludes a link to the next page of results, if any."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories/$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.search
+          type: string
+          description: "A free form search. A free-text search\rexpression to match for whether a particular entry should be included in\rthe feed, e.g. Categories?$search=blue OR green. Optional."
+        - id: options.format
+          type: string
+          description: "The desired return format. Return the\rresponse in particular formatxii without access to request headers for\rstandard content-type negotiation (e.g Orders?$format=json). Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(options, options.filter, options.top, options.skip,
+        options.expand, options.select, options.orderby, options.count,
+        options.search, options.format, options.customHeaders, callback);
+    fullName: >-
+      Account.list(options, options.filter, options.top, options.skip,
+      options.expand, options.select, options.orderby, options.count,
+      options.search, options.format, options.customHeaders, callback)
+    children:
+      - 'Account#list~client'
+      - 'Account#list~callback'
+      - 'Account#list~options'
+      - 'Account#list~filter'
+      - 'Account#list~top'
+      - 'Account#list~skip'
+      - 'Account#list~expand'
+      - 'Account#list~select'
+      - 'Account#list~orderby'
+      - 'Account#list~count'
+      - 'Account#list~search'
+      - 'Account#list~format'
+      - 'Account#list~requestUrl'
+      - 'Account#list~requestUrl'
+      - 'Account#list~queryParameters'
+      - 'Account#list~requestUrl'
+      - 'Account#list~regex'
+      - 'Account#list~requestUrl'
+      - 'Account#list~httpRequest'
+      - 'Account#list~headerName'
+  - uid: 'Account#listFirewallRulesNext'
+    id: listFirewallRulesNext
+    parent: Account
+    name: >-
+      listFirewallRulesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: "Lists the Data Lake Store firewall rules within the specified Data Lake\rStore account."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreFirewallRuleListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listFirewallRulesNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Account.listFirewallRulesNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Account#listFirewallRulesNext~client'
+      - 'Account#listFirewallRulesNext~callback'
+      - 'Account#listFirewallRulesNext~options'
+      - 'Account#listFirewallRulesNext~requestUrl'
+      - 'Account#listFirewallRulesNext~requestUrl'
+      - 'Account#listFirewallRulesNext~regex'
+      - 'Account#listFirewallRulesNext~requestUrl'
+      - 'Account#listFirewallRulesNext~httpRequest'
+      - 'Account#listFirewallRulesNext~headerName'
+  - uid: 'Account#listByResourceGroupNext'
+    id: listByResourceGroupNext
+    parent: Account
+    name: >-
+      listByResourceGroupNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: "Lists the Data Lake Store accounts within a specific resource group. The\rresponse includes a link to the next page of results, if any."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByResourceGroupNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Account.listByResourceGroupNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Account#listByResourceGroupNext~client'
+      - 'Account#listByResourceGroupNext~callback'
+      - 'Account#listByResourceGroupNext~options'
+      - 'Account#listByResourceGroupNext~requestUrl'
+      - 'Account#listByResourceGroupNext~requestUrl'
+      - 'Account#listByResourceGroupNext~regex'
+      - 'Account#listByResourceGroupNext~requestUrl'
+      - 'Account#listByResourceGroupNext~httpRequest'
+      - 'Account#listByResourceGroupNext~headerName'
+  - uid: 'Account#listNext'
+    id: listNext
+    parent: Account
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "Lists the Data Lake Store accounts within the subscription. The response\rincludes a link to the next page of results, if any."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: 'Account.listNext(nextPageLink, options, options.customHeaders, callback)'
+    children:
+      - 'Account#listNext~client'
+      - 'Account#listNext~callback'
+      - 'Account#listNext~options'
+      - 'Account#listNext~requestUrl'
+      - 'Account#listNext~requestUrl'
+      - 'Account#listNext~regex'
+      - 'Account#listNext~requestUrl'
+      - 'Account#listNext~httpRequest'
+      - 'Account#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

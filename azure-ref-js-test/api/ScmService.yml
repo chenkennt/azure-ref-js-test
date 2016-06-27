@@ -1,0 +1,78 @@
+items:
+  - uid: ScmService
+    id: ScmService
+    name: ScmService
+    summary: Creates a new ScmService object.
+    type: Class
+    syntax:
+      content: ScmService
+    fullName: ScmService
+    children:
+      - 'ScmService#authenticationProvider'
+      - 'ScmService#getDumpToStream'
+      - 'ScmService#getLogStream'
+  - uid: 'ScmService#authenticationProvider'
+    id: authenticationProvider
+    parent: ScmService
+    name: authenticationProvider
+    type: Field
+    syntax:
+      content: authenticationProvider
+    fullName: ScmService.authenticationProvider
+    children:
+      - 'ScmService#authenticationProvider.signRequest'
+  - uid: 'ScmService#getDumpToStream'
+    id: getDumpToStream
+    parent: ScmService
+    name: getDumpToStream(callback)
+    summary: Get log dump.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `results` will contain\r                                                      the list of webspaces.\r                                                      `response` will contain information related to this operation."
+      content: function getDumpToStream(callback);
+    fullName: ScmService.getDumpToStream(callback)
+    children:
+      - 'ScmService#getDumpToStream~webResource'
+  - uid: 'ScmService#getLogStream'
+    id: getLogStream
+    parent: ScmService
+    name: 'getLogStream(path, options, options.filter, callback)'
+    summary: Get log stream.
+    type: Method
+    syntax:
+      parameters:
+        - id: path
+          type: object
+          description: The log stream path.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.filter
+          type: int
+          description: The log stream filter.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `results` will contain\r                                                      the list of webspaces.\r                                                      `response` will contain information related to this operation."
+      content: 'function getLogStream(path, options, options.filter, callback);'
+    fullName: 'ScmService.getLogStream(path, options, options.filter, callback)'
+    children:
+      - 'ScmService#getLogStream~options'
+      - 'ScmService#getLogStream~webResource'
+      - 'ScmService#getLogStream~webResource'
+      - 'ScmService#getLogStream~webResource'
+references:
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: int
+    name: int
+    fullName: int
+    isExternal: true

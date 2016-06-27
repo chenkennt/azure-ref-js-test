@@ -1,0 +1,1440 @@
+items:
+  - uid: ServiceBusService
+    id: ServiceBusService
+    name: ServiceBusService
+    summary: "Creates a new ServiceBusService object.\r\rThe azure module will read the environment variables AZURE_SERVICEBUS_NAMESPACE and AZURE_SERVICEBUS_ACCESS_KEY\rfor information required to connect to your Microsoft Azure Service Bus.\rIf these environment variables are not set, you must specify the account information\rwhen creating a ServiceBusService object."
+    type: Class
+    syntax:
+      content: ServiceBusService
+    fullName: ServiceBusService
+    children:
+      - 'ServiceBusService#receiveQueueMessage'
+      - 'ServiceBusService#receiveSubscriptionMessage'
+      - 'ServiceBusService#deleteMessage'
+      - 'ServiceBusService#unlockMessage'
+      - 'ServiceBusService#renewLockForMessage'
+      - 'ServiceBusService#sendQueueMessage'
+      - 'ServiceBusService#sendTopicMessage'
+      - 'ServiceBusService#_sendMessage'
+      - 'ServiceBusService#_receiveMessage'
+      - 'ServiceBusService#createQueue'
+      - 'ServiceBusService#createQueueIfNotExists'
+      - 'ServiceBusService#deleteQueue'
+      - 'ServiceBusService#getQueue'
+      - 'ServiceBusService#listQueues'
+      - 'ServiceBusService#createTopic'
+      - 'ServiceBusService#createTopicIfNotExists'
+      - 'ServiceBusService#deleteTopic'
+      - 'ServiceBusService#getTopic'
+      - 'ServiceBusService#listTopics'
+      - 'ServiceBusService#createSubscription'
+      - 'ServiceBusService#deleteSubscription'
+      - 'ServiceBusService#getSubscription'
+      - 'ServiceBusService#listSubscriptions'
+      - 'ServiceBusService#createRule'
+      - 'ServiceBusService#deleteRule'
+      - 'ServiceBusService#getRule'
+      - 'ServiceBusService#listRules'
+      - 'ServiceBusService#createNotificationHub'
+      - 'ServiceBusService#getNotificationHub'
+      - 'ServiceBusService#listNotificationHubs'
+      - 'ServiceBusService#deleteNotificationHub'
+  - uid: 'ServiceBusService#receiveQueueMessage'
+    id: receiveQueueMessage
+    parent: ServiceBusService
+    name: >-
+      receiveQueueMessage(queuePath, options, options.isPeekLock,
+      options.timeoutIntervalInS, callback)
+    summary: Receives a queue message.
+    type: Method
+    syntax:
+      parameters:
+        - id: queuePath
+          type: string
+          description: >-
+            A string object that represents the name of the queue to which the
+            message will be sent.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.isPeekLock
+          type: bool
+          description: >-
+            Boolean value indicating if the message should be peeked or
+            received.
+        - id: options.timeoutIntervalInS
+          type: int
+          description: 'The timeout interval, in seconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                if an error occurs; otherwise `receivequeuemessageresult` will contain\r                                                                                the message result information.\r                                                                                `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function receiveQueueMessage(queuePath, options, options.isPeekLock,
+        options.timeoutIntervalInS, callback);
+    fullName: >-
+      ServiceBusService.receiveQueueMessage(queuePath, options,
+      options.isPeekLock, options.timeoutIntervalInS, callback)
+    children:
+      - 'ServiceBusService#receiveQueueMessage~options'
+      - 'ServiceBusService#receiveQueueMessage~callback'
+      - 'ServiceBusService#receiveQueueMessage~options'
+  - uid: 'ServiceBusService#receiveSubscriptionMessage'
+    id: receiveSubscriptionMessage
+    parent: ServiceBusService
+    name: >-
+      receiveSubscriptionMessage(topicPath, subscriptionPath, options,
+      options.isPeekLock, options.timeoutIntervalInS, callback)
+    summary: Receives a subscription message.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: A string object that represents the name of the topic to receive.
+        - id: subscriptionPath
+          type: string
+          description: >-
+            A string object that represents the name of the subscription from
+            the message will be received.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.isPeekLock
+          type: bool
+          description: >-
+            Boolean value indicating if the message should be peeked or
+            received.
+        - id: options.timeoutIntervalInS
+          type: int
+          description: 'The timeout interval, in seconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                if an error occurs; otherwise `receivetopicmessageresult` will contain\r                                                                                the message result information.\r                                                                                `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function receiveSubscriptionMessage(topicPath, subscriptionPath,
+        options, options.isPeekLock, options.timeoutIntervalInS, callback);
+    fullName: >-
+      ServiceBusService.receiveSubscriptionMessage(topicPath, subscriptionPath,
+      options, options.isPeekLock, options.timeoutIntervalInS, callback)
+    children:
+      - 'ServiceBusService#receiveSubscriptionMessage~options'
+      - 'ServiceBusService#receiveSubscriptionMessage~callback'
+      - 'ServiceBusService#receiveSubscriptionMessage~options'
+      - 'ServiceBusService#receiveSubscriptionMessage~subscriptionFullPath'
+  - uid: 'ServiceBusService#deleteMessage'
+    id: deleteMessage
+    parent: ServiceBusService
+    name: 'deleteMessage(message, callback)'
+    summary: Deletes a message.
+    type: Method
+    syntax:
+      parameters:
+        - id: message
+          type: object
+          description: The message object or a string with the message location.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function deleteMessage(message, callback);'
+    fullName: 'ServiceBusService.deleteMessage(message, callback)'
+    children:
+      - 'ServiceBusService#deleteMessage~message'
+      - 'ServiceBusService#deleteMessage~relativePath'
+      - 'ServiceBusService#deleteMessage~webResource'
+      - 'ServiceBusService#deleteMessage~processResponseCallback'
+  - uid: 'ServiceBusService#unlockMessage'
+    id: unlockMessage
+    parent: ServiceBusService
+    name: 'unlockMessage(message, callback)'
+    summary: Unlocks a message.
+    type: Method
+    syntax:
+      parameters:
+        - id: message
+          type: object
+          description: The message object or a string with the message location.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                    if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function unlockMessage(message, callback);'
+    fullName: 'ServiceBusService.unlockMessage(message, callback)'
+    children:
+      - 'ServiceBusService#unlockMessage~message'
+      - 'ServiceBusService#unlockMessage~relativePath'
+      - 'ServiceBusService#unlockMessage~webResource'
+      - 'ServiceBusService#unlockMessage~processResponseCallback'
+  - uid: 'ServiceBusService#renewLockForMessage'
+    id: renewLockForMessage
+    parent: ServiceBusService
+    name: 'renewLockForMessage(message, callback)'
+    summary: Renew-lock for message.
+    type: Method
+    syntax:
+      parameters:
+        - id: message
+          type: object
+          description: The message object or a string with the message location.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                    if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function renewLockForMessage(message, callback);'
+    fullName: 'ServiceBusService.renewLockForMessage(message, callback)'
+    children:
+      - 'ServiceBusService#renewLockForMessage~message'
+      - 'ServiceBusService#renewLockForMessage~relativePath'
+      - 'ServiceBusService#renewLockForMessage~webResource'
+      - 'ServiceBusService#renewLockForMessage~processResponseCallback'
+  - uid: 'ServiceBusService#sendQueueMessage'
+    id: sendQueueMessage
+    parent: ServiceBusService
+    name: >-
+      sendQueueMessage(queuePath, message, message.body,
+      message.customProperties, message.brokerProperties.CorrelationId,
+      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+      message.brokerProperties.TimeToLive, message.brokerProperties.To,
+      message.brokerProperties.ScheduledEnqueueTimeUtc,
+      message.brokerProperties.ReplyToSessionId, callback)
+    summary: Sends a queue message.
+    type: Method
+    syntax:
+      parameters:
+        - id: queuePath
+          type: string
+          description: >-
+            A string object that represents the name of the queue to which the
+            message will be sent.
+        - id: message
+          type: object
+          description: A message object that represents the message to send.
+        - id: message.body
+          type: string
+          description: The message's text.
+        - id: message.customProperties
+          type: object
+          description: The message's custom properties.
+        - id: message.brokerProperties.CorrelationId
+          type: string
+          description: The message's correlation identifier.
+        - id: message.brokerProperties.SessionId
+          type: string
+          description: The session identifier.
+        - id: message.brokerProperties.MessageId
+          type: string
+          description: The message's identifier.
+        - id: message.brokerProperties.Label
+          type: string
+          description: The message's lable.
+        - id: message.brokerProperties.ReplyTo
+          type: string
+          description: The message's reply to.
+        - id: message.brokerProperties.TimeToLive
+          type: string
+          description: The message's time to live.
+        - id: message.brokerProperties.To
+          type: string
+          description: The message's to.
+        - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+          type: string
+          description: The message's scheduled enqueue time in UTC.
+        - id: message.brokerProperties.ReplyToSessionId
+          type: string
+          description: The message's reply to session identifier.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function sendQueueMessage(queuePath, message, message.body,
+        message.customProperties, message.brokerProperties.CorrelationId,
+        message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+        message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+        message.brokerProperties.TimeToLive, message.brokerProperties.To,
+        message.brokerProperties.ScheduledEnqueueTimeUtc,
+        message.brokerProperties.ReplyToSessionId, callback);
+    fullName: >-
+      ServiceBusService.sendQueueMessage(queuePath, message, message.body,
+      message.customProperties, message.brokerProperties.CorrelationId,
+      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+      message.brokerProperties.TimeToLive, message.brokerProperties.To,
+      message.brokerProperties.ScheduledEnqueueTimeUtc,
+      message.brokerProperties.ReplyToSessionId, callback)
+  - uid: 'ServiceBusService#sendTopicMessage'
+    id: sendTopicMessage
+    parent: ServiceBusService
+    name: >-
+      sendTopicMessage(topicPath, message, message.body,
+      message.customProperties, message.brokerProperties.CorrelationId,
+      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+      message.brokerProperties.TimeToLive, message.brokerProperties.To,
+      message.brokerProperties.ScheduledEnqueueTimeUtc,
+      message.brokerProperties.ReplyToSessionId, callback)
+    summary: Sends a topic message.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic to which the
+            message will be sent.
+        - id: message
+          type: object
+          description: A message object that represents the message to send.
+        - id: message.body
+          type: string
+          description: The message's text.
+        - id: message.customProperties
+          type: object
+          description: The message's custom properties.
+        - id: message.brokerProperties.CorrelationId
+          type: string
+          description: The message's correlation identifier.
+        - id: message.brokerProperties.SessionId
+          type: string
+          description: The session identifier.
+        - id: message.brokerProperties.MessageId
+          type: string
+          description: The message's identifier.
+        - id: message.brokerProperties.Label
+          type: string
+          description: The message's lable.
+        - id: message.brokerProperties.ReplyTo
+          type: string
+          description: The message's reply to.
+        - id: message.brokerProperties.TimeToLive
+          type: string
+          description: The message's time to live.
+        - id: message.brokerProperties.To
+          type: string
+          description: The message's to.
+        - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+          type: string
+          description: The message's scheduled enqueue time in UTC.
+        - id: message.brokerProperties.ReplyToSessionId
+          type: string
+          description: The message's reply to session identifier.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `receivetopicmessageresult` will contain\r                                                                                  the message result information.\r                                                                                  `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function sendTopicMessage(topicPath, message, message.body,
+        message.customProperties, message.brokerProperties.CorrelationId,
+        message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+        message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+        message.brokerProperties.TimeToLive, message.brokerProperties.To,
+        message.brokerProperties.ScheduledEnqueueTimeUtc,
+        message.brokerProperties.ReplyToSessionId, callback);
+    fullName: >-
+      ServiceBusService.sendTopicMessage(topicPath, message, message.body,
+      message.customProperties, message.brokerProperties.CorrelationId,
+      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+      message.brokerProperties.TimeToLive, message.brokerProperties.To,
+      message.brokerProperties.ScheduledEnqueueTimeUtc,
+      message.brokerProperties.ReplyToSessionId, callback)
+  - uid: 'ServiceBusService#_sendMessage'
+    id: _sendMessage
+    parent: ServiceBusService
+    name: >-
+      _sendMessage(path, message, message.body, message.customProperties,
+      message.brokerProperties.CorrelationId,
+      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+      message.brokerProperties.TimeToLive, message.brokerProperties.To,
+      message.brokerProperties.ScheduledEnqueueTimeUtc,
+      message.brokerProperties.ReplyToSessionId, callback)
+    summary: Sends a message.
+    type: Method
+    syntax:
+      parameters:
+        - id: path
+          type: string
+          description: >-
+            A string object that represents the path to which the message will
+            be sent. This may be the value of a queuePath or a topicPath.
+        - id: message
+          type: object
+          description: A message object that represents the message to send.
+        - id: message.body
+          type: string
+          description: The message's text.
+        - id: message.customProperties
+          type: object
+          description: The message's custom properties.
+        - id: message.brokerProperties.CorrelationId
+          type: string
+          description: The message's correlation identifier.
+        - id: message.brokerProperties.SessionId
+          type: string
+          description: The session identifier.
+        - id: message.brokerProperties.MessageId
+          type: string
+          description: The message's identifier.
+        - id: message.brokerProperties.Label
+          type: string
+          description: The message's lable.
+        - id: message.brokerProperties.ReplyTo
+          type: string
+          description: The message's reply to.
+        - id: message.brokerProperties.TimeToLive
+          type: string
+          description: The message's time to live.
+        - id: message.brokerProperties.To
+          type: string
+          description: The message's to.
+        - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+          type: string
+          description: The message's scheduled enqueue time in UTC.
+        - id: message.brokerProperties.ReplyToSessionId
+          type: string
+          description: The message's reply to session identifier.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function _sendMessage(path, message, message.body,
+        message.customProperties, message.brokerProperties.CorrelationId,
+        message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+        message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+        message.brokerProperties.TimeToLive, message.brokerProperties.To,
+        message.brokerProperties.ScheduledEnqueueTimeUtc,
+        message.brokerProperties.ReplyToSessionId, callback);
+    fullName: >-
+      ServiceBusService._sendMessage(path, message, message.body,
+      message.customProperties, message.brokerProperties.CorrelationId,
+      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
+      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
+      message.brokerProperties.TimeToLive, message.brokerProperties.To,
+      message.brokerProperties.ScheduledEnqueueTimeUtc,
+      message.brokerProperties.ReplyToSessionId, callback)
+    children:
+      - 'ServiceBusService#_sendMessage~message'
+      - 'ServiceBusService#_sendMessage~webResource'
+      - 'ServiceBusService#_sendMessage~processResponseCallback'
+  - uid: 'ServiceBusService#_receiveMessage'
+    id: _receiveMessage
+    parent: ServiceBusService
+    name: >-
+      _receiveMessage(path, options, options.isPeekLock,
+      options.timeoutIntervalInS, callback)
+    summary: Receives a message.
+    type: Method
+    syntax:
+      parameters:
+        - id: path
+          type: string
+          description: >-
+            A <code>String</code> object that represents the path from which a
+            message will be received. This may either be the value of queuePath
+            or a combination of the topicPath + "/subscriptions/" +
+            subscriptionName.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.isPeekLock
+          type: bool
+          description: >-
+            Boolean value indicating if the message should be peeked or
+            received.
+        - id: options.timeoutIntervalInS
+          type: int
+          description: 'The timeout interval, in seconds, to use for the request.'
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                      if an error occurs; otherwise `receivemessageresult` will contain\r                                                                      the message result information.\r                                                                      `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function _receiveMessage(path, options, options.isPeekLock,
+        options.timeoutIntervalInS, callback);
+    fullName: >-
+      ServiceBusService._receiveMessage(path, options, options.isPeekLock,
+      options.timeoutIntervalInS, callback)
+    children:
+      - 'ServiceBusService#_receiveMessage~options'
+      - 'ServiceBusService#_receiveMessage~callback'
+      - 'ServiceBusService#_receiveMessage~options'
+      - 'ServiceBusService#_receiveMessage~webResource'
+      - 'ServiceBusService#_receiveMessage~webResource'
+      - 'ServiceBusService#_receiveMessage~webResource'
+      - 'ServiceBusService#_receiveMessage~processResponseCallback'
+  - uid: 'ServiceBusService#createQueue'
+    id: createQueue
+    parent: ServiceBusService
+    name: >-
+      createQueue(queuePath, options, options.MaxSizeInMegaBytes,
+      options.DefaultMessageTimeToLive, options.LockDuration,
+      options.RequiresSession, options.RequiresDuplicateDetection,
+      options.DeadLetteringOnMessageExpiration,
+      options.DuplicateDetectionHistoryTimeWindow, callback)
+    summary: Creates a queue.
+    type: Method
+    syntax:
+      parameters:
+        - id: queuePath
+          type: string
+          description: A string object that represents the name of the queue to delete.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.MaxSizeInMegaBytes
+          type: int
+          description: >-
+            Specifies the maximum queue size in megabytes. Any attempt to
+            enqueue a message that will cause the queue to exceed this value
+            will fail.
+        - id: options.DefaultMessageTimeToLive
+          type: PTnHnMnS
+          description: >-
+            Depending on whether DeadLettering is enabled, a message is
+            automatically moved to the DeadLetterQueue or deleted if it has been
+            stored in the queue for longer than the specified time. This value
+            is overwritten by a TTL specified on the message if and only if the
+            message TTL is smaller than the TTL set on the queue. This value is
+            immutable after the Queue has been created.
+        - id: options.LockDuration
+          type: PTnHnMnS
+          description: >-
+            Determines the amount of time in seconds in which a message should
+            be locked for processing by a receiver. After this period, the
+            message is unlocked and available for consumption by the next
+            receiver. Settable only at queue creation time.
+        - id: options.RequiresSession
+          type: bool
+          description: >-
+            Settable only at queue creation time. If set to true, the queue will
+            be session-aware and only SessionReceiver will be supported.
+            Session-aware queues are not supported through REST.
+        - id: options.RequiresDuplicateDetection
+          type: bool
+          description: Settable only at queue creation time.
+        - id: options.DeadLetteringOnMessageExpiration
+          type: bool
+          description: >-
+            This field controls how the Service Bus handles a message whose TTL
+            has expired. If it is enabled and a message expires, the Service Bus
+            moves the message from the queue into the queue’s dead-letter
+            sub-queue. If disabled, message will be permanently deleted from the
+            queue. Settable only at queue creation time.
+        - id: options.DuplicateDetectionHistoryTimeWindow
+          type: bool
+          description: >-
+            Specifies the time span during which the Service Bus detects message
+            duplication.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `createqueueresult` will contain\r                                                                                  the new queue information.\r                                                                                  `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createQueue(queuePath, options, options.MaxSizeInMegaBytes,
+        options.DefaultMessageTimeToLive, options.LockDuration,
+        options.RequiresSession, options.RequiresDuplicateDetection,
+        options.DeadLetteringOnMessageExpiration,
+        options.DuplicateDetectionHistoryTimeWindow, callback);
+    fullName: >-
+      ServiceBusService.createQueue(queuePath, options,
+      options.MaxSizeInMegaBytes, options.DefaultMessageTimeToLive,
+      options.LockDuration, options.RequiresSession,
+      options.RequiresDuplicateDetection,
+      options.DeadLetteringOnMessageExpiration,
+      options.DuplicateDetectionHistoryTimeWindow, callback)
+  - uid: 'ServiceBusService#createQueueIfNotExists'
+    id: createQueueIfNotExists
+    parent: ServiceBusService
+    name: >-
+      createQueueIfNotExists(queuePath, options, options.MaxSizeInMegaBytes,
+      options.DefaultMessageTimeToLive, options.LockDuration,
+      options.RequiresSession, options.RequiresDuplicateDetection,
+      options.DeadLetteringOnMessageExpiration,
+      options.DuplicateDetectionHistoryTimeWindow, callback)
+    summary: Creates a queue if it doesn't already exists.
+    type: Method
+    syntax:
+      parameters:
+        - id: queuePath
+          type: string
+          description: A string object that represents the name of the queue to delete.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.MaxSizeInMegaBytes
+          type: int
+          description: >-
+            Specifies the maximum queue size in megabytes. Any attempt to
+            enqueue a message that will cause the queue to exceed this value
+            will fail.
+        - id: options.DefaultMessageTimeToLive
+          type: PTnHnMnS
+          description: >-
+            Depending on whether DeadLettering is enabled, a message is
+            automatically moved to the DeadLetterQueue or deleted if it has been
+            stored in the queue for longer than the specified time. This value
+            is overwritten by a TTL specified on the message if and only if the
+            message TTL is smaller than the TTL set on the queue. This value is
+            immutable after the Queue has been created.
+        - id: options.LockDuration
+          type: PTnHnMnS
+          description: >-
+            Determines the amount of time in seconds in which a message should
+            be locked for processing by a receiver. After this period, the
+            message is unlocked and available for consumption by the next
+            receiver. Settable only at queue creation time.
+        - id: options.RequiresSession
+          type: bool
+          description: >-
+            Settable only at queue creation time. If set to true, the queue will
+            be session-aware and only SessionReceiver will be supported.
+            Session-aware queues are not supported through REST.
+        - id: options.RequiresDuplicateDetection
+          type: bool
+          description: Settable only at queue creation time.
+        - id: options.DeadLetteringOnMessageExpiration
+          type: bool
+          description: >-
+            This field controls how the Service Bus handles a message whose TTL
+            has expired. If it is enabled and a message expires, the Service Bus
+            moves the message from the queue into the queue’s dead-letter
+            sub-queue. If disabled, message will be permanently deleted from the
+            queue. Settable only at queue creation time.
+        - id: options.DuplicateDetectionHistoryTimeWindow
+          type: bool
+          description: >-
+            Specifies the time span during which the Service Bus detects message
+            duplication.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `queueCreated` will contain\r                                                                                  the new queue information.\r                                                                                  `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createQueueIfNotExists(queuePath, options,
+        options.MaxSizeInMegaBytes, options.DefaultMessageTimeToLive,
+        options.LockDuration, options.RequiresSession,
+        options.RequiresDuplicateDetection,
+        options.DeadLetteringOnMessageExpiration,
+        options.DuplicateDetectionHistoryTimeWindow, callback);
+    fullName: >-
+      ServiceBusService.createQueueIfNotExists(queuePath, options,
+      options.MaxSizeInMegaBytes, options.DefaultMessageTimeToLive,
+      options.LockDuration, options.RequiresSession,
+      options.RequiresDuplicateDetection,
+      options.DeadLetteringOnMessageExpiration,
+      options.DuplicateDetectionHistoryTimeWindow, callback)
+    children:
+      - 'ServiceBusService#createQueueIfNotExists~options'
+      - 'ServiceBusService#createQueueIfNotExists~callback'
+      - 'ServiceBusService#createQueueIfNotExists~options'
+      - 'ServiceBusService#createQueueIfNotExists~queueXml'
+      - 'ServiceBusService#createQueueIfNotExists~webResource'
+      - 'ServiceBusService#createQueueIfNotExists~processResponseCallback'
+  - uid: 'ServiceBusService#deleteQueue'
+    id: deleteQueue
+    parent: ServiceBusService
+    name: 'deleteQueue(queuePath, callback)'
+    summary: Deletes a queue.
+    type: Method
+    syntax:
+      parameters:
+        - id: queuePath
+          type: string
+          description: A string object that represents the name of the queue to delete.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                     if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function deleteQueue(queuePath, callback);'
+    fullName: 'ServiceBusService.deleteQueue(queuePath, callback)'
+  - uid: 'ServiceBusService#getQueue'
+    id: getQueue
+    parent: ServiceBusService
+    name: 'getQueue(queuePath, callback)'
+    summary: Retrieves a queue.
+    type: Method
+    syntax:
+      parameters:
+        - id: queuePath
+          type: string
+          description: A string object that represents the name of the queue to retrieve.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `queueresult` will contain\r                                                                                  the queue information.\r                                                                                  `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function getQueue(queuePath, callback);'
+    fullName: 'ServiceBusService.getQueue(queuePath, callback)'
+    children:
+      - 'ServiceBusService#getQueue~validateResult'
+  - uid: 'ServiceBusService#listQueues'
+    id: listQueues
+    parent: ServiceBusService
+    name: 'listQueues(options, options.top, options.skip, callback)'
+    summary: Returns a list of queues.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.top
+          type: int
+          description: The top clause for listing queues.
+        - id: options.skip
+          type: int
+          description: The skip clause for listing queues.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listqueueresult` will contain\r                                                                      the list of queues.\r                                                                      `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function listQueues(options, options.top, options.skip, callback);'
+    fullName: 'ServiceBusService.listQueues(options, options.top, options.skip, callback)'
+  - uid: 'ServiceBusService#createTopic'
+    id: createTopic
+    parent: ServiceBusService
+    name: >-
+      createTopic(topic, options, options.MaxSizeInMegabytes,
+      options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
+      options.DuplicateDetectionHistoryTimeWindow,
+      options.EnableBatchedOperations, options.SizeInBytes, callback)
+    summary: Creates a topic.
+    type: Method
+    syntax:
+      parameters:
+        - id: topic
+          type: TopicInfo
+          description: A Topic object that represents the topic to create.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.MaxSizeInMegabytes
+          type: int
+          description: >-
+            Specifies the maximum topic size in megabytes. Any attempt to
+            enqueue a message that will cause the topic to exceed this value
+            will fail. All messages that are stored in the topic or any of its
+            subscriptions count towards this value. Multiple copies of a message
+            that reside in one or multiple subscriptions count as a single
+            messages. For example, if message m exists once in subscription s1
+            and twice in subscription s2, m is counted as a single message.
+        - id: options.DefaultMessageTimeToLive
+          type: PTnHnMnS
+          description: >-
+            Determines how long a message lives in the associated subscriptions.
+            Subscriptions inherit the TTL from the topic unless they are created
+            explicitly with a smaller TTL. Based on whether dead-lettering is
+            enabled, a message whose TTL has expired will either be moved to the
+            subscription’s associated DeadLtterQueue or will be permanently
+            deleted.
+        - id: options.RequiresDuplicateDetection
+          type: bool
+          description: >-
+            If enabled, the topic will detect duplicate messages within the time
+            span specified by the DuplicateDetectionHistoryTimeWindow property.
+            Settable only at topic creation time.
+        - id: options.DuplicateDetectionHistoryTimeWindow
+          type: PTnHnMnS
+          description: >-
+            Specifies the time span during which the Service Bus will detect
+            message duplication.
+        - id: options.EnableBatchedOperations
+          type: bool
+          description: Specifies if batched operations should be allowed.
+        - id: options.SizeInBytes
+          type: int
+          description: Specifies the topic size in bytes.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                        if an error occurs; otherwise `createtopicresult` will contain\r                                                                                        the new topic information.\r                                                                                        `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createTopic(topic, options, options.MaxSizeInMegabytes,
+        options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
+        options.DuplicateDetectionHistoryTimeWindow,
+        options.EnableBatchedOperations, options.SizeInBytes, callback);
+    fullName: >-
+      ServiceBusService.createTopic(topic, options, options.MaxSizeInMegabytes,
+      options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
+      options.DuplicateDetectionHistoryTimeWindow,
+      options.EnableBatchedOperations, options.SizeInBytes, callback)
+  - uid: 'ServiceBusService#createTopicIfNotExists'
+    id: createTopicIfNotExists
+    parent: ServiceBusService
+    name: >-
+      createTopicIfNotExists(topic, options, options.MaxSizeInMegabytes,
+      options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
+      options.DuplicateDetectionHistoryTimeWindow,
+      options.MaxSubscriptionsPerTopic, options.MaxSqlFiltersPerTopic,
+      options.MaxCorrelationFiltersPerTopic,
+      options.EnableDeadLetteringOnMessageExpiration,
+      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+    summary: Creates a topic if it doesn't exists.
+    type: Method
+    syntax:
+      parameters:
+        - id: topic
+          type: TopicInfo
+          description: A Topic object that represents the topic to create.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.MaxSizeInMegabytes
+          type: int
+          description: >-
+            Specifies the maximum topic size in megabytes. Any attempt to
+            enqueue a message that will cause the topic to exceed this value
+            will fail. All messages that are stored in the topic or any of its
+            subscriptions count towards this value. Multiple copies of a message
+            that reside in one or multiple subscriptions count as a single
+            messages. For example, if message m exists once in subscription s1
+            and twice in subscription s2, m is counted as a single message.
+        - id: options.DefaultMessageTimeToLive
+          type: PTnHnMnS
+          description: >-
+            Determines how long a message lives in the associated subscriptions.
+            Subscriptions inherit the TTL from the topic unless they are created
+            explicitly with a smaller TTL. Based on whether dead-lettering is
+            enabled, a message whose TTL has expired will either be moved to the
+            subscription’s associated DeadLtterQueue or will be permanently
+            deleted.
+        - id: options.RequiresDuplicateDetection
+          type: bool
+          description: >-
+            If enabled, the topic will detect duplicate messages within the time
+            span specified by the DuplicateDetectionHistoryTimeWindow property.
+            Settable only at topic creation time.
+        - id: options.DuplicateDetectionHistoryTimeWindow
+          type: PTnHnMnS
+          description: >-
+            Specifies the time span during which the Service Bus will detect
+            message duplication.
+        - id: options.MaxSubscriptionsPerTopic
+          type: int
+          description: >-
+            Specifies the maximum number of subscriptions that can be associated
+            with the topic.
+        - id: options.MaxSqlFiltersPerTopic
+          type: int
+          description: >-
+            Specifies the maximum number of SQL filter expressions (in total)
+            that can be added to the subscriptions associated with the topic.
+        - id: options.MaxCorrelationFiltersPerTopic
+          type: int
+          description: >-
+            Specifies the maximum number of correlation filter expressions (in
+            total) that can be added to the subscriptions associated with the
+            topic.
+        - id: options.EnableDeadLetteringOnMessageExpiration
+          type: bool
+          description: Settable only at topic creation time.
+        - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+          type: bool
+          description: Settable only at topic creation time.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                        if an error occurs; otherwise `topicCreated` will contain\r                                                                                        the new topic information.\r                                                                                        `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createTopicIfNotExists(topic, options,
+        options.MaxSizeInMegabytes, options.DefaultMessageTimeToLive,
+        options.RequiresDuplicateDetection,
+        options.DuplicateDetectionHistoryTimeWindow,
+        options.MaxSubscriptionsPerTopic, options.MaxSqlFiltersPerTopic,
+        options.MaxCorrelationFiltersPerTopic,
+        options.EnableDeadLetteringOnMessageExpiration,
+        options.EnableDeadLetteringOnFilterEvaluationExceptions, callback);
+    fullName: >-
+      ServiceBusService.createTopicIfNotExists(topic, options,
+      options.MaxSizeInMegabytes, options.DefaultMessageTimeToLive,
+      options.RequiresDuplicateDetection,
+      options.DuplicateDetectionHistoryTimeWindow,
+      options.MaxSubscriptionsPerTopic, options.MaxSqlFiltersPerTopic,
+      options.MaxCorrelationFiltersPerTopic,
+      options.EnableDeadLetteringOnMessageExpiration,
+      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+    children:
+      - 'ServiceBusService#createTopicIfNotExists~options'
+      - 'ServiceBusService#createTopicIfNotExists~callback'
+      - 'ServiceBusService#createTopicIfNotExists~options'
+      - 'ServiceBusService#createTopicIfNotExists~topicXml'
+      - 'ServiceBusService#createTopicIfNotExists~webResource'
+      - 'ServiceBusService#createTopicIfNotExists~processResponseCallback'
+  - uid: 'ServiceBusService#deleteTopic'
+    id: deleteTopic
+    parent: ServiceBusService
+    name: 'deleteTopic(topicPath, callback)'
+    summary: Deletes a topic.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A <code>String</code> object that represents the name of the queue
+            to delete.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                    if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function deleteTopic(topicPath, callback);'
+    fullName: 'ServiceBusService.deleteTopic(topicPath, callback)'
+  - uid: 'ServiceBusService#getTopic'
+    id: getTopic
+    parent: ServiceBusService
+    name: 'getTopic(topicPath, callback)'
+    summary: Retrieves a topic.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A <code>String</code> object that represents the name of the topic
+            to retrieve.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                 if an error occurs; otherwise `gettopicresult` will contain\r                                                                 the topic information.\r                                                                 `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function getTopic(topicPath, callback);'
+    fullName: 'ServiceBusService.getTopic(topicPath, callback)'
+    children:
+      - 'ServiceBusService#getTopic~validateResult'
+  - uid: 'ServiceBusService#listTopics'
+    id: listTopics
+    parent: ServiceBusService
+    name: 'listTopics(options, options.top, options.skip, callback)'
+    summary: Returns a list of topics.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.top
+          type: int
+          description: The number of topics to fetch.
+        - id: options.skip
+          type: int
+          description: The number of topics to skip.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listtopicsresult` will contain\r                                                                      the list of topics.\r                                                                      `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function listTopics(options, options.top, options.skip, callback);'
+    fullName: 'ServiceBusService.listTopics(options, options.top, options.skip, callback)'
+  - uid: 'ServiceBusService#createSubscription'
+    id: createSubscription
+    parent: ServiceBusService
+    name: >-
+      createSubscription(topicPath, subscriptionPath, options,
+      options.LockDuration, options.RequiresSession,
+      options.DefaultMessageTimeToLive,
+      options.EnableDeadLetteringOnMessageExpiration,
+      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+    summary: Creates a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscription.
+        - id: subscriptionPath
+          type: string
+          description: A string object that represents the name of the subscription.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.LockDuration
+          type: PTnHnMnS
+          description: >-
+            The default lock duration is applied to subscriptions that do not
+            define a lock duration. Settable only at subscription creation time.
+        - id: options.RequiresSession
+          type: bool
+          description: >-
+            Settable only at subscription creation time. If set to true, the
+            subscription will be session-aware and only SessionReceiver will be
+            supported. Session-aware subscription are not supported through
+            REST.
+        - id: options.DefaultMessageTimeToLive
+          type: PTnHnMnS
+          description: >-
+            Determines how long a message lives in the subscription. Based on
+            whether dead-lettering is enabled, a message whose TTL has expired
+            will either be moved to the subscription’s associated DeadLtterQueue
+            or permanently deleted.
+        - id: options.EnableDeadLetteringOnMessageExpiration
+          type: bool
+          description: >-
+            This field controls how the Service Bus handles a message whose TTL
+            has expired. If it is enabled and a message expires, the Service Bus
+            moves the message from the queue into the subscription’s dead-letter
+            sub-queue. If disabled, message will be permanently deleted from the
+            subscription’s main queue. Settable only at subscription creation
+            time.
+        - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+          type: bool
+          description: >-
+            Determines how the Service Bus handles a message that causes an
+            exception during a subscription’s filter evaluation. If the value is
+            set to true, the message that caused the exception will be moved to
+            the subscription’s dead-letter queue. Otherwise, it will be
+            discarded. By default this parameter is set to true, allowing the
+            user a chance to investigate the cause of the exception. It can
+            occur from a malformed message or some incorrect assumptions being
+            made in the filter about the form of the message. Settable only at
+            topic creation time.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `createsubscriptionresult` will contain\r                                                                                  the new subscription information.\r                                                                                  `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createSubscription(topicPath, subscriptionPath, options,
+        options.LockDuration, options.RequiresSession,
+        options.DefaultMessageTimeToLive,
+        options.EnableDeadLetteringOnMessageExpiration,
+        options.EnableDeadLetteringOnFilterEvaluationExceptions, callback);
+    fullName: >-
+      ServiceBusService.createSubscription(topicPath, subscriptionPath, options,
+      options.LockDuration, options.RequiresSession,
+      options.DefaultMessageTimeToLive,
+      options.EnableDeadLetteringOnMessageExpiration,
+      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+    children:
+      - 'ServiceBusService#createSubscription~subscriptionFullPath'
+  - uid: 'ServiceBusService#deleteSubscription'
+    id: deleteSubscription
+    parent: ServiceBusService
+    name: 'deleteSubscription(topicPath, subscriptionPath, callback)'
+    summary: Deletes a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscription.
+        - id: subscriptionPath
+          type: string
+          description: >-
+            A string object that represents the name of the subscription to
+            delete.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                    if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function deleteSubscription(topicPath, subscriptionPath, callback);'
+    fullName: >-
+      ServiceBusService.deleteSubscription(topicPath, subscriptionPath,
+      callback)
+    children:
+      - 'ServiceBusService#deleteSubscription~subscriptionFullPath'
+  - uid: 'ServiceBusService#getSubscription'
+    id: getSubscription
+    parent: ServiceBusService
+    name: 'getSubscription(topicPath, subscriptionPath, callback)'
+    summary: Retrieves a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscription.
+        - id: subscriptionPath
+          type: string
+          description: >-
+            A string object that represents the name of the subscription to
+            retrieve.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                if an error occurs; otherwise `getsubscriptionresult` will contain\r                                                                                the subscription information.\r                                                                                `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function getSubscription(topicPath, subscriptionPath, callback);'
+    fullName: 'ServiceBusService.getSubscription(topicPath, subscriptionPath, callback)'
+    children:
+      - 'ServiceBusService#getSubscription~subscriptionFullPath'
+      - 'ServiceBusService#getSubscription~validateResult'
+  - uid: 'ServiceBusService#listSubscriptions'
+    id: listSubscriptions
+    parent: ServiceBusService
+    name: 'listSubscriptions(topicPath, options, options.top, options.skip, callback)'
+    summary: Returns a list of subscriptions.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscriptions to retrieve.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.top
+          type: int
+          description: The number of topics to fetch.
+        - id: options.skip
+          type: int
+          description: The number of topics to skip.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listsubscriptionresult` will contain\r                                                                      the list of subscriptions.\r                                                                      `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function listSubscriptions(topicPath, options, options.top,
+        options.skip, callback);
+    fullName: >-
+      ServiceBusService.listSubscriptions(topicPath, options, options.top,
+      options.skip, callback)
+    children:
+      - 'ServiceBusService#listSubscriptions~path'
+      - 'ServiceBusService#listSubscriptions~validateResult'
+  - uid: 'ServiceBusService#createRule'
+    id: createRule
+    parent: ServiceBusService
+    name: >-
+      createRule(topicPath, subscriptionPath, rulePath, options,
+      options.trueFilter, options.falseFilter, options.sqlExpressionFilter,
+      options.correlationIdFilter, options.sqlRuleAction, callback)
+    summary: Creates a rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscription.
+        - id: subscriptionPath
+          type: string
+          description: >-
+            A string object that represents the name of the subscription for
+            which the rule will be created.
+        - id: rulePath
+          type: string
+          description: A string object that represents the name of the rule to be created.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.trueFilter
+          type: string
+          description: Defines the expression that the rule evaluates as a true filter.
+        - id: options.falseFilter
+          type: string
+          description: Defines the expression that the rule evaluates as a false filter.
+        - id: options.sqlExpressionFilter
+          type: string
+          description: >-
+            Defines the expression that the rule evaluates. The expression
+            string is interpreted as a SQL92 expression which must evaluate to
+            True or False. Only one between a correlation and a sql expression
+            can be defined.
+        - id: options.correlationIdFilter
+          type: string
+          description: >-
+            Defines the expression that the rule evaluates. Only the messages
+            whose CorrelationId match the CorrelationId set in the filter
+            expression are allowed. Only one between a correlation and a sql
+            expression can be defined.
+        - id: options.sqlRuleAction
+          type: string
+          description: >-
+            Defines the expression that the rule evaluates. If the rule is of
+            type SQL, the expression string is interpreted as a SQL92 expression
+            which must evaluate to True or False. If the rule is of type
+            CorrelationFilterExpression then only the messages whose
+            CorrelationId match the CorrelationId set in the filter expression
+            are allowed.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                            if an error occurs; otherwise `createruleresults` will contain\r                                                                            the new rule information.\r                                                                            `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createRule(topicPath, subscriptionPath, rulePath, options,
+        options.trueFilter, options.falseFilter, options.sqlExpressionFilter,
+        options.correlationIdFilter, options.sqlRuleAction, callback);
+    fullName: >-
+      ServiceBusService.createRule(topicPath, subscriptionPath, rulePath,
+      options, options.trueFilter, options.falseFilter,
+      options.sqlExpressionFilter, options.correlationIdFilter,
+      options.sqlRuleAction, callback)
+    children:
+      - 'ServiceBusService#createRule~ruleFullPath'
+  - uid: 'ServiceBusService#deleteRule'
+    id: deleteRule
+    parent: ServiceBusService
+    name: 'deleteRule(topicPath, subscriptionPath, rulePath, callback)'
+    summary: Deletes a rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscription.
+        - id: subscriptionPath
+          type: string
+          description: >-
+            A string object that represents the name of the subscription for
+            which the rule will be deleted.
+        - id: rulePath
+          type: string
+          description: A string object that represents the name of the rule to delete.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function deleteRule(topicPath, subscriptionPath, rulePath, callback);'
+    fullName: >-
+      ServiceBusService.deleteRule(topicPath, subscriptionPath, rulePath,
+      callback)
+    children:
+      - 'ServiceBusService#deleteRule~ruleFullPath'
+  - uid: 'ServiceBusService#getRule'
+    id: getRule
+    parent: ServiceBusService
+    name: 'getRule(topicPath, subscriptionPath, rulePath, callback)'
+    summary: Retrieves a rule.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscription.
+        - id: subscriptionPath
+          type: string
+          description: >-
+            A string object that represents the name of the subscription for
+            which the rule will be retrieved.
+        - id: rulePath
+          type: string
+          description: A string object that represents the name of the rule to retrieve.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                                if an error occurs; otherwise `getruleresult` will contain\r                                                                                the rule information.\r                                                                                `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function getRule(topicPath, subscriptionPath, rulePath, callback);'
+    fullName: 'ServiceBusService.getRule(topicPath, subscriptionPath, rulePath, callback)'
+    children:
+      - 'ServiceBusService#getRule~ruleFullPath'
+      - 'ServiceBusService#getRule~validateResult'
+  - uid: 'ServiceBusService#listRules'
+    id: listRules
+    parent: ServiceBusService
+    name: >-
+      listRules(topicPath, subscriptionPath, options, options.top, options.skip,
+      callback)
+    summary: Returns a list of rules.
+    type: Method
+    syntax:
+      parameters:
+        - id: topicPath
+          type: string
+          description: >-
+            A string object that represents the name of the topic for the
+            subscription.
+        - id: subscriptionPath
+          type: string
+          description: >-
+            A string object that represents the name of the subscription whose
+            rules are being retrieved.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.top
+          type: int
+          description: The number of topics to fetch.
+        - id: options.skip
+          type: int
+          description: The number of topics to skip.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listrulesresult` will contain\r                                                                      the list of rules.\r                                                                      `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function listRules(topicPath, subscriptionPath, options, options.top,
+        options.skip, callback);
+    fullName: >-
+      ServiceBusService.listRules(topicPath, subscriptionPath, options,
+      options.top, options.skip, callback)
+    children:
+      - 'ServiceBusService#listRules~rulesFullPath'
+      - 'ServiceBusService#listRules~validateResult'
+  - uid: 'ServiceBusService#createNotificationHub'
+    id: createNotificationHub
+    parent: ServiceBusService
+    name: >-
+      createNotificationHub(hubPath, options, options.wns, options.apns,
+      options.gcm, options.mpns, callback)
+    summary: Creates a notification hub.
+    type: Method
+    syntax:
+      parameters:
+        - id: hubPath
+          type: string
+          description: A string object that represents the name of the notification hub.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: options.wns
+          type: object
+          description: An object with the key value pairs for the WNS credentials.
+        - id: options.apns
+          type: object
+          description: An object with the key value pairs for the APNS credentials.
+        - id: options.gcm
+          type: object
+          description: An object with the key value pairs for the GCM credentials.
+        - id: options.mpns
+          type: object
+          description: An object with the key value pairs for the MPNS credentials.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `result` will contain\r                                                      the new notification hub information.\r                                                      `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function createNotificationHub(hubPath, options, options.wns,
+        options.apns, options.gcm, options.mpns, callback);
+    fullName: >-
+      ServiceBusService.createNotificationHub(hubPath, options, options.wns,
+      options.apns, options.gcm, options.mpns, callback)
+  - uid: 'ServiceBusService#getNotificationHub'
+    id: getNotificationHub
+    parent: ServiceBusService
+    name: 'getNotificationHub(hubPath, callback)'
+    summary: Gets a notification hub.
+    type: Method
+    syntax:
+      parameters:
+        - id: hubPath
+          type: string
+          description: A string object that represents the name of the notification hub.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                                            if an error occurs; otherwise `result` will contain\r                                                                            the notification hub information.\r                                                                            `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function getNotificationHub(hubPath, callback);'
+    fullName: 'ServiceBusService.getNotificationHub(hubPath, callback)'
+    children:
+      - 'ServiceBusService#getNotificationHub~validateResult'
+  - uid: 'ServiceBusService#listNotificationHubs'
+    id: listNotificationHubs
+    parent: ServiceBusService
+    name: 'listNotificationHubs(options, options.top, options.skip, callback)'
+    summary: Returns a list of notification hubs.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: options.top
+          type: int
+          description: The number of topics to fetch.
+        - id: options.skip
+          type: int
+          description: The number of topics to skip.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                                      if an error occurs; otherwise `result` will contain\r                                                      the list of notification hubs.\r                                                      `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: >-
+        function listNotificationHubs(options, options.top, options.skip,
+        callback);
+    fullName: >-
+      ServiceBusService.listNotificationHubs(options, options.top, options.skip,
+      callback)
+  - uid: 'ServiceBusService#deleteNotificationHub'
+    id: deleteNotificationHub
+    parent: ServiceBusService
+    name: 'deleteNotificationHub(hubPath, callback)'
+    summary: Deletes a notification hub.
+    type: Method
+    syntax:
+      parameters:
+        - id: hubPath
+          type: string
+          description: A string object that represents the name of the notification hub.
+        - id: callback
+          type: function
+          description: "`error` will contain information\r                                             if an error occurs; otherwise `response` will contain information related to this operation."
+      return:
+        type: undefined
+      content: 'function deleteNotificationHub(hubPath, callback);'
+    fullName: 'ServiceBusService.deleteNotificationHub(hubPath, callback)'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: bool
+    name: bool
+    fullName: bool
+    isExternal: true
+  - uid: int
+    name: int
+    fullName: int
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true
+  - uid: PTnHnMnS
+    name: PTnHnMnS
+    fullName: PTnHnMnS
+    isExternal: true
+  - uid: TopicInfo
+    name: TopicInfo
+    fullName: TopicInfo
+    isExternal: true

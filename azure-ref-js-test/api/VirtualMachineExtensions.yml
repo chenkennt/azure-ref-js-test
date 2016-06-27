@@ -1,0 +1,464 @@
+items:
+  - uid: VirtualMachineExtensions
+    id: VirtualMachineExtensions
+    name: VirtualMachineExtensions
+    type: Class
+    syntax:
+      content: VirtualMachineExtensions
+    fullName: VirtualMachineExtensions
+    children:
+      - 'VirtualMachineExtensions#client'
+      - 'VirtualMachineExtensions#createOrUpdate'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate'
+      - 'VirtualMachineExtensions#deleteMethod'
+      - 'VirtualMachineExtensions#beginDeleteMethod'
+      - 'VirtualMachineExtensions#get'
+  - uid: 'VirtualMachineExtensions#client'
+    id: client
+    parent: VirtualMachineExtensions
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualMachineExtensions.client
+  - uid: 'VirtualMachineExtensions#createOrUpdate'
+    id: createOrUpdate
+    parent: VirtualMachineExtensions
+    name: >-
+      createOrUpdate(resourceGroupName, vmName, vmExtensionName,
+      extensionParameters, extensionParameters.forceUpdateTag,
+      extensionParameters.publisher,
+      extensionParameters.virtualMachineExtensionType,
+      extensionParameters.typeHandlerVersion,
+      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
+      extensionParameters.protectedSettings,
+      extensionParameters.provisioningState, extensionParameters.instanceView,
+      extensionParameters.instanceView.name,
+      extensionParameters.instanceView.type,
+      extensionParameters.instanceView.typeHandlerVersion,
+      extensionParameters.instanceView.substatuses,
+      extensionParameters.instanceView.statuses, extensionParameters.location,
+      extensionParameters.tags, options, options.customHeaders, callback)
+    summary: The operation to create or update the extension.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: "The name of the virtual machine where the extension\rshould be create or updated."
+        - id: vmExtensionName
+          type: string
+          description: The name of the virtual machine extension.
+        - id: extensionParameters
+          type: object
+          description: "Parameters supplied to the Create\rVirtual Machine Extension operation."
+        - id: extensionParameters.forceUpdateTag
+          type: string
+          description: "Gets or sets how the\rextension handler should be forced to update even if the extension\rconfiguration has not changed."
+        - id: extensionParameters.publisher
+          type: string
+          description: "Gets or sets the name of\rthe extension handler publisher."
+        - id: extensionParameters.virtualMachineExtensionType
+          type: string
+          description: "Gets or\rsets the type of the extension handler."
+        - id: extensionParameters.typeHandlerVersion
+          type: string
+          description: "Gets or sets the\rtype version of the extension handler."
+        - id: extensionParameters.autoUpgradeMinorVersion
+          type: boolean
+          description: "Gets or sets\rwhether the extension handler should be automatically upgraded across\rminor versions."
+        - id: extensionParameters.settings
+          type: object
+          description: "Gets or sets Json formatted\rpublic settings for the extension."
+        - id: extensionParameters.protectedSettings
+          type: object
+          description: "Gets or sets Json\rformatted protected settings for the extension."
+        - id: extensionParameters.provisioningState
+          type: string
+          description: "Gets or sets the\rprovisioning state, which only appears in the response."
+        - id: extensionParameters.instanceView
+          type: object
+          description: "Gets or sets the virtual\rmachine extension instance view."
+        - id: extensionParameters.instanceView.name
+          type: string
+          description: "Gets or sets the\rvirtual machine extension name."
+        - id: extensionParameters.instanceView.type
+          type: string
+          description: "Gets or sets the\rfull type of the extension handler which includes both publisher and type."
+        - id: extensionParameters.instanceView.typeHandlerVersion
+          type: string
+          description: "Gets\ror sets the type version of the extension handler."
+        - id: extensionParameters.instanceView.substatuses
+          type: array
+          description: "Gets or sets\rthe resource status information."
+        - id: extensionParameters.instanceView.statuses
+          type: array
+          description: "Gets or sets the\rresource status information."
+        - id: extensionParameters.location
+          type: string
+          description: Resource location
+        - id: extensionParameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineExtension} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, vmName, vmExtensionName,
+        extensionParameters, extensionParameters.forceUpdateTag,
+        extensionParameters.publisher,
+        extensionParameters.virtualMachineExtensionType,
+        extensionParameters.typeHandlerVersion,
+        extensionParameters.autoUpgradeMinorVersion,
+        extensionParameters.settings, extensionParameters.protectedSettings,
+        extensionParameters.provisioningState, extensionParameters.instanceView,
+        extensionParameters.instanceView.name,
+        extensionParameters.instanceView.type,
+        extensionParameters.instanceView.typeHandlerVersion,
+        extensionParameters.instanceView.substatuses,
+        extensionParameters.instanceView.statuses, extensionParameters.location,
+        extensionParameters.tags, options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineExtensions.createOrUpdate(resourceGroupName, vmName,
+      vmExtensionName, extensionParameters, extensionParameters.forceUpdateTag,
+      extensionParameters.publisher,
+      extensionParameters.virtualMachineExtensionType,
+      extensionParameters.typeHandlerVersion,
+      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
+      extensionParameters.protectedSettings,
+      extensionParameters.provisioningState, extensionParameters.instanceView,
+      extensionParameters.instanceView.name,
+      extensionParameters.instanceView.type,
+      extensionParameters.instanceView.typeHandlerVersion,
+      extensionParameters.instanceView.substatuses,
+      extensionParameters.instanceView.statuses, extensionParameters.location,
+      extensionParameters.tags, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineExtensions#createOrUpdate~client'
+      - 'VirtualMachineExtensions#createOrUpdate~callback'
+      - 'VirtualMachineExtensions#createOrUpdate~options'
+  - uid: 'VirtualMachineExtensions#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: VirtualMachineExtensions
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, vmName, vmExtensionName,
+      extensionParameters, extensionParameters.forceUpdateTag,
+      extensionParameters.publisher,
+      extensionParameters.virtualMachineExtensionType,
+      extensionParameters.typeHandlerVersion,
+      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
+      extensionParameters.protectedSettings,
+      extensionParameters.provisioningState, extensionParameters.instanceView,
+      extensionParameters.instanceView.name,
+      extensionParameters.instanceView.type,
+      extensionParameters.instanceView.typeHandlerVersion,
+      extensionParameters.instanceView.substatuses,
+      extensionParameters.instanceView.statuses, extensionParameters.location,
+      extensionParameters.tags, options, options.customHeaders, callback)
+    summary: The operation to create or update the extension.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: "The name of the virtual machine where the extension\rshould be create or updated."
+        - id: vmExtensionName
+          type: string
+          description: The name of the virtual machine extension.
+        - id: extensionParameters
+          type: object
+          description: "Parameters supplied to the Create\rVirtual Machine Extension operation."
+        - id: extensionParameters.forceUpdateTag
+          type: string
+          description: "Gets or sets how the\rextension handler should be forced to update even if the extension\rconfiguration has not changed."
+        - id: extensionParameters.publisher
+          type: string
+          description: "Gets or sets the name of\rthe extension handler publisher."
+        - id: extensionParameters.virtualMachineExtensionType
+          type: string
+          description: "Gets or\rsets the type of the extension handler."
+        - id: extensionParameters.typeHandlerVersion
+          type: string
+          description: "Gets or sets the\rtype version of the extension handler."
+        - id: extensionParameters.autoUpgradeMinorVersion
+          type: boolean
+          description: "Gets or sets\rwhether the extension handler should be automatically upgraded across\rminor versions."
+        - id: extensionParameters.settings
+          type: object
+          description: "Gets or sets Json formatted\rpublic settings for the extension."
+        - id: extensionParameters.protectedSettings
+          type: object
+          description: "Gets or sets Json\rformatted protected settings for the extension."
+        - id: extensionParameters.provisioningState
+          type: string
+          description: "Gets or sets the\rprovisioning state, which only appears in the response."
+        - id: extensionParameters.instanceView
+          type: object
+          description: "Gets or sets the virtual\rmachine extension instance view."
+        - id: extensionParameters.instanceView.name
+          type: string
+          description: "Gets or sets the\rvirtual machine extension name."
+        - id: extensionParameters.instanceView.type
+          type: string
+          description: "Gets or sets the\rfull type of the extension handler which includes both publisher and type."
+        - id: extensionParameters.instanceView.typeHandlerVersion
+          type: string
+          description: "Gets\ror sets the type version of the extension handler."
+        - id: extensionParameters.instanceView.substatuses
+          type: array
+          description: "Gets or sets\rthe resource status information."
+        - id: extensionParameters.instanceView.statuses
+          type: array
+          description: "Gets or sets the\rresource status information."
+        - id: extensionParameters.location
+          type: string
+          description: Resource location
+        - id: extensionParameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineExtension} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName, vmName, vmExtensionName,
+        extensionParameters, extensionParameters.forceUpdateTag,
+        extensionParameters.publisher,
+        extensionParameters.virtualMachineExtensionType,
+        extensionParameters.typeHandlerVersion,
+        extensionParameters.autoUpgradeMinorVersion,
+        extensionParameters.settings, extensionParameters.protectedSettings,
+        extensionParameters.provisioningState, extensionParameters.instanceView,
+        extensionParameters.instanceView.name,
+        extensionParameters.instanceView.type,
+        extensionParameters.instanceView.typeHandlerVersion,
+        extensionParameters.instanceView.substatuses,
+        extensionParameters.instanceView.statuses, extensionParameters.location,
+        extensionParameters.tags, options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineExtensions.beginCreateOrUpdate(resourceGroupName, vmName,
+      vmExtensionName, extensionParameters, extensionParameters.forceUpdateTag,
+      extensionParameters.publisher,
+      extensionParameters.virtualMachineExtensionType,
+      extensionParameters.typeHandlerVersion,
+      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
+      extensionParameters.protectedSettings,
+      extensionParameters.provisioningState, extensionParameters.instanceView,
+      extensionParameters.instanceView.name,
+      extensionParameters.instanceView.type,
+      extensionParameters.instanceView.typeHandlerVersion,
+      extensionParameters.instanceView.substatuses,
+      extensionParameters.instanceView.statuses, extensionParameters.location,
+      extensionParameters.tags, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~client'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~callback'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~options'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~apiVersion'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~queryParameters'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~regex'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestUrl'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~httpRequest'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~headerName'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestContent'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestModel'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestModelMapper'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestModel'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~requestContent'
+      - 'VirtualMachineExtensions#beginCreateOrUpdate~serializationError'
+  - uid: 'VirtualMachineExtensions#deleteMethod'
+    id: deleteMethod
+    parent: VirtualMachineExtensions
+    name: >-
+      deleteMethod(resourceGroupName, vmName, vmExtensionName, options,
+      options.customHeaders, callback)
+    summary: The operation to delete the extension.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: "The name of the virtual machine where the extension\rshould be deleted."
+        - id: vmExtensionName
+          type: string
+          description: The name of the virtual machine extension.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, vmName, vmExtensionName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineExtensions.deleteMethod(resourceGroupName, vmName,
+      vmExtensionName, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineExtensions#deleteMethod~client'
+      - 'VirtualMachineExtensions#deleteMethod~callback'
+      - 'VirtualMachineExtensions#deleteMethod~options'
+  - uid: 'VirtualMachineExtensions#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: VirtualMachineExtensions
+    name: >-
+      beginDeleteMethod(resourceGroupName, vmName, vmExtensionName, options,
+      options.customHeaders, callback)
+    summary: The operation to delete the extension.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: "The name of the virtual machine where the extension\rshould be deleted."
+        - id: vmExtensionName
+          type: string
+          description: The name of the virtual machine extension.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, vmName, vmExtensionName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineExtensions.beginDeleteMethod(resourceGroupName, vmName,
+      vmExtensionName, options, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineExtensions#beginDeleteMethod~client'
+      - 'VirtualMachineExtensions#beginDeleteMethod~callback'
+      - 'VirtualMachineExtensions#beginDeleteMethod~options'
+      - 'VirtualMachineExtensions#beginDeleteMethod~apiVersion'
+      - 'VirtualMachineExtensions#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineExtensions#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineExtensions#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineExtensions#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineExtensions#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineExtensions#beginDeleteMethod~queryParameters'
+      - 'VirtualMachineExtensions#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineExtensions#beginDeleteMethod~regex'
+      - 'VirtualMachineExtensions#beginDeleteMethod~requestUrl'
+      - 'VirtualMachineExtensions#beginDeleteMethod~httpRequest'
+      - 'VirtualMachineExtensions#beginDeleteMethod~headerName'
+  - uid: 'VirtualMachineExtensions#get'
+    id: get
+    parent: VirtualMachineExtensions
+    name: >-
+      get(resourceGroupName, vmName, vmExtensionName, options, options.expand,
+      options.customHeaders, callback)
+    summary: The operation to get the extension.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: "The name of the virtual machine containing the\rextension."
+        - id: vmExtensionName
+          type: string
+          description: The name of the virtual machine extension.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.expand
+          type: string
+          description: "The expand expression to apply on the\roperation."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineExtension} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, vmName, vmExtensionName, options,
+        options.expand, options.customHeaders, callback);
+    fullName: >-
+      VirtualMachineExtensions.get(resourceGroupName, vmName, vmExtensionName,
+      options, options.expand, options.customHeaders, callback)
+    children:
+      - 'VirtualMachineExtensions#get~client'
+      - 'VirtualMachineExtensions#get~callback'
+      - 'VirtualMachineExtensions#get~options'
+      - 'VirtualMachineExtensions#get~expand'
+      - 'VirtualMachineExtensions#get~apiVersion'
+      - 'VirtualMachineExtensions#get~requestUrl'
+      - 'VirtualMachineExtensions#get~requestUrl'
+      - 'VirtualMachineExtensions#get~requestUrl'
+      - 'VirtualMachineExtensions#get~requestUrl'
+      - 'VirtualMachineExtensions#get~requestUrl'
+      - 'VirtualMachineExtensions#get~queryParameters'
+      - 'VirtualMachineExtensions#get~requestUrl'
+      - 'VirtualMachineExtensions#get~regex'
+      - 'VirtualMachineExtensions#get~requestUrl'
+      - 'VirtualMachineExtensions#get~httpRequest'
+      - 'VirtualMachineExtensions#get~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

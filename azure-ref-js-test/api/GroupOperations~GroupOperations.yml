@@ -1,0 +1,449 @@
+items:
+  - uid: GroupOperations~GroupOperations
+    id: GroupOperations
+    parent: GroupOperations
+    name: GroupOperations
+    type: Class
+    syntax:
+      content: GroupOperations
+    fullName: GroupOperations.GroupOperations
+    children:
+      - 'GroupOperations~GroupOperations#client'
+      - 'GroupOperations~GroupOperations#addMember'
+      - 'GroupOperations~GroupOperations#create'
+      - 'GroupOperations~GroupOperations#deleteMethod'
+      - 'GroupOperations~GroupOperations#get'
+      - 'GroupOperations~GroupOperations#getGroupMembers'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext'
+      - 'GroupOperations~GroupOperations#getMemberGroups'
+      - 'GroupOperations~GroupOperations#list'
+      - 'GroupOperations~GroupOperations#listNext'
+      - 'GroupOperations~GroupOperations#removeMember'
+  - uid: 'GroupOperations~GroupOperations#client'
+    id: client
+    parent: GroupOperations~GroupOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: GroupOperations~GroupOperations.client
+  - uid: 'GroupOperations~GroupOperations#addMember'
+    id: addMember
+    parent: GroupOperations~GroupOperations
+    name: 'addMember(groupObjectId, parameters, parameters.memberUrl, callback)'
+    summary: "Add a memeber to a group.   (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151600.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: groupObjectId
+          type: string
+          description: Group object id
+        - id: parameters
+          type: GroupAddMemberParameters
+          description: "Member Object Url as\rhttps://graph.windows.net/contoso.onmicrosoft.com/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd"
+        - id: parameters.memberUrl
+          type: string
+          description: Group display name
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function addMember(groupObjectId, parameters, parameters.memberUrl,
+        callback);
+    fullName: >-
+      GroupOperations~GroupOperations.addMember(groupObjectId, parameters,
+      parameters.memberUrl, callback)
+    children:
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~queryParameters'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~baseUrl'
+      - 'GroupOperations~GroupOperations#addMember~baseUrl'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~url2'
+      - 'GroupOperations~GroupOperations#addMember~httpRequest'
+      - 'GroupOperations~GroupOperations#addMember~requestContent'
+      - 'GroupOperations~GroupOperations#addMember~requestDoc'
+      - 'GroupOperations~GroupOperations#addMember~groupAddMemberParametersValue'
+      - 'GroupOperations~GroupOperations#addMember~requestDoc'
+      - 'GroupOperations~GroupOperations#addMember~requestContent'
+  - uid: 'GroupOperations~GroupOperations#create'
+    id: create
+    parent: GroupOperations~GroupOperations
+    name: >-
+      create(parameters, parameters.displayName, parameters.mailEnabled,
+      parameters.mailNickname, parameters.securityEnabled, callback)
+    summary: "Create a group in the directory.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151614.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: GroupCreateParameters
+          description: Parameters to create a group
+        - id: parameters.displayName
+          type: string
+          description: Group display name
+        - id: parameters.mailEnabled
+          type: boolean
+          description: Mail
+        - id: parameters.mailNickname
+          type: string
+          description: Mail nick name
+        - id: parameters.securityEnabled
+          type: boolean
+          description: Is security enabled
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(parameters, parameters.displayName,
+        parameters.mailEnabled, parameters.mailNickname,
+        parameters.securityEnabled, callback);
+    fullName: >-
+      GroupOperations~GroupOperations.create(parameters, parameters.displayName,
+      parameters.mailEnabled, parameters.mailNickname,
+      parameters.securityEnabled, callback)
+    children:
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~queryParameters'
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~baseUrl'
+      - 'GroupOperations~GroupOperations#create~baseUrl'
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~url2'
+      - 'GroupOperations~GroupOperations#create~httpRequest'
+      - 'GroupOperations~GroupOperations#create~requestContent'
+      - 'GroupOperations~GroupOperations#create~requestDoc'
+      - 'GroupOperations~GroupOperations#create~groupCreateParametersValue'
+      - 'GroupOperations~GroupOperations#create~requestDoc'
+      - 'GroupOperations~GroupOperations#create~requestContent'
+  - uid: 'GroupOperations~GroupOperations#deleteMethod'
+    id: deleteMethod
+    parent: GroupOperations~GroupOperations
+    name: 'deleteMethod(groupObjectId, callback)'
+    summary: "Delete a group in the directory.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151608.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: groupObjectId
+          type: string
+          description: Object id
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(groupObjectId, callback);'
+    fullName: 'GroupOperations~GroupOperations.deleteMethod(groupObjectId, callback)'
+    children:
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~queryParameters'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~baseUrl'
+      - 'GroupOperations~GroupOperations#deleteMethod~baseUrl'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~url2'
+      - 'GroupOperations~GroupOperations#deleteMethod~httpRequest'
+  - uid: 'GroupOperations~GroupOperations#get'
+    id: get
+    parent: GroupOperations~GroupOperations
+    name: 'get(objectId, callback)'
+    summary: Gets group information from the directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: User objectId to get group information.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(objectId, callback);'
+    fullName: 'GroupOperations~GroupOperations.get(objectId, callback)'
+    children:
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~queryParameters'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~baseUrl'
+      - 'GroupOperations~GroupOperations#get~baseUrl'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~url2'
+      - 'GroupOperations~GroupOperations#get~httpRequest'
+  - uid: 'GroupOperations~GroupOperations#getGroupMembers'
+    id: getGroupMembers
+    parent: GroupOperations~GroupOperations
+    name: 'getGroupMembers(objectId, callback)'
+    summary: Gets the members of a group.
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: Group object Id who's members should be retrieved.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getGroupMembers(objectId, callback);'
+    fullName: 'GroupOperations~GroupOperations.getGroupMembers(objectId, callback)'
+    children:
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~queryParameters'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~baseUrl'
+      - 'GroupOperations~GroupOperations#getGroupMembers~baseUrl'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembers~httpRequest'
+  - uid: 'GroupOperations~GroupOperations#getGroupMembersNext'
+    id: getGroupMembersNext
+    parent: GroupOperations~GroupOperations
+    name: 'getGroupMembersNext(nextLink, callback)'
+    summary: Gets next set of members of a group.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: "NextLink from the previous successful call to\rGetGroupMembers or GetGroupMembersNext."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getGroupMembersNext(nextLink, callback);'
+    fullName: 'GroupOperations~GroupOperations.getGroupMembersNext(nextLink, callback)'
+    children:
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~baseUrl'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~baseUrl'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~url2'
+      - 'GroupOperations~GroupOperations#getGroupMembersNext~httpRequest'
+  - uid: 'GroupOperations~GroupOperations#getMemberGroups'
+    id: getMemberGroups
+    parent: GroupOperations~GroupOperations
+    name: >-
+      getMemberGroups(parameters, parameters.objectId,
+      parameters.securityEnabledOnly, callback)
+    summary: "Gets a collection that contains the Object IDs of the groups of which the\rgroup is a member."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: GroupGetMemberGroupsParameters
+          description: "Group filtering\rparameters."
+        - id: parameters.objectId
+          type: string
+          description: Group object Id
+        - id: parameters.securityEnabledOnly
+          type: boolean
+          description: "If true only membership in\rsecurity enabled groups should be checked. Otherwise membership in all\rgroups should be checked"
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getMemberGroups(parameters, parameters.objectId,
+        parameters.securityEnabledOnly, callback);
+    fullName: >-
+      GroupOperations~GroupOperations.getMemberGroups(parameters,
+      parameters.objectId, parameters.securityEnabledOnly, callback)
+    children:
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~queryParameters'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~baseUrl'
+      - 'GroupOperations~GroupOperations#getMemberGroups~baseUrl'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~url2'
+      - 'GroupOperations~GroupOperations#getMemberGroups~httpRequest'
+      - 'GroupOperations~GroupOperations#getMemberGroups~requestContent'
+      - 'GroupOperations~GroupOperations#getMemberGroups~requestDoc'
+      - >-
+        GroupOperations~GroupOperations#getMemberGroups~groupGetMemberGroupsParametersValue
+      - 'GroupOperations~GroupOperations#getMemberGroups~requestDoc'
+      - 'GroupOperations~GroupOperations#getMemberGroups~requestContent'
+  - uid: 'GroupOperations~GroupOperations#list'
+    id: list
+    parent: GroupOperations~GroupOperations
+    name: 'list(mail, displayNameStartsWith, callback)'
+    summary: Gets list of groups for the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: mail
+          type: string
+          description: Email to filter results.
+        - id: displayNameStartsWith
+          type: string
+          description: Display name to filter results.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function list(mail, displayNameStartsWith, callback);'
+    fullName: >-
+      GroupOperations~GroupOperations.list(mail, displayNameStartsWith,
+      callback)
+    children:
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~queryParameters'
+      - 'GroupOperations~GroupOperations#list~odataFilter'
+      - 'GroupOperations~GroupOperations#list~odataFilter2'
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~baseUrl'
+      - 'GroupOperations~GroupOperations#list~baseUrl'
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~url2'
+      - 'GroupOperations~GroupOperations#list~httpRequest'
+  - uid: 'GroupOperations~GroupOperations#listNext'
+    id: listNext
+    parent: GroupOperations~GroupOperations
+    name: 'listNext(nextLink, callback)'
+    summary: Gets list of groups for the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: "NextLink from the previous successful call to\rList operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listNext(nextLink, callback);'
+    fullName: 'GroupOperations~GroupOperations.listNext(nextLink, callback)'
+    children:
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~baseUrl'
+      - 'GroupOperations~GroupOperations#listNext~baseUrl'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~url2'
+      - 'GroupOperations~GroupOperations#listNext~httpRequest'
+  - uid: 'GroupOperations~GroupOperations#removeMember'
+    id: removeMember
+    parent: GroupOperations~GroupOperations
+    name: 'removeMember(groupObjectId, memberObjectId, callback)'
+    summary: "Remove a memeber from a group  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151607.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: groupObjectId
+          type: string
+          description: Group object id
+        - id: memberObjectId
+          type: string
+          description: Member Object id
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function removeMember(groupObjectId, memberObjectId, callback);'
+    fullName: >-
+      GroupOperations~GroupOperations.removeMember(groupObjectId,
+      memberObjectId, callback)
+    children:
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~queryParameters'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~baseUrl'
+      - 'GroupOperations~GroupOperations#removeMember~baseUrl'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~url2'
+      - 'GroupOperations~GroupOperations#removeMember~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: GroupAddMemberParameters
+    name: GroupAddMemberParameters
+    fullName: GroupAddMemberParameters
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: GroupCreateParameters
+    name: GroupCreateParameters
+    fullName: GroupCreateParameters
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: GroupGetMemberGroupsParameters
+    name: GroupGetMemberGroupsParameters
+    fullName: GroupGetMemberGroupsParameters
+    isExternal: false

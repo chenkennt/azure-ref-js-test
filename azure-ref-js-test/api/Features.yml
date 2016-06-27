@@ -1,0 +1,279 @@
+items:
+  - uid: Features
+    id: Features
+    name: Features
+    type: Class
+    syntax:
+      content: Features
+    fullName: Features
+    children:
+      - 'Features#client'
+      - 'Features#listAll'
+      - 'Features#list'
+      - 'Features#get'
+      - 'Features#register'
+      - 'Features#listAllNext'
+      - 'Features#listNext'
+  - uid: 'Features#client'
+    id: client
+    parent: Features
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Features.client
+  - uid: 'Features#listAll'
+    id: listAll
+    parent: Features
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "Gets a list of previewed features for all the providers in the current\rsubscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'Features.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'Features#listAll~client'
+      - 'Features#listAll~callback'
+      - 'Features#listAll~options'
+      - 'Features#listAll~requestUrl'
+      - 'Features#listAll~requestUrl'
+      - 'Features#listAll~queryParameters'
+      - 'Features#listAll~requestUrl'
+      - 'Features#listAll~regex'
+      - 'Features#listAll~requestUrl'
+      - 'Features#listAll~httpRequest'
+      - 'Features#listAll~headerName'
+  - uid: 'Features#list'
+    id: list
+    parent: Features
+    name: 'list(resourceProviderNamespace, options, options.customHeaders, callback)'
+    summary: Gets a list of previewed features of a resource provider.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceProviderNamespace
+          type: string
+          description: "The namespace of the resource\rprovider."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceProviderNamespace, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Features.list(resourceProviderNamespace, options, options.customHeaders,
+      callback)
+    children:
+      - 'Features#list~client'
+      - 'Features#list~callback'
+      - 'Features#list~options'
+      - 'Features#list~requestUrl'
+      - 'Features#list~requestUrl'
+      - 'Features#list~requestUrl'
+      - 'Features#list~queryParameters'
+      - 'Features#list~requestUrl'
+      - 'Features#list~regex'
+      - 'Features#list~requestUrl'
+      - 'Features#list~httpRequest'
+      - 'Features#list~headerName'
+  - uid: 'Features#get'
+    id: get
+    parent: Features
+    name: >-
+      get(resourceProviderNamespace, featureName, options,
+      options.customHeaders, callback)
+    summary: Get all features under the subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceProviderNamespace
+          type: string
+          description: "Namespace of the resource\rprovider."
+        - id: featureName
+          type: string
+          description: Previewed feature name in the resource provider.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceProviderNamespace, featureName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Features.get(resourceProviderNamespace, featureName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Features#get~client'
+      - 'Features#get~callback'
+      - 'Features#get~options'
+      - 'Features#get~requestUrl'
+      - 'Features#get~requestUrl'
+      - 'Features#get~requestUrl'
+      - 'Features#get~requestUrl'
+      - 'Features#get~queryParameters'
+      - 'Features#get~requestUrl'
+      - 'Features#get~regex'
+      - 'Features#get~requestUrl'
+      - 'Features#get~httpRequest'
+      - 'Features#get~headerName'
+  - uid: 'Features#register'
+    id: register
+    parent: Features
+    name: >-
+      register(resourceProviderNamespace, featureName, options,
+      options.customHeaders, callback)
+    summary: Registers for a previewed feature of a resource provider.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceProviderNamespace
+          type: string
+          description: "Namespace of the resource\rprovider."
+        - id: featureName
+          type: string
+          description: Previewed feature name in the resource provider.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function register(resourceProviderNamespace, featureName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Features.register(resourceProviderNamespace, featureName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Features#register~client'
+      - 'Features#register~callback'
+      - 'Features#register~options'
+      - 'Features#register~requestUrl'
+      - 'Features#register~requestUrl'
+      - 'Features#register~requestUrl'
+      - 'Features#register~requestUrl'
+      - 'Features#register~queryParameters'
+      - 'Features#register~requestUrl'
+      - 'Features#register~regex'
+      - 'Features#register~requestUrl'
+      - 'Features#register~httpRequest'
+      - 'Features#register~headerName'
+  - uid: 'Features#listAllNext'
+    id: listAllNext
+    parent: Features
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "Gets a list of previewed features for all the providers in the current\rsubscription."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Features.listAllNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Features#listAllNext~client'
+      - 'Features#listAllNext~callback'
+      - 'Features#listAllNext~options'
+      - 'Features#listAllNext~requestUrl'
+      - 'Features#listAllNext~requestUrl'
+      - 'Features#listAllNext~regex'
+      - 'Features#listAllNext~requestUrl'
+      - 'Features#listAllNext~httpRequest'
+      - 'Features#listAllNext~headerName'
+  - uid: 'Features#listNext'
+    id: listNext
+    parent: Features
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets a list of previewed features of a resource provider.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: 'Features.listNext(nextPageLink, options, options.customHeaders, callback)'
+    children:
+      - 'Features#listNext~client'
+      - 'Features#listNext~callback'
+      - 'Features#listNext~options'
+      - 'Features#listNext~requestUrl'
+      - 'Features#listNext~requestUrl'
+      - 'Features#listNext~regex'
+      - 'Features#listNext~requestUrl'
+      - 'Features#listNext~httpRequest'
+      - 'Features#listNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false

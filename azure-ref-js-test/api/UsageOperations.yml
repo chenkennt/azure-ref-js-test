@@ -1,0 +1,88 @@
+items:
+  - uid: UsageOperations
+    id: UsageOperations
+    name: UsageOperations
+    type: Class
+    syntax:
+      content: UsageOperations
+    fullName: UsageOperations
+    children:
+      - 'UsageOperations#client'
+      - 'UsageOperations#getUsage'
+  - uid: 'UsageOperations#client'
+    id: client
+    parent: UsageOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: UsageOperations.client
+  - uid: 'UsageOperations#getUsage'
+    id: getUsage
+    parent: UsageOperations
+    name: >-
+      getUsage(resourceGroupName, environmentName, lastId, batchSize, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of resource group
+        - id: environmentName
+          type: string
+          description: Environment name
+        - id: lastId
+          type: string
+          description: Last marker that was returned from the batch
+        - id: batchSize
+          type: number
+          description: size of the batch to be returned.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getUsage(resourceGroupName, environmentName, lastId, batchSize,
+        options, options.customHeaders, callback);
+    fullName: >-
+      UsageOperations.getUsage(resourceGroupName, environmentName, lastId,
+      batchSize, options, options.customHeaders, callback)
+    children:
+      - 'UsageOperations#getUsage~client'
+      - 'UsageOperations#getUsage~callback'
+      - 'UsageOperations#getUsage~options'
+      - 'UsageOperations#getUsage~requestUrl'
+      - 'UsageOperations#getUsage~requestUrl'
+      - 'UsageOperations#getUsage~requestUrl'
+      - 'UsageOperations#getUsage~requestUrl'
+      - 'UsageOperations#getUsage~queryParameters'
+      - 'UsageOperations#getUsage~requestUrl'
+      - 'UsageOperations#getUsage~regex'
+      - 'UsageOperations#getUsage~requestUrl'
+      - 'UsageOperations#getUsage~httpRequest'
+      - 'UsageOperations#getUsage~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

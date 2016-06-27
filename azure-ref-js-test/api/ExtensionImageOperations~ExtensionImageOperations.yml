@@ -1,0 +1,1196 @@
+items:
+  - uid: ExtensionImageOperations~ExtensionImageOperations
+    id: ExtensionImageOperations
+    parent: ExtensionImageOperations
+    name: ExtensionImageOperations
+    type: Class
+    syntax:
+      content: ExtensionImageOperations
+    fullName: ExtensionImageOperations.ExtensionImageOperations
+    children:
+      - 'ExtensionImageOperations~ExtensionImageOperations#client'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUnregistering'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating'
+      - 'ExtensionImageOperations~ExtensionImageOperations#register'
+      - 'ExtensionImageOperations~ExtensionImageOperations#unregister'
+      - 'ExtensionImageOperations~ExtensionImageOperations#update'
+  - uid: 'ExtensionImageOperations~ExtensionImageOperations#client'
+    id: client
+    parent: ExtensionImageOperations~ExtensionImageOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ExtensionImageOperations~ExtensionImageOperations.client
+  - uid: 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering'
+    id: beginRegistering
+    parent: ExtensionImageOperations~ExtensionImageOperations
+    name: >-
+      beginRegistering(parameters, parameters.providerNameSpace,
+      parameters.type, parameters.version, parameters.label,
+      parameters.hostingResources, parameters.mediaLink, parameters.certificate,
+      parameters.certificate.storeLocation, parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    summary: "Register a new extension. An extension is identified by the combination of\rits ProviderNamespace and Type (case-sensitive string). It is not allowed\rto register an extension with the same identity (i.e. combination of\rProviderNamespace and Type) of an already-registered extension. To\rregister new version of an existing extension, the Update Extension API\rshould be used."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: ExtensionImageRegisterParameters
+          description: "Parameters supplied\rto the Register Virtual Machine Extension Image operation."
+        - id: parameters.providerNameSpace
+          type: string
+          description: "Required. The provider\rnamespace of the extension."
+        - id: parameters.type
+          type: string
+          description: Required. The type of the extension.
+        - id: parameters.version
+          type: string
+          description: Required. The version of the extension.
+        - id: parameters.label
+          type: string
+          description: "Required. A one line label of the\rextension."
+        - id: parameters.hostingResources
+          type: string
+          description: "Required. The supported\rhosting resources. It must contain 'WebRole' and/or 'WorkerRole'. E.g.\r'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'."
+        - id: parameters.mediaLink
+          type: string
+          description: "Required. URI string pointing to\rthe ZIP package of the extension. The ZIP package has to include the\rextension executable and other supporting files, and the\rPluginManifest.xml manifest. MediaLink value must point to a URL (either\rHttp or Https) in a Azure blob storage and is downloadable. Windows Azure\rwill copy the extension package from this source location and replicate\rit to all regions. The typical time for replication to complete is 20\rminutes."
+        - id: parameters.certificate
+          type: ExtensionCertificateConfiguration
+          description: "Optional. Parameters of the the certificate for encrypting the private\rconfiguration data. Supported on WebRole or WorkerRole, but ignored on\rVmRole."
+        - id: parameters.certificate.storeLocation
+          type: string
+          description: "Required for\rcertificate declaration. The Windows certificate store location to\rinstall the certificate for encryption, if required. Its value has to be\r'LocalMachine' if present."
+        - id: parameters.certificate.storeName
+          type: string
+          description: "Optional. The Windows\rcertificate store name to install the certificate for encryption, if\rrequired. Its value has to be 'My' if present."
+        - id: parameters.certificate.thumbprintRequired
+          type: boolean
+          description: "Optional.\rWhether thumbprint is required for the certificate for encryption or not.\rIts value has to be 'true' or 'false' (case-sensitive) if present."
+        - id: parameters.certificate.thumbprintAlgorithm
+          type: string
+          description: "Optional. The\rthumbprint algorithm of the certificate for encryption, if required. Its\rvalue has to be 'sha1' if present."
+        - id: parameters.extensionEndpoints
+          type: ExtensionEndpointConfiguration
+          description: "Optional. Declared endpoints to automatically add to each deployment with\rthis extension added."
+        - id: parameters.extensionEndpoints.inputEndpoints
+          type: array
+          description: "Optional. A\rlist of input endpoints required by this extension. Supported on WebRole\ror WorkerRole, but ignored on VmRole. Each input endpoint will be\rautomatically added to the service definition of the deployment utilizing\rthis extension."
+        - id: parameters.extensionEndpoints.internalEndpoints
+          type: array
+          description: "Optional.\rA list of internal endpoints required by this extension. Supported on\rWebRole or WorkerRole, but ignored on VmRole. Each internal endpoint will\rbe automatically added to the service definition of the deployment\rutilizing this extension."
+        - id: parameters.extensionEndpoints.instanceInputEndpoints
+          type: array
+          description: "Optional. A list of instance input endpoints required by this extension.\rSupported on WebRole or WorkerRole, but ignored on VmRole. Each instance\rinput endpoint will be automatically added to the service definition of\rthe deployment utilizing this extension."
+        - id: parameters.publicConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of public configuration data."
+        - id: parameters.privateConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of private configuration data."
+        - id: parameters.description
+          type: string
+          description: "Required. Detailed description of\rthe extension."
+        - id: parameters.publisherName
+          type: string
+          description: Optional. Publisher name text.
+        - id: parameters.publishedDate
+          type: date
+          description: "Publisher can set it to any\rarbitrary date, and this is only for display purpose. If not specified by\rpublisher, Azure will automatically assign the UTC time when the\rextension request was received."
+        - id: parameters.localResources
+          type: array
+          description: "Declared local resources used\rinside guest VM by the extension. Optional."
+        - id: parameters.blockRoleUponFailure
+          type: boolean
+          description: "Optional. Its value has\rto be 'true' or 'false' (case-sensitive) When set to 'true', the role\rstartup will be blocked till the extension installation completes. This\rflag should be set to 'true' when the role cannot start without the\rextension being installed. If set to 'false' (default value), the role\rwill be started without waiting for the extension installation to\rcomplete. Supported on WebRole or WorkerRole, but ignored on VmRole."
+        - id: parameters.isInternalExtension
+          type: boolean
+          description: "Optional. If this is set\rto 'true' the extension is not visible for public use, i.e. being\rreturned from list API's. It can be still accessed by referring to the\rProviderNamespace, Type & Version combo. Therefore an internal extension\ris intended only for testing purpose. Its value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.sampleConfig
+          type: string
+          description: "Optional. A sample configuration\rfor the extension. It can be downloaded by users, and the user can\rreplace with customized input parameters. The sample configuration should\rbe sufficiently commented. If configuration data are in XML format, then\rthe XML document-level element must be 'Configuration', and the optional\rpublic configuration data corresponds to a child element of\r'PublicConfig', and the optional private configuration data corresponds\rto a child element of 'PrivateConfig'. The sample configuration data\rshould be validated against public and private configuration schema by\rthe publisher."
+        - id: parameters.replicationCompleted
+          type: boolean
+          description: "Indicates whether this\rversion of extension has been replicated to all regions or not. If true,\rthen the given extension version can be used in creating or updating\rdeployments. Otherwise, the given extension version might cause failure\rin creating or updating deployments. The typical time is 20 minutes for a\rnewly-registered or newly-updated extension to replicate completely by\rAzure."
+        - id: parameters.eula
+          type: string
+          description: "Optional. URL string pointing to the\rEULA (End User License Agreement) of this version of extension. This is\roptionally specified by the third-party publishing the extension instead\rof Windows Azure. If the software requires any additional EULAs, a link\rto the EULA should be provided."
+        - id: parameters.privacyUri
+          type: string
+          description: "Optional. URL string pointing to\rprivacy document of this version of extension. This is optionally\rspecified by the third-party publishing the extension instead of Azure.\rIf the software collects any data and transfers out the guest VM, then an\radditional privacy document might be needed."
+        - id: parameters.homepageUri
+          type: string
+          description: "Optional. URL string pointing to\rhomepage of this version of extension. This is optionally specified by\rthe third-party publishing the extension instead of Azure. The homepage\rshould have usage information and contact information for customer\rsupport."
+        - id: parameters.isJsonExtension
+          type: boolean
+          description: "Optional. If this is set to\r'true' the extension is expected to receive JSON based configuration. If\rthis is set to 'false' the extension is expected to receive XML based\rconfiguration. Its value has to be 'true' or 'false' (case-sensitive) if\rpresent."
+        - id: parameters.disallowMajorVersionUpgrade
+          type: boolean
+          description: "Optional. If\rthis is set to 'true' the extension version cannot be upgraded to from\rother major versions in active deployments. If the value is 'false' or\rnor present, the extension version can be upgraded to from any other\rversion. Downgrade is not supported. The value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.supportedOS
+          type: string
+          description: "String property indicating the OS\rwhich the extension supports. Current values are 'Windows' or 'Linux'."
+        - id: parameters.companyName
+          type: string
+          description: "String property containing the\rname of the company/organization who publishes the extension."
+        - id: parameters.regions
+          type: string
+          description: "String property containing the name\rof the regions required for the slice."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginRegistering(parameters, parameters.providerNameSpace,
+        parameters.type, parameters.version, parameters.label,
+        parameters.hostingResources, parameters.mediaLink,
+        parameters.certificate, parameters.certificate.storeLocation,
+        parameters.certificate.storeName,
+        parameters.certificate.thumbprintRequired,
+        parameters.certificate.thumbprintAlgorithm,
+        parameters.extensionEndpoints,
+        parameters.extensionEndpoints.inputEndpoints,
+        parameters.extensionEndpoints.internalEndpoints,
+        parameters.extensionEndpoints.instanceInputEndpoints,
+        parameters.publicConfigurationSchema,
+        parameters.privateConfigurationSchema, parameters.description,
+        parameters.publisherName, parameters.publishedDate,
+        parameters.localResources, parameters.blockRoleUponFailure,
+        parameters.isInternalExtension, parameters.sampleConfig,
+        parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+        parameters.homepageUri, parameters.isJsonExtension,
+        parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+        parameters.companyName, parameters.regions, callback);
+    fullName: >-
+      ExtensionImageOperations~ExtensionImageOperations.beginRegistering(parameters,
+      parameters.providerNameSpace, parameters.type, parameters.version,
+      parameters.label, parameters.hostingResources, parameters.mediaLink,
+      parameters.certificate, parameters.certificate.storeLocation,
+      parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    children:
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex1
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex1
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~inputEndpointsParameterItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~instanceInputEndpointsParameterItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~internalEndpointsParameterItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex4
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex4
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~localResourcesParameterItem
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering~url2'
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~baseUrl
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~baseUrl
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginRegistering~url2'
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~httpRequest
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~requestContent
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~requestDoc
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~extensionImageElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~providerNameSpaceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~typeElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~versionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~labelElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~hostingResourcesElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~mediaLinkElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~certificateElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~storeLocationElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~storeNameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~thumbprintRequiredElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~thumbprintAlgorithmElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~endpointsElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~inputEndpointsSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex5
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex5
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~inputEndpointsItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~inputEndpointElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~nameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~protocolElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~portElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~localPortElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~internalEndpointsSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex6
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex6
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~internalEndpointsItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~internalEndpointElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~nameElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~protocolElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~portElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~instanceInputEndpointsSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex7
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex7
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~instanceInputEndpointsItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~instanceInputEndpointElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~nameElement3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~protocolElement3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~localPortElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~fixedPortMinElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~fixedPortMaxElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~publicConfigurationSchemaElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~privateConfigurationSchemaElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~descriptionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~publisherNameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~publishedDateElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~localResourcesSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex8
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~loweredIndex8
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~localResourcesItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~localResourceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~nameElement4
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~sizeInMBElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~blockRoleUponFailureElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~isInternalExtensionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~sampleConfigElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~replicationCompletedElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~eulaElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~privacyUriElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~homepageUriElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~isJsonExtensionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~disallowMajorVersionUpgradeElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~supportedOSElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~companyNameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~regionsElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginRegistering~requestContent
+  - uid: 'ExtensionImageOperations~ExtensionImageOperations#beginUnregistering'
+    id: beginUnregistering
+    parent: ExtensionImageOperations~ExtensionImageOperations
+    name: 'beginUnregistering(providerNamespace, type, version, callback)'
+    summary: "Unregister a version of an extension that was previously registered using\reither the Register Extension or Update Extension APIs. An extension\rversion is identified by the combination of its ProviderNamespace, Type\rand Version which are specified when registering the extension.\rUnregistering is only allowed for internal extensions, that is, the\rextensions for which the IsInternalExtension field is set to 'true'\rduring registration or during an update. There is a quota (15) on the\rnumber of extensions that can be registered per subscription. If your\rsubscription runs out of quota, you will wither need to unregister some\rof the internal extensions or contact Azure (same email used to become a\rpublisher)  to increase the quota."
+    type: Method
+    syntax:
+      parameters:
+        - id: providerNamespace
+          type: string
+          description: "The provider namespace of the extension\rimage to unregister."
+        - id: type
+          type: string
+          description: The type of the extension image to unregister.
+        - id: version
+          type: string
+          description: The version of the extension image to unregister.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginUnregistering(providerNamespace, type, version, callback);'
+    fullName: >-
+      ExtensionImageOperations~ExtensionImageOperations.beginUnregistering(providerNamespace,
+      type, version, callback)
+    children:
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~baseUrl
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~baseUrl
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~url2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUnregistering~httpRequest
+  - uid: 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating'
+    id: beginUpdating
+    parent: ExtensionImageOperations~ExtensionImageOperations
+    name: >-
+      beginUpdating(parameters, parameters.providerNameSpace, parameters.type,
+      parameters.version, parameters.label, parameters.hostingResources,
+      parameters.mediaLink, parameters.certificate,
+      parameters.certificate.storeLocation, parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    summary: "Update a new extension. It is allowed to update an extension which had\ralready been registered with the same identity (i.e. combination of\rProviderNamespace and Type) but with different version. It will fail if\rthe extension to update has an identity that has not been registered\rbefore, or there is already an extension with the same identity and same\rversion."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: ExtensionImageUpdateParameters
+          description: "Parameters supplied to\rthe Update Virtual Machine Extension Image operation."
+        - id: parameters.providerNameSpace
+          type: string
+          description: "Required. The provider\rnamespace of the extension."
+        - id: parameters.type
+          type: string
+          description: Required. The type of the extension.
+        - id: parameters.version
+          type: string
+          description: Required. The version of the extension.
+        - id: parameters.label
+          type: string
+          description: "Required. A one line label of the\rextension."
+        - id: parameters.hostingResources
+          type: string
+          description: "Required. The supported\rhosting resources. It must contain 'WebRole' and/or 'WorkerRole'. E.g.\r'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'."
+        - id: parameters.mediaLink
+          type: string
+          description: "Required. URI string pointing to\rthe ZIP package of the extension. The ZIP package has to include the\rextension executable and other supporting files, and the\rPluginManifest.xml manifest. MediaLink value must point to a URL (either\rHttp or Https) in a Azure blob storage and is downloadable. Windows Azure\rwill copy the extension package from this source location and replicate\rit to all regions. The typical time for replication to complete is 20\rminutes."
+        - id: parameters.certificate
+          type: ExtensionCertificateConfiguration
+          description: "Optional. Parameters of the the certificate for encrypting the private\rconfiguration data. Supported on WebRole or WorkerRole, but ignored on\rVmRole."
+        - id: parameters.certificate.storeLocation
+          type: string
+          description: "Required for\rcertificate declaration. The Windows certificate store location to\rinstall the certificate for encryption, if required. Its value has to be\r'LocalMachine' if present."
+        - id: parameters.certificate.storeName
+          type: string
+          description: "Optional. The Windows\rcertificate store name to install the certificate for encryption, if\rrequired. Its value has to be 'My' if present."
+        - id: parameters.certificate.thumbprintRequired
+          type: boolean
+          description: "Optional.\rWhether thumbprint is required for the certificate for encryption or not.\rIts value has to be 'true' or 'false' (case-sensitive) if present."
+        - id: parameters.certificate.thumbprintAlgorithm
+          type: string
+          description: "Optional. The\rthumbprint algorithm of the certificate for encryption, if required. Its\rvalue has to be 'sha1' if present."
+        - id: parameters.extensionEndpoints
+          type: ExtensionEndpointConfiguration
+          description: "Optional. Declared endpoints to automatically add to each deployment with\rthis extension added."
+        - id: parameters.extensionEndpoints.inputEndpoints
+          type: array
+          description: "Optional. A\rlist of input endpoints required by this extension. Supported on WebRole\ror WorkerRole, but ignored on VmRole. Each input endpoint will be\rautomatically added to the service definition of the deployment utilizing\rthis extension."
+        - id: parameters.extensionEndpoints.internalEndpoints
+          type: array
+          description: "Optional.\rA list of internal endpoints required by this extension. Supported on\rWebRole or WorkerRole, but ignored on VmRole. Each internal endpoint will\rbe automatically added to the service definition of the deployment\rutilizing this extension."
+        - id: parameters.extensionEndpoints.instanceInputEndpoints
+          type: array
+          description: "Optional. A list of instance input endpoints required by this extension.\rSupported on WebRole or WorkerRole, but ignored on VmRole. Each instance\rinput endpoint will be automatically added to the service definition of\rthe deployment utilizing this extension."
+        - id: parameters.publicConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of public configuration data."
+        - id: parameters.privateConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of private configuration data."
+        - id: parameters.description
+          type: string
+          description: "Required. Detailed description of\rthe extension."
+        - id: parameters.publisherName
+          type: string
+          description: Optional. Publisher name text.
+        - id: parameters.publishedDate
+          type: date
+          description: "Publisher can set it to any\rarbitrary date, and this is only for display purpose. If not specified by\rpublisher, Azure will automatically assign the UTC time when the\rextension request was received."
+        - id: parameters.localResources
+          type: array
+          description: "Declared local resources used\rinside guest VM by the extension. Optional."
+        - id: parameters.blockRoleUponFailure
+          type: boolean
+          description: "Optional. Its value has\rto be 'true' or 'false' (case-sensitive) When set to 'true', the role\rstartup will be blocked till the extension installation completes. This\rflag should be set to 'true' when the role cannot start without the\rextension being installed. If set to 'false' (default value), the role\rwill be started without waiting for the extension installation to\rcomplete. Supported on WebRole or WorkerRole, but ignored on VmRole."
+        - id: parameters.isInternalExtension
+          type: boolean
+          description: "Optional. If this is set\rto 'true' the extension is not visible for public use, i.e. being\rreturned from list API's. It can be still accessed by referring to the\rProviderNamespace, Type & Version combo. Therefore an internal extension\ris intended only for testing purpose. Its value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.sampleConfig
+          type: string
+          description: "Optional. A sample configuration\rfor the extension. It can be downloaded by users, and the user can\rreplace with customized input parameters. The sample configuration should\rbe sufficiently commented. If configuration data are in XML format, then\rthe XML document-level element must be 'Configuration', and the optional\rpublic configuration data corresponds to a child element of\r'PublicConfig', and the optional private configuration data corresponds\rto a child element of 'PrivateConfig'. The sample configuration data\rshould be validated against public and private configuration schema by\rthe publisher."
+        - id: parameters.replicationCompleted
+          type: boolean
+          description: "Indicates whether this\rversion of extension has been replicated to all regions or not. If true,\rthen the given extension version can be used in creating or updating\rdeployments. Otherwise, the given extension version might cause failure\rin creating or updating deployments. The typical time is 20 minutes for a\rnewly-registered or newly-updated extension to replicate completely by\rAzure."
+        - id: parameters.eula
+          type: string
+          description: "Optional. URL string pointing to the\rEULA (End User License Agreement) of this version of extension. This is\roptionally specified by the third-party publishing the extension instead\rof Windows Azure. If the software requires any additional EULAs, a link\rto the EULA should be provided."
+        - id: parameters.privacyUri
+          type: string
+          description: "Optional. URL string pointing to\rprivacy document of this version of extension. This is optionally\rspecified by the third-party publishing the extension instead of Azure.\rIf the software collects any data and transfers out the guest VM, then an\radditional privacy document might be needed."
+        - id: parameters.homepageUri
+          type: string
+          description: "Optional. URL string pointing to\rhomepage of this version of extension. This is optionally specified by\rthe third-party publishing the extension instead of Azure. The homepage\rshould have usage information and contact information for customer\rsupport."
+        - id: parameters.isJsonExtension
+          type: boolean
+          description: "Optional. If this is set to\r'true' the extension is expected to receive JSON based configuration. If\rthis is set to 'false' the extension is expected to receive XML based\rconfiguration. Its value has to be 'true' or 'false' (case-sensitive) if\rpresent."
+        - id: parameters.disallowMajorVersionUpgrade
+          type: boolean
+          description: "Optional. If\rthis is set to 'true' the extension version cannot be upgraded to from\rother major versions in active deployments. If the value is 'false' or\rnor present, the extension version can be upgraded to from any other\rversion. Downgrade is not supported. The value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.supportedOS
+          type: string
+          description: "String property indicating the OS\rwhich the extension supports. Current values are 'Windows' or 'Linux'."
+        - id: parameters.companyName
+          type: string
+          description: "String property containing the\rname of the company/organization who publishes the extension."
+        - id: parameters.regions
+          type: string
+          description: "String property containing the name\rof the regions required for the slice."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginUpdating(parameters, parameters.providerNameSpace,
+        parameters.type, parameters.version, parameters.label,
+        parameters.hostingResources, parameters.mediaLink,
+        parameters.certificate, parameters.certificate.storeLocation,
+        parameters.certificate.storeName,
+        parameters.certificate.thumbprintRequired,
+        parameters.certificate.thumbprintAlgorithm,
+        parameters.extensionEndpoints,
+        parameters.extensionEndpoints.inputEndpoints,
+        parameters.extensionEndpoints.internalEndpoints,
+        parameters.extensionEndpoints.instanceInputEndpoints,
+        parameters.publicConfigurationSchema,
+        parameters.privateConfigurationSchema, parameters.description,
+        parameters.publisherName, parameters.publishedDate,
+        parameters.localResources, parameters.blockRoleUponFailure,
+        parameters.isInternalExtension, parameters.sampleConfig,
+        parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+        parameters.homepageUri, parameters.isJsonExtension,
+        parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+        parameters.companyName, parameters.regions, callback);
+    fullName: >-
+      ExtensionImageOperations~ExtensionImageOperations.beginUpdating(parameters,
+      parameters.providerNameSpace, parameters.type, parameters.version,
+      parameters.label, parameters.hostingResources, parameters.mediaLink,
+      parameters.certificate, parameters.certificate.storeLocation,
+      parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    children:
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex1
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex1
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~inputEndpointsParameterItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~instanceInputEndpointsParameterItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~internalEndpointsParameterItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex4
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex4
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~localResourcesParameterItem
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~queryParameters
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~baseUrl'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~baseUrl'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - 'ExtensionImageOperations~ExtensionImageOperations#beginUpdating~url2'
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~httpRequest
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~requestContent
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~requestDoc
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~extensionImageElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~providerNameSpaceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~typeElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~versionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~labelElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~hostingResourcesElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~mediaLinkElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~certificateElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~storeLocationElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~storeNameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~thumbprintRequiredElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~thumbprintAlgorithmElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~endpointsElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~inputEndpointsSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex5
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex5
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~inputEndpointsItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~inputEndpointElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~nameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~protocolElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~portElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~localPortElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~internalEndpointsSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex6
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex6
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~internalEndpointsItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~internalEndpointElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~nameElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~protocolElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~portElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~instanceInputEndpointsSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex7
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex7
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~instanceInputEndpointsItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~instanceInputEndpointElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~nameElement3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~protocolElement3
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~localPortElement2
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~fixedPortMinElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~fixedPortMaxElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~publicConfigurationSchemaElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~privateConfigurationSchemaElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~descriptionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~publisherNameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~publishedDateElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~localResourcesSequenceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex8
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~loweredIndex8
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~localResourcesItem
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~localResourceElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~nameElement4
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~sizeInMBElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~blockRoleUponFailureElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~isInternalExtensionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~sampleConfigElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~replicationCompletedElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~eulaElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~privacyUriElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~homepageUriElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~isJsonExtensionElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~disallowMajorVersionUpgradeElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~supportedOSElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~companyNameElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~regionsElement
+      - >-
+        ExtensionImageOperations~ExtensionImageOperations#beginUpdating~requestContent
+  - uid: 'ExtensionImageOperations~ExtensionImageOperations#register'
+    id: register
+    parent: ExtensionImageOperations~ExtensionImageOperations
+    name: >-
+      register(parameters, parameters.providerNameSpace, parameters.type,
+      parameters.version, parameters.label, parameters.hostingResources,
+      parameters.mediaLink, parameters.certificate,
+      parameters.certificate.storeLocation, parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    summary: "Register a new extension. An extension is identified by the combination of\rits ProviderNamespace and Type (case-sensitive string). It is not allowed\rto register an extension with the same identity (i.e. combination of\rProviderNamespace and Type) of an already-registered extension. To\rregister new version of an existing extension, the Update Extension API\rshould be used."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: ExtensionImageRegisterParameters
+          description: "Parameters supplied\rto the Register Virtual Machine Extension Image operation."
+        - id: parameters.providerNameSpace
+          type: string
+          description: "Required. The provider\rnamespace of the extension."
+        - id: parameters.type
+          type: string
+          description: Required. The type of the extension.
+        - id: parameters.version
+          type: string
+          description: Required. The version of the extension.
+        - id: parameters.label
+          type: string
+          description: "Required. A one line label of the\rextension."
+        - id: parameters.hostingResources
+          type: string
+          description: "Required. The supported\rhosting resources. It must contain 'WebRole' and/or 'WorkerRole'. E.g.\r'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'."
+        - id: parameters.mediaLink
+          type: string
+          description: "Required. URI string pointing to\rthe ZIP package of the extension. The ZIP package has to include the\rextension executable and other supporting files, and the\rPluginManifest.xml manifest. MediaLink value must point to a URL (either\rHttp or Https) in a Azure blob storage and is downloadable. Windows Azure\rwill copy the extension package from this source location and replicate\rit to all regions. The typical time for replication to complete is 20\rminutes."
+        - id: parameters.certificate
+          type: ExtensionCertificateConfiguration
+          description: "Optional. Parameters of the the certificate for encrypting the private\rconfiguration data. Supported on WebRole or WorkerRole, but ignored on\rVmRole."
+        - id: parameters.certificate.storeLocation
+          type: string
+          description: "Required for\rcertificate declaration. The Windows certificate store location to\rinstall the certificate for encryption, if required. Its value has to be\r'LocalMachine' if present."
+        - id: parameters.certificate.storeName
+          type: string
+          description: "Optional. The Windows\rcertificate store name to install the certificate for encryption, if\rrequired. Its value has to be 'My' if present."
+        - id: parameters.certificate.thumbprintRequired
+          type: boolean
+          description: "Optional.\rWhether thumbprint is required for the certificate for encryption or not.\rIts value has to be 'true' or 'false' (case-sensitive) if present."
+        - id: parameters.certificate.thumbprintAlgorithm
+          type: string
+          description: "Optional. The\rthumbprint algorithm of the certificate for encryption, if required. Its\rvalue has to be 'sha1' if present."
+        - id: parameters.extensionEndpoints
+          type: ExtensionEndpointConfiguration
+          description: "Optional. Declared endpoints to automatically add to each deployment with\rthis extension added."
+        - id: parameters.extensionEndpoints.inputEndpoints
+          type: array
+          description: "Optional. A\rlist of input endpoints required by this extension. Supported on WebRole\ror WorkerRole, but ignored on VmRole. Each input endpoint will be\rautomatically added to the service definition of the deployment utilizing\rthis extension."
+        - id: parameters.extensionEndpoints.internalEndpoints
+          type: array
+          description: "Optional.\rA list of internal endpoints required by this extension. Supported on\rWebRole or WorkerRole, but ignored on VmRole. Each internal endpoint will\rbe automatically added to the service definition of the deployment\rutilizing this extension."
+        - id: parameters.extensionEndpoints.instanceInputEndpoints
+          type: array
+          description: "Optional. A list of instance input endpoints required by this extension.\rSupported on WebRole or WorkerRole, but ignored on VmRole. Each instance\rinput endpoint will be automatically added to the service definition of\rthe deployment utilizing this extension."
+        - id: parameters.publicConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of public configuration data."
+        - id: parameters.privateConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of private configuration data."
+        - id: parameters.description
+          type: string
+          description: "Required. Detailed description of\rthe extension."
+        - id: parameters.publisherName
+          type: string
+          description: Optional. Publisher name text.
+        - id: parameters.publishedDate
+          type: date
+          description: "Publisher can set it to any\rarbitrary date, and this is only for display purpose. If not specified by\rpublisher, Azure will automatically assign the UTC time when the\rextension request was received."
+        - id: parameters.localResources
+          type: array
+          description: "Declared local resources used\rinside guest VM by the extension. Optional."
+        - id: parameters.blockRoleUponFailure
+          type: boolean
+          description: "Optional. Its value has\rto be 'true' or 'false' (case-sensitive) When set to 'true', the role\rstartup will be blocked till the extension installation completes. This\rflag should be set to 'true' when the role cannot start without the\rextension being installed. If set to 'false' (default value), the role\rwill be started without waiting for the extension installation to\rcomplete. Supported on WebRole or WorkerRole, but ignored on VmRole."
+        - id: parameters.isInternalExtension
+          type: boolean
+          description: "Optional. If this is set\rto 'true' the extension is not visible for public use, i.e. being\rreturned from list API's. It can be still accessed by referring to the\rProviderNamespace, Type & Version combo. Therefore an internal extension\ris intended only for testing purpose. Its value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.sampleConfig
+          type: string
+          description: "Optional. A sample configuration\rfor the extension. It can be downloaded by users, and the user can\rreplace with customized input parameters. The sample configuration should\rbe sufficiently commented. If configuration data are in XML format, then\rthe XML document-level element must be 'Configuration', and the optional\rpublic configuration data corresponds to a child element of\r'PublicConfig', and the optional private configuration data corresponds\rto a child element of 'PrivateConfig'. The sample configuration data\rshould be validated against public and private configuration schema by\rthe publisher."
+        - id: parameters.replicationCompleted
+          type: boolean
+          description: "Indicates whether this\rversion of extension has been replicated to all regions or not. If true,\rthen the given extension version can be used in creating or updating\rdeployments. Otherwise, the given extension version might cause failure\rin creating or updating deployments. The typical time is 20 minutes for a\rnewly-registered or newly-updated extension to replicate completely by\rAzure."
+        - id: parameters.eula
+          type: string
+          description: "Optional. URL string pointing to the\rEULA (End User License Agreement) of this version of extension. This is\roptionally specified by the third-party publishing the extension instead\rof Windows Azure. If the software requires any additional EULAs, a link\rto the EULA should be provided."
+        - id: parameters.privacyUri
+          type: string
+          description: "Optional. URL string pointing to\rprivacy document of this version of extension. This is optionally\rspecified by the third-party publishing the extension instead of Azure.\rIf the software collects any data and transfers out the guest VM, then an\radditional privacy document might be needed."
+        - id: parameters.homepageUri
+          type: string
+          description: "Optional. URL string pointing to\rhomepage of this version of extension. This is optionally specified by\rthe third-party publishing the extension instead of Azure. The homepage\rshould have usage information and contact information for customer\rsupport."
+        - id: parameters.isJsonExtension
+          type: boolean
+          description: "Optional. If this is set to\r'true' the extension is expected to receive JSON based configuration. If\rthis is set to 'false' the extension is expected to receive XML based\rconfiguration. Its value has to be 'true' or 'false' (case-sensitive) if\rpresent."
+        - id: parameters.disallowMajorVersionUpgrade
+          type: boolean
+          description: "Optional. If\rthis is set to 'true' the extension version cannot be upgraded to from\rother major versions in active deployments. If the value is 'false' or\rnor present, the extension version can be upgraded to from any other\rversion. Downgrade is not supported. The value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.supportedOS
+          type: string
+          description: "String property indicating the OS\rwhich the extension supports. Current values are 'Windows' or 'Linux'."
+        - id: parameters.companyName
+          type: string
+          description: "String property containing the\rname of the company/organization who publishes the extension."
+        - id: parameters.regions
+          type: string
+          description: "String property containing the name\rof the regions required for the slice."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function register(parameters, parameters.providerNameSpace,
+        parameters.type, parameters.version, parameters.label,
+        parameters.hostingResources, parameters.mediaLink,
+        parameters.certificate, parameters.certificate.storeLocation,
+        parameters.certificate.storeName,
+        parameters.certificate.thumbprintRequired,
+        parameters.certificate.thumbprintAlgorithm,
+        parameters.extensionEndpoints,
+        parameters.extensionEndpoints.inputEndpoints,
+        parameters.extensionEndpoints.internalEndpoints,
+        parameters.extensionEndpoints.instanceInputEndpoints,
+        parameters.publicConfigurationSchema,
+        parameters.privateConfigurationSchema, parameters.description,
+        parameters.publisherName, parameters.publishedDate,
+        parameters.localResources, parameters.blockRoleUponFailure,
+        parameters.isInternalExtension, parameters.sampleConfig,
+        parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+        parameters.homepageUri, parameters.isJsonExtension,
+        parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+        parameters.companyName, parameters.regions, callback);
+    fullName: >-
+      ExtensionImageOperations~ExtensionImageOperations.register(parameters,
+      parameters.providerNameSpace, parameters.type, parameters.version,
+      parameters.label, parameters.hostingResources, parameters.mediaLink,
+      parameters.certificate, parameters.certificate.storeLocation,
+      parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    children:
+      - 'ExtensionImageOperations~ExtensionImageOperations#register~client2'
+  - uid: 'ExtensionImageOperations~ExtensionImageOperations#unregister'
+    id: unregister
+    parent: ExtensionImageOperations~ExtensionImageOperations
+    name: 'unregister(providerNamespace, type, version, callback)'
+    summary: "Unregister a version of an extension that was previously registered using\reither the Register Extension or Update Extension APIs. An extension\rversion is identified by the combination of its ProviderNamespace, Type\rand Version which are specified when registering the extension.\rUnregistering is only allowed for internal extensions, that is, the\rextensions for which the IsInternalExtension field is set to 'true'\rduring registration or during an update. There is a quota (15) on the\rnumber of extensions that can be registered per subscription. If your\rsubscription runs out of quota, you will wither need to unregister some\rof the internal extensions or contact Azure (same email used to become a\rpublisher)  to increase the quota."
+    type: Method
+    syntax:
+      parameters:
+        - id: providerNamespace
+          type: string
+          description: "The provider namespace of the extension\rimage to unregister."
+        - id: type
+          type: string
+          description: The type of the extension image to unregister.
+        - id: version
+          type: string
+          description: The version of the extension image to unregister.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function unregister(providerNamespace, type, version, callback);'
+    fullName: >-
+      ExtensionImageOperations~ExtensionImageOperations.unregister(providerNamespace,
+      type, version, callback)
+    children:
+      - 'ExtensionImageOperations~ExtensionImageOperations#unregister~client2'
+  - uid: 'ExtensionImageOperations~ExtensionImageOperations#update'
+    id: update
+    parent: ExtensionImageOperations~ExtensionImageOperations
+    name: >-
+      update(parameters, parameters.providerNameSpace, parameters.type,
+      parameters.version, parameters.label, parameters.hostingResources,
+      parameters.mediaLink, parameters.certificate,
+      parameters.certificate.storeLocation, parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    summary: "Update a new extension. It is allowed to update an extension which had\ralready been registered with the same identity (i.e. combination of\rProviderNamespace and Type) but with different version. It will fail if\rthe extension to update has an identity that has not been registered\rbefore, or there is already an extension with the same identity and same\rversion."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: ExtensionImageUpdateParameters
+          description: "Parameters supplied to\rthe Update Virtual Machine Extension Image operation."
+        - id: parameters.providerNameSpace
+          type: string
+          description: "Required. The provider\rnamespace of the extension."
+        - id: parameters.type
+          type: string
+          description: Required. The type of the extension.
+        - id: parameters.version
+          type: string
+          description: Required. The version of the extension.
+        - id: parameters.label
+          type: string
+          description: "Required. A one line label of the\rextension."
+        - id: parameters.hostingResources
+          type: string
+          description: "Required. The supported\rhosting resources. It must contain 'WebRole' and/or 'WorkerRole'. E.g.\r'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'."
+        - id: parameters.mediaLink
+          type: string
+          description: "Required. URI string pointing to\rthe ZIP package of the extension. The ZIP package has to include the\rextension executable and other supporting files, and the\rPluginManifest.xml manifest. MediaLink value must point to a URL (either\rHttp or Https) in a Azure blob storage and is downloadable. Windows Azure\rwill copy the extension package from this source location and replicate\rit to all regions. The typical time for replication to complete is 20\rminutes."
+        - id: parameters.certificate
+          type: ExtensionCertificateConfiguration
+          description: "Optional. Parameters of the the certificate for encrypting the private\rconfiguration data. Supported on WebRole or WorkerRole, but ignored on\rVmRole."
+        - id: parameters.certificate.storeLocation
+          type: string
+          description: "Required for\rcertificate declaration. The Windows certificate store location to\rinstall the certificate for encryption, if required. Its value has to be\r'LocalMachine' if present."
+        - id: parameters.certificate.storeName
+          type: string
+          description: "Optional. The Windows\rcertificate store name to install the certificate for encryption, if\rrequired. Its value has to be 'My' if present."
+        - id: parameters.certificate.thumbprintRequired
+          type: boolean
+          description: "Optional.\rWhether thumbprint is required for the certificate for encryption or not.\rIts value has to be 'true' or 'false' (case-sensitive) if present."
+        - id: parameters.certificate.thumbprintAlgorithm
+          type: string
+          description: "Optional. The\rthumbprint algorithm of the certificate for encryption, if required. Its\rvalue has to be 'sha1' if present."
+        - id: parameters.extensionEndpoints
+          type: ExtensionEndpointConfiguration
+          description: "Optional. Declared endpoints to automatically add to each deployment with\rthis extension added."
+        - id: parameters.extensionEndpoints.inputEndpoints
+          type: array
+          description: "Optional. A\rlist of input endpoints required by this extension. Supported on WebRole\ror WorkerRole, but ignored on VmRole. Each input endpoint will be\rautomatically added to the service definition of the deployment utilizing\rthis extension."
+        - id: parameters.extensionEndpoints.internalEndpoints
+          type: array
+          description: "Optional.\rA list of internal endpoints required by this extension. Supported on\rWebRole or WorkerRole, but ignored on VmRole. Each internal endpoint will\rbe automatically added to the service definition of the deployment\rutilizing this extension."
+        - id: parameters.extensionEndpoints.instanceInputEndpoints
+          type: array
+          description: "Optional. A list of instance input endpoints required by this extension.\rSupported on WebRole or WorkerRole, but ignored on VmRole. Each instance\rinput endpoint will be automatically added to the service definition of\rthe deployment utilizing this extension."
+        - id: parameters.publicConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of public configuration data."
+        - id: parameters.privateConfigurationSchema
+          type: string
+          description: "Optional. The XSD\rschema of private configuration data."
+        - id: parameters.description
+          type: string
+          description: "Required. Detailed description of\rthe extension."
+        - id: parameters.publisherName
+          type: string
+          description: Optional. Publisher name text.
+        - id: parameters.publishedDate
+          type: date
+          description: "Publisher can set it to any\rarbitrary date, and this is only for display purpose. If not specified by\rpublisher, Azure will automatically assign the UTC time when the\rextension request was received."
+        - id: parameters.localResources
+          type: array
+          description: "Declared local resources used\rinside guest VM by the extension. Optional."
+        - id: parameters.blockRoleUponFailure
+          type: boolean
+          description: "Optional. Its value has\rto be 'true' or 'false' (case-sensitive) When set to 'true', the role\rstartup will be blocked till the extension installation completes. This\rflag should be set to 'true' when the role cannot start without the\rextension being installed. If set to 'false' (default value), the role\rwill be started without waiting for the extension installation to\rcomplete. Supported on WebRole or WorkerRole, but ignored on VmRole."
+        - id: parameters.isInternalExtension
+          type: boolean
+          description: "Optional. If this is set\rto 'true' the extension is not visible for public use, i.e. being\rreturned from list API's. It can be still accessed by referring to the\rProviderNamespace, Type & Version combo. Therefore an internal extension\ris intended only for testing purpose. Its value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.sampleConfig
+          type: string
+          description: "Optional. A sample configuration\rfor the extension. It can be downloaded by users, and the user can\rreplace with customized input parameters. The sample configuration should\rbe sufficiently commented. If configuration data are in XML format, then\rthe XML document-level element must be 'Configuration', and the optional\rpublic configuration data corresponds to a child element of\r'PublicConfig', and the optional private configuration data corresponds\rto a child element of 'PrivateConfig'. The sample configuration data\rshould be validated against public and private configuration schema by\rthe publisher."
+        - id: parameters.replicationCompleted
+          type: boolean
+          description: "Indicates whether this\rversion of extension has been replicated to all regions or not. If true,\rthen the given extension version can be used in creating or updating\rdeployments. Otherwise, the given extension version might cause failure\rin creating or updating deployments. The typical time is 20 minutes for a\rnewly-registered or newly-updated extension to replicate completely by\rAzure."
+        - id: parameters.eula
+          type: string
+          description: "Optional. URL string pointing to the\rEULA (End User License Agreement) of this version of extension. This is\roptionally specified by the third-party publishing the extension instead\rof Windows Azure. If the software requires any additional EULAs, a link\rto the EULA should be provided."
+        - id: parameters.privacyUri
+          type: string
+          description: "Optional. URL string pointing to\rprivacy document of this version of extension. This is optionally\rspecified by the third-party publishing the extension instead of Azure.\rIf the software collects any data and transfers out the guest VM, then an\radditional privacy document might be needed."
+        - id: parameters.homepageUri
+          type: string
+          description: "Optional. URL string pointing to\rhomepage of this version of extension. This is optionally specified by\rthe third-party publishing the extension instead of Azure. The homepage\rshould have usage information and contact information for customer\rsupport."
+        - id: parameters.isJsonExtension
+          type: boolean
+          description: "Optional. If this is set to\r'true' the extension is expected to receive JSON based configuration. If\rthis is set to 'false' the extension is expected to receive XML based\rconfiguration. Its value has to be 'true' or 'false' (case-sensitive) if\rpresent."
+        - id: parameters.disallowMajorVersionUpgrade
+          type: boolean
+          description: "Optional. If\rthis is set to 'true' the extension version cannot be upgraded to from\rother major versions in active deployments. If the value is 'false' or\rnor present, the extension version can be upgraded to from any other\rversion. Downgrade is not supported. The value has to be 'true' or\r'false' (case-sensitive) if present."
+        - id: parameters.supportedOS
+          type: string
+          description: "String property indicating the OS\rwhich the extension supports. Current values are 'Windows' or 'Linux'."
+        - id: parameters.companyName
+          type: string
+          description: "String property containing the\rname of the company/organization who publishes the extension."
+        - id: parameters.regions
+          type: string
+          description: "String property containing the name\rof the regions required for the slice."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(parameters, parameters.providerNameSpace,
+        parameters.type, parameters.version, parameters.label,
+        parameters.hostingResources, parameters.mediaLink,
+        parameters.certificate, parameters.certificate.storeLocation,
+        parameters.certificate.storeName,
+        parameters.certificate.thumbprintRequired,
+        parameters.certificate.thumbprintAlgorithm,
+        parameters.extensionEndpoints,
+        parameters.extensionEndpoints.inputEndpoints,
+        parameters.extensionEndpoints.internalEndpoints,
+        parameters.extensionEndpoints.instanceInputEndpoints,
+        parameters.publicConfigurationSchema,
+        parameters.privateConfigurationSchema, parameters.description,
+        parameters.publisherName, parameters.publishedDate,
+        parameters.localResources, parameters.blockRoleUponFailure,
+        parameters.isInternalExtension, parameters.sampleConfig,
+        parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+        parameters.homepageUri, parameters.isJsonExtension,
+        parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+        parameters.companyName, parameters.regions, callback);
+    fullName: >-
+      ExtensionImageOperations~ExtensionImageOperations.update(parameters,
+      parameters.providerNameSpace, parameters.type, parameters.version,
+      parameters.label, parameters.hostingResources, parameters.mediaLink,
+      parameters.certificate, parameters.certificate.storeLocation,
+      parameters.certificate.storeName,
+      parameters.certificate.thumbprintRequired,
+      parameters.certificate.thumbprintAlgorithm, parameters.extensionEndpoints,
+      parameters.extensionEndpoints.inputEndpoints,
+      parameters.extensionEndpoints.internalEndpoints,
+      parameters.extensionEndpoints.instanceInputEndpoints,
+      parameters.publicConfigurationSchema,
+      parameters.privateConfigurationSchema, parameters.description,
+      parameters.publisherName, parameters.publishedDate,
+      parameters.localResources, parameters.blockRoleUponFailure,
+      parameters.isInternalExtension, parameters.sampleConfig,
+      parameters.replicationCompleted, parameters.eula, parameters.privacyUri,
+      parameters.homepageUri, parameters.isJsonExtension,
+      parameters.disallowMajorVersionUpgrade, parameters.supportedOS,
+      parameters.companyName, parameters.regions, callback)
+    children:
+      - 'ExtensionImageOperations~ExtensionImageOperations#update~client2'
+references:
+  - uid: ExtensionImageRegisterParameters
+    name: ExtensionImageRegisterParameters
+    fullName: ExtensionImageRegisterParameters
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: ExtensionCertificateConfiguration
+    name: ExtensionCertificateConfiguration
+    fullName: ExtensionCertificateConfiguration
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: ExtensionEndpointConfiguration
+    name: ExtensionEndpointConfiguration
+    fullName: ExtensionEndpointConfiguration
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: ExtensionImageUpdateParameters
+    name: ExtensionImageUpdateParameters
+    fullName: ExtensionImageUpdateParameters
+    isExternal: true

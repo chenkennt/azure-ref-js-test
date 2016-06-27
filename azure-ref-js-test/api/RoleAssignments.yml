@@ -1,0 +1,699 @@
+items:
+  - uid: RoleAssignments
+    id: RoleAssignments
+    name: RoleAssignments
+    type: Class
+    syntax:
+      content: RoleAssignments
+    fullName: RoleAssignments
+    children:
+      - 'RoleAssignments#client'
+      - 'RoleAssignments#listForResource'
+      - 'RoleAssignments#listForResourceGroup'
+      - 'RoleAssignments#deleteMethod'
+      - 'RoleAssignments#create'
+      - 'RoleAssignments#get'
+      - 'RoleAssignments#deleteById'
+      - 'RoleAssignments#createById'
+      - 'RoleAssignments#getById'
+      - 'RoleAssignments#list'
+      - 'RoleAssignments#listForScope'
+      - 'RoleAssignments#listForResourceNext'
+      - 'RoleAssignments#listForResourceGroupNext'
+      - 'RoleAssignments#listNext'
+      - 'RoleAssignments#listForScopeNext'
+  - uid: 'RoleAssignments#client'
+    id: client
+    parent: RoleAssignments
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: RoleAssignments.client
+  - uid: 'RoleAssignments#listForResource'
+    id: listForResource
+    parent: RoleAssignments
+    name: >-
+      listForResource(resourceGroupName, resourceProviderNamespace,
+      parentResourcePath, resourceType, resourceName, options, options.filter,
+      options.customHeaders, callback)
+    summary: Gets role assignments of the resource.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: resourceProviderNamespace
+          type: string
+          description: Resource identity.
+        - id: parentResourcePath
+          type: string
+          description: Resource identity.
+        - id: resourceType
+          type: string
+          description: Resource identity.
+        - id: resourceName
+          type: string
+          description: Resource identity.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForResource(resourceGroupName, resourceProviderNamespace,
+        parentResourcePath, resourceType, resourceName, options, options.filter,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.listForResource(resourceGroupName,
+      resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
+      options, options.filter, options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#listForResource~client'
+      - 'RoleAssignments#listForResource~callback'
+      - 'RoleAssignments#listForResource~options'
+      - 'RoleAssignments#listForResource~filter'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~queryParameters'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~regex'
+      - 'RoleAssignments#listForResource~requestUrl'
+      - 'RoleAssignments#listForResource~httpRequest'
+      - 'RoleAssignments#listForResource~headerName'
+  - uid: 'RoleAssignments#listForResourceGroup'
+    id: listForResourceGroup
+    parent: RoleAssignments
+    name: >-
+      listForResourceGroup(resourceGroupName, options, options.filter,
+      options.customHeaders, callback)
+    summary: Gets role assignments of the resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Resource group name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForResourceGroup(resourceGroupName, options,
+        options.filter, options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.listForResourceGroup(resourceGroupName, options,
+      options.filter, options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#listForResourceGroup~client'
+      - 'RoleAssignments#listForResourceGroup~callback'
+      - 'RoleAssignments#listForResourceGroup~options'
+      - 'RoleAssignments#listForResourceGroup~filter'
+      - 'RoleAssignments#listForResourceGroup~requestUrl'
+      - 'RoleAssignments#listForResourceGroup~requestUrl'
+      - 'RoleAssignments#listForResourceGroup~requestUrl'
+      - 'RoleAssignments#listForResourceGroup~queryParameters'
+      - 'RoleAssignments#listForResourceGroup~requestUrl'
+      - 'RoleAssignments#listForResourceGroup~regex'
+      - 'RoleAssignments#listForResourceGroup~requestUrl'
+      - 'RoleAssignments#listForResourceGroup~httpRequest'
+      - 'RoleAssignments#listForResourceGroup~headerName'
+  - uid: 'RoleAssignments#deleteMethod'
+    id: deleteMethod
+    parent: RoleAssignments
+    name: >-
+      deleteMethod(scope, roleAssignmentName, options, options.customHeaders,
+      callback)
+    summary: Delete role assignment.
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope.
+        - id: roleAssignmentName
+          type: string
+          description: Role assignment name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(scope, roleAssignmentName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.deleteMethod(scope, roleAssignmentName, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#deleteMethod~client'
+      - 'RoleAssignments#deleteMethod~callback'
+      - 'RoleAssignments#deleteMethod~options'
+      - 'RoleAssignments#deleteMethod~requestUrl'
+      - 'RoleAssignments#deleteMethod~requestUrl'
+      - 'RoleAssignments#deleteMethod~requestUrl'
+      - 'RoleAssignments#deleteMethod~queryParameters'
+      - 'RoleAssignments#deleteMethod~requestUrl'
+      - 'RoleAssignments#deleteMethod~regex'
+      - 'RoleAssignments#deleteMethod~requestUrl'
+      - 'RoleAssignments#deleteMethod~httpRequest'
+      - 'RoleAssignments#deleteMethod~headerName'
+  - uid: 'RoleAssignments#create'
+    id: create
+    parent: RoleAssignments
+    name: >-
+      create(scope, roleAssignmentName, options, options.properties,
+      options.properties.roleDefinitionId, options.properties.principalId,
+      options.customHeaders, callback)
+    summary: Create role assignment.
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope.
+        - id: roleAssignmentName
+          type: string
+          description: Role assignment name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.properties
+          type: object
+          description: "Gets or sets role assignment\rproperties."
+        - id: options.properties.roleDefinitionId
+          type: string
+          description: "Gets or sets role\rdefinition id."
+        - id: options.properties.principalId
+          type: string
+          description: Gets or sets principal Id.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(scope, roleAssignmentName, options, options.properties,
+        options.properties.roleDefinitionId, options.properties.principalId,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.create(scope, roleAssignmentName, options,
+      options.properties, options.properties.roleDefinitionId,
+      options.properties.principalId, options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#create~client'
+      - 'RoleAssignments#create~callback'
+      - 'RoleAssignments#create~options'
+      - 'RoleAssignments#create~properties'
+      - 'RoleAssignments#create~parameters'
+      - 'RoleAssignments#create~parameters'
+      - 'RoleAssignments#create~requestUrl'
+      - 'RoleAssignments#create~requestUrl'
+      - 'RoleAssignments#create~requestUrl'
+      - 'RoleAssignments#create~queryParameters'
+      - 'RoleAssignments#create~requestUrl'
+      - 'RoleAssignments#create~regex'
+      - 'RoleAssignments#create~requestUrl'
+      - 'RoleAssignments#create~httpRequest'
+      - 'RoleAssignments#create~headerName'
+      - 'RoleAssignments#create~requestContent'
+      - 'RoleAssignments#create~requestModel'
+      - 'RoleAssignments#create~requestModelMapper'
+      - 'RoleAssignments#create~requestModel'
+      - 'RoleAssignments#create~requestContent'
+      - 'RoleAssignments#create~serializationError'
+  - uid: 'RoleAssignments#get'
+    id: get
+    parent: RoleAssignments
+    name: 'get(scope, roleAssignmentName, options, options.customHeaders, callback)'
+    summary: Get single role assignment.
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope.
+        - id: roleAssignmentName
+          type: string
+          description: Role assignment name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(scope, roleAssignmentName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleAssignments.get(scope, roleAssignmentName, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#get~client'
+      - 'RoleAssignments#get~callback'
+      - 'RoleAssignments#get~options'
+      - 'RoleAssignments#get~requestUrl'
+      - 'RoleAssignments#get~requestUrl'
+      - 'RoleAssignments#get~requestUrl'
+      - 'RoleAssignments#get~queryParameters'
+      - 'RoleAssignments#get~requestUrl'
+      - 'RoleAssignments#get~regex'
+      - 'RoleAssignments#get~requestUrl'
+      - 'RoleAssignments#get~httpRequest'
+      - 'RoleAssignments#get~headerName'
+  - uid: 'RoleAssignments#deleteById'
+    id: deleteById
+    parent: RoleAssignments
+    name: 'deleteById(roleAssignmentId, options, options.customHeaders, callback)'
+    summary: Delete role assignment.
+    type: Method
+    syntax:
+      parameters:
+        - id: roleAssignmentId
+          type: string
+          description: Role assignment Id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteById(roleAssignmentId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleAssignments.deleteById(roleAssignmentId, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#deleteById~client'
+      - 'RoleAssignments#deleteById~callback'
+      - 'RoleAssignments#deleteById~options'
+      - 'RoleAssignments#deleteById~requestUrl'
+      - 'RoleAssignments#deleteById~requestUrl'
+      - 'RoleAssignments#deleteById~queryParameters'
+      - 'RoleAssignments#deleteById~requestUrl'
+      - 'RoleAssignments#deleteById~regex'
+      - 'RoleAssignments#deleteById~requestUrl'
+      - 'RoleAssignments#deleteById~httpRequest'
+      - 'RoleAssignments#deleteById~headerName'
+  - uid: 'RoleAssignments#createById'
+    id: createById
+    parent: RoleAssignments
+    name: >-
+      createById(roleAssignmentId, options, options.properties,
+      options.properties.roleDefinitionId, options.properties.principalId,
+      options.customHeaders, callback)
+    summary: Create role assignment by Id.
+    type: Method
+    syntax:
+      parameters:
+        - id: roleAssignmentId
+          type: string
+          description: Role assignment Id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.properties
+          type: object
+          description: "Gets or sets role assignment\rproperties."
+        - id: options.properties.roleDefinitionId
+          type: string
+          description: "Gets or sets role\rdefinition id."
+        - id: options.properties.principalId
+          type: string
+          description: Gets or sets principal Id.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createById(roleAssignmentId, options, options.properties,
+        options.properties.roleDefinitionId, options.properties.principalId,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.createById(roleAssignmentId, options, options.properties,
+      options.properties.roleDefinitionId, options.properties.principalId,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#createById~client'
+      - 'RoleAssignments#createById~callback'
+      - 'RoleAssignments#createById~options'
+      - 'RoleAssignments#createById~properties'
+      - 'RoleAssignments#createById~parameters'
+      - 'RoleAssignments#createById~parameters'
+      - 'RoleAssignments#createById~requestUrl'
+      - 'RoleAssignments#createById~requestUrl'
+      - 'RoleAssignments#createById~queryParameters'
+      - 'RoleAssignments#createById~requestUrl'
+      - 'RoleAssignments#createById~regex'
+      - 'RoleAssignments#createById~requestUrl'
+      - 'RoleAssignments#createById~httpRequest'
+      - 'RoleAssignments#createById~headerName'
+      - 'RoleAssignments#createById~requestContent'
+      - 'RoleAssignments#createById~requestModel'
+      - 'RoleAssignments#createById~requestModelMapper'
+      - 'RoleAssignments#createById~requestModel'
+      - 'RoleAssignments#createById~requestContent'
+      - 'RoleAssignments#createById~serializationError'
+  - uid: 'RoleAssignments#getById'
+    id: getById
+    parent: RoleAssignments
+    name: 'getById(roleAssignmentId, options, options.customHeaders, callback)'
+    summary: Get single role assignment.
+    type: Method
+    syntax:
+      parameters:
+        - id: roleAssignmentId
+          type: string
+          description: Role assignment Id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getById(roleAssignmentId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleAssignments.getById(roleAssignmentId, options, options.customHeaders,
+      callback)
+    children:
+      - 'RoleAssignments#getById~client'
+      - 'RoleAssignments#getById~callback'
+      - 'RoleAssignments#getById~options'
+      - 'RoleAssignments#getById~requestUrl'
+      - 'RoleAssignments#getById~requestUrl'
+      - 'RoleAssignments#getById~queryParameters'
+      - 'RoleAssignments#getById~requestUrl'
+      - 'RoleAssignments#getById~regex'
+      - 'RoleAssignments#getById~requestUrl'
+      - 'RoleAssignments#getById~httpRequest'
+      - 'RoleAssignments#getById~headerName'
+  - uid: 'RoleAssignments#list'
+    id: list
+    parent: RoleAssignments
+    name: 'list(options, options.filter, options.customHeaders, callback)'
+    summary: Gets role assignments of the subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.filter, options.customHeaders, callback);'
+    fullName: >-
+      RoleAssignments.list(options, options.filter, options.customHeaders,
+      callback)
+    children:
+      - 'RoleAssignments#list~client'
+      - 'RoleAssignments#list~callback'
+      - 'RoleAssignments#list~options'
+      - 'RoleAssignments#list~filter'
+      - 'RoleAssignments#list~requestUrl'
+      - 'RoleAssignments#list~requestUrl'
+      - 'RoleAssignments#list~queryParameters'
+      - 'RoleAssignments#list~requestUrl'
+      - 'RoleAssignments#list~regex'
+      - 'RoleAssignments#list~requestUrl'
+      - 'RoleAssignments#list~httpRequest'
+      - 'RoleAssignments#list~headerName'
+  - uid: 'RoleAssignments#listForScope'
+    id: listForScope
+    parent: RoleAssignments
+    name: >-
+      listForScope(scope, options, options.filter, options.customHeaders,
+      callback)
+    summary: Gets role assignments of the scope.
+    type: Method
+    syntax:
+      parameters:
+        - id: scope
+          type: string
+          description: Scope.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForScope(scope, options, options.filter,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.listForScope(scope, options, options.filter,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#listForScope~client'
+      - 'RoleAssignments#listForScope~callback'
+      - 'RoleAssignments#listForScope~options'
+      - 'RoleAssignments#listForScope~filter'
+      - 'RoleAssignments#listForScope~requestUrl'
+      - 'RoleAssignments#listForScope~requestUrl'
+      - 'RoleAssignments#listForScope~queryParameters'
+      - 'RoleAssignments#listForScope~requestUrl'
+      - 'RoleAssignments#listForScope~regex'
+      - 'RoleAssignments#listForScope~requestUrl'
+      - 'RoleAssignments#listForScope~httpRequest'
+      - 'RoleAssignments#listForScope~headerName'
+  - uid: 'RoleAssignments#listForResourceNext'
+    id: listForResourceNext
+    parent: RoleAssignments
+    name: >-
+      listForResourceNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Gets role assignments of the resource.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForResourceNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.listForResourceNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#listForResourceNext~client'
+      - 'RoleAssignments#listForResourceNext~callback'
+      - 'RoleAssignments#listForResourceNext~options'
+      - 'RoleAssignments#listForResourceNext~requestUrl'
+      - 'RoleAssignments#listForResourceNext~requestUrl'
+      - 'RoleAssignments#listForResourceNext~regex'
+      - 'RoleAssignments#listForResourceNext~requestUrl'
+      - 'RoleAssignments#listForResourceNext~httpRequest'
+      - 'RoleAssignments#listForResourceNext~headerName'
+  - uid: 'RoleAssignments#listForResourceGroupNext'
+    id: listForResourceGroupNext
+    parent: RoleAssignments
+    name: >-
+      listForResourceGroupNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Gets role assignments of the resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForResourceGroupNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      RoleAssignments.listForResourceGroupNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#listForResourceGroupNext~client'
+      - 'RoleAssignments#listForResourceGroupNext~callback'
+      - 'RoleAssignments#listForResourceGroupNext~options'
+      - 'RoleAssignments#listForResourceGroupNext~requestUrl'
+      - 'RoleAssignments#listForResourceGroupNext~requestUrl'
+      - 'RoleAssignments#listForResourceGroupNext~regex'
+      - 'RoleAssignments#listForResourceGroupNext~requestUrl'
+      - 'RoleAssignments#listForResourceGroupNext~httpRequest'
+      - 'RoleAssignments#listForResourceGroupNext~headerName'
+  - uid: 'RoleAssignments#listNext'
+    id: listNext
+    parent: RoleAssignments
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets role assignments of the subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleAssignments.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'RoleAssignments#listNext~client'
+      - 'RoleAssignments#listNext~callback'
+      - 'RoleAssignments#listNext~options'
+      - 'RoleAssignments#listNext~requestUrl'
+      - 'RoleAssignments#listNext~requestUrl'
+      - 'RoleAssignments#listNext~regex'
+      - 'RoleAssignments#listNext~requestUrl'
+      - 'RoleAssignments#listNext~httpRequest'
+      - 'RoleAssignments#listNext~headerName'
+  - uid: 'RoleAssignments#listForScopeNext'
+    id: listForScopeNext
+    parent: RoleAssignments
+    name: 'listForScopeNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets role assignments of the scope.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listForScopeNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      RoleAssignments.listForScopeNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'RoleAssignments#listForScopeNext~client'
+      - 'RoleAssignments#listForScopeNext~callback'
+      - 'RoleAssignments#listForScopeNext~options'
+      - 'RoleAssignments#listForScopeNext~requestUrl'
+      - 'RoleAssignments#listForScopeNext~requestUrl'
+      - 'RoleAssignments#listForScopeNext~regex'
+      - 'RoleAssignments#listForScopeNext~requestUrl'
+      - 'RoleAssignments#listForScopeNext~httpRequest'
+      - 'RoleAssignments#listForScopeNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

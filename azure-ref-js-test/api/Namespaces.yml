@@ -1,0 +1,924 @@
+items:
+  - uid: Namespaces
+    id: Namespaces
+    name: Namespaces
+    type: Class
+    syntax:
+      content: Namespaces
+    fullName: Namespaces
+    children:
+      - 'Namespaces#client'
+      - 'Namespaces#checkAvailability'
+      - 'Namespaces#createOrUpdate'
+      - 'Namespaces#deleteMethod'
+      - 'Namespaces#beginDeleteMethod'
+      - 'Namespaces#get'
+      - 'Namespaces#createOrUpdateAuthorizationRule'
+      - 'Namespaces#deleteAuthorizationRule'
+      - 'Namespaces#getAuthorizationRule'
+      - 'Namespaces#getLongRunningOperationStatus'
+      - 'Namespaces#list'
+      - 'Namespaces#listAll'
+      - 'Namespaces#listAuthorizationRules'
+      - 'Namespaces#listKeys'
+      - 'Namespaces#listNext'
+      - 'Namespaces#listAllNext'
+      - 'Namespaces#listAuthorizationRulesNext'
+  - uid: 'Namespaces#client'
+    id: client
+    parent: Namespaces
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Namespaces.client
+  - uid: 'Namespaces#checkAvailability'
+    id: checkAvailability
+    parent: Namespaces
+    name: >-
+      checkAvailability(parameters, parameters.name, parameters.location,
+      parameters.tags, parameters.isAvailiable, options, options.customHeaders,
+      callback)
+    summary: "Checks the availability of the given service namespace across all Windows\rAzure subscriptions. This is useful because the domain name is created\rbased on the service namespace name."
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: The namespace name.
+        - id: parameters.name
+          type: string
+          description: Gets or sets name
+        - id: parameters.location
+          type: string
+          description: Gets or sets location.
+        - id: parameters.tags
+          type: object
+          description: Gets or sets tags.
+        - id: parameters.isAvailiable
+          type: boolean
+          description: "Gets or sets true if the name is\ravailable and can be used to create new Namespace/NotificationHub.\rOtherwise false."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckAvailabilityResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function checkAvailability(parameters, parameters.name,
+        parameters.location, parameters.tags, parameters.isAvailiable, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Namespaces.checkAvailability(parameters, parameters.name,
+      parameters.location, parameters.tags, parameters.isAvailiable, options,
+      options.customHeaders, callback)
+    children:
+      - 'Namespaces#checkAvailability~client'
+      - 'Namespaces#checkAvailability~callback'
+      - 'Namespaces#checkAvailability~options'
+      - 'Namespaces#checkAvailability~requestUrl'
+      - 'Namespaces#checkAvailability~requestUrl'
+      - 'Namespaces#checkAvailability~queryParameters'
+      - 'Namespaces#checkAvailability~requestUrl'
+      - 'Namespaces#checkAvailability~regex'
+      - 'Namespaces#checkAvailability~requestUrl'
+      - 'Namespaces#checkAvailability~httpRequest'
+      - 'Namespaces#checkAvailability~headerName'
+      - 'Namespaces#checkAvailability~requestContent'
+      - 'Namespaces#checkAvailability~requestModel'
+      - 'Namespaces#checkAvailability~requestModelMapper'
+      - 'Namespaces#checkAvailability~requestModel'
+      - 'Namespaces#checkAvailability~requestContent'
+      - 'Namespaces#checkAvailability~serializationError'
+  - uid: 'Namespaces#createOrUpdate'
+    id: createOrUpdate
+    parent: Namespaces
+    name: >-
+      createOrUpdate(resourceGroupName, namespaceName, parameters,
+      parameters.location, parameters.tags, parameters.properties,
+      parameters.properties.name, parameters.properties.provisioningState,
+      parameters.properties.region, parameters.properties.status,
+      parameters.properties.createdAt, parameters.properties.serviceBusEndpoint,
+      parameters.properties.subscriptionId, parameters.properties.scaleUnit,
+      parameters.properties.enabled, parameters.properties.critical,
+      parameters.properties.namespaceType, options, options.customHeaders,
+      callback)
+    summary: "Creates/Updates a service namespace. Once created, this namespace's\rresource manifest is immutable. This operation is idempotent."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to create a Namespace\rResource."
+        - id: parameters.location
+          type: string
+          description: "Gets or sets Namespace data center\rlocation."
+        - id: parameters.tags
+          type: object
+          description: Gets or sets Namespace tags.
+        - id: parameters.properties
+          type: object
+          description: "Gets or sets properties of the\rNamespace."
+        - id: parameters.properties.name
+          type: string
+          description: The name of the namespace.
+        - id: parameters.properties.provisioningState
+          type: string
+          description: "Gets or sets\rprovisioning state of the Namespace."
+        - id: parameters.properties.region
+          type: string
+          description: "Specifies the targeted\rregion in which the namespace should be created. It can be any of the\rfollowing values: Australia EastAustralia SoutheastCentral USEast USEast\rUS 2West USNorth Central USSouth Central USEast AsiaSoutheast AsiaBrazil\rSouthJapan EastJapan WestNorth EuropeWest Europe"
+        - id: parameters.properties.status
+          type: string
+          description: "Status of the namespace. It\rcan be any of these values:1 = Created/Active2 = Creating3 = Suspended4 =\rDeleting"
+        - id: parameters.properties.createdAt
+          type: date
+          description: "The time the namespace was\rcreated."
+        - id: parameters.properties.serviceBusEndpoint
+          type: string
+          description: "Endpoint you can\ruse to perform NotificationHub operations."
+        - id: parameters.properties.subscriptionId
+          type: string
+          description: "The Id of the Azure\rsubscription associated with the namespace."
+        - id: parameters.properties.scaleUnit
+          type: string
+          description: "ScaleUnit where the\rnamespace gets created"
+        - id: parameters.properties.enabled
+          type: boolean
+          description: "Whether or not the\rnamespace is currently enabled."
+        - id: parameters.properties.critical
+          type: boolean
+          description: "Whether or not the\rnamespace is set as Critical."
+        - id: parameters.properties.namespaceType
+          type: string
+          description: "Gets or sets the\rnamespace type. Possible values include: 'Messaging', 'NotificationHub'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, namespaceName, parameters,
+        parameters.location, parameters.tags, parameters.properties,
+        parameters.properties.name, parameters.properties.provisioningState,
+        parameters.properties.region, parameters.properties.status,
+        parameters.properties.createdAt,
+        parameters.properties.serviceBusEndpoint,
+        parameters.properties.subscriptionId, parameters.properties.scaleUnit,
+        parameters.properties.enabled, parameters.properties.critical,
+        parameters.properties.namespaceType, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Namespaces.createOrUpdate(resourceGroupName, namespaceName, parameters,
+      parameters.location, parameters.tags, parameters.properties,
+      parameters.properties.name, parameters.properties.provisioningState,
+      parameters.properties.region, parameters.properties.status,
+      parameters.properties.createdAt, parameters.properties.serviceBusEndpoint,
+      parameters.properties.subscriptionId, parameters.properties.scaleUnit,
+      parameters.properties.enabled, parameters.properties.critical,
+      parameters.properties.namespaceType, options, options.customHeaders,
+      callback)
+    children:
+      - 'Namespaces#createOrUpdate~client'
+      - 'Namespaces#createOrUpdate~callback'
+      - 'Namespaces#createOrUpdate~options'
+      - 'Namespaces#createOrUpdate~requestUrl'
+      - 'Namespaces#createOrUpdate~requestUrl'
+      - 'Namespaces#createOrUpdate~requestUrl'
+      - 'Namespaces#createOrUpdate~requestUrl'
+      - 'Namespaces#createOrUpdate~queryParameters'
+      - 'Namespaces#createOrUpdate~requestUrl'
+      - 'Namespaces#createOrUpdate~regex'
+      - 'Namespaces#createOrUpdate~requestUrl'
+      - 'Namespaces#createOrUpdate~httpRequest'
+      - 'Namespaces#createOrUpdate~headerName'
+      - 'Namespaces#createOrUpdate~requestContent'
+      - 'Namespaces#createOrUpdate~requestModel'
+      - 'Namespaces#createOrUpdate~requestModelMapper'
+      - 'Namespaces#createOrUpdate~requestModel'
+      - 'Namespaces#createOrUpdate~requestContent'
+      - 'Namespaces#createOrUpdate~serializationError'
+  - uid: 'Namespaces#deleteMethod'
+    id: deleteMethod
+    parent: Namespaces
+    name: >-
+      deleteMethod(resourceGroupName, namespaceName, options,
+      options.customHeaders, callback)
+    summary: "Deletes an existing namespace. This operation also removes all associated\rnotificationHubs under the namespace."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, namespaceName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Namespaces.deleteMethod(resourceGroupName, namespaceName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Namespaces#deleteMethod~client'
+      - 'Namespaces#deleteMethod~callback'
+      - 'Namespaces#deleteMethod~options'
+  - uid: 'Namespaces#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: Namespaces
+    name: >-
+      beginDeleteMethod(resourceGroupName, namespaceName, options,
+      options.customHeaders, callback)
+    summary: "Deletes an existing namespace. This operation also removes all associated\rnotificationHubs under the namespace."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, namespaceName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Namespaces.beginDeleteMethod(resourceGroupName, namespaceName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Namespaces#beginDeleteMethod~client'
+      - 'Namespaces#beginDeleteMethod~callback'
+      - 'Namespaces#beginDeleteMethod~options'
+      - 'Namespaces#beginDeleteMethod~requestUrl'
+      - 'Namespaces#beginDeleteMethod~requestUrl'
+      - 'Namespaces#beginDeleteMethod~requestUrl'
+      - 'Namespaces#beginDeleteMethod~requestUrl'
+      - 'Namespaces#beginDeleteMethod~queryParameters'
+      - 'Namespaces#beginDeleteMethod~requestUrl'
+      - 'Namespaces#beginDeleteMethod~regex'
+      - 'Namespaces#beginDeleteMethod~requestUrl'
+      - 'Namespaces#beginDeleteMethod~httpRequest'
+      - 'Namespaces#beginDeleteMethod~headerName'
+  - uid: 'Namespaces#get'
+    id: get
+    parent: Namespaces
+    name: >-
+      get(resourceGroupName, namespaceName, options, options.customHeaders,
+      callback)
+    summary: Returns the description for the specified namespace.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, namespaceName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Namespaces.get(resourceGroupName, namespaceName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Namespaces#get~client'
+      - 'Namespaces#get~callback'
+      - 'Namespaces#get~options'
+      - 'Namespaces#get~requestUrl'
+      - 'Namespaces#get~requestUrl'
+      - 'Namespaces#get~requestUrl'
+      - 'Namespaces#get~requestUrl'
+      - 'Namespaces#get~queryParameters'
+      - 'Namespaces#get~requestUrl'
+      - 'Namespaces#get~regex'
+      - 'Namespaces#get~requestUrl'
+      - 'Namespaces#get~httpRequest'
+      - 'Namespaces#get~headerName'
+  - uid: 'Namespaces#createOrUpdateAuthorizationRule'
+    id: createOrUpdateAuthorizationRule
+    parent: Namespaces
+    name: >-
+      createOrUpdateAuthorizationRule(resourceGroupName, namespaceName,
+      authorizationRuleName, parameters, parameters.location, parameters.name,
+      parameters.properties, parameters.properties.primaryKey,
+      parameters.properties.secondaryKey, parameters.properties.keyName,
+      parameters.properties.claimType, parameters.properties.claimValue,
+      parameters.properties.rights, parameters.properties.createdTime,
+      parameters.properties.modifiedTime, parameters.properties.revision,
+      options, options.customHeaders, callback)
+    summary: Creates an authorization rule for a namespace
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: authorizationRuleName
+          type: string
+          description: Aauthorization Rule Name.
+        - id: parameters
+          type: object
+          description: The shared access authorization rule.
+        - id: parameters.location
+          type: string
+          description: "Gets or sets Namespace data center\rlocation."
+        - id: parameters.name
+          type: string
+          description: "Gets or sets Name of the Namespace\rAuthorizationRule."
+        - id: parameters.properties
+          type: object
+          description: "Gets or sets properties of the\rNamespace AuthorizationRules."
+        - id: parameters.properties.primaryKey
+          type: string
+          description: "The primary key that was\rused."
+        - id: parameters.properties.secondaryKey
+          type: string
+          description: "The secondary key that\rwas used."
+        - id: parameters.properties.keyName
+          type: string
+          description: "The name of the key that\rwas used."
+        - id: parameters.properties.claimType
+          type: string
+          description: The type of the claim.
+        - id: parameters.properties.claimValue
+          type: string
+          description: The value of the claim.
+        - id: parameters.properties.rights
+          type: array
+          description: "The rights associated with\rthe rule."
+        - id: parameters.properties.createdTime
+          type: date
+          description: "The time at which the\rauthorization rule was created."
+        - id: parameters.properties.modifiedTime
+          type: date
+          description: "The most recent time the\rrule was updated."
+        - id: parameters.properties.revision
+          type: number
+          description: "The revision number for\rthe rule."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleResource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateAuthorizationRule(resourceGroupName,
+        namespaceName, authorizationRuleName, parameters, parameters.location,
+        parameters.name, parameters.properties,
+        parameters.properties.primaryKey, parameters.properties.secondaryKey,
+        parameters.properties.keyName, parameters.properties.claimType,
+        parameters.properties.claimValue, parameters.properties.rights,
+        parameters.properties.createdTime, parameters.properties.modifiedTime,
+        parameters.properties.revision, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Namespaces.createOrUpdateAuthorizationRule(resourceGroupName,
+      namespaceName, authorizationRuleName, parameters, parameters.location,
+      parameters.name, parameters.properties, parameters.properties.primaryKey,
+      parameters.properties.secondaryKey, parameters.properties.keyName,
+      parameters.properties.claimType, parameters.properties.claimValue,
+      parameters.properties.rights, parameters.properties.createdTime,
+      parameters.properties.modifiedTime, parameters.properties.revision,
+      options, options.customHeaders, callback)
+    children:
+      - 'Namespaces#createOrUpdateAuthorizationRule~client'
+      - 'Namespaces#createOrUpdateAuthorizationRule~callback'
+      - 'Namespaces#createOrUpdateAuthorizationRule~options'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestUrl'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestUrl'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestUrl'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestUrl'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestUrl'
+      - 'Namespaces#createOrUpdateAuthorizationRule~queryParameters'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestUrl'
+      - 'Namespaces#createOrUpdateAuthorizationRule~regex'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestUrl'
+      - 'Namespaces#createOrUpdateAuthorizationRule~httpRequest'
+      - 'Namespaces#createOrUpdateAuthorizationRule~headerName'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestContent'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestModel'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestModelMapper'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestModel'
+      - 'Namespaces#createOrUpdateAuthorizationRule~requestContent'
+      - 'Namespaces#createOrUpdateAuthorizationRule~serializationError'
+  - uid: 'Namespaces#deleteAuthorizationRule'
+    id: deleteAuthorizationRule
+    parent: Namespaces
+    name: >-
+      deleteAuthorizationRule(resourceGroupName, namespaceName,
+      authorizationRuleName, options, options.customHeaders, callback)
+    summary: Deletes a namespace authorization rule
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: authorizationRuleName
+          type: string
+          description: Authorization Rule Name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteAuthorizationRule(resourceGroupName, namespaceName,
+        authorizationRuleName, options, options.customHeaders, callback);
+    fullName: >-
+      Namespaces.deleteAuthorizationRule(resourceGroupName, namespaceName,
+      authorizationRuleName, options, options.customHeaders, callback)
+    children:
+      - 'Namespaces#deleteAuthorizationRule~client'
+      - 'Namespaces#deleteAuthorizationRule~callback'
+      - 'Namespaces#deleteAuthorizationRule~options'
+      - 'Namespaces#deleteAuthorizationRule~requestUrl'
+      - 'Namespaces#deleteAuthorizationRule~requestUrl'
+      - 'Namespaces#deleteAuthorizationRule~requestUrl'
+      - 'Namespaces#deleteAuthorizationRule~requestUrl'
+      - 'Namespaces#deleteAuthorizationRule~requestUrl'
+      - 'Namespaces#deleteAuthorizationRule~queryParameters'
+      - 'Namespaces#deleteAuthorizationRule~requestUrl'
+      - 'Namespaces#deleteAuthorizationRule~regex'
+      - 'Namespaces#deleteAuthorizationRule~requestUrl'
+      - 'Namespaces#deleteAuthorizationRule~httpRequest'
+      - 'Namespaces#deleteAuthorizationRule~headerName'
+  - uid: 'Namespaces#getAuthorizationRule'
+    id: getAuthorizationRule
+    parent: Namespaces
+    name: >-
+      getAuthorizationRule(resourceGroupName, namespaceName,
+      authorizationRuleName, options, options.customHeaders, callback)
+    summary: Gets an authorization rule for a namespace by name.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name
+        - id: authorizationRuleName
+          type: string
+          description: Authorization rule name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleResource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getAuthorizationRule(resourceGroupName, namespaceName,
+        authorizationRuleName, options, options.customHeaders, callback);
+    fullName: >-
+      Namespaces.getAuthorizationRule(resourceGroupName, namespaceName,
+      authorizationRuleName, options, options.customHeaders, callback)
+    children:
+      - 'Namespaces#getAuthorizationRule~client'
+      - 'Namespaces#getAuthorizationRule~callback'
+      - 'Namespaces#getAuthorizationRule~options'
+      - 'Namespaces#getAuthorizationRule~requestUrl'
+      - 'Namespaces#getAuthorizationRule~requestUrl'
+      - 'Namespaces#getAuthorizationRule~requestUrl'
+      - 'Namespaces#getAuthorizationRule~requestUrl'
+      - 'Namespaces#getAuthorizationRule~requestUrl'
+      - 'Namespaces#getAuthorizationRule~queryParameters'
+      - 'Namespaces#getAuthorizationRule~requestUrl'
+      - 'Namespaces#getAuthorizationRule~regex'
+      - 'Namespaces#getAuthorizationRule~requestUrl'
+      - 'Namespaces#getAuthorizationRule~httpRequest'
+      - 'Namespaces#getAuthorizationRule~headerName'
+  - uid: 'Namespaces#getLongRunningOperationStatus'
+    id: getLongRunningOperationStatus
+    parent: Namespaces
+    name: >-
+      getLongRunningOperationStatus(operationStatusLink, options,
+      options.customHeaders, callback)
+    summary: "The Get Operation Status operation returns the status of the specified\roperation. After calling an asynchronous operation, you can call Get\rOperation Status to determine whether the operation has succeeded, failed,\ror is still in progress."
+    type: Method
+    syntax:
+      parameters:
+        - id: operationStatusLink
+          type: string
+          description: "Location value returned by the Begin\roperation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getLongRunningOperationStatus(operationStatusLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Namespaces.getLongRunningOperationStatus(operationStatusLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Namespaces#getLongRunningOperationStatus~client'
+      - 'Namespaces#getLongRunningOperationStatus~callback'
+      - 'Namespaces#getLongRunningOperationStatus~options'
+      - 'Namespaces#getLongRunningOperationStatus~requestUrl'
+      - 'Namespaces#getLongRunningOperationStatus~requestUrl'
+      - 'Namespaces#getLongRunningOperationStatus~queryParameters'
+      - 'Namespaces#getLongRunningOperationStatus~requestUrl'
+      - 'Namespaces#getLongRunningOperationStatus~regex'
+      - 'Namespaces#getLongRunningOperationStatus~requestUrl'
+      - 'Namespaces#getLongRunningOperationStatus~httpRequest'
+      - 'Namespaces#getLongRunningOperationStatus~headerName'
+  - uid: 'Namespaces#list'
+    id: list
+    parent: Namespaces
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: Lists the available namespaces within a resourceGroup.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group. If\rresourceGroupName value is null the method lists all the namespaces within\rsubscription"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Namespaces.list(resourceGroupName, options, options.customHeaders,
+      callback)
+    children:
+      - 'Namespaces#list~client'
+      - 'Namespaces#list~callback'
+      - 'Namespaces#list~options'
+      - 'Namespaces#list~requestUrl'
+      - 'Namespaces#list~requestUrl'
+      - 'Namespaces#list~requestUrl'
+      - 'Namespaces#list~queryParameters'
+      - 'Namespaces#list~requestUrl'
+      - 'Namespaces#list~regex'
+      - 'Namespaces#list~requestUrl'
+      - 'Namespaces#list~httpRequest'
+      - 'Namespaces#list~headerName'
+  - uid: 'Namespaces#listAll'
+    id: listAll
+    parent: Namespaces
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "Lists all the available namespaces within the subscription irrespective of\rthe resourceGroups."
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'Namespaces.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'Namespaces#listAll~client'
+      - 'Namespaces#listAll~callback'
+      - 'Namespaces#listAll~options'
+      - 'Namespaces#listAll~requestUrl'
+      - 'Namespaces#listAll~requestUrl'
+      - 'Namespaces#listAll~queryParameters'
+      - 'Namespaces#listAll~requestUrl'
+      - 'Namespaces#listAll~regex'
+      - 'Namespaces#listAll~requestUrl'
+      - 'Namespaces#listAll~httpRequest'
+      - 'Namespaces#listAll~headerName'
+  - uid: 'Namespaces#listAuthorizationRules'
+    id: listAuthorizationRules
+    parent: Namespaces
+    name: >-
+      listAuthorizationRules(resourceGroupName, namespaceName, options,
+      options.customHeaders, callback)
+    summary: Gets the authorization rules for a namespace.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAuthorizationRules(resourceGroupName, namespaceName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Namespaces.listAuthorizationRules(resourceGroupName, namespaceName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Namespaces#listAuthorizationRules~client'
+      - 'Namespaces#listAuthorizationRules~callback'
+      - 'Namespaces#listAuthorizationRules~options'
+      - 'Namespaces#listAuthorizationRules~requestUrl'
+      - 'Namespaces#listAuthorizationRules~requestUrl'
+      - 'Namespaces#listAuthorizationRules~requestUrl'
+      - 'Namespaces#listAuthorizationRules~requestUrl'
+      - 'Namespaces#listAuthorizationRules~queryParameters'
+      - 'Namespaces#listAuthorizationRules~requestUrl'
+      - 'Namespaces#listAuthorizationRules~regex'
+      - 'Namespaces#listAuthorizationRules~requestUrl'
+      - 'Namespaces#listAuthorizationRules~httpRequest'
+      - 'Namespaces#listAuthorizationRules~headerName'
+  - uid: 'Namespaces#listKeys'
+    id: listKeys
+    parent: Namespaces
+    name: >-
+      listKeys(resourceGroupName, namespaceName, authorizationRuleName, options,
+      options.customHeaders, callback)
+    summary: Gets the Primary and Secondary ConnectionStrings to the namespace
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: authorizationRuleName
+          type: string
+          description: "The connection string of the\rnamespace for the specified authorizationRule."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceListKeys} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listKeys(resourceGroupName, namespaceName,
+        authorizationRuleName, options, options.customHeaders, callback);
+    fullName: >-
+      Namespaces.listKeys(resourceGroupName, namespaceName,
+      authorizationRuleName, options, options.customHeaders, callback)
+    children:
+      - 'Namespaces#listKeys~client'
+      - 'Namespaces#listKeys~callback'
+      - 'Namespaces#listKeys~options'
+      - 'Namespaces#listKeys~requestUrl'
+      - 'Namespaces#listKeys~requestUrl'
+      - 'Namespaces#listKeys~requestUrl'
+      - 'Namespaces#listKeys~requestUrl'
+      - 'Namespaces#listKeys~requestUrl'
+      - 'Namespaces#listKeys~queryParameters'
+      - 'Namespaces#listKeys~requestUrl'
+      - 'Namespaces#listKeys~regex'
+      - 'Namespaces#listKeys~requestUrl'
+      - 'Namespaces#listKeys~httpRequest'
+      - 'Namespaces#listKeys~headerName'
+  - uid: 'Namespaces#listNext'
+    id: listNext
+    parent: Namespaces
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Lists the available namespaces within a resourceGroup.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Namespaces.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Namespaces#listNext~client'
+      - 'Namespaces#listNext~callback'
+      - 'Namespaces#listNext~options'
+      - 'Namespaces#listNext~requestUrl'
+      - 'Namespaces#listNext~requestUrl'
+      - 'Namespaces#listNext~regex'
+      - 'Namespaces#listNext~requestUrl'
+      - 'Namespaces#listNext~httpRequest'
+      - 'Namespaces#listNext~headerName'
+  - uid: 'Namespaces#listAllNext'
+    id: listAllNext
+    parent: Namespaces
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "Lists all the available namespaces within the subscription irrespective of\rthe resourceGroups."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Namespaces.listAllNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Namespaces#listAllNext~client'
+      - 'Namespaces#listAllNext~callback'
+      - 'Namespaces#listAllNext~options'
+      - 'Namespaces#listAllNext~requestUrl'
+      - 'Namespaces#listAllNext~requestUrl'
+      - 'Namespaces#listAllNext~regex'
+      - 'Namespaces#listAllNext~requestUrl'
+      - 'Namespaces#listAllNext~httpRequest'
+      - 'Namespaces#listAllNext~headerName'
+  - uid: 'Namespaces#listAuthorizationRulesNext'
+    id: listAuthorizationRulesNext
+    parent: Namespaces
+    name: >-
+      listAuthorizationRulesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Gets the authorization rules for a namespace.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAuthorizationRulesNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Namespaces.listAuthorizationRulesNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Namespaces#listAuthorizationRulesNext~client'
+      - 'Namespaces#listAuthorizationRulesNext~callback'
+      - 'Namespaces#listAuthorizationRulesNext~options'
+      - 'Namespaces#listAuthorizationRulesNext~requestUrl'
+      - 'Namespaces#listAuthorizationRulesNext~requestUrl'
+      - 'Namespaces#listAuthorizationRulesNext~regex'
+      - 'Namespaces#listAuthorizationRulesNext~requestUrl'
+      - 'Namespaces#listAuthorizationRulesNext~httpRequest'
+      - 'Namespaces#listAuthorizationRulesNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

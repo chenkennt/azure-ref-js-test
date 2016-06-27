@@ -1,0 +1,985 @@
+items:
+  - uid: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    id: VirtualMachineDiskOperations
+    parent: VirtualMachineDiskOperations
+    name: VirtualMachineDiskOperations
+    type: Class
+    syntax:
+      content: VirtualMachineDiskOperations
+    fullName: VirtualMachineDiskOperations.VirtualMachineDiskOperations
+    children:
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#client'
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize'
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#client'
+    id: client
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualMachineDiskOperations~VirtualMachineDiskOperations.client
+  - uid: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+    id: beginCreatingDataDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters,
+      parameters.hostCaching, parameters.label, parameters.name,
+      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
+      parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback)
+    summary: "The Create Data Disk operation adds a data disk to a virtual machine.\rThere are three ways to create the data disk using the Add Data Disk\roperation. Option 1 - Attach an empty data disk to the role by specifying\rthe disk label and location of the disk image. Do not include the\rDiskName and SourceMediaLink elements in the request body. Include the\rMediaLink element and reference a blob that is in the same geographical\rregion as the role. You can also omit the MediaLink element. In this\rusage, Azure will create the data disk in the storage account configured\ras default for the role. Option 2 - Attach an existing data disk that is\rin the image repository. Do not include the DiskName and SourceMediaLink\relements in the request body. Specify the data disk to use by including\rthe DiskName element. Note: If included the in the response body, the\rMediaLink and LogicalDiskSizeInGB elements are ignored. Option 3 -\rSpecify the location of a blob in your storage account that contain a\rdisk image to use. Include the SourceMediaLink element. Note: If the\rMediaLink element isincluded, it is ignored.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of your service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: roleName
+          type: string
+          description: The name of the role to add the data disk to.
+        - id: parameters
+          type: VirtualMachineDataDiskCreateParameters
+          description: "Parameters\rsupplied to the Create Virtual Machine Data Disk operation."
+        - id: parameters.hostCaching
+          type: string
+          description: "Specifies the platform caching\rbehavior of data disk blob for read/write efficiency. The default vault\ris ReadOnly. Possible values are: None, ReadOnly, or ReadWrite. Warning:\rSetting this property impacts the consistency of the disk."
+        - id: parameters.label
+          type: string
+          description: "Specifies the description of the data\rdisk. When you attach a disk, either by directly referencing a media\rusing the MediaLink element or specifying the target disk size, you can\ruse the DiskLabel element to customize the name property of the target\rdata disk."
+        - id: parameters.name
+          type: string
+          description: "Specifies the name of the disk. Azure\ruses the specified disk to create the data disk for the machine and\rpopulates this field with the disk name."
+        - id: parameters.logicalUnitNumber
+          type: number
+          description: "Specifies the Logical Unit\rNumber (LUN) for the disk. The LUN specifies the slot in which the data\rdrive appears when mounted for usage by the virtual machine. Valid LUN\rvalues are 0 through 15."
+        - id: parameters.logicalDiskSizeInGB
+          type: number
+          description: "Specifies the size, in\rGB, of an empty disk to be attached to the role. The disk can be created\ras part of disk attach or create VM role call by specifying the value for\rthis property. Azure creates the empty disk based on size preference and\rattaches the newly created disk to the Role."
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the blob\rin Azure storage where the media for the disk is located. The blob\rlocation must belong to the storage account in the subscription specified\rby the SubscriptionId value in the operation call. Example:\rhttp://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: parameters.sourceMediaLinkUri
+          type: string
+          description: "Specifies the location of\ra blob in account storage which is mounted as a data disk when the\rvirtual machine is created."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginCreatingDataDisk(serviceName, deploymentName, roleName,
+        parameters, parameters.hostCaching, parameters.label, parameters.name,
+        parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
+        parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginCreatingDataDisk(serviceName,
+      deploymentName, roleName, parameters, parameters.hostCaching,
+      parameters.label, parameters.name, parameters.logicalUnitNumber,
+      parameters.logicalDiskSizeInGB, parameters.mediaLinkUri,
+      parameters.sourceMediaLinkUri, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~httpRequest
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~requestContent
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~requestDoc
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~dataVirtualHardDiskElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~hostCachingElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~diskLabelElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~diskNameElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~lunElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~logicalDiskSizeInGBElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~mediaLinkElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~sourceMediaLinkElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~requestContent
+  - uid: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+    id: beginDeletingDataDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      beginDeletingDataDisk(serviceName, deploymentName, roleName,
+      logicalUnitNumber, deleteFromStorage, callback)
+    summary: "The Begin Deleting Data Disk operation removes the specified data disk\rfrom a virtual machine.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of your service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: roleName
+          type: string
+          description: The name of the role to delete the data disk from.
+        - id: logicalUnitNumber
+          type: Number
+          description: The logical unit number of the disk.
+        - id: deleteFromStorage
+          type: boolean
+          description: "Specifies that the source blob for\rthe disk should also be deleted from storage."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginDeletingDataDisk(serviceName, deploymentName, roleName,
+        logicalUnitNumber, deleteFromStorage, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginDeletingDataDisk(serviceName,
+      deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~queryParameters
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk~httpRequest
+  - uid: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+    id: beginUpdatingDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      beginUpdatingDisk(name, parameters, parameters.hasOperatingSystem,
+      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
+      parameters.name, parameters.resizedSizeInGB, callback)
+    summary: "The Add Disk operation adds a disk to the user image repository. The disk\rcan be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+          description: The name of the disk being updated.
+        - id: parameters
+          type: VirtualMachineDiskUpdateParameters
+          description: "Parameters supplied\rto the Update Virtual Machine Disk operation."
+        - id: parameters.hasOperatingSystem
+          type: boolean
+          description: "Specifies whether the\rdisk contains an operating system. Note: Only a disk with an operating\rsystem installed can be mounted as OS Drive."
+        - id: parameters.operatingSystemType
+          type: string
+          description: "The operating system type\rof the disk. Possible values are: Linux or Windows."
+        - id: parameters.label
+          type: string
+          description: Specifies the friendly name of the disk.
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the\rblob in Azure storage. The blob location must belong to a storage account\rin the subscription specified by the SubscriptionId value in the\roperation call. Example:\rhttp://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: parameters.name
+          type: string
+          description: "Specifies a name for the disk. Azure uses\rthe name to identify the disk when creating virtual machines from the\rdisk."
+        - id: parameters.resizedSizeInGB
+          type: number
+          description: "Resizes the underlying blob\rto the indicated size in GB.To use the ResizedSizeInGB property, the\rversion header should be at least 2014-10-01."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginUpdatingDisk(name, parameters,
+        parameters.hasOperatingSystem, parameters.operatingSystemType,
+        parameters.label, parameters.mediaLinkUri, parameters.name,
+        parameters.resizedSizeInGB, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginUpdatingDisk(name,
+      parameters, parameters.hasOperatingSystem, parameters.operatingSystemType,
+      parameters.label, parameters.mediaLinkUri, parameters.name,
+      parameters.resizedSizeInGB, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~httpRequest
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~requestContent
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~requestDoc
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~diskElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~hasOperatingSystemElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~osElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~labelElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~mediaLinkElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~nameElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~resizedSizeInGBElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~requestContent
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk'
+    id: createDataDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      createDataDisk(serviceName, deploymentName, roleName, parameters,
+      parameters.hostCaching, parameters.label, parameters.name,
+      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
+      parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback)
+    summary: "The Create Data Disk operation adds a data disk to a virtual machine.\rThere are three ways to create the data disk using the Add Data Disk\roperation. Option 1 - Attach an empty data disk to the role by specifying\rthe disk label and location of the disk image. Do not include the\rDiskName and SourceMediaLink elements in the request body. Include the\rMediaLink element and reference a blob that is in the same geographical\rregion as the role. You can also omit the MediaLink element. In this\rusage, Azure will create the data disk in the storage account configured\ras default for the role. Option 2 - Attach an existing data disk that is\rin the image repository. Do not include the DiskName and SourceMediaLink\relements in the request body. Specify the data disk to use by including\rthe DiskName element. Note: If included the in the response body, the\rMediaLink and LogicalDiskSizeInGB elements are ignored. Option 3 -\rSpecify the location of a blob in your storage account that contain a\rdisk image to use. Include the SourceMediaLink element. Note: If the\rMediaLink element isincluded, it is ignored.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of your service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: roleName
+          type: string
+          description: The name of the role to add the data disk to.
+        - id: parameters
+          type: VirtualMachineDataDiskCreateParameters
+          description: "Parameters\rsupplied to the Create Virtual Machine Data Disk operation."
+        - id: parameters.hostCaching
+          type: string
+          description: "Specifies the platform caching\rbehavior of data disk blob for read/write efficiency. The default vault\ris ReadOnly. Possible values are: None, ReadOnly, or ReadWrite. Warning:\rSetting this property impacts the consistency of the disk."
+        - id: parameters.label
+          type: string
+          description: "Specifies the description of the data\rdisk. When you attach a disk, either by directly referencing a media\rusing the MediaLink element or specifying the target disk size, you can\ruse the DiskLabel element to customize the name property of the target\rdata disk."
+        - id: parameters.name
+          type: string
+          description: "Specifies the name of the disk. Azure\ruses the specified disk to create the data disk for the machine and\rpopulates this field with the disk name."
+        - id: parameters.logicalUnitNumber
+          type: number
+          description: "Specifies the Logical Unit\rNumber (LUN) for the disk. The LUN specifies the slot in which the data\rdrive appears when mounted for usage by the virtual machine. Valid LUN\rvalues are 0 through 15."
+        - id: parameters.logicalDiskSizeInGB
+          type: number
+          description: "Specifies the size, in\rGB, of an empty disk to be attached to the role. The disk can be created\ras part of disk attach or create VM role call by specifying the value for\rthis property. Azure creates the empty disk based on size preference and\rattaches the newly created disk to the Role."
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the blob\rin Azure storage where the media for the disk is located. The blob\rlocation must belong to the storage account in the subscription specified\rby the SubscriptionId value in the operation call. Example:\rhttp://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: parameters.sourceMediaLinkUri
+          type: string
+          description: "Specifies the location of\ra blob in account storage which is mounted as a data disk when the\rvirtual machine is created."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createDataDisk(serviceName, deploymentName, roleName,
+        parameters, parameters.hostCaching, parameters.label, parameters.name,
+        parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
+        parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDataDisk(serviceName,
+      deploymentName, roleName, parameters, parameters.hostCaching,
+      parameters.label, parameters.name, parameters.logicalUnitNumber,
+      parameters.logicalDiskSizeInGB, parameters.mediaLinkUri,
+      parameters.sourceMediaLinkUri, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk~client2
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk'
+    id: createDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      createDisk(parameters, parameters.operatingSystemType, parameters.label,
+      parameters.mediaLinkUri, parameters.name, callback)
+    summary: "The Create Disk operation adds a disk to the user image repository. The\rdisk can be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: VirtualMachineDiskCreateParameters
+          description: "Parameters supplied\rto the Create Virtual Machine Disk operation."
+        - id: parameters.operatingSystemType
+          type: string
+          description: "The operating system type\rof the disk. Possible values are: Linux or Windows."
+        - id: parameters.label
+          type: string
+          description: Specifies the friendly name of the disk.
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the blob\rin Azure storage. The blob location must belong to a storage account in\rthe subscription specified by the SubscriptionId value in the operation\rcall. Example: http://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: parameters.name
+          type: string
+          description: "Specifies a name for the disk. Azure uses\rthe name to identify the disk when creating virtual machines from the\rdisk."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createDisk(parameters, parameters.operatingSystemType,
+        parameters.label, parameters.mediaLinkUri, parameters.name, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDisk(parameters,
+      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
+      parameters.name, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~httpRequest
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~requestContent
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~requestDoc
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~diskElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~osElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~labelElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~mediaLinkElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~nameElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~requestContent
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk'
+    id: deleteDataDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber,
+      deleteFromStorage, callback)
+    summary: "The Delete Data Disk operation removes the specified data disk from a\rvirtual machine.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of your service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: roleName
+          type: string
+          description: The name of the role to delete the data disk from.
+        - id: logicalUnitNumber
+          type: Number
+          description: The logical unit number of the disk.
+        - id: deleteFromStorage
+          type: boolean
+          description: "Specifies that the source blob for\rthe disk should also be deleted from storage."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteDataDisk(serviceName, deploymentName, roleName,
+        logicalUnitNumber, deleteFromStorage, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDataDisk(serviceName,
+      deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk~client2
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk'
+    id: deleteDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: 'deleteDisk(name, deleteFromStorage, callback)'
+    summary: "The Delete Disk operation deletes the specified data or operating system\rdisk from your image repository.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157200.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+          description: The name of the disk to delete.
+        - id: deleteFromStorage
+          type: boolean
+          description: "Specifies that the source blob for\rthe disk should also be deleted from storage."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteDisk(name, deleteFromStorage, callback);'
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDisk(name,
+      deleteFromStorage, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~queryParameters
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk~httpRequest
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk'
+    id: getDataDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber,
+      callback)
+    summary: "The Get Data Disk operation retrieves the specified data disk from a\rvirtual machine.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157180.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of your service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: roleName
+          type: string
+          description: The name of the role.
+        - id: logicalUnitNumber
+          type: Number
+          description: The logical unit number of the disk.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getDataDisk(serviceName, deploymentName, roleName,
+        logicalUnitNumber, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDataDisk(serviceName,
+      deploymentName, roleName, logicalUnitNumber, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk~httpRequest
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk'
+    id: getDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: 'getDisk(name, callback)'
+    summary: "The Get Disk operation retrieves a disk from the user image repository.\rThe disk can be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+          description: The name of the disk.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getDisk(name, callback);'
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDisk(name,
+      callback)
+    children:
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~baseUrl
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~url2'
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk~httpRequest
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks'
+    id: listDisks
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: listDisks(callback)
+    summary: "The List Disks operation retrieves a list of the disks in your image\rrepository.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157176.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function listDisks(callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.listDisks(callback)
+    children:
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~url2'
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~baseUrl
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~url2'
+      - 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~url2'
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks~httpRequest
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk'
+    id: updateDataDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber,
+      parameters, parameters.hostCaching, parameters.label, parameters.name,
+      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
+      parameters.mediaLinkUri, callback)
+    summary: "The Update Data Disk operation updates the specified data disk attached to\rthe specified virtual machine.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157190.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of your service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: roleName
+          type: string
+          description: The name of the role to add the data disk to.
+        - id: logicalUnitNumber
+          type: Number
+          description: The logical unit number of the disk.
+        - id: parameters
+          type: VirtualMachineDataDiskUpdateParameters
+          description: "Parameters\rsupplied to the Update Virtual Machine Data Disk operation."
+        - id: parameters.hostCaching
+          type: string
+          description: "Specifies the platform caching\rbehavior of data disk blob for read/write efficiency. The default vault\ris ReadOnly. Possible values are: None, ReadOnly, or ReadWrite. Warning:\rSetting this property impacts the consistency of the disk."
+        - id: parameters.label
+          type: string
+          description: "Specifies the description of the data\rdisk. When you attach a disk, either by directly referencing a media\rusing the MediaLink element or specifying the target disk size, you can\ruse the DiskLabel element to customize the name property of the target\rdata disk."
+        - id: parameters.name
+          type: string
+          description: "Specifies the name of the disk. Azure\ruses the specified disk to create the data disk for the machine and\rpopulates this field with the disk name."
+        - id: parameters.logicalUnitNumber
+          type: number
+          description: "Specifies the Logical Unit\rNumber (LUN) for the disk. The LUN specifies the slot in which the data\rdrive appears when mounted for usage by the virtual machine. Valid LUN\rvalues are 0 through 15."
+        - id: parameters.logicalDiskSizeInGB
+          type: number
+          description: "Specifies the size, in\rGB, of an empty disk to be attached to the role. The disk can be created\ras part of disk attach or create VM role call by specifying the value for\rthis property. Azure creates the empty disk based on size preference and\rattaches the newly created disk to the Role."
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the blob\rin Azure blob store where the media for the disk is located. The blob\rlocation must belong to the storage account in the subscription specified\rby the SubscriptionId value in the operation call. Example:\rhttp://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateDataDisk(serviceName, deploymentName, roleName,
+        logicalUnitNumber, parameters, parameters.hostCaching, parameters.label,
+        parameters.name, parameters.logicalUnitNumber,
+        parameters.logicalDiskSizeInGB, parameters.mediaLinkUri, callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDataDisk(serviceName,
+      deploymentName, roleName, logicalUnitNumber, parameters,
+      parameters.hostCaching, parameters.label, parameters.name,
+      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
+      parameters.mediaLinkUri, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~httpRequest
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~requestContent
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~requestDoc
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~dataVirtualHardDiskElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~hostCachingElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~diskLabelElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~diskNameElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~lunElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~logicalDiskSizeInGBElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~mediaLinkElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~requestContent
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk'
+    id: updateDisk
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      updateDisk(name, parameters, parameters.hasOperatingSystem,
+      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
+      parameters.name, parameters.resizedSizeInGB, callback)
+    summary: "The Add Disk operation adds a disk to the user image repository. The disk\rcan be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+          description: The name of the disk being updated.
+        - id: parameters
+          type: VirtualMachineDiskUpdateParameters
+          description: "Parameters supplied\rto the Update Virtual Machine Disk operation."
+        - id: parameters.hasOperatingSystem
+          type: boolean
+          description: "Specifies whether the\rdisk contains an operating system. Note: Only a disk with an operating\rsystem installed can be mounted as OS Drive."
+        - id: parameters.operatingSystemType
+          type: string
+          description: "The operating system type\rof the disk. Possible values are: Linux or Windows."
+        - id: parameters.label
+          type: string
+          description: Specifies the friendly name of the disk.
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the\rblob in Azure storage. The blob location must belong to a storage account\rin the subscription specified by the SubscriptionId value in the\roperation call. Example:\rhttp://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: parameters.name
+          type: string
+          description: "Specifies a name for the disk. Azure uses\rthe name to identify the disk when creating virtual machines from the\rdisk."
+        - id: parameters.resizedSizeInGB
+          type: number
+          description: "Resizes the underlying blob\rto the indicated size in GB.To use the ResizedSizeInGB property, the\rversion header should be at least 2014-10-01."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateDisk(name, parameters, parameters.hasOperatingSystem,
+        parameters.operatingSystemType, parameters.label,
+        parameters.mediaLinkUri, parameters.name, parameters.resizedSizeInGB,
+        callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDisk(name,
+      parameters, parameters.hasOperatingSystem, parameters.operatingSystemType,
+      parameters.label, parameters.mediaLinkUri, parameters.name,
+      parameters.resizedSizeInGB, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~baseUrl
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~httpRequest
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~requestContent
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~requestDoc
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~diskElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~hasOperatingSystemElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~osElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~labelElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~mediaLinkElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~nameElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~resizedSizeInGBElement
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~requestContent
+  - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize'
+    id: updateDiskSize
+    parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
+    name: >-
+      updateDiskSize(name, parameters, parameters.hasOperatingSystem,
+      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
+      parameters.name, parameters.resizedSizeInGB, callback)
+    summary: "The Add Disk operation adds a disk to the user image repository. The disk\rcan be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: name
+          type: string
+          description: The name of the disk being updated.
+        - id: parameters
+          type: VirtualMachineDiskUpdateParameters
+          description: "Parameters supplied\rto the Update Virtual Machine Disk operation."
+        - id: parameters.hasOperatingSystem
+          type: boolean
+          description: "Specifies whether the\rdisk contains an operating system. Note: Only a disk with an operating\rsystem installed can be mounted as OS Drive."
+        - id: parameters.operatingSystemType
+          type: string
+          description: "The operating system type\rof the disk. Possible values are: Linux or Windows."
+        - id: parameters.label
+          type: string
+          description: Specifies the friendly name of the disk.
+        - id: parameters.mediaLinkUri
+          type: string
+          description: "Specifies the location of the\rblob in Azure storage. The blob location must belong to a storage account\rin the subscription specified by the SubscriptionId value in the\roperation call. Example:\rhttp://example.blob.core.windows.net/disks/mydisk.vhd."
+        - id: parameters.name
+          type: string
+          description: "Specifies a name for the disk. Azure uses\rthe name to identify the disk when creating virtual machines from the\rdisk."
+        - id: parameters.resizedSizeInGB
+          type: number
+          description: "Resizes the underlying blob\rto the indicated size in GB.To use the ResizedSizeInGB property, the\rversion header should be at least 2014-10-01."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateDiskSize(name, parameters, parameters.hasOperatingSystem,
+        parameters.operatingSystemType, parameters.label,
+        parameters.mediaLinkUri, parameters.name, parameters.resizedSizeInGB,
+        callback);
+    fullName: >-
+      VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDiskSize(name,
+      parameters, parameters.hasOperatingSystem, parameters.operatingSystemType,
+      parameters.label, parameters.mediaLinkUri, parameters.name,
+      parameters.resizedSizeInGB, callback)
+    children:
+      - >-
+        VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize~client2
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: VirtualMachineDataDiskCreateParameters
+    name: VirtualMachineDataDiskCreateParameters
+    fullName: VirtualMachineDataDiskCreateParameters
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: Number
+    name: Number
+    fullName: Number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: VirtualMachineDiskUpdateParameters
+    name: VirtualMachineDiskUpdateParameters
+    fullName: VirtualMachineDiskUpdateParameters
+    isExternal: true
+  - uid: VirtualMachineDiskCreateParameters
+    name: VirtualMachineDiskCreateParameters
+    fullName: VirtualMachineDiskCreateParameters
+    isExternal: true
+  - uid: VirtualMachineDataDiskUpdateParameters
+    name: VirtualMachineDataDiskUpdateParameters
+    fullName: VirtualMachineDataDiskUpdateParameters
+    isExternal: true

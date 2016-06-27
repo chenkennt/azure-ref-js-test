@@ -1,0 +1,514 @@
+items:
+  - uid: Redis
+    id: Redis
+    name: Redis
+    type: Class
+    syntax:
+      content: Redis
+    fullName: Redis
+    children:
+      - 'Redis#client'
+      - 'Redis#createOrUpdate'
+      - 'Redis#deleteMethod'
+      - 'Redis#get'
+      - 'Redis#listByResourceGroup'
+      - 'Redis#list'
+      - 'Redis#listKeys'
+      - 'Redis#regenerateKey'
+      - 'Redis#listByResourceGroupNext'
+      - 'Redis#listNext'
+  - uid: 'Redis#client'
+    id: client
+    parent: Redis
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Redis.client
+  - uid: 'Redis#createOrUpdate'
+    id: createOrUpdate
+    parent: Redis
+    name: >-
+      createOrUpdate(resourceGroupName, name, parameters,
+      parameters.redisVersion, parameters.sku, parameters.sku.name,
+      parameters.sku.family, parameters.sku.capacity,
+      parameters.redisConfiguration, parameters.enableNonSslPort,
+      parameters.tenantSettings, parameters.shardCount,
+      parameters.virtualNetwork, parameters.subnet, parameters.staticIP,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "Create a redis cache, or replace (overwrite/recreate, with potential\rdowntime) an existing cache"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: name
+          type: string
+          description: The name of the redis cache.
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the CreateOrUpdate redis\roperation."
+        - id: parameters.redisVersion
+          type: string
+          description: "RedisVersion parameter has been\rdeprecated. As such, it is no longer necessary to provide this parameter\rand any value specified is ignored."
+        - id: parameters.sku
+          type: object
+          description: What sku of redis cache to deploy.
+        - id: parameters.sku.name
+          type: string
+          description: "What type of redis cache to deploy.\rValid values: (Basic, Standard, Premium). Possible values include:\r'Basic', 'Standard', 'Premium'"
+        - id: parameters.sku.family
+          type: string
+          description: "Which family to use. Valid values:\r(C, P). Possible values include: 'C', 'P'"
+        - id: parameters.sku.capacity
+          type: number
+          description: "What size of redis cache to\rdeploy. Valid values: for C family (0, 1, 2, 3, 4, 5, 6), for P family (1,\r2, 3, 4)"
+        - id: parameters.redisConfiguration
+          type: object
+          description: "All Redis Settings. Few\rpossible keys:\rrdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value\retc."
+        - id: parameters.enableNonSslPort
+          type: boolean
+          description: "If the value is true, then\rthe non-ssl redis server port (6379) will be enabled."
+        - id: parameters.tenantSettings
+          type: object
+          description: tenantSettings
+        - id: parameters.shardCount
+          type: number
+          description: "The number of shards to be created\ron a Premium Cluster Cache."
+        - id: parameters.virtualNetwork
+          type: string
+          description: "The exact ARM resource ID of\rthe virtual network to deploy the redis cache in. Example format:\r/subscriptions/{subid}/resourceGroups/{resourceGroupName}/Microsoft.ClassicNetwork/VirtualNetworks/vnet1"
+        - id: parameters.subnet
+          type: string
+          description: "Required when deploying a redis cache\rinside an existing Azure Virtual Network."
+        - id: parameters.staticIP
+          type: string
+          description: "Required when deploying a redis cache\rinside an existing Azure Virtual Network."
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisResourceWithAccessKey} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, name, parameters,
+        parameters.redisVersion, parameters.sku, parameters.sku.name,
+        parameters.sku.family, parameters.sku.capacity,
+        parameters.redisConfiguration, parameters.enableNonSslPort,
+        parameters.tenantSettings, parameters.shardCount,
+        parameters.virtualNetwork, parameters.subnet, parameters.staticIP,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Redis.createOrUpdate(resourceGroupName, name, parameters,
+      parameters.redisVersion, parameters.sku, parameters.sku.name,
+      parameters.sku.family, parameters.sku.capacity,
+      parameters.redisConfiguration, parameters.enableNonSslPort,
+      parameters.tenantSettings, parameters.shardCount,
+      parameters.virtualNetwork, parameters.subnet, parameters.staticIP,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'Redis#createOrUpdate~client'
+      - 'Redis#createOrUpdate~callback'
+      - 'Redis#createOrUpdate~options'
+      - 'Redis#createOrUpdate~requestUrl'
+      - 'Redis#createOrUpdate~requestUrl'
+      - 'Redis#createOrUpdate~requestUrl'
+      - 'Redis#createOrUpdate~requestUrl'
+      - 'Redis#createOrUpdate~queryParameters'
+      - 'Redis#createOrUpdate~requestUrl'
+      - 'Redis#createOrUpdate~regex'
+      - 'Redis#createOrUpdate~requestUrl'
+      - 'Redis#createOrUpdate~httpRequest'
+      - 'Redis#createOrUpdate~headerName'
+      - 'Redis#createOrUpdate~requestContent'
+      - 'Redis#createOrUpdate~requestModel'
+      - 'Redis#createOrUpdate~requestModelMapper'
+      - 'Redis#createOrUpdate~requestModel'
+      - 'Redis#createOrUpdate~requestContent'
+      - 'Redis#createOrUpdate~serializationError'
+  - uid: 'Redis#deleteMethod'
+    id: deleteMethod
+    parent: Redis
+    name: >-
+      deleteMethod(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    summary: Deletes a redis cache. This operation takes a while to complete.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: name
+          type: string
+          description: The name of the redis cache.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Redis.deleteMethod(resourceGroupName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'Redis#deleteMethod~client'
+      - 'Redis#deleteMethod~callback'
+      - 'Redis#deleteMethod~options'
+      - 'Redis#deleteMethod~requestUrl'
+      - 'Redis#deleteMethod~requestUrl'
+      - 'Redis#deleteMethod~requestUrl'
+      - 'Redis#deleteMethod~requestUrl'
+      - 'Redis#deleteMethod~queryParameters'
+      - 'Redis#deleteMethod~requestUrl'
+      - 'Redis#deleteMethod~regex'
+      - 'Redis#deleteMethod~requestUrl'
+      - 'Redis#deleteMethod~httpRequest'
+      - 'Redis#deleteMethod~headerName'
+  - uid: 'Redis#get'
+    id: get
+    parent: Redis
+    name: 'get(resourceGroupName, name, options, options.customHeaders, callback)'
+    summary: Gets a redis cache (resource description).
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: name
+          type: string
+          description: The name of the redis cache.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, name, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Redis.get(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    children:
+      - 'Redis#get~client'
+      - 'Redis#get~callback'
+      - 'Redis#get~options'
+      - 'Redis#get~requestUrl'
+      - 'Redis#get~requestUrl'
+      - 'Redis#get~requestUrl'
+      - 'Redis#get~requestUrl'
+      - 'Redis#get~queryParameters'
+      - 'Redis#get~requestUrl'
+      - 'Redis#get~regex'
+      - 'Redis#get~requestUrl'
+      - 'Redis#get~httpRequest'
+      - 'Redis#get~headerName'
+  - uid: 'Redis#listByResourceGroup'
+    id: listByResourceGroup
+    parent: Redis
+    name: >-
+      listByResourceGroup(resourceGroupName, options, options.customHeaders,
+      callback)
+    summary: Gets all redis caches in a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByResourceGroup(resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Redis.listByResourceGroup(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Redis#listByResourceGroup~client'
+      - 'Redis#listByResourceGroup~callback'
+      - 'Redis#listByResourceGroup~options'
+      - 'Redis#listByResourceGroup~requestUrl'
+      - 'Redis#listByResourceGroup~requestUrl'
+      - 'Redis#listByResourceGroup~requestUrl'
+      - 'Redis#listByResourceGroup~queryParameters'
+      - 'Redis#listByResourceGroup~requestUrl'
+      - 'Redis#listByResourceGroup~regex'
+      - 'Redis#listByResourceGroup~requestUrl'
+      - 'Redis#listByResourceGroup~httpRequest'
+      - 'Redis#listByResourceGroup~headerName'
+  - uid: 'Redis#list'
+    id: list
+    parent: Redis
+    name: 'list(options, options.customHeaders, callback)'
+    summary: Gets all redis caches in the specified subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.customHeaders, callback);'
+    fullName: 'Redis.list(options, options.customHeaders, callback)'
+    children:
+      - 'Redis#list~client'
+      - 'Redis#list~callback'
+      - 'Redis#list~options'
+      - 'Redis#list~requestUrl'
+      - 'Redis#list~requestUrl'
+      - 'Redis#list~queryParameters'
+      - 'Redis#list~requestUrl'
+      - 'Redis#list~regex'
+      - 'Redis#list~requestUrl'
+      - 'Redis#list~httpRequest'
+      - 'Redis#list~headerName'
+  - uid: 'Redis#listKeys'
+    id: listKeys
+    parent: Redis
+    name: >-
+      listKeys(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    summary: "Retrieve a redis cache's access keys. This operation requires write\rpermission to the cache resource."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: name
+          type: string
+          description: The name of the redis cache.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListKeysResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listKeys(resourceGroupName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Redis.listKeys(resourceGroupName, name, options, options.customHeaders,
+      callback)
+    children:
+      - 'Redis#listKeys~client'
+      - 'Redis#listKeys~callback'
+      - 'Redis#listKeys~options'
+      - 'Redis#listKeys~requestUrl'
+      - 'Redis#listKeys~requestUrl'
+      - 'Redis#listKeys~requestUrl'
+      - 'Redis#listKeys~requestUrl'
+      - 'Redis#listKeys~queryParameters'
+      - 'Redis#listKeys~requestUrl'
+      - 'Redis#listKeys~regex'
+      - 'Redis#listKeys~requestUrl'
+      - 'Redis#listKeys~httpRequest'
+      - 'Redis#listKeys~headerName'
+  - uid: 'Redis#regenerateKey'
+    id: regenerateKey
+    parent: Redis
+    name: >-
+      regenerateKey(resourceGroupName, name, keyType, options,
+      options.customHeaders, callback)
+    summary: "Regenerate redis cache's access keys. This operation requires write\rpermission to the cache resource."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: name
+          type: string
+          description: The name of the redis cache.
+        - id: keyType
+          type: string
+          description: "Which redis access key to reset. Possible values\rinclude: 'Primary', 'Secondary'"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListKeysResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function regenerateKey(resourceGroupName, name, keyType, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Redis.regenerateKey(resourceGroupName, name, keyType, options,
+      options.customHeaders, callback)
+    children:
+      - 'Redis#regenerateKey~client'
+      - 'Redis#regenerateKey~callback'
+      - 'Redis#regenerateKey~options'
+      - 'Redis#regenerateKey~allowedValues'
+      - 'Redis#regenerateKey~parameters'
+      - 'Redis#regenerateKey~parameters'
+      - 'Redis#regenerateKey~requestUrl'
+      - 'Redis#regenerateKey~requestUrl'
+      - 'Redis#regenerateKey~requestUrl'
+      - 'Redis#regenerateKey~requestUrl'
+      - 'Redis#regenerateKey~queryParameters'
+      - 'Redis#regenerateKey~requestUrl'
+      - 'Redis#regenerateKey~regex'
+      - 'Redis#regenerateKey~requestUrl'
+      - 'Redis#regenerateKey~httpRequest'
+      - 'Redis#regenerateKey~headerName'
+      - 'Redis#regenerateKey~requestContent'
+      - 'Redis#regenerateKey~requestModel'
+      - 'Redis#regenerateKey~requestModelMapper'
+      - 'Redis#regenerateKey~requestModel'
+      - 'Redis#regenerateKey~requestContent'
+      - 'Redis#regenerateKey~serializationError'
+  - uid: 'Redis#listByResourceGroupNext'
+    id: listByResourceGroupNext
+    parent: Redis
+    name: >-
+      listByResourceGroupNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Gets all redis caches in a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByResourceGroupNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Redis.listByResourceGroupNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Redis#listByResourceGroupNext~client'
+      - 'Redis#listByResourceGroupNext~callback'
+      - 'Redis#listByResourceGroupNext~options'
+      - 'Redis#listByResourceGroupNext~requestUrl'
+      - 'Redis#listByResourceGroupNext~requestUrl'
+      - 'Redis#listByResourceGroupNext~regex'
+      - 'Redis#listByResourceGroupNext~requestUrl'
+      - 'Redis#listByResourceGroupNext~httpRequest'
+      - 'Redis#listByResourceGroupNext~headerName'
+  - uid: 'Redis#listNext'
+    id: listNext
+    parent: Redis
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets all redis caches in the specified subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: 'Redis.listNext(nextPageLink, options, options.customHeaders, callback)'
+    children:
+      - 'Redis#listNext~client'
+      - 'Redis#listNext~callback'
+      - 'Redis#listNext~options'
+      - 'Redis#listNext~requestUrl'
+      - 'Redis#listNext~requestUrl'
+      - 'Redis#listNext~regex'
+      - 'Redis#listNext~requestUrl'
+      - 'Redis#listNext~httpRequest'
+      - 'Redis#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

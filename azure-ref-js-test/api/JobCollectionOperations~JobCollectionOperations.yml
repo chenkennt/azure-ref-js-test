@@ -1,0 +1,661 @@
+items:
+  - uid: JobCollectionOperations~JobCollectionOperations
+    id: JobCollectionOperations
+    parent: JobCollectionOperations
+    name: JobCollectionOperations
+    type: Class
+    syntax:
+      content: JobCollectionOperations
+    fullName: JobCollectionOperations.JobCollectionOperations
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#client'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating'
+      - 'JobCollectionOperations~JobCollectionOperations#checkNameAvailability'
+      - 'JobCollectionOperations~JobCollectionOperations#create'
+      - 'JobCollectionOperations~JobCollectionOperations#deleteMethod'
+      - 'JobCollectionOperations~JobCollectionOperations#get'
+      - 'JobCollectionOperations~JobCollectionOperations#update'
+  - uid: 'JobCollectionOperations~JobCollectionOperations#client'
+    id: client
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: JobCollectionOperations~JobCollectionOperations.client
+  - uid: 'JobCollectionOperations~JobCollectionOperations#beginCreating'
+    id: beginCreating
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: >-
+      beginCreating(cloudServiceName, jobCollectionName, parameters,
+      parameters.schemaVersion, parameters.label, parameters.intrinsicSettings,
+      parameters.intrinsicSettings.plan, parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    summary: Create a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: "The name of the cloud service containing\rthe job collection."
+        - id: jobCollectionName
+          type: string
+          description: The name of the job collection to create.
+        - id: parameters
+          type: JobCollectionCreateParameters
+          description: "Parameters supplied to\rthe Create Job Collection operation."
+        - id: parameters.schemaVersion
+          type: string
+          description: "The version of the Intrinsic\rProperties for your Resource. If not specified, you must conform to the\rcontract resource version you registered as default."
+        - id: parameters.label
+          type: string
+          description: Label for the resource.
+        - id: parameters.intrinsicSettings
+          type: JobCollectionIntrinsicSettings
+          description: Intrinsic settings for the scheduler job collections.
+        - id: parameters.intrinsicSettings.plan
+          type: JobCollectionPlan
+          description: "The plan of\rthe resource."
+        - id: parameters.intrinsicSettings.quota
+          type: JobCollectionQuota
+          description: "Quota\rsettings for the job collection."
+        - id: parameters.intrinsicSettings.quota.maxJobCount
+          type: number
+          description: "Maximum\rnumber of jobs that can be created in this job collection. Maximum value\ris dependent on the plan."
+        - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+          type: number
+          description: Maximum number of occurrences for all jobs in the job collection.
+        - id: parameters.intrinsicSettings.quota.maxRecurrence
+          type: JobCollectionMaxRecurrence
+          description: "Defines the maximum\rrecurrences that can be specified in any job in this job collection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+          type: JobCollectionRecurrenceFrequency
+          description: "Defines the\rmaximum recurrences that can be specified in any job in this job\rcollection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+          type: number
+          description: "Defines the\rinterval."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginCreating(cloudServiceName, jobCollectionName, parameters,
+        parameters.schemaVersion, parameters.label,
+        parameters.intrinsicSettings, parameters.intrinsicSettings.plan,
+        parameters.intrinsicSettings.quota,
+        parameters.intrinsicSettings.quota.maxJobCount,
+        parameters.intrinsicSettings.quota.maxJobOccurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+        parameters.intrinsicSettings.quota.maxRecurrence.interval, callback);
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.beginCreating(cloudServiceName,
+      jobCollectionName, parameters, parameters.schemaVersion, parameters.label,
+      parameters.intrinsicSettings, parameters.intrinsicSettings.plan,
+      parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~url2'
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~httpRequest
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~requestContent
+      - 'JobCollectionOperations~JobCollectionOperations#beginCreating~requestDoc'
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~resourceElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~schemaVersionElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~intrinsicSettingsElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~planElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~quotaElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~maxJobCountElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~maxJobOccurrenceElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~maxRecurrenceElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~frequencyElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~intervalElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~labelElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginCreating~requestContent
+  - uid: 'JobCollectionOperations~JobCollectionOperations#beginDeleting'
+    id: beginDeleting
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: 'beginDeleting(cloudServiceName, jobCollectionName, callback)'
+    summary: Deletes a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: The name of the cloud service.
+        - id: jobCollectionName
+          type: string
+          description: The name of the job collection to delete.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginDeleting(cloudServiceName, jobCollectionName, callback);'
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.beginDeleting(cloudServiceName,
+      jobCollectionName, callback)
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginDeleting~url2'
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginDeleting~httpRequest
+  - uid: 'JobCollectionOperations~JobCollectionOperations#beginUpdating'
+    id: beginUpdating
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: >-
+      beginUpdating(cloudServiceName, jobCollectionName, parameters,
+      parameters.eTag, parameters.schemaVersion, parameters.label,
+      parameters.intrinsicSettings, parameters.intrinsicSettings.plan,
+      parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    summary: Update a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: "The name of the cloud service containing\rthe job collection."
+        - id: jobCollectionName
+          type: string
+          description: The name of the job collection to update.
+        - id: parameters
+          type: JobCollectionUpdateParameters
+          description: "Parameters supplied to\rthe Update Job Collection operation."
+        - id: parameters.eTag
+          type: string
+          description: "The ETag of the job collection to update.\rThe update will fail ifthe ETag doesn't match."
+        - id: parameters.schemaVersion
+          type: string
+          description: "The version of the Intrinsic\rProperties for your Resource. If not specified, you must conform to the\rcontract resource version you registered as default."
+        - id: parameters.label
+          type: string
+          description: Label for the resource.
+        - id: parameters.intrinsicSettings
+          type: JobCollectionIntrinsicSettings
+          description: Intrinsic settings for the scheduler job collections.
+        - id: parameters.intrinsicSettings.plan
+          type: JobCollectionPlan
+          description: "The plan of\rthe resource."
+        - id: parameters.intrinsicSettings.quota
+          type: JobCollectionQuota
+          description: "Quota\rsettings for the job collection."
+        - id: parameters.intrinsicSettings.quota.maxJobCount
+          type: number
+          description: "Maximum\rnumber of jobs that can be created in this job collection. Maximum value\ris dependent on the plan."
+        - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+          type: number
+          description: Maximum number of occurrences for all jobs in the job collection.
+        - id: parameters.intrinsicSettings.quota.maxRecurrence
+          type: JobCollectionMaxRecurrence
+          description: "Defines the maximum\rrecurrences that can be specified in any job in this job collection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+          type: JobCollectionRecurrenceFrequency
+          description: "Defines the\rmaximum recurrences that can be specified in any job in this job\rcollection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+          type: number
+          description: "Defines the\rinterval."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginUpdating(cloudServiceName, jobCollectionName, parameters,
+        parameters.eTag, parameters.schemaVersion, parameters.label,
+        parameters.intrinsicSettings, parameters.intrinsicSettings.plan,
+        parameters.intrinsicSettings.quota,
+        parameters.intrinsicSettings.quota.maxJobCount,
+        parameters.intrinsicSettings.quota.maxJobOccurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+        parameters.intrinsicSettings.quota.maxRecurrence.interval, callback);
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.beginUpdating(cloudServiceName,
+      jobCollectionName, parameters, parameters.eTag, parameters.schemaVersion,
+      parameters.label, parameters.intrinsicSettings,
+      parameters.intrinsicSettings.plan, parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~url2'
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~httpRequest
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~requestContent
+      - 'JobCollectionOperations~JobCollectionOperations#beginUpdating~requestDoc'
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~resourceElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~schemaVersionElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~eTagElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~intrinsicSettingsElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~planElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~quotaElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~maxJobCountElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~maxJobOccurrenceElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~maxRecurrenceElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~frequencyElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~intervalElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~labelElement
+      - >-
+        JobCollectionOperations~JobCollectionOperations#beginUpdating~requestContent
+  - uid: 'JobCollectionOperations~JobCollectionOperations#checkNameAvailability'
+    id: checkNameAvailability
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: 'checkNameAvailability(cloudServiceName, jobCollectionName, callback)'
+    summary: "Determine if the JobCollection name is available to be used.\rJobCollection names must be unique within a cloud-service."
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: The name of the cloud service.
+        - id: jobCollectionName
+          type: string
+          description: "A name for the JobCollection. The name\rmust be unique as scoped within the CloudService.  The name can be up to\r100 characters in length."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function checkNameAvailability(cloudServiceName, jobCollectionName,
+        callback);
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.checkNameAvailability(cloudServiceName,
+      jobCollectionName, callback)
+    children:
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~queryParameters
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~baseUrl
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~baseUrl
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~url2
+      - >-
+        JobCollectionOperations~JobCollectionOperations#checkNameAvailability~httpRequest
+  - uid: 'JobCollectionOperations~JobCollectionOperations#create'
+    id: create
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: >-
+      create(cloudServiceName, jobCollectionName, parameters,
+      parameters.schemaVersion, parameters.label, parameters.intrinsicSettings,
+      parameters.intrinsicSettings.plan, parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    summary: Create a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: "The name of the cloud service containing\rthe job collection."
+        - id: jobCollectionName
+          type: string
+          description: The name of the job collection to create.
+        - id: parameters
+          type: JobCollectionCreateParameters
+          description: "Parameters supplied to\rthe Create Job Collection operation."
+        - id: parameters.schemaVersion
+          type: string
+          description: "The version of the Intrinsic\rProperties for your Resource. If not specified, you must conform to the\rcontract resource version you registered as default."
+        - id: parameters.label
+          type: string
+          description: Label for the resource.
+        - id: parameters.intrinsicSettings
+          type: JobCollectionIntrinsicSettings
+          description: Intrinsic settings for the scheduler job collections.
+        - id: parameters.intrinsicSettings.plan
+          type: JobCollectionPlan
+          description: "The plan of\rthe resource."
+        - id: parameters.intrinsicSettings.quota
+          type: JobCollectionQuota
+          description: "Quota\rsettings for the job collection."
+        - id: parameters.intrinsicSettings.quota.maxJobCount
+          type: number
+          description: "Maximum\rnumber of jobs that can be created in this job collection. Maximum value\ris dependent on the plan."
+        - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+          type: number
+          description: Maximum number of occurrences for all jobs in the job collection.
+        - id: parameters.intrinsicSettings.quota.maxRecurrence
+          type: JobCollectionMaxRecurrence
+          description: "Defines the maximum\rrecurrences that can be specified in any job in this job collection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+          type: JobCollectionRecurrenceFrequency
+          description: "Defines the\rmaximum recurrences that can be specified in any job in this job\rcollection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+          type: number
+          description: "Defines the\rinterval."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(cloudServiceName, jobCollectionName, parameters,
+        parameters.schemaVersion, parameters.label,
+        parameters.intrinsicSettings, parameters.intrinsicSettings.plan,
+        parameters.intrinsicSettings.quota,
+        parameters.intrinsicSettings.quota.maxJobCount,
+        parameters.intrinsicSettings.quota.maxJobOccurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+        parameters.intrinsicSettings.quota.maxRecurrence.interval, callback);
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.create(cloudServiceName,
+      jobCollectionName, parameters, parameters.schemaVersion, parameters.label,
+      parameters.intrinsicSettings, parameters.intrinsicSettings.plan,
+      parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#create~client2'
+  - uid: 'JobCollectionOperations~JobCollectionOperations#deleteMethod'
+    id: deleteMethod
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: 'deleteMethod(cloudServiceName, jobCollectionName, callback)'
+    summary: Deletes a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: The name of the cloud service.
+        - id: jobCollectionName
+          type: string
+          description: The name of the job collection to delete.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(cloudServiceName, jobCollectionName, callback);'
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.deleteMethod(cloudServiceName,
+      jobCollectionName, callback)
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#deleteMethod~client2'
+  - uid: 'JobCollectionOperations~JobCollectionOperations#get'
+    id: get
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: 'get(cloudServiceName, jobCollectionName, callback)'
+    summary: Retreive a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: Name of the cloud service.
+        - id: jobCollectionName
+          type: string
+          description: Name of the job collection.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(cloudServiceName, jobCollectionName, callback);'
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.get(cloudServiceName,
+      jobCollectionName, callback)
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#get~baseUrl'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~url2'
+      - 'JobCollectionOperations~JobCollectionOperations#get~httpRequest'
+  - uid: 'JobCollectionOperations~JobCollectionOperations#update'
+    id: update
+    parent: JobCollectionOperations~JobCollectionOperations
+    name: >-
+      update(cloudServiceName, jobCollectionName, parameters, parameters.eTag,
+      parameters.schemaVersion, parameters.label, parameters.intrinsicSettings,
+      parameters.intrinsicSettings.plan, parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    summary: Update a job collection.
+    type: Method
+    syntax:
+      parameters:
+        - id: cloudServiceName
+          type: string
+          description: "The name of the cloud service containing\rthe job collection."
+        - id: jobCollectionName
+          type: string
+          description: The name of the job collection to update.
+        - id: parameters
+          type: JobCollectionUpdateParameters
+          description: "Parameters supplied to\rthe Update Job Collection operation."
+        - id: parameters.eTag
+          type: string
+          description: "The ETag of the job collection to update.\rThe update will fail ifthe ETag doesn't match."
+        - id: parameters.schemaVersion
+          type: string
+          description: "The version of the Intrinsic\rProperties for your Resource. If not specified, you must conform to the\rcontract resource version you registered as default."
+        - id: parameters.label
+          type: string
+          description: Label for the resource.
+        - id: parameters.intrinsicSettings
+          type: JobCollectionIntrinsicSettings
+          description: Intrinsic settings for the scheduler job collections.
+        - id: parameters.intrinsicSettings.plan
+          type: JobCollectionPlan
+          description: "The plan of\rthe resource."
+        - id: parameters.intrinsicSettings.quota
+          type: JobCollectionQuota
+          description: "Quota\rsettings for the job collection."
+        - id: parameters.intrinsicSettings.quota.maxJobCount
+          type: number
+          description: "Maximum\rnumber of jobs that can be created in this job collection. Maximum value\ris dependent on the plan."
+        - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+          type: number
+          description: Maximum number of occurrences for all jobs in the job collection.
+        - id: parameters.intrinsicSettings.quota.maxRecurrence
+          type: JobCollectionMaxRecurrence
+          description: "Defines the maximum\rrecurrences that can be specified in any job in this job collection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+          type: JobCollectionRecurrenceFrequency
+          description: "Defines the\rmaximum recurrences that can be specified in any job in this job\rcollection."
+        - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+          type: number
+          description: "Defines the\rinterval."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(cloudServiceName, jobCollectionName, parameters,
+        parameters.eTag, parameters.schemaVersion, parameters.label,
+        parameters.intrinsicSettings, parameters.intrinsicSettings.plan,
+        parameters.intrinsicSettings.quota,
+        parameters.intrinsicSettings.quota.maxJobCount,
+        parameters.intrinsicSettings.quota.maxJobOccurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence,
+        parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+        parameters.intrinsicSettings.quota.maxRecurrence.interval, callback);
+    fullName: >-
+      JobCollectionOperations~JobCollectionOperations.update(cloudServiceName,
+      jobCollectionName, parameters, parameters.eTag, parameters.schemaVersion,
+      parameters.label, parameters.intrinsicSettings,
+      parameters.intrinsicSettings.plan, parameters.intrinsicSettings.quota,
+      parameters.intrinsicSettings.quota.maxJobCount,
+      parameters.intrinsicSettings.quota.maxJobOccurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence,
+      parameters.intrinsicSettings.quota.maxRecurrence.frequency,
+      parameters.intrinsicSettings.quota.maxRecurrence.interval, callback)
+    children:
+      - 'JobCollectionOperations~JobCollectionOperations#update~client2'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: JobCollectionCreateParameters
+    name: JobCollectionCreateParameters
+    fullName: JobCollectionCreateParameters
+    isExternal: true
+  - uid: JobCollectionIntrinsicSettings
+    name: JobCollectionIntrinsicSettings
+    fullName: JobCollectionIntrinsicSettings
+    isExternal: true
+  - uid: JobCollectionPlan
+    name: JobCollectionPlan
+    fullName: JobCollectionPlan
+    isExternal: true
+  - uid: JobCollectionQuota
+    name: JobCollectionQuota
+    fullName: JobCollectionQuota
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: JobCollectionMaxRecurrence
+    name: JobCollectionMaxRecurrence
+    fullName: JobCollectionMaxRecurrence
+    isExternal: true
+  - uid: JobCollectionRecurrenceFrequency
+    name: JobCollectionRecurrenceFrequency
+    fullName: JobCollectionRecurrenceFrequency
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: JobCollectionUpdateParameters
+    name: JobCollectionUpdateParameters
+    fullName: JobCollectionUpdateParameters
+    isExternal: true

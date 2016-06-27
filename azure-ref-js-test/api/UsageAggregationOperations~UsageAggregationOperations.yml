@@ -1,0 +1,96 @@
+items:
+  - uid: UsageAggregationOperations~UsageAggregationOperations
+    id: UsageAggregationOperations
+    parent: UsageAggregationOperations
+    name: UsageAggregationOperations
+    type: Class
+    syntax:
+      content: UsageAggregationOperations
+    fullName: UsageAggregationOperations.UsageAggregationOperations
+    children:
+      - 'UsageAggregationOperations~UsageAggregationOperations#client'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get'
+  - uid: 'UsageAggregationOperations~UsageAggregationOperations#client'
+    id: client
+    parent: UsageAggregationOperations~UsageAggregationOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: UsageAggregationOperations~UsageAggregationOperations.client
+  - uid: 'UsageAggregationOperations~UsageAggregationOperations#get'
+    id: get
+    parent: UsageAggregationOperations~UsageAggregationOperations
+    name: >-
+      get(reportedStartTime, reportedEndTime, aggregationGranularity,
+      showDetails, continuationToken, callback)
+    summary: "Query aggregated Azure subscription consumption data for a date range.\r(see\rhttps://msdn.microsoft.com/library/azure/1ea5b323-54bb-423d-916f-190de96c6a3c\rfor more information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: reportedStartTime
+          type: Date
+          description: "The start of the time range to retrieve\rdata for."
+        - id: reportedEndTime
+          type: Date
+          description: "The end of the time range to retrieve data\rfor."
+        - id: aggregationGranularity
+          type: AggregationGranularity
+          description: "Value is either\rdaily (default) or hourly to tell the API how to return the results\rgrouped by day or hour."
+        - id: showDetails
+          type: boolean
+          description: "When set to true (default), the aggregates\rare broken down into the instance metadata which is more granular."
+        - id: continuationToken
+          type: string
+          description: "Retrieved from previous calls, this is\rthe bookmark used for progress when the responses are paged."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function get(reportedStartTime, reportedEndTime, aggregationGranularity,
+        showDetails, continuationToken, callback);
+    fullName: >-
+      UsageAggregationOperations~UsageAggregationOperations.get(reportedStartTime,
+      reportedEndTime, aggregationGranularity, showDetails, continuationToken,
+      callback)
+    children:
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - >-
+        UsageAggregationOperations~UsageAggregationOperations#get~queryParameters
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~baseUrl'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~baseUrl'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~url2'
+      - 'UsageAggregationOperations~UsageAggregationOperations#get~httpRequest'
+references:
+  - uid: Date
+    name: Date
+    fullName: Date
+    isExternal: true
+  - uid: AggregationGranularity
+    name: AggregationGranularity
+    fullName: AggregationGranularity
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

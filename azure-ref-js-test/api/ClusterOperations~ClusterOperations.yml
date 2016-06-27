@@ -1,0 +1,1604 @@
+items:
+  - uid: ClusterOperations~ClusterOperations
+    id: ClusterOperations
+    parent: ClusterOperations
+    name: ClusterOperations
+    type: Class
+    syntax:
+      content: ClusterOperations
+    fullName: ClusterOperations.ClusterOperations
+    children:
+      - 'ClusterOperations~ClusterOperations#client'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings'
+      - 'ClusterOperations~ClusterOperations#beginCreating'
+      - 'ClusterOperations~ClusterOperations#beginDeleting'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions'
+      - 'ClusterOperations~ClusterOperations#beginResizing'
+      - 'ClusterOperations~ClusterOperations#configureHttpSettings'
+      - 'ClusterOperations~ClusterOperations#configureRdpSettings'
+      - 'ClusterOperations~ClusterOperations#create'
+      - 'ClusterOperations~ClusterOperations#deleteMethod'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript'
+      - 'ClusterOperations~ClusterOperations#executeScriptActions'
+      - 'ClusterOperations~ClusterOperations#get'
+      - 'ClusterOperations~ClusterOperations#getCapabilities'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings'
+      - 'ClusterOperations~ClusterOperations#getCreateStatus'
+      - 'ClusterOperations~ClusterOperations#getDeleteStatus'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail'
+      - 'ClusterOperations~ClusterOperations#list'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory'
+      - 'ClusterOperations~ClusterOperations#promoteScript'
+      - 'ClusterOperations~ClusterOperations#resize'
+  - uid: 'ClusterOperations~ClusterOperations#client'
+    id: client
+    parent: ClusterOperations~ClusterOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ClusterOperations~ClusterOperations.client
+  - uid: 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings'
+    id: beginConfiguringHttpSettings
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      beginConfiguringHttpSettings(resourceGroupName, clusterName,
+      httpSettingsParameters, httpSettingsParameters.httpUserEnabled,
+      httpSettingsParameters.httpUsername, httpSettingsParameters.httpPassword,
+      callback)
+    summary: Begins configuring the HTTP settings on the specified cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: httpSettingsParameters
+          type: HttpSettingsParameters
+          description: "The name of the\rresource group."
+        - id: httpSettingsParameters.httpUserEnabled
+          type: boolean
+          description: "Gets or sets the\rwhether or not HTTP is enabled."
+        - id: httpSettingsParameters.httpUsername
+          type: string
+          description: "Gets or sets the\rhttp username."
+        - id: httpSettingsParameters.httpPassword
+          type: string
+          description: "Gets or sets the\rhttp user password."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginConfiguringHttpSettings(resourceGroupName, clusterName,
+        httpSettingsParameters, httpSettingsParameters.httpUserEnabled,
+        httpSettingsParameters.httpUsername,
+        httpSettingsParameters.httpPassword, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.beginConfiguringHttpSettings(resourceGroupName,
+      clusterName, httpSettingsParameters,
+      httpSettingsParameters.httpUserEnabled,
+      httpSettingsParameters.httpUsername, httpSettingsParameters.httpPassword,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~queryParameters
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~url2'
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~httpRequest
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~requestContent
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~requestDoc
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~httpSettingsParametersValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~requestDoc
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringHttpSettings~requestContent
+  - uid: 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings'
+    id: beginConfiguringRdpSettings
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      beginConfiguringRdpSettings(resourceGroupName, clusterName, rdpParameters,
+      rdpParameters.osProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate,
+      rdpParameters.osProfile.linuxOperatingSystemProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.userName,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.password,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys,
+      callback)
+    summary: Begins configuring the RDP settings on the specified cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: rdpParameters
+          type: RDPSettingsParameters
+          description: The OS profile for RDP.
+        - id: rdpParameters.osProfile
+          type: OsProfile
+          description: "Gets or sets the definition of\ra data factory gateway to be created or updated."
+        - id: rdpParameters.osProfile.windowsOperatingSystemProfile
+          type: WindowsOperatingSystemProfile
+          description: "Gets or sets the\rWindows OS profile."
+        - id: rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings
+          type: RdpSettings
+          description: "Gets\ror sets the RDP settings."
+        - id: >-
+            rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName
+          type: string
+          description: Gets or sets the username for the RDP user.
+        - id: >-
+            rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password
+          type: string
+          description: Gets or sets the password for the RDP user.
+        - id: >-
+            rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate
+          type: date
+          description: Gets or sets the RDP expiry date.
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile
+          type: LinuxOperatingSystemProfile
+          description: "Gets or sets the\rLinux OS profile."
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile.userName
+          type: string
+          description: "Gets or\rsets the username."
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile.password
+          type: string
+          description: "Gets or\rsets the password."
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile
+          type: SshProfile
+          description: "Gets or\rsets the SSH profile."
+        - id: >-
+            rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys
+          type: array
+          description: Gets or sets the list of SSH public keys.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginConfiguringRdpSettings(resourceGroupName, clusterName,
+        rdpParameters, rdpParameters.osProfile,
+        rdpParameters.osProfile.windowsOperatingSystemProfile,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate,
+        rdpParameters.osProfile.linuxOperatingSystemProfile,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.userName,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.password,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys,
+        callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.beginConfiguringRdpSettings(resourceGroupName,
+      clusterName, rdpParameters, rdpParameters.osProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate,
+      rdpParameters.osProfile.linuxOperatingSystemProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.userName,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.password,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~queryParameters
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - 'ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~url2'
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~httpRequest
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~requestContent
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~requestDoc
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~rDPSettingsParametersValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~requestDoc
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~osProfileValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~windowsOperatingSystemProfileValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~rdpSettingsValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~linuxOperatingSystemProfileValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~sshProfileValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~publicKeysArray
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~loweredIndex1
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~loweredIndex1
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~publicKeysItem
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~sshPublicKeyValue
+      - >-
+        ClusterOperations~ClusterOperations#beginConfiguringRdpSettings~requestContent
+  - uid: 'ClusterOperations~ClusterOperations#beginCreating'
+    id: beginCreating
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      beginCreating(resourceGroupName, clusterName, clusterCreateParameters,
+      clusterCreateParameters.location, clusterCreateParameters.tags,
+      clusterCreateParameters.properties,
+      clusterCreateParameters.properties.clusterVersion,
+      clusterCreateParameters.properties.operatingSystemType,
+      clusterCreateParameters.properties.clusterDefinition,
+      clusterCreateParameters.properties.clusterDefinition.blueprintUri,
+      clusterCreateParameters.properties.clusterDefinition.clusterType,
+      clusterCreateParameters.properties.clusterDefinition.configurations,
+      clusterCreateParameters.properties.clusterTier,
+      clusterCreateParameters.properties.computeProfile,
+      clusterCreateParameters.properties.computeProfile.roles, callback)
+    summary: Begins creating a new HDInsight cluster with the specified parameters.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: clusterCreateParameters
+          type: ClusterCreateParametersExtended
+          description: "The\rcluster create request."
+        - id: clusterCreateParameters.location
+          type: string
+          description: "Gets or sets the\rlocation of the cluster."
+        - id: clusterCreateParameters.tags
+          type: object
+          description: "Gets or sets the resource\rtags."
+        - id: clusterCreateParameters.properties
+          type: ClusterCreateProperties
+          description: "Gets\ror sets the cluster create parameters."
+        - id: clusterCreateParameters.properties.clusterVersion
+          type: string
+          description: "Gets\ror sets the version of the cluster."
+        - id: clusterCreateParameters.properties.operatingSystemType
+          type: OSType
+          description: Gets or sets the type of operating system.
+        - id: clusterCreateParameters.properties.clusterDefinition
+          type: ClusterDefinition
+          description: "Gets or sets the\rcluster definition."
+        - id: clusterCreateParameters.properties.clusterDefinition.blueprintUri
+          type: string
+          description: "Gets\ror sets the link to the blueprint."
+        - id: clusterCreateParameters.properties.clusterDefinition.clusterType
+          type: string
+          description: "Gets\ror sets the type of cluster."
+        - id: clusterCreateParameters.properties.clusterDefinition.configurations
+          type: string
+          description: Gets or sets the cluster configurations.
+        - id: clusterCreateParameters.properties.clusterTier
+          type: Tier
+          description: "Gets or\rsets the cluster tier."
+        - id: clusterCreateParameters.properties.computeProfile
+          type: ComputeProfile
+          description: "Gets or sets the\rcompute profile."
+        - id: clusterCreateParameters.properties.computeProfile.roles
+          type: array
+          description: Gets or sets the list of roles in the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginCreating(resourceGroupName, clusterName,
+        clusterCreateParameters, clusterCreateParameters.location,
+        clusterCreateParameters.tags, clusterCreateParameters.properties,
+        clusterCreateParameters.properties.clusterVersion,
+        clusterCreateParameters.properties.operatingSystemType,
+        clusterCreateParameters.properties.clusterDefinition,
+        clusterCreateParameters.properties.clusterDefinition.blueprintUri,
+        clusterCreateParameters.properties.clusterDefinition.clusterType,
+        clusterCreateParameters.properties.clusterDefinition.configurations,
+        clusterCreateParameters.properties.clusterTier,
+        clusterCreateParameters.properties.computeProfile,
+        clusterCreateParameters.properties.computeProfile.roles, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.beginCreating(resourceGroupName,
+      clusterName, clusterCreateParameters, clusterCreateParameters.location,
+      clusterCreateParameters.tags, clusterCreateParameters.properties,
+      clusterCreateParameters.properties.clusterVersion,
+      clusterCreateParameters.properties.operatingSystemType,
+      clusterCreateParameters.properties.clusterDefinition,
+      clusterCreateParameters.properties.clusterDefinition.blueprintUri,
+      clusterCreateParameters.properties.clusterDefinition.clusterType,
+      clusterCreateParameters.properties.clusterDefinition.configurations,
+      clusterCreateParameters.properties.clusterTier,
+      clusterCreateParameters.properties.computeProfile,
+      clusterCreateParameters.properties.computeProfile.roles, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex1'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex1'
+      - 'ClusterOperations~ClusterOperations#beginCreating~rolesParameterItem'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex2'
+      - >-
+        ClusterOperations~ClusterOperations#beginCreating~scriptActionsParameterItem
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~queryParameters'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginCreating~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~url2'
+      - 'ClusterOperations~ClusterOperations#beginCreating~httpRequest'
+      - 'ClusterOperations~ClusterOperations#beginCreating~requestContent'
+      - 'ClusterOperations~ClusterOperations#beginCreating~requestDoc'
+      - >-
+        ClusterOperations~ClusterOperations#beginCreating~clusterCreateParametersExtendedValue
+      - 'ClusterOperations~ClusterOperations#beginCreating~requestDoc'
+      - 'ClusterOperations~ClusterOperations#beginCreating~tagsDictionary'
+      - 'ClusterOperations~ClusterOperations#beginCreating~tagsKey'
+      - 'ClusterOperations~ClusterOperations#beginCreating~tagsValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~propertiesValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~clusterDefinitionValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~computeProfileValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~rolesArray'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex3'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex3'
+      - 'ClusterOperations~ClusterOperations#beginCreating~rolesItem'
+      - 'ClusterOperations~ClusterOperations#beginCreating~roleValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~hardwareProfileValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~osProfileValue'
+      - >-
+        ClusterOperations~ClusterOperations#beginCreating~windowsOperatingSystemProfileValue
+      - 'ClusterOperations~ClusterOperations#beginCreating~rdpSettingsValue'
+      - >-
+        ClusterOperations~ClusterOperations#beginCreating~linuxOperatingSystemProfileValue
+      - 'ClusterOperations~ClusterOperations#beginCreating~sshProfileValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~publicKeysArray'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex4'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex4'
+      - 'ClusterOperations~ClusterOperations#beginCreating~publicKeysItem'
+      - 'ClusterOperations~ClusterOperations#beginCreating~sshPublicKeyValue'
+      - >-
+        ClusterOperations~ClusterOperations#beginCreating~virtualNetworkProfileValue
+      - 'ClusterOperations~ClusterOperations#beginCreating~scriptActionsArray'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex5'
+      - 'ClusterOperations~ClusterOperations#beginCreating~loweredIndex5'
+      - 'ClusterOperations~ClusterOperations#beginCreating~scriptActionsItem'
+      - 'ClusterOperations~ClusterOperations#beginCreating~scriptActionValue'
+      - 'ClusterOperations~ClusterOperations#beginCreating~requestContent'
+  - uid: 'ClusterOperations~ClusterOperations#beginDeleting'
+    id: beginDeleting
+    parent: ClusterOperations~ClusterOperations
+    name: 'beginDeleting(resourceGroupName, clusterName, callback)'
+    summary: Begins deleting the specified HDInsight cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function beginDeleting(resourceGroupName, clusterName, callback);'
+    fullName: >-
+      ClusterOperations~ClusterOperations.beginDeleting(resourceGroupName,
+      clusterName, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~queryParameters'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~url2'
+      - 'ClusterOperations~ClusterOperations#beginDeleting~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#beginExecuteScriptActions'
+    id: beginExecuteScriptActions
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      beginExecuteScriptActions(resourceGroupName, clusterName,
+      executeScriptActionParameters,
+      executeScriptActionParameters.scriptActions,
+      executeScriptActionParameters.persistOnSuccess, callback)
+    summary: Begins executing script actions on the specified HDInsight cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: executeScriptActionParameters
+          type: ExecuteScriptActionParameters
+          description: "The\rparameters for executing script actions."
+        - id: executeScriptActionParameters.scriptActions
+          type: array
+          description: "Gets or sets\rthe list of run time script actions."
+        - id: executeScriptActionParameters.persistOnSuccess
+          type: boolean
+          description: "Gets or\rsets if the scripts needs to be persisted."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginExecuteScriptActions(resourceGroupName, clusterName,
+        executeScriptActionParameters,
+        executeScriptActionParameters.scriptActions,
+        executeScriptActionParameters.persistOnSuccess, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.beginExecuteScriptActions(resourceGroupName,
+      clusterName, executeScriptActionParameters,
+      executeScriptActionParameters.scriptActions,
+      executeScriptActionParameters.persistOnSuccess, callback)
+    children:
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~loweredIndex1
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~loweredIndex1
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~scriptActionsParameterItem
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~queryParameters
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~url2'
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~httpRequest
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~requestContent
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~requestDoc'
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~executeScriptActionParametersValue
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~requestDoc'
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~scriptActionsArray
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~loweredIndex2
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~loweredIndex2
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~scriptActionsItem
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~runtimeScriptActionValue
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~rolesArray'
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~loweredIndex3
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~loweredIndex3
+      - 'ClusterOperations~ClusterOperations#beginExecuteScriptActions~rolesItem'
+      - >-
+        ClusterOperations~ClusterOperations#beginExecuteScriptActions~requestContent
+  - uid: 'ClusterOperations~ClusterOperations#beginResizing'
+    id: beginResizing
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      beginResizing(resourceGroupName, clusterName, resizeParameters,
+      resizeParameters.targetInstanceCount, callback)
+    summary: Begins a resize operation on the specified HDInsight cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: resizeParameters
+          type: ClusterResizeParameters
+          description: "The parameters for the\rresize operation."
+        - id: resizeParameters.targetInstanceCount
+          type: number
+          description: "Gets or sets the\rtarget instance count for the operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginResizing(resourceGroupName, clusterName, resizeParameters,
+        resizeParameters.targetInstanceCount, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.beginResizing(resourceGroupName,
+      clusterName, resizeParameters, resizeParameters.targetInstanceCount,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~queryParameters'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginResizing~baseUrl'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~url2'
+      - 'ClusterOperations~ClusterOperations#beginResizing~httpRequest'
+      - 'ClusterOperations~ClusterOperations#beginResizing~requestContent'
+      - 'ClusterOperations~ClusterOperations#beginResizing~requestDoc'
+      - >-
+        ClusterOperations~ClusterOperations#beginResizing~clusterResizeParametersValue
+      - 'ClusterOperations~ClusterOperations#beginResizing~requestDoc'
+      - 'ClusterOperations~ClusterOperations#beginResizing~requestContent'
+  - uid: 'ClusterOperations~ClusterOperations#configureHttpSettings'
+    id: configureHttpSettings
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      configureHttpSettings(resourceGroupName, clusterName,
+      httpSettingsParameters, httpSettingsParameters.httpUserEnabled,
+      httpSettingsParameters.httpUsername, httpSettingsParameters.httpPassword,
+      callback)
+    summary: Configures the HTTP settings on the specified cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: httpSettingsParameters
+          type: HttpSettingsParameters
+          description: "The name of the\rresource group."
+        - id: httpSettingsParameters.httpUserEnabled
+          type: boolean
+          description: "Gets or sets the\rwhether or not HTTP is enabled."
+        - id: httpSettingsParameters.httpUsername
+          type: string
+          description: "Gets or sets the\rhttp username."
+        - id: httpSettingsParameters.httpPassword
+          type: string
+          description: "Gets or sets the\rhttp user password."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function configureHttpSettings(resourceGroupName, clusterName,
+        httpSettingsParameters, httpSettingsParameters.httpUserEnabled,
+        httpSettingsParameters.httpUsername,
+        httpSettingsParameters.httpPassword, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.configureHttpSettings(resourceGroupName,
+      clusterName, httpSettingsParameters,
+      httpSettingsParameters.httpUserEnabled,
+      httpSettingsParameters.httpUsername, httpSettingsParameters.httpPassword,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#configureHttpSettings~client2'
+  - uid: 'ClusterOperations~ClusterOperations#configureRdpSettings'
+    id: configureRdpSettings
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      configureRdpSettings(resourceGroupName, clusterName, rdpParameters,
+      rdpParameters.osProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate,
+      rdpParameters.osProfile.linuxOperatingSystemProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.userName,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.password,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys,
+      callback)
+    summary: Configures the RDP settings on the specified cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: rdpParameters
+          type: RDPSettingsParameters
+          description: "The OS profile for RDP. Use\rnull to turn RDP off."
+        - id: rdpParameters.osProfile
+          type: OsProfile
+          description: "Gets or sets the definition of\ra data factory gateway to be created or updated."
+        - id: rdpParameters.osProfile.windowsOperatingSystemProfile
+          type: WindowsOperatingSystemProfile
+          description: "Gets or sets the\rWindows OS profile."
+        - id: rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings
+          type: RdpSettings
+          description: "Gets\ror sets the RDP settings."
+        - id: >-
+            rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName
+          type: string
+          description: Gets or sets the username for the RDP user.
+        - id: >-
+            rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password
+          type: string
+          description: Gets or sets the password for the RDP user.
+        - id: >-
+            rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate
+          type: date
+          description: Gets or sets the RDP expiry date.
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile
+          type: LinuxOperatingSystemProfile
+          description: "Gets or sets the\rLinux OS profile."
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile.userName
+          type: string
+          description: "Gets or\rsets the username."
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile.password
+          type: string
+          description: "Gets or\rsets the password."
+        - id: rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile
+          type: SshProfile
+          description: "Gets or\rsets the SSH profile."
+        - id: >-
+            rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys
+          type: array
+          description: Gets or sets the list of SSH public keys.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function configureRdpSettings(resourceGroupName, clusterName,
+        rdpParameters, rdpParameters.osProfile,
+        rdpParameters.osProfile.windowsOperatingSystemProfile,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password,
+        rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate,
+        rdpParameters.osProfile.linuxOperatingSystemProfile,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.userName,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.password,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile,
+        rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys,
+        callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.configureRdpSettings(resourceGroupName,
+      clusterName, rdpParameters, rdpParameters.osProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.userName,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.password,
+      rdpParameters.osProfile.windowsOperatingSystemProfile.rdpSettings.expiryDate,
+      rdpParameters.osProfile.linuxOperatingSystemProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.userName,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.password,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile,
+      rdpParameters.osProfile.linuxOperatingSystemProfile.sshProfile.sshPublicKeys,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#configureRdpSettings~client2'
+  - uid: 'ClusterOperations~ClusterOperations#create'
+    id: create
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      create(resourceGroupName, clusterName, clusterCreateParameters,
+      clusterCreateParameters.location, clusterCreateParameters.tags,
+      clusterCreateParameters.properties,
+      clusterCreateParameters.properties.clusterVersion,
+      clusterCreateParameters.properties.operatingSystemType,
+      clusterCreateParameters.properties.clusterDefinition,
+      clusterCreateParameters.properties.clusterDefinition.blueprintUri,
+      clusterCreateParameters.properties.clusterDefinition.clusterType,
+      clusterCreateParameters.properties.clusterDefinition.configurations,
+      clusterCreateParameters.properties.clusterTier,
+      clusterCreateParameters.properties.computeProfile,
+      clusterCreateParameters.properties.computeProfile.roles, callback)
+    summary: Creates a new HDInsight cluster with the specified parameters.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: clusterCreateParameters
+          type: ClusterCreateParametersExtended
+          description: "The\rcluster create request."
+        - id: clusterCreateParameters.location
+          type: string
+          description: "Gets or sets the\rlocation of the cluster."
+        - id: clusterCreateParameters.tags
+          type: object
+          description: "Gets or sets the resource\rtags."
+        - id: clusterCreateParameters.properties
+          type: ClusterCreateProperties
+          description: "Gets\ror sets the cluster create parameters."
+        - id: clusterCreateParameters.properties.clusterVersion
+          type: string
+          description: "Gets\ror sets the version of the cluster."
+        - id: clusterCreateParameters.properties.operatingSystemType
+          type: OSType
+          description: Gets or sets the type of operating system.
+        - id: clusterCreateParameters.properties.clusterDefinition
+          type: ClusterDefinition
+          description: "Gets or sets the\rcluster definition."
+        - id: clusterCreateParameters.properties.clusterDefinition.blueprintUri
+          type: string
+          description: "Gets\ror sets the link to the blueprint."
+        - id: clusterCreateParameters.properties.clusterDefinition.clusterType
+          type: string
+          description: "Gets\ror sets the type of cluster."
+        - id: clusterCreateParameters.properties.clusterDefinition.configurations
+          type: string
+          description: Gets or sets the cluster configurations.
+        - id: clusterCreateParameters.properties.clusterTier
+          type: Tier
+          description: "Gets or\rsets the cluster tier."
+        - id: clusterCreateParameters.properties.computeProfile
+          type: ComputeProfile
+          description: "Gets or sets the\rcompute profile."
+        - id: clusterCreateParameters.properties.computeProfile.roles
+          type: array
+          description: Gets or sets the list of roles in the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(resourceGroupName, clusterName, clusterCreateParameters,
+        clusterCreateParameters.location, clusterCreateParameters.tags,
+        clusterCreateParameters.properties,
+        clusterCreateParameters.properties.clusterVersion,
+        clusterCreateParameters.properties.operatingSystemType,
+        clusterCreateParameters.properties.clusterDefinition,
+        clusterCreateParameters.properties.clusterDefinition.blueprintUri,
+        clusterCreateParameters.properties.clusterDefinition.clusterType,
+        clusterCreateParameters.properties.clusterDefinition.configurations,
+        clusterCreateParameters.properties.clusterTier,
+        clusterCreateParameters.properties.computeProfile,
+        clusterCreateParameters.properties.computeProfile.roles, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.create(resourceGroupName, clusterName,
+      clusterCreateParameters, clusterCreateParameters.location,
+      clusterCreateParameters.tags, clusterCreateParameters.properties,
+      clusterCreateParameters.properties.clusterVersion,
+      clusterCreateParameters.properties.operatingSystemType,
+      clusterCreateParameters.properties.clusterDefinition,
+      clusterCreateParameters.properties.clusterDefinition.blueprintUri,
+      clusterCreateParameters.properties.clusterDefinition.clusterType,
+      clusterCreateParameters.properties.clusterDefinition.configurations,
+      clusterCreateParameters.properties.clusterTier,
+      clusterCreateParameters.properties.computeProfile,
+      clusterCreateParameters.properties.computeProfile.roles, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#create~client2'
+  - uid: 'ClusterOperations~ClusterOperations#deleteMethod'
+    id: deleteMethod
+    parent: ClusterOperations~ClusterOperations
+    name: 'deleteMethod(resourceGroupName, clusterName, callback)'
+    summary: Deletes the specified HDInsight cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(resourceGroupName, clusterName, callback);'
+    fullName: >-
+      ClusterOperations~ClusterOperations.deleteMethod(resourceGroupName,
+      clusterName, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#deleteMethod~client2'
+  - uid: 'ClusterOperations~ClusterOperations#deletePersistedScript'
+    id: deletePersistedScript
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      deletePersistedScript(resourceGroupName, clusterName, scriptName,
+      callback)
+    summary: Deletes a given persisted script action of the cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: scriptName
+          type: string
+          description: The name of the script.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deletePersistedScript(resourceGroupName, clusterName,
+        scriptName, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.deletePersistedScript(resourceGroupName,
+      clusterName, scriptName, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - >-
+        ClusterOperations~ClusterOperations#deletePersistedScript~queryParameters
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~baseUrl'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~baseUrl'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~url2'
+      - 'ClusterOperations~ClusterOperations#deletePersistedScript~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#executeScriptActions'
+    id: executeScriptActions
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      executeScriptActions(resourceGroupName, clusterName,
+      executeScriptActionParameters,
+      executeScriptActionParameters.scriptActions,
+      executeScriptActionParameters.persistOnSuccess, callback)
+    summary: Executes script actions on the specified HDInsight cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: executeScriptActionParameters
+          type: ExecuteScriptActionParameters
+          description: "The\rparameters for executing script actions."
+        - id: executeScriptActionParameters.scriptActions
+          type: array
+          description: "Gets or sets\rthe list of run time script actions."
+        - id: executeScriptActionParameters.persistOnSuccess
+          type: boolean
+          description: "Gets or\rsets if the scripts needs to be persisted."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function executeScriptActions(resourceGroupName, clusterName,
+        executeScriptActionParameters,
+        executeScriptActionParameters.scriptActions,
+        executeScriptActionParameters.persistOnSuccess, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.executeScriptActions(resourceGroupName,
+      clusterName, executeScriptActionParameters,
+      executeScriptActionParameters.scriptActions,
+      executeScriptActionParameters.persistOnSuccess, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#executeScriptActions~client2'
+  - uid: 'ClusterOperations~ClusterOperations#get'
+    id: get
+    parent: ClusterOperations~ClusterOperations
+    name: 'get(resourceGroupName, clusterName, callback)'
+    summary: Gets the specified cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(resourceGroupName, clusterName, callback);'
+    fullName: >-
+      ClusterOperations~ClusterOperations.get(resourceGroupName, clusterName,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~queryParameters'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~baseUrl'
+      - 'ClusterOperations~ClusterOperations#get~baseUrl'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~url2'
+      - 'ClusterOperations~ClusterOperations#get~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#getCapabilities'
+    id: getCapabilities
+    parent: ClusterOperations~ClusterOperations
+    name: 'getCapabilities(location, callback)'
+    summary: Gets the capabilities for the specified location.
+    type: Method
+    syntax:
+      parameters:
+        - id: location
+          type: string
+          description: The location to get capabilities for.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getCapabilities(location, callback);'
+    fullName: 'ClusterOperations~ClusterOperations.getCapabilities(location, callback)'
+    children:
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~queryParameters'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~url2'
+      - 'ClusterOperations~ClusterOperations#getCapabilities~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#getClusterConfigurations'
+    id: getClusterConfigurations
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      getClusterConfigurations(resourceGroupName, clusterName,
+      configurationName, callback)
+    summary: Gets the configuration for the specified cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: configurationName
+          type: string
+          description: "The type name of the hadoop\rconfiguration."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getClusterConfigurations(resourceGroupName, clusterName,
+        configurationName, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.getClusterConfigurations(resourceGroupName,
+      clusterName, configurationName, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - >-
+        ClusterOperations~ClusterOperations#getClusterConfigurations~queryParameters
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~url2'
+      - 'ClusterOperations~ClusterOperations#getClusterConfigurations~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#getConnectivitySettings'
+    id: getConnectivitySettings
+    parent: ClusterOperations~ClusterOperations
+    name: 'getConnectivitySettings(resourceGroupName, clusterName, callback)'
+    summary: Gets the connectivity settings for the specified cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getConnectivitySettings(resourceGroupName, clusterName,
+        callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.getConnectivitySettings(resourceGroupName,
+      clusterName, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - >-
+        ClusterOperations~ClusterOperations#getConnectivitySettings~queryParameters
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~url2'
+      - 'ClusterOperations~ClusterOperations#getConnectivitySettings~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#getCreateStatus'
+    id: getCreateStatus
+    parent: ClusterOperations~ClusterOperations
+    name: 'getCreateStatus(operationStatusLink, callback)'
+    summary: Gets the status of the Create operation.
+    type: Method
+    syntax:
+      parameters:
+        - id: operationStatusLink
+          type: string
+          description: "Location value returned by the Begin\roperation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getCreateStatus(operationStatusLink, callback);'
+    fullName: >-
+      ClusterOperations~ClusterOperations.getCreateStatus(operationStatusLink,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#getCreateStatus~url2'
+      - 'ClusterOperations~ClusterOperations#getCreateStatus~url2'
+      - 'ClusterOperations~ClusterOperations#getCreateStatus~url2'
+      - 'ClusterOperations~ClusterOperations#getCreateStatus~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#getDeleteStatus'
+    id: getDeleteStatus
+    parent: ClusterOperations~ClusterOperations
+    name: 'getDeleteStatus(operationStatusLink, callback)'
+    summary: Gets the status of the Delete operation.
+    type: Method
+    syntax:
+      parameters:
+        - id: operationStatusLink
+          type: string
+          description: "Location value returned by the Begin\roperation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getDeleteStatus(operationStatusLink, callback);'
+    fullName: >-
+      ClusterOperations~ClusterOperations.getDeleteStatus(operationStatusLink,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#getDeleteStatus~url2'
+      - 'ClusterOperations~ClusterOperations#getDeleteStatus~url2'
+      - 'ClusterOperations~ClusterOperations#getDeleteStatus~url2'
+      - 'ClusterOperations~ClusterOperations#getDeleteStatus~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#getScriptExecutionDetail'
+    id: getScriptExecutionDetail
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      getScriptExecutionDetail(resourceGroupName, clusterName,
+      scriptExecutionId, callback)
+    summary: Gets the script execution detail for the given script execution id.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: scriptExecutionId
+          type: Number
+          description: The script execution Id
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getScriptExecutionDetail(resourceGroupName, clusterName,
+        scriptExecutionId, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.getScriptExecutionDetail(resourceGroupName,
+      clusterName, scriptExecutionId, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - >-
+        ClusterOperations~ClusterOperations#getScriptExecutionDetail~queryParameters
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~baseUrl'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~url2'
+      - 'ClusterOperations~ClusterOperations#getScriptExecutionDetail~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#list'
+    id: list
+    parent: ClusterOperations~ClusterOperations
+    name: list(callback)
+    summary: Lists HDInsight clusters under the subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: function list(callback);
+    fullName: ClusterOperations~ClusterOperations.list(callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~queryParameters'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~baseUrl'
+      - 'ClusterOperations~ClusterOperations#list~baseUrl'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~url2'
+      - 'ClusterOperations~ClusterOperations#list~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#listByResourceGroup'
+    id: listByResourceGroup
+    parent: ClusterOperations~ClusterOperations
+    name: 'listByResourceGroup(resourceGroupName, callback)'
+    summary: List the HDInsight clusters in a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listByResourceGroup(resourceGroupName, callback);'
+    fullName: >-
+      ClusterOperations~ClusterOperations.listByResourceGroup(resourceGroupName,
+      callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~queryParameters'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~baseUrl'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~baseUrl'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~url2'
+      - 'ClusterOperations~ClusterOperations#listByResourceGroup~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#listPersistedScripts'
+    id: listPersistedScripts
+    parent: ClusterOperations~ClusterOperations
+    name: 'listPersistedScripts(resourceGroupName, clusterName, callback)'
+    summary: Lists all persisted script actions for the given cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listPersistedScripts(resourceGroupName, clusterName, callback);'
+    fullName: >-
+      ClusterOperations~ClusterOperations.listPersistedScripts(resourceGroupName,
+      clusterName, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~queryParameters'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~baseUrl'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~baseUrl'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~url2'
+      - 'ClusterOperations~ClusterOperations#listPersistedScripts~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#listScriptExecutionHistory'
+    id: listScriptExecutionHistory
+    parent: ClusterOperations~ClusterOperations
+    name: 'listScriptExecutionHistory(resourceGroupName, clusterName, callback)'
+    summary: Lists all scripts execution history for the given cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function listScriptExecutionHistory(resourceGroupName, clusterName,
+        callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.listScriptExecutionHistory(resourceGroupName,
+      clusterName, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - >-
+        ClusterOperations~ClusterOperations#listScriptExecutionHistory~queryParameters
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~baseUrl'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~baseUrl'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - 'ClusterOperations~ClusterOperations#listScriptExecutionHistory~url2'
+      - >-
+        ClusterOperations~ClusterOperations#listScriptExecutionHistory~httpRequest
+  - uid: 'ClusterOperations~ClusterOperations#promoteScript'
+    id: promoteScript
+    parent: ClusterOperations~ClusterOperations
+    name: 'promoteScript(resourceGroupName, clusterName, scriptExecutionId, callback)'
+    summary: Promote ad-hoc script execution to a persisted script.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: scriptExecutionId
+          type: Number
+          description: The script execution Id
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function promoteScript(resourceGroupName, clusterName,
+        scriptExecutionId, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.promoteScript(resourceGroupName,
+      clusterName, scriptExecutionId, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~queryParameters'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~baseUrl'
+      - 'ClusterOperations~ClusterOperations#promoteScript~baseUrl'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~url2'
+      - 'ClusterOperations~ClusterOperations#promoteScript~httpRequest'
+  - uid: 'ClusterOperations~ClusterOperations#resize'
+    id: resize
+    parent: ClusterOperations~ClusterOperations
+    name: >-
+      resize(resourceGroupName, clusterName, resizeParameters,
+      resizeParameters.targetInstanceCount, callback)
+    summary: Resizes the specified HDInsight cluster.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: resizeParameters
+          type: ClusterResizeParameters
+          description: "The parameters for the\rresize operation."
+        - id: resizeParameters.targetInstanceCount
+          type: number
+          description: "Gets or sets the\rtarget instance count for the operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function resize(resourceGroupName, clusterName, resizeParameters,
+        resizeParameters.targetInstanceCount, callback);
+    fullName: >-
+      ClusterOperations~ClusterOperations.resize(resourceGroupName, clusterName,
+      resizeParameters, resizeParameters.targetInstanceCount, callback)
+    children:
+      - 'ClusterOperations~ClusterOperations#resize~client2'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: HttpSettingsParameters
+    name: HttpSettingsParameters
+    fullName: HttpSettingsParameters
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: RDPSettingsParameters
+    name: RDPSettingsParameters
+    fullName: RDPSettingsParameters
+    isExternal: true
+  - uid: OsProfile
+    name: OsProfile
+    fullName: OsProfile
+    isExternal: true
+  - uid: WindowsOperatingSystemProfile
+    name: WindowsOperatingSystemProfile
+    fullName: WindowsOperatingSystemProfile
+    isExternal: true
+  - uid: RdpSettings
+    name: RdpSettings
+    fullName: RdpSettings
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: LinuxOperatingSystemProfile
+    name: LinuxOperatingSystemProfile
+    fullName: LinuxOperatingSystemProfile
+    isExternal: true
+  - uid: SshProfile
+    name: SshProfile
+    fullName: SshProfile
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: ClusterCreateParametersExtended
+    name: ClusterCreateParametersExtended
+    fullName: ClusterCreateParametersExtended
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: ClusterCreateProperties
+    name: ClusterCreateProperties
+    fullName: ClusterCreateProperties
+    isExternal: true
+  - uid: OSType
+    name: OSType
+    fullName: OSType
+    isExternal: true
+  - uid: ClusterDefinition
+    name: ClusterDefinition
+    fullName: ClusterDefinition
+    isExternal: true
+  - uid: Tier
+    name: Tier
+    fullName: Tier
+    isExternal: true
+  - uid: ComputeProfile
+    name: ComputeProfile
+    fullName: ComputeProfile
+    isExternal: true
+  - uid: ExecuteScriptActionParameters
+    name: ExecuteScriptActionParameters
+    fullName: ExecuteScriptActionParameters
+    isExternal: true
+  - uid: ClusterResizeParameters
+    name: ClusterResizeParameters
+    fullName: ClusterResizeParameters
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: Number
+    name: Number
+    fullName: Number
+    isExternal: true

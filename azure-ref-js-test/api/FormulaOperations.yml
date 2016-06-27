@@ -1,0 +1,796 @@
+items:
+  - uid: FormulaOperations
+    id: FormulaOperations
+    name: FormulaOperations
+    type: Class
+    syntax:
+      content: FormulaOperations
+    fullName: FormulaOperations
+    children:
+      - 'FormulaOperations#client'
+      - 'FormulaOperations#list'
+      - 'FormulaOperations#getResource'
+      - 'FormulaOperations#createOrUpdateResource'
+      - 'FormulaOperations#beginCreateOrUpdateResource'
+      - 'FormulaOperations#deleteResource'
+      - 'FormulaOperations#listNext'
+  - uid: 'FormulaOperations#client'
+    id: client
+    parent: FormulaOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: FormulaOperations.client
+  - uid: 'FormulaOperations#list'
+    id: list
+    parent: FormulaOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List formulas.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationFormula} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      FormulaOperations.list(resourceGroupName, labName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'FormulaOperations#list~client'
+      - 'FormulaOperations#list~callback'
+      - 'FormulaOperations#list~options'
+      - 'FormulaOperations#list~filter'
+      - 'FormulaOperations#list~top'
+      - 'FormulaOperations#list~orderBy'
+      - 'FormulaOperations#list~requestUrl'
+      - 'FormulaOperations#list~requestUrl'
+      - 'FormulaOperations#list~requestUrl'
+      - 'FormulaOperations#list~requestUrl'
+      - 'FormulaOperations#list~queryParameters'
+      - 'FormulaOperations#list~requestUrl'
+      - 'FormulaOperations#list~regex'
+      - 'FormulaOperations#list~requestUrl'
+      - 'FormulaOperations#list~httpRequest'
+      - 'FormulaOperations#list~headerName'
+  - uid: 'FormulaOperations#getResource'
+    id: getResource
+    parent: FormulaOperations
+    name: >-
+      getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Get formula.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the formula.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Formula} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FormulaOperations.getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    children:
+      - 'FormulaOperations#getResource~client'
+      - 'FormulaOperations#getResource~callback'
+      - 'FormulaOperations#getResource~options'
+      - 'FormulaOperations#getResource~requestUrl'
+      - 'FormulaOperations#getResource~requestUrl'
+      - 'FormulaOperations#getResource~requestUrl'
+      - 'FormulaOperations#getResource~requestUrl'
+      - 'FormulaOperations#getResource~requestUrl'
+      - 'FormulaOperations#getResource~queryParameters'
+      - 'FormulaOperations#getResource~requestUrl'
+      - 'FormulaOperations#getResource~regex'
+      - 'FormulaOperations#getResource~requestUrl'
+      - 'FormulaOperations#getResource~httpRequest'
+      - 'FormulaOperations#getResource~headerName'
+  - uid: 'FormulaOperations#createOrUpdateResource'
+    id: createOrUpdateResource
+    parent: FormulaOperations
+    name: >-
+      createOrUpdateResource(resourceGroupName, labName, name, formula,
+      formula.description, formula.author, formula.osType, formula.creationDate,
+      formula.formulaContent, formula.formulaContent.notes,
+      formula.formulaContent.ownerObjectId,
+      formula.formulaContent.createdByUserId,
+      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
+      formula.formulaContent.customImageId, formula.formulaContent.osType,
+      formula.formulaContent.size, formula.formulaContent.userName,
+      formula.formulaContent.password, formula.formulaContent.sshKey,
+      formula.formulaContent.isAuthenticationWithSshKey,
+      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
+      formula.formulaContent.labVirtualNetworkId,
+      formula.formulaContent.disallowPublicIpAddress,
+      formula.formulaContent.artifacts,
+      formula.formulaContent.artifactDeploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
+      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
+      formula.formulaContent.galleryImageReference,
+      formula.formulaContent.galleryImageReference.offer,
+      formula.formulaContent.galleryImageReference.publisher,
+      formula.formulaContent.galleryImageReference.sku,
+      formula.formulaContent.galleryImageReference.osType,
+      formula.formulaContent.galleryImageReference.version,
+      formula.formulaContent.provisioningState, formula.formulaContent.id,
+      formula.formulaContent.name, formula.formulaContent.type,
+      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
+      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
+      formula.type, formula.location, formula.tags, options,
+      options.customHeaders, callback)
+    summary: "Create or replace an existing Formula. This operation can take a while to\rcomplete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the formula.
+        - id: formula
+          type: object
+        - id: formula.description
+          type: string
+          description: The description of the formula.
+        - id: formula.author
+          type: string
+          description: The author of the formula.
+        - id: formula.osType
+          type: string
+          description: The OS type of the formula.
+        - id: formula.creationDate
+          type: date
+          description: The creation date of the formula.
+        - id: formula.formulaContent
+          type: object
+          description: The content of the formula.
+        - id: formula.formulaContent.notes
+          type: string
+          description: "The notes of the virtual\rmachine."
+        - id: formula.formulaContent.ownerObjectId
+          type: string
+          description: "The object\ridentifier of the owner of the virtual machine."
+        - id: formula.formulaContent.createdByUserId
+          type: string
+          description: "The object\ridentifier of the creator of the virtual machine."
+        - id: formula.formulaContent.createdByUser
+          type: string
+          description: "The email address of\rcreator of the virtual machine."
+        - id: formula.formulaContent.computeId
+          type: string
+          description: "The resource identifier\r(Microsoft.Compute) of the virtual machine."
+        - id: formula.formulaContent.customImageId
+          type: string
+          description: "The custom image\ridentifier of the virtual machine."
+        - id: formula.formulaContent.osType
+          type: string
+          description: "The OS type of the virtual\rmachine."
+        - id: formula.formulaContent.size
+          type: string
+          description: "The size of the virtual\rmachine."
+        - id: formula.formulaContent.userName
+          type: string
+          description: "The user name of the\rvirtual machine."
+        - id: formula.formulaContent.password
+          type: string
+          description: "The password of the\rvirtual machine administrator."
+        - id: formula.formulaContent.sshKey
+          type: string
+          description: "The SSH key of the virtual\rmachine administrator."
+        - id: formula.formulaContent.isAuthenticationWithSshKey
+          type: boolean
+          description: "A\rvalue indicating whether this virtual machine uses an SSH key for\rauthentication."
+        - id: formula.formulaContent.fqdn
+          type: string
+          description: "The fully-qualified domain\rname of the virtual machine."
+        - id: formula.formulaContent.labSubnetName
+          type: string
+          description: "The lab subnet name\rof the virtual machine."
+        - id: formula.formulaContent.labVirtualNetworkId
+          type: string
+          description: "The lab\rvirtual network identifier of the virtual machine."
+        - id: formula.formulaContent.disallowPublicIpAddress
+          type: boolean
+          description: "Indicates\rwhether the virtual machine is to be created without a public IP address."
+        - id: formula.formulaContent.artifacts
+          type: array
+          description: "The artifacts to be\rinstalled on the virtual machine."
+        - id: formula.formulaContent.artifactDeploymentStatus
+          type: object
+          description: "The\rartifact deployment status for the virtual machine."
+        - id: formula.formulaContent.artifactDeploymentStatus.deploymentStatus
+          type: string
+          description: "The\rdeployment status of the artifact."
+        - id: formula.formulaContent.artifactDeploymentStatus.artifactsApplied
+          type: number
+          description: "The\rtotal count of the artifacts that were successfully applied."
+        - id: formula.formulaContent.artifactDeploymentStatus.totalArtifacts
+          type: number
+          description: "The total\rcount of the artifacts that were tentatively applied."
+        - id: formula.formulaContent.galleryImageReference
+          type: object
+          description: "The\rMicrosoft Azure Marketplace image reference of the virtual machine."
+        - id: formula.formulaContent.galleryImageReference.offer
+          type: string
+          description: "The\roffer of the gallery image."
+        - id: formula.formulaContent.galleryImageReference.publisher
+          type: string
+          description: The publisher of the gallery image.
+        - id: formula.formulaContent.galleryImageReference.sku
+          type: string
+          description: "The SKU\rof the gallery image."
+        - id: formula.formulaContent.galleryImageReference.osType
+          type: string
+          description: "The\rOS type of the gallery image."
+        - id: formula.formulaContent.galleryImageReference.version
+          type: string
+          description: "The\rversion of the gallery image."
+        - id: formula.formulaContent.provisioningState
+          type: string
+          description: "The provisioning\rstatus of the resource."
+        - id: formula.formulaContent.id
+          type: string
+          description: The identifier of the resource.
+        - id: formula.formulaContent.name
+          type: string
+          description: The name of the resource.
+        - id: formula.formulaContent.type
+          type: string
+          description: The type of the resource.
+        - id: formula.formulaContent.location
+          type: string
+          description: "The location of the\rresource."
+        - id: formula.formulaContent.tags
+          type: object
+          description: The tags of the resource.
+        - id: formula.vm
+          type: object
+          description: "Information about a VM from which a formula is\rto be created."
+        - id: formula.vm.labVmId
+          type: string
+          description: "The identifier of the VM from which a\rformula is to be created."
+        - id: formula.provisioningState
+          type: string
+          description: "The provisioning status of the\rresource."
+        - id: formula.id
+          type: string
+          description: The identifier of the resource.
+        - id: formula.name
+          type: string
+          description: The name of the resource.
+        - id: formula.type
+          type: string
+          description: The type of the resource.
+        - id: formula.location
+          type: string
+          description: The location of the resource.
+        - id: formula.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Formula} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateResource(resourceGroupName, labName, name,
+        formula, formula.description, formula.author, formula.osType,
+        formula.creationDate, formula.formulaContent,
+        formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
+        formula.formulaContent.createdByUserId,
+        formula.formulaContent.createdByUser, formula.formulaContent.computeId,
+        formula.formulaContent.customImageId, formula.formulaContent.osType,
+        formula.formulaContent.size, formula.formulaContent.userName,
+        formula.formulaContent.password, formula.formulaContent.sshKey,
+        formula.formulaContent.isAuthenticationWithSshKey,
+        formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
+        formula.formulaContent.labVirtualNetworkId,
+        formula.formulaContent.disallowPublicIpAddress,
+        formula.formulaContent.artifacts,
+        formula.formulaContent.artifactDeploymentStatus,
+        formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
+        formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
+        formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
+        formula.formulaContent.galleryImageReference,
+        formula.formulaContent.galleryImageReference.offer,
+        formula.formulaContent.galleryImageReference.publisher,
+        formula.formulaContent.galleryImageReference.sku,
+        formula.formulaContent.galleryImageReference.osType,
+        formula.formulaContent.galleryImageReference.version,
+        formula.formulaContent.provisioningState, formula.formulaContent.id,
+        formula.formulaContent.name, formula.formulaContent.type,
+        formula.formulaContent.location, formula.formulaContent.tags,
+        formula.vm, formula.vm.labVmId, formula.provisioningState, formula.id,
+        formula.name, formula.type, formula.location, formula.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FormulaOperations.createOrUpdateResource(resourceGroupName, labName, name,
+      formula, formula.description, formula.author, formula.osType,
+      formula.creationDate, formula.formulaContent,
+      formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
+      formula.formulaContent.createdByUserId,
+      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
+      formula.formulaContent.customImageId, formula.formulaContent.osType,
+      formula.formulaContent.size, formula.formulaContent.userName,
+      formula.formulaContent.password, formula.formulaContent.sshKey,
+      formula.formulaContent.isAuthenticationWithSshKey,
+      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
+      formula.formulaContent.labVirtualNetworkId,
+      formula.formulaContent.disallowPublicIpAddress,
+      formula.formulaContent.artifacts,
+      formula.formulaContent.artifactDeploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
+      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
+      formula.formulaContent.galleryImageReference,
+      formula.formulaContent.galleryImageReference.offer,
+      formula.formulaContent.galleryImageReference.publisher,
+      formula.formulaContent.galleryImageReference.sku,
+      formula.formulaContent.galleryImageReference.osType,
+      formula.formulaContent.galleryImageReference.version,
+      formula.formulaContent.provisioningState, formula.formulaContent.id,
+      formula.formulaContent.name, formula.formulaContent.type,
+      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
+      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
+      formula.type, formula.location, formula.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'FormulaOperations#createOrUpdateResource~client'
+      - 'FormulaOperations#createOrUpdateResource~callback'
+      - 'FormulaOperations#createOrUpdateResource~options'
+  - uid: 'FormulaOperations#beginCreateOrUpdateResource'
+    id: beginCreateOrUpdateResource
+    parent: FormulaOperations
+    name: >-
+      beginCreateOrUpdateResource(resourceGroupName, labName, name, formula,
+      formula.description, formula.author, formula.osType, formula.creationDate,
+      formula.formulaContent, formula.formulaContent.notes,
+      formula.formulaContent.ownerObjectId,
+      formula.formulaContent.createdByUserId,
+      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
+      formula.formulaContent.customImageId, formula.formulaContent.osType,
+      formula.formulaContent.size, formula.formulaContent.userName,
+      formula.formulaContent.password, formula.formulaContent.sshKey,
+      formula.formulaContent.isAuthenticationWithSshKey,
+      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
+      formula.formulaContent.labVirtualNetworkId,
+      formula.formulaContent.disallowPublicIpAddress,
+      formula.formulaContent.artifacts,
+      formula.formulaContent.artifactDeploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
+      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
+      formula.formulaContent.galleryImageReference,
+      formula.formulaContent.galleryImageReference.offer,
+      formula.formulaContent.galleryImageReference.publisher,
+      formula.formulaContent.galleryImageReference.sku,
+      formula.formulaContent.galleryImageReference.osType,
+      formula.formulaContent.galleryImageReference.version,
+      formula.formulaContent.provisioningState, formula.formulaContent.id,
+      formula.formulaContent.name, formula.formulaContent.type,
+      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
+      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
+      formula.type, formula.location, formula.tags, options,
+      options.customHeaders, callback)
+    summary: "Create or replace an existing Formula. This operation can take a while to\rcomplete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the formula.
+        - id: formula
+          type: object
+        - id: formula.description
+          type: string
+          description: The description of the formula.
+        - id: formula.author
+          type: string
+          description: The author of the formula.
+        - id: formula.osType
+          type: string
+          description: The OS type of the formula.
+        - id: formula.creationDate
+          type: date
+          description: The creation date of the formula.
+        - id: formula.formulaContent
+          type: object
+          description: The content of the formula.
+        - id: formula.formulaContent.notes
+          type: string
+          description: "The notes of the virtual\rmachine."
+        - id: formula.formulaContent.ownerObjectId
+          type: string
+          description: "The object\ridentifier of the owner of the virtual machine."
+        - id: formula.formulaContent.createdByUserId
+          type: string
+          description: "The object\ridentifier of the creator of the virtual machine."
+        - id: formula.formulaContent.createdByUser
+          type: string
+          description: "The email address of\rcreator of the virtual machine."
+        - id: formula.formulaContent.computeId
+          type: string
+          description: "The resource identifier\r(Microsoft.Compute) of the virtual machine."
+        - id: formula.formulaContent.customImageId
+          type: string
+          description: "The custom image\ridentifier of the virtual machine."
+        - id: formula.formulaContent.osType
+          type: string
+          description: "The OS type of the virtual\rmachine."
+        - id: formula.formulaContent.size
+          type: string
+          description: "The size of the virtual\rmachine."
+        - id: formula.formulaContent.userName
+          type: string
+          description: "The user name of the\rvirtual machine."
+        - id: formula.formulaContent.password
+          type: string
+          description: "The password of the\rvirtual machine administrator."
+        - id: formula.formulaContent.sshKey
+          type: string
+          description: "The SSH key of the virtual\rmachine administrator."
+        - id: formula.formulaContent.isAuthenticationWithSshKey
+          type: boolean
+          description: "A\rvalue indicating whether this virtual machine uses an SSH key for\rauthentication."
+        - id: formula.formulaContent.fqdn
+          type: string
+          description: "The fully-qualified domain\rname of the virtual machine."
+        - id: formula.formulaContent.labSubnetName
+          type: string
+          description: "The lab subnet name\rof the virtual machine."
+        - id: formula.formulaContent.labVirtualNetworkId
+          type: string
+          description: "The lab\rvirtual network identifier of the virtual machine."
+        - id: formula.formulaContent.disallowPublicIpAddress
+          type: boolean
+          description: "Indicates\rwhether the virtual machine is to be created without a public IP address."
+        - id: formula.formulaContent.artifacts
+          type: array
+          description: "The artifacts to be\rinstalled on the virtual machine."
+        - id: formula.formulaContent.artifactDeploymentStatus
+          type: object
+          description: "The\rartifact deployment status for the virtual machine."
+        - id: formula.formulaContent.artifactDeploymentStatus.deploymentStatus
+          type: string
+          description: "The\rdeployment status of the artifact."
+        - id: formula.formulaContent.artifactDeploymentStatus.artifactsApplied
+          type: number
+          description: "The\rtotal count of the artifacts that were successfully applied."
+        - id: formula.formulaContent.artifactDeploymentStatus.totalArtifacts
+          type: number
+          description: "The total\rcount of the artifacts that were tentatively applied."
+        - id: formula.formulaContent.galleryImageReference
+          type: object
+          description: "The\rMicrosoft Azure Marketplace image reference of the virtual machine."
+        - id: formula.formulaContent.galleryImageReference.offer
+          type: string
+          description: "The\roffer of the gallery image."
+        - id: formula.formulaContent.galleryImageReference.publisher
+          type: string
+          description: The publisher of the gallery image.
+        - id: formula.formulaContent.galleryImageReference.sku
+          type: string
+          description: "The SKU\rof the gallery image."
+        - id: formula.formulaContent.galleryImageReference.osType
+          type: string
+          description: "The\rOS type of the gallery image."
+        - id: formula.formulaContent.galleryImageReference.version
+          type: string
+          description: "The\rversion of the gallery image."
+        - id: formula.formulaContent.provisioningState
+          type: string
+          description: "The provisioning\rstatus of the resource."
+        - id: formula.formulaContent.id
+          type: string
+          description: The identifier of the resource.
+        - id: formula.formulaContent.name
+          type: string
+          description: The name of the resource.
+        - id: formula.formulaContent.type
+          type: string
+          description: The type of the resource.
+        - id: formula.formulaContent.location
+          type: string
+          description: "The location of the\rresource."
+        - id: formula.formulaContent.tags
+          type: object
+          description: The tags of the resource.
+        - id: formula.vm
+          type: object
+          description: "Information about a VM from which a formula is\rto be created."
+        - id: formula.vm.labVmId
+          type: string
+          description: "The identifier of the VM from which a\rformula is to be created."
+        - id: formula.provisioningState
+          type: string
+          description: "The provisioning status of the\rresource."
+        - id: formula.id
+          type: string
+          description: The identifier of the resource.
+        - id: formula.name
+          type: string
+          description: The name of the resource.
+        - id: formula.type
+          type: string
+          description: The type of the resource.
+        - id: formula.location
+          type: string
+          description: The location of the resource.
+        - id: formula.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Formula} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdateResource(resourceGroupName, labName, name,
+        formula, formula.description, formula.author, formula.osType,
+        formula.creationDate, formula.formulaContent,
+        formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
+        formula.formulaContent.createdByUserId,
+        formula.formulaContent.createdByUser, formula.formulaContent.computeId,
+        formula.formulaContent.customImageId, formula.formulaContent.osType,
+        formula.formulaContent.size, formula.formulaContent.userName,
+        formula.formulaContent.password, formula.formulaContent.sshKey,
+        formula.formulaContent.isAuthenticationWithSshKey,
+        formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
+        formula.formulaContent.labVirtualNetworkId,
+        formula.formulaContent.disallowPublicIpAddress,
+        formula.formulaContent.artifacts,
+        formula.formulaContent.artifactDeploymentStatus,
+        formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
+        formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
+        formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
+        formula.formulaContent.galleryImageReference,
+        formula.formulaContent.galleryImageReference.offer,
+        formula.formulaContent.galleryImageReference.publisher,
+        formula.formulaContent.galleryImageReference.sku,
+        formula.formulaContent.galleryImageReference.osType,
+        formula.formulaContent.galleryImageReference.version,
+        formula.formulaContent.provisioningState, formula.formulaContent.id,
+        formula.formulaContent.name, formula.formulaContent.type,
+        formula.formulaContent.location, formula.formulaContent.tags,
+        formula.vm, formula.vm.labVmId, formula.provisioningState, formula.id,
+        formula.name, formula.type, formula.location, formula.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FormulaOperations.beginCreateOrUpdateResource(resourceGroupName, labName,
+      name, formula, formula.description, formula.author, formula.osType,
+      formula.creationDate, formula.formulaContent,
+      formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
+      formula.formulaContent.createdByUserId,
+      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
+      formula.formulaContent.customImageId, formula.formulaContent.osType,
+      formula.formulaContent.size, formula.formulaContent.userName,
+      formula.formulaContent.password, formula.formulaContent.sshKey,
+      formula.formulaContent.isAuthenticationWithSshKey,
+      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
+      formula.formulaContent.labVirtualNetworkId,
+      formula.formulaContent.disallowPublicIpAddress,
+      formula.formulaContent.artifacts,
+      formula.formulaContent.artifactDeploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
+      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
+      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
+      formula.formulaContent.galleryImageReference,
+      formula.formulaContent.galleryImageReference.offer,
+      formula.formulaContent.galleryImageReference.publisher,
+      formula.formulaContent.galleryImageReference.sku,
+      formula.formulaContent.galleryImageReference.osType,
+      formula.formulaContent.galleryImageReference.version,
+      formula.formulaContent.provisioningState, formula.formulaContent.id,
+      formula.formulaContent.name, formula.formulaContent.type,
+      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
+      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
+      formula.type, formula.location, formula.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'FormulaOperations#beginCreateOrUpdateResource~client'
+      - 'FormulaOperations#beginCreateOrUpdateResource~callback'
+      - 'FormulaOperations#beginCreateOrUpdateResource~options'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'FormulaOperations#beginCreateOrUpdateResource~queryParameters'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'FormulaOperations#beginCreateOrUpdateResource~regex'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestUrl'
+      - 'FormulaOperations#beginCreateOrUpdateResource~httpRequest'
+      - 'FormulaOperations#beginCreateOrUpdateResource~headerName'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestContent'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestModel'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestModelMapper'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestModel'
+      - 'FormulaOperations#beginCreateOrUpdateResource~requestContent'
+      - 'FormulaOperations#beginCreateOrUpdateResource~serializationError'
+  - uid: 'FormulaOperations#deleteResource'
+    id: deleteResource
+    parent: FormulaOperations
+    name: >-
+      deleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete formula.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the formula.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      FormulaOperations.deleteResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'FormulaOperations#deleteResource~client'
+      - 'FormulaOperations#deleteResource~callback'
+      - 'FormulaOperations#deleteResource~options'
+      - 'FormulaOperations#deleteResource~requestUrl'
+      - 'FormulaOperations#deleteResource~requestUrl'
+      - 'FormulaOperations#deleteResource~requestUrl'
+      - 'FormulaOperations#deleteResource~requestUrl'
+      - 'FormulaOperations#deleteResource~requestUrl'
+      - 'FormulaOperations#deleteResource~queryParameters'
+      - 'FormulaOperations#deleteResource~requestUrl'
+      - 'FormulaOperations#deleteResource~regex'
+      - 'FormulaOperations#deleteResource~requestUrl'
+      - 'FormulaOperations#deleteResource~httpRequest'
+      - 'FormulaOperations#deleteResource~headerName'
+  - uid: 'FormulaOperations#listNext'
+    id: listNext
+    parent: FormulaOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List formulas.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationFormula} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      FormulaOperations.listNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'FormulaOperations#listNext~client'
+      - 'FormulaOperations#listNext~callback'
+      - 'FormulaOperations#listNext~options'
+      - 'FormulaOperations#listNext~requestUrl'
+      - 'FormulaOperations#listNext~requestUrl'
+      - 'FormulaOperations#listNext~regex'
+      - 'FormulaOperations#listNext~requestUrl'
+      - 'FormulaOperations#listNext~httpRequest'
+      - 'FormulaOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

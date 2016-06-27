@@ -1,0 +1,510 @@
+items:
+  - uid: NetworkSecurityGroups
+    id: NetworkSecurityGroups
+    name: NetworkSecurityGroups
+    type: Class
+    syntax:
+      content: NetworkSecurityGroups
+    fullName: NetworkSecurityGroups
+    children:
+      - 'NetworkSecurityGroups#client'
+      - 'NetworkSecurityGroups#deleteMethod'
+      - 'NetworkSecurityGroups#beginDeleteMethod'
+      - 'NetworkSecurityGroups#get'
+      - 'NetworkSecurityGroups#createOrUpdate'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate'
+      - 'NetworkSecurityGroups#listAll'
+      - 'NetworkSecurityGroups#list'
+      - 'NetworkSecurityGroups#listAllNext'
+      - 'NetworkSecurityGroups#listNext'
+  - uid: 'NetworkSecurityGroups#client'
+    id: client
+    parent: NetworkSecurityGroups
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: NetworkSecurityGroups.client
+  - uid: 'NetworkSecurityGroups#deleteMethod'
+    id: deleteMethod
+    parent: NetworkSecurityGroups
+    name: >-
+      deleteMethod(resourceGroupName, networkSecurityGroupName, options,
+      options.customHeaders, callback)
+    summary: "The Delete NetworkSecurityGroup operation deletes the specifed network\rsecurity group"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the network security\rgroup."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName, networkSecurityGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      NetworkSecurityGroups.deleteMethod(resourceGroupName,
+      networkSecurityGroupName, options, options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#deleteMethod~client'
+      - 'NetworkSecurityGroups#deleteMethod~callback'
+      - 'NetworkSecurityGroups#deleteMethod~options'
+  - uid: 'NetworkSecurityGroups#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: NetworkSecurityGroups
+    name: >-
+      beginDeleteMethod(resourceGroupName, networkSecurityGroupName, options,
+      options.customHeaders, callback)
+    summary: "The Delete NetworkSecurityGroup operation deletes the specifed network\rsecurity group"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the network security\rgroup."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName, networkSecurityGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      NetworkSecurityGroups.beginDeleteMethod(resourceGroupName,
+      networkSecurityGroupName, options, options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#beginDeleteMethod~client'
+      - 'NetworkSecurityGroups#beginDeleteMethod~callback'
+      - 'NetworkSecurityGroups#beginDeleteMethod~options'
+      - 'NetworkSecurityGroups#beginDeleteMethod~requestUrl'
+      - 'NetworkSecurityGroups#beginDeleteMethod~requestUrl'
+      - 'NetworkSecurityGroups#beginDeleteMethod~requestUrl'
+      - 'NetworkSecurityGroups#beginDeleteMethod~requestUrl'
+      - 'NetworkSecurityGroups#beginDeleteMethod~queryParameters'
+      - 'NetworkSecurityGroups#beginDeleteMethod~requestUrl'
+      - 'NetworkSecurityGroups#beginDeleteMethod~regex'
+      - 'NetworkSecurityGroups#beginDeleteMethod~requestUrl'
+      - 'NetworkSecurityGroups#beginDeleteMethod~httpRequest'
+      - 'NetworkSecurityGroups#beginDeleteMethod~headerName'
+  - uid: 'NetworkSecurityGroups#get'
+    id: get
+    parent: NetworkSecurityGroups
+    name: >-
+      get(resourceGroupName, networkSecurityGroupName, options, options.expand,
+      options.customHeaders, callback)
+    summary: "The Get NetworkSecurityGroups operation retrieves information about the\rspecified network security group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the network security\rgroup."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.expand
+          type: string
+          description: expand references resources.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, networkSecurityGroupName, options,
+        options.expand, options.customHeaders, callback);
+    fullName: >-
+      NetworkSecurityGroups.get(resourceGroupName, networkSecurityGroupName,
+      options, options.expand, options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#get~client'
+      - 'NetworkSecurityGroups#get~callback'
+      - 'NetworkSecurityGroups#get~options'
+      - 'NetworkSecurityGroups#get~expand'
+      - 'NetworkSecurityGroups#get~requestUrl'
+      - 'NetworkSecurityGroups#get~requestUrl'
+      - 'NetworkSecurityGroups#get~requestUrl'
+      - 'NetworkSecurityGroups#get~requestUrl'
+      - 'NetworkSecurityGroups#get~queryParameters'
+      - 'NetworkSecurityGroups#get~requestUrl'
+      - 'NetworkSecurityGroups#get~regex'
+      - 'NetworkSecurityGroups#get~requestUrl'
+      - 'NetworkSecurityGroups#get~httpRequest'
+      - 'NetworkSecurityGroups#get~headerName'
+  - uid: 'NetworkSecurityGroups#createOrUpdate'
+    id: createOrUpdate
+    parent: NetworkSecurityGroups
+    name: >-
+      createOrUpdate(resourceGroupName, networkSecurityGroupName, parameters,
+      parameters.securityRules, parameters.defaultSecurityRules,
+      parameters.networkInterfaces, parameters.subnets, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put NetworkSecurityGroup operation creates/updates a network security\rgroupin the specified resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the network security\rgroup."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/update Network\rSecurity Group operation"
+        - id: parameters.securityRules
+          type: array
+          description: "Gets or sets Security rules of\rnetwork security group"
+        - id: parameters.defaultSecurityRules
+          type: array
+          description: "Gets or sets Default\rsecurity rules of network security group"
+        - id: parameters.networkInterfaces
+          type: array
+          description: "Gets collection of references\rto Network Interfaces"
+        - id: parameters.subnets
+          type: array
+          description: Gets collection of references to subnets
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the network security group resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName, networkSecurityGroupName,
+        parameters, parameters.securityRules, parameters.defaultSecurityRules,
+        parameters.networkInterfaces, parameters.subnets,
+        parameters.resourceGuid, parameters.provisioningState, parameters.etag,
+        parameters.id, parameters.location, parameters.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      NetworkSecurityGroups.createOrUpdate(resourceGroupName,
+      networkSecurityGroupName, parameters, parameters.securityRules,
+      parameters.defaultSecurityRules, parameters.networkInterfaces,
+      parameters.subnets, parameters.resourceGuid, parameters.provisioningState,
+      parameters.etag, parameters.id, parameters.location, parameters.tags,
+      options, options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#createOrUpdate~client'
+      - 'NetworkSecurityGroups#createOrUpdate~callback'
+      - 'NetworkSecurityGroups#createOrUpdate~options'
+  - uid: 'NetworkSecurityGroups#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: NetworkSecurityGroups
+    name: >-
+      beginCreateOrUpdate(resourceGroupName, networkSecurityGroupName,
+      parameters, parameters.securityRules, parameters.defaultSecurityRules,
+      parameters.networkInterfaces, parameters.subnets, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put NetworkSecurityGroup operation creates/updates a network security\rgroupin the specified resource group."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkSecurityGroupName
+          type: string
+          description: "The name of the network security\rgroup."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the create/update Network\rSecurity Group operation"
+        - id: parameters.securityRules
+          type: array
+          description: "Gets or sets Security rules of\rnetwork security group"
+        - id: parameters.defaultSecurityRules
+          type: array
+          description: "Gets or sets Default\rsecurity rules of network security group"
+        - id: parameters.networkInterfaces
+          type: array
+          description: "Gets collection of references\rto Network Interfaces"
+        - id: parameters.subnets
+          type: array
+          description: Gets collection of references to subnets
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the network security group resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the PublicIP resource Updating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName,
+        networkSecurityGroupName, parameters, parameters.securityRules,
+        parameters.defaultSecurityRules, parameters.networkInterfaces,
+        parameters.subnets, parameters.resourceGuid,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      NetworkSecurityGroups.beginCreateOrUpdate(resourceGroupName,
+      networkSecurityGroupName, parameters, parameters.securityRules,
+      parameters.defaultSecurityRules, parameters.networkInterfaces,
+      parameters.subnets, parameters.resourceGuid, parameters.provisioningState,
+      parameters.etag, parameters.id, parameters.location, parameters.tags,
+      options, options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~client'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~callback'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~options'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestUrl'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestUrl'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestUrl'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestUrl'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~queryParameters'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestUrl'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~regex'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestUrl'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~httpRequest'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~headerName'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestContent'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestModel'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestModelMapper'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestModel'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~requestContent'
+      - 'NetworkSecurityGroups#beginCreateOrUpdate~serializationError'
+  - uid: 'NetworkSecurityGroups#listAll'
+    id: listAll
+    parent: NetworkSecurityGroups
+    name: 'listAll(options, options.customHeaders, callback)'
+    summary: "The list NetworkSecurityGroups returns all network security groups in a\rsubscription"
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listAll(options, options.customHeaders, callback);'
+    fullName: 'NetworkSecurityGroups.listAll(options, options.customHeaders, callback)'
+    children:
+      - 'NetworkSecurityGroups#listAll~client'
+      - 'NetworkSecurityGroups#listAll~callback'
+      - 'NetworkSecurityGroups#listAll~options'
+      - 'NetworkSecurityGroups#listAll~requestUrl'
+      - 'NetworkSecurityGroups#listAll~requestUrl'
+      - 'NetworkSecurityGroups#listAll~queryParameters'
+      - 'NetworkSecurityGroups#listAll~requestUrl'
+      - 'NetworkSecurityGroups#listAll~regex'
+      - 'NetworkSecurityGroups#listAll~requestUrl'
+      - 'NetworkSecurityGroups#listAll~httpRequest'
+      - 'NetworkSecurityGroups#listAll~headerName'
+  - uid: 'NetworkSecurityGroups#list'
+    id: list
+    parent: NetworkSecurityGroups
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: "The list NetworkSecurityGroups returns all network security groups in a\rresource group"
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      NetworkSecurityGroups.list(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#list~client'
+      - 'NetworkSecurityGroups#list~callback'
+      - 'NetworkSecurityGroups#list~options'
+      - 'NetworkSecurityGroups#list~requestUrl'
+      - 'NetworkSecurityGroups#list~requestUrl'
+      - 'NetworkSecurityGroups#list~requestUrl'
+      - 'NetworkSecurityGroups#list~queryParameters'
+      - 'NetworkSecurityGroups#list~requestUrl'
+      - 'NetworkSecurityGroups#list~regex'
+      - 'NetworkSecurityGroups#list~requestUrl'
+      - 'NetworkSecurityGroups#list~httpRequest'
+      - 'NetworkSecurityGroups#list~headerName'
+  - uid: 'NetworkSecurityGroups#listAllNext'
+    id: listAllNext
+    parent: NetworkSecurityGroups
+    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The list NetworkSecurityGroups returns all network security groups in a\rsubscription"
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAllNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      NetworkSecurityGroups.listAllNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#listAllNext~client'
+      - 'NetworkSecurityGroups#listAllNext~callback'
+      - 'NetworkSecurityGroups#listAllNext~options'
+      - 'NetworkSecurityGroups#listAllNext~requestUrl'
+      - 'NetworkSecurityGroups#listAllNext~requestUrl'
+      - 'NetworkSecurityGroups#listAllNext~regex'
+      - 'NetworkSecurityGroups#listAllNext~requestUrl'
+      - 'NetworkSecurityGroups#listAllNext~httpRequest'
+      - 'NetworkSecurityGroups#listAllNext~headerName'
+  - uid: 'NetworkSecurityGroups#listNext'
+    id: listNext
+    parent: NetworkSecurityGroups
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The list NetworkSecurityGroups returns all network security groups in a\rresource group"
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      NetworkSecurityGroups.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'NetworkSecurityGroups#listNext~client'
+      - 'NetworkSecurityGroups#listNext~callback'
+      - 'NetworkSecurityGroups#listNext~options'
+      - 'NetworkSecurityGroups#listNext~requestUrl'
+      - 'NetworkSecurityGroups#listNext~requestUrl'
+      - 'NetworkSecurityGroups#listNext~regex'
+      - 'NetworkSecurityGroups#listNext~requestUrl'
+      - 'NetworkSecurityGroups#listNext~httpRequest'
+      - 'NetworkSecurityGroups#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true

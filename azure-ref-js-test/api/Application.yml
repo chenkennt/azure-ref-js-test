@@ -1,0 +1,319 @@
+items:
+  - uid: Application
+    id: Application
+    name: Application
+    type: Class
+    syntax:
+      content: Application
+    fullName: Application
+    children:
+      - 'Application#client'
+      - 'Application#list'
+      - 'Application#get'
+      - 'Application#listNext'
+  - uid: 'Application#client'
+    id: client
+    parent: Application
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Application.client
+  - uid: 'Application#list'
+    id: list
+    parent: Application
+    name: >-
+      list(options, options.applicationListOptions,
+      options.applicationListOptions.maxResults,
+      options.applicationListOptions.timeout,
+      options.applicationListOptions.clientRequestId,
+      options.applicationListOptions.returnClientRequestId,
+      options.applicationListOptions.ocpDate, options.customHeaders, callback)
+    summary: Lists all of the applications available in the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.applicationListOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.applicationListOptions.maxResults
+          type: number
+          description: "The maximum\rnumber of items to return in the response."
+        - id: options.applicationListOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.applicationListOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.applicationListOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.applicationListOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(options, options.applicationListOptions,
+        options.applicationListOptions.maxResults,
+        options.applicationListOptions.timeout,
+        options.applicationListOptions.clientRequestId,
+        options.applicationListOptions.returnClientRequestId,
+        options.applicationListOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      Application.list(options, options.applicationListOptions,
+      options.applicationListOptions.maxResults,
+      options.applicationListOptions.timeout,
+      options.applicationListOptions.clientRequestId,
+      options.applicationListOptions.returnClientRequestId,
+      options.applicationListOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'Application#list~client'
+      - 'Application#list~callback'
+      - 'Application#list~options'
+      - 'Application#list~applicationListOptions'
+      - 'Application#list~maxResults'
+      - 'Application#list~timeout'
+      - 'Application#list~clientRequestId'
+      - 'Application#list~returnClientRequestId'
+      - 'Application#list~ocpDate'
+      - 'Application#list~maxResults'
+      - 'Application#list~timeout'
+      - 'Application#list~clientRequestId'
+      - 'Application#list~returnClientRequestId'
+      - 'Application#list~ocpDate'
+      - 'Application#list~requestUrl'
+      - 'Application#list~queryParameters'
+      - 'Application#list~requestUrl'
+      - 'Application#list~regex'
+      - 'Application#list~requestUrl'
+      - 'Application#list~httpRequest'
+      - 'Application#list~headerName'
+  - uid: 'Application#get'
+    id: get
+    parent: Application
+    name: >-
+      get(applicationId, options, options.applicationGetOptions,
+      options.applicationGetOptions.timeout,
+      options.applicationGetOptions.clientRequestId,
+      options.applicationGetOptions.returnClientRequestId,
+      options.applicationGetOptions.ocpDate, options.customHeaders, callback)
+    summary: Gets information about the specified application.
+    type: Method
+    syntax:
+      parameters:
+        - id: applicationId
+          type: string
+          description: The id of the application.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.applicationGetOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.applicationGetOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.applicationGetOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.applicationGetOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.applicationGetOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationSummary} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(applicationId, options, options.applicationGetOptions,
+        options.applicationGetOptions.timeout,
+        options.applicationGetOptions.clientRequestId,
+        options.applicationGetOptions.returnClientRequestId,
+        options.applicationGetOptions.ocpDate, options.customHeaders, callback);
+    fullName: >-
+      Application.get(applicationId, options, options.applicationGetOptions,
+      options.applicationGetOptions.timeout,
+      options.applicationGetOptions.clientRequestId,
+      options.applicationGetOptions.returnClientRequestId,
+      options.applicationGetOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'Application#get~client'
+      - 'Application#get~callback'
+      - 'Application#get~options'
+      - 'Application#get~applicationGetOptions'
+      - 'Application#get~timeout'
+      - 'Application#get~clientRequestId'
+      - 'Application#get~returnClientRequestId'
+      - 'Application#get~ocpDate'
+      - 'Application#get~timeout'
+      - 'Application#get~clientRequestId'
+      - 'Application#get~returnClientRequestId'
+      - 'Application#get~ocpDate'
+      - 'Application#get~requestUrl'
+      - 'Application#get~requestUrl'
+      - 'Application#get~queryParameters'
+      - 'Application#get~requestUrl'
+      - 'Application#get~regex'
+      - 'Application#get~requestUrl'
+      - 'Application#get~httpRequest'
+      - 'Application#get~headerName'
+  - uid: 'Application#listNext'
+    id: listNext
+    parent: Application
+    name: >-
+      listNext(nextPageLink, options, options.applicationListNextOptions,
+      options.applicationListNextOptions.clientRequestId,
+      options.applicationListNextOptions.returnClientRequestId,
+      options.applicationListNextOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Lists all of the applications available in the specified account.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.applicationListNextOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.applicationListNextOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.applicationListNextOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.applicationListNextOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options,
+        options.applicationListNextOptions,
+        options.applicationListNextOptions.clientRequestId,
+        options.applicationListNextOptions.returnClientRequestId,
+        options.applicationListNextOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      Application.listNext(nextPageLink, options,
+      options.applicationListNextOptions,
+      options.applicationListNextOptions.clientRequestId,
+      options.applicationListNextOptions.returnClientRequestId,
+      options.applicationListNextOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'Application#listNext~client'
+      - 'Application#listNext~callback'
+      - 'Application#listNext~options'
+      - 'Application#listNext~applicationListNextOptions'
+      - 'Application#listNext~clientRequestId'
+      - 'Application#listNext~returnClientRequestId'
+      - 'Application#listNext~ocpDate'
+      - 'Application#listNext~clientRequestId'
+      - 'Application#listNext~returnClientRequestId'
+      - 'Application#listNext~ocpDate'
+      - 'Application#listNext~requestUrl'
+      - 'Application#listNext~requestUrl'
+      - 'Application#listNext~regex'
+      - 'Application#listNext~requestUrl'
+      - 'Application#listNext~httpRequest'
+      - 'Application#listNext~headerName'
+  - uid: 'Application#mapper'
+    id: mapper
+    parent: Application
+    name: mapper()
+    summary: Defines the metadata of Application
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: metadata of Application
+      content: function mapper();
+    fullName: Application.mapper()
+  - uid: 'Application#mapper'
+    id: mapper
+    parent: Application
+    name: mapper()
+    summary: Defines the metadata of Application
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: metadata of Application
+      content: function mapper();
+    fullName: Application.mapper()
+  - uid: 'Application#mapper'
+    id: mapper
+    parent: Application
+    name: mapper()
+    summary: Defines the metadata of Application
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: metadata of Application
+      content: function mapper();
+    fullName: Application.mapper()
+  - uid: 'Application#mapper'
+    id: mapper
+    parent: Application
+    name: mapper()
+    summary: Defines the metadata of Application
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: metadata of Application
+      content: function mapper();
+    fullName: Application.mapper()
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

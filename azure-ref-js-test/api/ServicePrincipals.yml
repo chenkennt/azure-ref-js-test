@@ -1,0 +1,255 @@
+items:
+  - uid: ServicePrincipals
+    id: ServicePrincipals
+    name: ServicePrincipals
+    type: Class
+    syntax:
+      content: ServicePrincipals
+    fullName: ServicePrincipals
+    children:
+      - 'ServicePrincipals#client'
+      - 'ServicePrincipals#create'
+      - 'ServicePrincipals#list'
+      - 'ServicePrincipals#deleteMethod'
+      - 'ServicePrincipals#get'
+      - 'ServicePrincipals#listNext'
+  - uid: 'ServicePrincipals#client'
+    id: client
+    parent: ServicePrincipals
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ServicePrincipals.client
+  - uid: 'ServicePrincipals#create'
+    id: create
+    parent: ServicePrincipals
+    name: >-
+      create(parameters, parameters.appId, parameters.accountEnabled, options,
+      options.customHeaders, callback)
+    summary: Creates a service principal in the  directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: Parameters to create a service principal.
+        - id: parameters.appId
+          type: string
+          description: Gets or sets application Id
+        - id: parameters.accountEnabled
+          type: boolean
+          description: "Specifies if the account is\renabled"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServicePrincipal} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(parameters, parameters.appId, parameters.accountEnabled,
+        options, options.customHeaders, callback);
+    fullName: >-
+      ServicePrincipals.create(parameters, parameters.appId,
+      parameters.accountEnabled, options, options.customHeaders, callback)
+    children:
+      - 'ServicePrincipals#create~client'
+      - 'ServicePrincipals#create~callback'
+      - 'ServicePrincipals#create~options'
+      - 'ServicePrincipals#create~apiVersion'
+      - 'ServicePrincipals#create~requestUrl'
+      - 'ServicePrincipals#create~requestUrl'
+      - 'ServicePrincipals#create~queryParameters'
+      - 'ServicePrincipals#create~requestUrl'
+      - 'ServicePrincipals#create~regex'
+      - 'ServicePrincipals#create~requestUrl'
+      - 'ServicePrincipals#create~httpRequest'
+      - 'ServicePrincipals#create~headerName'
+      - 'ServicePrincipals#create~requestContent'
+      - 'ServicePrincipals#create~requestModel'
+      - 'ServicePrincipals#create~requestModelMapper'
+      - 'ServicePrincipals#create~requestModel'
+      - 'ServicePrincipals#create~requestContent'
+      - 'ServicePrincipals#create~serializationError'
+  - uid: 'ServicePrincipals#list'
+    id: list
+    parent: ServicePrincipals
+    name: 'list(options, options.filter, options.customHeaders, callback)'
+    summary: Gets list of service principals from the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServicePrincipalListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.filter, options.customHeaders, callback);'
+    fullName: >-
+      ServicePrincipals.list(options, options.filter, options.customHeaders,
+      callback)
+    children:
+      - 'ServicePrincipals#list~client'
+      - 'ServicePrincipals#list~callback'
+      - 'ServicePrincipals#list~options'
+      - 'ServicePrincipals#list~filter'
+      - 'ServicePrincipals#list~apiVersion'
+      - 'ServicePrincipals#list~requestUrl'
+      - 'ServicePrincipals#list~requestUrl'
+      - 'ServicePrincipals#list~queryParameters'
+      - 'ServicePrincipals#list~requestUrl'
+      - 'ServicePrincipals#list~regex'
+      - 'ServicePrincipals#list~requestUrl'
+      - 'ServicePrincipals#list~httpRequest'
+      - 'ServicePrincipals#list~headerName'
+  - uid: 'ServicePrincipals#deleteMethod'
+    id: deleteMethod
+    parent: ServicePrincipals
+    name: 'deleteMethod(objectId, options, options.customHeaders, callback)'
+    summary: Deletes service principal from the directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: Object id to delete service principal information.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(objectId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ServicePrincipals.deleteMethod(objectId, options, options.customHeaders,
+      callback)
+    children:
+      - 'ServicePrincipals#deleteMethod~client'
+      - 'ServicePrincipals#deleteMethod~callback'
+      - 'ServicePrincipals#deleteMethod~options'
+      - 'ServicePrincipals#deleteMethod~apiVersion'
+      - 'ServicePrincipals#deleteMethod~requestUrl'
+      - 'ServicePrincipals#deleteMethod~requestUrl'
+      - 'ServicePrincipals#deleteMethod~requestUrl'
+      - 'ServicePrincipals#deleteMethod~queryParameters'
+      - 'ServicePrincipals#deleteMethod~requestUrl'
+      - 'ServicePrincipals#deleteMethod~regex'
+      - 'ServicePrincipals#deleteMethod~requestUrl'
+      - 'ServicePrincipals#deleteMethod~httpRequest'
+      - 'ServicePrincipals#deleteMethod~headerName'
+  - uid: 'ServicePrincipals#get'
+    id: get
+    parent: ServicePrincipals
+    name: 'get(objectId, options, options.customHeaders, callback)'
+    summary: Gets service principal information from the directory.
+    type: Method
+    syntax:
+      parameters:
+        - id: objectId
+          type: string
+          description: Object id to get service principal information.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServicePrincipal} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function get(objectId, options, options.customHeaders, callback);'
+    fullName: 'ServicePrincipals.get(objectId, options, options.customHeaders, callback)'
+    children:
+      - 'ServicePrincipals#get~client'
+      - 'ServicePrincipals#get~callback'
+      - 'ServicePrincipals#get~options'
+      - 'ServicePrincipals#get~apiVersion'
+      - 'ServicePrincipals#get~requestUrl'
+      - 'ServicePrincipals#get~requestUrl'
+      - 'ServicePrincipals#get~requestUrl'
+      - 'ServicePrincipals#get~queryParameters'
+      - 'ServicePrincipals#get~requestUrl'
+      - 'ServicePrincipals#get~regex'
+      - 'ServicePrincipals#get~requestUrl'
+      - 'ServicePrincipals#get~httpRequest'
+      - 'ServicePrincipals#get~headerName'
+  - uid: 'ServicePrincipals#listNext'
+    id: listNext
+    parent: ServicePrincipals
+    name: 'listNext(nextLink, options, options.customHeaders, callback)'
+    summary: Gets list of service principals from the current tenant.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: Next link for list operation.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServicePrincipalListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listNext(nextLink, options, options.customHeaders, callback);'
+    fullName: >-
+      ServicePrincipals.listNext(nextLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'ServicePrincipals#listNext~client'
+      - 'ServicePrincipals#listNext~callback'
+      - 'ServicePrincipals#listNext~options'
+      - 'ServicePrincipals#listNext~apiVersion'
+      - 'ServicePrincipals#listNext~requestUrl'
+      - 'ServicePrincipals#listNext~requestUrl'
+      - 'ServicePrincipals#listNext~requestUrl'
+      - 'ServicePrincipals#listNext~queryParameters'
+      - 'ServicePrincipals#listNext~requestUrl'
+      - 'ServicePrincipals#listNext~regex'
+      - 'ServicePrincipals#listNext~requestUrl'
+      - 'ServicePrincipals#listNext~httpRequest'
+      - 'ServicePrincipals#listNext~headerName'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

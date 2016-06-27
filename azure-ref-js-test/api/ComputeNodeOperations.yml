@@ -1,0 +1,1181 @@
+items:
+  - uid: ComputeNodeOperations
+    id: ComputeNodeOperations
+    name: ComputeNodeOperations
+    type: Class
+    syntax:
+      content: ComputeNodeOperations
+    fullName: ComputeNodeOperations
+    children:
+      - 'ComputeNodeOperations#client'
+      - 'ComputeNodeOperations#addUser'
+      - 'ComputeNodeOperations#deleteUser'
+      - 'ComputeNodeOperations#updateUser'
+      - 'ComputeNodeOperations#get'
+      - 'ComputeNodeOperations#reboot'
+      - 'ComputeNodeOperations#reimage'
+      - 'ComputeNodeOperations#disableScheduling'
+      - 'ComputeNodeOperations#enableScheduling'
+      - 'ComputeNodeOperations#getRemoteLoginSettings'
+      - 'ComputeNodeOperations#getRemoteDesktop'
+      - 'ComputeNodeOperations#list'
+      - 'ComputeNodeOperations#listNext'
+  - uid: 'ComputeNodeOperations#client'
+    id: client
+    parent: ComputeNodeOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ComputeNodeOperations.client
+  - uid: 'ComputeNodeOperations#addUser'
+    id: addUser
+    parent: ComputeNodeOperations
+    name: >-
+      addUser(poolId, nodeId, user, user.name, user.isAdmin, user.expiryTime,
+      user.password, user.sshPublicKey, options,
+      options.computeNodeAddUserOptions,
+      options.computeNodeAddUserOptions.timeout,
+      options.computeNodeAddUserOptions.clientRequestId,
+      options.computeNodeAddUserOptions.returnClientRequestId,
+      options.computeNodeAddUserOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Adds a user account to the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the machine on which you want to create a\ruser account."
+        - id: user
+          type: object
+          description: The user account to be created.
+        - id: user.name
+          type: string
+          description: The user name of the account.
+        - id: user.isAdmin
+          type: boolean
+          description: "Whether the account should be an\radministrator on the compute node."
+        - id: user.expiryTime
+          type: date
+          description: "The time at which the account should\rexpire. If omitted, the default is 1 day from the current time."
+        - id: user.password
+          type: string
+          description: The password of the account.
+        - id: user.sshPublicKey
+          type: string
+          description: "The SSH public key that can be used for\rremote login to the compute node."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeAddUserOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.computeNodeAddUserOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.computeNodeAddUserOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeAddUserOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeAddUserOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function addUser(poolId, nodeId, user, user.name, user.isAdmin,
+        user.expiryTime, user.password, user.sshPublicKey, options,
+        options.computeNodeAddUserOptions,
+        options.computeNodeAddUserOptions.timeout,
+        options.computeNodeAddUserOptions.clientRequestId,
+        options.computeNodeAddUserOptions.returnClientRequestId,
+        options.computeNodeAddUserOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      ComputeNodeOperations.addUser(poolId, nodeId, user, user.name,
+      user.isAdmin, user.expiryTime, user.password, user.sshPublicKey, options,
+      options.computeNodeAddUserOptions,
+      options.computeNodeAddUserOptions.timeout,
+      options.computeNodeAddUserOptions.clientRequestId,
+      options.computeNodeAddUserOptions.returnClientRequestId,
+      options.computeNodeAddUserOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'ComputeNodeOperations#addUser~client'
+      - 'ComputeNodeOperations#addUser~callback'
+      - 'ComputeNodeOperations#addUser~options'
+      - 'ComputeNodeOperations#addUser~computeNodeAddUserOptions'
+      - 'ComputeNodeOperations#addUser~timeout'
+      - 'ComputeNodeOperations#addUser~clientRequestId'
+      - 'ComputeNodeOperations#addUser~returnClientRequestId'
+      - 'ComputeNodeOperations#addUser~ocpDate'
+      - 'ComputeNodeOperations#addUser~timeout'
+      - 'ComputeNodeOperations#addUser~clientRequestId'
+      - 'ComputeNodeOperations#addUser~returnClientRequestId'
+      - 'ComputeNodeOperations#addUser~ocpDate'
+      - 'ComputeNodeOperations#addUser~requestUrl'
+      - 'ComputeNodeOperations#addUser~requestUrl'
+      - 'ComputeNodeOperations#addUser~requestUrl'
+      - 'ComputeNodeOperations#addUser~queryParameters'
+      - 'ComputeNodeOperations#addUser~requestUrl'
+      - 'ComputeNodeOperations#addUser~regex'
+      - 'ComputeNodeOperations#addUser~requestUrl'
+      - 'ComputeNodeOperations#addUser~httpRequest'
+      - 'ComputeNodeOperations#addUser~headerName'
+      - 'ComputeNodeOperations#addUser~requestContent'
+      - 'ComputeNodeOperations#addUser~requestModel'
+      - 'ComputeNodeOperations#addUser~requestModelMapper'
+      - 'ComputeNodeOperations#addUser~requestModel'
+      - 'ComputeNodeOperations#addUser~requestContent'
+      - 'ComputeNodeOperations#addUser~serializationError'
+  - uid: 'ComputeNodeOperations#deleteUser'
+    id: deleteUser
+    parent: ComputeNodeOperations
+    name: >-
+      deleteUser(poolId, nodeId, userName, options,
+      options.computeNodeDeleteUserOptions,
+      options.computeNodeDeleteUserOptions.timeout,
+      options.computeNodeDeleteUserOptions.clientRequestId,
+      options.computeNodeDeleteUserOptions.returnClientRequestId,
+      options.computeNodeDeleteUserOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Deletes a user account from the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the machine on which you want to delete a\ruser account."
+        - id: userName
+          type: string
+          description: The name of the user account to delete.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeDeleteUserOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.computeNodeDeleteUserOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.computeNodeDeleteUserOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeDeleteUserOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.computeNodeDeleteUserOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteUser(poolId, nodeId, userName, options,
+        options.computeNodeDeleteUserOptions,
+        options.computeNodeDeleteUserOptions.timeout,
+        options.computeNodeDeleteUserOptions.clientRequestId,
+        options.computeNodeDeleteUserOptions.returnClientRequestId,
+        options.computeNodeDeleteUserOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      ComputeNodeOperations.deleteUser(poolId, nodeId, userName, options,
+      options.computeNodeDeleteUserOptions,
+      options.computeNodeDeleteUserOptions.timeout,
+      options.computeNodeDeleteUserOptions.clientRequestId,
+      options.computeNodeDeleteUserOptions.returnClientRequestId,
+      options.computeNodeDeleteUserOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'ComputeNodeOperations#deleteUser~client'
+      - 'ComputeNodeOperations#deleteUser~callback'
+      - 'ComputeNodeOperations#deleteUser~options'
+      - 'ComputeNodeOperations#deleteUser~computeNodeDeleteUserOptions'
+      - 'ComputeNodeOperations#deleteUser~timeout'
+      - 'ComputeNodeOperations#deleteUser~clientRequestId'
+      - 'ComputeNodeOperations#deleteUser~returnClientRequestId'
+      - 'ComputeNodeOperations#deleteUser~ocpDate'
+      - 'ComputeNodeOperations#deleteUser~timeout'
+      - 'ComputeNodeOperations#deleteUser~clientRequestId'
+      - 'ComputeNodeOperations#deleteUser~returnClientRequestId'
+      - 'ComputeNodeOperations#deleteUser~ocpDate'
+      - 'ComputeNodeOperations#deleteUser~requestUrl'
+      - 'ComputeNodeOperations#deleteUser~requestUrl'
+      - 'ComputeNodeOperations#deleteUser~requestUrl'
+      - 'ComputeNodeOperations#deleteUser~requestUrl'
+      - 'ComputeNodeOperations#deleteUser~queryParameters'
+      - 'ComputeNodeOperations#deleteUser~requestUrl'
+      - 'ComputeNodeOperations#deleteUser~regex'
+      - 'ComputeNodeOperations#deleteUser~requestUrl'
+      - 'ComputeNodeOperations#deleteUser~httpRequest'
+      - 'ComputeNodeOperations#deleteUser~headerName'
+  - uid: 'ComputeNodeOperations#updateUser'
+    id: updateUser
+    parent: ComputeNodeOperations
+    name: >-
+      updateUser(poolId, nodeId, userName, nodeUpdateUserParameter,
+      nodeUpdateUserParameter.password, nodeUpdateUserParameter.expiryTime,
+      nodeUpdateUserParameter.sshPublicKey, options,
+      options.computeNodeUpdateUserOptions,
+      options.computeNodeUpdateUserOptions.timeout,
+      options.computeNodeUpdateUserOptions.clientRequestId,
+      options.computeNodeUpdateUserOptions.returnClientRequestId,
+      options.computeNodeUpdateUserOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: "Updates the password or expiration time of a user account on the specified\rcompute node."
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the machine on which you want to update a\ruser account."
+        - id: userName
+          type: string
+          description: The name of the user account to update.
+        - id: nodeUpdateUserParameter
+          type: object
+          description: The parameters for the request.
+        - id: nodeUpdateUserParameter.password
+          type: string
+          description: "The password of the\raccount."
+        - id: nodeUpdateUserParameter.expiryTime
+          type: date
+          description: "The time at which the\raccount should expire. If omitted, the default is 1 day from the current\rtime."
+        - id: nodeUpdateUserParameter.sshPublicKey
+          type: string
+          description: "The SSH public key\rthat can be used for remote login to the compute node."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeUpdateUserOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.computeNodeUpdateUserOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.computeNodeUpdateUserOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeUpdateUserOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the\rserver should return the client-request-id identifier in the response."
+        - id: options.computeNodeUpdateUserOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateUser(poolId, nodeId, userName, nodeUpdateUserParameter,
+        nodeUpdateUserParameter.password, nodeUpdateUserParameter.expiryTime,
+        nodeUpdateUserParameter.sshPublicKey, options,
+        options.computeNodeUpdateUserOptions,
+        options.computeNodeUpdateUserOptions.timeout,
+        options.computeNodeUpdateUserOptions.clientRequestId,
+        options.computeNodeUpdateUserOptions.returnClientRequestId,
+        options.computeNodeUpdateUserOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      ComputeNodeOperations.updateUser(poolId, nodeId, userName,
+      nodeUpdateUserParameter, nodeUpdateUserParameter.password,
+      nodeUpdateUserParameter.expiryTime, nodeUpdateUserParameter.sshPublicKey,
+      options, options.computeNodeUpdateUserOptions,
+      options.computeNodeUpdateUserOptions.timeout,
+      options.computeNodeUpdateUserOptions.clientRequestId,
+      options.computeNodeUpdateUserOptions.returnClientRequestId,
+      options.computeNodeUpdateUserOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'ComputeNodeOperations#updateUser~client'
+      - 'ComputeNodeOperations#updateUser~callback'
+      - 'ComputeNodeOperations#updateUser~options'
+      - 'ComputeNodeOperations#updateUser~computeNodeUpdateUserOptions'
+      - 'ComputeNodeOperations#updateUser~timeout'
+      - 'ComputeNodeOperations#updateUser~clientRequestId'
+      - 'ComputeNodeOperations#updateUser~returnClientRequestId'
+      - 'ComputeNodeOperations#updateUser~ocpDate'
+      - 'ComputeNodeOperations#updateUser~timeout'
+      - 'ComputeNodeOperations#updateUser~clientRequestId'
+      - 'ComputeNodeOperations#updateUser~returnClientRequestId'
+      - 'ComputeNodeOperations#updateUser~ocpDate'
+      - 'ComputeNodeOperations#updateUser~requestUrl'
+      - 'ComputeNodeOperations#updateUser~requestUrl'
+      - 'ComputeNodeOperations#updateUser~requestUrl'
+      - 'ComputeNodeOperations#updateUser~requestUrl'
+      - 'ComputeNodeOperations#updateUser~queryParameters'
+      - 'ComputeNodeOperations#updateUser~requestUrl'
+      - 'ComputeNodeOperations#updateUser~regex'
+      - 'ComputeNodeOperations#updateUser~requestUrl'
+      - 'ComputeNodeOperations#updateUser~httpRequest'
+      - 'ComputeNodeOperations#updateUser~headerName'
+      - 'ComputeNodeOperations#updateUser~requestContent'
+      - 'ComputeNodeOperations#updateUser~requestModel'
+      - 'ComputeNodeOperations#updateUser~requestModelMapper'
+      - 'ComputeNodeOperations#updateUser~requestModel'
+      - 'ComputeNodeOperations#updateUser~requestContent'
+      - 'ComputeNodeOperations#updateUser~serializationError'
+  - uid: 'ComputeNodeOperations#get'
+    id: get
+    parent: ComputeNodeOperations
+    name: >-
+      get(poolId, nodeId, options, options.computeNodeGetOptions,
+      options.computeNodeGetOptions.select,
+      options.computeNodeGetOptions.timeout,
+      options.computeNodeGetOptions.clientRequestId,
+      options.computeNodeGetOptions.returnClientRequestId,
+      options.computeNodeGetOptions.ocpDate, options.customHeaders, callback)
+    summary: Gets information about the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the compute node that you want to get\rinformation about."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeGetOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.computeNodeGetOptions.select
+          type: string
+          description: "An OData $select\rclause."
+        - id: options.computeNodeGetOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.computeNodeGetOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeGetOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeGetOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNode} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(poolId, nodeId, options, options.computeNodeGetOptions,
+        options.computeNodeGetOptions.select,
+        options.computeNodeGetOptions.timeout,
+        options.computeNodeGetOptions.clientRequestId,
+        options.computeNodeGetOptions.returnClientRequestId,
+        options.computeNodeGetOptions.ocpDate, options.customHeaders, callback);
+    fullName: >-
+      ComputeNodeOperations.get(poolId, nodeId, options,
+      options.computeNodeGetOptions, options.computeNodeGetOptions.select,
+      options.computeNodeGetOptions.timeout,
+      options.computeNodeGetOptions.clientRequestId,
+      options.computeNodeGetOptions.returnClientRequestId,
+      options.computeNodeGetOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'ComputeNodeOperations#get~client'
+      - 'ComputeNodeOperations#get~callback'
+      - 'ComputeNodeOperations#get~options'
+      - 'ComputeNodeOperations#get~computeNodeGetOptions'
+      - 'ComputeNodeOperations#get~select'
+      - 'ComputeNodeOperations#get~timeout'
+      - 'ComputeNodeOperations#get~clientRequestId'
+      - 'ComputeNodeOperations#get~returnClientRequestId'
+      - 'ComputeNodeOperations#get~ocpDate'
+      - 'ComputeNodeOperations#get~select'
+      - 'ComputeNodeOperations#get~timeout'
+      - 'ComputeNodeOperations#get~clientRequestId'
+      - 'ComputeNodeOperations#get~returnClientRequestId'
+      - 'ComputeNodeOperations#get~ocpDate'
+      - 'ComputeNodeOperations#get~requestUrl'
+      - 'ComputeNodeOperations#get~requestUrl'
+      - 'ComputeNodeOperations#get~requestUrl'
+      - 'ComputeNodeOperations#get~queryParameters'
+      - 'ComputeNodeOperations#get~requestUrl'
+      - 'ComputeNodeOperations#get~regex'
+      - 'ComputeNodeOperations#get~requestUrl'
+      - 'ComputeNodeOperations#get~httpRequest'
+      - 'ComputeNodeOperations#get~headerName'
+  - uid: 'ComputeNodeOperations#reboot'
+    id: reboot
+    parent: ComputeNodeOperations
+    name: >-
+      reboot(poolId, nodeId, options, options.nodeRebootOption,
+      options.computeNodeRebootOptions,
+      options.computeNodeRebootOptions.timeout,
+      options.computeNodeRebootOptions.clientRequestId,
+      options.computeNodeRebootOptions.returnClientRequestId,
+      options.computeNodeRebootOptions.ocpDate, options.customHeaders, callback)
+    summary: Restarts the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: The id of the compute node that you want to restart.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.nodeRebootOption
+          type: string
+          description: "When to reboot the compute node\rand what to do with currently running tasks. The default value is requeue.\rPossible values include: 'requeue', 'terminate', 'taskcompletion',\r'retaineddata'"
+        - id: options.computeNodeRebootOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.computeNodeRebootOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.computeNodeRebootOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeRebootOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeRebootOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function reboot(poolId, nodeId, options, options.nodeRebootOption,
+        options.computeNodeRebootOptions,
+        options.computeNodeRebootOptions.timeout,
+        options.computeNodeRebootOptions.clientRequestId,
+        options.computeNodeRebootOptions.returnClientRequestId,
+        options.computeNodeRebootOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      ComputeNodeOperations.reboot(poolId, nodeId, options,
+      options.nodeRebootOption, options.computeNodeRebootOptions,
+      options.computeNodeRebootOptions.timeout,
+      options.computeNodeRebootOptions.clientRequestId,
+      options.computeNodeRebootOptions.returnClientRequestId,
+      options.computeNodeRebootOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'ComputeNodeOperations#reboot~client'
+      - 'ComputeNodeOperations#reboot~callback'
+      - 'ComputeNodeOperations#reboot~options'
+      - 'ComputeNodeOperations#reboot~nodeRebootOption'
+      - 'ComputeNodeOperations#reboot~computeNodeRebootOptions'
+      - 'ComputeNodeOperations#reboot~allowedValues'
+      - 'ComputeNodeOperations#reboot~timeout'
+      - 'ComputeNodeOperations#reboot~clientRequestId'
+      - 'ComputeNodeOperations#reboot~returnClientRequestId'
+      - 'ComputeNodeOperations#reboot~ocpDate'
+      - 'ComputeNodeOperations#reboot~nodeRebootParameter'
+      - 'ComputeNodeOperations#reboot~timeout'
+      - 'ComputeNodeOperations#reboot~clientRequestId'
+      - 'ComputeNodeOperations#reboot~returnClientRequestId'
+      - 'ComputeNodeOperations#reboot~ocpDate'
+      - 'ComputeNodeOperations#reboot~nodeRebootParameter'
+      - 'ComputeNodeOperations#reboot~requestUrl'
+      - 'ComputeNodeOperations#reboot~requestUrl'
+      - 'ComputeNodeOperations#reboot~requestUrl'
+      - 'ComputeNodeOperations#reboot~queryParameters'
+      - 'ComputeNodeOperations#reboot~requestUrl'
+      - 'ComputeNodeOperations#reboot~regex'
+      - 'ComputeNodeOperations#reboot~requestUrl'
+      - 'ComputeNodeOperations#reboot~httpRequest'
+      - 'ComputeNodeOperations#reboot~headerName'
+      - 'ComputeNodeOperations#reboot~requestContent'
+      - 'ComputeNodeOperations#reboot~requestModel'
+      - 'ComputeNodeOperations#reboot~requestModelMapper'
+      - 'ComputeNodeOperations#reboot~requestModel'
+      - 'ComputeNodeOperations#reboot~requestContent'
+      - 'ComputeNodeOperations#reboot~serializationError'
+  - uid: 'ComputeNodeOperations#reimage'
+    id: reimage
+    parent: ComputeNodeOperations
+    name: >-
+      reimage(poolId, nodeId, options, options.nodeReimageOption,
+      options.computeNodeReimageOptions,
+      options.computeNodeReimageOptions.timeout,
+      options.computeNodeReimageOptions.clientRequestId,
+      options.computeNodeReimageOptions.returnClientRequestId,
+      options.computeNodeReimageOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Reinstalls the operating system on the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: The id of the compute node that you want to restart.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.nodeReimageOption
+          type: string
+          description: "When to reimage the compute\rnode and what to do with currently running tasks. The default value is\rrequeue. Possible values include: 'requeue', 'terminate',\r'taskcompletion', 'retaineddata'"
+        - id: options.computeNodeReimageOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.computeNodeReimageOptions.timeout
+          type: number
+          description: "The maximum\rtime that the server can spend processing the request, in seconds. The\rdefault is 30 seconds."
+        - id: options.computeNodeReimageOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeReimageOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeReimageOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function reimage(poolId, nodeId, options, options.nodeReimageOption,
+        options.computeNodeReimageOptions,
+        options.computeNodeReimageOptions.timeout,
+        options.computeNodeReimageOptions.clientRequestId,
+        options.computeNodeReimageOptions.returnClientRequestId,
+        options.computeNodeReimageOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      ComputeNodeOperations.reimage(poolId, nodeId, options,
+      options.nodeReimageOption, options.computeNodeReimageOptions,
+      options.computeNodeReimageOptions.timeout,
+      options.computeNodeReimageOptions.clientRequestId,
+      options.computeNodeReimageOptions.returnClientRequestId,
+      options.computeNodeReimageOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'ComputeNodeOperations#reimage~client'
+      - 'ComputeNodeOperations#reimage~callback'
+      - 'ComputeNodeOperations#reimage~options'
+      - 'ComputeNodeOperations#reimage~nodeReimageOption'
+      - 'ComputeNodeOperations#reimage~computeNodeReimageOptions'
+      - 'ComputeNodeOperations#reimage~allowedValues'
+      - 'ComputeNodeOperations#reimage~timeout'
+      - 'ComputeNodeOperations#reimage~clientRequestId'
+      - 'ComputeNodeOperations#reimage~returnClientRequestId'
+      - 'ComputeNodeOperations#reimage~ocpDate'
+      - 'ComputeNodeOperations#reimage~nodeReimageParameter'
+      - 'ComputeNodeOperations#reimage~timeout'
+      - 'ComputeNodeOperations#reimage~clientRequestId'
+      - 'ComputeNodeOperations#reimage~returnClientRequestId'
+      - 'ComputeNodeOperations#reimage~ocpDate'
+      - 'ComputeNodeOperations#reimage~nodeReimageParameter'
+      - 'ComputeNodeOperations#reimage~requestUrl'
+      - 'ComputeNodeOperations#reimage~requestUrl'
+      - 'ComputeNodeOperations#reimage~requestUrl'
+      - 'ComputeNodeOperations#reimage~queryParameters'
+      - 'ComputeNodeOperations#reimage~requestUrl'
+      - 'ComputeNodeOperations#reimage~regex'
+      - 'ComputeNodeOperations#reimage~requestUrl'
+      - 'ComputeNodeOperations#reimage~httpRequest'
+      - 'ComputeNodeOperations#reimage~headerName'
+      - 'ComputeNodeOperations#reimage~requestContent'
+      - 'ComputeNodeOperations#reimage~requestModel'
+      - 'ComputeNodeOperations#reimage~requestModelMapper'
+      - 'ComputeNodeOperations#reimage~requestModel'
+      - 'ComputeNodeOperations#reimage~requestContent'
+      - 'ComputeNodeOperations#reimage~serializationError'
+  - uid: 'ComputeNodeOperations#disableScheduling'
+    id: disableScheduling
+    parent: ComputeNodeOperations
+    name: >-
+      disableScheduling(poolId, nodeId, options,
+      options.nodeDisableSchedulingOption,
+      options.computeNodeDisableSchedulingOptions,
+      options.computeNodeDisableSchedulingOptions.timeout,
+      options.computeNodeDisableSchedulingOptions.clientRequestId,
+      options.computeNodeDisableSchedulingOptions.returnClientRequestId,
+      options.computeNodeDisableSchedulingOptions.ocpDate,
+      options.customHeaders, callback)
+    summary: Disable task scheduling of the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the compute node that you want to disable\rtask scheduling."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.nodeDisableSchedulingOption
+          type: string
+          description: "What to do with\rcurrently running tasks when disable task scheduling on the compute node.\rThe default value is requeue. Possible values include: 'requeue',\r'terminate', 'taskcompletion'"
+        - id: options.computeNodeDisableSchedulingOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.computeNodeDisableSchedulingOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.computeNodeDisableSchedulingOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeDisableSchedulingOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeDisableSchedulingOptions.ocpDate
+          type: date
+          description: "The\rtime the request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function disableScheduling(poolId, nodeId, options,
+        options.nodeDisableSchedulingOption,
+        options.computeNodeDisableSchedulingOptions,
+        options.computeNodeDisableSchedulingOptions.timeout,
+        options.computeNodeDisableSchedulingOptions.clientRequestId,
+        options.computeNodeDisableSchedulingOptions.returnClientRequestId,
+        options.computeNodeDisableSchedulingOptions.ocpDate,
+        options.customHeaders, callback);
+    fullName: >-
+      ComputeNodeOperations.disableScheduling(poolId, nodeId, options,
+      options.nodeDisableSchedulingOption,
+      options.computeNodeDisableSchedulingOptions,
+      options.computeNodeDisableSchedulingOptions.timeout,
+      options.computeNodeDisableSchedulingOptions.clientRequestId,
+      options.computeNodeDisableSchedulingOptions.returnClientRequestId,
+      options.computeNodeDisableSchedulingOptions.ocpDate,
+      options.customHeaders, callback)
+    children:
+      - 'ComputeNodeOperations#disableScheduling~client'
+      - 'ComputeNodeOperations#disableScheduling~callback'
+      - 'ComputeNodeOperations#disableScheduling~options'
+      - 'ComputeNodeOperations#disableScheduling~nodeDisableSchedulingOption'
+      - >-
+        ComputeNodeOperations#disableScheduling~computeNodeDisableSchedulingOptions
+      - 'ComputeNodeOperations#disableScheduling~allowedValues'
+      - 'ComputeNodeOperations#disableScheduling~timeout'
+      - 'ComputeNodeOperations#disableScheduling~clientRequestId'
+      - 'ComputeNodeOperations#disableScheduling~returnClientRequestId'
+      - 'ComputeNodeOperations#disableScheduling~ocpDate'
+      - 'ComputeNodeOperations#disableScheduling~nodeDisableSchedulingParameter'
+      - 'ComputeNodeOperations#disableScheduling~timeout'
+      - 'ComputeNodeOperations#disableScheduling~clientRequestId'
+      - 'ComputeNodeOperations#disableScheduling~returnClientRequestId'
+      - 'ComputeNodeOperations#disableScheduling~ocpDate'
+      - 'ComputeNodeOperations#disableScheduling~nodeDisableSchedulingParameter'
+      - 'ComputeNodeOperations#disableScheduling~requestUrl'
+      - 'ComputeNodeOperations#disableScheduling~requestUrl'
+      - 'ComputeNodeOperations#disableScheduling~requestUrl'
+      - 'ComputeNodeOperations#disableScheduling~queryParameters'
+      - 'ComputeNodeOperations#disableScheduling~requestUrl'
+      - 'ComputeNodeOperations#disableScheduling~regex'
+      - 'ComputeNodeOperations#disableScheduling~requestUrl'
+      - 'ComputeNodeOperations#disableScheduling~httpRequest'
+      - 'ComputeNodeOperations#disableScheduling~headerName'
+      - 'ComputeNodeOperations#disableScheduling~requestContent'
+      - 'ComputeNodeOperations#disableScheduling~requestModel'
+      - 'ComputeNodeOperations#disableScheduling~requestModelMapper'
+      - 'ComputeNodeOperations#disableScheduling~requestModel'
+      - 'ComputeNodeOperations#disableScheduling~requestContent'
+      - 'ComputeNodeOperations#disableScheduling~serializationError'
+  - uid: 'ComputeNodeOperations#enableScheduling'
+    id: enableScheduling
+    parent: ComputeNodeOperations
+    name: >-
+      enableScheduling(poolId, nodeId, options,
+      options.computeNodeEnableSchedulingOptions,
+      options.computeNodeEnableSchedulingOptions.timeout,
+      options.computeNodeEnableSchedulingOptions.clientRequestId,
+      options.computeNodeEnableSchedulingOptions.returnClientRequestId,
+      options.computeNodeEnableSchedulingOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Enable task scheduling of the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the compute node that you want to enable\rtask scheduling."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeEnableSchedulingOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.computeNodeEnableSchedulingOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.computeNodeEnableSchedulingOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeEnableSchedulingOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.computeNodeEnableSchedulingOptions.ocpDate
+          type: date
+          description: "The time\rthe request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function enableScheduling(poolId, nodeId, options,
+        options.computeNodeEnableSchedulingOptions,
+        options.computeNodeEnableSchedulingOptions.timeout,
+        options.computeNodeEnableSchedulingOptions.clientRequestId,
+        options.computeNodeEnableSchedulingOptions.returnClientRequestId,
+        options.computeNodeEnableSchedulingOptions.ocpDate,
+        options.customHeaders, callback);
+    fullName: >-
+      ComputeNodeOperations.enableScheduling(poolId, nodeId, options,
+      options.computeNodeEnableSchedulingOptions,
+      options.computeNodeEnableSchedulingOptions.timeout,
+      options.computeNodeEnableSchedulingOptions.clientRequestId,
+      options.computeNodeEnableSchedulingOptions.returnClientRequestId,
+      options.computeNodeEnableSchedulingOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'ComputeNodeOperations#enableScheduling~client'
+      - 'ComputeNodeOperations#enableScheduling~callback'
+      - 'ComputeNodeOperations#enableScheduling~options'
+      - >-
+        ComputeNodeOperations#enableScheduling~computeNodeEnableSchedulingOptions
+      - 'ComputeNodeOperations#enableScheduling~timeout'
+      - 'ComputeNodeOperations#enableScheduling~clientRequestId'
+      - 'ComputeNodeOperations#enableScheduling~returnClientRequestId'
+      - 'ComputeNodeOperations#enableScheduling~ocpDate'
+      - 'ComputeNodeOperations#enableScheduling~timeout'
+      - 'ComputeNodeOperations#enableScheduling~clientRequestId'
+      - 'ComputeNodeOperations#enableScheduling~returnClientRequestId'
+      - 'ComputeNodeOperations#enableScheduling~ocpDate'
+      - 'ComputeNodeOperations#enableScheduling~requestUrl'
+      - 'ComputeNodeOperations#enableScheduling~requestUrl'
+      - 'ComputeNodeOperations#enableScheduling~requestUrl'
+      - 'ComputeNodeOperations#enableScheduling~queryParameters'
+      - 'ComputeNodeOperations#enableScheduling~requestUrl'
+      - 'ComputeNodeOperations#enableScheduling~regex'
+      - 'ComputeNodeOperations#enableScheduling~requestUrl'
+      - 'ComputeNodeOperations#enableScheduling~httpRequest'
+      - 'ComputeNodeOperations#enableScheduling~headerName'
+  - uid: 'ComputeNodeOperations#getRemoteLoginSettings'
+    id: getRemoteLoginSettings
+    parent: ComputeNodeOperations
+    name: >-
+      getRemoteLoginSettings(poolId, nodeId, options,
+      options.computeNodeGetRemoteLoginSettingsOptions,
+      options.computeNodeGetRemoteLoginSettingsOptions.timeout,
+      options.computeNodeGetRemoteLoginSettingsOptions.clientRequestId,
+      options.computeNodeGetRemoteLoginSettingsOptions.returnClientRequestId,
+      options.computeNodeGetRemoteLoginSettingsOptions.ocpDate,
+      options.customHeaders, callback)
+    summary: Gets the settings required for remote login to a compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the compute node for which to obtain the\rremote login settings."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeGetRemoteLoginSettingsOptions
+          type: object
+          description: Additional parameters for the operation
+        - id: options.computeNodeGetRemoteLoginSettingsOptions.timeout
+          type: number
+          description: "The maximum time that the server can spend processing the request, in\rseconds. The default is 30 seconds."
+        - id: options.computeNodeGetRemoteLoginSettingsOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: >-
+            options.computeNodeGetRemoteLoginSettingsOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeGetRemoteLoginSettingsOptions.ocpDate
+          type: date
+          description: "The time the request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNodeGetRemoteLoginSettingsResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRemoteLoginSettings(poolId, nodeId, options,
+        options.computeNodeGetRemoteLoginSettingsOptions,
+        options.computeNodeGetRemoteLoginSettingsOptions.timeout,
+        options.computeNodeGetRemoteLoginSettingsOptions.clientRequestId,
+        options.computeNodeGetRemoteLoginSettingsOptions.returnClientRequestId,
+        options.computeNodeGetRemoteLoginSettingsOptions.ocpDate,
+        options.customHeaders, callback);
+    fullName: >-
+      ComputeNodeOperations.getRemoteLoginSettings(poolId, nodeId, options,
+      options.computeNodeGetRemoteLoginSettingsOptions,
+      options.computeNodeGetRemoteLoginSettingsOptions.timeout,
+      options.computeNodeGetRemoteLoginSettingsOptions.clientRequestId,
+      options.computeNodeGetRemoteLoginSettingsOptions.returnClientRequestId,
+      options.computeNodeGetRemoteLoginSettingsOptions.ocpDate,
+      options.customHeaders, callback)
+    children:
+      - 'ComputeNodeOperations#getRemoteLoginSettings~client'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~callback'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~options'
+      - >-
+        ComputeNodeOperations#getRemoteLoginSettings~computeNodeGetRemoteLoginSettingsOptions
+      - 'ComputeNodeOperations#getRemoteLoginSettings~timeout'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~clientRequestId'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~returnClientRequestId'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~ocpDate'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~timeout'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~clientRequestId'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~returnClientRequestId'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~ocpDate'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~requestUrl'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~requestUrl'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~requestUrl'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~queryParameters'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~requestUrl'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~regex'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~requestUrl'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~httpRequest'
+      - 'ComputeNodeOperations#getRemoteLoginSettings~headerName'
+  - uid: 'ComputeNodeOperations#getRemoteDesktop'
+    id: getRemoteDesktop
+    parent: ComputeNodeOperations
+    name: >-
+      getRemoteDesktop(poolId, nodeId, options,
+      options.computeNodeGetRemoteDesktopOptions,
+      options.computeNodeGetRemoteDesktopOptions.timeout,
+      options.computeNodeGetRemoteDesktopOptions.clientRequestId,
+      options.computeNodeGetRemoteDesktopOptions.returnClientRequestId,
+      options.computeNodeGetRemoteDesktopOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Gets the Remote Desktop Protocol file for the specified compute node.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool that contains the compute node.
+        - id: nodeId
+          type: string
+          description: "The id of the compute node for which you want to get\rthe Remote Desktop Protocol file."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeGetRemoteDesktopOptions
+          type: object
+          description: "Additional\rparameters for the operation"
+        - id: options.computeNodeGetRemoteDesktopOptions.timeout
+          type: number
+          description: "The\rmaximum time that the server can spend processing the request, in seconds.\rThe default is 30 seconds."
+        - id: options.computeNodeGetRemoteDesktopOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeGetRemoteDesktopOptions.returnClientRequestId
+          type: boolean
+          description: "Whether\rthe server should return the client-request-id identifier in the response."
+        - id: options.computeNodeGetRemoteDesktopOptions.ocpDate
+          type: date
+          description: "The time\rthe request was issued. If not specified, this header will be\rautomatically populated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getRemoteDesktop(poolId, nodeId, options,
+        options.computeNodeGetRemoteDesktopOptions,
+        options.computeNodeGetRemoteDesktopOptions.timeout,
+        options.computeNodeGetRemoteDesktopOptions.clientRequestId,
+        options.computeNodeGetRemoteDesktopOptions.returnClientRequestId,
+        options.computeNodeGetRemoteDesktopOptions.ocpDate,
+        options.customHeaders, callback);
+    fullName: >-
+      ComputeNodeOperations.getRemoteDesktop(poolId, nodeId, options,
+      options.computeNodeGetRemoteDesktopOptions,
+      options.computeNodeGetRemoteDesktopOptions.timeout,
+      options.computeNodeGetRemoteDesktopOptions.clientRequestId,
+      options.computeNodeGetRemoteDesktopOptions.returnClientRequestId,
+      options.computeNodeGetRemoteDesktopOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'ComputeNodeOperations#getRemoteDesktop~client'
+      - 'ComputeNodeOperations#getRemoteDesktop~callback'
+      - 'ComputeNodeOperations#getRemoteDesktop~options'
+      - >-
+        ComputeNodeOperations#getRemoteDesktop~computeNodeGetRemoteDesktopOptions
+      - 'ComputeNodeOperations#getRemoteDesktop~timeout'
+      - 'ComputeNodeOperations#getRemoteDesktop~clientRequestId'
+      - 'ComputeNodeOperations#getRemoteDesktop~returnClientRequestId'
+      - 'ComputeNodeOperations#getRemoteDesktop~ocpDate'
+      - 'ComputeNodeOperations#getRemoteDesktop~timeout'
+      - 'ComputeNodeOperations#getRemoteDesktop~clientRequestId'
+      - 'ComputeNodeOperations#getRemoteDesktop~returnClientRequestId'
+      - 'ComputeNodeOperations#getRemoteDesktop~ocpDate'
+      - 'ComputeNodeOperations#getRemoteDesktop~requestUrl'
+      - 'ComputeNodeOperations#getRemoteDesktop~requestUrl'
+      - 'ComputeNodeOperations#getRemoteDesktop~requestUrl'
+      - 'ComputeNodeOperations#getRemoteDesktop~queryParameters'
+      - 'ComputeNodeOperations#getRemoteDesktop~requestUrl'
+      - 'ComputeNodeOperations#getRemoteDesktop~regex'
+      - 'ComputeNodeOperations#getRemoteDesktop~requestUrl'
+      - 'ComputeNodeOperations#getRemoteDesktop~httpRequest'
+      - 'ComputeNodeOperations#getRemoteDesktop~headerName'
+  - uid: 'ComputeNodeOperations#list'
+    id: list
+    parent: ComputeNodeOperations
+    name: >-
+      list(poolId, options, options.computeNodeListOptions,
+      options.computeNodeListOptions.filter,
+      options.computeNodeListOptions.select,
+      options.computeNodeListOptions.maxResults,
+      options.computeNodeListOptions.timeout,
+      options.computeNodeListOptions.clientRequestId,
+      options.computeNodeListOptions.returnClientRequestId,
+      options.computeNodeListOptions.ocpDate, options.customHeaders, callback)
+    summary: Lists the compute nodes in the specified pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: poolId
+          type: string
+          description: The id of the pool from which you want to list nodes.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeListOptions
+          type: object
+          description: "Additional parameters for\rthe operation"
+        - id: options.computeNodeListOptions.filter
+          type: string
+          description: "An OData $filter\rclause."
+        - id: options.computeNodeListOptions.select
+          type: string
+          description: "An OData $select\rclause."
+        - id: options.computeNodeListOptions.maxResults
+          type: number
+          description: "The maximum\rnumber of items to return in the response."
+        - id: options.computeNodeListOptions.timeout
+          type: number
+          description: "The maximum time\rthat the server can spend processing the request, in seconds. The default\ris 30 seconds."
+        - id: options.computeNodeListOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeListOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeListOptions.ocpDate
+          type: date
+          description: "The time the request\rwas issued. If not specified, this header will be automatically populated\rwith the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNodeListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(poolId, options, options.computeNodeListOptions,
+        options.computeNodeListOptions.filter,
+        options.computeNodeListOptions.select,
+        options.computeNodeListOptions.maxResults,
+        options.computeNodeListOptions.timeout,
+        options.computeNodeListOptions.clientRequestId,
+        options.computeNodeListOptions.returnClientRequestId,
+        options.computeNodeListOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      ComputeNodeOperations.list(poolId, options,
+      options.computeNodeListOptions, options.computeNodeListOptions.filter,
+      options.computeNodeListOptions.select,
+      options.computeNodeListOptions.maxResults,
+      options.computeNodeListOptions.timeout,
+      options.computeNodeListOptions.clientRequestId,
+      options.computeNodeListOptions.returnClientRequestId,
+      options.computeNodeListOptions.ocpDate, options.customHeaders, callback)
+    children:
+      - 'ComputeNodeOperations#list~client'
+      - 'ComputeNodeOperations#list~callback'
+      - 'ComputeNodeOperations#list~options'
+      - 'ComputeNodeOperations#list~computeNodeListOptions'
+      - 'ComputeNodeOperations#list~filter'
+      - 'ComputeNodeOperations#list~select'
+      - 'ComputeNodeOperations#list~maxResults'
+      - 'ComputeNodeOperations#list~timeout'
+      - 'ComputeNodeOperations#list~clientRequestId'
+      - 'ComputeNodeOperations#list~returnClientRequestId'
+      - 'ComputeNodeOperations#list~ocpDate'
+      - 'ComputeNodeOperations#list~filter'
+      - 'ComputeNodeOperations#list~select'
+      - 'ComputeNodeOperations#list~maxResults'
+      - 'ComputeNodeOperations#list~timeout'
+      - 'ComputeNodeOperations#list~clientRequestId'
+      - 'ComputeNodeOperations#list~returnClientRequestId'
+      - 'ComputeNodeOperations#list~ocpDate'
+      - 'ComputeNodeOperations#list~requestUrl'
+      - 'ComputeNodeOperations#list~requestUrl'
+      - 'ComputeNodeOperations#list~queryParameters'
+      - 'ComputeNodeOperations#list~requestUrl'
+      - 'ComputeNodeOperations#list~regex'
+      - 'ComputeNodeOperations#list~requestUrl'
+      - 'ComputeNodeOperations#list~httpRequest'
+      - 'ComputeNodeOperations#list~headerName'
+  - uid: 'ComputeNodeOperations#listNext'
+    id: listNext
+    parent: ComputeNodeOperations
+    name: >-
+      listNext(nextPageLink, options, options.computeNodeListNextOptions,
+      options.computeNodeListNextOptions.clientRequestId,
+      options.computeNodeListNextOptions.returnClientRequestId,
+      options.computeNodeListNextOptions.ocpDate, options.customHeaders,
+      callback)
+    summary: Lists the compute nodes in the specified pool.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.computeNodeListNextOptions
+          type: object
+          description: "Additional parameters\rfor the operation"
+        - id: options.computeNodeListNextOptions.clientRequestId
+          type: string
+          description: "The\rcaller-generated request identity, in the form of a GUID with no\rdecoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0."
+        - id: options.computeNodeListNextOptions.returnClientRequestId
+          type: boolean
+          description: "Whether the server should return the client-request-id identifier in the\rresponse."
+        - id: options.computeNodeListNextOptions.ocpDate
+          type: date
+          description: "The time the\rrequest was issued. If not specified, this header will be automatically\rpopulated with the current system clock time."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNodeListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options,
+        options.computeNodeListNextOptions,
+        options.computeNodeListNextOptions.clientRequestId,
+        options.computeNodeListNextOptions.returnClientRequestId,
+        options.computeNodeListNextOptions.ocpDate, options.customHeaders,
+        callback);
+    fullName: >-
+      ComputeNodeOperations.listNext(nextPageLink, options,
+      options.computeNodeListNextOptions,
+      options.computeNodeListNextOptions.clientRequestId,
+      options.computeNodeListNextOptions.returnClientRequestId,
+      options.computeNodeListNextOptions.ocpDate, options.customHeaders,
+      callback)
+    children:
+      - 'ComputeNodeOperations#listNext~client'
+      - 'ComputeNodeOperations#listNext~callback'
+      - 'ComputeNodeOperations#listNext~options'
+      - 'ComputeNodeOperations#listNext~computeNodeListNextOptions'
+      - 'ComputeNodeOperations#listNext~clientRequestId'
+      - 'ComputeNodeOperations#listNext~returnClientRequestId'
+      - 'ComputeNodeOperations#listNext~ocpDate'
+      - 'ComputeNodeOperations#listNext~clientRequestId'
+      - 'ComputeNodeOperations#listNext~returnClientRequestId'
+      - 'ComputeNodeOperations#listNext~ocpDate'
+      - 'ComputeNodeOperations#listNext~requestUrl'
+      - 'ComputeNodeOperations#listNext~requestUrl'
+      - 'ComputeNodeOperations#listNext~regex'
+      - 'ComputeNodeOperations#listNext~requestUrl'
+      - 'ComputeNodeOperations#listNext~httpRequest'
+      - 'ComputeNodeOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

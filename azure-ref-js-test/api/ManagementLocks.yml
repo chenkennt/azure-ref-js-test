@@ -1,0 +1,835 @@
+items:
+  - uid: ManagementLocks
+    id: ManagementLocks
+    name: ManagementLocks
+    type: Class
+    syntax:
+      content: ManagementLocks
+    fullName: ManagementLocks
+    children:
+      - 'ManagementLocks#client'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel'
+      - 'ManagementLocks#deleteAtResourceLevel'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel'
+      - 'ManagementLocks#deleteAtSubscriptionLevel'
+      - 'ManagementLocks#get'
+      - 'ManagementLocks#deleteAtResourceGroupLevel'
+      - 'ManagementLocks#listAtResourceGroupLevel'
+      - 'ManagementLocks#listAtResourceLevel'
+      - 'ManagementLocks#listNext'
+      - 'ManagementLocks#listAtSubscriptionLevel'
+      - 'ManagementLocks#listAtResourceGroupLevelNext'
+      - 'ManagementLocks#listAtResourceLevelNext'
+      - 'ManagementLocks#listNextNext'
+      - 'ManagementLocks#listAtSubscriptionLevelNext'
+  - uid: 'ManagementLocks#client'
+    id: client
+    parent: ManagementLocks
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ManagementLocks.client
+  - uid: 'ManagementLocks#createOrUpdateAtResourceGroupLevel'
+    id: createOrUpdateAtResourceGroupLevel
+    parent: ManagementLocks
+    name: >-
+      createOrUpdateAtResourceGroupLevel(resourceGroupName, lockName,
+      parameters, parameters.level, parameters.notes, parameters.id,
+      parameters.type, parameters.name, options, options.customHeaders,
+      callback)
+    summary: Create or update a management lock at the resource group level.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The resource group name.
+        - id: lockName
+          type: string
+          description: The lock name.
+        - id: parameters
+          type: object
+          description: The management lock parameters.
+        - id: parameters.level
+          type: string
+          description: "Gets or sets the lock level of the\rmanagement lock. Possible values include: 'NotSpecified', 'CanNotDelete',\r'ReadOnly'"
+        - id: parameters.notes
+          type: string
+          description: "Gets or sets the notes of the management\rlock."
+        - id: parameters.id
+          type: string
+          description: Gets or sets the Id of the lock.
+        - id: parameters.type
+          type: string
+          description: Gets or sets the type of the lock.
+        - id: parameters.name
+          type: string
+          description: Gets or sets the name of the lock.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateAtResourceGroupLevel(resourceGroupName, lockName,
+        parameters, parameters.level, parameters.notes, parameters.id,
+        parameters.type, parameters.name, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ManagementLocks.createOrUpdateAtResourceGroupLevel(resourceGroupName,
+      lockName, parameters, parameters.level, parameters.notes, parameters.id,
+      parameters.type, parameters.name, options, options.customHeaders,
+      callback)
+    children:
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~client'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~callback'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~options'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~queryParameters'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~regex'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~httpRequest'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~headerName'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestContent'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestModel'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestModelMapper'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestModel'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~requestContent'
+      - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~serializationError'
+  - uid: 'ManagementLocks#createOrUpdateAtResourceLevel'
+    id: createOrUpdateAtResourceLevel
+    parent: ManagementLocks
+    name: >-
+      createOrUpdateAtResourceLevel(resourceGroupName,
+      resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
+      lockName, parameters, parameters.level, parameters.notes, parameters.id,
+      parameters.type, parameters.name, options, options.customHeaders,
+      callback)
+    summary: "Create or update a management lock at the resource level or any level below\rresource."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: resourceProviderNamespace
+          type: string
+          description: Resource identity.
+        - id: parentResourcePath
+          type: string
+          description: Resource identity.
+        - id: resourceType
+          type: string
+          description: Resource identity.
+        - id: resourceName
+          type: string
+          description: Resource identity.
+        - id: lockName
+          type: string
+          description: The name of lock.
+        - id: parameters
+          type: object
+          description: Create or update management lock parameters.
+        - id: parameters.level
+          type: string
+          description: "Gets or sets the lock level of the\rmanagement lock. Possible values include: 'NotSpecified', 'CanNotDelete',\r'ReadOnly'"
+        - id: parameters.notes
+          type: string
+          description: "Gets or sets the notes of the management\rlock."
+        - id: parameters.id
+          type: string
+          description: Gets or sets the Id of the lock.
+        - id: parameters.type
+          type: string
+          description: Gets or sets the type of the lock.
+        - id: parameters.name
+          type: string
+          description: Gets or sets the name of the lock.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateAtResourceLevel(resourceGroupName,
+        resourceProviderNamespace, parentResourcePath, resourceType,
+        resourceName, lockName, parameters, parameters.level, parameters.notes,
+        parameters.id, parameters.type, parameters.name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.createOrUpdateAtResourceLevel(resourceGroupName,
+      resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
+      lockName, parameters, parameters.level, parameters.notes, parameters.id,
+      parameters.type, parameters.name, options, options.customHeaders,
+      callback)
+    children:
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~client'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~callback'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~options'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~queryParameters'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~regex'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~httpRequest'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~headerName'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestContent'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestModel'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestModelMapper'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestModel'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~requestContent'
+      - 'ManagementLocks#createOrUpdateAtResourceLevel~serializationError'
+  - uid: 'ManagementLocks#deleteAtResourceLevel'
+    id: deleteAtResourceLevel
+    parent: ManagementLocks
+    name: >-
+      deleteAtResourceLevel(resourceGroupName, resourceProviderNamespace,
+      parentResourcePath, resourceType, resourceName, lockName, options,
+      options.customHeaders, callback)
+    summary: Deletes the management lock of a resource or any level below resource.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: resourceProviderNamespace
+          type: string
+          description: Resource identity.
+        - id: parentResourcePath
+          type: string
+          description: Resource identity.
+        - id: resourceType
+          type: string
+          description: Resource identity.
+        - id: resourceName
+          type: string
+          description: Resource identity.
+        - id: lockName
+          type: string
+          description: The name of lock.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteAtResourceLevel(resourceGroupName,
+        resourceProviderNamespace, parentResourcePath, resourceType,
+        resourceName, lockName, options, options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.deleteAtResourceLevel(resourceGroupName,
+      resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
+      lockName, options, options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#deleteAtResourceLevel~client'
+      - 'ManagementLocks#deleteAtResourceLevel~callback'
+      - 'ManagementLocks#deleteAtResourceLevel~options'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~queryParameters'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~regex'
+      - 'ManagementLocks#deleteAtResourceLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceLevel~httpRequest'
+      - 'ManagementLocks#deleteAtResourceLevel~headerName'
+  - uid: 'ManagementLocks#createOrUpdateAtSubscriptionLevel'
+    id: createOrUpdateAtSubscriptionLevel
+    parent: ManagementLocks
+    name: >-
+      createOrUpdateAtSubscriptionLevel(lockName, parameters, parameters.level,
+      parameters.notes, parameters.id, parameters.type, parameters.name,
+      options, options.customHeaders, callback)
+    summary: Create or update a management lock at the subscription level.
+    type: Method
+    syntax:
+      parameters:
+        - id: lockName
+          type: string
+          description: The name of lock.
+        - id: parameters
+          type: object
+          description: The management lock parameters.
+        - id: parameters.level
+          type: string
+          description: "Gets or sets the lock level of the\rmanagement lock. Possible values include: 'NotSpecified', 'CanNotDelete',\r'ReadOnly'"
+        - id: parameters.notes
+          type: string
+          description: "Gets or sets the notes of the management\rlock."
+        - id: parameters.id
+          type: string
+          description: Gets or sets the Id of the lock.
+        - id: parameters.type
+          type: string
+          description: Gets or sets the type of the lock.
+        - id: parameters.name
+          type: string
+          description: Gets or sets the name of the lock.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateAtSubscriptionLevel(lockName, parameters,
+        parameters.level, parameters.notes, parameters.id, parameters.type,
+        parameters.name, options, options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.createOrUpdateAtSubscriptionLevel(lockName, parameters,
+      parameters.level, parameters.notes, parameters.id, parameters.type,
+      parameters.name, options, options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~client'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~callback'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~options'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~queryParameters'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~regex'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~httpRequest'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~headerName'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestContent'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestModel'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestModelMapper'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestModel'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~requestContent'
+      - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~serializationError'
+  - uid: 'ManagementLocks#deleteAtSubscriptionLevel'
+    id: deleteAtSubscriptionLevel
+    parent: ManagementLocks
+    name: >-
+      deleteAtSubscriptionLevel(lockName, options, options.customHeaders,
+      callback)
+    summary: Deletes the management lock of a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: lockName
+          type: string
+          description: The name of lock.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteAtSubscriptionLevel(lockName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.deleteAtSubscriptionLevel(lockName, options,
+      options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#deleteAtSubscriptionLevel~client'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~callback'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~options'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~queryParameters'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~regex'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~httpRequest'
+      - 'ManagementLocks#deleteAtSubscriptionLevel~headerName'
+  - uid: 'ManagementLocks#get'
+    id: get
+    parent: ManagementLocks
+    name: 'get(lockName, options, options.customHeaders, callback)'
+    summary: Gets the management lock of a scope.
+    type: Method
+    syntax:
+      parameters:
+        - id: lockName
+          type: string
+          description: Name of the management lock.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function get(lockName, options, options.customHeaders, callback);'
+    fullName: 'ManagementLocks.get(lockName, options, options.customHeaders, callback)'
+    children:
+      - 'ManagementLocks#get~client'
+      - 'ManagementLocks#get~callback'
+      - 'ManagementLocks#get~options'
+      - 'ManagementLocks#get~requestUrl'
+      - 'ManagementLocks#get~requestUrl'
+      - 'ManagementLocks#get~requestUrl'
+      - 'ManagementLocks#get~queryParameters'
+      - 'ManagementLocks#get~requestUrl'
+      - 'ManagementLocks#get~regex'
+      - 'ManagementLocks#get~requestUrl'
+      - 'ManagementLocks#get~httpRequest'
+      - 'ManagementLocks#get~headerName'
+  - uid: 'ManagementLocks#deleteAtResourceGroupLevel'
+    id: deleteAtResourceGroupLevel
+    parent: ManagementLocks
+    name: >-
+      deleteAtResourceGroupLevel(resourceGroup, lockName, options,
+      options.customHeaders, callback)
+    summary: Deletes the management lock of a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroup
+          type: string
+          description: The resource group names.
+        - id: lockName
+          type: string
+          description: The name of lock.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteAtResourceGroupLevel(resourceGroup, lockName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.deleteAtResourceGroupLevel(resourceGroup, lockName,
+      options, options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#deleteAtResourceGroupLevel~client'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~callback'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~options'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~queryParameters'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~regex'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~httpRequest'
+      - 'ManagementLocks#deleteAtResourceGroupLevel~headerName'
+  - uid: 'ManagementLocks#listAtResourceGroupLevel'
+    id: listAtResourceGroupLevel
+    parent: ManagementLocks
+    name: >-
+      listAtResourceGroupLevel(resourceGroupName, options, options.filter,
+      options.customHeaders, callback)
+    summary: Gets all the management locks of a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Resource group name.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAtResourceGroupLevel(resourceGroupName, options,
+        options.filter, options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.listAtResourceGroupLevel(resourceGroupName, options,
+      options.filter, options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#listAtResourceGroupLevel~client'
+      - 'ManagementLocks#listAtResourceGroupLevel~callback'
+      - 'ManagementLocks#listAtResourceGroupLevel~options'
+      - 'ManagementLocks#listAtResourceGroupLevel~filter'
+      - 'ManagementLocks#listAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevel~queryParameters'
+      - 'ManagementLocks#listAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevel~regex'
+      - 'ManagementLocks#listAtResourceGroupLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevel~httpRequest'
+      - 'ManagementLocks#listAtResourceGroupLevel~headerName'
+  - uid: 'ManagementLocks#listAtResourceLevel'
+    id: listAtResourceLevel
+    parent: ManagementLocks
+    name: >-
+      listAtResourceLevel(resourceGroupName, resourceProviderNamespace,
+      parentResourcePath, resourceType, resourceName, options, options.filter,
+      options.customHeaders, callback)
+    summary: Gets all the management locks of a resource or any level below resource.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group. The name\ris case insensitive."
+        - id: resourceProviderNamespace
+          type: string
+          description: Resource identity.
+        - id: parentResourcePath
+          type: string
+          description: Resource identity.
+        - id: resourceType
+          type: string
+          description: Resource identity.
+        - id: resourceName
+          type: string
+          description: Resource identity.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAtResourceLevel(resourceGroupName,
+        resourceProviderNamespace, parentResourcePath, resourceType,
+        resourceName, options, options.filter, options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.listAtResourceLevel(resourceGroupName,
+      resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
+      options, options.filter, options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#listAtResourceLevel~client'
+      - 'ManagementLocks#listAtResourceLevel~callback'
+      - 'ManagementLocks#listAtResourceLevel~options'
+      - 'ManagementLocks#listAtResourceLevel~filter'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~queryParameters'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~regex'
+      - 'ManagementLocks#listAtResourceLevel~requestUrl'
+      - 'ManagementLocks#listAtResourceLevel~httpRequest'
+      - 'ManagementLocks#listAtResourceLevel~headerName'
+  - uid: 'ManagementLocks#listNext'
+    id: listNext
+    parent: ManagementLocks
+    name: 'listNext(nextLink, options, options.customHeaders, callback)'
+    summary: Get a list of management locks at resource level or below.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: "NextLink from the previous successful call to List\roperation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function listNext(nextLink, options, options.customHeaders, callback);'
+    fullName: >-
+      ManagementLocks.listNext(nextLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'ManagementLocks#listNext~client'
+      - 'ManagementLocks#listNext~callback'
+      - 'ManagementLocks#listNext~options'
+      - 'ManagementLocks#listNext~requestUrl'
+      - 'ManagementLocks#listNext~requestUrl'
+      - 'ManagementLocks#listNext~requestUrl'
+      - 'ManagementLocks#listNext~queryParameters'
+      - 'ManagementLocks#listNext~requestUrl'
+      - 'ManagementLocks#listNext~regex'
+      - 'ManagementLocks#listNext~requestUrl'
+      - 'ManagementLocks#listNext~httpRequest'
+      - 'ManagementLocks#listNext~headerName'
+  - uid: 'ManagementLocks#listAtSubscriptionLevel'
+    id: listAtSubscriptionLevel
+    parent: ManagementLocks
+    name: >-
+      listAtSubscriptionLevel(options, options.filter, options.customHeaders,
+      callback)
+    summary: Gets all the management locks of a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAtSubscriptionLevel(options, options.filter,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.listAtSubscriptionLevel(options, options.filter,
+      options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#listAtSubscriptionLevel~client'
+      - 'ManagementLocks#listAtSubscriptionLevel~callback'
+      - 'ManagementLocks#listAtSubscriptionLevel~options'
+      - 'ManagementLocks#listAtSubscriptionLevel~filter'
+      - 'ManagementLocks#listAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#listAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#listAtSubscriptionLevel~queryParameters'
+      - 'ManagementLocks#listAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#listAtSubscriptionLevel~regex'
+      - 'ManagementLocks#listAtSubscriptionLevel~requestUrl'
+      - 'ManagementLocks#listAtSubscriptionLevel~httpRequest'
+      - 'ManagementLocks#listAtSubscriptionLevel~headerName'
+  - uid: 'ManagementLocks#listAtResourceGroupLevelNext'
+    id: listAtResourceGroupLevelNext
+    parent: ManagementLocks
+    name: >-
+      listAtResourceGroupLevelNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Gets all the management locks of a resource group.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAtResourceGroupLevelNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.listAtResourceGroupLevelNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#listAtResourceGroupLevelNext~client'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~callback'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~options'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~regex'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~requestUrl'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~httpRequest'
+      - 'ManagementLocks#listAtResourceGroupLevelNext~headerName'
+  - uid: 'ManagementLocks#listAtResourceLevelNext'
+    id: listAtResourceLevelNext
+    parent: ManagementLocks
+    name: >-
+      listAtResourceLevelNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Gets all the management locks of a resource or any level below resource.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAtResourceLevelNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.listAtResourceLevelNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#listAtResourceLevelNext~client'
+      - 'ManagementLocks#listAtResourceLevelNext~callback'
+      - 'ManagementLocks#listAtResourceLevelNext~options'
+      - 'ManagementLocks#listAtResourceLevelNext~requestUrl'
+      - 'ManagementLocks#listAtResourceLevelNext~requestUrl'
+      - 'ManagementLocks#listAtResourceLevelNext~regex'
+      - 'ManagementLocks#listAtResourceLevelNext~requestUrl'
+      - 'ManagementLocks#listAtResourceLevelNext~httpRequest'
+      - 'ManagementLocks#listAtResourceLevelNext~headerName'
+  - uid: 'ManagementLocks#listNextNext'
+    id: listNextNext
+    parent: ManagementLocks
+    name: 'listNextNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Get a list of management locks at resource level or below.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNextNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ManagementLocks.listNextNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'ManagementLocks#listNextNext~client'
+      - 'ManagementLocks#listNextNext~callback'
+      - 'ManagementLocks#listNextNext~options'
+      - 'ManagementLocks#listNextNext~requestUrl'
+      - 'ManagementLocks#listNextNext~requestUrl'
+      - 'ManagementLocks#listNextNext~regex'
+      - 'ManagementLocks#listNextNext~requestUrl'
+      - 'ManagementLocks#listNextNext~httpRequest'
+      - 'ManagementLocks#listNextNext~headerName'
+  - uid: 'ManagementLocks#listAtSubscriptionLevelNext'
+    id: listAtSubscriptionLevelNext
+    parent: ManagementLocks
+    name: >-
+      listAtSubscriptionLevelNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Gets all the management locks of a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAtSubscriptionLevelNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ManagementLocks.listAtSubscriptionLevelNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ManagementLocks#listAtSubscriptionLevelNext~client'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~callback'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~options'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~requestUrl'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~requestUrl'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~regex'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~requestUrl'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~httpRequest'
+      - 'ManagementLocks#listAtSubscriptionLevelNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

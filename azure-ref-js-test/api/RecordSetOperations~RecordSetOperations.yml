@@ -1,0 +1,627 @@
+items:
+  - uid: RecordSetOperations~RecordSetOperations
+    id: RecordSetOperations
+    parent: RecordSetOperations
+    name: RecordSetOperations
+    type: Class
+    syntax:
+      content: RecordSetOperations
+    fullName: RecordSetOperations.RecordSetOperations
+    children:
+      - 'RecordSetOperations~RecordSetOperations#client'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod'
+      - 'RecordSetOperations~RecordSetOperations#get'
+      - 'RecordSetOperations~RecordSetOperations#list'
+      - 'RecordSetOperations~RecordSetOperations#listAll'
+      - 'RecordSetOperations~RecordSetOperations#listNext'
+  - uid: 'RecordSetOperations~RecordSetOperations#client'
+    id: client
+    parent: RecordSetOperations~RecordSetOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: RecordSetOperations~RecordSetOperations.client
+  - uid: 'RecordSetOperations~RecordSetOperations#createOrUpdate'
+    id: createOrUpdate
+    parent: RecordSetOperations~RecordSetOperations
+    name: >-
+      createOrUpdate(resourceGroupName, zoneName, relativeRecordSetName,
+      recordType, parameters, parameters.recordSet, parameters.recordSet.eTag,
+      parameters.recordSet.properties, parameters.recordSet.properties.ttl,
+      parameters.recordSet.properties.aRecords,
+      parameters.recordSet.properties.aaaaRecords,
+      parameters.recordSet.properties.mxRecords,
+      parameters.recordSet.properties.nsRecords,
+      parameters.recordSet.properties.ptrRecords,
+      parameters.recordSet.properties.srvRecords,
+      parameters.recordSet.properties.txtRecords,
+      parameters.recordSet.properties.cnameRecord,
+      parameters.recordSet.properties.cnameRecord.cname,
+      parameters.recordSet.properties.soaRecord,
+      parameters.recordSet.properties.soaRecord.host,
+      parameters.recordSet.properties.soaRecord.email,
+      parameters.recordSet.properties.soaRecord.serialNumber,
+      parameters.recordSet.properties.soaRecord.refreshTime,
+      parameters.recordSet.properties.soaRecord.retryTime,
+      parameters.recordSet.properties.soaRecord.expireTime,
+      parameters.recordSet.properties.soaRecord.minimumTtl,
+      parameters.recordSet.id, parameters.recordSet.name,
+      parameters.recordSet.type, parameters.recordSet.location,
+      parameters.recordSet.tags, parameters.ifNoneMatch, callback)
+    summary: Creates a RecordSet within a DNS zone.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: zoneName
+          type: string
+          description: The name of the zone without a terminating dot.
+        - id: relativeRecordSetName
+          type: string
+          description: "The name of the RecordSet, relative\rto the name of the zone."
+        - id: recordType
+          type: RecordType
+          description: The type of DNS record.
+        - id: parameters
+          type: RecordSetCreateOrUpdateParameters
+          description: "Parameters supplied\rto the CreateOrUpdate operation."
+        - id: parameters.recordSet
+          type: RecordSet
+          description: "Gets or sets information about the\rRecordSet being created or updated."
+        - id: parameters.recordSet.eTag
+          type: string
+          description: "Gets or sets the ETag of the\rRecordSet."
+        - id: parameters.recordSet.properties
+          type: RecordSetProperties
+          description: "Gets or\rsets the properties of the RecordSet."
+        - id: parameters.recordSet.properties.ttl
+          type: number
+          description: "Gets or sets the TTL\rof the records in the RecordSet."
+        - id: parameters.recordSet.properties.aRecords
+          type: array
+          description: "Gets or sets the\rlist of A records in the RecordSet."
+        - id: parameters.recordSet.properties.aaaaRecords
+          type: array
+          description: "Gets or sets\rthe list of AAAA records in the RecordSet."
+        - id: parameters.recordSet.properties.mxRecords
+          type: array
+          description: "Gets or sets\rthe list of MX records in the RecordSet."
+        - id: parameters.recordSet.properties.nsRecords
+          type: array
+          description: "Gets or sets\rthe list of NS records in the RecordSet."
+        - id: parameters.recordSet.properties.ptrRecords
+          type: array
+          description: "Gets or sets\rthe list of PTR records in the RecordSet."
+        - id: parameters.recordSet.properties.srvRecords
+          type: array
+          description: "Gets or sets\rthe list of SRV records in the RecordSet."
+        - id: parameters.recordSet.properties.txtRecords
+          type: array
+          description: "Gets or sets\rthe list of TXT records in the RecordSet."
+        - id: parameters.recordSet.properties.cnameRecord
+          type: CnameRecord
+          description: "Gets or\rsets the CNAME record in the RecordSet."
+        - id: parameters.recordSet.properties.cnameRecord.cname
+          type: string
+          description: "Gets\ror sets the canonical name for this record without a terminating dot."
+        - id: parameters.recordSet.properties.soaRecord
+          type: SoaRecord
+          description: "Gets or\rsets the SOA record in the RecordSet."
+        - id: parameters.recordSet.properties.soaRecord.host
+          type: string
+          description: "Gets or\rsets the domain name of the authoritative name server, without a\rtemrinating dot."
+        - id: parameters.recordSet.properties.soaRecord.email
+          type: string
+          description: "Gets or\rsets the email for this record."
+        - id: parameters.recordSet.properties.soaRecord.serialNumber
+          type: number
+          description: Gets or sets the serial number for this record.
+        - id: parameters.recordSet.properties.soaRecord.refreshTime
+          type: number
+          description: Gets or sets the refresh value for this record.
+        - id: parameters.recordSet.properties.soaRecord.retryTime
+          type: number
+          description: "Gets\ror sets the retry time for this record."
+        - id: parameters.recordSet.properties.soaRecord.expireTime
+          type: number
+          description: Gets or sets the expire time for this record.
+        - id: parameters.recordSet.properties.soaRecord.minimumTtl
+          type: number
+          description: Gets or sets the minimum TTL value for this record.
+        - id: parameters.recordSet.id
+          type: string
+          description: "Gets or sets the ID of the\rresource."
+        - id: parameters.recordSet.name
+          type: string
+          description: "Gets or sets the name of the\rresource."
+        - id: parameters.recordSet.type
+          type: string
+          description: "Gets or sets the type of the\rresource."
+        - id: parameters.recordSet.location
+          type: string
+          description: "Gets or sets the location of\rthe resource."
+        - id: parameters.recordSet.tags
+          type: object
+          description: "Gets or sets the tags attached\rto the resource."
+        - id: parameters.ifNoneMatch
+          type: string
+          description: "Gets or sets the If-None-Match\rprecondition. Set to '*' to force Create-If-Not-Exist. Other values will\rbe ignored."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createOrUpdate(resourceGroupName, zoneName,
+        relativeRecordSetName, recordType, parameters, parameters.recordSet,
+        parameters.recordSet.eTag, parameters.recordSet.properties,
+        parameters.recordSet.properties.ttl,
+        parameters.recordSet.properties.aRecords,
+        parameters.recordSet.properties.aaaaRecords,
+        parameters.recordSet.properties.mxRecords,
+        parameters.recordSet.properties.nsRecords,
+        parameters.recordSet.properties.ptrRecords,
+        parameters.recordSet.properties.srvRecords,
+        parameters.recordSet.properties.txtRecords,
+        parameters.recordSet.properties.cnameRecord,
+        parameters.recordSet.properties.cnameRecord.cname,
+        parameters.recordSet.properties.soaRecord,
+        parameters.recordSet.properties.soaRecord.host,
+        parameters.recordSet.properties.soaRecord.email,
+        parameters.recordSet.properties.soaRecord.serialNumber,
+        parameters.recordSet.properties.soaRecord.refreshTime,
+        parameters.recordSet.properties.soaRecord.retryTime,
+        parameters.recordSet.properties.soaRecord.expireTime,
+        parameters.recordSet.properties.soaRecord.minimumTtl,
+        parameters.recordSet.id, parameters.recordSet.name,
+        parameters.recordSet.type, parameters.recordSet.location,
+        parameters.recordSet.tags, parameters.ifNoneMatch, callback);
+    fullName: >-
+      RecordSetOperations~RecordSetOperations.createOrUpdate(resourceGroupName,
+      zoneName, relativeRecordSetName, recordType, parameters,
+      parameters.recordSet, parameters.recordSet.eTag,
+      parameters.recordSet.properties, parameters.recordSet.properties.ttl,
+      parameters.recordSet.properties.aRecords,
+      parameters.recordSet.properties.aaaaRecords,
+      parameters.recordSet.properties.mxRecords,
+      parameters.recordSet.properties.nsRecords,
+      parameters.recordSet.properties.ptrRecords,
+      parameters.recordSet.properties.srvRecords,
+      parameters.recordSet.properties.txtRecords,
+      parameters.recordSet.properties.cnameRecord,
+      parameters.recordSet.properties.cnameRecord.cname,
+      parameters.recordSet.properties.soaRecord,
+      parameters.recordSet.properties.soaRecord.host,
+      parameters.recordSet.properties.soaRecord.email,
+      parameters.recordSet.properties.soaRecord.serialNumber,
+      parameters.recordSet.properties.soaRecord.refreshTime,
+      parameters.recordSet.properties.soaRecord.retryTime,
+      parameters.recordSet.properties.soaRecord.expireTime,
+      parameters.recordSet.properties.soaRecord.minimumTtl,
+      parameters.recordSet.id, parameters.recordSet.name,
+      parameters.recordSet.type, parameters.recordSet.location,
+      parameters.recordSet.tags, parameters.ifNoneMatch, callback)
+    children:
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex1'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex1'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~aaaaRecordsParameterItem
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex2'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~aRecordsParameterItem
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex3'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex3'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~mxRecordsParameterItem
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex4'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex4'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~nsRecordsParameterItem
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex5'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex5'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~ptrRecordsParameterItem
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex6'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex6'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~srvRecordsParameterItem
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex7'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex7'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~txtRecordsParameterItem
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~queryParameters'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~url2'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~httpRequest'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~requestContent'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~requestDoc'
+      - >-
+        RecordSetOperations~RecordSetOperations#createOrUpdate~recordSetCreateOrUpdateParametersValue
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~requestDoc'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~propertiesValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~aRecordsArray'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex8'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex8'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~aRecordsItem'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~aRecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~aAAARecordsArray'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex9'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex9'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~aAAARecordsItem'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~aaaaRecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~mXRecordsArray'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex10'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex10'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~mXRecordsItem'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~mxRecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~nSRecordsArray'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex11'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex11'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~nSRecordsItem'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~nsRecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~pTRRecordsArray'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex12'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex12'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~pTRRecordsItem'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~ptrRecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~sRVRecordsArray'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex13'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex13'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~sRVRecordsItem'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~srvRecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~tXTRecordsArray'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex14'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex14'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~tXTRecordsItem'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~txtRecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~cNAMERecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~sOARecordValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~tagsDictionary'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~tagsKey'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~tagsValue'
+      - 'RecordSetOperations~RecordSetOperations#createOrUpdate~requestContent'
+  - uid: 'RecordSetOperations~RecordSetOperations#deleteMethod'
+    id: deleteMethod
+    parent: RecordSetOperations~RecordSetOperations
+    name: >-
+      deleteMethod(resourceGroupName, zoneName, relativeRecordSetName,
+      recordType, parameters, parameters.ifMatch, callback)
+    summary: Removes a RecordSet from a DNS zone.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: zoneName
+          type: string
+          description: The name of the zone without a terminating dot.
+        - id: relativeRecordSetName
+          type: string
+          description: "The name of the RecordSet, relative\rto the name of the zone."
+        - id: recordType
+          type: RecordType
+          description: The type of DNS record.
+        - id: parameters
+          type: RecordSetDeleteParameters
+          description: "The parameters supplied to\rdelete a record set."
+        - id: parameters.ifMatch
+          type: string
+          description: "Gets or sets the If-Match\rpre-condition. The delete operation will be performedonly if the ETag of\rthe zone on the server matches this value."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteMethod(resourceGroupName, zoneName,
+        relativeRecordSetName, recordType, parameters, parameters.ifMatch,
+        callback);
+    fullName: >-
+      RecordSetOperations~RecordSetOperations.deleteMethod(resourceGroupName,
+      zoneName, relativeRecordSetName, recordType, parameters,
+      parameters.ifMatch, callback)
+    children:
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~queryParameters'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
+      - 'RecordSetOperations~RecordSetOperations#deleteMethod~httpRequest'
+  - uid: 'RecordSetOperations~RecordSetOperations#get'
+    id: get
+    parent: RecordSetOperations~RecordSetOperations
+    name: >-
+      get(resourceGroupName, zoneName, relativeRecordSetName, recordType,
+      callback)
+    summary: Gets a RecordSet.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: zoneName
+          type: string
+          description: The name of the zone without a terminating dot.
+        - id: relativeRecordSetName
+          type: string
+          description: "The name of the RecordSet, relative\rto the name of the zone."
+        - id: recordType
+          type: RecordType
+          description: The type of DNS record.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function get(resourceGroupName, zoneName, relativeRecordSetName,
+        recordType, callback);
+    fullName: >-
+      RecordSetOperations~RecordSetOperations.get(resourceGroupName, zoneName,
+      relativeRecordSetName, recordType, callback)
+    children:
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~queryParameters'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#get~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~url2'
+      - 'RecordSetOperations~RecordSetOperations#get~httpRequest'
+  - uid: 'RecordSetOperations~RecordSetOperations#list'
+    id: list
+    parent: RecordSetOperations~RecordSetOperations
+    name: >-
+      list(resourceGroupName, zoneName, recordType, parametersOrCallback,
+      parametersOrCallback.top, parametersOrCallback.filter, callback)
+    summary: Lists the RecordSets of a specified type in a DNS zone.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group that\rcontains the zone."
+        - id: zoneName
+          type: string
+          description: "The name of the zone from which to enumerate\rRecordsSets."
+        - id: recordType
+          type: RecordType
+          description: The type of record sets to enumerate.
+        - id: parametersOrCallback
+          type: RecordSetListParameters
+          description: "Query parameters.\rIf null is passed returns the default number of zones."
+        - id: parametersOrCallback.top
+          type: string
+          description: "Gets or sets the number of\relements to retrieve (first N elements)."
+        - id: parametersOrCallback.filter
+          type: string
+          description: "Gets or sets the filter for\rthe records enumeration."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function list(resourceGroupName, zoneName, recordType,
+        parametersOrCallback, parametersOrCallback.top,
+        parametersOrCallback.filter, callback);
+    fullName: >-
+      RecordSetOperations~RecordSetOperations.list(resourceGroupName, zoneName,
+      recordType, parametersOrCallback, parametersOrCallback.top,
+      parametersOrCallback.filter, callback)
+    children:
+      - 'RecordSetOperations~RecordSetOperations#list~parameters'
+      - 'RecordSetOperations~RecordSetOperations#list~callback'
+      - 'RecordSetOperations~RecordSetOperations#list~parameters'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~queryParameters'
+      - 'RecordSetOperations~RecordSetOperations#list~odataFilter'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#list~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~url2'
+      - 'RecordSetOperations~RecordSetOperations#list~httpRequest'
+  - uid: 'RecordSetOperations~RecordSetOperations#listAll'
+    id: listAll
+    parent: RecordSetOperations~RecordSetOperations
+    name: >-
+      listAll(resourceGroupName, zoneName, parametersOrCallback,
+      parametersOrCallback.top, parametersOrCallback.filter, callback)
+    summary: Lists all RecordSets in a DNS zone.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: "The name of the resource group that\rcontains the zone."
+        - id: zoneName
+          type: string
+          description: "The name of the zone from which to enumerate\rRecordSets."
+        - id: parametersOrCallback
+          type: RecordSetListParameters
+          description: "Query parameters.\rIf null is passed returns the default number of zones."
+        - id: parametersOrCallback.top
+          type: string
+          description: "Gets or sets the number of\relements to retrieve (first N elements)."
+        - id: parametersOrCallback.filter
+          type: string
+          description: "Gets or sets the filter for\rthe records enumeration."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function listAll(resourceGroupName, zoneName, parametersOrCallback,
+        parametersOrCallback.top, parametersOrCallback.filter, callback);
+    fullName: >-
+      RecordSetOperations~RecordSetOperations.listAll(resourceGroupName,
+      zoneName, parametersOrCallback, parametersOrCallback.top,
+      parametersOrCallback.filter, callback)
+    children:
+      - 'RecordSetOperations~RecordSetOperations#listAll~parameters'
+      - 'RecordSetOperations~RecordSetOperations#listAll~callback'
+      - 'RecordSetOperations~RecordSetOperations#listAll~parameters'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~queryParameters'
+      - 'RecordSetOperations~RecordSetOperations#listAll~odataFilter'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#listAll~baseUrl'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~url2'
+      - 'RecordSetOperations~RecordSetOperations#listAll~httpRequest'
+  - uid: 'RecordSetOperations~RecordSetOperations#listNext'
+    id: listNext
+    parent: RecordSetOperations~RecordSetOperations
+    name: 'listNext(nextLink, callback)'
+    summary: "Lists RecordSets in a DNS zone. Depending on the previous call, it will\rlist all types or by type."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextLink
+          type: string
+          description: "NextLink from the previous successful call to\rList operation."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function listNext(nextLink, callback);'
+    fullName: 'RecordSetOperations~RecordSetOperations.listNext(nextLink, callback)'
+    children:
+      - 'RecordSetOperations~RecordSetOperations#listNext~url2'
+      - 'RecordSetOperations~RecordSetOperations#listNext~url2'
+      - 'RecordSetOperations~RecordSetOperations#listNext~url2'
+      - 'RecordSetOperations~RecordSetOperations#listNext~httpRequest'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: RecordType
+    name: RecordType
+    fullName: RecordType
+    isExternal: true
+  - uid: RecordSetCreateOrUpdateParameters
+    name: RecordSetCreateOrUpdateParameters
+    fullName: RecordSetCreateOrUpdateParameters
+    isExternal: true
+  - uid: RecordSet
+    name: RecordSet
+    fullName: RecordSet
+    isExternal: true
+  - uid: RecordSetProperties
+    name: RecordSetProperties
+    fullName: RecordSetProperties
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: CnameRecord
+    name: CnameRecord
+    fullName: CnameRecord
+    isExternal: true
+  - uid: SoaRecord
+    name: SoaRecord
+    fullName: SoaRecord
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: RecordSetDeleteParameters
+    name: RecordSetDeleteParameters
+    fullName: RecordSetDeleteParameters
+    isExternal: true
+  - uid: RecordSetListParameters
+    name: RecordSetListParameters
+    fullName: RecordSetListParameters
+    isExternal: true

@@ -1,0 +1,1078 @@
+items:
+  - uid: Endpoints
+    id: Endpoints
+    name: Endpoints
+    type: Class
+    syntax:
+      content: Endpoints
+    fullName: Endpoints
+    children:
+      - 'Endpoints#client'
+      - 'Endpoints#listByProfile'
+      - 'Endpoints#get'
+      - 'Endpoints#create'
+      - 'Endpoints#beginCreate'
+      - 'Endpoints#update'
+      - 'Endpoints#beginUpdate'
+      - 'Endpoints#deleteIfExists'
+      - 'Endpoints#beginDeleteIfExists'
+      - 'Endpoints#start'
+      - 'Endpoints#beginStart'
+      - 'Endpoints#stop'
+      - 'Endpoints#beginStop'
+      - 'Endpoints#purgeContent'
+      - 'Endpoints#beginPurgeContent'
+      - 'Endpoints#loadContent'
+      - 'Endpoints#beginLoadContent'
+      - 'Endpoints#validateCustomDomain'
+  - uid: 'Endpoints#client'
+    id: client
+    parent: Endpoints
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Endpoints.client
+  - uid: 'Endpoints#listByProfile'
+    id: listByProfile
+    parent: Endpoints
+    name: >-
+      listByProfile(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link EndpointListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByProfile(profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Endpoints.listByProfile(profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Endpoints#listByProfile~client'
+      - 'Endpoints#listByProfile~callback'
+      - 'Endpoints#listByProfile~options'
+      - 'Endpoints#listByProfile~requestUrl'
+      - 'Endpoints#listByProfile~requestUrl'
+      - 'Endpoints#listByProfile~requestUrl'
+      - 'Endpoints#listByProfile~requestUrl'
+      - 'Endpoints#listByProfile~queryParameters'
+      - 'Endpoints#listByProfile~requestUrl'
+      - 'Endpoints#listByProfile~regex'
+      - 'Endpoints#listByProfile~requestUrl'
+      - 'Endpoints#listByProfile~httpRequest'
+      - 'Endpoints#listByProfile~headerName'
+  - uid: 'Endpoints#get'
+    id: get
+    parent: Endpoints
+    name: >-
+      get(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(endpointName, profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Endpoints.get(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Endpoints#get~client'
+      - 'Endpoints#get~callback'
+      - 'Endpoints#get~options'
+      - 'Endpoints#get~requestUrl'
+      - 'Endpoints#get~requestUrl'
+      - 'Endpoints#get~requestUrl'
+      - 'Endpoints#get~requestUrl'
+      - 'Endpoints#get~requestUrl'
+      - 'Endpoints#get~queryParameters'
+      - 'Endpoints#get~requestUrl'
+      - 'Endpoints#get~regex'
+      - 'Endpoints#get~requestUrl'
+      - 'Endpoints#get~httpRequest'
+      - 'Endpoints#get~headerName'
+  - uid: 'Endpoints#create'
+    id: create
+    parent: Endpoints
+    name: >-
+      create(endpointName, endpointProperties, endpointProperties.location,
+      endpointProperties.tags, endpointProperties.originHostHeader,
+      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: endpointProperties
+          type: object
+          description: Endpoint properties
+        - id: endpointProperties.location
+          type: string
+          description: Endpoint location
+        - id: endpointProperties.tags
+          type: object
+          description: Endpoint tags
+        - id: endpointProperties.originHostHeader
+          type: string
+          description: "The host header CDN\rprovider will send along with content requests to origins. The default\rvalue is the host name of the origin."
+        - id: endpointProperties.originPath
+          type: string
+          description: "The path used for origin\rrequests."
+        - id: endpointProperties.contentTypesToCompress
+          type: array
+          description: "List of content\rtypes on which compression will be applied. The value for the elements\rshould be a valid MIME type."
+        - id: endpointProperties.isCompressionEnabled
+          type: boolean
+          description: "Indicates\rwhether content compression is enabled. Default value is false. If\rcompression is enabled, the content transferred from the CDN endpoint to\rthe end user will be compressed. The requested content must be larger than\r1 byte and smaller than 1 MB."
+        - id: endpointProperties.isHttpAllowed
+          type: boolean
+          description: "Indicates whether HTTP\rtraffic is allowed on the endpoint. Default value is true. At least one\rprotocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.isHttpsAllowed
+          type: boolean
+          description: "Indicates whether\rhttps traffic is allowed on the endpoint. Default value is true. At least\rone protocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.queryStringCachingBehavior
+          type: string
+          description: "Defines the\rquery string caching behavior. Possible values include:\r'IgnoreQueryString', 'BypassCaching', 'UseQueryString', 'NotSet'"
+        - id: endpointProperties.origins
+          type: array
+          description: "The set of origins for the CDN\rendpoint. When multiple origins exist, the first origin will be used as\rprimary and rest will be used as failover options."
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(endpointName, endpointProperties,
+        endpointProperties.location, endpointProperties.tags,
+        endpointProperties.originHostHeader, endpointProperties.originPath,
+        endpointProperties.contentTypesToCompress,
+        endpointProperties.isCompressionEnabled,
+        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
+        endpointProperties.queryStringCachingBehavior,
+        endpointProperties.origins, profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Endpoints.create(endpointName, endpointProperties,
+      endpointProperties.location, endpointProperties.tags,
+      endpointProperties.originHostHeader, endpointProperties.originPath,
+      endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#create~client'
+      - 'Endpoints#create~callback'
+      - 'Endpoints#create~options'
+  - uid: 'Endpoints#beginCreate'
+    id: beginCreate
+    parent: Endpoints
+    name: >-
+      beginCreate(endpointName, endpointProperties, endpointProperties.location,
+      endpointProperties.tags, endpointProperties.originHostHeader,
+      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: endpointProperties
+          type: object
+          description: Endpoint properties
+        - id: endpointProperties.location
+          type: string
+          description: Endpoint location
+        - id: endpointProperties.tags
+          type: object
+          description: Endpoint tags
+        - id: endpointProperties.originHostHeader
+          type: string
+          description: "The host header CDN\rprovider will send along with content requests to origins. The default\rvalue is the host name of the origin."
+        - id: endpointProperties.originPath
+          type: string
+          description: "The path used for origin\rrequests."
+        - id: endpointProperties.contentTypesToCompress
+          type: array
+          description: "List of content\rtypes on which compression will be applied. The value for the elements\rshould be a valid MIME type."
+        - id: endpointProperties.isCompressionEnabled
+          type: boolean
+          description: "Indicates\rwhether content compression is enabled. Default value is false. If\rcompression is enabled, the content transferred from the CDN endpoint to\rthe end user will be compressed. The requested content must be larger than\r1 byte and smaller than 1 MB."
+        - id: endpointProperties.isHttpAllowed
+          type: boolean
+          description: "Indicates whether HTTP\rtraffic is allowed on the endpoint. Default value is true. At least one\rprotocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.isHttpsAllowed
+          type: boolean
+          description: "Indicates whether\rhttps traffic is allowed on the endpoint. Default value is true. At least\rone protocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.queryStringCachingBehavior
+          type: string
+          description: "Defines the\rquery string caching behavior. Possible values include:\r'IgnoreQueryString', 'BypassCaching', 'UseQueryString', 'NotSet'"
+        - id: endpointProperties.origins
+          type: array
+          description: "The set of origins for the CDN\rendpoint. When multiple origins exist, the first origin will be used as\rprimary and rest will be used as failover options."
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(endpointName, endpointProperties,
+        endpointProperties.location, endpointProperties.tags,
+        endpointProperties.originHostHeader, endpointProperties.originPath,
+        endpointProperties.contentTypesToCompress,
+        endpointProperties.isCompressionEnabled,
+        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
+        endpointProperties.queryStringCachingBehavior,
+        endpointProperties.origins, profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Endpoints.beginCreate(endpointName, endpointProperties,
+      endpointProperties.location, endpointProperties.tags,
+      endpointProperties.originHostHeader, endpointProperties.originPath,
+      endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#beginCreate~client'
+      - 'Endpoints#beginCreate~callback'
+      - 'Endpoints#beginCreate~options'
+      - 'Endpoints#beginCreate~requestUrl'
+      - 'Endpoints#beginCreate~requestUrl'
+      - 'Endpoints#beginCreate~requestUrl'
+      - 'Endpoints#beginCreate~requestUrl'
+      - 'Endpoints#beginCreate~requestUrl'
+      - 'Endpoints#beginCreate~queryParameters'
+      - 'Endpoints#beginCreate~requestUrl'
+      - 'Endpoints#beginCreate~regex'
+      - 'Endpoints#beginCreate~requestUrl'
+      - 'Endpoints#beginCreate~httpRequest'
+      - 'Endpoints#beginCreate~headerName'
+      - 'Endpoints#beginCreate~requestContent'
+      - 'Endpoints#beginCreate~requestModel'
+      - 'Endpoints#beginCreate~requestModelMapper'
+      - 'Endpoints#beginCreate~requestModel'
+      - 'Endpoints#beginCreate~requestContent'
+      - 'Endpoints#beginCreate~serializationError'
+  - uid: 'Endpoints#update'
+    id: update
+    parent: Endpoints
+    name: >-
+      update(endpointName, endpointProperties, endpointProperties.tags,
+      endpointProperties.originHostHeader, endpointProperties.originPath,
+      endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: endpointProperties
+          type: object
+          description: Endpoint properties
+        - id: endpointProperties.tags
+          type: object
+          description: Endpoint tags
+        - id: endpointProperties.originHostHeader
+          type: string
+          description: "The host header the\rCDN provider will send along with content requests to origins. The default\rvalue is the host name of the origin."
+        - id: endpointProperties.originPath
+          type: string
+          description: "The path used for origin\rrequests."
+        - id: endpointProperties.contentTypesToCompress
+          type: array
+          description: "List of content\rtypes on which compression will be applied. The value for the elements\rshould be a valid MIME type."
+        - id: endpointProperties.isCompressionEnabled
+          type: boolean
+          description: "Indicates\rwhether content compression is enabled. Default value is false. If\rcompression is enabled, the content transferred from the CDN endpoint to\rthe end user will be compressed. The requested content must be larger than\r1 byte and smaller than 1 MB."
+        - id: endpointProperties.isHttpAllowed
+          type: boolean
+          description: "Indicates whether HTTP\rtraffic is allowed on the endpoint. Default value is true. At least one\rprotocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.isHttpsAllowed
+          type: boolean
+          description: "Indicates whether\rHTTPS traffic is allowed on the endpoint. Default value is true. At least\rone protocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.queryStringCachingBehavior
+          type: string
+          description: "Defines the\rquery string caching behavior. Possible values include:\r'IgnoreQueryString', 'BypassCaching', 'UseQueryString', 'NotSet'"
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(endpointName, endpointProperties,
+        endpointProperties.tags, endpointProperties.originHostHeader,
+        endpointProperties.originPath,
+        endpointProperties.contentTypesToCompress,
+        endpointProperties.isCompressionEnabled,
+        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
+        endpointProperties.queryStringCachingBehavior, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.update(endpointName, endpointProperties,
+      endpointProperties.tags, endpointProperties.originHostHeader,
+      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#update~client'
+      - 'Endpoints#update~callback'
+      - 'Endpoints#update~options'
+  - uid: 'Endpoints#beginUpdate'
+    id: beginUpdate
+    parent: Endpoints
+    name: >-
+      beginUpdate(endpointName, endpointProperties, endpointProperties.tags,
+      endpointProperties.originHostHeader, endpointProperties.originPath,
+      endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: endpointProperties
+          type: object
+          description: Endpoint properties
+        - id: endpointProperties.tags
+          type: object
+          description: Endpoint tags
+        - id: endpointProperties.originHostHeader
+          type: string
+          description: "The host header the\rCDN provider will send along with content requests to origins. The default\rvalue is the host name of the origin."
+        - id: endpointProperties.originPath
+          type: string
+          description: "The path used for origin\rrequests."
+        - id: endpointProperties.contentTypesToCompress
+          type: array
+          description: "List of content\rtypes on which compression will be applied. The value for the elements\rshould be a valid MIME type."
+        - id: endpointProperties.isCompressionEnabled
+          type: boolean
+          description: "Indicates\rwhether content compression is enabled. Default value is false. If\rcompression is enabled, the content transferred from the CDN endpoint to\rthe end user will be compressed. The requested content must be larger than\r1 byte and smaller than 1 MB."
+        - id: endpointProperties.isHttpAllowed
+          type: boolean
+          description: "Indicates whether HTTP\rtraffic is allowed on the endpoint. Default value is true. At least one\rprotocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.isHttpsAllowed
+          type: boolean
+          description: "Indicates whether\rHTTPS traffic is allowed on the endpoint. Default value is true. At least\rone protocol (HTTP or HTTPS) must be allowed."
+        - id: endpointProperties.queryStringCachingBehavior
+          type: string
+          description: "Defines the\rquery string caching behavior. Possible values include:\r'IgnoreQueryString', 'BypassCaching', 'UseQueryString', 'NotSet'"
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginUpdate(endpointName, endpointProperties,
+        endpointProperties.tags, endpointProperties.originHostHeader,
+        endpointProperties.originPath,
+        endpointProperties.contentTypesToCompress,
+        endpointProperties.isCompressionEnabled,
+        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
+        endpointProperties.queryStringCachingBehavior, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.beginUpdate(endpointName, endpointProperties,
+      endpointProperties.tags, endpointProperties.originHostHeader,
+      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
+      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
+      endpointProperties.isHttpsAllowed,
+      endpointProperties.queryStringCachingBehavior, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#beginUpdate~client'
+      - 'Endpoints#beginUpdate~callback'
+      - 'Endpoints#beginUpdate~options'
+      - 'Endpoints#beginUpdate~requestUrl'
+      - 'Endpoints#beginUpdate~requestUrl'
+      - 'Endpoints#beginUpdate~requestUrl'
+      - 'Endpoints#beginUpdate~requestUrl'
+      - 'Endpoints#beginUpdate~requestUrl'
+      - 'Endpoints#beginUpdate~queryParameters'
+      - 'Endpoints#beginUpdate~requestUrl'
+      - 'Endpoints#beginUpdate~regex'
+      - 'Endpoints#beginUpdate~requestUrl'
+      - 'Endpoints#beginUpdate~httpRequest'
+      - 'Endpoints#beginUpdate~headerName'
+      - 'Endpoints#beginUpdate~requestContent'
+      - 'Endpoints#beginUpdate~requestModel'
+      - 'Endpoints#beginUpdate~requestModelMapper'
+      - 'Endpoints#beginUpdate~requestModel'
+      - 'Endpoints#beginUpdate~requestContent'
+      - 'Endpoints#beginUpdate~serializationError'
+  - uid: 'Endpoints#deleteIfExists'
+    id: deleteIfExists
+    parent: Endpoints
+    name: >-
+      deleteIfExists(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteIfExists(endpointName, profileName, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.deleteIfExists(endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#deleteIfExists~client'
+      - 'Endpoints#deleteIfExists~callback'
+      - 'Endpoints#deleteIfExists~options'
+  - uid: 'Endpoints#beginDeleteIfExists'
+    id: beginDeleteIfExists
+    parent: Endpoints
+    name: >-
+      beginDeleteIfExists(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteIfExists(endpointName, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.beginDeleteIfExists(endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#beginDeleteIfExists~client'
+      - 'Endpoints#beginDeleteIfExists~callback'
+      - 'Endpoints#beginDeleteIfExists~options'
+      - 'Endpoints#beginDeleteIfExists~requestUrl'
+      - 'Endpoints#beginDeleteIfExists~requestUrl'
+      - 'Endpoints#beginDeleteIfExists~requestUrl'
+      - 'Endpoints#beginDeleteIfExists~requestUrl'
+      - 'Endpoints#beginDeleteIfExists~requestUrl'
+      - 'Endpoints#beginDeleteIfExists~queryParameters'
+      - 'Endpoints#beginDeleteIfExists~requestUrl'
+      - 'Endpoints#beginDeleteIfExists~regex'
+      - 'Endpoints#beginDeleteIfExists~requestUrl'
+      - 'Endpoints#beginDeleteIfExists~httpRequest'
+      - 'Endpoints#beginDeleteIfExists~headerName'
+  - uid: 'Endpoints#start'
+    id: start
+    parent: Endpoints
+    name: >-
+      start(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function start(endpointName, profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Endpoints.start(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Endpoints#start~client'
+      - 'Endpoints#start~callback'
+      - 'Endpoints#start~options'
+  - uid: 'Endpoints#beginStart'
+    id: beginStart
+    parent: Endpoints
+    name: >-
+      beginStart(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginStart(endpointName, profileName, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.beginStart(endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#beginStart~client'
+      - 'Endpoints#beginStart~callback'
+      - 'Endpoints#beginStart~options'
+      - 'Endpoints#beginStart~requestUrl'
+      - 'Endpoints#beginStart~requestUrl'
+      - 'Endpoints#beginStart~requestUrl'
+      - 'Endpoints#beginStart~requestUrl'
+      - 'Endpoints#beginStart~requestUrl'
+      - 'Endpoints#beginStart~queryParameters'
+      - 'Endpoints#beginStart~requestUrl'
+      - 'Endpoints#beginStart~regex'
+      - 'Endpoints#beginStart~requestUrl'
+      - 'Endpoints#beginStart~httpRequest'
+      - 'Endpoints#beginStart~headerName'
+  - uid: 'Endpoints#stop'
+    id: stop
+    parent: Endpoints
+    name: >-
+      stop(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function stop(endpointName, profileName, resourceGroupName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Endpoints.stop(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Endpoints#stop~client'
+      - 'Endpoints#stop~callback'
+      - 'Endpoints#stop~options'
+  - uid: 'Endpoints#beginStop'
+    id: beginStop
+    parent: Endpoints
+    name: >-
+      beginStop(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginStop(endpointName, profileName, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.beginStop(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Endpoints#beginStop~client'
+      - 'Endpoints#beginStop~callback'
+      - 'Endpoints#beginStop~options'
+      - 'Endpoints#beginStop~requestUrl'
+      - 'Endpoints#beginStop~requestUrl'
+      - 'Endpoints#beginStop~requestUrl'
+      - 'Endpoints#beginStop~requestUrl'
+      - 'Endpoints#beginStop~requestUrl'
+      - 'Endpoints#beginStop~queryParameters'
+      - 'Endpoints#beginStop~requestUrl'
+      - 'Endpoints#beginStop~regex'
+      - 'Endpoints#beginStop~requestUrl'
+      - 'Endpoints#beginStop~httpRequest'
+      - 'Endpoints#beginStop~headerName'
+  - uid: 'Endpoints#purgeContent'
+    id: purgeContent
+    parent: Endpoints
+    name: >-
+      purgeContent(endpointName, profileName, resourceGroupName, contentPaths,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: contentPaths
+          type: array
+          description: "The path to the content to be purged. Can\rdescribe a file path or a wild card directory."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function purgeContent(endpointName, profileName, resourceGroupName,
+        contentPaths, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.purgeContent(endpointName, profileName, resourceGroupName,
+      contentPaths, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#purgeContent~client'
+      - 'Endpoints#purgeContent~callback'
+      - 'Endpoints#purgeContent~options'
+  - uid: 'Endpoints#beginPurgeContent'
+    id: beginPurgeContent
+    parent: Endpoints
+    name: >-
+      beginPurgeContent(endpointName, profileName, resourceGroupName,
+      contentPaths, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: contentPaths
+          type: array
+          description: "The path to the content to be purged. Can\rdescribe a file path or a wild card directory."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginPurgeContent(endpointName, profileName, resourceGroupName,
+        contentPaths, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.beginPurgeContent(endpointName, profileName, resourceGroupName,
+      contentPaths, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#beginPurgeContent~client'
+      - 'Endpoints#beginPurgeContent~callback'
+      - 'Endpoints#beginPurgeContent~options'
+      - 'Endpoints#beginPurgeContent~i'
+      - 'Endpoints#beginPurgeContent~contentFilePaths'
+      - 'Endpoints#beginPurgeContent~contentFilePaths'
+      - 'Endpoints#beginPurgeContent~requestUrl'
+      - 'Endpoints#beginPurgeContent~requestUrl'
+      - 'Endpoints#beginPurgeContent~requestUrl'
+      - 'Endpoints#beginPurgeContent~requestUrl'
+      - 'Endpoints#beginPurgeContent~requestUrl'
+      - 'Endpoints#beginPurgeContent~queryParameters'
+      - 'Endpoints#beginPurgeContent~requestUrl'
+      - 'Endpoints#beginPurgeContent~regex'
+      - 'Endpoints#beginPurgeContent~requestUrl'
+      - 'Endpoints#beginPurgeContent~httpRequest'
+      - 'Endpoints#beginPurgeContent~headerName'
+      - 'Endpoints#beginPurgeContent~requestContent'
+      - 'Endpoints#beginPurgeContent~requestModel'
+      - 'Endpoints#beginPurgeContent~requestModelMapper'
+      - 'Endpoints#beginPurgeContent~requestModel'
+      - 'Endpoints#beginPurgeContent~requestContent'
+      - 'Endpoints#beginPurgeContent~serializationError'
+  - uid: 'Endpoints#loadContent'
+    id: loadContent
+    parent: Endpoints
+    name: >-
+      loadContent(endpointName, profileName, resourceGroupName, contentPaths,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: contentPaths
+          type: array
+          description: "The path to the content to be loaded. Should\rdescribe a file path."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function loadContent(endpointName, profileName, resourceGroupName,
+        contentPaths, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.loadContent(endpointName, profileName, resourceGroupName,
+      contentPaths, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#loadContent~client'
+      - 'Endpoints#loadContent~callback'
+      - 'Endpoints#loadContent~options'
+  - uid: 'Endpoints#beginLoadContent'
+    id: beginLoadContent
+    parent: Endpoints
+    name: >-
+      beginLoadContent(endpointName, profileName, resourceGroupName,
+      contentPaths, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: contentPaths
+          type: array
+          description: "The path to the content to be loaded. Should\rdescribe a file path."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginLoadContent(endpointName, profileName, resourceGroupName,
+        contentPaths, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.beginLoadContent(endpointName, profileName, resourceGroupName,
+      contentPaths, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#beginLoadContent~client'
+      - 'Endpoints#beginLoadContent~callback'
+      - 'Endpoints#beginLoadContent~options'
+      - 'Endpoints#beginLoadContent~i'
+      - 'Endpoints#beginLoadContent~contentFilePaths'
+      - 'Endpoints#beginLoadContent~contentFilePaths'
+      - 'Endpoints#beginLoadContent~requestUrl'
+      - 'Endpoints#beginLoadContent~requestUrl'
+      - 'Endpoints#beginLoadContent~requestUrl'
+      - 'Endpoints#beginLoadContent~requestUrl'
+      - 'Endpoints#beginLoadContent~requestUrl'
+      - 'Endpoints#beginLoadContent~queryParameters'
+      - 'Endpoints#beginLoadContent~requestUrl'
+      - 'Endpoints#beginLoadContent~regex'
+      - 'Endpoints#beginLoadContent~requestUrl'
+      - 'Endpoints#beginLoadContent~httpRequest'
+      - 'Endpoints#beginLoadContent~headerName'
+      - 'Endpoints#beginLoadContent~requestContent'
+      - 'Endpoints#beginLoadContent~requestModel'
+      - 'Endpoints#beginLoadContent~requestModelMapper'
+      - 'Endpoints#beginLoadContent~requestModel'
+      - 'Endpoints#beginLoadContent~requestContent'
+      - 'Endpoints#beginLoadContent~serializationError'
+  - uid: 'Endpoints#validateCustomDomain'
+    id: validateCustomDomain
+    parent: Endpoints
+    name: >-
+      validateCustomDomain(endpointName, profileName, resourceGroupName,
+      hostName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: hostName
+          type: string
+          description: "The host name of the custom domain. Must be a\rdomain name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ValidateCustomDomainOutput} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function validateCustomDomain(endpointName, profileName,
+        resourceGroupName, hostName, options, options.customHeaders, callback);
+    fullName: >-
+      Endpoints.validateCustomDomain(endpointName, profileName,
+      resourceGroupName, hostName, options, options.customHeaders, callback)
+    children:
+      - 'Endpoints#validateCustomDomain~client'
+      - 'Endpoints#validateCustomDomain~callback'
+      - 'Endpoints#validateCustomDomain~options'
+      - 'Endpoints#validateCustomDomain~customDomainProperties'
+      - 'Endpoints#validateCustomDomain~customDomainProperties'
+      - 'Endpoints#validateCustomDomain~requestUrl'
+      - 'Endpoints#validateCustomDomain~requestUrl'
+      - 'Endpoints#validateCustomDomain~requestUrl'
+      - 'Endpoints#validateCustomDomain~requestUrl'
+      - 'Endpoints#validateCustomDomain~requestUrl'
+      - 'Endpoints#validateCustomDomain~queryParameters'
+      - 'Endpoints#validateCustomDomain~requestUrl'
+      - 'Endpoints#validateCustomDomain~regex'
+      - 'Endpoints#validateCustomDomain~requestUrl'
+      - 'Endpoints#validateCustomDomain~httpRequest'
+      - 'Endpoints#validateCustomDomain~headerName'
+      - 'Endpoints#validateCustomDomain~requestContent'
+      - 'Endpoints#validateCustomDomain~requestModel'
+      - 'Endpoints#validateCustomDomain~requestModelMapper'
+      - 'Endpoints#validateCustomDomain~requestModel'
+      - 'Endpoints#validateCustomDomain~requestContent'
+      - 'Endpoints#validateCustomDomain~serializationError'
+  - uid: 'Endpoints#mapper'
+    id: mapper
+    parent: Endpoints
+    name: mapper()
+    summary: Defines the metadata of Endpoints
+    type: Method
+    syntax:
+      return:
+        type: object
+        description: metadata of Endpoints
+      content: function mapper();
+    fullName: Endpoints.mapper()
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true

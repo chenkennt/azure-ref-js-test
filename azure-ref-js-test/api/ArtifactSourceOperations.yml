@@ -1,0 +1,469 @@
+items:
+  - uid: ArtifactSourceOperations
+    id: ArtifactSourceOperations
+    name: ArtifactSourceOperations
+    type: Class
+    syntax:
+      content: ArtifactSourceOperations
+    fullName: ArtifactSourceOperations
+    children:
+      - 'ArtifactSourceOperations#client'
+      - 'ArtifactSourceOperations#list'
+      - 'ArtifactSourceOperations#getResource'
+      - 'ArtifactSourceOperations#createOrUpdateResource'
+      - 'ArtifactSourceOperations#deleteResource'
+      - 'ArtifactSourceOperations#patchResource'
+      - 'ArtifactSourceOperations#listNext'
+  - uid: 'ArtifactSourceOperations#client'
+    id: client
+    parent: ArtifactSourceOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: ArtifactSourceOperations.client
+  - uid: 'ArtifactSourceOperations#list'
+    id: list
+    parent: ArtifactSourceOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List artifact sources.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifactSource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      ArtifactSourceOperations.list(resourceGroupName, labName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'ArtifactSourceOperations#list~client'
+      - 'ArtifactSourceOperations#list~callback'
+      - 'ArtifactSourceOperations#list~options'
+      - 'ArtifactSourceOperations#list~filter'
+      - 'ArtifactSourceOperations#list~top'
+      - 'ArtifactSourceOperations#list~orderBy'
+      - 'ArtifactSourceOperations#list~requestUrl'
+      - 'ArtifactSourceOperations#list~requestUrl'
+      - 'ArtifactSourceOperations#list~requestUrl'
+      - 'ArtifactSourceOperations#list~requestUrl'
+      - 'ArtifactSourceOperations#list~queryParameters'
+      - 'ArtifactSourceOperations#list~requestUrl'
+      - 'ArtifactSourceOperations#list~regex'
+      - 'ArtifactSourceOperations#list~requestUrl'
+      - 'ArtifactSourceOperations#list~httpRequest'
+      - 'ArtifactSourceOperations#list~headerName'
+  - uid: 'ArtifactSourceOperations#getResource'
+    id: getResource
+    parent: ArtifactSourceOperations
+    name: >-
+      getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Get artifact source.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the artifact source.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArtifactSource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ArtifactSourceOperations.getResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'ArtifactSourceOperations#getResource~client'
+      - 'ArtifactSourceOperations#getResource~callback'
+      - 'ArtifactSourceOperations#getResource~options'
+      - 'ArtifactSourceOperations#getResource~requestUrl'
+      - 'ArtifactSourceOperations#getResource~requestUrl'
+      - 'ArtifactSourceOperations#getResource~requestUrl'
+      - 'ArtifactSourceOperations#getResource~requestUrl'
+      - 'ArtifactSourceOperations#getResource~requestUrl'
+      - 'ArtifactSourceOperations#getResource~queryParameters'
+      - 'ArtifactSourceOperations#getResource~requestUrl'
+      - 'ArtifactSourceOperations#getResource~regex'
+      - 'ArtifactSourceOperations#getResource~requestUrl'
+      - 'ArtifactSourceOperations#getResource~httpRequest'
+      - 'ArtifactSourceOperations#getResource~headerName'
+  - uid: 'ArtifactSourceOperations#createOrUpdateResource'
+    id: createOrUpdateResource
+    parent: ArtifactSourceOperations
+    name: >-
+      createOrUpdateResource(resourceGroupName, labName, name, artifactSource,
+      artifactSource.displayName, artifactSource.uri, artifactSource.sourceType,
+      artifactSource.folderPath, artifactSource.branchRef,
+      artifactSource.securityToken, artifactSource.status,
+      artifactSource.provisioningState, artifactSource.id, artifactSource.name,
+      artifactSource.type, artifactSource.location, artifactSource.tags,
+      options, options.customHeaders, callback)
+    summary: Create or replace an existing artifact source.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the artifact source.
+        - id: artifactSource
+          type: object
+        - id: artifactSource.displayName
+          type: string
+          description: "The display name of the\rartifact source."
+        - id: artifactSource.uri
+          type: string
+          description: The URI of the artifact source.
+        - id: artifactSource.sourceType
+          type: string
+          description: "The type of the artifact\rsource. Possible values include: 'VsoGit', 'GitHub'"
+        - id: artifactSource.folderPath
+          type: string
+          description: "The folder path of the artifact\rsource."
+        - id: artifactSource.branchRef
+          type: string
+          description: "The branch reference of the\rartifact source."
+        - id: artifactSource.securityToken
+          type: string
+          description: "The security token of the\rartifact source."
+        - id: artifactSource.status
+          type: string
+          description: "The status of the artifact source.\rPossible values include: 'Enabled', 'Disabled'"
+        - id: artifactSource.provisioningState
+          type: string
+          description: "The provisioning status\rof the resource."
+        - id: artifactSource.id
+          type: string
+          description: The identifier of the resource.
+        - id: artifactSource.name
+          type: string
+          description: The name of the resource.
+        - id: artifactSource.type
+          type: string
+          description: The type of the resource.
+        - id: artifactSource.location
+          type: string
+          description: The location of the resource.
+        - id: artifactSource.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArtifactSource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdateResource(resourceGroupName, labName, name,
+        artifactSource, artifactSource.displayName, artifactSource.uri,
+        artifactSource.sourceType, artifactSource.folderPath,
+        artifactSource.branchRef, artifactSource.securityToken,
+        artifactSource.status, artifactSource.provisioningState,
+        artifactSource.id, artifactSource.name, artifactSource.type,
+        artifactSource.location, artifactSource.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ArtifactSourceOperations.createOrUpdateResource(resourceGroupName,
+      labName, name, artifactSource, artifactSource.displayName,
+      artifactSource.uri, artifactSource.sourceType, artifactSource.folderPath,
+      artifactSource.branchRef, artifactSource.securityToken,
+      artifactSource.status, artifactSource.provisioningState,
+      artifactSource.id, artifactSource.name, artifactSource.type,
+      artifactSource.location, artifactSource.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'ArtifactSourceOperations#createOrUpdateResource~client'
+      - 'ArtifactSourceOperations#createOrUpdateResource~callback'
+      - 'ArtifactSourceOperations#createOrUpdateResource~options'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestUrl'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestUrl'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestUrl'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestUrl'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestUrl'
+      - 'ArtifactSourceOperations#createOrUpdateResource~queryParameters'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestUrl'
+      - 'ArtifactSourceOperations#createOrUpdateResource~regex'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestUrl'
+      - 'ArtifactSourceOperations#createOrUpdateResource~httpRequest'
+      - 'ArtifactSourceOperations#createOrUpdateResource~headerName'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestContent'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestModel'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestModelMapper'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestModel'
+      - 'ArtifactSourceOperations#createOrUpdateResource~requestContent'
+      - 'ArtifactSourceOperations#createOrUpdateResource~serializationError'
+  - uid: 'ArtifactSourceOperations#deleteResource'
+    id: deleteResource
+    parent: ArtifactSourceOperations
+    name: >-
+      deleteResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Delete artifact source.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the artifact source.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ArtifactSourceOperations.deleteResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'ArtifactSourceOperations#deleteResource~client'
+      - 'ArtifactSourceOperations#deleteResource~callback'
+      - 'ArtifactSourceOperations#deleteResource~options'
+      - 'ArtifactSourceOperations#deleteResource~requestUrl'
+      - 'ArtifactSourceOperations#deleteResource~requestUrl'
+      - 'ArtifactSourceOperations#deleteResource~requestUrl'
+      - 'ArtifactSourceOperations#deleteResource~requestUrl'
+      - 'ArtifactSourceOperations#deleteResource~requestUrl'
+      - 'ArtifactSourceOperations#deleteResource~queryParameters'
+      - 'ArtifactSourceOperations#deleteResource~requestUrl'
+      - 'ArtifactSourceOperations#deleteResource~regex'
+      - 'ArtifactSourceOperations#deleteResource~requestUrl'
+      - 'ArtifactSourceOperations#deleteResource~httpRequest'
+      - 'ArtifactSourceOperations#deleteResource~headerName'
+  - uid: 'ArtifactSourceOperations#patchResource'
+    id: patchResource
+    parent: ArtifactSourceOperations
+    name: >-
+      patchResource(resourceGroupName, labName, name, artifactSource,
+      artifactSource.displayName, artifactSource.uri, artifactSource.sourceType,
+      artifactSource.folderPath, artifactSource.branchRef,
+      artifactSource.securityToken, artifactSource.status,
+      artifactSource.provisioningState, artifactSource.id, artifactSource.name,
+      artifactSource.type, artifactSource.location, artifactSource.tags,
+      options, options.customHeaders, callback)
+    summary: Modify properties of artifact sources.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the artifact source.
+        - id: artifactSource
+          type: object
+        - id: artifactSource.displayName
+          type: string
+          description: "The display name of the\rartifact source."
+        - id: artifactSource.uri
+          type: string
+          description: The URI of the artifact source.
+        - id: artifactSource.sourceType
+          type: string
+          description: "The type of the artifact\rsource. Possible values include: 'VsoGit', 'GitHub'"
+        - id: artifactSource.folderPath
+          type: string
+          description: "The folder path of the artifact\rsource."
+        - id: artifactSource.branchRef
+          type: string
+          description: "The branch reference of the\rartifact source."
+        - id: artifactSource.securityToken
+          type: string
+          description: "The security token of the\rartifact source."
+        - id: artifactSource.status
+          type: string
+          description: "The status of the artifact source.\rPossible values include: 'Enabled', 'Disabled'"
+        - id: artifactSource.provisioningState
+          type: string
+          description: "The provisioning status\rof the resource."
+        - id: artifactSource.id
+          type: string
+          description: The identifier of the resource.
+        - id: artifactSource.name
+          type: string
+          description: The name of the resource.
+        - id: artifactSource.type
+          type: string
+          description: The type of the resource.
+        - id: artifactSource.location
+          type: string
+          description: The location of the resource.
+        - id: artifactSource.tags
+          type: object
+          description: The tags of the resource.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArtifactSource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function patchResource(resourceGroupName, labName, name, artifactSource,
+        artifactSource.displayName, artifactSource.uri,
+        artifactSource.sourceType, artifactSource.folderPath,
+        artifactSource.branchRef, artifactSource.securityToken,
+        artifactSource.status, artifactSource.provisioningState,
+        artifactSource.id, artifactSource.name, artifactSource.type,
+        artifactSource.location, artifactSource.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      ArtifactSourceOperations.patchResource(resourceGroupName, labName, name,
+      artifactSource, artifactSource.displayName, artifactSource.uri,
+      artifactSource.sourceType, artifactSource.folderPath,
+      artifactSource.branchRef, artifactSource.securityToken,
+      artifactSource.status, artifactSource.provisioningState,
+      artifactSource.id, artifactSource.name, artifactSource.type,
+      artifactSource.location, artifactSource.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'ArtifactSourceOperations#patchResource~client'
+      - 'ArtifactSourceOperations#patchResource~callback'
+      - 'ArtifactSourceOperations#patchResource~options'
+      - 'ArtifactSourceOperations#patchResource~requestUrl'
+      - 'ArtifactSourceOperations#patchResource~requestUrl'
+      - 'ArtifactSourceOperations#patchResource~requestUrl'
+      - 'ArtifactSourceOperations#patchResource~requestUrl'
+      - 'ArtifactSourceOperations#patchResource~requestUrl'
+      - 'ArtifactSourceOperations#patchResource~queryParameters'
+      - 'ArtifactSourceOperations#patchResource~requestUrl'
+      - 'ArtifactSourceOperations#patchResource~regex'
+      - 'ArtifactSourceOperations#patchResource~requestUrl'
+      - 'ArtifactSourceOperations#patchResource~httpRequest'
+      - 'ArtifactSourceOperations#patchResource~headerName'
+      - 'ArtifactSourceOperations#patchResource~requestContent'
+      - 'ArtifactSourceOperations#patchResource~requestModel'
+      - 'ArtifactSourceOperations#patchResource~requestModelMapper'
+      - 'ArtifactSourceOperations#patchResource~requestModel'
+      - 'ArtifactSourceOperations#patchResource~requestContent'
+      - 'ArtifactSourceOperations#patchResource~serializationError'
+  - uid: 'ArtifactSourceOperations#listNext'
+    id: listNext
+    parent: ArtifactSourceOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List artifact sources.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifactSource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      ArtifactSourceOperations.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'ArtifactSourceOperations#listNext~client'
+      - 'ArtifactSourceOperations#listNext~callback'
+      - 'ArtifactSourceOperations#listNext~options'
+      - 'ArtifactSourceOperations#listNext~requestUrl'
+      - 'ArtifactSourceOperations#listNext~requestUrl'
+      - 'ArtifactSourceOperations#listNext~regex'
+      - 'ArtifactSourceOperations#listNext~requestUrl'
+      - 'ArtifactSourceOperations#listNext~httpRequest'
+      - 'ArtifactSourceOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

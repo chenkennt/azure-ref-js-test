@@ -1,0 +1,324 @@
+items:
+  - uid: Applications
+    id: Applications
+    name: Applications
+    type: Class
+    syntax:
+      content: Applications
+    fullName: Applications
+    children:
+      - 'Applications#client'
+      - 'Applications#create'
+      - 'Applications#list'
+      - 'Applications#deleteMethod'
+      - 'Applications#get'
+      - 'Applications#patch'
+  - uid: 'Applications#client'
+    id: client
+    parent: Applications
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Applications.client
+  - uid: 'Applications#create'
+    id: create
+    parent: Applications
+    name: >-
+      create(parameters, parameters.availableToOtherTenants,
+      parameters.displayName, parameters.homepage, parameters.identifierUris,
+      parameters.replyUrls, parameters.keyCredentials,
+      parameters.passwordCredentials, options, options.customHeaders, callback)
+    summary: "Create a new application. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
+    type: Method
+    syntax:
+      parameters:
+        - id: parameters
+          type: object
+          description: Parameters to create an application.
+        - id: parameters.availableToOtherTenants
+          type: boolean
+          description: "Indicates if the\rapplication will be available to other tenants"
+        - id: parameters.displayName
+          type: string
+          description: Application display name
+        - id: parameters.homepage
+          type: string
+          description: Application homepage
+        - id: parameters.identifierUris
+          type: array
+          description: Application Uris
+        - id: parameters.replyUrls
+          type: array
+          description: Application reply Urls
+        - id: parameters.keyCredentials
+          type: array
+          description: "Gets or sets the list of\rKeyCredential objects"
+        - id: parameters.passwordCredentials
+          type: array
+          description: "Gets or sets the list of\rPasswordCredential objects"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Application} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(parameters, parameters.availableToOtherTenants,
+        parameters.displayName, parameters.homepage, parameters.identifierUris,
+        parameters.replyUrls, parameters.keyCredentials,
+        parameters.passwordCredentials, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Applications.create(parameters, parameters.availableToOtherTenants,
+      parameters.displayName, parameters.homepage, parameters.identifierUris,
+      parameters.replyUrls, parameters.keyCredentials,
+      parameters.passwordCredentials, options, options.customHeaders, callback)
+    children:
+      - 'Applications#create~client'
+      - 'Applications#create~callback'
+      - 'Applications#create~options'
+      - 'Applications#create~apiVersion'
+      - 'Applications#create~requestUrl'
+      - 'Applications#create~requestUrl'
+      - 'Applications#create~queryParameters'
+      - 'Applications#create~requestUrl'
+      - 'Applications#create~regex'
+      - 'Applications#create~requestUrl'
+      - 'Applications#create~httpRequest'
+      - 'Applications#create~headerName'
+      - 'Applications#create~requestContent'
+      - 'Applications#create~requestModel'
+      - 'Applications#create~requestModelMapper'
+      - 'Applications#create~requestModel'
+      - 'Applications#create~requestContent'
+      - 'Applications#create~serializationError'
+  - uid: 'Applications#list'
+    id: list
+    parent: Applications
+    name: 'list(options, options.filter, options.customHeaders, callback)'
+    summary: "Lists applications by filter parameters. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filters to apply on the operation
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.filter, options.customHeaders, callback);'
+    fullName: >-
+      Applications.list(options, options.filter, options.customHeaders,
+      callback)
+    children:
+      - 'Applications#list~client'
+      - 'Applications#list~callback'
+      - 'Applications#list~options'
+      - 'Applications#list~filter'
+      - 'Applications#list~apiVersion'
+      - 'Applications#list~requestUrl'
+      - 'Applications#list~requestUrl'
+      - 'Applications#list~queryParameters'
+      - 'Applications#list~requestUrl'
+      - 'Applications#list~regex'
+      - 'Applications#list~requestUrl'
+      - 'Applications#list~httpRequest'
+      - 'Applications#list~headerName'
+  - uid: 'Applications#deleteMethod'
+    id: deleteMethod
+    parent: Applications
+    name: >-
+      deleteMethod(applicationObjectId, options, options.customHeaders,
+      callback)
+    summary: "Delete an application. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
+    type: Method
+    syntax:
+      parameters:
+        - id: applicationObjectId
+          type: string
+          description: Application object id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(applicationObjectId, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Applications.deleteMethod(applicationObjectId, options,
+      options.customHeaders, callback)
+    children:
+      - 'Applications#deleteMethod~client'
+      - 'Applications#deleteMethod~callback'
+      - 'Applications#deleteMethod~options'
+      - 'Applications#deleteMethod~apiVersion'
+      - 'Applications#deleteMethod~requestUrl'
+      - 'Applications#deleteMethod~requestUrl'
+      - 'Applications#deleteMethod~requestUrl'
+      - 'Applications#deleteMethod~queryParameters'
+      - 'Applications#deleteMethod~requestUrl'
+      - 'Applications#deleteMethod~regex'
+      - 'Applications#deleteMethod~requestUrl'
+      - 'Applications#deleteMethod~httpRequest'
+      - 'Applications#deleteMethod~headerName'
+  - uid: 'Applications#get'
+    id: get
+    parent: Applications
+    name: 'get(applicationObjectId, options, options.customHeaders, callback)'
+    summary: "Get an application by object Id. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
+    type: Method
+    syntax:
+      parameters:
+        - id: applicationObjectId
+          type: string
+          description: Application object id
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Application} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(applicationObjectId, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Applications.get(applicationObjectId, options, options.customHeaders,
+      callback)
+    children:
+      - 'Applications#get~client'
+      - 'Applications#get~callback'
+      - 'Applications#get~options'
+      - 'Applications#get~apiVersion'
+      - 'Applications#get~requestUrl'
+      - 'Applications#get~requestUrl'
+      - 'Applications#get~requestUrl'
+      - 'Applications#get~queryParameters'
+      - 'Applications#get~requestUrl'
+      - 'Applications#get~regex'
+      - 'Applications#get~requestUrl'
+      - 'Applications#get~httpRequest'
+      - 'Applications#get~headerName'
+  - uid: 'Applications#patch'
+    id: patch
+    parent: Applications
+    name: >-
+      patch(applicationObjectId, parameters, parameters.displayName,
+      parameters.homepage, parameters.identifierUris, parameters.replyUrls,
+      parameters.keyCredentials, parameters.passwordCredentials, options,
+      options.customHeaders, callback)
+    summary: "Update existing application. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
+    type: Method
+    syntax:
+      parameters:
+        - id: applicationObjectId
+          type: string
+          description: Application object id
+        - id: parameters
+          type: object
+          description: Parameters to update an existing application.
+        - id: parameters.displayName
+          type: string
+          description: Application display name
+        - id: parameters.homepage
+          type: string
+          description: Application homepage
+        - id: parameters.identifierUris
+          type: array
+          description: Application Uris
+        - id: parameters.replyUrls
+          type: array
+          description: Application reply Urls
+        - id: parameters.keyCredentials
+          type: array
+          description: "Gets or sets the list of\rKeyCredential objects"
+        - id: parameters.passwordCredentials
+          type: array
+          description: "Gets or sets the list of\rPasswordCredential objects"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function patch(applicationObjectId, parameters, parameters.displayName,
+        parameters.homepage, parameters.identifierUris, parameters.replyUrls,
+        parameters.keyCredentials, parameters.passwordCredentials, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Applications.patch(applicationObjectId, parameters,
+      parameters.displayName, parameters.homepage, parameters.identifierUris,
+      parameters.replyUrls, parameters.keyCredentials,
+      parameters.passwordCredentials, options, options.customHeaders, callback)
+    children:
+      - 'Applications#patch~client'
+      - 'Applications#patch~callback'
+      - 'Applications#patch~options'
+      - 'Applications#patch~apiVersion'
+      - 'Applications#patch~requestUrl'
+      - 'Applications#patch~requestUrl'
+      - 'Applications#patch~requestUrl'
+      - 'Applications#patch~queryParameters'
+      - 'Applications#patch~requestUrl'
+      - 'Applications#patch~regex'
+      - 'Applications#patch~requestUrl'
+      - 'Applications#patch~httpRequest'
+      - 'Applications#patch~headerName'
+      - 'Applications#patch~requestContent'
+      - 'Applications#patch~requestModel'
+      - 'Applications#patch~requestModelMapper'
+      - 'Applications#patch~requestModel'
+      - 'Applications#patch~requestContent'
+      - 'Applications#patch~serializationError'
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

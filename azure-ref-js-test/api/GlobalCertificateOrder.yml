@@ -1,0 +1,304 @@
+items:
+  - uid: GlobalCertificateOrder
+    id: GlobalCertificateOrder
+    name: GlobalCertificateOrder
+    type: Class
+    syntax:
+      content: GlobalCertificateOrder
+    fullName: GlobalCertificateOrder
+    children:
+      - 'GlobalCertificateOrder#client'
+      - 'GlobalCertificateOrder#getAllCertificateOrders'
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation'
+  - uid: 'GlobalCertificateOrder#client'
+    id: client
+    parent: GlobalCertificateOrder
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: GlobalCertificateOrder.client
+  - uid: 'GlobalCertificateOrder#getAllCertificateOrders'
+    id: getAllCertificateOrders
+    parent: GlobalCertificateOrder
+    name: 'getAllCertificateOrders(options, options.customHeaders, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateOrderCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getAllCertificateOrders(options, options.customHeaders,
+        callback);
+    fullName: >-
+      GlobalCertificateOrder.getAllCertificateOrders(options,
+      options.customHeaders, callback)
+    children:
+      - 'GlobalCertificateOrder#getAllCertificateOrders~client'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~callback'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~options'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~requestUrl'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~requestUrl'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~queryParameters'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~requestUrl'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~regex'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~requestUrl'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~httpRequest'
+      - 'GlobalCertificateOrder#getAllCertificateOrders~headerName'
+  - uid: 'GlobalCertificateOrder#validateCertificatePurchaseInformation'
+    id: validateCertificatePurchaseInformation
+    parent: GlobalCertificateOrder
+    name: >-
+      validateCertificatePurchaseInformation(certificateOrder,
+      certificateOrder.certificates, certificateOrder.distinguishedName,
+      certificateOrder.domainVerificationToken,
+      certificateOrder.validityInYears, certificateOrder.keySize,
+      certificateOrder.productType, certificateOrder.autoRenew,
+      certificateOrder.provisioningState, certificateOrder.status,
+      certificateOrder.signedCertificate, certificateOrder.csr,
+      certificateOrder.intermediate, certificateOrder.root,
+      certificateOrder.root.version, certificateOrder.root.serialNumber,
+      certificateOrder.root.thumbprint, certificateOrder.root.subject,
+      certificateOrder.root.notBefore, certificateOrder.root.notAfter,
+      certificateOrder.root.signatureAlgorithm, certificateOrder.root.issuer,
+      certificateOrder.root.rawData, certificateOrder.root.id,
+      certificateOrder.root.name, certificateOrder.root.kind,
+      certificateOrder.root.location, certificateOrder.root.type,
+      certificateOrder.root.tags, certificateOrder.serialNumber,
+      certificateOrder.lastCertificateIssuanceTime,
+      certificateOrder.expirationTime, certificateOrder.id,
+      certificateOrder.name, certificateOrder.kind, certificateOrder.location,
+      certificateOrder.type, certificateOrder.tags, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: certificateOrder
+          type: object
+          description: Certificate order
+        - id: certificateOrder.certificates
+          type: object
+          description: "State of the Key Vault\rsecret"
+        - id: certificateOrder.distinguishedName
+          type: string
+          description: "Certificate\rdistinguished name"
+        - id: certificateOrder.domainVerificationToken
+          type: string
+          description: "Domain\rVerification Token"
+        - id: certificateOrder.validityInYears
+          type: number
+          description: "Duration in years (must\rbe between 1 and 3)"
+        - id: certificateOrder.keySize
+          type: number
+          description: Certificate Key Size
+        - id: certificateOrder.productType
+          type: string
+          description: "Certificate product type.\rPossible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
+        - id: certificateOrder.autoRenew
+          type: boolean
+          description: Auto renew
+        - id: certificateOrder.provisioningState
+          type: string
+          description: "Status of certificate\rorder. Possible values include: 'Succeeded', 'Failed', 'Canceled',\r'InProgress', 'Deleting'"
+        - id: certificateOrder.status
+          type: string
+          description: "Current order status. Possible\rvalues include: 'Pendingissuance', 'Issued', 'Revoked', 'Canceled',\r'Denied', 'Pendingrevocation', 'PendingRekey', 'Unused', 'Expired',\r'NotSubmitted'"
+        - id: certificateOrder.signedCertificate
+          type: object
+          description: Signed certificate
+        - id: certificateOrder.csr
+          type: string
+          description: "Last CSR that was created for this\rorder"
+        - id: certificateOrder.intermediate
+          type: object
+          description: Intermediate certificate
+        - id: certificateOrder.root
+          type: object
+          description: Root certificate
+        - id: certificateOrder.root.version
+          type: number
+          description: Version
+        - id: certificateOrder.root.serialNumber
+          type: string
+          description: Serial Number
+        - id: certificateOrder.root.thumbprint
+          type: string
+          description: Thumbprint
+        - id: certificateOrder.root.subject
+          type: string
+          description: Subject
+        - id: certificateOrder.root.notBefore
+          type: date
+          description: Valid from
+        - id: certificateOrder.root.notAfter
+          type: date
+          description: Valid to
+        - id: certificateOrder.root.signatureAlgorithm
+          type: string
+          description: "Signature\rAlgorithm"
+        - id: certificateOrder.root.issuer
+          type: string
+          description: Issuer
+        - id: certificateOrder.root.rawData
+          type: string
+          description: Raw certificate data
+        - id: certificateOrder.root.id
+          type: string
+          description: Resource Id
+        - id: certificateOrder.root.name
+          type: string
+          description: Resource Name
+        - id: certificateOrder.root.kind
+          type: string
+          description: Kind of resource
+        - id: certificateOrder.root.location
+          type: string
+          description: Resource Location
+        - id: certificateOrder.root.type
+          type: string
+          description: Resource type
+        - id: certificateOrder.root.tags
+          type: object
+          description: Resource tags
+        - id: certificateOrder.serialNumber
+          type: string
+          description: "Current serial number of\rthe certificate"
+        - id: certificateOrder.lastCertificateIssuanceTime
+          type: date
+          description: "Certificate\rlast issuance time"
+        - id: certificateOrder.expirationTime
+          type: date
+          description: Certificate expiration time
+        - id: certificateOrder.id
+          type: string
+          description: Resource Id
+        - id: certificateOrder.name
+          type: string
+          description: Resource Name
+        - id: certificateOrder.kind
+          type: string
+          description: Kind of resource
+        - id: certificateOrder.location
+          type: string
+          description: Resource Location
+        - id: certificateOrder.type
+          type: string
+          description: Resource type
+        - id: certificateOrder.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function validateCertificatePurchaseInformation(certificateOrder,
+        certificateOrder.certificates, certificateOrder.distinguishedName,
+        certificateOrder.domainVerificationToken,
+        certificateOrder.validityInYears, certificateOrder.keySize,
+        certificateOrder.productType, certificateOrder.autoRenew,
+        certificateOrder.provisioningState, certificateOrder.status,
+        certificateOrder.signedCertificate, certificateOrder.csr,
+        certificateOrder.intermediate, certificateOrder.root,
+        certificateOrder.root.version, certificateOrder.root.serialNumber,
+        certificateOrder.root.thumbprint, certificateOrder.root.subject,
+        certificateOrder.root.notBefore, certificateOrder.root.notAfter,
+        certificateOrder.root.signatureAlgorithm, certificateOrder.root.issuer,
+        certificateOrder.root.rawData, certificateOrder.root.id,
+        certificateOrder.root.name, certificateOrder.root.kind,
+        certificateOrder.root.location, certificateOrder.root.type,
+        certificateOrder.root.tags, certificateOrder.serialNumber,
+        certificateOrder.lastCertificateIssuanceTime,
+        certificateOrder.expirationTime, certificateOrder.id,
+        certificateOrder.name, certificateOrder.kind, certificateOrder.location,
+        certificateOrder.type, certificateOrder.tags, options,
+        options.customHeaders, callback);
+    fullName: >-
+      GlobalCertificateOrder.validateCertificatePurchaseInformation(certificateOrder,
+      certificateOrder.certificates, certificateOrder.distinguishedName,
+      certificateOrder.domainVerificationToken,
+      certificateOrder.validityInYears, certificateOrder.keySize,
+      certificateOrder.productType, certificateOrder.autoRenew,
+      certificateOrder.provisioningState, certificateOrder.status,
+      certificateOrder.signedCertificate, certificateOrder.csr,
+      certificateOrder.intermediate, certificateOrder.root,
+      certificateOrder.root.version, certificateOrder.root.serialNumber,
+      certificateOrder.root.thumbprint, certificateOrder.root.subject,
+      certificateOrder.root.notBefore, certificateOrder.root.notAfter,
+      certificateOrder.root.signatureAlgorithm, certificateOrder.root.issuer,
+      certificateOrder.root.rawData, certificateOrder.root.id,
+      certificateOrder.root.name, certificateOrder.root.kind,
+      certificateOrder.root.location, certificateOrder.root.type,
+      certificateOrder.root.tags, certificateOrder.serialNumber,
+      certificateOrder.lastCertificateIssuanceTime,
+      certificateOrder.expirationTime, certificateOrder.id,
+      certificateOrder.name, certificateOrder.kind, certificateOrder.location,
+      certificateOrder.type, certificateOrder.tags, options,
+      options.customHeaders, callback)
+    children:
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~client'
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~callback'
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~options'
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~requestUrl'
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~requestUrl'
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~queryParameters
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~requestUrl'
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~regex'
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~requestUrl'
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~httpRequest
+      - 'GlobalCertificateOrder#validateCertificatePurchaseInformation~headerName'
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~requestContent
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~requestModel
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~requestModelMapper
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~requestModel
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~requestContent
+      - >-
+        GlobalCertificateOrder#validateCertificatePurchaseInformation~serializationError
+references:
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false

@@ -1,0 +1,1185 @@
+items:
+  - uid: VirtualNetworkGatewayConnections
+    id: VirtualNetworkGatewayConnections
+    name: VirtualNetworkGatewayConnections
+    type: Class
+    syntax:
+      content: VirtualNetworkGatewayConnections
+    fullName: VirtualNetworkGatewayConnections
+    children:
+      - 'VirtualNetworkGatewayConnections#client'
+      - 'VirtualNetworkGatewayConnections#createOrUpdate'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate'
+      - 'VirtualNetworkGatewayConnections#get'
+      - 'VirtualNetworkGatewayConnections#deleteMethod'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod'
+      - 'VirtualNetworkGatewayConnections#getSharedKey'
+      - 'VirtualNetworkGatewayConnections#list'
+      - 'VirtualNetworkGatewayConnections#resetSharedKey'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey'
+      - 'VirtualNetworkGatewayConnections#setSharedKey'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey'
+      - 'VirtualNetworkGatewayConnections#listNext'
+  - uid: 'VirtualNetworkGatewayConnections#client'
+    id: client
+    parent: VirtualNetworkGatewayConnections
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: VirtualNetworkGatewayConnections.client
+  - uid: 'VirtualNetworkGatewayConnections#createOrUpdate'
+    id: createOrUpdate
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      createOrUpdate(resourceGroupName, virtualNetworkGatewayConnectionName,
+      parameters, parameters.authorizationKey,
+      parameters.virtualNetworkGateway1, parameters.virtualNetworkGateway2,
+      parameters.virtualNetworkGateway2.ipConfigurations,
+      parameters.virtualNetworkGateway2.gatewayType,
+      parameters.virtualNetworkGateway2.vpnType,
+      parameters.virtualNetworkGateway2.enableBgp,
+      parameters.virtualNetworkGateway2.gatewayDefaultSite,
+      parameters.virtualNetworkGateway2.sku,
+      parameters.virtualNetworkGateway2.sku.name,
+      parameters.virtualNetworkGateway2.sku.tier,
+      parameters.virtualNetworkGateway2.sku.capacity,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates,
+      parameters.virtualNetworkGateway2.bgpSettings,
+      parameters.virtualNetworkGateway2.resourceGuid,
+      parameters.virtualNetworkGateway2.provisioningState,
+      parameters.virtualNetworkGateway2.etag,
+      parameters.virtualNetworkGateway2.id,
+      parameters.virtualNetworkGateway2.location,
+      parameters.virtualNetworkGateway2.tags, parameters.localNetworkGateway2,
+      parameters.localNetworkGateway2.localNetworkAddressSpace,
+      parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes,
+      parameters.localNetworkGateway2.gatewayIpAddress,
+      parameters.localNetworkGateway2.bgpSettings,
+      parameters.localNetworkGateway2.bgpSettings.asn,
+      parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress,
+      parameters.localNetworkGateway2.bgpSettings.peerWeight,
+      parameters.localNetworkGateway2.resourceGuid,
+      parameters.localNetworkGateway2.provisioningState,
+      parameters.localNetworkGateway2.etag, parameters.localNetworkGateway2.id,
+      parameters.localNetworkGateway2.location,
+      parameters.localNetworkGateway2.tags, parameters.connectionType,
+      parameters.routingWeight, parameters.sharedKey,
+      parameters.connectionStatus, parameters.egressBytesTransferred,
+      parameters.ingressBytesTransferred, parameters.peer, parameters.peer.id,
+      parameters.enableBgp, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put VirtualNetworkGatewayConnection operation creates/updates a virtual\rnetwork gateway connection in the specified resource group through Network\rresource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The name of the virtual\rnetwork gateway conenction."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Begin Create or\rupdate Virtual Network Gateway connection operation through Network\rresource provider."
+        - id: parameters.authorizationKey
+          type: string
+          description: The authorizationKey.
+        - id: parameters.virtualNetworkGateway1
+          type: object
+        - id: parameters.virtualNetworkGateway2
+          type: object
+        - id: parameters.virtualNetworkGateway2.ipConfigurations
+          type: array
+          description: IpConfigurations for Virtual network gateway.
+        - id: parameters.virtualNetworkGateway2.gatewayType
+          type: string
+          description: "The type of\rthis virtual network gateway. Possible values include: 'Vpn',\r'ExpressRoute'"
+        - id: parameters.virtualNetworkGateway2.vpnType
+          type: string
+          description: "The type of\rthis virtual network gateway. Possible values include: 'PolicyBased',\r'RouteBased'"
+        - id: parameters.virtualNetworkGateway2.enableBgp
+          type: boolean
+          description: "EnableBgp\rFlag"
+        - id: parameters.virtualNetworkGateway2.gatewayDefaultSite
+          type: object
+          description: "Gets\ror sets the reference of the LocalNetworkGateway resource which represents\rLocal network site having default routes. Assign Null value in case of\rremoving existing default site setting."
+        - id: parameters.virtualNetworkGateway2.sku
+          type: object
+          description: "Gets or sets the\rreference of the VirtualNetworkGatewaySku resource which represents the\rsku selected for Virtual network gateway."
+        - id: parameters.virtualNetworkGateway2.sku.name
+          type: string
+          description: "Gateway sku\rname -Basic/HighPerformance/Standard. Possible values include: 'Basic',\r'HighPerformance', 'Standard'"
+        - id: parameters.virtualNetworkGateway2.sku.tier
+          type: string
+          description: "Gateway sku\rtier -Basic/HighPerformance/Standard. Possible values include: 'Basic',\r'HighPerformance', 'Standard'"
+        - id: parameters.virtualNetworkGateway2.sku.capacity
+          type: number
+          description: "The\rcapacity"
+        - id: parameters.virtualNetworkGateway2.vpnClientConfiguration
+          type: object
+          description: "Gets or sets the reference of the VpnClientConfiguration resource which\rrepresents the P2S VpnClient configurations."
+        - id: >-
+            parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool
+          type: object
+          description: "Gets or sets the reference of the Address space resource which represents\rAddress space for P2S VpnClient."
+        - id: >-
+            parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates
+          type: array
+          description: VpnClientRootCertificate for Virtual network gateway.
+        - id: >-
+            parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates
+          type: array
+          description: VpnClientRevokedCertificate for Virtual network gateway.
+        - id: parameters.virtualNetworkGateway2.bgpSettings
+          type: object
+          description: "Virtual\rnetwork gateway's BGP speaker settings"
+        - id: parameters.virtualNetworkGateway2.resourceGuid
+          type: string
+          description: "Gets or\rsets resource guid property of the VirtualNetworkGateway resource"
+        - id: parameters.virtualNetworkGateway2.provisioningState
+          type: string
+          description: "Gets\ror sets Provisioning state of the VirtualNetworkGateway resource\rUpdating/Deleting/Failed"
+        - id: parameters.virtualNetworkGateway2.etag
+          type: string
+          description: "Gets a unique\rread-only string that changes whenever the resource is updated"
+        - id: parameters.virtualNetworkGateway2.id
+          type: string
+          description: Resource Id
+        - id: parameters.virtualNetworkGateway2.location
+          type: string
+          description: "Resource\rlocation"
+        - id: parameters.virtualNetworkGateway2.tags
+          type: object
+          description: Resource tags
+        - id: parameters.localNetworkGateway2
+          type: object
+        - id: parameters.localNetworkGateway2.localNetworkAddressSpace
+          type: object
+          description: Local network site Address space
+        - id: >-
+            parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes
+          type: array
+          description: "Gets or sets List of address blocks reserved for this virtual network in\rCIDR notation"
+        - id: parameters.localNetworkGateway2.gatewayIpAddress
+          type: string
+          description: "IP\raddress of local network gateway."
+        - id: parameters.localNetworkGateway2.bgpSettings
+          type: object
+          description: "Local network\rgateway's BGP speaker settings"
+        - id: parameters.localNetworkGateway2.bgpSettings.asn
+          type: number
+          description: "Gets or\rsets this BGP speaker's ASN"
+        - id: parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress
+          type: string
+          description: "Gets or\rsets the BGP peering address and BGP identifier of this BGP speaker"
+        - id: parameters.localNetworkGateway2.bgpSettings.peerWeight
+          type: number
+          description: >-
+            Gets or sets the weight added to routes learned from this BGP
+            speaker
+        - id: parameters.localNetworkGateway2.resourceGuid
+          type: string
+          description: "Gets or sets\rresource guid property of the LocalNetworkGateway resource"
+        - id: parameters.localNetworkGateway2.provisioningState
+          type: string
+          description: "Gets or\rsets Provisioning state of the LocalNetworkGateway resource\rUpdating/Deleting/Failed"
+        - id: parameters.localNetworkGateway2.etag
+          type: string
+          description: "Gets a unique\rread-only string that changes whenever the resource is updated"
+        - id: parameters.localNetworkGateway2.id
+          type: string
+          description: Resource Id
+        - id: parameters.localNetworkGateway2.location
+          type: string
+          description: Resource location
+        - id: parameters.localNetworkGateway2.tags
+          type: object
+          description: Resource tags
+        - id: parameters.connectionType
+          type: string
+          description: "Gateway connection type\r-Ipsec/Dedicated/VpnClient/Vnet2Vnet. Possible values include: 'IPsec',\r'Vnet2Vnet', 'ExpressRoute', 'VPNClient'"
+        - id: parameters.routingWeight
+          type: number
+          description: The Routing weight.
+        - id: parameters.sharedKey
+          type: string
+          description: The Ipsec share key.
+        - id: parameters.connectionStatus
+          type: string
+          description: "Virtual network Gateway\rconnection status. Possible values include: 'Unknown', 'Connecting',\r'Connected', 'NotConnected'"
+        - id: parameters.egressBytesTransferred
+          type: number
+          description: "The Egress Bytes\rTransferred in this connection"
+        - id: parameters.ingressBytesTransferred
+          type: number
+          description: "The Ingress Bytes\rTransferred in this connection"
+        - id: parameters.peer
+          type: object
+          description: The reference to peerings resource.
+        - id: parameters.peer.id
+          type: string
+          description: Resource Id
+        - id: parameters.enableBgp
+          type: boolean
+          description: EnableBgp Flag
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the VirtualNetworkGatewayConnection resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the VirtualNetworkGatewayConnection resource\rUpdating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetworkGatewayConnection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createOrUpdate(resourceGroupName,
+        virtualNetworkGatewayConnectionName, parameters,
+        parameters.authorizationKey, parameters.virtualNetworkGateway1,
+        parameters.virtualNetworkGateway2,
+        parameters.virtualNetworkGateway2.ipConfigurations,
+        parameters.virtualNetworkGateway2.gatewayType,
+        parameters.virtualNetworkGateway2.vpnType,
+        parameters.virtualNetworkGateway2.enableBgp,
+        parameters.virtualNetworkGateway2.gatewayDefaultSite,
+        parameters.virtualNetworkGateway2.sku,
+        parameters.virtualNetworkGateway2.sku.name,
+        parameters.virtualNetworkGateway2.sku.tier,
+        parameters.virtualNetworkGateway2.sku.capacity,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates,
+        parameters.virtualNetworkGateway2.bgpSettings,
+        parameters.virtualNetworkGateway2.resourceGuid,
+        parameters.virtualNetworkGateway2.provisioningState,
+        parameters.virtualNetworkGateway2.etag,
+        parameters.virtualNetworkGateway2.id,
+        parameters.virtualNetworkGateway2.location,
+        parameters.virtualNetworkGateway2.tags, parameters.localNetworkGateway2,
+        parameters.localNetworkGateway2.localNetworkAddressSpace,
+        parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes,
+        parameters.localNetworkGateway2.gatewayIpAddress,
+        parameters.localNetworkGateway2.bgpSettings,
+        parameters.localNetworkGateway2.bgpSettings.asn,
+        parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress,
+        parameters.localNetworkGateway2.bgpSettings.peerWeight,
+        parameters.localNetworkGateway2.resourceGuid,
+        parameters.localNetworkGateway2.provisioningState,
+        parameters.localNetworkGateway2.etag,
+        parameters.localNetworkGateway2.id,
+        parameters.localNetworkGateway2.location,
+        parameters.localNetworkGateway2.tags, parameters.connectionType,
+        parameters.routingWeight, parameters.sharedKey,
+        parameters.connectionStatus, parameters.egressBytesTransferred,
+        parameters.ingressBytesTransferred, parameters.peer, parameters.peer.id,
+        parameters.enableBgp, parameters.resourceGuid,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.createOrUpdate(resourceGroupName,
+      virtualNetworkGatewayConnectionName, parameters,
+      parameters.authorizationKey, parameters.virtualNetworkGateway1,
+      parameters.virtualNetworkGateway2,
+      parameters.virtualNetworkGateway2.ipConfigurations,
+      parameters.virtualNetworkGateway2.gatewayType,
+      parameters.virtualNetworkGateway2.vpnType,
+      parameters.virtualNetworkGateway2.enableBgp,
+      parameters.virtualNetworkGateway2.gatewayDefaultSite,
+      parameters.virtualNetworkGateway2.sku,
+      parameters.virtualNetworkGateway2.sku.name,
+      parameters.virtualNetworkGateway2.sku.tier,
+      parameters.virtualNetworkGateway2.sku.capacity,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates,
+      parameters.virtualNetworkGateway2.bgpSettings,
+      parameters.virtualNetworkGateway2.resourceGuid,
+      parameters.virtualNetworkGateway2.provisioningState,
+      parameters.virtualNetworkGateway2.etag,
+      parameters.virtualNetworkGateway2.id,
+      parameters.virtualNetworkGateway2.location,
+      parameters.virtualNetworkGateway2.tags, parameters.localNetworkGateway2,
+      parameters.localNetworkGateway2.localNetworkAddressSpace,
+      parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes,
+      parameters.localNetworkGateway2.gatewayIpAddress,
+      parameters.localNetworkGateway2.bgpSettings,
+      parameters.localNetworkGateway2.bgpSettings.asn,
+      parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress,
+      parameters.localNetworkGateway2.bgpSettings.peerWeight,
+      parameters.localNetworkGateway2.resourceGuid,
+      parameters.localNetworkGateway2.provisioningState,
+      parameters.localNetworkGateway2.etag, parameters.localNetworkGateway2.id,
+      parameters.localNetworkGateway2.location,
+      parameters.localNetworkGateway2.tags, parameters.connectionType,
+      parameters.routingWeight, parameters.sharedKey,
+      parameters.connectionStatus, parameters.egressBytesTransferred,
+      parameters.ingressBytesTransferred, parameters.peer, parameters.peer.id,
+      parameters.enableBgp, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#createOrUpdate~client'
+      - 'VirtualNetworkGatewayConnections#createOrUpdate~callback'
+      - 'VirtualNetworkGatewayConnections#createOrUpdate~options'
+  - uid: 'VirtualNetworkGatewayConnections#beginCreateOrUpdate'
+    id: beginCreateOrUpdate
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      beginCreateOrUpdate(resourceGroupName,
+      virtualNetworkGatewayConnectionName, parameters,
+      parameters.authorizationKey, parameters.virtualNetworkGateway1,
+      parameters.virtualNetworkGateway2,
+      parameters.virtualNetworkGateway2.ipConfigurations,
+      parameters.virtualNetworkGateway2.gatewayType,
+      parameters.virtualNetworkGateway2.vpnType,
+      parameters.virtualNetworkGateway2.enableBgp,
+      parameters.virtualNetworkGateway2.gatewayDefaultSite,
+      parameters.virtualNetworkGateway2.sku,
+      parameters.virtualNetworkGateway2.sku.name,
+      parameters.virtualNetworkGateway2.sku.tier,
+      parameters.virtualNetworkGateway2.sku.capacity,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates,
+      parameters.virtualNetworkGateway2.bgpSettings,
+      parameters.virtualNetworkGateway2.resourceGuid,
+      parameters.virtualNetworkGateway2.provisioningState,
+      parameters.virtualNetworkGateway2.etag,
+      parameters.virtualNetworkGateway2.id,
+      parameters.virtualNetworkGateway2.location,
+      parameters.virtualNetworkGateway2.tags, parameters.localNetworkGateway2,
+      parameters.localNetworkGateway2.localNetworkAddressSpace,
+      parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes,
+      parameters.localNetworkGateway2.gatewayIpAddress,
+      parameters.localNetworkGateway2.bgpSettings,
+      parameters.localNetworkGateway2.bgpSettings.asn,
+      parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress,
+      parameters.localNetworkGateway2.bgpSettings.peerWeight,
+      parameters.localNetworkGateway2.resourceGuid,
+      parameters.localNetworkGateway2.provisioningState,
+      parameters.localNetworkGateway2.etag, parameters.localNetworkGateway2.id,
+      parameters.localNetworkGateway2.location,
+      parameters.localNetworkGateway2.tags, parameters.connectionType,
+      parameters.routingWeight, parameters.sharedKey,
+      parameters.connectionStatus, parameters.egressBytesTransferred,
+      parameters.ingressBytesTransferred, parameters.peer, parameters.peer.id,
+      parameters.enableBgp, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    summary: "The Put VirtualNetworkGatewayConnection operation creates/updates a virtual\rnetwork gateway connection in the specified resource group through Network\rresource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The name of the virtual\rnetwork gateway conenction."
+        - id: parameters
+          type: object
+          description: "Parameters supplied to the Begin Create or\rupdate Virtual Network Gateway connection operation through Network\rresource provider."
+        - id: parameters.authorizationKey
+          type: string
+          description: The authorizationKey.
+        - id: parameters.virtualNetworkGateway1
+          type: object
+        - id: parameters.virtualNetworkGateway2
+          type: object
+        - id: parameters.virtualNetworkGateway2.ipConfigurations
+          type: array
+          description: IpConfigurations for Virtual network gateway.
+        - id: parameters.virtualNetworkGateway2.gatewayType
+          type: string
+          description: "The type of\rthis virtual network gateway. Possible values include: 'Vpn',\r'ExpressRoute'"
+        - id: parameters.virtualNetworkGateway2.vpnType
+          type: string
+          description: "The type of\rthis virtual network gateway. Possible values include: 'PolicyBased',\r'RouteBased'"
+        - id: parameters.virtualNetworkGateway2.enableBgp
+          type: boolean
+          description: "EnableBgp\rFlag"
+        - id: parameters.virtualNetworkGateway2.gatewayDefaultSite
+          type: object
+          description: "Gets\ror sets the reference of the LocalNetworkGateway resource which represents\rLocal network site having default routes. Assign Null value in case of\rremoving existing default site setting."
+        - id: parameters.virtualNetworkGateway2.sku
+          type: object
+          description: "Gets or sets the\rreference of the VirtualNetworkGatewaySku resource which represents the\rsku selected for Virtual network gateway."
+        - id: parameters.virtualNetworkGateway2.sku.name
+          type: string
+          description: "Gateway sku\rname -Basic/HighPerformance/Standard. Possible values include: 'Basic',\r'HighPerformance', 'Standard'"
+        - id: parameters.virtualNetworkGateway2.sku.tier
+          type: string
+          description: "Gateway sku\rtier -Basic/HighPerformance/Standard. Possible values include: 'Basic',\r'HighPerformance', 'Standard'"
+        - id: parameters.virtualNetworkGateway2.sku.capacity
+          type: number
+          description: "The\rcapacity"
+        - id: parameters.virtualNetworkGateway2.vpnClientConfiguration
+          type: object
+          description: "Gets or sets the reference of the VpnClientConfiguration resource which\rrepresents the P2S VpnClient configurations."
+        - id: >-
+            parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool
+          type: object
+          description: "Gets or sets the reference of the Address space resource which represents\rAddress space for P2S VpnClient."
+        - id: >-
+            parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates
+          type: array
+          description: VpnClientRootCertificate for Virtual network gateway.
+        - id: >-
+            parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates
+          type: array
+          description: VpnClientRevokedCertificate for Virtual network gateway.
+        - id: parameters.virtualNetworkGateway2.bgpSettings
+          type: object
+          description: "Virtual\rnetwork gateway's BGP speaker settings"
+        - id: parameters.virtualNetworkGateway2.resourceGuid
+          type: string
+          description: "Gets or\rsets resource guid property of the VirtualNetworkGateway resource"
+        - id: parameters.virtualNetworkGateway2.provisioningState
+          type: string
+          description: "Gets\ror sets Provisioning state of the VirtualNetworkGateway resource\rUpdating/Deleting/Failed"
+        - id: parameters.virtualNetworkGateway2.etag
+          type: string
+          description: "Gets a unique\rread-only string that changes whenever the resource is updated"
+        - id: parameters.virtualNetworkGateway2.id
+          type: string
+          description: Resource Id
+        - id: parameters.virtualNetworkGateway2.location
+          type: string
+          description: "Resource\rlocation"
+        - id: parameters.virtualNetworkGateway2.tags
+          type: object
+          description: Resource tags
+        - id: parameters.localNetworkGateway2
+          type: object
+        - id: parameters.localNetworkGateway2.localNetworkAddressSpace
+          type: object
+          description: Local network site Address space
+        - id: >-
+            parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes
+          type: array
+          description: "Gets or sets List of address blocks reserved for this virtual network in\rCIDR notation"
+        - id: parameters.localNetworkGateway2.gatewayIpAddress
+          type: string
+          description: "IP\raddress of local network gateway."
+        - id: parameters.localNetworkGateway2.bgpSettings
+          type: object
+          description: "Local network\rgateway's BGP speaker settings"
+        - id: parameters.localNetworkGateway2.bgpSettings.asn
+          type: number
+          description: "Gets or\rsets this BGP speaker's ASN"
+        - id: parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress
+          type: string
+          description: "Gets or\rsets the BGP peering address and BGP identifier of this BGP speaker"
+        - id: parameters.localNetworkGateway2.bgpSettings.peerWeight
+          type: number
+          description: >-
+            Gets or sets the weight added to routes learned from this BGP
+            speaker
+        - id: parameters.localNetworkGateway2.resourceGuid
+          type: string
+          description: "Gets or sets\rresource guid property of the LocalNetworkGateway resource"
+        - id: parameters.localNetworkGateway2.provisioningState
+          type: string
+          description: "Gets or\rsets Provisioning state of the LocalNetworkGateway resource\rUpdating/Deleting/Failed"
+        - id: parameters.localNetworkGateway2.etag
+          type: string
+          description: "Gets a unique\rread-only string that changes whenever the resource is updated"
+        - id: parameters.localNetworkGateway2.id
+          type: string
+          description: Resource Id
+        - id: parameters.localNetworkGateway2.location
+          type: string
+          description: Resource location
+        - id: parameters.localNetworkGateway2.tags
+          type: object
+          description: Resource tags
+        - id: parameters.connectionType
+          type: string
+          description: "Gateway connection type\r-Ipsec/Dedicated/VpnClient/Vnet2Vnet. Possible values include: 'IPsec',\r'Vnet2Vnet', 'ExpressRoute', 'VPNClient'"
+        - id: parameters.routingWeight
+          type: number
+          description: The Routing weight.
+        - id: parameters.sharedKey
+          type: string
+          description: The Ipsec share key.
+        - id: parameters.connectionStatus
+          type: string
+          description: "Virtual network Gateway\rconnection status. Possible values include: 'Unknown', 'Connecting',\r'Connected', 'NotConnected'"
+        - id: parameters.egressBytesTransferred
+          type: number
+          description: "The Egress Bytes\rTransferred in this connection"
+        - id: parameters.ingressBytesTransferred
+          type: number
+          description: "The Ingress Bytes\rTransferred in this connection"
+        - id: parameters.peer
+          type: object
+          description: The reference to peerings resource.
+        - id: parameters.peer.id
+          type: string
+          description: Resource Id
+        - id: parameters.enableBgp
+          type: boolean
+          description: EnableBgp Flag
+        - id: parameters.resourceGuid
+          type: string
+          description: "Gets or sets resource guid\rproperty of the VirtualNetworkGatewayConnection resource"
+        - id: parameters.provisioningState
+          type: string
+          description: "Gets or sets Provisioning\rstate of the VirtualNetworkGatewayConnection resource\rUpdating/Deleting/Failed"
+        - id: parameters.etag
+          type: string
+          description: "Gets a unique read-only string that\rchanges whenever the resource is updated"
+        - id: parameters.id
+          type: string
+          description: Resource Id
+        - id: parameters.location
+          type: string
+          description: Resource location
+        - id: parameters.tags
+          type: object
+          description: Resource tags
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetworkGatewayConnection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreateOrUpdate(resourceGroupName,
+        virtualNetworkGatewayConnectionName, parameters,
+        parameters.authorizationKey, parameters.virtualNetworkGateway1,
+        parameters.virtualNetworkGateway2,
+        parameters.virtualNetworkGateway2.ipConfigurations,
+        parameters.virtualNetworkGateway2.gatewayType,
+        parameters.virtualNetworkGateway2.vpnType,
+        parameters.virtualNetworkGateway2.enableBgp,
+        parameters.virtualNetworkGateway2.gatewayDefaultSite,
+        parameters.virtualNetworkGateway2.sku,
+        parameters.virtualNetworkGateway2.sku.name,
+        parameters.virtualNetworkGateway2.sku.tier,
+        parameters.virtualNetworkGateway2.sku.capacity,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates,
+        parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates,
+        parameters.virtualNetworkGateway2.bgpSettings,
+        parameters.virtualNetworkGateway2.resourceGuid,
+        parameters.virtualNetworkGateway2.provisioningState,
+        parameters.virtualNetworkGateway2.etag,
+        parameters.virtualNetworkGateway2.id,
+        parameters.virtualNetworkGateway2.location,
+        parameters.virtualNetworkGateway2.tags, parameters.localNetworkGateway2,
+        parameters.localNetworkGateway2.localNetworkAddressSpace,
+        parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes,
+        parameters.localNetworkGateway2.gatewayIpAddress,
+        parameters.localNetworkGateway2.bgpSettings,
+        parameters.localNetworkGateway2.bgpSettings.asn,
+        parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress,
+        parameters.localNetworkGateway2.bgpSettings.peerWeight,
+        parameters.localNetworkGateway2.resourceGuid,
+        parameters.localNetworkGateway2.provisioningState,
+        parameters.localNetworkGateway2.etag,
+        parameters.localNetworkGateway2.id,
+        parameters.localNetworkGateway2.location,
+        parameters.localNetworkGateway2.tags, parameters.connectionType,
+        parameters.routingWeight, parameters.sharedKey,
+        parameters.connectionStatus, parameters.egressBytesTransferred,
+        parameters.ingressBytesTransferred, parameters.peer, parameters.peer.id,
+        parameters.enableBgp, parameters.resourceGuid,
+        parameters.provisioningState, parameters.etag, parameters.id,
+        parameters.location, parameters.tags, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.beginCreateOrUpdate(resourceGroupName,
+      virtualNetworkGatewayConnectionName, parameters,
+      parameters.authorizationKey, parameters.virtualNetworkGateway1,
+      parameters.virtualNetworkGateway2,
+      parameters.virtualNetworkGateway2.ipConfigurations,
+      parameters.virtualNetworkGateway2.gatewayType,
+      parameters.virtualNetworkGateway2.vpnType,
+      parameters.virtualNetworkGateway2.enableBgp,
+      parameters.virtualNetworkGateway2.gatewayDefaultSite,
+      parameters.virtualNetworkGateway2.sku,
+      parameters.virtualNetworkGateway2.sku.name,
+      parameters.virtualNetworkGateway2.sku.tier,
+      parameters.virtualNetworkGateway2.sku.capacity,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientAddressPool,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRootCertificates,
+      parameters.virtualNetworkGateway2.vpnClientConfiguration.vpnClientRevokedCertificates,
+      parameters.virtualNetworkGateway2.bgpSettings,
+      parameters.virtualNetworkGateway2.resourceGuid,
+      parameters.virtualNetworkGateway2.provisioningState,
+      parameters.virtualNetworkGateway2.etag,
+      parameters.virtualNetworkGateway2.id,
+      parameters.virtualNetworkGateway2.location,
+      parameters.virtualNetworkGateway2.tags, parameters.localNetworkGateway2,
+      parameters.localNetworkGateway2.localNetworkAddressSpace,
+      parameters.localNetworkGateway2.localNetworkAddressSpace.addressPrefixes,
+      parameters.localNetworkGateway2.gatewayIpAddress,
+      parameters.localNetworkGateway2.bgpSettings,
+      parameters.localNetworkGateway2.bgpSettings.asn,
+      parameters.localNetworkGateway2.bgpSettings.bgpPeeringAddress,
+      parameters.localNetworkGateway2.bgpSettings.peerWeight,
+      parameters.localNetworkGateway2.resourceGuid,
+      parameters.localNetworkGateway2.provisioningState,
+      parameters.localNetworkGateway2.etag, parameters.localNetworkGateway2.id,
+      parameters.localNetworkGateway2.location,
+      parameters.localNetworkGateway2.tags, parameters.connectionType,
+      parameters.routingWeight, parameters.sharedKey,
+      parameters.connectionStatus, parameters.egressBytesTransferred,
+      parameters.ingressBytesTransferred, parameters.peer, parameters.peer.id,
+      parameters.enableBgp, parameters.resourceGuid,
+      parameters.provisioningState, parameters.etag, parameters.id,
+      parameters.location, parameters.tags, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~client'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~callback'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~options'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~queryParameters'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~regex'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~httpRequest'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~headerName'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestContent'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestModel'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestModelMapper'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestModel'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~requestContent'
+      - 'VirtualNetworkGatewayConnections#beginCreateOrUpdate~serializationError'
+  - uid: 'VirtualNetworkGatewayConnections#get'
+    id: get
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      get(resourceGroupName, virtualNetworkGatewayConnectionName, options,
+      options.customHeaders, callback)
+    summary: "The Get VirtualNetworkGatewayConnection operation retrieves information\rabout the specified virtual network gateway connection through Network\rresource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The name of the virtual\rnetwork gateway connection."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetworkGatewayConnection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceGroupName, virtualNetworkGatewayConnectionName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.get(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#get~client'
+      - 'VirtualNetworkGatewayConnections#get~callback'
+      - 'VirtualNetworkGatewayConnections#get~options'
+      - 'VirtualNetworkGatewayConnections#get~requestUrl'
+      - 'VirtualNetworkGatewayConnections#get~requestUrl'
+      - 'VirtualNetworkGatewayConnections#get~requestUrl'
+      - 'VirtualNetworkGatewayConnections#get~requestUrl'
+      - 'VirtualNetworkGatewayConnections#get~queryParameters'
+      - 'VirtualNetworkGatewayConnections#get~requestUrl'
+      - 'VirtualNetworkGatewayConnections#get~regex'
+      - 'VirtualNetworkGatewayConnections#get~requestUrl'
+      - 'VirtualNetworkGatewayConnections#get~httpRequest'
+      - 'VirtualNetworkGatewayConnections#get~headerName'
+  - uid: 'VirtualNetworkGatewayConnections#deleteMethod'
+    id: deleteMethod
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      deleteMethod(resourceGroupName, virtualNetworkGatewayConnectionName,
+      options, options.customHeaders, callback)
+    summary: "The Delete VirtualNetworkGatewayConnection operation deletes the specifed\rvirtual network Gateway connection through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The name of the virtual\rnetwork gateway connection."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteMethod(resourceGroupName,
+        virtualNetworkGatewayConnectionName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.deleteMethod(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#deleteMethod~client'
+      - 'VirtualNetworkGatewayConnections#deleteMethod~callback'
+      - 'VirtualNetworkGatewayConnections#deleteMethod~options'
+  - uid: 'VirtualNetworkGatewayConnections#beginDeleteMethod'
+    id: beginDeleteMethod
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      beginDeleteMethod(resourceGroupName, virtualNetworkGatewayConnectionName,
+      options, options.customHeaders, callback)
+    summary: "The Delete VirtualNetworkGatewayConnection operation deletes the specifed\rvirtual network Gateway connection through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The name of the virtual\rnetwork gateway connection."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteMethod(resourceGroupName,
+        virtualNetworkGatewayConnectionName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.beginDeleteMethod(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.customHeaders,
+      callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~client'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~callback'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~options'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~queryParameters'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~regex'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~httpRequest'
+      - 'VirtualNetworkGatewayConnections#beginDeleteMethod~headerName'
+  - uid: 'VirtualNetworkGatewayConnections#getSharedKey'
+    id: getSharedKey
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      getSharedKey(resourceGroupName, connectionSharedKeyName, options,
+      options.customHeaders, callback)
+    summary: "The Get VirtualNetworkGatewayConnectionSharedKey operation retrieves\rinformation about the specified virtual network gateway connection shared\rkey through Network resource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: connectionSharedKeyName
+          type: string
+          description: "The virtual network gateway\rconnection shared key name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ConnectionSharedKeyResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getSharedKey(resourceGroupName, connectionSharedKeyName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.getSharedKey(resourceGroupName,
+      connectionSharedKeyName, options, options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#getSharedKey~client'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~callback'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~options'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~queryParameters'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~regex'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~httpRequest'
+      - 'VirtualNetworkGatewayConnections#getSharedKey~headerName'
+  - uid: 'VirtualNetworkGatewayConnections#list'
+    id: list
+    parent: VirtualNetworkGatewayConnections
+    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    summary: "The List VirtualNetworkGatewayConnections operation retrieves all the\rvirtual network gateways connections created."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetworkGatewayConnectionListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.list(resourceGroupName, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#list~client'
+      - 'VirtualNetworkGatewayConnections#list~callback'
+      - 'VirtualNetworkGatewayConnections#list~options'
+      - 'VirtualNetworkGatewayConnections#list~requestUrl'
+      - 'VirtualNetworkGatewayConnections#list~requestUrl'
+      - 'VirtualNetworkGatewayConnections#list~requestUrl'
+      - 'VirtualNetworkGatewayConnections#list~queryParameters'
+      - 'VirtualNetworkGatewayConnections#list~requestUrl'
+      - 'VirtualNetworkGatewayConnections#list~regex'
+      - 'VirtualNetworkGatewayConnections#list~requestUrl'
+      - 'VirtualNetworkGatewayConnections#list~httpRequest'
+      - 'VirtualNetworkGatewayConnections#list~headerName'
+  - uid: 'VirtualNetworkGatewayConnections#resetSharedKey'
+    id: resetSharedKey
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      resetSharedKey(resourceGroupName, virtualNetworkGatewayConnectionName,
+      options, options.keyLength, options.customHeaders, callback)
+    summary: "The VirtualNetworkGatewayConnectionResetSharedKey operation resets the\rvirtual network gateway connection shared key for passed virtual network\rgateway connection in the specified resource group through Network\rresource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The virtual network\rgateway connection reset shared key Name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.keyLength
+          type: number
+          description: "The virtual network connection reset\rshared key length"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ConnectionResetSharedKey} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function resetSharedKey(resourceGroupName,
+        virtualNetworkGatewayConnectionName, options, options.keyLength,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.resetSharedKey(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.keyLength,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#resetSharedKey~client'
+      - 'VirtualNetworkGatewayConnections#resetSharedKey~callback'
+      - 'VirtualNetworkGatewayConnections#resetSharedKey~options'
+  - uid: 'VirtualNetworkGatewayConnections#beginResetSharedKey'
+    id: beginResetSharedKey
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      beginResetSharedKey(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.keyLength,
+      options.customHeaders, callback)
+    summary: "The VirtualNetworkGatewayConnectionResetSharedKey operation resets the\rvirtual network gateway connection shared key for passed virtual network\rgateway connection in the specified resource group through Network\rresource provider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The virtual network\rgateway connection reset shared key Name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.keyLength
+          type: number
+          description: "The virtual network connection reset\rshared key length"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ConnectionResetSharedKey} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginResetSharedKey(resourceGroupName,
+        virtualNetworkGatewayConnectionName, options, options.keyLength,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.beginResetSharedKey(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.keyLength,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~client'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~callback'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~options'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~keyLength'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~parameters'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~parameters'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~queryParameters'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~regex'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~httpRequest'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~headerName'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestContent'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestModel'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestModelMapper'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestModel'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~requestContent'
+      - 'VirtualNetworkGatewayConnections#beginResetSharedKey~serializationError'
+  - uid: 'VirtualNetworkGatewayConnections#setSharedKey'
+    id: setSharedKey
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      setSharedKey(resourceGroupName, virtualNetworkGatewayConnectionName,
+      options, options.value, options.customHeaders, callback)
+    summary: "The Put VirtualNetworkGatewayConnectionSharedKey operation sets the virtual\rnetwork gateway connection shared key for passed virtual network gateway\rconnection in the specified resource group through Network resource\rprovider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The virtual network\rgateway connection name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.value
+          type: string
+          description: "The virtual network connection shared key\rvalue"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ConnectionSharedKey} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function setSharedKey(resourceGroupName,
+        virtualNetworkGatewayConnectionName, options, options.value,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.setSharedKey(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.value,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#setSharedKey~client'
+      - 'VirtualNetworkGatewayConnections#setSharedKey~callback'
+      - 'VirtualNetworkGatewayConnections#setSharedKey~options'
+  - uid: 'VirtualNetworkGatewayConnections#beginSetSharedKey'
+    id: beginSetSharedKey
+    parent: VirtualNetworkGatewayConnections
+    name: >-
+      beginSetSharedKey(resourceGroupName, virtualNetworkGatewayConnectionName,
+      options, options.value, options.customHeaders, callback)
+    summary: "The Put VirtualNetworkGatewayConnectionSharedKey operation sets the virtual\rnetwork gateway connection shared key for passed virtual network gateway\rconnection in the specified resource group through Network resource\rprovider."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayConnectionName
+          type: string
+          description: "The virtual network\rgateway connection name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.value
+          type: string
+          description: "The virtual network connection shared key\rvalue"
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ConnectionSharedKey} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginSetSharedKey(resourceGroupName,
+        virtualNetworkGatewayConnectionName, options, options.value,
+        options.customHeaders, callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.beginSetSharedKey(resourceGroupName,
+      virtualNetworkGatewayConnectionName, options, options.value,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~client'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~callback'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~options'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~value'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~parameters'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~parameters'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~queryParameters'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~regex'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestUrl'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~httpRequest'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~headerName'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestContent'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestModel'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestModelMapper'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestModel'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~requestContent'
+      - 'VirtualNetworkGatewayConnections#beginSetSharedKey~serializationError'
+  - uid: 'VirtualNetworkGatewayConnections#listNext'
+    id: listNext
+    parent: VirtualNetworkGatewayConnections
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "The List VirtualNetworkGatewayConnections operation retrieves all the\rvirtual network gateways connections created."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualNetworkGatewayConnectionListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      VirtualNetworkGatewayConnections.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'VirtualNetworkGatewayConnections#listNext~client'
+      - 'VirtualNetworkGatewayConnections#listNext~callback'
+      - 'VirtualNetworkGatewayConnections#listNext~options'
+      - 'VirtualNetworkGatewayConnections#listNext~requestUrl'
+      - 'VirtualNetworkGatewayConnections#listNext~requestUrl'
+      - 'VirtualNetworkGatewayConnections#listNext~regex'
+      - 'VirtualNetworkGatewayConnections#listNext~requestUrl'
+      - 'VirtualNetworkGatewayConnections#listNext~httpRequest'
+      - 'VirtualNetworkGatewayConnections#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

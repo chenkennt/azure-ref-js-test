@@ -1,0 +1,427 @@
+items:
+  - uid: LoadBalancerOperations~LoadBalancerOperations
+    id: LoadBalancerOperations
+    parent: LoadBalancerOperations
+    name: LoadBalancerOperations
+    type: Class
+    syntax:
+      content: LoadBalancerOperations
+    fullName: LoadBalancerOperations.LoadBalancerOperations
+    children:
+      - 'LoadBalancerOperations~LoadBalancerOperations#client'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating'
+      - 'LoadBalancerOperations~LoadBalancerOperations#create'
+      - 'LoadBalancerOperations~LoadBalancerOperations#deleteMethod'
+      - 'LoadBalancerOperations~LoadBalancerOperations#update'
+  - uid: 'LoadBalancerOperations~LoadBalancerOperations#client'
+    id: client
+    parent: LoadBalancerOperations~LoadBalancerOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: LoadBalancerOperations~LoadBalancerOperations.client
+  - uid: 'LoadBalancerOperations~LoadBalancerOperations#beginCreating'
+    id: beginCreating
+    parent: LoadBalancerOperations~LoadBalancerOperations
+    name: >-
+      beginCreating(serviceName, deploymentName, parameters, parameters.name,
+      parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    summary: "Add an internal load balancer to a an existing deployment. When used by an\rinput endpoint, the internal load balancer will provide an additional\rprivate VIP that can be used for load balancing to the roles in this\rdeployment."
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: parameters
+          type: LoadBalancerCreateParameters
+          description: "Parameters supplied to\rthe Create Load Balancer operation."
+        - id: parameters.name
+          type: string
+          description: Name of the load balancer.
+        - id: parameters.frontendIPConfiguration
+          type: FrontendIPConfiguration
+          description: "The\rconfiguration for the virtual IP address (VIP) this load balancer\rprovides."
+        - id: parameters.frontendIPConfiguration.type
+          type: string
+          description: "The type of the\rVIP provided by this load balancer. Currently, only 'Private' is\rsupported. This will create load balancing services on a private VIP."
+        - id: parameters.frontendIPConfiguration.subnetName
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a subnet of that virtual\rnetwork must be specified for the load balancer. The VIP managed by the\rload balancer will then be an IP address out of this subnet. If the\rdeployment exists outside of a virtual network, no subnet can be\rspecified and the private VIP will be an IP address from the general\rprivate address pool."
+        - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a specific address from the\rload balancer subnet can be specified. The VIP for the load balancer will\rthen be this specific IP address. If a static virtual network IP address\ris provided, the SubnetName element of the load balancer must be\rspecified as well. If the deployment exists outside of a virtual network,\rno static virtual network IP address can be specified."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginCreating(serviceName, deploymentName, parameters,
+        parameters.name, parameters.frontendIPConfiguration,
+        parameters.frontendIPConfiguration.type,
+        parameters.frontendIPConfiguration.subnetName,
+        parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+        callback);
+    fullName: >-
+      LoadBalancerOperations~LoadBalancerOperations.beginCreating(serviceName,
+      deploymentName, parameters, parameters.name,
+      parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    children:
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~baseUrl'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~baseUrl'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~httpRequest'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginCreating~requestContent
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~requestDoc'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginCreating~loadBalancerElement
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~nameElement'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginCreating~frontendIpConfigurationElement
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginCreating~typeElement'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginCreating~subnetNameElement
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginCreating~staticVirtualNetworkIPAddressElement
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginCreating~requestContent
+  - uid: 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting'
+    id: beginDeleting
+    parent: LoadBalancerOperations~LoadBalancerOperations
+    name: 'beginDeleting(serviceName, deploymentName, loadBalancerName, callback)'
+    summary: Delete an internal load balancer from the deployment.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: loadBalancerName
+          type: string
+          description: The name of the load balancer.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginDeleting(serviceName, deploymentName, loadBalancerName,
+        callback);
+    fullName: >-
+      LoadBalancerOperations~LoadBalancerOperations.beginDeleting(serviceName,
+      deploymentName, loadBalancerName, callback)
+    children:
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~baseUrl'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~baseUrl'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginDeleting~httpRequest'
+  - uid: 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating'
+    id: beginUpdating
+    parent: LoadBalancerOperations~LoadBalancerOperations
+    name: >-
+      beginUpdating(serviceName, deploymentName, loadBalancerName, parameters,
+      parameters.name, parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    summary: Updates an internal load balancer associated with an existing deployment.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: loadBalancerName
+          type: string
+          description: The name of the loadBalancer.
+        - id: parameters
+          type: LoadBalancerUpdateParameters
+          description: "Parameters supplied to\rthe Update Load Balancer operation."
+        - id: parameters.name
+          type: string
+          description: Name of the load balancer.
+        - id: parameters.frontendIPConfiguration
+          type: FrontendIPConfiguration
+          description: "The\rconfiguration for the virtual IP address (VIP) this load balancer\rprovides."
+        - id: parameters.frontendIPConfiguration.type
+          type: string
+          description: "The type of the\rVIP provided by this load balancer. Currently, only 'Private' is\rsupported. This will create load balancing services on a private VIP."
+        - id: parameters.frontendIPConfiguration.subnetName
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a subnet of that virtual\rnetwork must be specified for the load balancer. The VIP managed by the\rload balancer will then be an IP address out of this subnet. If the\rdeployment exists outside of a virtual network, no subnet can be\rspecified and the private VIP will be an IP address from the general\rprivate address pool."
+        - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a specific address from the\rload balancer subnet can be specified. The VIP for the load balancer will\rthen be this specific IP address. If a static virtual network IP address\ris provided, the SubnetName element of the load balancer must be\rspecified as well. If the deployment exists outside of a virtual network,\rno static virtual network IP address can be specified."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function beginUpdating(serviceName, deploymentName, loadBalancerName,
+        parameters, parameters.name, parameters.frontendIPConfiguration,
+        parameters.frontendIPConfiguration.type,
+        parameters.frontendIPConfiguration.subnetName,
+        parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+        callback);
+    fullName: >-
+      LoadBalancerOperations~LoadBalancerOperations.beginUpdating(serviceName,
+      deploymentName, loadBalancerName, parameters, parameters.name,
+      parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    children:
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~baseUrl'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~baseUrl'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~url2'
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~httpRequest'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginUpdating~requestContent
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~requestDoc'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginUpdating~loadBalancerElement
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~nameElement'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginUpdating~frontendIpConfigurationElement
+      - 'LoadBalancerOperations~LoadBalancerOperations#beginUpdating~typeElement'
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginUpdating~subnetNameElement
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginUpdating~staticVirtualNetworkIPAddressElement
+      - >-
+        LoadBalancerOperations~LoadBalancerOperations#beginUpdating~requestContent
+  - uid: 'LoadBalancerOperations~LoadBalancerOperations#create'
+    id: create
+    parent: LoadBalancerOperations~LoadBalancerOperations
+    name: >-
+      create(serviceName, deploymentName, parameters, parameters.name,
+      parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    summary: "Add an internal load balancer to a an existing deployment. When used by an\rinput endpoint, the internal load balancer will provide an additional\rprivate VIP that can be used for load balancing to the roles in this\rdeployment."
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: parameters
+          type: LoadBalancerCreateParameters
+          description: "Parameters supplied to\rthe Create Load Balancer operation."
+        - id: parameters.name
+          type: string
+          description: Name of the load balancer.
+        - id: parameters.frontendIPConfiguration
+          type: FrontendIPConfiguration
+          description: "The\rconfiguration for the virtual IP address (VIP) this load balancer\rprovides."
+        - id: parameters.frontendIPConfiguration.type
+          type: string
+          description: "The type of the\rVIP provided by this load balancer. Currently, only 'Private' is\rsupported. This will create load balancing services on a private VIP."
+        - id: parameters.frontendIPConfiguration.subnetName
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a subnet of that virtual\rnetwork must be specified for the load balancer. The VIP managed by the\rload balancer will then be an IP address out of this subnet. If the\rdeployment exists outside of a virtual network, no subnet can be\rspecified and the private VIP will be an IP address from the general\rprivate address pool."
+        - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a specific address from the\rload balancer subnet can be specified. The VIP for the load balancer will\rthen be this specific IP address. If a static virtual network IP address\ris provided, the SubnetName element of the load balancer must be\rspecified as well. If the deployment exists outside of a virtual network,\rno static virtual network IP address can be specified."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(serviceName, deploymentName, parameters,
+        parameters.name, parameters.frontendIPConfiguration,
+        parameters.frontendIPConfiguration.type,
+        parameters.frontendIPConfiguration.subnetName,
+        parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+        callback);
+    fullName: >-
+      LoadBalancerOperations~LoadBalancerOperations.create(serviceName,
+      deploymentName, parameters, parameters.name,
+      parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    children:
+      - 'LoadBalancerOperations~LoadBalancerOperations#create~client2'
+  - uid: 'LoadBalancerOperations~LoadBalancerOperations#deleteMethod'
+    id: deleteMethod
+    parent: LoadBalancerOperations~LoadBalancerOperations
+    name: 'deleteMethod(serviceName, deploymentName, loadBalancerName, callback)'
+    summary: Delete an internal load balancer from the deployment.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: loadBalancerName
+          type: string
+          description: The name of the load balancer.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteMethod(serviceName, deploymentName, loadBalancerName,
+        callback);
+    fullName: >-
+      LoadBalancerOperations~LoadBalancerOperations.deleteMethod(serviceName,
+      deploymentName, loadBalancerName, callback)
+    children:
+      - 'LoadBalancerOperations~LoadBalancerOperations#deleteMethod~client2'
+  - uid: 'LoadBalancerOperations~LoadBalancerOperations#update'
+    id: update
+    parent: LoadBalancerOperations~LoadBalancerOperations
+    name: >-
+      update(serviceName, deploymentName, loadBalancerName, parameters,
+      parameters.name, parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    summary: Updates an internal load balancer associated with an existing deployment.
+    type: Method
+    syntax:
+      parameters:
+        - id: serviceName
+          type: string
+          description: The name of the service.
+        - id: deploymentName
+          type: string
+          description: The name of the deployment.
+        - id: loadBalancerName
+          type: string
+          description: The name of the loadBalancer.
+        - id: parameters
+          type: LoadBalancerUpdateParameters
+          description: "Parameters supplied to\rthe Update Load Balancer operation."
+        - id: parameters.name
+          type: string
+          description: Name of the load balancer.
+        - id: parameters.frontendIPConfiguration
+          type: FrontendIPConfiguration
+          description: "The\rconfiguration for the virtual IP address (VIP) this load balancer\rprovides."
+        - id: parameters.frontendIPConfiguration.type
+          type: string
+          description: "The type of the\rVIP provided by this load balancer. Currently, only 'Private' is\rsupported. This will create load balancing services on a private VIP."
+        - id: parameters.frontendIPConfiguration.subnetName
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a subnet of that virtual\rnetwork must be specified for the load balancer. The VIP managed by the\rload balancer will then be an IP address out of this subnet. If the\rdeployment exists outside of a virtual network, no subnet can be\rspecified and the private VIP will be an IP address from the general\rprivate address pool."
+        - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+          type: string
+          description: "If the\rdeployment exists inside a virtual network, a specific address from the\rload balancer subnet can be specified. The VIP for the load balancer will\rthen be this specific IP address. If a static virtual network IP address\ris provided, the SubnetName element of the load balancer must be\rspecified as well. If the deployment exists outside of a virtual network,\rno static virtual network IP address can be specified."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(serviceName, deploymentName, loadBalancerName,
+        parameters, parameters.name, parameters.frontendIPConfiguration,
+        parameters.frontendIPConfiguration.type,
+        parameters.frontendIPConfiguration.subnetName,
+        parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+        callback);
+    fullName: >-
+      LoadBalancerOperations~LoadBalancerOperations.update(serviceName,
+      deploymentName, loadBalancerName, parameters, parameters.name,
+      parameters.frontendIPConfiguration,
+      parameters.frontendIPConfiguration.type,
+      parameters.frontendIPConfiguration.subnetName,
+      parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress,
+      callback)
+    children:
+      - 'LoadBalancerOperations~LoadBalancerOperations#update~client2'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: LoadBalancerCreateParameters
+    name: LoadBalancerCreateParameters
+    fullName: LoadBalancerCreateParameters
+    isExternal: true
+  - uid: FrontendIPConfiguration
+    name: FrontendIPConfiguration
+    fullName: FrontendIPConfiguration
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true
+  - uid: LoadBalancerUpdateParameters
+    name: LoadBalancerUpdateParameters
+    fullName: LoadBalancerUpdateParameters
+    isExternal: true

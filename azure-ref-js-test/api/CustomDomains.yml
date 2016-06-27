@@ -1,0 +1,414 @@
+items:
+  - uid: CustomDomains
+    id: CustomDomains
+    name: CustomDomains
+    type: Class
+    syntax:
+      content: CustomDomains
+    fullName: CustomDomains
+    children:
+      - 'CustomDomains#client'
+      - 'CustomDomains#listByEndpoint'
+      - 'CustomDomains#get'
+      - 'CustomDomains#create'
+      - 'CustomDomains#beginCreate'
+      - 'CustomDomains#update'
+      - 'CustomDomains#deleteIfExists'
+      - 'CustomDomains#beginDeleteIfExists'
+  - uid: 'CustomDomains#client'
+    id: client
+    parent: CustomDomains
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: CustomDomains.client
+  - uid: 'CustomDomains#listByEndpoint'
+    id: listByEndpoint
+    parent: CustomDomains
+    name: >-
+      listByEndpoint(endpointName, profileName, resourceGroupName, options,
+      options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomDomainListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listByEndpoint(endpointName, profileName, resourceGroupName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      CustomDomains.listByEndpoint(endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    children:
+      - 'CustomDomains#listByEndpoint~client'
+      - 'CustomDomains#listByEndpoint~callback'
+      - 'CustomDomains#listByEndpoint~options'
+      - 'CustomDomains#listByEndpoint~requestUrl'
+      - 'CustomDomains#listByEndpoint~requestUrl'
+      - 'CustomDomains#listByEndpoint~requestUrl'
+      - 'CustomDomains#listByEndpoint~requestUrl'
+      - 'CustomDomains#listByEndpoint~requestUrl'
+      - 'CustomDomains#listByEndpoint~queryParameters'
+      - 'CustomDomains#listByEndpoint~requestUrl'
+      - 'CustomDomains#listByEndpoint~regex'
+      - 'CustomDomains#listByEndpoint~requestUrl'
+      - 'CustomDomains#listByEndpoint~httpRequest'
+      - 'CustomDomains#listByEndpoint~headerName'
+  - uid: 'CustomDomains#get'
+    id: get
+    parent: CustomDomains
+    name: >-
+      get(customDomainName, endpointName, profileName, resourceGroupName,
+      options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: customDomainName
+          type: string
+          description: "Name of the custom domain within an\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomDomain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(customDomainName, endpointName, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      CustomDomains.get(customDomainName, endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'CustomDomains#get~client'
+      - 'CustomDomains#get~callback'
+      - 'CustomDomains#get~options'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~queryParameters'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~regex'
+      - 'CustomDomains#get~requestUrl'
+      - 'CustomDomains#get~httpRequest'
+      - 'CustomDomains#get~headerName'
+  - uid: 'CustomDomains#create'
+    id: create
+    parent: CustomDomains
+    name: >-
+      create(customDomainName, endpointName, profileName, resourceGroupName,
+      hostName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: customDomainName
+          type: string
+          description: "Name of the custom domain within an\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: hostName
+          type: string
+          description: "The host name of the custom domain. Must be a\rdomain name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomDomain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function create(customDomainName, endpointName, profileName,
+        resourceGroupName, hostName, options, options.customHeaders, callback);
+    fullName: >-
+      CustomDomains.create(customDomainName, endpointName, profileName,
+      resourceGroupName, hostName, options, options.customHeaders, callback)
+    children:
+      - 'CustomDomains#create~client'
+      - 'CustomDomains#create~callback'
+      - 'CustomDomains#create~options'
+  - uid: 'CustomDomains#beginCreate'
+    id: beginCreate
+    parent: CustomDomains
+    name: >-
+      beginCreate(customDomainName, endpointName, profileName,
+      resourceGroupName, hostName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: customDomainName
+          type: string
+          description: "Name of the custom domain within an\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: hostName
+          type: string
+          description: "The host name of the custom domain. Must be a\rdomain name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomDomain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginCreate(customDomainName, endpointName, profileName,
+        resourceGroupName, hostName, options, options.customHeaders, callback);
+    fullName: >-
+      CustomDomains.beginCreate(customDomainName, endpointName, profileName,
+      resourceGroupName, hostName, options, options.customHeaders, callback)
+    children:
+      - 'CustomDomains#beginCreate~client'
+      - 'CustomDomains#beginCreate~callback'
+      - 'CustomDomains#beginCreate~options'
+      - 'CustomDomains#beginCreate~customDomainProperties'
+      - 'CustomDomains#beginCreate~customDomainProperties'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~queryParameters'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~regex'
+      - 'CustomDomains#beginCreate~requestUrl'
+      - 'CustomDomains#beginCreate~httpRequest'
+      - 'CustomDomains#beginCreate~headerName'
+      - 'CustomDomains#beginCreate~requestContent'
+      - 'CustomDomains#beginCreate~requestModel'
+      - 'CustomDomains#beginCreate~requestModelMapper'
+      - 'CustomDomains#beginCreate~requestModel'
+      - 'CustomDomains#beginCreate~requestContent'
+      - 'CustomDomains#beginCreate~serializationError'
+  - uid: 'CustomDomains#update'
+    id: update
+    parent: CustomDomains
+    name: >-
+      update(customDomainName, endpointName, profileName, resourceGroupName,
+      hostName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: customDomainName
+          type: string
+          description: "Name of the custom domain within an\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: hostName
+          type: string
+          description: "The host name of the custom domain. Must be a\rdomain name."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ErrorResponse} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function update(customDomainName, endpointName, profileName,
+        resourceGroupName, hostName, options, options.customHeaders, callback);
+    fullName: >-
+      CustomDomains.update(customDomainName, endpointName, profileName,
+      resourceGroupName, hostName, options, options.customHeaders, callback)
+    children:
+      - 'CustomDomains#update~client'
+      - 'CustomDomains#update~callback'
+      - 'CustomDomains#update~options'
+      - 'CustomDomains#update~customDomainProperties'
+      - 'CustomDomains#update~customDomainProperties'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~queryParameters'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~regex'
+      - 'CustomDomains#update~requestUrl'
+      - 'CustomDomains#update~httpRequest'
+      - 'CustomDomains#update~headerName'
+      - 'CustomDomains#update~requestContent'
+      - 'CustomDomains#update~requestModel'
+      - 'CustomDomains#update~requestModelMapper'
+      - 'CustomDomains#update~requestModel'
+      - 'CustomDomains#update~requestContent'
+      - 'CustomDomains#update~serializationError'
+  - uid: 'CustomDomains#deleteIfExists'
+    id: deleteIfExists
+    parent: CustomDomains
+    name: >-
+      deleteIfExists(customDomainName, endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: customDomainName
+          type: string
+          description: "Name of the custom domain within an\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomDomain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteIfExists(customDomainName, endpointName, profileName,
+        resourceGroupName, options, options.customHeaders, callback);
+    fullName: >-
+      CustomDomains.deleteIfExists(customDomainName, endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'CustomDomains#deleteIfExists~client'
+      - 'CustomDomains#deleteIfExists~callback'
+      - 'CustomDomains#deleteIfExists~options'
+  - uid: 'CustomDomains#beginDeleteIfExists'
+    id: beginDeleteIfExists
+    parent: CustomDomains
+    name: >-
+      beginDeleteIfExists(customDomainName, endpointName, profileName,
+      resourceGroupName, options, options.customHeaders, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: customDomainName
+          type: string
+          description: "Name of the custom domain within an\rendpoint."
+        - id: endpointName
+          type: string
+          description: Name of the endpoint within the CDN profile.
+        - id: profileName
+          type: string
+          description: "Name of the CDN profile within the resource\rgroup."
+        - id: resourceGroupName
+          type: string
+          description: "Name of the resource group within the\rAzure subscription."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomDomain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginDeleteIfExists(customDomainName, endpointName,
+        profileName, resourceGroupName, options, options.customHeaders,
+        callback);
+    fullName: >-
+      CustomDomains.beginDeleteIfExists(customDomainName, endpointName,
+      profileName, resourceGroupName, options, options.customHeaders, callback)
+    children:
+      - 'CustomDomains#beginDeleteIfExists~client'
+      - 'CustomDomains#beginDeleteIfExists~callback'
+      - 'CustomDomains#beginDeleteIfExists~options'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~queryParameters'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~regex'
+      - 'CustomDomains#beginDeleteIfExists~requestUrl'
+      - 'CustomDomains#beginDeleteIfExists~httpRequest'
+      - 'CustomDomains#beginDeleteIfExists~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

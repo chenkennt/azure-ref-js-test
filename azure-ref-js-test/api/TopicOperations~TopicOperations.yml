@@ -1,0 +1,597 @@
+items:
+  - uid: TopicOperations~TopicOperations
+    id: TopicOperations
+    parent: TopicOperations
+    name: TopicOperations
+    type: Class
+    syntax:
+      content: TopicOperations
+    fullName: TopicOperations.TopicOperations
+    children:
+      - 'TopicOperations~TopicOperations#client'
+      - 'TopicOperations~TopicOperations#create'
+      - 'TopicOperations~TopicOperations#deleteMethod'
+      - 'TopicOperations~TopicOperations#get'
+      - 'TopicOperations~TopicOperations#getConnectionDetails'
+      - 'TopicOperations~TopicOperations#list'
+      - 'TopicOperations~TopicOperations#update'
+  - uid: 'TopicOperations~TopicOperations#client'
+    id: client
+    parent: TopicOperations~TopicOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: TopicOperations~TopicOperations.client
+  - uid: 'TopicOperations~TopicOperations#create'
+    id: create
+    parent: TopicOperations~TopicOperations
+    name: >-
+      create(namespaceName, topic, topic.name, topic.defaultMessageTimeToLive,
+      topic.maxSizeInMegabytes, topic.requiresDuplicateDetection,
+      topic.duplicateDetectionHistoryTimeWindow, topic.enableBatchedOperations,
+      topic.sizeInBytes, topic.filteringMessagesBeforePublishing,
+      topic.isAnonymousAccessible, topic.authorizationRules, topic.status,
+      topic.createdAt, topic.updatedAt, topic.accessedAt, topic.supportOrdering,
+      topic.countDetails, topic.countDetails.activeMessageCount,
+      topic.countDetails.deadLetterMessageCount,
+      topic.countDetails.scheduledMessageCount,
+      topic.countDetails.transferDeadLetterMessageCount,
+      topic.countDetails.transferMessageCount, topic.subscriptionCount,
+      topic.autoDeleteOnIdle, topic.entityAvailabilityStatus, callback)
+    summary: "Creates a new topic. Once created, this topic resource manifest is\rimmutable. This operation is not idempotent. Repeating the create call,\rafter a topic with same name has been created successfully, will result\rin a 409 Conflict error message.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780728.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: topic
+          type: ServiceBusTopic
+          description: The Service Bus topic.
+        - id: topic.name
+          type: string
+          description: The name of the topic.
+        - id: topic.defaultMessageTimeToLive
+          type: string
+          description: "Determines how long a\rmessage lives in the associated subscriptions. Subscriptions inherit the\rTTL from the topic unless they are created explicitly with a smaller TTL.\rBased on whether dead-lettering is enabled, a message whose TTL has\rexpired will either be moved to the subscription's associated\rDeadLtterQueue or will be permanently deleted. The following values are\rsettable at topic creation time:* Range: 1 second - TimeSpan.MaxValue*\rDefault: TimeSpan.MaxValue"
+        - id: topic.maxSizeInMegabytes
+          type: number
+          description: "Specifies the maximum topic\rsize in megabytes. Any attempt to enqueue a message that will cause the\rtopic to exceed this value will fail. All messages that are stored in the\rtopic or any of its subscriptions count towards this value. Multiple\rcopies of a message that reside in one or multiple subscriptions count as\ra single messages. For example, if message m exists once in subscription\rs1 and twice in subscription s2, m is counted as a single message. You\rcan only set this parameter at topic creation time using the following\rvalues:* Range: 1 - 5*1024 MB* Default: 1*1024"
+        - id: topic.requiresDuplicateDetection
+          type: boolean
+          description: "If enabled, the topic\rwill detect duplicate messages within the time span specified by the\rDuplicateDetectionHistoryTimeWindow property. Settable only at topic\rcreation time.* Default: false"
+        - id: topic.duplicateDetectionHistoryTimeWindow
+          type: string
+          description: "Specifies the\rtime span during which the Service Bus will detect message duplication.*\rRange: 1 second - 7 days* Default: 10 minutes"
+        - id: topic.enableBatchedOperations
+          type: boolean
+          description: "Enables or disables\rservice side batching behavior when performing operations for the\rspecific queue. When enabled, service bus will collect/batch multiple\roperations to the backend to be more connection efficient. If user wants\rlower operation latency then they can disable this feature."
+        - id: topic.sizeInBytes
+          type: number
+          description: "Reflects the actual bytes toward the\rtopic quota that messages in the topic currently occupy. (read-only)*\rRange: 0 -MaxTopicSizeinMegaBytes"
+        - id: topic.filteringMessagesBeforePublishing
+          type: boolean
+          description: "Gets or sets\rwhether messages should be filtered before publishing."
+        - id: topic.isAnonymousAccessible
+          type: boolean
+          description: "Gets whether anonymous\raccess is allowed."
+        - id: topic.authorizationRules
+          type: array
+          description: "Gets the authorization rules for\rthe description."
+        - id: topic.status
+          type: string
+          description: "Gets or sets the current status of the\rtopic (enabled or disabled). When a topic is disabled, that topic cannot\rsend or receive messages."
+        - id: topic.createdAt
+          type: date
+          description: The time the queue was created at.
+        - id: topic.updatedAt
+          type: date
+          description: The time the queue was last updated.
+        - id: topic.accessedAt
+          type: date
+          description: The time the queue was last accessed.
+        - id: topic.supportOrdering
+          type: boolean
+          description: "Gets or sets whether the topics\rcan be ordered."
+        - id: topic.countDetails
+          type: CountDetails
+          description: Current queue statistics.
+        - id: topic.countDetails.activeMessageCount
+          type: number
+          description: "The current number\rof active messages."
+        - id: topic.countDetails.deadLetterMessageCount
+          type: number
+          description: "The current\rnumber of dead letters."
+        - id: topic.countDetails.scheduledMessageCount
+          type: number
+          description: "The current\rnumber of scheduled messages."
+        - id: topic.countDetails.transferDeadLetterMessageCount
+          type: number
+          description: "The\rcurrent number of transfer dead letters."
+        - id: topic.countDetails.transferMessageCount
+          type: number
+          description: "The current\rnumber of transfer messages."
+        - id: topic.subscriptionCount
+          type: number
+          description: "The current number of\rsubscriptions to the topic."
+        - id: topic.autoDeleteOnIdle
+          type: string
+          description: Implemented.
+        - id: topic.entityAvailabilityStatus
+          type: string
+          description: "The current availability\rstatus of the topic."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function create(namespaceName, topic, topic.name,
+        topic.defaultMessageTimeToLive, topic.maxSizeInMegabytes,
+        topic.requiresDuplicateDetection,
+        topic.duplicateDetectionHistoryTimeWindow,
+        topic.enableBatchedOperations, topic.sizeInBytes,
+        topic.filteringMessagesBeforePublishing, topic.isAnonymousAccessible,
+        topic.authorizationRules, topic.status, topic.createdAt,
+        topic.updatedAt, topic.accessedAt, topic.supportOrdering,
+        topic.countDetails, topic.countDetails.activeMessageCount,
+        topic.countDetails.deadLetterMessageCount,
+        topic.countDetails.scheduledMessageCount,
+        topic.countDetails.transferDeadLetterMessageCount,
+        topic.countDetails.transferMessageCount, topic.subscriptionCount,
+        topic.autoDeleteOnIdle, topic.entityAvailabilityStatus, callback);
+    fullName: >-
+      TopicOperations~TopicOperations.create(namespaceName, topic, topic.name,
+      topic.defaultMessageTimeToLive, topic.maxSizeInMegabytes,
+      topic.requiresDuplicateDetection,
+      topic.duplicateDetectionHistoryTimeWindow, topic.enableBatchedOperations,
+      topic.sizeInBytes, topic.filteringMessagesBeforePublishing,
+      topic.isAnonymousAccessible, topic.authorizationRules, topic.status,
+      topic.createdAt, topic.updatedAt, topic.accessedAt, topic.supportOrdering,
+      topic.countDetails, topic.countDetails.activeMessageCount,
+      topic.countDetails.deadLetterMessageCount,
+      topic.countDetails.scheduledMessageCount,
+      topic.countDetails.transferDeadLetterMessageCount,
+      topic.countDetails.transferMessageCount, topic.subscriptionCount,
+      topic.autoDeleteOnIdle, topic.entityAvailabilityStatus, callback)
+    children:
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~baseUrl'
+      - 'TopicOperations~TopicOperations#create~baseUrl'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~url2'
+      - 'TopicOperations~TopicOperations#create~httpRequest'
+      - 'TopicOperations~TopicOperations#create~requestContent'
+      - 'TopicOperations~TopicOperations#create~requestDoc'
+      - 'TopicOperations~TopicOperations#create~entryElement'
+      - 'TopicOperations~TopicOperations#create~contentElement'
+      - 'TopicOperations~TopicOperations#create~typeAttribute'
+      - 'TopicOperations~TopicOperations#create~topicDescriptionElement'
+      - 'TopicOperations~TopicOperations#create~defaultMessageTimeToLiveElement'
+      - 'TopicOperations~TopicOperations#create~maxSizeInMegabytesElement'
+      - 'TopicOperations~TopicOperations#create~requiresDuplicateDetectionElement'
+      - >-
+        TopicOperations~TopicOperations#create~duplicateDetectionHistoryTimeWindowElement
+      - 'TopicOperations~TopicOperations#create~enableBatchedOperationsElement'
+      - 'TopicOperations~TopicOperations#create~sizeInBytesElement'
+      - >-
+        TopicOperations~TopicOperations#create~filteringMessagesBeforePublishingElement
+      - 'TopicOperations~TopicOperations#create~isAnonymousAccessibleElement'
+      - 'TopicOperations~TopicOperations#create~authorizationRulesSequenceElement'
+      - 'TopicOperations~TopicOperations#create~loweredIndex1'
+      - 'TopicOperations~TopicOperations#create~loweredIndex1'
+      - 'TopicOperations~TopicOperations#create~authorizationRulesItem'
+      - 'TopicOperations~TopicOperations#create~authorizationRuleElement'
+      - 'TopicOperations~TopicOperations#create~typeAttribute2'
+      - 'TopicOperations~TopicOperations#create~claimTypeElement'
+      - 'TopicOperations~TopicOperations#create~claimValueElement'
+      - 'TopicOperations~TopicOperations#create~rightsSequenceElement'
+      - 'TopicOperations~TopicOperations#create~loweredIndex2'
+      - 'TopicOperations~TopicOperations#create~loweredIndex2'
+      - 'TopicOperations~TopicOperations#create~rightsItem'
+      - 'TopicOperations~TopicOperations#create~rightsItemElement'
+      - 'TopicOperations~TopicOperations#create~createdTimeElement'
+      - 'TopicOperations~TopicOperations#create~keyNameElement'
+      - 'TopicOperations~TopicOperations#create~modifiedTimeElement'
+      - 'TopicOperations~TopicOperations#create~primaryKeyElement'
+      - 'TopicOperations~TopicOperations#create~secondaryKeyElement'
+      - 'TopicOperations~TopicOperations#create~statusElement'
+      - 'TopicOperations~TopicOperations#create~createdAtElement'
+      - 'TopicOperations~TopicOperations#create~updatedAtElement'
+      - 'TopicOperations~TopicOperations#create~accessedAtElement'
+      - 'TopicOperations~TopicOperations#create~supportOrderingElement'
+      - 'TopicOperations~TopicOperations#create~countDetailsElement'
+      - 'TopicOperations~TopicOperations#create~activeMessageCountElement'
+      - 'TopicOperations~TopicOperations#create~deadLetterMessageCountElement'
+      - 'TopicOperations~TopicOperations#create~scheduledMessageCountElement'
+      - >-
+        TopicOperations~TopicOperations#create~transferDeadLetterMessageCountElement
+      - 'TopicOperations~TopicOperations#create~transferMessageCountElement'
+      - 'TopicOperations~TopicOperations#create~subscriptionCountElement'
+      - 'TopicOperations~TopicOperations#create~autoDeleteOnIdleElement'
+      - 'TopicOperations~TopicOperations#create~entityAvailabilityStatusElement'
+      - 'TopicOperations~TopicOperations#create~requestContent'
+  - uid: 'TopicOperations~TopicOperations#deleteMethod'
+    id: deleteMethod
+    parent: TopicOperations~TopicOperations
+    name: 'deleteMethod(namespaceName, topicName, callback)'
+    summary: "Deletes an existing topic. This operation will also remove all associated\rstate including associated subscriptions.  (see\rhttp://msdn.microsoft.com/en-us/library/hh780721.aspx for more\rinformation)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: topicName
+          type: string
+          description: The topic.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function deleteMethod(namespaceName, topicName, callback);'
+    fullName: >-
+      TopicOperations~TopicOperations.deleteMethod(namespaceName, topicName,
+      callback)
+    children:
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~baseUrl'
+      - 'TopicOperations~TopicOperations#deleteMethod~baseUrl'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~url2'
+      - 'TopicOperations~TopicOperations#deleteMethod~httpRequest'
+  - uid: 'TopicOperations~TopicOperations#get'
+    id: get
+    parent: TopicOperations~TopicOperations
+    name: 'get(namespaceName, topicName, callback)'
+    summary: "The topic description is an XML AtomPub document that defines the desired\rsemantics for a topic. The topic description contains the following\rproperties. For more information, see the TopicDescription Properties\rtopic.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780749.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: topicName
+          type: string
+          description: The topic.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function get(namespaceName, topicName, callback);'
+    fullName: 'TopicOperations~TopicOperations.get(namespaceName, topicName, callback)'
+    children:
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~baseUrl'
+      - 'TopicOperations~TopicOperations#get~baseUrl'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~url2'
+      - 'TopicOperations~TopicOperations#get~httpRequest'
+  - uid: 'TopicOperations~TopicOperations#getConnectionDetails'
+    id: getConnectionDetails
+    parent: TopicOperations~TopicOperations
+    name: 'getConnectionDetails(namespaceName, topicName, callback)'
+    summary: Gets the set of connection strings for a topic.
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: topicName
+          type: string
+          description: The topic.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function getConnectionDetails(namespaceName, topicName, callback);'
+    fullName: >-
+      TopicOperations~TopicOperations.getConnectionDetails(namespaceName,
+      topicName, callback)
+    children:
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~baseUrl'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~baseUrl'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~url2'
+      - 'TopicOperations~TopicOperations#getConnectionDetails~httpRequest'
+  - uid: 'TopicOperations~TopicOperations#list'
+    id: list
+    parent: TopicOperations~TopicOperations
+    name: 'list(namespaceName, callback)'
+    summary: "Enumerates the topics in the service namespace. An empty feed is returned\rif no topic exists in the service namespace.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780744.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: 'function list(namespaceName, callback);'
+    fullName: 'TopicOperations~TopicOperations.list(namespaceName, callback)'
+    children:
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~baseUrl'
+      - 'TopicOperations~TopicOperations#list~baseUrl'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~url2'
+      - 'TopicOperations~TopicOperations#list~httpRequest'
+  - uid: 'TopicOperations~TopicOperations#update'
+    id: update
+    parent: TopicOperations~TopicOperations
+    name: >-
+      update(namespaceName, topic, topic.name, topic.defaultMessageTimeToLive,
+      topic.maxSizeInMegabytes, topic.requiresDuplicateDetection,
+      topic.duplicateDetectionHistoryTimeWindow, topic.enableBatchedOperations,
+      topic.sizeInBytes, topic.filteringMessagesBeforePublishing,
+      topic.isAnonymousAccessible, topic.authorizationRules, topic.status,
+      topic.createdAt, topic.updatedAt, topic.accessedAt, topic.supportOrdering,
+      topic.countDetails, topic.countDetails.activeMessageCount,
+      topic.countDetails.deadLetterMessageCount,
+      topic.countDetails.scheduledMessageCount,
+      topic.countDetails.transferDeadLetterMessageCount,
+      topic.countDetails.transferMessageCount, topic.subscriptionCount,
+      topic.autoDeleteOnIdle, topic.entityAvailabilityStatus, callback)
+    summary: "Updates a topic.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj839740.aspx for\rmore information)"
+    type: Method
+    syntax:
+      parameters:
+        - id: namespaceName
+          type: string
+          description: The namespace name.
+        - id: topic
+          type: ServiceBusTopic
+          description: The Service Bus topic.
+        - id: topic.name
+          type: string
+          description: The name of the topic.
+        - id: topic.defaultMessageTimeToLive
+          type: string
+          description: "Determines how long a\rmessage lives in the associated subscriptions. Subscriptions inherit the\rTTL from the topic unless they are created explicitly with a smaller TTL.\rBased on whether dead-lettering is enabled, a message whose TTL has\rexpired will either be moved to the subscription's associated\rDeadLtterQueue or will be permanently deleted. The following values are\rsettable at topic creation time:* Range: 1 second - TimeSpan.MaxValue*\rDefault: TimeSpan.MaxValue"
+        - id: topic.maxSizeInMegabytes
+          type: number
+          description: "Specifies the maximum topic\rsize in megabytes. Any attempt to enqueue a message that will cause the\rtopic to exceed this value will fail. All messages that are stored in the\rtopic or any of its subscriptions count towards this value. Multiple\rcopies of a message that reside in one or multiple subscriptions count as\ra single messages. For example, if message m exists once in subscription\rs1 and twice in subscription s2, m is counted as a single message. You\rcan only set this parameter at topic creation time using the following\rvalues:* Range: 1 - 5*1024 MB* Default: 1*1024"
+        - id: topic.requiresDuplicateDetection
+          type: boolean
+          description: "If enabled, the topic\rwill detect duplicate messages within the time span specified by the\rDuplicateDetectionHistoryTimeWindow property. Settable only at topic\rcreation time.* Default: false"
+        - id: topic.duplicateDetectionHistoryTimeWindow
+          type: string
+          description: "Specifies the\rtime span during which the Service Bus will detect message duplication.*\rRange: 1 second - 7 days* Default: 10 minutes"
+        - id: topic.enableBatchedOperations
+          type: boolean
+          description: "Enables or disables\rservice side batching behavior when performing operations for the\rspecific queue. When enabled, service bus will collect/batch multiple\roperations to the backend to be more connection efficient. If user wants\rlower operation latency then they can disable this feature."
+        - id: topic.sizeInBytes
+          type: number
+          description: "Reflects the actual bytes toward the\rtopic quota that messages in the topic currently occupy. (read-only)*\rRange: 0 -MaxTopicSizeinMegaBytes"
+        - id: topic.filteringMessagesBeforePublishing
+          type: boolean
+          description: "Gets or sets\rwhether messages should be filtered before publishing."
+        - id: topic.isAnonymousAccessible
+          type: boolean
+          description: "Gets whether anonymous\raccess is allowed."
+        - id: topic.authorizationRules
+          type: array
+          description: "Gets the authorization rules for\rthe description."
+        - id: topic.status
+          type: string
+          description: "Gets or sets the current status of the\rtopic (enabled or disabled). When a topic is disabled, that topic cannot\rsend or receive messages."
+        - id: topic.createdAt
+          type: date
+          description: The time the queue was created at.
+        - id: topic.updatedAt
+          type: date
+          description: The time the queue was last updated.
+        - id: topic.accessedAt
+          type: date
+          description: The time the queue was last accessed.
+        - id: topic.supportOrdering
+          type: boolean
+          description: "Gets or sets whether the topics\rcan be ordered."
+        - id: topic.countDetails
+          type: CountDetails
+          description: Current queue statistics.
+        - id: topic.countDetails.activeMessageCount
+          type: number
+          description: "The current number\rof active messages."
+        - id: topic.countDetails.deadLetterMessageCount
+          type: number
+          description: "The current\rnumber of dead letters."
+        - id: topic.countDetails.scheduledMessageCount
+          type: number
+          description: "The current\rnumber of scheduled messages."
+        - id: topic.countDetails.transferDeadLetterMessageCount
+          type: number
+          description: "The\rcurrent number of transfer dead letters."
+        - id: topic.countDetails.transferMessageCount
+          type: number
+          description: "The current\rnumber of transfer messages."
+        - id: topic.subscriptionCount
+          type: number
+          description: "The current number of\rsubscriptions to the topic."
+        - id: topic.autoDeleteOnIdle
+          type: string
+          description: Implemented.
+        - id: topic.entityAvailabilityStatus
+          type: string
+          description: "The current availability\rstatus of the topic."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function update(namespaceName, topic, topic.name,
+        topic.defaultMessageTimeToLive, topic.maxSizeInMegabytes,
+        topic.requiresDuplicateDetection,
+        topic.duplicateDetectionHistoryTimeWindow,
+        topic.enableBatchedOperations, topic.sizeInBytes,
+        topic.filteringMessagesBeforePublishing, topic.isAnonymousAccessible,
+        topic.authorizationRules, topic.status, topic.createdAt,
+        topic.updatedAt, topic.accessedAt, topic.supportOrdering,
+        topic.countDetails, topic.countDetails.activeMessageCount,
+        topic.countDetails.deadLetterMessageCount,
+        topic.countDetails.scheduledMessageCount,
+        topic.countDetails.transferDeadLetterMessageCount,
+        topic.countDetails.transferMessageCount, topic.subscriptionCount,
+        topic.autoDeleteOnIdle, topic.entityAvailabilityStatus, callback);
+    fullName: >-
+      TopicOperations~TopicOperations.update(namespaceName, topic, topic.name,
+      topic.defaultMessageTimeToLive, topic.maxSizeInMegabytes,
+      topic.requiresDuplicateDetection,
+      topic.duplicateDetectionHistoryTimeWindow, topic.enableBatchedOperations,
+      topic.sizeInBytes, topic.filteringMessagesBeforePublishing,
+      topic.isAnonymousAccessible, topic.authorizationRules, topic.status,
+      topic.createdAt, topic.updatedAt, topic.accessedAt, topic.supportOrdering,
+      topic.countDetails, topic.countDetails.activeMessageCount,
+      topic.countDetails.deadLetterMessageCount,
+      topic.countDetails.scheduledMessageCount,
+      topic.countDetails.transferDeadLetterMessageCount,
+      topic.countDetails.transferMessageCount, topic.subscriptionCount,
+      topic.autoDeleteOnIdle, topic.entityAvailabilityStatus, callback)
+    children:
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~baseUrl'
+      - 'TopicOperations~TopicOperations#update~baseUrl'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~url2'
+      - 'TopicOperations~TopicOperations#update~httpRequest'
+      - 'TopicOperations~TopicOperations#update~requestContent'
+      - 'TopicOperations~TopicOperations#update~requestDoc'
+      - 'TopicOperations~TopicOperations#update~entryElement'
+      - 'TopicOperations~TopicOperations#update~contentElement'
+      - 'TopicOperations~TopicOperations#update~typeAttribute'
+      - 'TopicOperations~TopicOperations#update~topicDescriptionElement'
+      - 'TopicOperations~TopicOperations#update~defaultMessageTimeToLiveElement'
+      - 'TopicOperations~TopicOperations#update~maxSizeInMegabytesElement'
+      - 'TopicOperations~TopicOperations#update~requiresDuplicateDetectionElement'
+      - >-
+        TopicOperations~TopicOperations#update~duplicateDetectionHistoryTimeWindowElement
+      - 'TopicOperations~TopicOperations#update~enableBatchedOperationsElement'
+      - 'TopicOperations~TopicOperations#update~sizeInBytesElement'
+      - >-
+        TopicOperations~TopicOperations#update~filteringMessagesBeforePublishingElement
+      - 'TopicOperations~TopicOperations#update~isAnonymousAccessibleElement'
+      - 'TopicOperations~TopicOperations#update~authorizationRulesSequenceElement'
+      - 'TopicOperations~TopicOperations#update~loweredIndex1'
+      - 'TopicOperations~TopicOperations#update~loweredIndex1'
+      - 'TopicOperations~TopicOperations#update~authorizationRulesItem'
+      - 'TopicOperations~TopicOperations#update~authorizationRuleElement'
+      - 'TopicOperations~TopicOperations#update~typeAttribute2'
+      - 'TopicOperations~TopicOperations#update~claimTypeElement'
+      - 'TopicOperations~TopicOperations#update~claimValueElement'
+      - 'TopicOperations~TopicOperations#update~rightsSequenceElement'
+      - 'TopicOperations~TopicOperations#update~loweredIndex2'
+      - 'TopicOperations~TopicOperations#update~loweredIndex2'
+      - 'TopicOperations~TopicOperations#update~rightsItem'
+      - 'TopicOperations~TopicOperations#update~rightsItemElement'
+      - 'TopicOperations~TopicOperations#update~createdTimeElement'
+      - 'TopicOperations~TopicOperations#update~keyNameElement'
+      - 'TopicOperations~TopicOperations#update~modifiedTimeElement'
+      - 'TopicOperations~TopicOperations#update~primaryKeyElement'
+      - 'TopicOperations~TopicOperations#update~secondaryKeyElement'
+      - 'TopicOperations~TopicOperations#update~statusElement'
+      - 'TopicOperations~TopicOperations#update~createdAtElement'
+      - 'TopicOperations~TopicOperations#update~updatedAtElement'
+      - 'TopicOperations~TopicOperations#update~accessedAtElement'
+      - 'TopicOperations~TopicOperations#update~supportOrderingElement'
+      - 'TopicOperations~TopicOperations#update~countDetailsElement'
+      - 'TopicOperations~TopicOperations#update~activeMessageCountElement'
+      - 'TopicOperations~TopicOperations#update~deadLetterMessageCountElement'
+      - 'TopicOperations~TopicOperations#update~scheduledMessageCountElement'
+      - >-
+        TopicOperations~TopicOperations#update~transferDeadLetterMessageCountElement
+      - 'TopicOperations~TopicOperations#update~transferMessageCountElement'
+      - 'TopicOperations~TopicOperations#update~subscriptionCountElement'
+      - 'TopicOperations~TopicOperations#update~autoDeleteOnIdleElement'
+      - 'TopicOperations~TopicOperations#update~entityAvailabilityStatusElement'
+      - 'TopicOperations~TopicOperations#update~requestContent'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: ServiceBusTopic
+    name: ServiceBusTopic
+    fullName: ServiceBusTopic
+    isExternal: true
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: CountDetails
+    name: CountDetails
+    fullName: CountDetails
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

@@ -1,0 +1,511 @@
+items:
+  - uid: AutomatedExportOperations~AutomatedExportOperations
+    id: AutomatedExportOperations
+    parent: AutomatedExportOperations
+    name: AutomatedExportOperations
+    type: Class
+    syntax:
+      content: AutomatedExportOperations
+    fullName: AutomatedExportOperations.AutomatedExportOperations
+    children:
+      - 'AutomatedExportOperations~AutomatedExportOperations#client'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting'
+  - uid: 'AutomatedExportOperations~AutomatedExportOperations#client'
+    id: client
+    parent: AutomatedExportOperations~AutomatedExportOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: AutomatedExportOperations~AutomatedExportOperations.client
+  - uid: 'AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting'
+    id: createOrUpdateSetting
+    parent: AutomatedExportOperations~AutomatedExportOperations
+    name: >-
+      createOrUpdateSetting(resourceGroupName, serverName, databaseName,
+      parameters, parameters.location, parameters.tags, parameters.properties,
+      parameters.properties.databaseCredential,
+      parameters.properties.databaseCredential.databaseUserName,
+      parameters.properties.databaseCredential.databasePassword,
+      parameters.properties.blobStorageSetting,
+      parameters.properties.blobStorageSetting.storageAccount,
+      parameters.properties.backupOption,
+      parameters.properties.backupOption.startTime,
+      parameters.properties.backupOption.repeatInterval,
+      parameters.properties.backupOption.retentionPeriod,
+      parameters.properties.backupOption.keepAtLeastOneBackup,
+      parameters.properties.backupOption.consistencyOption,
+      parameters.properties.enabled, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The resource group name.
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: databaseName
+          type: string
+          description: The database name.
+        - id: parameters
+          type: AutomatedExportSettingCreateOrUpdateParameters
+          description: Parameters supplied to the operation.
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the location of the\rsetting."
+        - id: parameters.tags
+          type: object
+          description: Gets or sets the tags of the rule.
+        - id: parameters.properties
+          type: AutomatedExportSetting
+          description: "Gets or sets the\rsetting to create or update."
+        - id: parameters.properties.databaseCredential
+          type: DatabaseServerCredential
+          description: "Gets or sets the credential\rfor the server hosting the database."
+        - id: parameters.properties.databaseCredential.databaseUserName
+          type: string
+          description: "Gets or sets\rthe database user name."
+        - id: parameters.properties.databaseCredential.databasePassword
+          type: string
+          description: "Gets or sets\rthe database password."
+        - id: parameters.properties.blobStorageSetting
+          type: BackupLocationProfile
+          description: "Gets or sets the blob storage settings, where the exported file will be\rwritten."
+        - id: parameters.properties.blobStorageSetting.storageAccount
+          type: string
+          description: Gets or sets the name of the storage account.
+        - id: parameters.properties.backupOption
+          type: DatabaseBackupOption
+          description: "Gets or\rsets the backup job options."
+        - id: parameters.properties.backupOption.startTime
+          type: date
+          description: "Gets or sets\rthe start time for the job."
+        - id: parameters.properties.backupOption.repeatInterval
+          type: TimeSpan
+          description: "Gets\ror sets the repeat interval.How often the automated export job will run."
+        - id: parameters.properties.backupOption.retentionPeriod
+          type: TimeSpan
+          description: "Gets or sets the retention period.How long the exported files will be\rsaved."
+        - id: parameters.properties.backupOption.keepAtLeastOneBackup
+          type: boolean
+          description: "Gets or sets the keep at least one backup flag.Whether at least one\rexported file will be kept."
+        - id: parameters.properties.backupOption.consistencyOption
+          type: DatabaseConsistencyOption
+          description: "Gets or sets the\rdatabase consistency option."
+        - id: parameters.properties.enabled
+          type: boolean
+          description: "Gets or sets the enable\rflag. Specifies whether automated export is enabled for the resource."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function createOrUpdateSetting(resourceGroupName, serverName,
+        databaseName, parameters, parameters.location, parameters.tags,
+        parameters.properties, parameters.properties.databaseCredential,
+        parameters.properties.databaseCredential.databaseUserName,
+        parameters.properties.databaseCredential.databasePassword,
+        parameters.properties.blobStorageSetting,
+        parameters.properties.blobStorageSetting.storageAccount,
+        parameters.properties.backupOption,
+        parameters.properties.backupOption.startTime,
+        parameters.properties.backupOption.repeatInterval,
+        parameters.properties.backupOption.retentionPeriod,
+        parameters.properties.backupOption.keepAtLeastOneBackup,
+        parameters.properties.backupOption.consistencyOption,
+        parameters.properties.enabled, callback);
+    fullName: >-
+      AutomatedExportOperations~AutomatedExportOperations.createOrUpdateSetting(resourceGroupName,
+      serverName, databaseName, parameters, parameters.location,
+      parameters.tags, parameters.properties,
+      parameters.properties.databaseCredential,
+      parameters.properties.databaseCredential.databaseUserName,
+      parameters.properties.databaseCredential.databasePassword,
+      parameters.properties.blobStorageSetting,
+      parameters.properties.blobStorageSetting.storageAccount,
+      parameters.properties.backupOption,
+      parameters.properties.backupOption.startTime,
+      parameters.properties.backupOption.repeatInterval,
+      parameters.properties.backupOption.retentionPeriod,
+      parameters.properties.backupOption.keepAtLeastOneBackup,
+      parameters.properties.backupOption.consistencyOption,
+      parameters.properties.enabled, callback)
+    children:
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~queryParameters
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~baseUrl
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~baseUrl
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~url2
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~httpRequest
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~requestContent
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~requestDoc
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~automatedExportSettingCreateOrUpdateParametersValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~requestDoc
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~tagsDictionary
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~tagsKey
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~tagsValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~propertiesValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~databaseCredentialValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~blobStorageSettingValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~backupOptionValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#createOrUpdateSetting~requestContent
+  - uid: 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting'
+    id: deleteSetting
+    parent: AutomatedExportOperations~AutomatedExportOperations
+    name: 'deleteSetting(resourceGroupName, serverName, databaseName, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The resource name.
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: databaseName
+          type: string
+          description: The database name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function deleteSetting(resourceGroupName, serverName, databaseName,
+        callback);
+    fullName: >-
+      AutomatedExportOperations~AutomatedExportOperations.deleteSetting(resourceGroupName,
+      serverName, databaseName, callback)
+    children:
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#deleteSetting~queryParameters
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#deleteSetting~baseUrl
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#deleteSetting~baseUrl
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#deleteSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#deleteSetting~httpRequest
+  - uid: 'AutomatedExportOperations~AutomatedExportOperations#getSetting'
+    id: getSetting
+    parent: AutomatedExportOperations~AutomatedExportOperations
+    name: 'getSetting(resourceGroupName, serverName, databaseName, callback)'
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The resource name.
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: databaseName
+          type: string
+          description: The database name.
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function getSetting(resourceGroupName, serverName, databaseName,
+        callback);
+    fullName: >-
+      AutomatedExportOperations~AutomatedExportOperations.getSetting(resourceGroupName,
+      serverName, databaseName, callback)
+    children:
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#getSetting~queryParameters
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~baseUrl'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~baseUrl'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#getSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#getSetting~httpRequest
+  - uid: 'AutomatedExportOperations~AutomatedExportOperations#updateSetting'
+    id: updateSetting
+    parent: AutomatedExportOperations~AutomatedExportOperations
+    name: >-
+      updateSetting(resourceGroupName, serverName, databaseName, parameters,
+      parameters.location, parameters.tags, parameters.properties,
+      parameters.properties.databaseCredential,
+      parameters.properties.databaseCredential.databaseUserName,
+      parameters.properties.databaseCredential.databasePassword,
+      parameters.properties.blobStorageSetting,
+      parameters.properties.blobStorageSetting.storageAccount,
+      parameters.properties.backupOption,
+      parameters.properties.backupOption.startTime,
+      parameters.properties.backupOption.repeatInterval,
+      parameters.properties.backupOption.retentionPeriod,
+      parameters.properties.backupOption.keepAtLeastOneBackup,
+      parameters.properties.backupOption.consistencyOption,
+      parameters.properties.enabled, callback)
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The resource name.
+        - id: serverName
+          type: string
+          description: The server name.
+        - id: databaseName
+          type: string
+          description: The database name.
+        - id: parameters
+          type: AutomatedExportSettingCreateOrUpdateParameters
+          description: Parameters supplied to the operation.
+        - id: parameters.location
+          type: string
+          description: "Gets or sets the location of the\rsetting."
+        - id: parameters.tags
+          type: object
+          description: Gets or sets the tags of the rule.
+        - id: parameters.properties
+          type: AutomatedExportSetting
+          description: "Gets or sets the\rsetting to create or update."
+        - id: parameters.properties.databaseCredential
+          type: DatabaseServerCredential
+          description: "Gets or sets the credential\rfor the server hosting the database."
+        - id: parameters.properties.databaseCredential.databaseUserName
+          type: string
+          description: "Gets or sets\rthe database user name."
+        - id: parameters.properties.databaseCredential.databasePassword
+          type: string
+          description: "Gets or sets\rthe database password."
+        - id: parameters.properties.blobStorageSetting
+          type: BackupLocationProfile
+          description: "Gets or sets the blob storage settings, where the exported file will be\rwritten."
+        - id: parameters.properties.blobStorageSetting.storageAccount
+          type: string
+          description: Gets or sets the name of the storage account.
+        - id: parameters.properties.backupOption
+          type: DatabaseBackupOption
+          description: "Gets or\rsets the backup job options."
+        - id: parameters.properties.backupOption.startTime
+          type: date
+          description: "Gets or sets\rthe start time for the job."
+        - id: parameters.properties.backupOption.repeatInterval
+          type: TimeSpan
+          description: "Gets\ror sets the repeat interval.How often the automated export job will run."
+        - id: parameters.properties.backupOption.retentionPeriod
+          type: TimeSpan
+          description: "Gets or sets the retention period.How long the exported files will be\rsaved."
+        - id: parameters.properties.backupOption.keepAtLeastOneBackup
+          type: boolean
+          description: "Gets or sets the keep at least one backup flag.Whether at least one\rexported file will be kept."
+        - id: parameters.properties.backupOption.consistencyOption
+          type: DatabaseConsistencyOption
+          description: "Gets or sets the\rdatabase consistency option."
+        - id: parameters.properties.enabled
+          type: boolean
+          description: "Gets or sets the enable\rflag. Specifies whether automated export is enabled for the resource."
+        - id: callback
+          type: function
+      return:
+        type: Stream
+        description: The response stream.
+      content: >-
+        function updateSetting(resourceGroupName, serverName, databaseName,
+        parameters, parameters.location, parameters.tags, parameters.properties,
+        parameters.properties.databaseCredential,
+        parameters.properties.databaseCredential.databaseUserName,
+        parameters.properties.databaseCredential.databasePassword,
+        parameters.properties.blobStorageSetting,
+        parameters.properties.blobStorageSetting.storageAccount,
+        parameters.properties.backupOption,
+        parameters.properties.backupOption.startTime,
+        parameters.properties.backupOption.repeatInterval,
+        parameters.properties.backupOption.retentionPeriod,
+        parameters.properties.backupOption.keepAtLeastOneBackup,
+        parameters.properties.backupOption.consistencyOption,
+        parameters.properties.enabled, callback);
+    fullName: >-
+      AutomatedExportOperations~AutomatedExportOperations.updateSetting(resourceGroupName,
+      serverName, databaseName, parameters, parameters.location,
+      parameters.tags, parameters.properties,
+      parameters.properties.databaseCredential,
+      parameters.properties.databaseCredential.databaseUserName,
+      parameters.properties.databaseCredential.databasePassword,
+      parameters.properties.blobStorageSetting,
+      parameters.properties.blobStorageSetting.storageAccount,
+      parameters.properties.backupOption,
+      parameters.properties.backupOption.startTime,
+      parameters.properties.backupOption.repeatInterval,
+      parameters.properties.backupOption.retentionPeriod,
+      parameters.properties.backupOption.keepAtLeastOneBackup,
+      parameters.properties.backupOption.consistencyOption,
+      parameters.properties.enabled, callback)
+    children:
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~queryParameters
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~baseUrl
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~baseUrl
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - 'AutomatedExportOperations~AutomatedExportOperations#updateSetting~url2'
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~httpRequest
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~requestContent
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~requestDoc
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~automatedExportSettingCreateOrUpdateParametersValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~requestDoc
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~tagsDictionary
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~tagsKey
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~tagsValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~propertiesValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~databaseCredentialValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~blobStorageSettingValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~backupOptionValue
+      - >-
+        AutomatedExportOperations~AutomatedExportOperations#updateSetting~requestContent
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: AutomatedExportSettingCreateOrUpdateParameters
+    name: AutomatedExportSettingCreateOrUpdateParameters
+    fullName: AutomatedExportSettingCreateOrUpdateParameters
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: AutomatedExportSetting
+    name: AutomatedExportSetting
+    fullName: AutomatedExportSetting
+    isExternal: true
+  - uid: DatabaseServerCredential
+    name: DatabaseServerCredential
+    fullName: DatabaseServerCredential
+    isExternal: true
+  - uid: BackupLocationProfile
+    name: BackupLocationProfile
+    fullName: BackupLocationProfile
+    isExternal: true
+  - uid: DatabaseBackupOption
+    name: DatabaseBackupOption
+    fullName: DatabaseBackupOption
+    isExternal: true
+  - uid: date
+    name: date
+    fullName: date
+    isExternal: false
+  - uid: TimeSpan
+    name: TimeSpan
+    fullName: TimeSpan
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
+  - uid: DatabaseConsistencyOption
+    name: DatabaseConsistencyOption
+    fullName: DatabaseConsistencyOption
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: Stream
+    name: Stream
+    fullName: Stream
+    isExternal: true

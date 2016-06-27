@@ -1,0 +1,278 @@
+items:
+  - uid: CostInsightOperations
+    id: CostInsightOperations
+    name: CostInsightOperations
+    type: Class
+    syntax:
+      content: CostInsightOperations
+    fullName: CostInsightOperations
+    children:
+      - 'CostInsightOperations#client'
+      - 'CostInsightOperations#list'
+      - 'CostInsightOperations#getResource'
+      - 'CostInsightOperations#refreshData'
+      - 'CostInsightOperations#beginRefreshData'
+      - 'CostInsightOperations#listNext'
+  - uid: 'CostInsightOperations#client'
+    id: client
+    parent: CostInsightOperations
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: CostInsightOperations.client
+  - uid: 'CostInsightOperations#list'
+    id: list
+    parent: CostInsightOperations
+    name: >-
+      list(resourceGroupName, labName, options, options.filter, options.top,
+      options.orderBy, options.customHeaders, callback)
+    summary: List cost insights.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: The filter to apply on the operation.
+        - id: options.top
+          type: number
+        - id: options.orderBy
+          type: string
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCostInsight} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function list(resourceGroupName, labName, options, options.filter,
+        options.top, options.orderBy, options.customHeaders, callback);
+    fullName: >-
+      CostInsightOperations.list(resourceGroupName, labName, options,
+      options.filter, options.top, options.orderBy, options.customHeaders,
+      callback)
+    children:
+      - 'CostInsightOperations#list~client'
+      - 'CostInsightOperations#list~callback'
+      - 'CostInsightOperations#list~options'
+      - 'CostInsightOperations#list~filter'
+      - 'CostInsightOperations#list~top'
+      - 'CostInsightOperations#list~orderBy'
+      - 'CostInsightOperations#list~requestUrl'
+      - 'CostInsightOperations#list~requestUrl'
+      - 'CostInsightOperations#list~requestUrl'
+      - 'CostInsightOperations#list~requestUrl'
+      - 'CostInsightOperations#list~queryParameters'
+      - 'CostInsightOperations#list~requestUrl'
+      - 'CostInsightOperations#list~regex'
+      - 'CostInsightOperations#list~requestUrl'
+      - 'CostInsightOperations#list~httpRequest'
+      - 'CostInsightOperations#list~headerName'
+  - uid: 'CostInsightOperations#getResource'
+    id: getResource
+    parent: CostInsightOperations
+    name: >-
+      getResource(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: Get cost insight.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the cost insight.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CostInsight} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getResource(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CostInsightOperations.getResource(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'CostInsightOperations#getResource~client'
+      - 'CostInsightOperations#getResource~callback'
+      - 'CostInsightOperations#getResource~options'
+      - 'CostInsightOperations#getResource~requestUrl'
+      - 'CostInsightOperations#getResource~requestUrl'
+      - 'CostInsightOperations#getResource~requestUrl'
+      - 'CostInsightOperations#getResource~requestUrl'
+      - 'CostInsightOperations#getResource~requestUrl'
+      - 'CostInsightOperations#getResource~queryParameters'
+      - 'CostInsightOperations#getResource~requestUrl'
+      - 'CostInsightOperations#getResource~regex'
+      - 'CostInsightOperations#getResource~requestUrl'
+      - 'CostInsightOperations#getResource~httpRequest'
+      - 'CostInsightOperations#getResource~headerName'
+  - uid: 'CostInsightOperations#refreshData'
+    id: refreshData
+    parent: CostInsightOperations
+    name: >-
+      refreshData(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: "Refresh Lab's Cost Insight Data. This operation can take a while to\rcomplete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the cost insight.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function refreshData(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CostInsightOperations.refreshData(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'CostInsightOperations#refreshData~client'
+      - 'CostInsightOperations#refreshData~callback'
+      - 'CostInsightOperations#refreshData~options'
+  - uid: 'CostInsightOperations#beginRefreshData'
+    id: beginRefreshData
+    parent: CostInsightOperations
+    name: >-
+      beginRefreshData(resourceGroupName, labName, name, options,
+      options.customHeaders, callback)
+    summary: "Refresh Lab's Cost Insight Data. This operation can take a while to\rcomplete."
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: labName
+          type: string
+          description: The name of the lab.
+        - id: name
+          type: string
+          description: The name of the cost insight.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function beginRefreshData(resourceGroupName, labName, name, options,
+        options.customHeaders, callback);
+    fullName: >-
+      CostInsightOperations.beginRefreshData(resourceGroupName, labName, name,
+      options, options.customHeaders, callback)
+    children:
+      - 'CostInsightOperations#beginRefreshData~client'
+      - 'CostInsightOperations#beginRefreshData~callback'
+      - 'CostInsightOperations#beginRefreshData~options'
+      - 'CostInsightOperations#beginRefreshData~requestUrl'
+      - 'CostInsightOperations#beginRefreshData~requestUrl'
+      - 'CostInsightOperations#beginRefreshData~requestUrl'
+      - 'CostInsightOperations#beginRefreshData~requestUrl'
+      - 'CostInsightOperations#beginRefreshData~requestUrl'
+      - 'CostInsightOperations#beginRefreshData~queryParameters'
+      - 'CostInsightOperations#beginRefreshData~requestUrl'
+      - 'CostInsightOperations#beginRefreshData~regex'
+      - 'CostInsightOperations#beginRefreshData~requestUrl'
+      - 'CostInsightOperations#beginRefreshData~httpRequest'
+      - 'CostInsightOperations#beginRefreshData~headerName'
+  - uid: 'CostInsightOperations#listNext'
+    id: listNext
+    parent: CostInsightOperations
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: List cost insights.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCostInsight} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      CostInsightOperations.listNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'CostInsightOperations#listNext~client'
+      - 'CostInsightOperations#listNext~callback'
+      - 'CostInsightOperations#listNext~options'
+      - 'CostInsightOperations#listNext~requestUrl'
+      - 'CostInsightOperations#listNext~requestUrl'
+      - 'CostInsightOperations#listNext~regex'
+      - 'CostInsightOperations#listNext~requestUrl'
+      - 'CostInsightOperations#listNext~httpRequest'
+      - 'CostInsightOperations#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false

@@ -1,0 +1,240 @@
+items:
+  - uid: Providers
+    id: Providers
+    name: Providers
+    type: Class
+    syntax:
+      content: Providers
+    fullName: Providers
+    children:
+      - 'Providers#client'
+      - 'Providers#unregister'
+      - 'Providers#register'
+      - 'Providers#list'
+      - 'Providers#get'
+      - 'Providers#listNext'
+  - uid: 'Providers#client'
+    id: client
+    parent: Providers
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Providers.client
+  - uid: 'Providers#unregister'
+    id: unregister
+    parent: Providers
+    name: >-
+      unregister(resourceProviderNamespace, options, options.customHeaders,
+      callback)
+    summary: Unregisters provider from a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceProviderNamespace
+          type: string
+          description: "Namespace of the resource\rprovider."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Provider} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function unregister(resourceProviderNamespace, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Providers.unregister(resourceProviderNamespace, options,
+      options.customHeaders, callback)
+    children:
+      - 'Providers#unregister~client'
+      - 'Providers#unregister~callback'
+      - 'Providers#unregister~options'
+      - 'Providers#unregister~requestUrl'
+      - 'Providers#unregister~requestUrl'
+      - 'Providers#unregister~requestUrl'
+      - 'Providers#unregister~queryParameters'
+      - 'Providers#unregister~requestUrl'
+      - 'Providers#unregister~regex'
+      - 'Providers#unregister~requestUrl'
+      - 'Providers#unregister~httpRequest'
+      - 'Providers#unregister~headerName'
+  - uid: 'Providers#register'
+    id: register
+    parent: Providers
+    name: >-
+      register(resourceProviderNamespace, options, options.customHeaders,
+      callback)
+    summary: Registers provider to be used with a subscription.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceProviderNamespace
+          type: string
+          description: "Namespace of the resource\rprovider."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Provider} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function register(resourceProviderNamespace, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Providers.register(resourceProviderNamespace, options,
+      options.customHeaders, callback)
+    children:
+      - 'Providers#register~client'
+      - 'Providers#register~callback'
+      - 'Providers#register~options'
+      - 'Providers#register~requestUrl'
+      - 'Providers#register~requestUrl'
+      - 'Providers#register~requestUrl'
+      - 'Providers#register~queryParameters'
+      - 'Providers#register~requestUrl'
+      - 'Providers#register~regex'
+      - 'Providers#register~requestUrl'
+      - 'Providers#register~httpRequest'
+      - 'Providers#register~headerName'
+  - uid: 'Providers#list'
+    id: list
+    parent: Providers
+    name: 'list(options, options.top, options.customHeaders, callback)'
+    summary: Gets a list of resource providers.
+    type: Method
+    syntax:
+      parameters:
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.top
+          type: number
+          description: "Query parameters. If null is passed returns\rall deployments."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ProviderListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: 'function list(options, options.top, options.customHeaders, callback);'
+    fullName: 'Providers.list(options, options.top, options.customHeaders, callback)'
+    children:
+      - 'Providers#list~client'
+      - 'Providers#list~callback'
+      - 'Providers#list~options'
+      - 'Providers#list~top'
+      - 'Providers#list~requestUrl'
+      - 'Providers#list~requestUrl'
+      - 'Providers#list~queryParameters'
+      - 'Providers#list~requestUrl'
+      - 'Providers#list~regex'
+      - 'Providers#list~requestUrl'
+      - 'Providers#list~httpRequest'
+      - 'Providers#list~headerName'
+  - uid: 'Providers#get'
+    id: get
+    parent: Providers
+    name: 'get(resourceProviderNamespace, options, options.customHeaders, callback)'
+    summary: Gets a resource provider.
+    type: Method
+    syntax:
+      parameters:
+        - id: resourceProviderNamespace
+          type: string
+          description: "Namespace of the resource\rprovider."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Provider} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function get(resourceProviderNamespace, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Providers.get(resourceProviderNamespace, options, options.customHeaders,
+      callback)
+    children:
+      - 'Providers#get~client'
+      - 'Providers#get~callback'
+      - 'Providers#get~options'
+      - 'Providers#get~requestUrl'
+      - 'Providers#get~requestUrl'
+      - 'Providers#get~requestUrl'
+      - 'Providers#get~queryParameters'
+      - 'Providers#get~requestUrl'
+      - 'Providers#get~regex'
+      - 'Providers#get~requestUrl'
+      - 'Providers#get~httpRequest'
+      - 'Providers#get~headerName'
+  - uid: 'Providers#listNext'
+    id: listNext
+    parent: Providers
+    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Gets a list of resource providers.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ProviderListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: 'Providers.listNext(nextPageLink, options, options.customHeaders, callback)'
+    children:
+      - 'Providers#listNext~client'
+      - 'Providers#listNext~callback'
+      - 'Providers#listNext~options'
+      - 'Providers#listNext~requestUrl'
+      - 'Providers#listNext~requestUrl'
+      - 'Providers#listNext~regex'
+      - 'Providers#listNext~requestUrl'
+      - 'Providers#listNext~httpRequest'
+      - 'Providers#listNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true

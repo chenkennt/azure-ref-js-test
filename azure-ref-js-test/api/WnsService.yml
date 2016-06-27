@@ -1,0 +1,916 @@
+items:
+  - uid: WnsService
+    id: WnsService
+    name: WnsService
+    summary: Creates a new WnsService object.
+    type: Class
+    syntax:
+      content: WnsService
+    fullName: WnsService
+    children:
+      - WnsService~self
+      - 'WnsService#notificationHubService'
+      - WnsService~addSendMethod
+      - WnsService~addCreateAndUpdateRegistrationMethod
+      - 'WnsService#sendBadge'
+      - 'WnsService#sendTile*'
+      - 'WnsService#sendToast*'
+      - 'WnsService#sendRaw'
+      - 'WnsService#send'
+      - 'WnsService#createNativeRegistration'
+      - 'WnsService#createOrUpdateNativeRegistration'
+      - 'WnsService#createTile*Registration'
+      - 'WnsService#createToast*Registration'
+      - 'WnsService#createRawTemplateRegistration'
+      - 'WnsService#createOrUpdateRawTemplateRegistration'
+      - 'WnsService#updateTile*Registration'
+      - 'WnsService#updateToast*Registration'
+      - 'WnsService#updatesRawTemplateRegistration'
+      - 'WnsService#listRegistrationsByChannel'
+      - 'WnsService#_createBody'
+      - 'WnsService#_createTemplateBody'
+  - uid: WnsService~self
+    id: self
+    parent: WnsService
+    name: self
+    type: Field
+    syntax:
+      content: self
+    fullName: WnsService.self
+    children:
+      - 'WnsService~self.undefined]'
+      - 'WnsService~self.undefined]'
+      - 'WnsService~self.undefined]'
+      - 'WnsService~self.undefined]'
+      - 'WnsService~self.undefined]'
+  - uid: 'WnsService#notificationHubService'
+    id: notificationHubService
+    parent: WnsService
+    name: notificationHubService
+    type: Field
+    syntax:
+      content: notificationHubService
+    fullName: WnsService.notificationHubService
+  - uid: WnsService~addSendMethod
+    id: addSendMethod
+    parent: WnsService
+    name: addSendMethod()
+    type: Method
+    syntax:
+      content: function addSendMethod();
+    fullName: WnsService.addSendMethod()
+    children:
+      - WnsService~addSendMethod~sendName
+  - uid: WnsService~addCreateAndUpdateRegistrationMethod
+    id: addCreateAndUpdateRegistrationMethod
+    parent: WnsService
+    name: addCreateAndUpdateRegistrationMethod()
+    type: Method
+    syntax:
+      content: function addCreateAndUpdateRegistrationMethod();
+    fullName: WnsService.addCreateAndUpdateRegistrationMethod()
+    children:
+      - WnsService~addCreateAndUpdateRegistrationMethod~createRegistrationXml
+      - WnsService~addCreateAndUpdateRegistrationMethod~createRegistrationName
+      - WnsService~addCreateAndUpdateRegistrationMethod~updateRegistrationName
+      - >-
+        WnsService~addCreateAndUpdateRegistrationMethod~createOrUpdateRegistrationName
+  - uid: 'WnsService#sendBadge'
+    id: sendBadge
+    parent: WnsService
+    name: >-
+      sendBadge(tags, value, optionsOrCallback, optionsOrCallback.headers,
+      callback)
+    summary: Sends a wns/badge WNS notification.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: array
+          description: Comma-separated list or array of tag identifiers.
+        - id: value
+          type: object
+          description: "Either a numeric value or a string value that specifies a predefined badge \r                                                                   glyph. Numerically, this value can accept any valid integer. A value of 0 clears the badge, \r                                                                   values from 1-99 display as given, and any value greater than 99 displays as 99+.\r                                                                   See http://msdn.microsoft.com/en-us/library/windowsazure/br212849.aspx for more details."
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: optionsOrCallback.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function sendBadge(tags, value, optionsOrCallback,
+        optionsOrCallback.headers, callback);
+    fullName: >-
+      WnsService.sendBadge(tags, value, optionsOrCallback,
+      optionsOrCallback.headers, callback)
+    children:
+      - 'WnsService#sendBadge~realValue'
+      - 'WnsService#sendBadge~realVersion'
+      - 'WnsService#sendBadge~realValue'
+      - 'WnsService#sendBadge~realVersion'
+      - 'WnsService#sendBadge~realValue'
+      - 'WnsService#sendBadge~realVersion'
+      - 'WnsService#sendBadge~payload'
+  - uid: 'WnsService#sendTile*'
+    id: sendTile*
+    parent: WnsService
+    name: >-
+      sendTile*(tags, payload, payload.text{1..n}, payload.image{1..n}src,
+      payload.image{1..n}alt, payload.lang, payload.type, options,
+      options.headers, callback)
+    summary: "Sends a Tile notification. There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx\r(e.g. sendTileSquarePeekImageAndText01)."
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: A single tag or tag expression.
+        - id: payload
+          type: object
+          description: The message's payload. Multiple payload parameters can be passed.
+        - id: 'payload.text{1..n}'
+          type: string
+          description: >-
+            Value of the text element with id specified (e.g. text1). The number
+            of text* properties depends on the tile type.
+        - id: 'payload.image{1..n}src'
+          type: string
+          description: >-
+            Value of the src attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: 'payload.image{1..n}alt'
+          type: string
+          description: >-
+            Value of the alt attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: payload.lang
+          type: string
+          description: The value of the language of the binding element.
+        - id: payload.type
+          type: string
+          description: Used in the general sendTile method.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function sendTile*(tags, payload, payload.text{1..n},
+        payload.image{1..n}src, payload.image{1..n}alt, payload.lang,
+        payload.type, options, options.headers, callback);
+    fullName: >-
+      WnsService.sendTile*(tags, payload, payload.text{1..n},
+      payload.image{1..n}src, payload.image{1..n}alt, payload.lang,
+      payload.type, options, options.headers, callback)
+  - uid: 'WnsService#sendToast*'
+    id: sendToast*
+    parent: WnsService
+    name: >-
+      sendToast*(tags, payload, payload.text{1..n}, payload.image{1..n}src,
+      payload.image{1..n}alt, payload.lang, options, options.headers, callback)
+    summary: "Sends a Toast notification. There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx\r(e.g. sendToastText01)."
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: string
+          description: A single tag or tag expression.
+        - id: payload
+          type: object
+          description: The message's payload.
+        - id: 'payload.text{1..n}'
+          type: string
+          description: >-
+            Value of the text element with id specified (e.g. text1). The number
+            of text* properties depends on the tile type.
+        - id: 'payload.image{1..n}src'
+          type: string
+          description: >-
+            Value of the src attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: 'payload.image{1..n}alt'
+          type: string
+          description: >-
+            Value of the alt attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: payload.lang
+          type: string
+          description: The value of the language of the binding element.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function sendToast*(tags, payload, payload.text{1..n},
+        payload.image{1..n}src, payload.image{1..n}alt, payload.lang, options,
+        options.headers, callback);
+    fullName: >-
+      WnsService.sendToast*(tags, payload, payload.text{1..n},
+      payload.image{1..n}src, payload.image{1..n}alt, payload.lang, options,
+      options.headers, callback)
+  - uid: 'WnsService#sendRaw'
+    id: sendRaw
+    parent: WnsService
+    name: >-
+      sendRaw(tags, payload, optionsOrCallback, optionsOrCallback.headers,
+      callback)
+    summary: Sends a wns/raw WNS notification.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: array
+          description: Comma-separated list or array of tag identifiers.
+        - id: payload
+          type: object
+          description: The raw payload.
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: optionsOrCallback.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function sendRaw(tags, payload, optionsOrCallback,
+        optionsOrCallback.headers, callback);
+    fullName: >-
+      WnsService.sendRaw(tags, payload, optionsOrCallback,
+      optionsOrCallback.headers, callback)
+  - uid: 'WnsService#send'
+    id: send
+    parent: WnsService
+    name: >-
+      send(tags, payload, type, optionsOrCallback, optionsOrCallback.headers,
+      callback)
+    summary: >-
+      Sends a custom WNS notification. Use this method if you want to have full
+      control on the payload.
+    type: Method
+    syntax:
+      parameters:
+        - id: tags
+          type: array
+          description: Comma-separated list or array of tag identifiers.
+        - id: payload
+          type: string
+          description: The message's XML payload.
+        - id: type
+          type: string
+          description: >-
+            The message type. Corresponds to header X-WNS-Type (options are:
+            wns/raw, wns/tile and wns/toast).
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: optionsOrCallback.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function send(tags, payload, type, optionsOrCallback,
+        optionsOrCallback.headers, callback);
+    fullName: >-
+      WnsService.send(tags, payload, type, optionsOrCallback,
+      optionsOrCallback.headers, callback)
+    children:
+      - 'WnsService#send~options'
+      - 'WnsService#send~headers'
+      - 'WnsService#send~tags'
+  - uid: 'WnsService#createNativeRegistration'
+    id: createNativeRegistration
+    parent: WnsService
+    name: 'createNativeRegistration(channel, tags, optionsOrCallback, callback)'
+    summary: Creates a native WNS registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createNativeRegistration(channel, tags, optionsOrCallback,
+        callback);
+    fullName: >-
+      WnsService.createNativeRegistration(channel, tags, optionsOrCallback,
+      callback)
+    children:
+      - 'WnsService#createNativeRegistration~options'
+      - 'WnsService#createNativeRegistration~registrationXml'
+      - 'WnsService#createNativeRegistration~webResource'
+  - uid: 'WnsService#createOrUpdateNativeRegistration'
+    id: createOrUpdateNativeRegistration
+    parent: WnsService
+    name: >-
+      createOrUpdateNativeRegistration(registrationId, channel, tags,
+      optionsOrCallback, callback)
+    summary: Creates or updates a native WNS registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createOrUpdateNativeRegistration(registrationId, channel, tags,
+        optionsOrCallback, callback);
+    fullName: >-
+      WnsService.createOrUpdateNativeRegistration(registrationId, channel, tags,
+      optionsOrCallback, callback)
+    children:
+      - 'WnsService#createOrUpdateNativeRegistration~options'
+      - 'WnsService#createOrUpdateNativeRegistration~registrationXml'
+      - 'WnsService#createOrUpdateNativeRegistration~webResource'
+  - uid: 'WnsService#createTile*Registration'
+    id: createTile*Registration
+    parent: WnsService
+    name: >-
+      createTile*Registration(channel, tags, template, template.text{1..n},
+      template.image{1..n}src, template.image{1..n}alt, template.lang, options,
+      options.headers, callback)
+    summary: "Creates a new registration with a Tile template. There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx\r(e.g. createTileSquarePeekImageAndText01Registration)."
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: object
+          description: The body template of the registration.
+        - id: 'template.text{1..n}'
+          type: string
+          description: >-
+            Value of the text element with id specified (e.g. text1). The number
+            of text* properties depends on the tile type.
+        - id: 'template.image{1..n}src'
+          type: string
+          description: >-
+            Value of the src attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: 'template.image{1..n}alt'
+          type: string
+          description: >-
+            Value of the alt attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: template.lang
+          type: string
+          description: The value of the language of the binding element.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createTile*Registration(channel, tags, template,
+        template.text{1..n}, template.image{1..n}src, template.image{1..n}alt,
+        template.lang, options, options.headers, callback);
+    fullName: >-
+      WnsService.createTile*Registration(channel, tags, template,
+      template.text{1..n}, template.image{1..n}src, template.image{1..n}alt,
+      template.lang, options, options.headers, callback)
+  - uid: 'WnsService#createToast*Registration'
+    id: createToast*Registration
+    parent: WnsService
+    name: >-
+      createToast*Registration(channel, tags, template, template.text{1..n},
+      template.image{1..n}src, template.image{1..n}alt, template.lang, options,
+      options.headers, callback)
+    summary: "Creates a new registration with a Toast template.There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx\r(e.g. createToastText01Registration)."
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: object
+          description: The body template of the registration.
+        - id: 'template.text{1..n}'
+          type: string
+          description: >-
+            Value of the text element with id specified (e.g. text1). The number
+            of text* properties depends on the tile type.
+        - id: 'template.image{1..n}src'
+          type: string
+          description: >-
+            Value of the src attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: 'template.image{1..n}alt'
+          type: string
+          description: >-
+            Value of the alt attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: template.lang
+          type: string
+          description: The value of the language of the binding element.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createToast*Registration(channel, tags, template,
+        template.text{1..n}, template.image{1..n}src, template.image{1..n}alt,
+        template.lang, options, options.headers, callback);
+    fullName: >-
+      WnsService.createToast*Registration(channel, tags, template,
+      template.text{1..n}, template.image{1..n}src, template.image{1..n}alt,
+      template.lang, options, options.headers, callback)
+  - uid: 'WnsService#createRawTemplateRegistration'
+    id: createRawTemplateRegistration
+    parent: WnsService
+    name: >-
+      createRawTemplateRegistration(channel, tags, template, optionsOrCallback,
+      optionsOrCallback.pnsCredentialName, optionsOrCallback.headers, callback)
+    summary: "Creates a custom template registration. Use this method to have full control on the template format. Remember that you have to specify the X-WNS-Type header\r(possible values: wns/toast, wns/tile, wns/badge, wns/raw)."
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: string
+          description: The template for the registration.
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: optionsOrCallback.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+        - id: optionsOrCallback.headers
+          type: object
+          description: The wns headers to include.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createRawTemplateRegistration(channel, tags, template,
+        optionsOrCallback, optionsOrCallback.pnsCredentialName,
+        optionsOrCallback.headers, callback);
+    fullName: >-
+      WnsService.createRawTemplateRegistration(channel, tags, template,
+      optionsOrCallback, optionsOrCallback.pnsCredentialName,
+      optionsOrCallback.headers, callback)
+    children:
+      - 'WnsService#createRawTemplateRegistration~options'
+      - 'WnsService#createRawTemplateRegistration~registrationXml'
+      - 'WnsService#createRawTemplateRegistration~webResource'
+  - uid: 'WnsService#createOrUpdateRawTemplateRegistration'
+    id: createOrUpdateRawTemplateRegistration
+    parent: WnsService
+    name: >-
+      createOrUpdateRawTemplateRegistration(registrationId, channel, tags,
+      template, optionsOrCallback, optionsOrCallback.pnsCredentialName,
+      optionsOrCallback.headers, callback)
+    summary: "Creates a custom template registration. Use this method to have full control on the template format. Remember that you have to specify the X-WNS-Type header\r(possible values: wns/toast, wns/tile, wns/badge, wns/raw)."
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: string
+          description: The template for the registration.
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: optionsOrCallback.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+        - id: optionsOrCallback.headers
+          type: object
+          description: The wns headers to include.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function createOrUpdateRawTemplateRegistration(registrationId, channel,
+        tags, template, optionsOrCallback, optionsOrCallback.pnsCredentialName,
+        optionsOrCallback.headers, callback);
+    fullName: >-
+      WnsService.createOrUpdateRawTemplateRegistration(registrationId, channel,
+      tags, template, optionsOrCallback, optionsOrCallback.pnsCredentialName,
+      optionsOrCallback.headers, callback)
+    children:
+      - 'WnsService#createOrUpdateRawTemplateRegistration~options'
+      - 'WnsService#createOrUpdateRawTemplateRegistration~registrationXml'
+      - 'WnsService#createOrUpdateRawTemplateRegistration~webResource'
+  - uid: 'WnsService#updateTile*Registration'
+    id: updateTile*Registration
+    parent: WnsService
+    name: >-
+      updateTile*Registration(registrationId, channel, tags, template,
+      template.text{1..n}, template.image{1..n}src, template.image{1..n}alt,
+      template.lang, options, options.headers, callback)
+    summary: "Updates a new registration with a Tile template. There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx\r(e.g. createTileSquarePeekImageAndText01Registration)."
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: object
+          description: The body template of the registration.
+        - id: 'template.text{1..n}'
+          type: string
+          description: >-
+            Value of the text element with id specified (e.g. text1). The number
+            of text* properties depends on the tile type.
+        - id: 'template.image{1..n}src'
+          type: string
+          description: >-
+            Value of the src attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: 'template.image{1..n}alt'
+          type: string
+          description: >-
+            Value of the alt attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: template.lang
+          type: string
+          description: The value of the language of the binding element.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function updateTile*Registration(registrationId, channel, tags,
+        template, template.text{1..n}, template.image{1..n}src,
+        template.image{1..n}alt, template.lang, options, options.headers,
+        callback);
+    fullName: >-
+      WnsService.updateTile*Registration(registrationId, channel, tags,
+      template, template.text{1..n}, template.image{1..n}src,
+      template.image{1..n}alt, template.lang, options, options.headers,
+      callback)
+  - uid: 'WnsService#updateToast*Registration'
+    id: updateToast*Registration
+    parent: WnsService
+    name: >-
+      updateToast*Registration(registrationId, channel, tags, template,
+      template.text{1..n}, template.image{1..n}src, template.image{1..n}alt,
+      template.lang, options, options.headers, callback)
+    summary: "Updates a new registration with a Toast template.There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx\r(e.g. updateToastText01Registration)."
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: object
+          description: The body template of the registration.
+        - id: 'template.text{1..n}'
+          type: string
+          description: >-
+            Value of the text element with id specified (e.g. text1). The number
+            of text* properties depends on the tile type.
+        - id: 'template.image{1..n}src'
+          type: string
+          description: >-
+            Value of the src attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: 'template.image{1..n}alt'
+          type: string
+          description: >-
+            Value of the alt attribute of the image element with id specified
+            (e.g. image1). The number of image* properties depends on the tile
+            type.
+        - id: template.lang
+          type: string
+          description: The value of the language of the binding element.
+        - id: options
+          type: object
+          description: The request options.
+        - id: options.headers
+          type: object
+          description: The wns headers.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function updateToast*Registration(registrationId, channel, tags,
+        template, template.text{1..n}, template.image{1..n}src,
+        template.image{1..n}alt, template.lang, options, options.headers,
+        callback);
+    fullName: >-
+      WnsService.updateToast*Registration(registrationId, channel, tags,
+      template, template.text{1..n}, template.image{1..n}src,
+      template.image{1..n}alt, template.lang, options, options.headers,
+      callback)
+  - uid: 'WnsService#updatesRawTemplateRegistration'
+    id: updatesRawTemplateRegistration
+    parent: WnsService
+    name: >-
+      updatesRawTemplateRegistration(registrationId, channel, tags, template,
+      optionsOrCallback, optionsOrCallback.pnsCredentialName,
+      optionsOrCallback.headers, optionsOrCallback.etag, callback)
+    summary: Updates a raw template registration.
+    type: Method
+    syntax:
+      parameters:
+        - id: registrationId
+          type: string
+          description: The registration identifier.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: string
+          description: The template for the registration.
+        - id: optionsOrCallback
+          type: object
+          description: The request options or callback function.
+        - id: optionsOrCallback.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+        - id: optionsOrCallback.headers
+          type: object
+          description: The wns headers to include.
+        - id: optionsOrCallback.etag
+          type: object
+          description: The etag to include.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function updatesRawTemplateRegistration(registrationId, channel, tags,
+        template, optionsOrCallback, optionsOrCallback.pnsCredentialName,
+        optionsOrCallback.headers, optionsOrCallback.etag, callback);
+    fullName: >-
+      WnsService.updatesRawTemplateRegistration(registrationId, channel, tags,
+      template, optionsOrCallback, optionsOrCallback.pnsCredentialName,
+      optionsOrCallback.headers, optionsOrCallback.etag, callback)
+    children:
+      - 'WnsService#updatesRawTemplateRegistration~options'
+      - 'WnsService#updatesRawTemplateRegistration~registrationXml'
+      - 'WnsService#updatesRawTemplateRegistration~webResource'
+  - uid: 'WnsService#listRegistrationsByChannel'
+    id: listRegistrationsByChannel
+    parent: WnsService
+    name: >-
+      listRegistrationsByChannel(channel, optionsOrCallback,
+      optionsOrCallback.top, optionsOrCallback.skip, callback)
+    summary: Retrieves a registration by channel.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The registration identifier.
+        - id: optionsOrCallback
+          type: object
+          description: >-
+            The request options or callback function. Additional properties will
+            be passed as headers.
+        - id: optionsOrCallback.top
+          type: object
+          description: >-
+            Specifies the maximum number of registration to obtain from the
+            call.
+        - id: optionsOrCallback.skip
+          type: object
+          description: Specifies the number of registrations to skip in the call.
+        - id: callback
+          type: function
+          description: The callback function.
+      return:
+        type: undefined
+      content: >-
+        function listRegistrationsByChannel(channel, optionsOrCallback,
+        optionsOrCallback.top, optionsOrCallback.skip, callback);
+    fullName: >-
+      WnsService.listRegistrationsByChannel(channel, optionsOrCallback,
+      optionsOrCallback.top, optionsOrCallback.skip, callback)
+    children:
+      - 'WnsService#listRegistrationsByChannel~options'
+      - 'WnsService#listRegistrationsByChannel~webResource'
+  - uid: 'WnsService#_createBody'
+    id: _createBody
+    parent: WnsService
+    name: >-
+      _createBody(elementName, channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: elementName
+          type: string
+          description: The element name.
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: options.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+        - id: options.headers
+          type: object
+          description: The wns headers to include.
+      return:
+        type: undefined
+      content: >-
+        function _createBody(elementName, channel, tags, template, options,
+        options.pnsCredentialName, options.headers);
+    fullName: >-
+      WnsService._createBody(elementName, channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+    children:
+      - 'WnsService#_createBody~registration'
+      - 'WnsService#_createBody~tags'
+      - 'WnsService#_createBody~registrationXml'
+      - 'WnsService#_createBody~registrationXml'
+      - 'WnsService#_createBody~registrationXml'
+  - uid: 'WnsService#_createTemplateBody'
+    id: _createTemplateBody
+    parent: WnsService
+    name: >-
+      _createTemplateBody(channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+    summary: Creates a template registration body.
+    type: Method
+    syntax:
+      parameters:
+        - id: channel
+          type: string
+          description: The device channel uri.
+        - id: tags
+          type: string
+          description: The tags.
+        - id: template
+          type: json
+          description: The template for the registration.
+        - id: options
+          type: object
+          description: The request options or callback function.
+        - id: options.pnsCredentialName
+          type: object
+          description: The pns credentials to use.
+        - id: options.headers
+          type: object
+          description: The wns headers to include.
+      return:
+        type: undefined
+      content: >-
+        function _createTemplateBody(channel, tags, template, options,
+        options.pnsCredentialName, options.headers);
+    fullName: >-
+      WnsService._createTemplateBody(channel, tags, template, options,
+      options.pnsCredentialName, options.headers)
+references:
+  - uid: array
+    name: array
+    fullName: array
+    isExternal: true
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: undefined
+    name: undefined
+    fullName: undefined
+    isExternal: true
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: json
+    name: json
+    fullName: json
+    isExternal: true

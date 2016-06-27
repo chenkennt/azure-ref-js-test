@@ -1,0 +1,2412 @@
+items:
+  - uid: Catalog
+    id: Catalog
+    name: Catalog
+    type: Class
+    syntax:
+      content: Catalog
+    fullName: Catalog
+    children:
+      - 'Catalog#client'
+      - 'Catalog#createSecret'
+      - 'Catalog#updateSecret'
+      - 'Catalog#getSecret'
+      - 'Catalog#deleteSecret'
+      - 'Catalog#deleteAllSecrets'
+      - 'Catalog#getExternalDataSource'
+      - 'Catalog#listExternalDataSources'
+      - 'Catalog#getCredential'
+      - 'Catalog#listCredentials'
+      - 'Catalog#getProcedure'
+      - 'Catalog#listProcedures'
+      - 'Catalog#getTable'
+      - 'Catalog#listTables'
+      - 'Catalog#getView'
+      - 'Catalog#listViews'
+      - 'Catalog#getTableStatistic'
+      - 'Catalog#listTableStatistics'
+      - 'Catalog#getTablePartition'
+      - 'Catalog#listTablePartitions'
+      - 'Catalog#listTypes'
+      - 'Catalog#getTableValuedFunction'
+      - 'Catalog#listTableValuedFunctions'
+      - 'Catalog#getAssembly'
+      - 'Catalog#listAssemblies'
+      - 'Catalog#getSchema'
+      - 'Catalog#listSchemas'
+      - 'Catalog#getDatabase'
+      - 'Catalog#listDatabases'
+      - 'Catalog#listExternalDataSourcesNext'
+      - 'Catalog#listCredentialsNext'
+      - 'Catalog#listProceduresNext'
+      - 'Catalog#listTablesNext'
+      - 'Catalog#listViewsNext'
+      - 'Catalog#listTableStatisticsNext'
+      - 'Catalog#listTablePartitionsNext'
+      - 'Catalog#listTypesNext'
+      - 'Catalog#listTableValuedFunctionsNext'
+      - 'Catalog#listAssembliesNext'
+      - 'Catalog#listSchemasNext'
+      - 'Catalog#listDatabasesNext'
+  - uid: 'Catalog#client'
+    id: client
+    parent: Catalog
+    name: client
+    type: Field
+    syntax:
+      content: client
+    fullName: Catalog.client
+  - uid: 'Catalog#createSecret'
+    id: createSecret
+    parent: Catalog
+    name: >-
+      createSecret(accountName, databaseName, secretName, parameters,
+      parameters.password, parameters.uri, options, options.customHeaders,
+      callback)
+    summary: "Creates the specified secret for use with external data sources in the\rspecified database."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database in which to create\rthe secret."
+        - id: secretName
+          type: string
+          description: The name of the secret.
+        - id: parameters
+          type: object
+          description: "The parameters required to create the secret\r(name and password)"
+        - id: parameters.password
+          type: string
+          description: "Gets or sets the password for the\rsecret to pass in"
+        - id: parameters.uri
+          type: string
+          description: "Gets or sets the URI identifier for the\rsecret in the format <hostname>:<port>"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSecret} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function createSecret(accountName, databaseName, secretName, parameters,
+        parameters.password, parameters.uri, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.createSecret(accountName, databaseName, secretName, parameters,
+      parameters.password, parameters.uri, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#createSecret~client'
+      - 'Catalog#createSecret~callback'
+      - 'Catalog#createSecret~options'
+      - 'Catalog#createSecret~requestUrl'
+      - 'Catalog#createSecret~requestUrl'
+      - 'Catalog#createSecret~requestUrl'
+      - 'Catalog#createSecret~requestUrl'
+      - 'Catalog#createSecret~requestUrl'
+      - 'Catalog#createSecret~queryParameters'
+      - 'Catalog#createSecret~requestUrl'
+      - 'Catalog#createSecret~regex'
+      - 'Catalog#createSecret~requestUrl'
+      - 'Catalog#createSecret~httpRequest'
+      - 'Catalog#createSecret~headerName'
+      - 'Catalog#createSecret~requestContent'
+      - 'Catalog#createSecret~requestModel'
+      - 'Catalog#createSecret~requestModelMapper'
+      - 'Catalog#createSecret~requestModel'
+      - 'Catalog#createSecret~requestContent'
+      - 'Catalog#createSecret~serializationError'
+  - uid: 'Catalog#updateSecret'
+    id: updateSecret
+    parent: Catalog
+    name: >-
+      updateSecret(accountName, databaseName, secretName, parameters,
+      parameters.password, parameters.uri, options, options.customHeaders,
+      callback)
+    summary: "Modifies the specified secret for use with external data sources in the\rspecified database"
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the secret.
+        - id: secretName
+          type: string
+          description: The name of the secret.
+        - id: parameters
+          type: object
+          description: "The parameters required to modify the secret\r(name and password)"
+        - id: parameters.password
+          type: string
+          description: "Gets or sets the password for the\rsecret to pass in"
+        - id: parameters.uri
+          type: string
+          description: "Gets or sets the URI identifier for the\rsecret in the format <hostname>:<port>"
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSecret} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function updateSecret(accountName, databaseName, secretName, parameters,
+        parameters.password, parameters.uri, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.updateSecret(accountName, databaseName, secretName, parameters,
+      parameters.password, parameters.uri, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#updateSecret~client'
+      - 'Catalog#updateSecret~callback'
+      - 'Catalog#updateSecret~options'
+      - 'Catalog#updateSecret~requestUrl'
+      - 'Catalog#updateSecret~requestUrl'
+      - 'Catalog#updateSecret~requestUrl'
+      - 'Catalog#updateSecret~requestUrl'
+      - 'Catalog#updateSecret~requestUrl'
+      - 'Catalog#updateSecret~queryParameters'
+      - 'Catalog#updateSecret~requestUrl'
+      - 'Catalog#updateSecret~regex'
+      - 'Catalog#updateSecret~requestUrl'
+      - 'Catalog#updateSecret~httpRequest'
+      - 'Catalog#updateSecret~headerName'
+      - 'Catalog#updateSecret~requestContent'
+      - 'Catalog#updateSecret~requestModel'
+      - 'Catalog#updateSecret~requestModelMapper'
+      - 'Catalog#updateSecret~requestModel'
+      - 'Catalog#updateSecret~requestContent'
+      - 'Catalog#updateSecret~serializationError'
+  - uid: 'Catalog#getSecret'
+    id: getSecret
+    parent: Catalog
+    name: >-
+      getSecret(accountName, databaseName, secretName, options,
+      options.customHeaders, callback)
+    summary: Gets the specified secret in the specified database
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the secret.
+        - id: secretName
+          type: string
+          description: The name of the secret to get
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSecret} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getSecret(accountName, databaseName, secretName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.getSecret(accountName, databaseName, secretName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#getSecret~client'
+      - 'Catalog#getSecret~callback'
+      - 'Catalog#getSecret~options'
+      - 'Catalog#getSecret~requestUrl'
+      - 'Catalog#getSecret~requestUrl'
+      - 'Catalog#getSecret~requestUrl'
+      - 'Catalog#getSecret~requestUrl'
+      - 'Catalog#getSecret~requestUrl'
+      - 'Catalog#getSecret~queryParameters'
+      - 'Catalog#getSecret~requestUrl'
+      - 'Catalog#getSecret~regex'
+      - 'Catalog#getSecret~requestUrl'
+      - 'Catalog#getSecret~httpRequest'
+      - 'Catalog#getSecret~headerName'
+  - uid: 'Catalog#deleteSecret'
+    id: deleteSecret
+    parent: Catalog
+    name: >-
+      deleteSecret(accountName, databaseName, secretName, options,
+      options.customHeaders, callback)
+    summary: Deletes the specified secret in the specified database
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the secret.
+        - id: secretName
+          type: string
+          description: The name of the secret to delete
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteSecret(accountName, databaseName, secretName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.deleteSecret(accountName, databaseName, secretName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#deleteSecret~client'
+      - 'Catalog#deleteSecret~callback'
+      - 'Catalog#deleteSecret~options'
+      - 'Catalog#deleteSecret~requestUrl'
+      - 'Catalog#deleteSecret~requestUrl'
+      - 'Catalog#deleteSecret~requestUrl'
+      - 'Catalog#deleteSecret~requestUrl'
+      - 'Catalog#deleteSecret~requestUrl'
+      - 'Catalog#deleteSecret~queryParameters'
+      - 'Catalog#deleteSecret~requestUrl'
+      - 'Catalog#deleteSecret~regex'
+      - 'Catalog#deleteSecret~requestUrl'
+      - 'Catalog#deleteSecret~httpRequest'
+      - 'Catalog#deleteSecret~headerName'
+  - uid: 'Catalog#deleteAllSecrets'
+    id: deleteAllSecrets
+    parent: Catalog
+    name: >-
+      deleteAllSecrets(accountName, databaseName, options,
+      options.customHeaders, callback)
+    summary: Deletes all secrets in the specified database
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the secret.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function deleteAllSecrets(accountName, databaseName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.deleteAllSecrets(accountName, databaseName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#deleteAllSecrets~client'
+      - 'Catalog#deleteAllSecrets~callback'
+      - 'Catalog#deleteAllSecrets~options'
+      - 'Catalog#deleteAllSecrets~requestUrl'
+      - 'Catalog#deleteAllSecrets~requestUrl'
+      - 'Catalog#deleteAllSecrets~requestUrl'
+      - 'Catalog#deleteAllSecrets~requestUrl'
+      - 'Catalog#deleteAllSecrets~queryParameters'
+      - 'Catalog#deleteAllSecrets~requestUrl'
+      - 'Catalog#deleteAllSecrets~regex'
+      - 'Catalog#deleteAllSecrets~requestUrl'
+      - 'Catalog#deleteAllSecrets~httpRequest'
+      - 'Catalog#deleteAllSecrets~headerName'
+  - uid: 'Catalog#getExternalDataSource'
+    id: getExternalDataSource
+    parent: Catalog
+    name: >-
+      getExternalDataSource(accountName, databaseName, externalDataSourceName,
+      options, options.customHeaders, callback)
+    summary: "Retrieves the specified external data source from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rexternal data source."
+        - id: externalDataSourceName
+          type: string
+          description: The name of the external data source.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlExternalDataSource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getExternalDataSource(accountName, databaseName,
+        externalDataSourceName, options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getExternalDataSource(accountName, databaseName,
+      externalDataSourceName, options, options.customHeaders, callback)
+    children:
+      - 'Catalog#getExternalDataSource~client'
+      - 'Catalog#getExternalDataSource~callback'
+      - 'Catalog#getExternalDataSource~options'
+      - 'Catalog#getExternalDataSource~requestUrl'
+      - 'Catalog#getExternalDataSource~requestUrl'
+      - 'Catalog#getExternalDataSource~requestUrl'
+      - 'Catalog#getExternalDataSource~requestUrl'
+      - 'Catalog#getExternalDataSource~requestUrl'
+      - 'Catalog#getExternalDataSource~queryParameters'
+      - 'Catalog#getExternalDataSource~requestUrl'
+      - 'Catalog#getExternalDataSource~regex'
+      - 'Catalog#getExternalDataSource~requestUrl'
+      - 'Catalog#getExternalDataSource~httpRequest'
+      - 'Catalog#getExternalDataSource~headerName'
+  - uid: 'Catalog#listExternalDataSources'
+    id: listExternalDataSources
+    parent: Catalog
+    name: >-
+      listExternalDataSources(accountName, databaseName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: "Retrieves the list of external data sources from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rexternal data sources."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlExternalDataSourceList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listExternalDataSources(accountName, databaseName, options,
+        options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listExternalDataSources(accountName, databaseName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listExternalDataSources~client'
+      - 'Catalog#listExternalDataSources~callback'
+      - 'Catalog#listExternalDataSources~options'
+      - 'Catalog#listExternalDataSources~filter'
+      - 'Catalog#listExternalDataSources~top'
+      - 'Catalog#listExternalDataSources~skip'
+      - 'Catalog#listExternalDataSources~expand'
+      - 'Catalog#listExternalDataSources~select'
+      - 'Catalog#listExternalDataSources~orderby'
+      - 'Catalog#listExternalDataSources~count'
+      - 'Catalog#listExternalDataSources~requestUrl'
+      - 'Catalog#listExternalDataSources~requestUrl'
+      - 'Catalog#listExternalDataSources~requestUrl'
+      - 'Catalog#listExternalDataSources~requestUrl'
+      - 'Catalog#listExternalDataSources~queryParameters'
+      - 'Catalog#listExternalDataSources~requestUrl'
+      - 'Catalog#listExternalDataSources~regex'
+      - 'Catalog#listExternalDataSources~requestUrl'
+      - 'Catalog#listExternalDataSources~httpRequest'
+      - 'Catalog#listExternalDataSources~headerName'
+  - uid: 'Catalog#getCredential'
+    id: getCredential
+    parent: Catalog
+    name: >-
+      getCredential(accountName, databaseName, credentialName, options,
+      options.customHeaders, callback)
+    summary: Retrieves the specified credential from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the schema.
+        - id: credentialName
+          type: string
+          description: The name of the credential.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlCredential} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getCredential(accountName, databaseName, credentialName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getCredential(accountName, databaseName, credentialName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#getCredential~client'
+      - 'Catalog#getCredential~callback'
+      - 'Catalog#getCredential~options'
+      - 'Catalog#getCredential~requestUrl'
+      - 'Catalog#getCredential~requestUrl'
+      - 'Catalog#getCredential~requestUrl'
+      - 'Catalog#getCredential~requestUrl'
+      - 'Catalog#getCredential~requestUrl'
+      - 'Catalog#getCredential~queryParameters'
+      - 'Catalog#getCredential~requestUrl'
+      - 'Catalog#getCredential~regex'
+      - 'Catalog#getCredential~requestUrl'
+      - 'Catalog#getCredential~httpRequest'
+      - 'Catalog#getCredential~headerName'
+  - uid: 'Catalog#listCredentials'
+    id: listCredentials
+    parent: Catalog
+    name: >-
+      listCredentials(accountName, databaseName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: Retrieves the list of credentials from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the schema.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlCredentialList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listCredentials(accountName, databaseName, options,
+        options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listCredentials(accountName, databaseName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listCredentials~client'
+      - 'Catalog#listCredentials~callback'
+      - 'Catalog#listCredentials~options'
+      - 'Catalog#listCredentials~filter'
+      - 'Catalog#listCredentials~top'
+      - 'Catalog#listCredentials~skip'
+      - 'Catalog#listCredentials~expand'
+      - 'Catalog#listCredentials~select'
+      - 'Catalog#listCredentials~orderby'
+      - 'Catalog#listCredentials~count'
+      - 'Catalog#listCredentials~requestUrl'
+      - 'Catalog#listCredentials~requestUrl'
+      - 'Catalog#listCredentials~requestUrl'
+      - 'Catalog#listCredentials~requestUrl'
+      - 'Catalog#listCredentials~queryParameters'
+      - 'Catalog#listCredentials~requestUrl'
+      - 'Catalog#listCredentials~regex'
+      - 'Catalog#listCredentials~requestUrl'
+      - 'Catalog#listCredentials~httpRequest'
+      - 'Catalog#listCredentials~headerName'
+  - uid: 'Catalog#getProcedure'
+    id: getProcedure
+    parent: Catalog
+    name: >-
+      getProcedure(accountName, databaseName, schemaName, procedureName,
+      options, options.customHeaders, callback)
+    summary: Retrieves the specified procedure from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rprocedure."
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the procedure.
+        - id: procedureName
+          type: string
+          description: The name of the procedure.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlProcedure} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getProcedure(accountName, databaseName, schemaName,
+        procedureName, options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getProcedure(accountName, databaseName, schemaName, procedureName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Catalog#getProcedure~client'
+      - 'Catalog#getProcedure~callback'
+      - 'Catalog#getProcedure~options'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~queryParameters'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~regex'
+      - 'Catalog#getProcedure~requestUrl'
+      - 'Catalog#getProcedure~httpRequest'
+      - 'Catalog#getProcedure~headerName'
+  - uid: 'Catalog#listProcedures'
+    id: listProcedures
+    parent: Catalog
+    name: >-
+      listProcedures(accountName, databaseName, schemaName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: Retrieves the list of procedures from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rprocedures."
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the procedures.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlProcedureList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listProcedures(accountName, databaseName, schemaName, options,
+        options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listProcedures(accountName, databaseName, schemaName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listProcedures~client'
+      - 'Catalog#listProcedures~callback'
+      - 'Catalog#listProcedures~options'
+      - 'Catalog#listProcedures~filter'
+      - 'Catalog#listProcedures~top'
+      - 'Catalog#listProcedures~skip'
+      - 'Catalog#listProcedures~expand'
+      - 'Catalog#listProcedures~select'
+      - 'Catalog#listProcedures~orderby'
+      - 'Catalog#listProcedures~count'
+      - 'Catalog#listProcedures~requestUrl'
+      - 'Catalog#listProcedures~requestUrl'
+      - 'Catalog#listProcedures~requestUrl'
+      - 'Catalog#listProcedures~requestUrl'
+      - 'Catalog#listProcedures~requestUrl'
+      - 'Catalog#listProcedures~queryParameters'
+      - 'Catalog#listProcedures~requestUrl'
+      - 'Catalog#listProcedures~regex'
+      - 'Catalog#listProcedures~requestUrl'
+      - 'Catalog#listProcedures~httpRequest'
+      - 'Catalog#listProcedures~headerName'
+  - uid: 'Catalog#getTable'
+    id: getTable
+    parent: Catalog
+    name: >-
+      getTable(accountName, databaseName, schemaName, tableName, options,
+      options.customHeaders, callback)
+    summary: Retrieves the specified table from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the table.
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the table.
+        - id: tableName
+          type: string
+          description: The name of the table.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTable} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getTable(accountName, databaseName, schemaName, tableName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getTable(accountName, databaseName, schemaName, tableName,
+      options, options.customHeaders, callback)
+    children:
+      - 'Catalog#getTable~client'
+      - 'Catalog#getTable~callback'
+      - 'Catalog#getTable~options'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~queryParameters'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~regex'
+      - 'Catalog#getTable~requestUrl'
+      - 'Catalog#getTable~httpRequest'
+      - 'Catalog#getTable~headerName'
+  - uid: 'Catalog#listTables'
+    id: listTables
+    parent: Catalog
+    name: >-
+      listTables(accountName, databaseName, schemaName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: Retrieves the list of tables from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the tables.
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the tables.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTables(accountName, databaseName, schemaName, options,
+        options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listTables(accountName, databaseName, schemaName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listTables~client'
+      - 'Catalog#listTables~callback'
+      - 'Catalog#listTables~options'
+      - 'Catalog#listTables~filter'
+      - 'Catalog#listTables~top'
+      - 'Catalog#listTables~skip'
+      - 'Catalog#listTables~expand'
+      - 'Catalog#listTables~select'
+      - 'Catalog#listTables~orderby'
+      - 'Catalog#listTables~count'
+      - 'Catalog#listTables~requestUrl'
+      - 'Catalog#listTables~requestUrl'
+      - 'Catalog#listTables~requestUrl'
+      - 'Catalog#listTables~requestUrl'
+      - 'Catalog#listTables~requestUrl'
+      - 'Catalog#listTables~queryParameters'
+      - 'Catalog#listTables~requestUrl'
+      - 'Catalog#listTables~regex'
+      - 'Catalog#listTables~requestUrl'
+      - 'Catalog#listTables~httpRequest'
+      - 'Catalog#listTables~headerName'
+  - uid: 'Catalog#getView'
+    id: getView
+    parent: Catalog
+    name: >-
+      getView(accountName, databaseName, schemaName, viewName, options,
+      options.customHeaders, callback)
+    summary: Retrieves the specified view from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the view.
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the view.
+        - id: viewName
+          type: string
+          description: The name of the view.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlView} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getView(accountName, databaseName, schemaName, viewName,
+        options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getView(accountName, databaseName, schemaName, viewName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#getView~client'
+      - 'Catalog#getView~callback'
+      - 'Catalog#getView~options'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~queryParameters'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~regex'
+      - 'Catalog#getView~requestUrl'
+      - 'Catalog#getView~httpRequest'
+      - 'Catalog#getView~headerName'
+  - uid: 'Catalog#listViews'
+    id: listViews
+    parent: Catalog
+    name: >-
+      listViews(accountName, databaseName, schemaName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: Retrieves the list of views from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the views.
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the views.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlViewList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listViews(accountName, databaseName, schemaName, options,
+        options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listViews(accountName, databaseName, schemaName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listViews~client'
+      - 'Catalog#listViews~callback'
+      - 'Catalog#listViews~options'
+      - 'Catalog#listViews~filter'
+      - 'Catalog#listViews~top'
+      - 'Catalog#listViews~skip'
+      - 'Catalog#listViews~expand'
+      - 'Catalog#listViews~select'
+      - 'Catalog#listViews~orderby'
+      - 'Catalog#listViews~count'
+      - 'Catalog#listViews~requestUrl'
+      - 'Catalog#listViews~requestUrl'
+      - 'Catalog#listViews~requestUrl'
+      - 'Catalog#listViews~requestUrl'
+      - 'Catalog#listViews~requestUrl'
+      - 'Catalog#listViews~queryParameters'
+      - 'Catalog#listViews~requestUrl'
+      - 'Catalog#listViews~regex'
+      - 'Catalog#listViews~requestUrl'
+      - 'Catalog#listViews~httpRequest'
+      - 'Catalog#listViews~headerName'
+  - uid: 'Catalog#getTableStatistic'
+    id: getTableStatistic
+    parent: Catalog
+    name: >-
+      getTableStatistic(accountName, databaseName, schemaName, tableName,
+      statisticsName, options, options.customHeaders, callback)
+    summary: "Retrieves the specified table statistics from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rstatistics."
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the statistics.
+        - id: tableName
+          type: string
+          description: The name of the table containing the statistics.
+        - id: statisticsName
+          type: string
+          description: The name of the table statistics.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableStatistics} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getTableStatistic(accountName, databaseName, schemaName,
+        tableName, statisticsName, options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getTableStatistic(accountName, databaseName, schemaName,
+      tableName, statisticsName, options, options.customHeaders, callback)
+    children:
+      - 'Catalog#getTableStatistic~client'
+      - 'Catalog#getTableStatistic~callback'
+      - 'Catalog#getTableStatistic~options'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~queryParameters'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~regex'
+      - 'Catalog#getTableStatistic~requestUrl'
+      - 'Catalog#getTableStatistic~httpRequest'
+      - 'Catalog#getTableStatistic~headerName'
+  - uid: 'Catalog#listTableStatistics'
+    id: listTableStatistics
+    parent: Catalog
+    name: >-
+      listTableStatistics(accountName, databaseName, schemaName, tableName,
+      options, options.filter, options.top, options.skip, options.expand,
+      options.select, options.orderby, options.count, options.customHeaders,
+      callback)
+    summary: >-
+      Retrieves the list of table statistics from the Data Lake Analytics
+      catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rstatistics."
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the statistics.
+        - id: tableName
+          type: string
+          description: The name of the table containing the statistics.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableStatisticsList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTableStatistics(accountName, databaseName, schemaName,
+        tableName, options, options.filter, options.top, options.skip,
+        options.expand, options.select, options.orderby, options.count,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listTableStatistics(accountName, databaseName, schemaName,
+      tableName, options, options.filter, options.top, options.skip,
+      options.expand, options.select, options.orderby, options.count,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#listTableStatistics~client'
+      - 'Catalog#listTableStatistics~callback'
+      - 'Catalog#listTableStatistics~options'
+      - 'Catalog#listTableStatistics~filter'
+      - 'Catalog#listTableStatistics~top'
+      - 'Catalog#listTableStatistics~skip'
+      - 'Catalog#listTableStatistics~expand'
+      - 'Catalog#listTableStatistics~select'
+      - 'Catalog#listTableStatistics~orderby'
+      - 'Catalog#listTableStatistics~count'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~queryParameters'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~regex'
+      - 'Catalog#listTableStatistics~requestUrl'
+      - 'Catalog#listTableStatistics~httpRequest'
+      - 'Catalog#listTableStatistics~headerName'
+  - uid: 'Catalog#getTablePartition'
+    id: getTablePartition
+    parent: Catalog
+    name: >-
+      getTablePartition(accountName, databaseName, schemaName, tableName,
+      partitionName, options, options.customHeaders, callback)
+    summary: "Retrieves the specified table partition from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rpartition."
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the partition.
+        - id: tableName
+          type: string
+          description: The name of the table containing the partition.
+        - id: partitionName
+          type: string
+          description: The name of the table partition.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTablePartition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getTablePartition(accountName, databaseName, schemaName,
+        tableName, partitionName, options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getTablePartition(accountName, databaseName, schemaName,
+      tableName, partitionName, options, options.customHeaders, callback)
+    children:
+      - 'Catalog#getTablePartition~client'
+      - 'Catalog#getTablePartition~callback'
+      - 'Catalog#getTablePartition~options'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~queryParameters'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~regex'
+      - 'Catalog#getTablePartition~requestUrl'
+      - 'Catalog#getTablePartition~httpRequest'
+      - 'Catalog#getTablePartition~headerName'
+  - uid: 'Catalog#listTablePartitions'
+    id: listTablePartitions
+    parent: Catalog
+    name: >-
+      listTablePartitions(accountName, databaseName, schemaName, tableName,
+      options, options.filter, options.top, options.skip, options.expand,
+      options.select, options.orderby, options.count, options.customHeaders,
+      callback)
+    summary: >-
+      Retrieves the list of table partitions from the Data Lake Analytics
+      catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rpartitions."
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the partitions.
+        - id: tableName
+          type: string
+          description: The name of the table containing the partitions.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTablePartitionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTablePartitions(accountName, databaseName, schemaName,
+        tableName, options, options.filter, options.top, options.skip,
+        options.expand, options.select, options.orderby, options.count,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listTablePartitions(accountName, databaseName, schemaName,
+      tableName, options, options.filter, options.top, options.skip,
+      options.expand, options.select, options.orderby, options.count,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#listTablePartitions~client'
+      - 'Catalog#listTablePartitions~callback'
+      - 'Catalog#listTablePartitions~options'
+      - 'Catalog#listTablePartitions~filter'
+      - 'Catalog#listTablePartitions~top'
+      - 'Catalog#listTablePartitions~skip'
+      - 'Catalog#listTablePartitions~expand'
+      - 'Catalog#listTablePartitions~select'
+      - 'Catalog#listTablePartitions~orderby'
+      - 'Catalog#listTablePartitions~count'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~queryParameters'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~regex'
+      - 'Catalog#listTablePartitions~requestUrl'
+      - 'Catalog#listTablePartitions~httpRequest'
+      - 'Catalog#listTablePartitions~headerName'
+  - uid: 'Catalog#listTypes'
+    id: listTypes
+    parent: Catalog
+    name: >-
+      listTypes(accountName, databaseName, schemaName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: "Retrieves the list of types within the specified database and schema from\rthe Data Lake Analytics catalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the types.
+        - id: schemaName
+          type: string
+          description: The name of the schema containing the types.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTypeList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTypes(accountName, databaseName, schemaName, options,
+        options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listTypes(accountName, databaseName, schemaName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listTypes~client'
+      - 'Catalog#listTypes~callback'
+      - 'Catalog#listTypes~options'
+      - 'Catalog#listTypes~filter'
+      - 'Catalog#listTypes~top'
+      - 'Catalog#listTypes~skip'
+      - 'Catalog#listTypes~expand'
+      - 'Catalog#listTypes~select'
+      - 'Catalog#listTypes~orderby'
+      - 'Catalog#listTypes~count'
+      - 'Catalog#listTypes~requestUrl'
+      - 'Catalog#listTypes~requestUrl'
+      - 'Catalog#listTypes~requestUrl'
+      - 'Catalog#listTypes~requestUrl'
+      - 'Catalog#listTypes~requestUrl'
+      - 'Catalog#listTypes~queryParameters'
+      - 'Catalog#listTypes~requestUrl'
+      - 'Catalog#listTypes~regex'
+      - 'Catalog#listTypes~requestUrl'
+      - 'Catalog#listTypes~httpRequest'
+      - 'Catalog#listTypes~headerName'
+  - uid: 'Catalog#getTableValuedFunction'
+    id: getTableValuedFunction
+    parent: Catalog
+    name: >-
+      getTableValuedFunction(accountName, databaseName, schemaName,
+      tableValuedFunctionName, options, options.customHeaders, callback)
+    summary: "Retrieves the specified table valued function from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the table\rvalued function."
+        - id: schemaName
+          type: string
+          description: "The name of the schema containing the table\rvalued function."
+        - id: tableValuedFunctionName
+          type: string
+          description: The name of the tableValuedFunction.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableValuedFunction} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getTableValuedFunction(accountName, databaseName, schemaName,
+        tableValuedFunctionName, options, options.customHeaders, callback);
+    fullName: >-
+      Catalog.getTableValuedFunction(accountName, databaseName, schemaName,
+      tableValuedFunctionName, options, options.customHeaders, callback)
+    children:
+      - 'Catalog#getTableValuedFunction~client'
+      - 'Catalog#getTableValuedFunction~callback'
+      - 'Catalog#getTableValuedFunction~options'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~queryParameters'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~regex'
+      - 'Catalog#getTableValuedFunction~requestUrl'
+      - 'Catalog#getTableValuedFunction~httpRequest'
+      - 'Catalog#getTableValuedFunction~headerName'
+  - uid: 'Catalog#listTableValuedFunctions'
+    id: listTableValuedFunctions
+    parent: Catalog
+    name: >-
+      listTableValuedFunctions(accountName, databaseName, schemaName, options,
+      options.filter, options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: "Retrieves the list of table valued functions from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the table\rvalued functions."
+        - id: schemaName
+          type: string
+          description: "The name of the schema containing the table\rvalued functions."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableValuedFunctionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTableValuedFunctions(accountName, databaseName, schemaName,
+        options, options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listTableValuedFunctions(accountName, databaseName, schemaName,
+      options, options.filter, options.top, options.skip, options.expand,
+      options.select, options.orderby, options.count, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listTableValuedFunctions~client'
+      - 'Catalog#listTableValuedFunctions~callback'
+      - 'Catalog#listTableValuedFunctions~options'
+      - 'Catalog#listTableValuedFunctions~filter'
+      - 'Catalog#listTableValuedFunctions~top'
+      - 'Catalog#listTableValuedFunctions~skip'
+      - 'Catalog#listTableValuedFunctions~expand'
+      - 'Catalog#listTableValuedFunctions~select'
+      - 'Catalog#listTableValuedFunctions~orderby'
+      - 'Catalog#listTableValuedFunctions~count'
+      - 'Catalog#listTableValuedFunctions~requestUrl'
+      - 'Catalog#listTableValuedFunctions~requestUrl'
+      - 'Catalog#listTableValuedFunctions~requestUrl'
+      - 'Catalog#listTableValuedFunctions~requestUrl'
+      - 'Catalog#listTableValuedFunctions~requestUrl'
+      - 'Catalog#listTableValuedFunctions~queryParameters'
+      - 'Catalog#listTableValuedFunctions~requestUrl'
+      - 'Catalog#listTableValuedFunctions~regex'
+      - 'Catalog#listTableValuedFunctions~requestUrl'
+      - 'Catalog#listTableValuedFunctions~httpRequest'
+      - 'Catalog#listTableValuedFunctions~headerName'
+  - uid: 'Catalog#getAssembly'
+    id: getAssembly
+    parent: Catalog
+    name: >-
+      getAssembly(accountName, databaseName, assemblyName, options,
+      options.customHeaders, callback)
+    summary: Retrieves the specified assembly from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rassembly."
+        - id: assemblyName
+          type: string
+          description: The name of the assembly.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlAssembly} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getAssembly(accountName, databaseName, assemblyName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.getAssembly(accountName, databaseName, assemblyName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#getAssembly~client'
+      - 'Catalog#getAssembly~callback'
+      - 'Catalog#getAssembly~options'
+      - 'Catalog#getAssembly~requestUrl'
+      - 'Catalog#getAssembly~requestUrl'
+      - 'Catalog#getAssembly~requestUrl'
+      - 'Catalog#getAssembly~requestUrl'
+      - 'Catalog#getAssembly~requestUrl'
+      - 'Catalog#getAssembly~queryParameters'
+      - 'Catalog#getAssembly~requestUrl'
+      - 'Catalog#getAssembly~regex'
+      - 'Catalog#getAssembly~requestUrl'
+      - 'Catalog#getAssembly~httpRequest'
+      - 'Catalog#getAssembly~headerName'
+  - uid: 'Catalog#listAssemblies'
+    id: listAssemblies
+    parent: Catalog
+    name: >-
+      listAssemblies(accountName, databaseName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: Retrieves the list of assemblies from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: "The name of the database containing the\rassembly."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlAssemblyList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAssemblies(accountName, databaseName, options,
+        options.filter, options.top, options.skip, options.expand,
+        options.select, options.orderby, options.count, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listAssemblies(accountName, databaseName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listAssemblies~client'
+      - 'Catalog#listAssemblies~callback'
+      - 'Catalog#listAssemblies~options'
+      - 'Catalog#listAssemblies~filter'
+      - 'Catalog#listAssemblies~top'
+      - 'Catalog#listAssemblies~skip'
+      - 'Catalog#listAssemblies~expand'
+      - 'Catalog#listAssemblies~select'
+      - 'Catalog#listAssemblies~orderby'
+      - 'Catalog#listAssemblies~count'
+      - 'Catalog#listAssemblies~requestUrl'
+      - 'Catalog#listAssemblies~requestUrl'
+      - 'Catalog#listAssemblies~requestUrl'
+      - 'Catalog#listAssemblies~requestUrl'
+      - 'Catalog#listAssemblies~queryParameters'
+      - 'Catalog#listAssemblies~requestUrl'
+      - 'Catalog#listAssemblies~regex'
+      - 'Catalog#listAssemblies~requestUrl'
+      - 'Catalog#listAssemblies~httpRequest'
+      - 'Catalog#listAssemblies~headerName'
+  - uid: 'Catalog#getSchema'
+    id: getSchema
+    parent: Catalog
+    name: >-
+      getSchema(accountName, databaseName, schemaName, options,
+      options.customHeaders, callback)
+    summary: Retrieves the specified schema from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the schema.
+        - id: schemaName
+          type: string
+          description: The name of the schema.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSchema} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getSchema(accountName, databaseName, schemaName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.getSchema(accountName, databaseName, schemaName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#getSchema~client'
+      - 'Catalog#getSchema~callback'
+      - 'Catalog#getSchema~options'
+      - 'Catalog#getSchema~requestUrl'
+      - 'Catalog#getSchema~requestUrl'
+      - 'Catalog#getSchema~requestUrl'
+      - 'Catalog#getSchema~requestUrl'
+      - 'Catalog#getSchema~requestUrl'
+      - 'Catalog#getSchema~queryParameters'
+      - 'Catalog#getSchema~requestUrl'
+      - 'Catalog#getSchema~regex'
+      - 'Catalog#getSchema~requestUrl'
+      - 'Catalog#getSchema~httpRequest'
+      - 'Catalog#getSchema~headerName'
+  - uid: 'Catalog#listSchemas'
+    id: listSchemas
+    parent: Catalog
+    name: >-
+      listSchemas(accountName, databaseName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    summary: Retrieves the list of schemas from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database containing the schema.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSchemaList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listSchemas(accountName, databaseName, options, options.filter,
+        options.top, options.skip, options.expand, options.select,
+        options.orderby, options.count, options.customHeaders, callback);
+    fullName: >-
+      Catalog.listSchemas(accountName, databaseName, options, options.filter,
+      options.top, options.skip, options.expand, options.select,
+      options.orderby, options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listSchemas~client'
+      - 'Catalog#listSchemas~callback'
+      - 'Catalog#listSchemas~options'
+      - 'Catalog#listSchemas~filter'
+      - 'Catalog#listSchemas~top'
+      - 'Catalog#listSchemas~skip'
+      - 'Catalog#listSchemas~expand'
+      - 'Catalog#listSchemas~select'
+      - 'Catalog#listSchemas~orderby'
+      - 'Catalog#listSchemas~count'
+      - 'Catalog#listSchemas~requestUrl'
+      - 'Catalog#listSchemas~requestUrl'
+      - 'Catalog#listSchemas~requestUrl'
+      - 'Catalog#listSchemas~requestUrl'
+      - 'Catalog#listSchemas~queryParameters'
+      - 'Catalog#listSchemas~requestUrl'
+      - 'Catalog#listSchemas~regex'
+      - 'Catalog#listSchemas~requestUrl'
+      - 'Catalog#listSchemas~httpRequest'
+      - 'Catalog#listSchemas~headerName'
+  - uid: 'Catalog#getDatabase'
+    id: getDatabase
+    parent: Catalog
+    name: >-
+      getDatabase(accountName, databaseName, options, options.customHeaders,
+      callback)
+    summary: Retrieves the specified database from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: databaseName
+          type: string
+          description: The name of the database.
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlDatabase} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function getDatabase(accountName, databaseName, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.getDatabase(accountName, databaseName, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#getDatabase~client'
+      - 'Catalog#getDatabase~callback'
+      - 'Catalog#getDatabase~options'
+      - 'Catalog#getDatabase~requestUrl'
+      - 'Catalog#getDatabase~requestUrl'
+      - 'Catalog#getDatabase~requestUrl'
+      - 'Catalog#getDatabase~requestUrl'
+      - 'Catalog#getDatabase~queryParameters'
+      - 'Catalog#getDatabase~requestUrl'
+      - 'Catalog#getDatabase~regex'
+      - 'Catalog#getDatabase~requestUrl'
+      - 'Catalog#getDatabase~httpRequest'
+      - 'Catalog#getDatabase~headerName'
+  - uid: 'Catalog#listDatabases'
+    id: listDatabases
+    parent: Catalog
+    name: >-
+      listDatabases(accountName, options, options.filter, options.top,
+      options.skip, options.expand, options.select, options.orderby,
+      options.count, options.customHeaders, callback)
+    summary: Retrieves the list of databases from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: accountName
+          type: string
+          description: "The Azure Data Lake Analytics account to\rexecute catalog operations on."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.filter
+          type: string
+          description: OData filter. Optional.
+        - id: options.top
+          type: number
+          description: The number of items to return. Optional.
+        - id: options.skip
+          type: number
+          description: "The number of items to skip over before\rreturning elements. Optional."
+        - id: options.expand
+          type: string
+          description: "OData expansion. Expand related resources\rin line with the retrieved resources, e.g. Categories?$expand=Products\rwould expand Product data in line with each Category entry. Optional."
+        - id: options.select
+          type: string
+          description: "OData Select statement. Limits the\rproperties on each entry to just those requested, e.g.\rCategories?$select=CategoryName,Description. Optional."
+        - id: options.orderby
+          type: string
+          description: "OrderBy clause. One or more\rcomma-separated expressions with an optional \"asc\" (the default) or \"desc\"\rdepending on the order you'd like the values sorted, e.g.\rCategories?$orderby=CategoryName desc. Optional."
+        - id: options.count
+          type: boolean
+          description: "The Boolean value of true or false to\rrequest a count of the matching resources included with the resources in\rthe response, e.g. Categories?$count=true. Optional."
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlDatabaseList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listDatabases(accountName, options, options.filter,
+        options.top, options.skip, options.expand, options.select,
+        options.orderby, options.count, options.customHeaders, callback);
+    fullName: >-
+      Catalog.listDatabases(accountName, options, options.filter, options.top,
+      options.skip, options.expand, options.select, options.orderby,
+      options.count, options.customHeaders, callback)
+    children:
+      - 'Catalog#listDatabases~client'
+      - 'Catalog#listDatabases~callback'
+      - 'Catalog#listDatabases~options'
+      - 'Catalog#listDatabases~filter'
+      - 'Catalog#listDatabases~top'
+      - 'Catalog#listDatabases~skip'
+      - 'Catalog#listDatabases~expand'
+      - 'Catalog#listDatabases~select'
+      - 'Catalog#listDatabases~orderby'
+      - 'Catalog#listDatabases~count'
+      - 'Catalog#listDatabases~requestUrl'
+      - 'Catalog#listDatabases~requestUrl'
+      - 'Catalog#listDatabases~requestUrl'
+      - 'Catalog#listDatabases~queryParameters'
+      - 'Catalog#listDatabases~requestUrl'
+      - 'Catalog#listDatabases~regex'
+      - 'Catalog#listDatabases~requestUrl'
+      - 'Catalog#listDatabases~httpRequest'
+      - 'Catalog#listDatabases~headerName'
+  - uid: 'Catalog#listExternalDataSourcesNext'
+    id: listExternalDataSourcesNext
+    parent: Catalog
+    name: >-
+      listExternalDataSourcesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: "Retrieves the list of external data sources from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlExternalDataSourceList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listExternalDataSourcesNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listExternalDataSourcesNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#listExternalDataSourcesNext~client'
+      - 'Catalog#listExternalDataSourcesNext~callback'
+      - 'Catalog#listExternalDataSourcesNext~options'
+      - 'Catalog#listExternalDataSourcesNext~requestUrl'
+      - 'Catalog#listExternalDataSourcesNext~requestUrl'
+      - 'Catalog#listExternalDataSourcesNext~regex'
+      - 'Catalog#listExternalDataSourcesNext~requestUrl'
+      - 'Catalog#listExternalDataSourcesNext~httpRequest'
+      - 'Catalog#listExternalDataSourcesNext~headerName'
+  - uid: 'Catalog#listCredentialsNext'
+    id: listCredentialsNext
+    parent: Catalog
+    name: >-
+      listCredentialsNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: Retrieves the list of credentials from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlCredentialList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listCredentialsNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listCredentialsNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listCredentialsNext~client'
+      - 'Catalog#listCredentialsNext~callback'
+      - 'Catalog#listCredentialsNext~options'
+      - 'Catalog#listCredentialsNext~requestUrl'
+      - 'Catalog#listCredentialsNext~requestUrl'
+      - 'Catalog#listCredentialsNext~regex'
+      - 'Catalog#listCredentialsNext~requestUrl'
+      - 'Catalog#listCredentialsNext~httpRequest'
+      - 'Catalog#listCredentialsNext~headerName'
+  - uid: 'Catalog#listProceduresNext'
+    id: listProceduresNext
+    parent: Catalog
+    name: 'listProceduresNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Retrieves the list of procedures from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlProcedureList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listProceduresNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listProceduresNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listProceduresNext~client'
+      - 'Catalog#listProceduresNext~callback'
+      - 'Catalog#listProceduresNext~options'
+      - 'Catalog#listProceduresNext~requestUrl'
+      - 'Catalog#listProceduresNext~requestUrl'
+      - 'Catalog#listProceduresNext~regex'
+      - 'Catalog#listProceduresNext~requestUrl'
+      - 'Catalog#listProceduresNext~httpRequest'
+      - 'Catalog#listProceduresNext~headerName'
+  - uid: 'Catalog#listTablesNext'
+    id: listTablesNext
+    parent: Catalog
+    name: 'listTablesNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Retrieves the list of tables from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTablesNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listTablesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listTablesNext~client'
+      - 'Catalog#listTablesNext~callback'
+      - 'Catalog#listTablesNext~options'
+      - 'Catalog#listTablesNext~requestUrl'
+      - 'Catalog#listTablesNext~requestUrl'
+      - 'Catalog#listTablesNext~regex'
+      - 'Catalog#listTablesNext~requestUrl'
+      - 'Catalog#listTablesNext~httpRequest'
+      - 'Catalog#listTablesNext~headerName'
+  - uid: 'Catalog#listViewsNext'
+    id: listViewsNext
+    parent: Catalog
+    name: 'listViewsNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Retrieves the list of views from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlViewList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listViewsNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listViewsNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listViewsNext~client'
+      - 'Catalog#listViewsNext~callback'
+      - 'Catalog#listViewsNext~options'
+      - 'Catalog#listViewsNext~requestUrl'
+      - 'Catalog#listViewsNext~requestUrl'
+      - 'Catalog#listViewsNext~regex'
+      - 'Catalog#listViewsNext~requestUrl'
+      - 'Catalog#listViewsNext~httpRequest'
+      - 'Catalog#listViewsNext~headerName'
+  - uid: 'Catalog#listTableStatisticsNext'
+    id: listTableStatisticsNext
+    parent: Catalog
+    name: >-
+      listTableStatisticsNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: >-
+      Retrieves the list of table statistics from the Data Lake Analytics
+      catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableStatisticsList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTableStatisticsNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listTableStatisticsNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#listTableStatisticsNext~client'
+      - 'Catalog#listTableStatisticsNext~callback'
+      - 'Catalog#listTableStatisticsNext~options'
+      - 'Catalog#listTableStatisticsNext~requestUrl'
+      - 'Catalog#listTableStatisticsNext~requestUrl'
+      - 'Catalog#listTableStatisticsNext~regex'
+      - 'Catalog#listTableStatisticsNext~requestUrl'
+      - 'Catalog#listTableStatisticsNext~httpRequest'
+      - 'Catalog#listTableStatisticsNext~headerName'
+  - uid: 'Catalog#listTablePartitionsNext'
+    id: listTablePartitionsNext
+    parent: Catalog
+    name: >-
+      listTablePartitionsNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: >-
+      Retrieves the list of table partitions from the Data Lake Analytics
+      catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTablePartitionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTablePartitionsNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listTablePartitionsNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#listTablePartitionsNext~client'
+      - 'Catalog#listTablePartitionsNext~callback'
+      - 'Catalog#listTablePartitionsNext~options'
+      - 'Catalog#listTablePartitionsNext~requestUrl'
+      - 'Catalog#listTablePartitionsNext~requestUrl'
+      - 'Catalog#listTablePartitionsNext~regex'
+      - 'Catalog#listTablePartitionsNext~requestUrl'
+      - 'Catalog#listTablePartitionsNext~httpRequest'
+      - 'Catalog#listTablePartitionsNext~headerName'
+  - uid: 'Catalog#listTypesNext'
+    id: listTypesNext
+    parent: Catalog
+    name: 'listTypesNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: "Retrieves the list of types within the specified database and schema from\rthe Data Lake Analytics catalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTypeList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTypesNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listTypesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listTypesNext~client'
+      - 'Catalog#listTypesNext~callback'
+      - 'Catalog#listTypesNext~options'
+      - 'Catalog#listTypesNext~requestUrl'
+      - 'Catalog#listTypesNext~requestUrl'
+      - 'Catalog#listTypesNext~regex'
+      - 'Catalog#listTypesNext~requestUrl'
+      - 'Catalog#listTypesNext~httpRequest'
+      - 'Catalog#listTypesNext~headerName'
+  - uid: 'Catalog#listTableValuedFunctionsNext'
+    id: listTableValuedFunctionsNext
+    parent: Catalog
+    name: >-
+      listTableValuedFunctionsNext(nextPageLink, options, options.customHeaders,
+      callback)
+    summary: "Retrieves the list of table valued functions from the Data Lake Analytics\rcatalog."
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableValuedFunctionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listTableValuedFunctionsNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listTableValuedFunctionsNext(nextPageLink, options,
+      options.customHeaders, callback)
+    children:
+      - 'Catalog#listTableValuedFunctionsNext~client'
+      - 'Catalog#listTableValuedFunctionsNext~callback'
+      - 'Catalog#listTableValuedFunctionsNext~options'
+      - 'Catalog#listTableValuedFunctionsNext~requestUrl'
+      - 'Catalog#listTableValuedFunctionsNext~requestUrl'
+      - 'Catalog#listTableValuedFunctionsNext~regex'
+      - 'Catalog#listTableValuedFunctionsNext~requestUrl'
+      - 'Catalog#listTableValuedFunctionsNext~httpRequest'
+      - 'Catalog#listTableValuedFunctionsNext~headerName'
+  - uid: 'Catalog#listAssembliesNext'
+    id: listAssembliesNext
+    parent: Catalog
+    name: 'listAssembliesNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Retrieves the list of assemblies from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlAssemblyList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listAssembliesNext(nextPageLink, options,
+        options.customHeaders, callback);
+    fullName: >-
+      Catalog.listAssembliesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listAssembliesNext~client'
+      - 'Catalog#listAssembliesNext~callback'
+      - 'Catalog#listAssembliesNext~options'
+      - 'Catalog#listAssembliesNext~requestUrl'
+      - 'Catalog#listAssembliesNext~requestUrl'
+      - 'Catalog#listAssembliesNext~regex'
+      - 'Catalog#listAssembliesNext~requestUrl'
+      - 'Catalog#listAssembliesNext~httpRequest'
+      - 'Catalog#listAssembliesNext~headerName'
+  - uid: 'Catalog#listSchemasNext'
+    id: listSchemasNext
+    parent: Catalog
+    name: 'listSchemasNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Retrieves the list of schemas from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSchemaList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listSchemasNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listSchemasNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listSchemasNext~client'
+      - 'Catalog#listSchemasNext~callback'
+      - 'Catalog#listSchemasNext~options'
+      - 'Catalog#listSchemasNext~requestUrl'
+      - 'Catalog#listSchemasNext~requestUrl'
+      - 'Catalog#listSchemasNext~regex'
+      - 'Catalog#listSchemasNext~requestUrl'
+      - 'Catalog#listSchemasNext~httpRequest'
+      - 'Catalog#listSchemasNext~headerName'
+  - uid: 'Catalog#listDatabasesNext'
+    id: listDatabasesNext
+    parent: Catalog
+    name: 'listDatabasesNext(nextPageLink, options, options.customHeaders, callback)'
+    summary: Retrieves the list of databases from the Data Lake Analytics catalog.
+    type: Method
+    syntax:
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: "The NextLink from the previous successful call\rto List operation."
+        - id: options
+          type: object
+          description: Optional Parameters.
+        - id: options.customHeaders
+          type: object
+          description: "Headers that will be added to the\rrequest"
+        - id: callback
+          type: function
+      return:
+        type: function
+        description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlDatabaseList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+      content: >-
+        function listDatabasesNext(nextPageLink, options, options.customHeaders,
+        callback);
+    fullName: >-
+      Catalog.listDatabasesNext(nextPageLink, options, options.customHeaders,
+      callback)
+    children:
+      - 'Catalog#listDatabasesNext~client'
+      - 'Catalog#listDatabasesNext~callback'
+      - 'Catalog#listDatabasesNext~options'
+      - 'Catalog#listDatabasesNext~requestUrl'
+      - 'Catalog#listDatabasesNext~requestUrl'
+      - 'Catalog#listDatabasesNext~regex'
+      - 'Catalog#listDatabasesNext~requestUrl'
+      - 'Catalog#listDatabasesNext~httpRequest'
+      - 'Catalog#listDatabasesNext~headerName'
+references:
+  - uid: string
+    name: string
+    fullName: string
+    isExternal: false
+  - uid: object
+    name: object
+    fullName: object
+    isExternal: false
+  - uid: function
+    name: function
+    fullName: function
+    isExternal: false
+  - uid: number
+    name: number
+    fullName: number
+    isExternal: true
+  - uid: boolean
+    name: boolean
+    fullName: boolean
+    isExternal: true
