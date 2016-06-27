@@ -38,11 +38,7 @@ items:
   - uid: 'HostedServiceOperations~HostedServiceOperations#addExtension'
     id: addExtension
     parent: HostedServiceOperations~HostedServiceOperations
-    name: >-
-      addExtension(serviceName, parameters, parameters.providerNamespace,
-      parameters.type, parameters.id, parameters.thumbprint,
-      parameters.thumbprintAlgorithm, parameters.publicConfiguration,
-      parameters.privateConfiguration, parameters.version, callback)
+    name: 'addExtension(serviceName, parameters, callback)'
     summary: "The Add Extension operation adds an available extension to your cloud\rservice. In Azure, a process can run as an extension of a cloud service.\rFor example, Remote Desktop Access or the Azure Diagnostics Agent can run\ras extensions to the cloud service. You can find the available extension\rby using the List Available Extensions operation.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx for\rmore information)"
     type: Method
     syntax:
@@ -82,29 +78,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function addExtension(serviceName, parameters,
-        parameters.providerNamespace, parameters.type, parameters.id,
-        parameters.thumbprint, parameters.thumbprintAlgorithm,
-        parameters.publicConfiguration, parameters.privateConfiguration,
-        parameters.version, callback);
+      content: 'function addExtension(serviceName, parameters, callback);'
     fullName: >-
       HostedServiceOperations~HostedServiceOperations.addExtension(serviceName,
-      parameters, parameters.providerNamespace, parameters.type, parameters.id,
-      parameters.thumbprint, parameters.thumbprintAlgorithm,
-      parameters.publicConfiguration, parameters.privateConfiguration,
-      parameters.version, callback)
+      parameters, callback)
     children:
       - 'HostedServiceOperations~HostedServiceOperations#addExtension~client2'
   - uid: 'HostedServiceOperations~HostedServiceOperations#beginAddingExtension'
     id: beginAddingExtension
     parent: HostedServiceOperations~HostedServiceOperations
-    name: >-
-      beginAddingExtension(serviceName, parameters,
-      parameters.providerNamespace, parameters.type, parameters.id,
-      parameters.thumbprint, parameters.thumbprintAlgorithm,
-      parameters.publicConfiguration, parameters.privateConfiguration,
-      parameters.version, callback)
+    name: 'beginAddingExtension(serviceName, parameters, callback)'
     summary: "The Begin Adding Extension operation adds an available extension to your\rcloud service. In Azure, a process can run as an extension of a cloud\rservice. For example, Remote Desktop Access or the Azure Diagnostics\rAgent can run as extensions to the cloud service. You can find the\ravailable extension by using the List Available Extensions operation.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx\rfor more information)"
     type: Method
     syntax:
@@ -144,18 +127,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginAddingExtension(serviceName, parameters,
-        parameters.providerNamespace, parameters.type, parameters.id,
-        parameters.thumbprint, parameters.thumbprintAlgorithm,
-        parameters.publicConfiguration, parameters.privateConfiguration,
-        parameters.version, callback);
+      content: 'function beginAddingExtension(serviceName, parameters, callback);'
     fullName: >-
       HostedServiceOperations~HostedServiceOperations.beginAddingExtension(serviceName,
-      parameters, parameters.providerNamespace, parameters.type, parameters.id,
-      parameters.thumbprint, parameters.thumbprintAlgorithm,
-      parameters.publicConfiguration, parameters.privateConfiguration,
-      parameters.version, callback)
+      parameters, callback)
     children:
       - >-
         HostedServiceOperations~HostedServiceOperations#beginAddingExtension~url2
@@ -337,10 +312,7 @@ items:
   - uid: 'HostedServiceOperations~HostedServiceOperations#create'
     id: create
     parent: HostedServiceOperations~HostedServiceOperations
-    name: >-
-      create(parameters, parameters.serviceName, parameters.label,
-      parameters.description, parameters.location, parameters.affinityGroup,
-      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+    name: 'create(parameters, callback)'
     summary: "The Create Hosted Service operation creates a new cloud service in Azure.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx\rfor more information)"
     type: Method
     syntax:
@@ -374,15 +346,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(parameters, parameters.serviceName, parameters.label,
-        parameters.description, parameters.location, parameters.affinityGroup,
-        parameters.extendedProperties, parameters.reverseDnsFqdn, callback);
+      content: 'function create(parameters, callback);'
     fullName: >-
       HostedServiceOperations~HostedServiceOperations.create(parameters,
-      parameters.serviceName, parameters.label, parameters.description,
-      parameters.location, parameters.affinityGroup,
-      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+      callback)
     children:
       - 'HostedServiceOperations~HostedServiceOperations#create~url2'
       - 'HostedServiceOperations~HostedServiceOperations#create~url2'
@@ -791,9 +758,7 @@ items:
   - uid: 'HostedServiceOperations~HostedServiceOperations#update'
     id: update
     parent: HostedServiceOperations~HostedServiceOperations
-    name: >-
-      update(serviceName, parameters, parameters.label, parameters.description,
-      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+    name: 'update(serviceName, parameters, callback)'
     summary: "The Update Hosted Service operation can update the label or description of\ra cloud service in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx for\rmore information)"
     type: Method
     syntax:
@@ -821,14 +786,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function update(serviceName, parameters, parameters.label,
-        parameters.description, parameters.extendedProperties,
-        parameters.reverseDnsFqdn, callback);
+      content: 'function update(serviceName, parameters, callback);'
     fullName: >-
       HostedServiceOperations~HostedServiceOperations.update(serviceName,
-      parameters, parameters.label, parameters.description,
-      parameters.extendedProperties, parameters.reverseDnsFqdn, callback)
+      parameters, callback)
     children:
       - 'HostedServiceOperations~HostedServiceOperations#update~url2'
       - 'HostedServiceOperations~HostedServiceOperations#update~url2'

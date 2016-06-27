@@ -25,9 +25,7 @@ items:
   - uid: 'PolicyOperations#list'
     id: list
     parent: PolicyOperations
-    name: >-
-      list(resourceGroupName, labName, policySetName, options, options.filter,
-      options.top, options.orderBy, options.customHeaders, callback)
+    name: 'list(resourceGroupName, labName, policySetName, options, callback)'
     summary: List policies.
     type: Method
     syntax:
@@ -61,11 +59,9 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationPolicy} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function list(resourceGroupName, labName, policySetName, options,
-        options.filter, options.top, options.orderBy, options.customHeaders,
         callback);
     fullName: >-
       PolicyOperations.list(resourceGroupName, labName, policySetName, options,
-      options.filter, options.top, options.orderBy, options.customHeaders,
       callback)
     children:
       - 'PolicyOperations#list~client'
@@ -90,7 +86,7 @@ items:
     parent: PolicyOperations
     name: >-
       getResource(resourceGroupName, labName, policySetName, name, options,
-      options.customHeaders, callback)
+      callback)
     summary: Get policy.
     type: Method
     syntax:
@@ -120,10 +116,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Policy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getResource(resourceGroupName, labName, policySetName, name,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       PolicyOperations.getResource(resourceGroupName, labName, policySetName,
-      name, options, options.customHeaders, callback)
+      name, options, callback)
     children:
       - 'PolicyOperations#getResource~client'
       - 'PolicyOperations#getResource~callback'
@@ -145,10 +141,7 @@ items:
     parent: PolicyOperations
     name: >-
       createOrUpdateResource(resourceGroupName, labName, policySetName, name,
-      policy, policy.description, policy.status, policy.factName,
-      policy.factData, policy.threshold, policy.evaluatorType,
-      policy.provisioningState, policy.id, policy.name, policy.type,
-      policy.location, policy.tags, options, options.customHeaders, callback)
+      policy, options, callback)
     summary: Create or replace an existing policy.
     type: Method
     syntax:
@@ -216,17 +209,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Policy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateResource(resourceGroupName, labName,
-        policySetName, name, policy, policy.description, policy.status,
-        policy.factName, policy.factData, policy.threshold,
-        policy.evaluatorType, policy.provisioningState, policy.id, policy.name,
-        policy.type, policy.location, policy.tags, options,
-        options.customHeaders, callback);
+        policySetName, name, policy, options, callback);
     fullName: >-
       PolicyOperations.createOrUpdateResource(resourceGroupName, labName,
-      policySetName, name, policy, policy.description, policy.status,
-      policy.factName, policy.factData, policy.threshold, policy.evaluatorType,
-      policy.provisioningState, policy.id, policy.name, policy.type,
-      policy.location, policy.tags, options, options.customHeaders, callback)
+      policySetName, name, policy, options, callback)
     children:
       - 'PolicyOperations#createOrUpdateResource~client'
       - 'PolicyOperations#createOrUpdateResource~callback'
@@ -254,7 +240,7 @@ items:
     parent: PolicyOperations
     name: >-
       deleteResource(resourceGroupName, labName, policySetName, name, options,
-      options.customHeaders, callback)
+      callback)
     summary: Delete policy.
     type: Method
     syntax:
@@ -284,10 +270,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteResource(resourceGroupName, labName, policySetName, name,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       PolicyOperations.deleteResource(resourceGroupName, labName, policySetName,
-      name, options, options.customHeaders, callback)
+      name, options, callback)
     children:
       - 'PolicyOperations#deleteResource~client'
       - 'PolicyOperations#deleteResource~callback'
@@ -309,10 +295,7 @@ items:
     parent: PolicyOperations
     name: >-
       patchResource(resourceGroupName, labName, policySetName, name, policy,
-      policy.description, policy.status, policy.factName, policy.factData,
-      policy.threshold, policy.evaluatorType, policy.provisioningState,
-      policy.id, policy.name, policy.type, policy.location, policy.tags,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: Modify properties of policies.
     type: Method
     syntax:
@@ -380,16 +363,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Policy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function patchResource(resourceGroupName, labName, policySetName, name,
-        policy, policy.description, policy.status, policy.factName,
-        policy.factData, policy.threshold, policy.evaluatorType,
-        policy.provisioningState, policy.id, policy.name, policy.type,
-        policy.location, policy.tags, options, options.customHeaders, callback);
+        policy, options, callback);
     fullName: >-
       PolicyOperations.patchResource(resourceGroupName, labName, policySetName,
-      name, policy, policy.description, policy.status, policy.factName,
-      policy.factData, policy.threshold, policy.evaluatorType,
-      policy.provisioningState, policy.id, policy.name, policy.type,
-      policy.location, policy.tags, options, options.customHeaders, callback)
+      name, policy, options, callback)
     children:
       - 'PolicyOperations#patchResource~client'
       - 'PolicyOperations#patchResource~callback'
@@ -415,7 +392,7 @@ items:
   - uid: 'PolicyOperations#listNext'
     id: listNext
     parent: PolicyOperations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: List policies.
     type: Method
     syntax:
@@ -434,12 +411,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationPolicy} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PolicyOperations.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'PolicyOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'PolicyOperations#listNext~client'
       - 'PolicyOperations#listNext~callback'

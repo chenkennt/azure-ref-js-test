@@ -25,7 +25,7 @@ items:
   - uid: 'Domains#getDomains'
     id: getDomains
     parent: Domains
-    name: 'getDomains(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'getDomains(resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -43,12 +43,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getDomains(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Domains.getDomains(resourceGroupName, options, options.customHeaders,
-      callback)
+      content: 'function getDomains(resourceGroupName, options, callback);'
+    fullName: 'Domains.getDomains(resourceGroupName, options, callback)'
     children:
       - 'Domains#getDomains~client'
       - 'Domains#getDomains~callback'
@@ -65,9 +61,7 @@ items:
   - uid: 'Domains#getDomain'
     id: getDomain
     parent: Domains
-    name: >-
-      getDomain(resourceGroupName, domainName, options, options.customHeaders,
-      callback)
+    name: 'getDomain(resourceGroupName, domainName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -88,12 +82,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getDomain(resourceGroupName, domainName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Domains.getDomain(resourceGroupName, domainName, options,
-      options.customHeaders, callback)
+      content: 'function getDomain(resourceGroupName, domainName, options, callback);'
+    fullName: 'Domains.getDomain(resourceGroupName, domainName, options, callback)'
     children:
       - 'Domains#getDomain~client'
       - 'Domains#getDomain~callback'
@@ -112,26 +102,7 @@ items:
     id: createOrUpdateDomain
     parent: Domains
     name: >-
-      createOrUpdateDomain(resourceGroupName, domainName, domain,
-      domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
-      domain.contactTech, domain.contactTech.addressMailing,
-      domain.contactTech.addressMailing.address1,
-      domain.contactTech.addressMailing.address2,
-      domain.contactTech.addressMailing.city,
-      domain.contactTech.addressMailing.country,
-      domain.contactTech.addressMailing.postalCode,
-      domain.contactTech.addressMailing.state, domain.contactTech.email,
-      domain.contactTech.fax, domain.contactTech.jobTitle,
-      domain.contactTech.nameFirst, domain.contactTech.nameLast,
-      domain.contactTech.nameMiddle, domain.contactTech.organization,
-      domain.contactTech.phone, domain.registrationStatus,
-      domain.provisioningState, domain.nameServers, domain.privacy,
-      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
-      domain.autoRenew, domain.readyForDnsRecordManagement,
-      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
-      domain.consent.agreedBy, domain.consent.agreedAt,
-      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
-      domain.location, domain.type, domain.tags, options, options.customHeaders,
+      createOrUpdateDomain(resourceGroupName, domainName, domain, options,
       callback)
     type: Method
     syntax:
@@ -278,48 +249,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateDomain(resourceGroupName, domainName, domain,
-        domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
-        domain.contactTech, domain.contactTech.addressMailing,
-        domain.contactTech.addressMailing.address1,
-        domain.contactTech.addressMailing.address2,
-        domain.contactTech.addressMailing.city,
-        domain.contactTech.addressMailing.country,
-        domain.contactTech.addressMailing.postalCode,
-        domain.contactTech.addressMailing.state, domain.contactTech.email,
-        domain.contactTech.fax, domain.contactTech.jobTitle,
-        domain.contactTech.nameFirst, domain.contactTech.nameLast,
-        domain.contactTech.nameMiddle, domain.contactTech.organization,
-        domain.contactTech.phone, domain.registrationStatus,
-        domain.provisioningState, domain.nameServers, domain.privacy,
-        domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
-        domain.autoRenew, domain.readyForDnsRecordManagement,
-        domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
-        domain.consent.agreedBy, domain.consent.agreedAt,
-        domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
-        domain.location, domain.type, domain.tags, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Domains.createOrUpdateDomain(resourceGroupName, domainName, domain,
-      domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
-      domain.contactTech, domain.contactTech.addressMailing,
-      domain.contactTech.addressMailing.address1,
-      domain.contactTech.addressMailing.address2,
-      domain.contactTech.addressMailing.city,
-      domain.contactTech.addressMailing.country,
-      domain.contactTech.addressMailing.postalCode,
-      domain.contactTech.addressMailing.state, domain.contactTech.email,
-      domain.contactTech.fax, domain.contactTech.jobTitle,
-      domain.contactTech.nameFirst, domain.contactTech.nameLast,
-      domain.contactTech.nameMiddle, domain.contactTech.organization,
-      domain.contactTech.phone, domain.registrationStatus,
-      domain.provisioningState, domain.nameServers, domain.privacy,
-      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
-      domain.autoRenew, domain.readyForDnsRecordManagement,
-      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
-      domain.consent.agreedBy, domain.consent.agreedAt,
-      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
-      domain.location, domain.type, domain.tags, options, options.customHeaders,
-      callback)
+      options, callback)
     children:
       - 'Domains#createOrUpdateDomain~client'
       - 'Domains#createOrUpdateDomain~callback'
@@ -343,9 +276,7 @@ items:
   - uid: 'Domains#deleteDomain'
     id: deleteDomain
     parent: Domains
-    name: >-
-      deleteDomain(resourceGroupName, domainName, options,
-      options.forceHardDeleteDomain, options.customHeaders, callback)
+    name: 'deleteDomain(resourceGroupName, domainName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -369,12 +300,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteDomain(resourceGroupName, domainName, options,
-        options.forceHardDeleteDomain, options.customHeaders, callback);
-    fullName: >-
-      Domains.deleteDomain(resourceGroupName, domainName, options,
-      options.forceHardDeleteDomain, options.customHeaders, callback)
+      content: 'function deleteDomain(resourceGroupName, domainName, options, callback);'
+    fullName: 'Domains.deleteDomain(resourceGroupName, domainName, options, callback)'
     children:
       - 'Domains#deleteDomain~client'
       - 'Domains#deleteDomain~callback'
@@ -393,28 +320,7 @@ items:
   - uid: 'Domains#updateDomain'
     id: updateDomain
     parent: Domains
-    name: >-
-      updateDomain(resourceGroupName, domainName, domain, domain.contactAdmin,
-      domain.contactBilling, domain.contactRegistrant, domain.contactTech,
-      domain.contactTech.addressMailing,
-      domain.contactTech.addressMailing.address1,
-      domain.contactTech.addressMailing.address2,
-      domain.contactTech.addressMailing.city,
-      domain.contactTech.addressMailing.country,
-      domain.contactTech.addressMailing.postalCode,
-      domain.contactTech.addressMailing.state, domain.contactTech.email,
-      domain.contactTech.fax, domain.contactTech.jobTitle,
-      domain.contactTech.nameFirst, domain.contactTech.nameLast,
-      domain.contactTech.nameMiddle, domain.contactTech.organization,
-      domain.contactTech.phone, domain.registrationStatus,
-      domain.provisioningState, domain.nameServers, domain.privacy,
-      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
-      domain.autoRenew, domain.readyForDnsRecordManagement,
-      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
-      domain.consent.agreedBy, domain.consent.agreedAt,
-      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
-      domain.location, domain.type, domain.tags, options, options.customHeaders,
-      callback)
+    name: 'updateDomain(resourceGroupName, domainName, domain, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -559,48 +465,10 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function updateDomain(resourceGroupName, domainName, domain,
-        domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
-        domain.contactTech, domain.contactTech.addressMailing,
-        domain.contactTech.addressMailing.address1,
-        domain.contactTech.addressMailing.address2,
-        domain.contactTech.addressMailing.city,
-        domain.contactTech.addressMailing.country,
-        domain.contactTech.addressMailing.postalCode,
-        domain.contactTech.addressMailing.state, domain.contactTech.email,
-        domain.contactTech.fax, domain.contactTech.jobTitle,
-        domain.contactTech.nameFirst, domain.contactTech.nameLast,
-        domain.contactTech.nameMiddle, domain.contactTech.organization,
-        domain.contactTech.phone, domain.registrationStatus,
-        domain.provisioningState, domain.nameServers, domain.privacy,
-        domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
-        domain.autoRenew, domain.readyForDnsRecordManagement,
-        domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
-        domain.consent.agreedBy, domain.consent.agreedAt,
-        domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
-        domain.location, domain.type, domain.tags, options,
-        options.customHeaders, callback);
+        function updateDomain(resourceGroupName, domainName, domain, options,
+        callback);
     fullName: >-
-      Domains.updateDomain(resourceGroupName, domainName, domain,
-      domain.contactAdmin, domain.contactBilling, domain.contactRegistrant,
-      domain.contactTech, domain.contactTech.addressMailing,
-      domain.contactTech.addressMailing.address1,
-      domain.contactTech.addressMailing.address2,
-      domain.contactTech.addressMailing.city,
-      domain.contactTech.addressMailing.country,
-      domain.contactTech.addressMailing.postalCode,
-      domain.contactTech.addressMailing.state, domain.contactTech.email,
-      domain.contactTech.fax, domain.contactTech.jobTitle,
-      domain.contactTech.nameFirst, domain.contactTech.nameLast,
-      domain.contactTech.nameMiddle, domain.contactTech.organization,
-      domain.contactTech.phone, domain.registrationStatus,
-      domain.provisioningState, domain.nameServers, domain.privacy,
-      domain.createdTime, domain.expirationTime, domain.lastRenewedTime,
-      domain.autoRenew, domain.readyForDnsRecordManagement,
-      domain.managedHostNames, domain.consent, domain.consent.agreementKeys,
-      domain.consent.agreedBy, domain.consent.agreedAt,
-      domain.domainNotRenewableReasons, domain.id, domain.name, domain.kind,
-      domain.location, domain.type, domain.tags, options, options.customHeaders,
+      Domains.updateDomain(resourceGroupName, domainName, domain, options,
       callback)
     children:
       - 'Domains#updateDomain~client'
@@ -627,7 +495,7 @@ items:
     parent: Domains
     name: >-
       getDomainOperation(resourceGroupName, domainName, operationId, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -653,10 +521,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Domain} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDomainOperation(resourceGroupName, domainName, operationId,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Domains.getDomainOperation(resourceGroupName, domainName, operationId,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Domains#getDomainOperation~client'
       - 'Domains#getDomainOperation~callback'

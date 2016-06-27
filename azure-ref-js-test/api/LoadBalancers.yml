@@ -28,9 +28,7 @@ items:
   - uid: 'LoadBalancers#deleteMethod'
     id: deleteMethod
     parent: LoadBalancers
-    name: >-
-      deleteMethod(resourceGroupName, loadBalancerName, options,
-      options.customHeaders, callback)
+    name: 'deleteMethod(resourceGroupName, loadBalancerName, options, callback)'
     summary: The delete loadbalancer operation deletes the specified loadbalancer.
     type: Method
     syntax:
@@ -54,10 +52,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, loadBalancerName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       LoadBalancers.deleteMethod(resourceGroupName, loadBalancerName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'LoadBalancers#deleteMethod~client'
       - 'LoadBalancers#deleteMethod~callback'
@@ -65,9 +63,7 @@ items:
   - uid: 'LoadBalancers#beginDeleteMethod'
     id: beginDeleteMethod
     parent: LoadBalancers
-    name: >-
-      beginDeleteMethod(resourceGroupName, loadBalancerName, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteMethod(resourceGroupName, loadBalancerName, options, callback)'
     summary: The delete loadbalancer operation deletes the specified loadbalancer.
     type: Method
     syntax:
@@ -91,10 +87,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, loadBalancerName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       LoadBalancers.beginDeleteMethod(resourceGroupName, loadBalancerName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'LoadBalancers#beginDeleteMethod~client'
       - 'LoadBalancers#beginDeleteMethod~callback'
@@ -112,9 +108,7 @@ items:
   - uid: 'LoadBalancers#get'
     id: get
     parent: LoadBalancers
-    name: >-
-      get(resourceGroupName, loadBalancerName, options, options.expand,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, loadBalancerName, options, callback)'
     summary: "The Get ntework interface operation retreives information about the\rspecified network interface."
     type: Method
     syntax:
@@ -139,12 +133,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LoadBalancer} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(resourceGroupName, loadBalancerName, options,
-        options.expand, options.customHeaders, callback);
-    fullName: >-
-      LoadBalancers.get(resourceGroupName, loadBalancerName, options,
-      options.expand, options.customHeaders, callback)
+      content: 'function get(resourceGroupName, loadBalancerName, options, callback);'
+    fullName: 'LoadBalancers.get(resourceGroupName, loadBalancerName, options, callback)'
     children:
       - 'LoadBalancers#get~client'
       - 'LoadBalancers#get~callback'
@@ -164,13 +154,7 @@ items:
     id: createOrUpdate
     parent: LoadBalancers
     name: >-
-      createOrUpdate(resourceGroupName, loadBalancerName, parameters,
-      parameters.frontendIPConfigurations, parameters.backendAddressPools,
-      parameters.loadBalancingRules, parameters.probes,
-      parameters.inboundNatRules, parameters.inboundNatPools,
-      parameters.outboundNatRules, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
+      createOrUpdate(resourceGroupName, loadBalancerName, parameters, options,
       callback)
     summary: The Put LoadBalancer operation creates/updates a LoadBalancer
     type: Method
@@ -237,22 +221,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LoadBalancer} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, loadBalancerName, parameters,
-        parameters.frontendIPConfigurations, parameters.backendAddressPools,
-        parameters.loadBalancingRules, parameters.probes,
-        parameters.inboundNatRules, parameters.inboundNatPools,
-        parameters.outboundNatRules, parameters.resourceGuid,
-        parameters.provisioningState, parameters.etag, parameters.id,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       LoadBalancers.createOrUpdate(resourceGroupName, loadBalancerName,
-      parameters, parameters.frontendIPConfigurations,
-      parameters.backendAddressPools, parameters.loadBalancingRules,
-      parameters.probes, parameters.inboundNatRules, parameters.inboundNatPools,
-      parameters.outboundNatRules, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     children:
       - 'LoadBalancers#createOrUpdate~client'
       - 'LoadBalancers#createOrUpdate~callback'
@@ -262,13 +234,7 @@ items:
     parent: LoadBalancers
     name: >-
       beginCreateOrUpdate(resourceGroupName, loadBalancerName, parameters,
-      parameters.frontendIPConfigurations, parameters.backendAddressPools,
-      parameters.loadBalancingRules, parameters.probes,
-      parameters.inboundNatRules, parameters.inboundNatPools,
-      parameters.outboundNatRules, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      options, callback)
     summary: The Put LoadBalancer operation creates/updates a LoadBalancer
     type: Method
     syntax:
@@ -334,22 +300,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LoadBalancer} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, loadBalancerName,
-        parameters, parameters.frontendIPConfigurations,
-        parameters.backendAddressPools, parameters.loadBalancingRules,
-        parameters.probes, parameters.inboundNatRules,
-        parameters.inboundNatPools, parameters.outboundNatRules,
-        parameters.resourceGuid, parameters.provisioningState, parameters.etag,
-        parameters.id, parameters.location, parameters.tags, options,
-        options.customHeaders, callback);
+        parameters, options, callback);
     fullName: >-
       LoadBalancers.beginCreateOrUpdate(resourceGroupName, loadBalancerName,
-      parameters, parameters.frontendIPConfigurations,
-      parameters.backendAddressPools, parameters.loadBalancingRules,
-      parameters.probes, parameters.inboundNatRules, parameters.inboundNatPools,
-      parameters.outboundNatRules, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     children:
       - 'LoadBalancers#beginCreateOrUpdate~client'
       - 'LoadBalancers#beginCreateOrUpdate~callback'
@@ -373,7 +327,7 @@ items:
   - uid: 'LoadBalancers#listAll'
     id: listAll
     parent: LoadBalancers
-    name: 'listAll(options, options.customHeaders, callback)'
+    name: 'listAll(options, callback)'
     summary: "The List loadBalancer opertion retrieves all the loadbalancers in a\rsubscription."
     type: Method
     syntax:
@@ -389,8 +343,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LoadBalancerListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listAll(options, options.customHeaders, callback);'
-    fullName: 'LoadBalancers.listAll(options, options.customHeaders, callback)'
+      content: 'function listAll(options, callback);'
+    fullName: 'LoadBalancers.listAll(options, callback)'
     children:
       - 'LoadBalancers#listAll~client'
       - 'LoadBalancers#listAll~callback'
@@ -406,7 +360,7 @@ items:
   - uid: 'LoadBalancers#list'
     id: list
     parent: LoadBalancers
-    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'list(resourceGroupName, options, callback)'
     summary: "The List loadBalancer opertion retrieves all the loadbalancers in a\rresource group."
     type: Method
     syntax:
@@ -425,12 +379,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LoadBalancerListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      LoadBalancers.list(resourceGroupName, options, options.customHeaders,
-      callback)
+      content: 'function list(resourceGroupName, options, callback);'
+    fullName: 'LoadBalancers.list(resourceGroupName, options, callback)'
     children:
       - 'LoadBalancers#list~client'
       - 'LoadBalancers#list~callback'
@@ -447,7 +397,7 @@ items:
   - uid: 'LoadBalancers#listAllNext'
     id: listAllNext
     parent: LoadBalancers
-    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listAllNext(nextPageLink, options, callback)'
     summary: "The List loadBalancer opertion retrieves all the loadbalancers in a\rsubscription."
     type: Method
     syntax:
@@ -466,12 +416,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LoadBalancerListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAllNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      LoadBalancers.listAllNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listAllNext(nextPageLink, options, callback);'
+    fullName: 'LoadBalancers.listAllNext(nextPageLink, options, callback)'
     children:
       - 'LoadBalancers#listAllNext~client'
       - 'LoadBalancers#listAllNext~callback'
@@ -485,7 +431,7 @@ items:
   - uid: 'LoadBalancers#listNext'
     id: listNext
     parent: LoadBalancers
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "The List loadBalancer opertion retrieves all the loadbalancers in a\rresource group."
     type: Method
     syntax:
@@ -504,12 +450,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LoadBalancerListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      LoadBalancers.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'LoadBalancers.listNext(nextPageLink, options, callback)'
     children:
       - 'LoadBalancers#listNext~client'
       - 'LoadBalancers#listNext~callback'

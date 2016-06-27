@@ -29,7 +29,7 @@ items:
   - uid: 'StorageAccounts#checkNameAvailability'
     id: checkNameAvailability
     parent: StorageAccounts
-    name: 'checkNameAvailability(name, options, options.customHeaders, callback)'
+    name: 'checkNameAvailability(name, options, callback)'
     summary: Checks that account name is valid and is not in use.
     type: Method
     syntax:
@@ -47,12 +47,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckNameAvailabilityResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function checkNameAvailability(name, options, options.customHeaders,
-        callback);
-    fullName: >-
-      StorageAccounts.checkNameAvailability(name, options,
-      options.customHeaders, callback)
+      content: 'function checkNameAvailability(name, options, callback);'
+    fullName: 'StorageAccounts.checkNameAvailability(name, options, callback)'
     children:
       - 'StorageAccounts#checkNameAvailability~client'
       - 'StorageAccounts#checkNameAvailability~callback'
@@ -75,14 +71,7 @@ items:
   - uid: 'StorageAccounts#create'
     id: create
     parent: StorageAccounts
-    name: >-
-      create(resourceGroupName, accountName, parameters, parameters.sku,
-      parameters.sku.name, parameters.kind, parameters.location,
-      parameters.tags, parameters.customDomain, parameters.customDomain.name,
-      parameters.customDomain.useSubDomain, parameters.encryption,
-      parameters.encryption.services, parameters.encryption.services.blob,
-      parameters.encryption.services.blob.enabled, parameters.accessTier,
-      options, options.customHeaders, callback)
+    name: 'create(resourceGroupName, accountName, parameters, options, callback)'
     summary: "Asynchronously creates a new storage account with the specified parameters.\rIf an account is already created and subsequent create request is issued\rwith different properties, the account properties will be updated. If an\raccount is already created and subsequent create or update request is\rissued with exact same set of properties, the request will succeed."
     type: Method
     syntax:
@@ -147,22 +136,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function create(resourceGroupName, accountName, parameters,
-        parameters.sku, parameters.sku.name, parameters.kind,
-        parameters.location, parameters.tags, parameters.customDomain,
-        parameters.customDomain.name, parameters.customDomain.useSubDomain,
-        parameters.encryption, parameters.encryption.services,
-        parameters.encryption.services.blob,
-        parameters.encryption.services.blob.enabled, parameters.accessTier,
-        options, options.customHeaders, callback);
+        function create(resourceGroupName, accountName, parameters, options,
+        callback);
     fullName: >-
       StorageAccounts.create(resourceGroupName, accountName, parameters,
-      parameters.sku, parameters.sku.name, parameters.kind, parameters.location,
-      parameters.tags, parameters.customDomain, parameters.customDomain.name,
-      parameters.customDomain.useSubDomain, parameters.encryption,
-      parameters.encryption.services, parameters.encryption.services.blob,
-      parameters.encryption.services.blob.enabled, parameters.accessTier,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'StorageAccounts#create~client'
       - 'StorageAccounts#create~callback'
@@ -170,14 +148,7 @@ items:
   - uid: 'StorageAccounts#beginCreate'
     id: beginCreate
     parent: StorageAccounts
-    name: >-
-      beginCreate(resourceGroupName, accountName, parameters, parameters.sku,
-      parameters.sku.name, parameters.kind, parameters.location,
-      parameters.tags, parameters.customDomain, parameters.customDomain.name,
-      parameters.customDomain.useSubDomain, parameters.encryption,
-      parameters.encryption.services, parameters.encryption.services.blob,
-      parameters.encryption.services.blob.enabled, parameters.accessTier,
-      options, options.customHeaders, callback)
+    name: 'beginCreate(resourceGroupName, accountName, parameters, options, callback)'
     summary: "Asynchronously creates a new storage account with the specified parameters.\rIf an account is already created and subsequent create request is issued\rwith different properties, the account properties will be updated. If an\raccount is already created and subsequent create or update request is\rissued with exact same set of properties, the request will succeed."
     type: Method
     syntax:
@@ -243,21 +214,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreate(resourceGroupName, accountName, parameters,
-        parameters.sku, parameters.sku.name, parameters.kind,
-        parameters.location, parameters.tags, parameters.customDomain,
-        parameters.customDomain.name, parameters.customDomain.useSubDomain,
-        parameters.encryption, parameters.encryption.services,
-        parameters.encryption.services.blob,
-        parameters.encryption.services.blob.enabled, parameters.accessTier,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       StorageAccounts.beginCreate(resourceGroupName, accountName, parameters,
-      parameters.sku, parameters.sku.name, parameters.kind, parameters.location,
-      parameters.tags, parameters.customDomain, parameters.customDomain.name,
-      parameters.customDomain.useSubDomain, parameters.encryption,
-      parameters.encryption.services, parameters.encryption.services.blob,
-      parameters.encryption.services.blob.enabled, parameters.accessTier,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'StorageAccounts#beginCreate~client'
       - 'StorageAccounts#beginCreate~callback'
@@ -282,9 +242,7 @@ items:
   - uid: 'StorageAccounts#deleteMethod'
     id: deleteMethod
     parent: StorageAccounts
-    name: >-
-      deleteMethod(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+    name: 'deleteMethod(resourceGroupName, accountName, options, callback)'
     summary: Deletes a storage account in Microsoft Azure.
     type: Method
     syntax:
@@ -308,10 +266,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, accountName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       StorageAccounts.deleteMethod(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'StorageAccounts#deleteMethod~client'
       - 'StorageAccounts#deleteMethod~callback'
@@ -329,9 +287,7 @@ items:
   - uid: 'StorageAccounts#getProperties'
     id: getProperties
     parent: StorageAccounts
-    name: >-
-      getProperties(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+    name: 'getProperties(resourceGroupName, accountName, options, callback)'
     summary: "Returns the properties for the specified storage account including but not\rlimited to name, account type, location, and account status. The ListKeys\roperation should be used to retrieve storage keys."
     type: Method
     syntax:
@@ -355,10 +311,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getProperties(resourceGroupName, accountName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       StorageAccounts.getProperties(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'StorageAccounts#getProperties~client'
       - 'StorageAccounts#getProperties~callback'
@@ -376,14 +332,7 @@ items:
   - uid: 'StorageAccounts#update'
     id: update
     parent: StorageAccounts
-    name: >-
-      update(resourceGroupName, accountName, parameters, parameters.sku,
-      parameters.sku.name, parameters.tags, parameters.customDomain,
-      parameters.customDomain.name, parameters.customDomain.useSubDomain,
-      parameters.encryption, parameters.encryption.services,
-      parameters.encryption.services.blob,
-      parameters.encryption.services.blob.enabled, parameters.accessTier,
-      options, options.customHeaders, callback)
+    name: 'update(resourceGroupName, accountName, parameters, options, callback)'
     summary: "The update operation can be used to update the account type, encryption, or\rtags for a storage account. It can also be used to map the account to a\rcustom domain. Only one custom domain is supported per storage account\rand. replacement/change of custom domain is not supported. In order to\rreplace an old custom domain, the old value must be cleared/unregistered\rbefore a new value may be set. Update of multiple properties is supported.\rThis call does not change the storage keys for the account. If you want to\rchange storage account keys, use the regenerate keys operation.  The\rlocation and name of the storage account cannot be changed after creation."
     type: Method
     syntax:
@@ -442,21 +391,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function update(resourceGroupName, accountName, parameters,
-        parameters.sku, parameters.sku.name, parameters.tags,
-        parameters.customDomain, parameters.customDomain.name,
-        parameters.customDomain.useSubDomain, parameters.encryption,
-        parameters.encryption.services, parameters.encryption.services.blob,
-        parameters.encryption.services.blob.enabled, parameters.accessTier,
-        options, options.customHeaders, callback);
+        function update(resourceGroupName, accountName, parameters, options,
+        callback);
     fullName: >-
       StorageAccounts.update(resourceGroupName, accountName, parameters,
-      parameters.sku, parameters.sku.name, parameters.tags,
-      parameters.customDomain, parameters.customDomain.name,
-      parameters.customDomain.useSubDomain, parameters.encryption,
-      parameters.encryption.services, parameters.encryption.services.blob,
-      parameters.encryption.services.blob.enabled, parameters.accessTier,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'StorageAccounts#update~client'
       - 'StorageAccounts#update~callback'
@@ -481,7 +420,7 @@ items:
   - uid: 'StorageAccounts#list'
     id: list
     parent: StorageAccounts
-    name: 'list(options, options.customHeaders, callback)'
+    name: 'list(options, callback)'
     summary: "Lists all the storage accounts available under the subscription. Note that\rstorage keys are not returned; use the ListKeys operation for this."
     type: Method
     syntax:
@@ -497,8 +436,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function list(options, options.customHeaders, callback);'
-    fullName: 'StorageAccounts.list(options, options.customHeaders, callback)'
+      content: 'function list(options, callback);'
+    fullName: 'StorageAccounts.list(options, callback)'
     children:
       - 'StorageAccounts#list~client'
       - 'StorageAccounts#list~callback'
@@ -514,9 +453,7 @@ items:
   - uid: 'StorageAccounts#listByResourceGroup'
     id: listByResourceGroup
     parent: StorageAccounts
-    name: >-
-      listByResourceGroup(resourceGroupName, options, options.customHeaders,
-      callback)
+    name: 'listByResourceGroup(resourceGroupName, options, callback)'
     summary: "Lists all the storage accounts available under the given resource group.\rNote that storage keys are not returned; use the ListKeys operation for\rthis."
     type: Method
     syntax:
@@ -535,12 +472,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroup(resourceGroupName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      StorageAccounts.listByResourceGroup(resourceGroupName, options,
-      options.customHeaders, callback)
+      content: 'function listByResourceGroup(resourceGroupName, options, callback);'
+    fullName: 'StorageAccounts.listByResourceGroup(resourceGroupName, options, callback)'
     children:
       - 'StorageAccounts#listByResourceGroup~client'
       - 'StorageAccounts#listByResourceGroup~callback'
@@ -557,9 +490,7 @@ items:
   - uid: 'StorageAccounts#listKeys'
     id: listKeys
     parent: StorageAccounts
-    name: >-
-      listKeys(resourceGroupName, accountName, options, options.customHeaders,
-      callback)
+    name: 'listKeys(resourceGroupName, accountName, options, callback)'
     summary: Lists the access keys for the specified storage account.
     type: Method
     syntax:
@@ -581,12 +512,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListKeysResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listKeys(resourceGroupName, accountName, options,
-        options.customHeaders, callback);
+      content: 'function listKeys(resourceGroupName, accountName, options, callback);'
     fullName: >-
       StorageAccounts.listKeys(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'StorageAccounts#listKeys~client'
       - 'StorageAccounts#listKeys~callback'
@@ -604,9 +533,7 @@ items:
   - uid: 'StorageAccounts#regenerateKey'
     id: regenerateKey
     parent: StorageAccounts
-    name: >-
-      regenerateKey(resourceGroupName, accountName, keyName, options,
-      options.customHeaders, callback)
+    name: 'regenerateKey(resourceGroupName, accountName, keyName, options, callback)'
     summary: Regenerates the access keys for the specified storage account.
     type: Method
     syntax:
@@ -632,10 +559,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link StorageAccountListKeysResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function regenerateKey(resourceGroupName, accountName, keyName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       StorageAccounts.regenerateKey(resourceGroupName, accountName, keyName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'StorageAccounts#regenerateKey~client'
       - 'StorageAccounts#regenerateKey~callback'

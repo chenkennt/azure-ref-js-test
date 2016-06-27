@@ -25,14 +25,7 @@ items:
   - uid: 'CertificateOperations#add'
     id: add
     parent: CertificateOperations
-    name: >-
-      add(certificate, certificate.thumbprint, certificate.thumbprintAlgorithm,
-      certificate.data, certificate.certificateFormat, certificate.password,
-      options, options.certificateAddOptions,
-      options.certificateAddOptions.timeout,
-      options.certificateAddOptions.clientRequestId,
-      options.certificateAddOptions.returnClientRequestId,
-      options.certificateAddOptions.ocpDate, options.customHeaders, callback)
+    name: 'add(certificate, options, callback)'
     summary: Adds a certificate to the specified account.
     type: Method
     syntax:
@@ -81,22 +74,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function add(certificate, certificate.thumbprint,
-        certificate.thumbprintAlgorithm, certificate.data,
-        certificate.certificateFormat, certificate.password, options,
-        options.certificateAddOptions, options.certificateAddOptions.timeout,
-        options.certificateAddOptions.clientRequestId,
-        options.certificateAddOptions.returnClientRequestId,
-        options.certificateAddOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      CertificateOperations.add(certificate, certificate.thumbprint,
-      certificate.thumbprintAlgorithm, certificate.data,
-      certificate.certificateFormat, certificate.password, options,
-      options.certificateAddOptions, options.certificateAddOptions.timeout,
-      options.certificateAddOptions.clientRequestId,
-      options.certificateAddOptions.returnClientRequestId,
-      options.certificateAddOptions.ocpDate, options.customHeaders, callback)
+      content: 'function add(certificate, options, callback);'
+    fullName: 'CertificateOperations.add(certificate, options, callback)'
     children:
       - 'CertificateOperations#add~client'
       - 'CertificateOperations#add~callback'
@@ -126,15 +105,7 @@ items:
   - uid: 'CertificateOperations#list'
     id: list
     parent: CertificateOperations
-    name: >-
-      list(options, options.certificateListOptions,
-      options.certificateListOptions.filter,
-      options.certificateListOptions.select,
-      options.certificateListOptions.maxResults,
-      options.certificateListOptions.timeout,
-      options.certificateListOptions.clientRequestId,
-      options.certificateListOptions.returnClientRequestId,
-      options.certificateListOptions.ocpDate, options.customHeaders, callback)
+    name: 'list(options, callback)'
     summary: >-
       Lists all of the certificates that have been added to the specified
       account.
@@ -176,25 +147,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(options, options.certificateListOptions,
-        options.certificateListOptions.filter,
-        options.certificateListOptions.select,
-        options.certificateListOptions.maxResults,
-        options.certificateListOptions.timeout,
-        options.certificateListOptions.clientRequestId,
-        options.certificateListOptions.returnClientRequestId,
-        options.certificateListOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      CertificateOperations.list(options, options.certificateListOptions,
-      options.certificateListOptions.filter,
-      options.certificateListOptions.select,
-      options.certificateListOptions.maxResults,
-      options.certificateListOptions.timeout,
-      options.certificateListOptions.clientRequestId,
-      options.certificateListOptions.returnClientRequestId,
-      options.certificateListOptions.ocpDate, options.customHeaders, callback)
+      content: 'function list(options, callback);'
+    fullName: 'CertificateOperations.list(options, callback)'
     children:
       - 'CertificateOperations#list~client'
       - 'CertificateOperations#list~callback'
@@ -224,14 +178,7 @@ items:
   - uid: 'CertificateOperations#cancelDeletion'
     id: cancelDeletion
     parent: CertificateOperations
-    name: >-
-      cancelDeletion(thumbprintAlgorithm, thumbprint, options,
-      options.certificateCancelDeletionOptions,
-      options.certificateCancelDeletionOptions.timeout,
-      options.certificateCancelDeletionOptions.clientRequestId,
-      options.certificateCancelDeletionOptions.returnClientRequestId,
-      options.certificateCancelDeletionOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'cancelDeletion(thumbprintAlgorithm, thumbprint, options, callback)'
     summary: Cancels a failed deletion of a certificate from the specified account.
     type: Method
     syntax:
@@ -270,20 +217,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function cancelDeletion(thumbprintAlgorithm, thumbprint, options,
-        options.certificateCancelDeletionOptions,
-        options.certificateCancelDeletionOptions.timeout,
-        options.certificateCancelDeletionOptions.clientRequestId,
-        options.certificateCancelDeletionOptions.returnClientRequestId,
-        options.certificateCancelDeletionOptions.ocpDate, options.customHeaders,
         callback);
     fullName: >-
       CertificateOperations.cancelDeletion(thumbprintAlgorithm, thumbprint,
-      options, options.certificateCancelDeletionOptions,
-      options.certificateCancelDeletionOptions.timeout,
-      options.certificateCancelDeletionOptions.clientRequestId,
-      options.certificateCancelDeletionOptions.returnClientRequestId,
-      options.certificateCancelDeletionOptions.ocpDate, options.customHeaders,
-      callback)
+      options, callback)
     children:
       - 'CertificateOperations#cancelDeletion~client'
       - 'CertificateOperations#cancelDeletion~callback'
@@ -309,14 +246,7 @@ items:
   - uid: 'CertificateOperations#deleteMethod'
     id: deleteMethod
     parent: CertificateOperations
-    name: >-
-      deleteMethod(thumbprintAlgorithm, thumbprint, options,
-      options.certificateDeleteMethodOptions,
-      options.certificateDeleteMethodOptions.timeout,
-      options.certificateDeleteMethodOptions.clientRequestId,
-      options.certificateDeleteMethodOptions.returnClientRequestId,
-      options.certificateDeleteMethodOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'deleteMethod(thumbprintAlgorithm, thumbprint, options, callback)'
     summary: Deletes a certificate from the specified account.
     type: Method
     syntax:
@@ -355,20 +285,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(thumbprintAlgorithm, thumbprint, options,
-        options.certificateDeleteMethodOptions,
-        options.certificateDeleteMethodOptions.timeout,
-        options.certificateDeleteMethodOptions.clientRequestId,
-        options.certificateDeleteMethodOptions.returnClientRequestId,
-        options.certificateDeleteMethodOptions.ocpDate, options.customHeaders,
         callback);
     fullName: >-
       CertificateOperations.deleteMethod(thumbprintAlgorithm, thumbprint,
-      options, options.certificateDeleteMethodOptions,
-      options.certificateDeleteMethodOptions.timeout,
-      options.certificateDeleteMethodOptions.clientRequestId,
-      options.certificateDeleteMethodOptions.returnClientRequestId,
-      options.certificateDeleteMethodOptions.ocpDate, options.customHeaders,
-      callback)
+      options, callback)
     children:
       - 'CertificateOperations#deleteMethod~client'
       - 'CertificateOperations#deleteMethod~callback'
@@ -394,13 +314,7 @@ items:
   - uid: 'CertificateOperations#get'
     id: get
     parent: CertificateOperations
-    name: >-
-      get(thumbprintAlgorithm, thumbprint, options,
-      options.certificateGetOptions, options.certificateGetOptions.select,
-      options.certificateGetOptions.timeout,
-      options.certificateGetOptions.clientRequestId,
-      options.certificateGetOptions.returnClientRequestId,
-      options.certificateGetOptions.ocpDate, options.customHeaders, callback)
+    name: 'get(thumbprintAlgorithm, thumbprint, options, callback)'
     summary: Gets information about the specified certificate.
     type: Method
     syntax:
@@ -440,20 +354,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Certificate} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(thumbprintAlgorithm, thumbprint, options,
-        options.certificateGetOptions, options.certificateGetOptions.select,
-        options.certificateGetOptions.timeout,
-        options.certificateGetOptions.clientRequestId,
-        options.certificateGetOptions.returnClientRequestId,
-        options.certificateGetOptions.ocpDate, options.customHeaders, callback);
+      content: 'function get(thumbprintAlgorithm, thumbprint, options, callback);'
     fullName: >-
       CertificateOperations.get(thumbprintAlgorithm, thumbprint, options,
-      options.certificateGetOptions, options.certificateGetOptions.select,
-      options.certificateGetOptions.timeout,
-      options.certificateGetOptions.clientRequestId,
-      options.certificateGetOptions.returnClientRequestId,
-      options.certificateGetOptions.ocpDate, options.customHeaders, callback)
+      callback)
     children:
       - 'CertificateOperations#get~client'
       - 'CertificateOperations#get~callback'
@@ -481,12 +385,7 @@ items:
   - uid: 'CertificateOperations#listNext'
     id: listNext
     parent: CertificateOperations
-    name: >-
-      listNext(nextPageLink, options, options.certificateListNextOptions,
-      options.certificateListNextOptions.clientRequestId,
-      options.certificateListNextOptions.returnClientRequestId,
-      options.certificateListNextOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'listNext(nextPageLink, options, callback)'
     summary: >-
       Lists all of the certificates that have been added to the specified
       account.
@@ -519,20 +418,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CertificateListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options,
-        options.certificateListNextOptions,
-        options.certificateListNextOptions.clientRequestId,
-        options.certificateListNextOptions.returnClientRequestId,
-        options.certificateListNextOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      CertificateOperations.listNext(nextPageLink, options,
-      options.certificateListNextOptions,
-      options.certificateListNextOptions.clientRequestId,
-      options.certificateListNextOptions.returnClientRequestId,
-      options.certificateListNextOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'CertificateOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'CertificateOperations#listNext~client'
       - 'CertificateOperations#listNext~callback'

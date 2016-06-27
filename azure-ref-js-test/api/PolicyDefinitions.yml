@@ -22,11 +22,7 @@ items:
   - uid: 'PolicyDefinitions#createOrUpdate'
     id: createOrUpdate
     parent: PolicyDefinitions
-    name: >-
-      createOrUpdate(policyDefinitionName, parameters, parameters.properties,
-      parameters.properties.description, parameters.properties.displayName,
-      parameters.properties.policyRule, parameters.name, options,
-      options.customHeaders, callback)
+    name: 'createOrUpdate(policyDefinitionName, parameters, options, callback)'
     summary: Create or update policy definition.
     type: Method
     syntax:
@@ -64,15 +60,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyDefinition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function createOrUpdate(policyDefinitionName, parameters,
-        parameters.properties, parameters.properties.description,
-        parameters.properties.displayName, parameters.properties.policyRule,
-        parameters.name, options, options.customHeaders, callback);
+        function createOrUpdate(policyDefinitionName, parameters, options,
+        callback);
     fullName: >-
       PolicyDefinitions.createOrUpdate(policyDefinitionName, parameters,
-      parameters.properties, parameters.properties.description,
-      parameters.properties.displayName, parameters.properties.policyRule,
-      parameters.name, options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'PolicyDefinitions#createOrUpdate~client'
       - 'PolicyDefinitions#createOrUpdate~callback'
@@ -95,7 +87,7 @@ items:
   - uid: 'PolicyDefinitions#get'
     id: get
     parent: PolicyDefinitions
-    name: 'get(policyDefinitionName, options, options.customHeaders, callback)'
+    name: 'get(policyDefinitionName, options, callback)'
     summary: Gets policy definition.
     type: Method
     syntax:
@@ -114,12 +106,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyDefinition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(policyDefinitionName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PolicyDefinitions.get(policyDefinitionName, options,
-      options.customHeaders, callback)
+      content: 'function get(policyDefinitionName, options, callback);'
+    fullName: 'PolicyDefinitions.get(policyDefinitionName, options, callback)'
     children:
       - 'PolicyDefinitions#get~client'
       - 'PolicyDefinitions#get~callback'
@@ -136,9 +124,7 @@ items:
   - uid: 'PolicyDefinitions#deleteMethod'
     id: deleteMethod
     parent: PolicyDefinitions
-    name: >-
-      deleteMethod(policyDefinitionName, options, options.customHeaders,
-      callback)
+    name: 'deleteMethod(policyDefinitionName, options, callback)'
     summary: Deletes policy definition.
     type: Method
     syntax:
@@ -157,12 +143,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(policyDefinitionName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      PolicyDefinitions.deleteMethod(policyDefinitionName, options,
-      options.customHeaders, callback)
+      content: 'function deleteMethod(policyDefinitionName, options, callback);'
+    fullName: 'PolicyDefinitions.deleteMethod(policyDefinitionName, options, callback)'
     children:
       - 'PolicyDefinitions#deleteMethod~client'
       - 'PolicyDefinitions#deleteMethod~callback'

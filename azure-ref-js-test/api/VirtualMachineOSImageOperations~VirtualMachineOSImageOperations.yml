@@ -136,13 +136,7 @@ items:
   - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create'
     id: create
     parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
-    name: >-
-      create(parameters, parameters.label, parameters.mediaLinkUri,
-      parameters.name, parameters.operatingSystemType, parameters.eula,
-      parameters.description, parameters.imageFamily, parameters.publishedDate,
-      parameters.isPremium, parameters.showInGui, parameters.privacyUri,
-      parameters.iconUri, parameters.recommendedVMSize, parameters.smallIconUri,
-      parameters.language, callback)
+    name: 'create(parameters, callback)'
     summary: "The Create OS Image operation adds an operating system image that is\rstored in a storage account and is available from the image repository.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157192.aspx\rfor more information)"
     type: Method
     syntax:
@@ -200,21 +194,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(parameters, parameters.label, parameters.mediaLinkUri,
-        parameters.name, parameters.operatingSystemType, parameters.eula,
-        parameters.description, parameters.imageFamily,
-        parameters.publishedDate, parameters.isPremium, parameters.showInGui,
-        parameters.privacyUri, parameters.iconUri, parameters.recommendedVMSize,
-        parameters.smallIconUri, parameters.language, callback);
+      content: 'function create(parameters, callback);'
     fullName: >-
       VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.create(parameters,
-      parameters.label, parameters.mediaLinkUri, parameters.name,
-      parameters.operatingSystemType, parameters.eula, parameters.description,
-      parameters.imageFamily, parameters.publishedDate, parameters.isPremium,
-      parameters.showInGui, parameters.privacyUri, parameters.iconUri,
-      parameters.recommendedVMSize, parameters.smallIconUri,
-      parameters.language, callback)
+      callback)
     children:
       - >-
         VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create~url2
@@ -445,18 +428,7 @@ items:
   - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate'
     id: replicate
     parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
-    name: >-
-      replicate(imageName, parameters, parameters.targetLocations,
-      parameters.computeImageAttributes,
-      parameters.computeImageAttributes.offer,
-      parameters.computeImageAttributes.sku,
-      parameters.computeImageAttributes.version,
-      parameters.marketplaceImageAttributes,
-      parameters.marketplaceImageAttributes.publisherId,
-      parameters.marketplaceImageAttributes.plan,
-      parameters.marketplaceImageAttributes.plan.name,
-      parameters.marketplaceImageAttributes.plan.publisher,
-      parameters.marketplaceImageAttributes.plan.product, callback)
+    name: 'replicate(imageName, parameters, callback)'
     summary: "Replicate an OS image to multiple target locations. This operation is only\rfor publishers. You have to be registered as image publisher with Windows\rAzure to be able to call this."
     type: Method
     syntax:
@@ -505,30 +477,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function replicate(imageName, parameters, parameters.targetLocations,
-        parameters.computeImageAttributes,
-        parameters.computeImageAttributes.offer,
-        parameters.computeImageAttributes.sku,
-        parameters.computeImageAttributes.version,
-        parameters.marketplaceImageAttributes,
-        parameters.marketplaceImageAttributes.publisherId,
-        parameters.marketplaceImageAttributes.plan,
-        parameters.marketplaceImageAttributes.plan.name,
-        parameters.marketplaceImageAttributes.plan.publisher,
-        parameters.marketplaceImageAttributes.plan.product, callback);
+      content: 'function replicate(imageName, parameters, callback);'
     fullName: >-
       VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.replicate(imageName,
-      parameters, parameters.targetLocations, parameters.computeImageAttributes,
-      parameters.computeImageAttributes.offer,
-      parameters.computeImageAttributes.sku,
-      parameters.computeImageAttributes.version,
-      parameters.marketplaceImageAttributes,
-      parameters.marketplaceImageAttributes.publisherId,
-      parameters.marketplaceImageAttributes.plan,
-      parameters.marketplaceImageAttributes.plan.name,
-      parameters.marketplaceImageAttributes.plan.publisher,
-      parameters.marketplaceImageAttributes.plan.product, callback)
+      parameters, callback)
     children:
       - >-
         VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate~url2
@@ -645,12 +597,7 @@ items:
   - uid: 'VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update'
     id: update
     parent: VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
-    name: >-
-      update(imageName, parameters, parameters.label, parameters.eula,
-      parameters.description, parameters.imageFamily, parameters.showInGui,
-      parameters.publishedDate, parameters.isPremium, parameters.privacyUri,
-      parameters.iconUri, parameters.recommendedVMSize, parameters.smallIconUri,
-      parameters.language, callback)
+    name: 'update(imageName, parameters, callback)'
     summary: "The Update OS Image operation updates an OS image that in your image\rrepository.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157198.aspx for\rmore information)"
     type: Method
     syntax:
@@ -702,19 +649,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function update(imageName, parameters, parameters.label,
-        parameters.eula, parameters.description, parameters.imageFamily,
-        parameters.showInGui, parameters.publishedDate, parameters.isPremium,
-        parameters.privacyUri, parameters.iconUri, parameters.recommendedVMSize,
-        parameters.smallIconUri, parameters.language, callback);
+      content: 'function update(imageName, parameters, callback);'
     fullName: >-
       VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.update(imageName,
-      parameters, parameters.label, parameters.eula, parameters.description,
-      parameters.imageFamily, parameters.showInGui, parameters.publishedDate,
-      parameters.isPremium, parameters.privacyUri, parameters.iconUri,
-      parameters.recommendedVMSize, parameters.smallIconUri,
-      parameters.language, callback)
+      parameters, callback)
     children:
       - >-
         VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update~url2

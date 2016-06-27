@@ -26,21 +26,7 @@ items:
   - uid: 'QueueOperations~QueueOperations#create'
     id: create
     parent: QueueOperations~QueueOperations
-    name: >-
-      create(namespaceName, queue, queue.name, queue.lockDuration,
-      queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
-      queue.requiresSession, queue.defaultMessageTimeToLive,
-      queue.deadLetteringOnMessageExpiration,
-      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
-      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
-      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
-      queue.supportOrdering, queue.countDetails,
-      queue.countDetails.activeMessageCount,
-      queue.countDetails.deadLetterMessageCount,
-      queue.countDetails.scheduledMessageCount,
-      queue.countDetails.transferDeadLetterMessageCount,
-      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
-      queue.entityAvailabilityStatus, callback)
+    name: 'create(namespaceName, queue, callback)'
     summary: "Creates a new queue. Once created, this queue's resource manifest is\rimmutable. This operation is idempotent. Repeating the create call, after\ra queue with same name has been created successfully, will result in a\r409 Conflict error message.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx for\rmore information)"
     type: Method
     syntax:
@@ -128,36 +114,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(namespaceName, queue, queue.name, queue.lockDuration,
-        queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
-        queue.requiresSession, queue.defaultMessageTimeToLive,
-        queue.deadLetteringOnMessageExpiration,
-        queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
-        queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
-        queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
-        queue.supportOrdering, queue.countDetails,
-        queue.countDetails.activeMessageCount,
-        queue.countDetails.deadLetterMessageCount,
-        queue.countDetails.scheduledMessageCount,
-        queue.countDetails.transferDeadLetterMessageCount,
-        queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
-        queue.entityAvailabilityStatus, callback);
-    fullName: >-
-      QueueOperations~QueueOperations.create(namespaceName, queue, queue.name,
-      queue.lockDuration, queue.maxSizeInMegabytes,
-      queue.requiresDuplicateDetection, queue.requiresSession,
-      queue.defaultMessageTimeToLive, queue.deadLetteringOnMessageExpiration,
-      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
-      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
-      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
-      queue.supportOrdering, queue.countDetails,
-      queue.countDetails.activeMessageCount,
-      queue.countDetails.deadLetterMessageCount,
-      queue.countDetails.scheduledMessageCount,
-      queue.countDetails.transferDeadLetterMessageCount,
-      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
-      queue.entityAvailabilityStatus, callback)
+      content: 'function create(namespaceName, queue, callback);'
+    fullName: 'QueueOperations~QueueOperations.create(namespaceName, queue, callback)'
     children:
       - 'QueueOperations~QueueOperations#create~url2'
       - 'QueueOperations~QueueOperations#create~url2'
@@ -366,21 +324,7 @@ items:
   - uid: 'QueueOperations~QueueOperations#update'
     id: update
     parent: QueueOperations~QueueOperations
-    name: >-
-      update(namespaceName, queue, queue.name, queue.lockDuration,
-      queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
-      queue.requiresSession, queue.defaultMessageTimeToLive,
-      queue.deadLetteringOnMessageExpiration,
-      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
-      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
-      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
-      queue.createdAt, queue.updatedAt, queue.accessedAt, queue.supportOrdering,
-      queue.countDetails, queue.countDetails.activeMessageCount,
-      queue.countDetails.deadLetterMessageCount,
-      queue.countDetails.scheduledMessageCount,
-      queue.countDetails.transferDeadLetterMessageCount,
-      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
-      queue.entityAvailabilityStatus, callback)
+    name: 'update(namespaceName, queue, callback)'
     summary: "Updates the queue description and makes a call to update corresponding DB\rentries.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx for\rmore information)"
     type: Method
     syntax:
@@ -477,37 +421,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function update(namespaceName, queue, queue.name, queue.lockDuration,
-        queue.maxSizeInMegabytes, queue.requiresDuplicateDetection,
-        queue.requiresSession, queue.defaultMessageTimeToLive,
-        queue.deadLetteringOnMessageExpiration,
-        queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
-        queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
-        queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
-        queue.createdAt, queue.updatedAt, queue.accessedAt,
-        queue.supportOrdering, queue.countDetails,
-        queue.countDetails.activeMessageCount,
-        queue.countDetails.deadLetterMessageCount,
-        queue.countDetails.scheduledMessageCount,
-        queue.countDetails.transferDeadLetterMessageCount,
-        queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
-        queue.entityAvailabilityStatus, callback);
-    fullName: >-
-      QueueOperations~QueueOperations.update(namespaceName, queue, queue.name,
-      queue.lockDuration, queue.maxSizeInMegabytes,
-      queue.requiresDuplicateDetection, queue.requiresSession,
-      queue.defaultMessageTimeToLive, queue.deadLetteringOnMessageExpiration,
-      queue.duplicateDetectionHistoryTimeWindow, queue.maxDeliveryCount,
-      queue.enableBatchedOperations, queue.sizeInBytes, queue.messageCount,
-      queue.isAnonymousAccessible, queue.authorizationRules, queue.status,
-      queue.createdAt, queue.updatedAt, queue.accessedAt, queue.supportOrdering,
-      queue.countDetails, queue.countDetails.activeMessageCount,
-      queue.countDetails.deadLetterMessageCount,
-      queue.countDetails.scheduledMessageCount,
-      queue.countDetails.transferDeadLetterMessageCount,
-      queue.countDetails.transferMessageCount, queue.autoDeleteOnIdle,
-      queue.entityAvailabilityStatus, callback)
+      content: 'function update(namespaceName, queue, callback);'
+    fullName: 'QueueOperations~QueueOperations.update(namespaceName, queue, callback)'
     children:
       - 'QueueOperations~QueueOperations#update~url2'
       - 'QueueOperations~QueueOperations#update~url2'

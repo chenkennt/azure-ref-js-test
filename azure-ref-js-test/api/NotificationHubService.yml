@@ -109,7 +109,7 @@ items:
   - uid: 'NotificationHubService#send'
     id: send
     parent: NotificationHubService
-    name: 'send(tags, payload, options, options.headers, callback)'
+    name: 'send(tags, payload, options, callback)'
     summary: Sends a template message.
     type: Method
     syntax:
@@ -129,10 +129,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
-      content: 'function send(tags, payload, options, options.headers, callback);'
-    fullName: >-
-      NotificationHubService.send(tags, payload, options, options.headers,
-      callback)
+      content: 'function send(tags, payload, options, callback);'
+    fullName: 'NotificationHubService.send(tags, payload, options, callback)'
     children:
       - 'NotificationHubService#send~options'
       - 'NotificationHubService#send~headers'
@@ -180,7 +178,7 @@ items:
   - uid: 'NotificationHubService#deleteRegistration'
     id: deleteRegistration
     parent: NotificationHubService
-    name: 'deleteRegistration(registrationId, options, options.etag, callback)'
+    name: 'deleteRegistration(registrationId, options, callback)'
     summary: Deletes a registration.
     type: Method
     syntax:
@@ -199,25 +197,17 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
-      content: >-
-        function deleteRegistration(registrationId, options, options.etag,
-        callback);
+      content: 'function deleteRegistration(registrationId, options, callback);'
     fullName: >-
       NotificationHubService.deleteRegistration(registrationId, options,
-      options.etag, callback)
+      callback)
     children:
       - 'NotificationHubService#deleteRegistration~options'
       - 'NotificationHubService#deleteRegistration~webResource'
   - uid: 'NotificationHubService#updateRegistration'
     id: updateRegistration
     parent: NotificationHubService
-    name: >-
-      updateRegistration(registration, registration.RegistrationId,
-      registration._.ContentRootElement, registration.ChannelUri,
-      registration.DeviceToken, registration.GcmRegistrationId,
-      registration.Tags, registration.BodyTemplate, registration.WnsHeaders,
-      registration.MpnsHeaders, registration.Expiry, options, options.etag,
-      callback)
+    name: 'updateRegistration(registration, options, callback)'
     summary: Updates a registration.
     type: Method
     syntax:
@@ -266,21 +256,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
-      content: >-
-        function updateRegistration(registration, registration.RegistrationId,
-        registration._.ContentRootElement, registration.ChannelUri,
-        registration.DeviceToken, registration.GcmRegistrationId,
-        registration.Tags, registration.BodyTemplate, registration.WnsHeaders,
-        registration.MpnsHeaders, registration.Expiry, options, options.etag,
-        callback);
-    fullName: >-
-      NotificationHubService.updateRegistration(registration,
-      registration.RegistrationId, registration._.ContentRootElement,
-      registration.ChannelUri, registration.DeviceToken,
-      registration.GcmRegistrationId, registration.Tags,
-      registration.BodyTemplate, registration.WnsHeaders,
-      registration.MpnsHeaders, registration.Expiry, options, options.etag,
-      callback)
+      content: 'function updateRegistration(registration, options, callback);'
+    fullName: 'NotificationHubService.updateRegistration(registration, options, callback)'
     children:
       - 'NotificationHubService#updateRegistration~options'
       - 'NotificationHubService#updateRegistration~webResource'
@@ -290,7 +267,7 @@ items:
   - uid: 'NotificationHubService#createOrUpdateRegistration'
     id: createOrUpdateRegistration
     parent: NotificationHubService
-    name: 'createOrUpdateRegistration(registration, options, options.etag, callback)'
+    name: 'createOrUpdateRegistration(registration, options, callback)'
     summary: Creates or updates a registration.
     type: Method
     syntax:
@@ -309,12 +286,10 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
-      content: >-
-        function createOrUpdateRegistration(registration, options, options.etag,
-        callback);
+      content: 'function createOrUpdateRegistration(registration, options, callback);'
     fullName: >-
       NotificationHubService.createOrUpdateRegistration(registration, options,
-      options.etag, callback)
+      callback)
     children:
       - 'NotificationHubService#createOrUpdateRegistration~options'
       - 'NotificationHubService#createOrUpdateRegistration~webResource'
@@ -324,7 +299,7 @@ items:
   - uid: 'NotificationHubService#listRegistrations'
     id: listRegistrations
     parent: NotificationHubService
-    name: 'listRegistrations(options, options.top, options.skip, callback)'
+    name: 'listRegistrations(options, callback)'
     summary: List registrations.
     type: Method
     syntax:
@@ -345,19 +320,15 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
-      content: >-
-        function listRegistrations(options, options.top, options.skip,
-        callback);
-    fullName: >-
-      NotificationHubService.listRegistrations(options, options.top,
-      options.skip, callback)
+      content: 'function listRegistrations(options, callback);'
+    fullName: 'NotificationHubService.listRegistrations(options, callback)'
     children:
       - 'NotificationHubService#listRegistrations~options'
       - 'NotificationHubService#listRegistrations~webResource'
   - uid: 'NotificationHubService#listRegistrationsByTag'
     id: listRegistrationsByTag
     parent: NotificationHubService
-    name: 'listRegistrationsByTag(tag, options, options.top, options.skip, callback)'
+    name: 'listRegistrationsByTag(tag, options, callback)'
     summary: Retrieves a registration by tag.
     type: Method
     syntax:
@@ -381,22 +352,15 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                      if an error occurs; otherwise, `response`\r                                                      will contain information related to this operation."
-      content: >-
-        function listRegistrationsByTag(tag, options, options.top, options.skip,
-        callback);
-    fullName: >-
-      NotificationHubService.listRegistrationsByTag(tag, options, options.top,
-      options.skip, callback)
+      content: 'function listRegistrationsByTag(tag, options, callback);'
+    fullName: 'NotificationHubService.listRegistrationsByTag(tag, options, callback)'
     children:
       - 'NotificationHubService#listRegistrationsByTag~options'
       - 'NotificationHubService#listRegistrationsByTag~webResource'
   - uid: 'NotificationHubService#_sendNotification'
     id: _sendNotification
     parent: NotificationHubService
-    name: >-
-      _sendNotification(payload, options, options.ServiceBusNotification-Tags,
-      options.ServiceBusNotification-Format,
-      options.ServiceBusNotification-ApnsExpiry, callback)
+    name: '_sendNotification(payload, options, callback)'
     summary: Sends a message.
     type: Method
     syntax:
@@ -421,16 +385,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                         if an error occurs; otherwise, `response`\r                                                                         will contain information related to this operation."
-      content: >-
-        function _sendNotification(payload, options,
-        options.ServiceBusNotification-Tags,
-        options.ServiceBusNotification-Format,
-        options.ServiceBusNotification-ApnsExpiry, callback);
-    fullName: >-
-      NotificationHubService._sendNotification(payload, options,
-      options.ServiceBusNotification-Tags,
-      options.ServiceBusNotification-Format,
-      options.ServiceBusNotification-ApnsExpiry, callback)
+      content: 'function _sendNotification(payload, options, callback);'
+    fullName: 'NotificationHubService._sendNotification(payload, options, callback)'
     children:
       - 'NotificationHubService#_sendNotification~options'
       - 'NotificationHubService#_sendNotification~webResource'

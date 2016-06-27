@@ -29,7 +29,7 @@ items:
   - uid: 'Profiles#listBySubscriptionId'
     id: listBySubscriptionId
     parent: Profiles
-    name: 'listBySubscriptionId(options, options.customHeaders, callback)'
+    name: 'listBySubscriptionId(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -44,8 +44,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ProfileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listBySubscriptionId(options, options.customHeaders, callback);'
-    fullName: 'Profiles.listBySubscriptionId(options, options.customHeaders, callback)'
+      content: 'function listBySubscriptionId(options, callback);'
+    fullName: 'Profiles.listBySubscriptionId(options, callback)'
     children:
       - 'Profiles#listBySubscriptionId~client'
       - 'Profiles#listBySubscriptionId~callback'
@@ -61,9 +61,7 @@ items:
   - uid: 'Profiles#listByResourceGroup'
     id: listByResourceGroup
     parent: Profiles
-    name: >-
-      listByResourceGroup(resourceGroupName, options, options.customHeaders,
-      callback)
+    name: 'listByResourceGroup(resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -81,12 +79,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ProfileListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroup(resourceGroupName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Profiles.listByResourceGroup(resourceGroupName, options,
-      options.customHeaders, callback)
+      content: 'function listByResourceGroup(resourceGroupName, options, callback);'
+    fullName: 'Profiles.listByResourceGroup(resourceGroupName, options, callback)'
     children:
       - 'Profiles#listByResourceGroup~client'
       - 'Profiles#listByResourceGroup~callback'
@@ -103,9 +97,7 @@ items:
   - uid: 'Profiles#get'
     id: get
     parent: Profiles
-    name: >-
-      get(profileName, resourceGroupName, options, options.customHeaders,
-      callback)
+    name: 'get(profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -126,12 +118,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(profileName, resourceGroupName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Profiles.get(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      content: 'function get(profileName, resourceGroupName, options, callback);'
+    fullName: 'Profiles.get(profileName, resourceGroupName, options, callback)'
     children:
       - 'Profiles#get~client'
       - 'Profiles#get~callback'
@@ -150,9 +138,8 @@ items:
     id: create
     parent: Profiles
     name: >-
-      create(profileName, profileProperties, profileProperties.location,
-      profileProperties.tags, profileProperties.sku, profileProperties.sku.name,
-      resourceGroupName, options, options.customHeaders, callback)
+      create(profileName, profileProperties, resourceGroupName, options,
+      callback)
     type: Method
     syntax:
       parameters:
@@ -189,15 +176,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function create(profileName, profileProperties,
-        profileProperties.location, profileProperties.tags,
-        profileProperties.sku, profileProperties.sku.name, resourceGroupName,
-        options, options.customHeaders, callback);
+        function create(profileName, profileProperties, resourceGroupName,
+        options, callback);
     fullName: >-
-      Profiles.create(profileName, profileProperties,
-      profileProperties.location, profileProperties.tags, profileProperties.sku,
-      profileProperties.sku.name, resourceGroupName, options,
-      options.customHeaders, callback)
+      Profiles.create(profileName, profileProperties, resourceGroupName,
+      options, callback)
     children:
       - 'Profiles#create~client'
       - 'Profiles#create~callback'
@@ -206,9 +189,8 @@ items:
     id: beginCreate
     parent: Profiles
     name: >-
-      beginCreate(profileName, profileProperties, profileProperties.location,
-      profileProperties.tags, profileProperties.sku, profileProperties.sku.name,
-      resourceGroupName, options, options.customHeaders, callback)
+      beginCreate(profileName, profileProperties, resourceGroupName, options,
+      callback)
     type: Method
     syntax:
       parameters:
@@ -245,15 +227,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function beginCreate(profileName, profileProperties,
-        profileProperties.location, profileProperties.tags,
-        profileProperties.sku, profileProperties.sku.name, resourceGroupName,
-        options, options.customHeaders, callback);
+        function beginCreate(profileName, profileProperties, resourceGroupName,
+        options, callback);
     fullName: >-
-      Profiles.beginCreate(profileName, profileProperties,
-      profileProperties.location, profileProperties.tags, profileProperties.sku,
-      profileProperties.sku.name, resourceGroupName, options,
-      options.customHeaders, callback)
+      Profiles.beginCreate(profileName, profileProperties, resourceGroupName,
+      options, callback)
     children:
       - 'Profiles#beginCreate~client'
       - 'Profiles#beginCreate~callback'
@@ -277,9 +255,7 @@ items:
   - uid: 'Profiles#update'
     id: update
     parent: Profiles
-    name: >-
-      update(profileName, resourceGroupName, tags, options,
-      options.customHeaders, callback)
+    name: 'update(profileName, resourceGroupName, tags, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -305,10 +281,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function update(profileName, resourceGroupName, tags, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Profiles.update(profileName, resourceGroupName, tags, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Profiles.update(profileName, resourceGroupName, tags, options, callback)'
     children:
       - 'Profiles#update~client'
       - 'Profiles#update~callback'
@@ -316,9 +290,7 @@ items:
   - uid: 'Profiles#beginUpdate'
     id: beginUpdate
     parent: Profiles
-    name: >-
-      beginUpdate(profileName, resourceGroupName, tags, options,
-      options.customHeaders, callback)
+    name: 'beginUpdate(profileName, resourceGroupName, tags, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -344,10 +316,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Profile} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginUpdate(profileName, resourceGroupName, tags, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Profiles.beginUpdate(profileName, resourceGroupName, tags, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Profiles#beginUpdate~client'
       - 'Profiles#beginUpdate~callback'
@@ -374,9 +346,7 @@ items:
   - uid: 'Profiles#deleteIfExists'
     id: deleteIfExists
     parent: Profiles
-    name: >-
-      deleteIfExists(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'deleteIfExists(profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -399,10 +369,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteIfExists(profileName, resourceGroupName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Profiles.deleteIfExists(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Profiles.deleteIfExists(profileName, resourceGroupName, options, callback)'
     children:
       - 'Profiles#deleteIfExists~client'
       - 'Profiles#deleteIfExists~callback'
@@ -410,9 +378,7 @@ items:
   - uid: 'Profiles#beginDeleteIfExists'
     id: beginDeleteIfExists
     parent: Profiles
-    name: >-
-      beginDeleteIfExists(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteIfExists(profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -435,10 +401,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteIfExists(profileName, resourceGroupName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Profiles.beginDeleteIfExists(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Profiles#beginDeleteIfExists~client'
       - 'Profiles#beginDeleteIfExists~callback'
@@ -456,9 +422,7 @@ items:
   - uid: 'Profiles#generateSsoUri'
     id: generateSsoUri
     parent: Profiles
-    name: >-
-      generateSsoUri(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'generateSsoUri(profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -481,10 +445,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SsoUri} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function generateSsoUri(profileName, resourceGroupName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Profiles.generateSsoUri(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Profiles.generateSsoUri(profileName, resourceGroupName, options, callback)'
     children:
       - 'Profiles#generateSsoUri~client'
       - 'Profiles#generateSsoUri~callback'

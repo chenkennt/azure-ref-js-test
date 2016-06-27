@@ -30,7 +30,7 @@ items:
     parent: NetworkSecurityGroups
     name: >-
       deleteMethod(resourceGroupName, networkSecurityGroupName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "The Delete NetworkSecurityGroup operation deletes the specifed network\rsecurity group"
     type: Method
     syntax:
@@ -54,10 +54,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, networkSecurityGroupName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       NetworkSecurityGroups.deleteMethod(resourceGroupName,
-      networkSecurityGroupName, options, options.customHeaders, callback)
+      networkSecurityGroupName, options, callback)
     children:
       - 'NetworkSecurityGroups#deleteMethod~client'
       - 'NetworkSecurityGroups#deleteMethod~callback'
@@ -67,7 +67,7 @@ items:
     parent: NetworkSecurityGroups
     name: >-
       beginDeleteMethod(resourceGroupName, networkSecurityGroupName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "The Delete NetworkSecurityGroup operation deletes the specifed network\rsecurity group"
     type: Method
     syntax:
@@ -91,10 +91,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, networkSecurityGroupName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       NetworkSecurityGroups.beginDeleteMethod(resourceGroupName,
-      networkSecurityGroupName, options, options.customHeaders, callback)
+      networkSecurityGroupName, options, callback)
     children:
       - 'NetworkSecurityGroups#beginDeleteMethod~client'
       - 'NetworkSecurityGroups#beginDeleteMethod~callback'
@@ -112,9 +112,7 @@ items:
   - uid: 'NetworkSecurityGroups#get'
     id: get
     parent: NetworkSecurityGroups
-    name: >-
-      get(resourceGroupName, networkSecurityGroupName, options, options.expand,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, networkSecurityGroupName, options, callback)'
     summary: "The Get NetworkSecurityGroups operation retrieves information about the\rspecified network security group."
     type: Method
     syntax:
@@ -141,10 +139,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, networkSecurityGroupName, options,
-        options.expand, options.customHeaders, callback);
+        callback);
     fullName: >-
       NetworkSecurityGroups.get(resourceGroupName, networkSecurityGroupName,
-      options, options.expand, options.customHeaders, callback)
+      options, callback)
     children:
       - 'NetworkSecurityGroups#get~client'
       - 'NetworkSecurityGroups#get~callback'
@@ -165,11 +163,7 @@ items:
     parent: NetworkSecurityGroups
     name: >-
       createOrUpdate(resourceGroupName, networkSecurityGroupName, parameters,
-      parameters.securityRules, parameters.defaultSecurityRules,
-      parameters.networkInterfaces, parameters.subnets, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      options, callback)
     summary: "The Put NetworkSecurityGroup operation creates/updates a network security\rgroupin the specified resource group."
     type: Method
     syntax:
@@ -226,18 +220,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, networkSecurityGroupName,
-        parameters, parameters.securityRules, parameters.defaultSecurityRules,
-        parameters.networkInterfaces, parameters.subnets,
-        parameters.resourceGuid, parameters.provisioningState, parameters.etag,
-        parameters.id, parameters.location, parameters.tags, options,
-        options.customHeaders, callback);
+        parameters, options, callback);
     fullName: >-
       NetworkSecurityGroups.createOrUpdate(resourceGroupName,
-      networkSecurityGroupName, parameters, parameters.securityRules,
-      parameters.defaultSecurityRules, parameters.networkInterfaces,
-      parameters.subnets, parameters.resourceGuid, parameters.provisioningState,
-      parameters.etag, parameters.id, parameters.location, parameters.tags,
-      options, options.customHeaders, callback)
+      networkSecurityGroupName, parameters, options, callback)
     children:
       - 'NetworkSecurityGroups#createOrUpdate~client'
       - 'NetworkSecurityGroups#createOrUpdate~callback'
@@ -247,11 +233,7 @@ items:
     parent: NetworkSecurityGroups
     name: >-
       beginCreateOrUpdate(resourceGroupName, networkSecurityGroupName,
-      parameters, parameters.securityRules, parameters.defaultSecurityRules,
-      parameters.networkInterfaces, parameters.subnets, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     summary: "The Put NetworkSecurityGroup operation creates/updates a network security\rgroupin the specified resource group."
     type: Method
     syntax:
@@ -308,19 +290,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName,
-        networkSecurityGroupName, parameters, parameters.securityRules,
-        parameters.defaultSecurityRules, parameters.networkInterfaces,
-        parameters.subnets, parameters.resourceGuid,
-        parameters.provisioningState, parameters.etag, parameters.id,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        networkSecurityGroupName, parameters, options, callback);
     fullName: >-
       NetworkSecurityGroups.beginCreateOrUpdate(resourceGroupName,
-      networkSecurityGroupName, parameters, parameters.securityRules,
-      parameters.defaultSecurityRules, parameters.networkInterfaces,
-      parameters.subnets, parameters.resourceGuid, parameters.provisioningState,
-      parameters.etag, parameters.id, parameters.location, parameters.tags,
-      options, options.customHeaders, callback)
+      networkSecurityGroupName, parameters, options, callback)
     children:
       - 'NetworkSecurityGroups#beginCreateOrUpdate~client'
       - 'NetworkSecurityGroups#beginCreateOrUpdate~callback'
@@ -344,7 +317,7 @@ items:
   - uid: 'NetworkSecurityGroups#listAll'
     id: listAll
     parent: NetworkSecurityGroups
-    name: 'listAll(options, options.customHeaders, callback)'
+    name: 'listAll(options, callback)'
     summary: "The list NetworkSecurityGroups returns all network security groups in a\rsubscription"
     type: Method
     syntax:
@@ -360,8 +333,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listAll(options, options.customHeaders, callback);'
-    fullName: 'NetworkSecurityGroups.listAll(options, options.customHeaders, callback)'
+      content: 'function listAll(options, callback);'
+    fullName: 'NetworkSecurityGroups.listAll(options, callback)'
     children:
       - 'NetworkSecurityGroups#listAll~client'
       - 'NetworkSecurityGroups#listAll~callback'
@@ -377,7 +350,7 @@ items:
   - uid: 'NetworkSecurityGroups#list'
     id: list
     parent: NetworkSecurityGroups
-    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'list(resourceGroupName, options, callback)'
     summary: "The list NetworkSecurityGroups returns all network security groups in a\rresource group"
     type: Method
     syntax:
@@ -396,12 +369,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      NetworkSecurityGroups.list(resourceGroupName, options,
-      options.customHeaders, callback)
+      content: 'function list(resourceGroupName, options, callback);'
+    fullName: 'NetworkSecurityGroups.list(resourceGroupName, options, callback)'
     children:
       - 'NetworkSecurityGroups#list~client'
       - 'NetworkSecurityGroups#list~callback'
@@ -418,7 +387,7 @@ items:
   - uid: 'NetworkSecurityGroups#listAllNext'
     id: listAllNext
     parent: NetworkSecurityGroups
-    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listAllNext(nextPageLink, options, callback)'
     summary: "The list NetworkSecurityGroups returns all network security groups in a\rsubscription"
     type: Method
     syntax:
@@ -437,12 +406,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAllNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      NetworkSecurityGroups.listAllNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listAllNext(nextPageLink, options, callback);'
+    fullName: 'NetworkSecurityGroups.listAllNext(nextPageLink, options, callback)'
     children:
       - 'NetworkSecurityGroups#listAllNext~client'
       - 'NetworkSecurityGroups#listAllNext~callback'
@@ -456,7 +421,7 @@ items:
   - uid: 'NetworkSecurityGroups#listNext'
     id: listNext
     parent: NetworkSecurityGroups
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "The list NetworkSecurityGroups returns all network security groups in a\rresource group"
     type: Method
     syntax:
@@ -475,12 +440,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NetworkSecurityGroupListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      NetworkSecurityGroups.listNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'NetworkSecurityGroups.listNext(nextPageLink, options, callback)'
     children:
       - 'NetworkSecurityGroups#listNext~client'
       - 'NetworkSecurityGroups#listNext~callback'

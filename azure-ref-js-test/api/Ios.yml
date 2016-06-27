@@ -33,9 +33,7 @@ items:
   - uid: 'Ios#getMAMPolicies'
     id: getMAMPolicies
     parent: Ios
-    name: >-
-      getMAMPolicies(hostName, options, options.filter, options.top,
-      options.select, options.customHeaders, callback)
+    name: 'getMAMPolicies(hostName, options, callback)'
     summary: Returns Intune iOSPolicies.
     type: Method
     syntax:
@@ -62,12 +60,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link IOSMAMPolicyCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getMAMPolicies(hostName, options, options.filter, options.top,
-        options.select, options.customHeaders, callback);
-    fullName: >-
-      Ios.getMAMPolicies(hostName, options, options.filter, options.top,
-      options.select, options.customHeaders, callback)
+      content: 'function getMAMPolicies(hostName, options, callback);'
+    fullName: 'Ios.getMAMPolicies(hostName, options, callback)'
     children:
       - 'Ios#getMAMPolicies~client'
       - 'Ios#getMAMPolicies~callback'
@@ -86,9 +80,7 @@ items:
   - uid: 'Ios#getMAMPolicyByName'
     id: getMAMPolicyByName
     parent: Ios
-    name: >-
-      getMAMPolicyByName(hostName, policyName, options, options.select,
-      options.customHeaders, callback)
+    name: 'getMAMPolicyByName(hostName, policyName, options, callback)'
     summary: Returns Intune iOS policies.
     type: Method
     syntax:
@@ -113,12 +105,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link IOSMAMPolicy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getMAMPolicyByName(hostName, policyName, options,
-        options.select, options.customHeaders, callback);
-    fullName: >-
-      Ios.getMAMPolicyByName(hostName, policyName, options, options.select,
-      options.customHeaders, callback)
+      content: 'function getMAMPolicyByName(hostName, policyName, options, callback);'
+    fullName: 'Ios.getMAMPolicyByName(hostName, policyName, options, callback)'
     children:
       - 'Ios#getMAMPolicyByName~client'
       - 'Ios#getMAMPolicyByName~callback'
@@ -137,9 +125,8 @@ items:
     id: createOrUpdateMAMPolicy
     parent: Ios
     name: >-
-      createOrUpdateMAMPolicy(hostName, policyName, parameters,
-      parameters.fileEncryptionLevel, parameters.touchId, parameters.tags,
-      parameters.location, options, options.customHeaders, callback)
+      createOrUpdateMAMPolicy(hostName, policyName, parameters, options,
+      callback)
     summary: Creates or updates iOSMAMPolicy.
     type: Method
     syntax:
@@ -178,12 +165,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link IOSMAMPolicy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateMAMPolicy(hostName, policyName, parameters,
-        parameters.fileEncryptionLevel, parameters.touchId, parameters.tags,
-        parameters.location, options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
-      Ios.createOrUpdateMAMPolicy(hostName, policyName, parameters,
-      parameters.fileEncryptionLevel, parameters.touchId, parameters.tags,
-      parameters.location, options, options.customHeaders, callback)
+      Ios.createOrUpdateMAMPolicy(hostName, policyName, parameters, options,
+      callback)
     children:
       - 'Ios#createOrUpdateMAMPolicy~client'
       - 'Ios#createOrUpdateMAMPolicy~callback'
@@ -206,10 +191,7 @@ items:
   - uid: 'Ios#patchMAMPolicy'
     id: patchMAMPolicy
     parent: Ios
-    name: >-
-      patchMAMPolicy(hostName, policyName, parameters,
-      parameters.fileEncryptionLevel, parameters.touchId, parameters.tags,
-      parameters.location, options, options.customHeaders, callback)
+    name: 'patchMAMPolicy(hostName, policyName, parameters, options, callback)'
     summary: patch an iOSMAMPolicy.
     type: Method
     syntax:
@@ -247,13 +229,9 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link IOSMAMPolicy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function patchMAMPolicy(hostName, policyName, parameters,
-        parameters.fileEncryptionLevel, parameters.touchId, parameters.tags,
-        parameters.location, options, options.customHeaders, callback);
-    fullName: >-
-      Ios.patchMAMPolicy(hostName, policyName, parameters,
-      parameters.fileEncryptionLevel, parameters.touchId, parameters.tags,
-      parameters.location, options, options.customHeaders, callback)
+        function patchMAMPolicy(hostName, policyName, parameters, options,
+        callback);
+    fullName: 'Ios.patchMAMPolicy(hostName, policyName, parameters, options, callback)'
     children:
       - 'Ios#patchMAMPolicy~client'
       - 'Ios#patchMAMPolicy~callback'
@@ -276,9 +254,7 @@ items:
   - uid: 'Ios#deleteMAMPolicy'
     id: deleteMAMPolicy
     parent: Ios
-    name: >-
-      deleteMAMPolicy(hostName, policyName, options, options.customHeaders,
-      callback)
+    name: 'deleteMAMPolicy(hostName, policyName, options, callback)'
     summary: Delete Ios Policy
     type: Method
     syntax:
@@ -300,12 +276,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMAMPolicy(hostName, policyName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Ios.deleteMAMPolicy(hostName, policyName, options, options.customHeaders,
-      callback)
+      content: 'function deleteMAMPolicy(hostName, policyName, options, callback);'
+    fullName: 'Ios.deleteMAMPolicy(hostName, policyName, options, callback)'
     children:
       - 'Ios#deleteMAMPolicy~client'
       - 'Ios#deleteMAMPolicy~callback'
@@ -322,9 +294,7 @@ items:
   - uid: 'Ios#getAppForMAMPolicy'
     id: getAppForMAMPolicy
     parent: Ios
-    name: >-
-      getAppForMAMPolicy(hostName, policyName, options, options.filter,
-      options.top, options.select, options.customHeaders, callback)
+    name: 'getAppForMAMPolicy(hostName, policyName, options, callback)'
     summary: Get apps for an iOSMAMPolicy.
     type: Method
     syntax:
@@ -354,13 +324,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getAppForMAMPolicy(hostName, policyName, options,
-        options.filter, options.top, options.select, options.customHeaders,
-        callback);
-    fullName: >-
-      Ios.getAppForMAMPolicy(hostName, policyName, options, options.filter,
-      options.top, options.select, options.customHeaders, callback)
+      content: 'function getAppForMAMPolicy(hostName, policyName, options, callback);'
+    fullName: 'Ios.getAppForMAMPolicy(hostName, policyName, options, callback)'
     children:
       - 'Ios#getAppForMAMPolicy~client'
       - 'Ios#getAppForMAMPolicy~callback'
@@ -381,9 +346,8 @@ items:
     id: addAppForMAMPolicy
     parent: Ios
     name: >-
-      addAppForMAMPolicy(hostName, policyName, appName, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      addAppForMAMPolicy(hostName, policyName, appName, parameters, options,
+      callback)
     summary: Add app to an iOSMAMPolicy.
     type: Method
     syntax:
@@ -417,12 +381,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function addAppForMAMPolicy(hostName, policyName, appName, parameters,
-        parameters.properties, parameters.properties.url, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
-      Ios.addAppForMAMPolicy(hostName, policyName, appName, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      Ios.addAppForMAMPolicy(hostName, policyName, appName, parameters, options,
+      callback)
     children:
       - 'Ios#addAppForMAMPolicy~client'
       - 'Ios#addAppForMAMPolicy~callback'
@@ -446,9 +408,7 @@ items:
   - uid: 'Ios#deleteAppForMAMPolicy'
     id: deleteAppForMAMPolicy
     parent: Ios
-    name: >-
-      deleteAppForMAMPolicy(hostName, policyName, appName, options,
-      options.customHeaders, callback)
+    name: 'deleteAppForMAMPolicy(hostName, policyName, appName, options, callback)'
     summary: Delete App for Ios Policy
     type: Method
     syntax:
@@ -475,10 +435,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteAppForMAMPolicy(hostName, policyName, appName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Ios.deleteAppForMAMPolicy(hostName, policyName, appName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Ios#deleteAppForMAMPolicy~client'
       - 'Ios#deleteAppForMAMPolicy~callback'
@@ -496,9 +456,7 @@ items:
   - uid: 'Ios#getGroupsForMAMPolicy'
     id: getGroupsForMAMPolicy
     parent: Ios
-    name: >-
-      getGroupsForMAMPolicy(hostName, policyName, options,
-      options.customHeaders, callback)
+    name: 'getGroupsForMAMPolicy(hostName, policyName, options, callback)'
     summary: Returns groups for a given iOSMAMPolicy.
     type: Method
     syntax:
@@ -520,12 +478,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupsCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getGroupsForMAMPolicy(hostName, policyName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Ios.getGroupsForMAMPolicy(hostName, policyName, options,
-      options.customHeaders, callback)
+      content: 'function getGroupsForMAMPolicy(hostName, policyName, options, callback);'
+    fullName: 'Ios.getGroupsForMAMPolicy(hostName, policyName, options, callback)'
     children:
       - 'Ios#getGroupsForMAMPolicy~client'
       - 'Ios#getGroupsForMAMPolicy~callback'
@@ -543,9 +497,8 @@ items:
     id: addGroupForMAMPolicy
     parent: Ios
     name: >-
-      addGroupForMAMPolicy(hostName, policyName, groupId, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      addGroupForMAMPolicy(hostName, policyName, groupId, parameters, options,
+      callback)
     summary: Add group to an iOSMAMPolicy.
     type: Method
     syntax:
@@ -579,12 +532,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function addGroupForMAMPolicy(hostName, policyName, groupId, parameters,
-        parameters.properties, parameters.properties.url, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Ios.addGroupForMAMPolicy(hostName, policyName, groupId, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'Ios#addGroupForMAMPolicy~client'
       - 'Ios#addGroupForMAMPolicy~callback'
@@ -608,9 +559,7 @@ items:
   - uid: 'Ios#deleteGroupForMAMPolicy'
     id: deleteGroupForMAMPolicy
     parent: Ios
-    name: >-
-      deleteGroupForMAMPolicy(hostName, policyName, groupId, options,
-      options.customHeaders, callback)
+    name: 'deleteGroupForMAMPolicy(hostName, policyName, groupId, options, callback)'
     summary: Delete Group for iOS Policy
     type: Method
     syntax:
@@ -637,10 +586,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteGroupForMAMPolicy(hostName, policyName, groupId, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Ios.deleteGroupForMAMPolicy(hostName, policyName, groupId, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Ios#deleteGroupForMAMPolicy~client'
       - 'Ios#deleteGroupForMAMPolicy~callback'
@@ -658,7 +607,7 @@ items:
   - uid: 'Ios#getMAMPoliciesNext'
     id: getMAMPoliciesNext
     parent: Ios
-    name: 'getMAMPoliciesNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'getMAMPoliciesNext(nextPageLink, options, callback)'
     summary: Returns Intune iOSPolicies.
     type: Method
     syntax:
@@ -677,12 +626,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link IOSMAMPolicyCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getMAMPoliciesNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Ios.getMAMPoliciesNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function getMAMPoliciesNext(nextPageLink, options, callback);'
+    fullName: 'Ios.getMAMPoliciesNext(nextPageLink, options, callback)'
     children:
       - 'Ios#getMAMPoliciesNext~client'
       - 'Ios#getMAMPoliciesNext~callback'
@@ -696,9 +641,7 @@ items:
   - uid: 'Ios#getAppForMAMPolicyNext'
     id: getAppForMAMPolicyNext
     parent: Ios
-    name: >-
-      getAppForMAMPolicyNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'getAppForMAMPolicyNext(nextPageLink, options, callback)'
     summary: Get apps for an iOSMAMPolicy.
     type: Method
     syntax:
@@ -717,12 +660,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getAppForMAMPolicyNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Ios.getAppForMAMPolicyNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function getAppForMAMPolicyNext(nextPageLink, options, callback);'
+    fullName: 'Ios.getAppForMAMPolicyNext(nextPageLink, options, callback)'
     children:
       - 'Ios#getAppForMAMPolicyNext~client'
       - 'Ios#getAppForMAMPolicyNext~callback'
@@ -736,9 +675,7 @@ items:
   - uid: 'Ios#getGroupsForMAMPolicyNext'
     id: getGroupsForMAMPolicyNext
     parent: Ios
-    name: >-
-      getGroupsForMAMPolicyNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'getGroupsForMAMPolicyNext(nextPageLink, options, callback)'
     summary: Returns groups for a given iOSMAMPolicy.
     type: Method
     syntax:
@@ -757,12 +694,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupsCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getGroupsForMAMPolicyNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Ios.getGroupsForMAMPolicyNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function getGroupsForMAMPolicyNext(nextPageLink, options, callback);'
+    fullName: 'Ios.getGroupsForMAMPolicyNext(nextPageLink, options, callback)'
     children:
       - 'Ios#getGroupsForMAMPolicyNext~client'
       - 'Ios#getGroupsForMAMPolicyNext~callback'

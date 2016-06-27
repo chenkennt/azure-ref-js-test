@@ -42,9 +42,7 @@ items:
   - uid: 'ServiceBusService#receiveQueueMessage'
     id: receiveQueueMessage
     parent: ServiceBusService
-    name: >-
-      receiveQueueMessage(queuePath, options, options.isPeekLock,
-      options.timeoutIntervalInS, callback)
+    name: 'receiveQueueMessage(queuePath, options, callback)'
     summary: Receives a queue message.
     type: Method
     syntax:
@@ -70,12 +68,8 @@ items:
           description: "`error` will contain information\r                                                                                if an error occurs; otherwise `receivequeuemessageresult` will contain\r                                                                                the message result information.\r                                                                                `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function receiveQueueMessage(queuePath, options, options.isPeekLock,
-        options.timeoutIntervalInS, callback);
-    fullName: >-
-      ServiceBusService.receiveQueueMessage(queuePath, options,
-      options.isPeekLock, options.timeoutIntervalInS, callback)
+      content: 'function receiveQueueMessage(queuePath, options, callback);'
+    fullName: 'ServiceBusService.receiveQueueMessage(queuePath, options, callback)'
     children:
       - 'ServiceBusService#receiveQueueMessage~options'
       - 'ServiceBusService#receiveQueueMessage~callback'
@@ -83,9 +77,7 @@ items:
   - uid: 'ServiceBusService#receiveSubscriptionMessage'
     id: receiveSubscriptionMessage
     parent: ServiceBusService
-    name: >-
-      receiveSubscriptionMessage(topicPath, subscriptionPath, options,
-      options.isPeekLock, options.timeoutIntervalInS, callback)
+    name: 'receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)'
     summary: Receives a subscription message.
     type: Method
     syntax:
@@ -116,10 +108,10 @@ items:
         type: undefined
       content: >-
         function receiveSubscriptionMessage(topicPath, subscriptionPath,
-        options, options.isPeekLock, options.timeoutIntervalInS, callback);
+        options, callback);
     fullName: >-
       ServiceBusService.receiveSubscriptionMessage(topicPath, subscriptionPath,
-      options, options.isPeekLock, options.timeoutIntervalInS, callback)
+      options, callback)
     children:
       - 'ServiceBusService#receiveSubscriptionMessage~options'
       - 'ServiceBusService#receiveSubscriptionMessage~callback'
@@ -197,14 +189,7 @@ items:
   - uid: 'ServiceBusService#sendQueueMessage'
     id: sendQueueMessage
     parent: ServiceBusService
-    name: >-
-      sendQueueMessage(queuePath, message, message.body,
-      message.customProperties, message.brokerProperties.CorrelationId,
-      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-      message.brokerProperties.TimeToLive, message.brokerProperties.To,
-      message.brokerProperties.ScheduledEnqueueTimeUtc,
-      message.brokerProperties.ReplyToSessionId, callback)
+    name: 'sendQueueMessage(queuePath, message, callback)'
     summary: Sends a queue message.
     type: Method
     syntax:
@@ -255,33 +240,12 @@ items:
           description: "`error` will contain information\r                                                                                if an error occurs; otherwise `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function sendQueueMessage(queuePath, message, message.body,
-        message.customProperties, message.brokerProperties.CorrelationId,
-        message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-        message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-        message.brokerProperties.TimeToLive, message.brokerProperties.To,
-        message.brokerProperties.ScheduledEnqueueTimeUtc,
-        message.brokerProperties.ReplyToSessionId, callback);
-    fullName: >-
-      ServiceBusService.sendQueueMessage(queuePath, message, message.body,
-      message.customProperties, message.brokerProperties.CorrelationId,
-      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-      message.brokerProperties.TimeToLive, message.brokerProperties.To,
-      message.brokerProperties.ScheduledEnqueueTimeUtc,
-      message.brokerProperties.ReplyToSessionId, callback)
+      content: 'function sendQueueMessage(queuePath, message, callback);'
+    fullName: 'ServiceBusService.sendQueueMessage(queuePath, message, callback)'
   - uid: 'ServiceBusService#sendTopicMessage'
     id: sendTopicMessage
     parent: ServiceBusService
-    name: >-
-      sendTopicMessage(topicPath, message, message.body,
-      message.customProperties, message.brokerProperties.CorrelationId,
-      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-      message.brokerProperties.TimeToLive, message.brokerProperties.To,
-      message.brokerProperties.ScheduledEnqueueTimeUtc,
-      message.brokerProperties.ReplyToSessionId, callback)
+    name: 'sendTopicMessage(topicPath, message, callback)'
     summary: Sends a topic message.
     type: Method
     syntax:
@@ -332,33 +296,12 @@ items:
           description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `receivetopicmessageresult` will contain\r                                                                                  the message result information.\r                                                                                  `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function sendTopicMessage(topicPath, message, message.body,
-        message.customProperties, message.brokerProperties.CorrelationId,
-        message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-        message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-        message.brokerProperties.TimeToLive, message.brokerProperties.To,
-        message.brokerProperties.ScheduledEnqueueTimeUtc,
-        message.brokerProperties.ReplyToSessionId, callback);
-    fullName: >-
-      ServiceBusService.sendTopicMessage(topicPath, message, message.body,
-      message.customProperties, message.brokerProperties.CorrelationId,
-      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-      message.brokerProperties.TimeToLive, message.brokerProperties.To,
-      message.brokerProperties.ScheduledEnqueueTimeUtc,
-      message.brokerProperties.ReplyToSessionId, callback)
+      content: 'function sendTopicMessage(topicPath, message, callback);'
+    fullName: 'ServiceBusService.sendTopicMessage(topicPath, message, callback)'
   - uid: 'ServiceBusService#_sendMessage'
     id: _sendMessage
     parent: ServiceBusService
-    name: >-
-      _sendMessage(path, message, message.body, message.customProperties,
-      message.brokerProperties.CorrelationId,
-      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-      message.brokerProperties.TimeToLive, message.brokerProperties.To,
-      message.brokerProperties.ScheduledEnqueueTimeUtc,
-      message.brokerProperties.ReplyToSessionId, callback)
+    name: '_sendMessage(path, message, callback)'
     summary: Sends a message.
     type: Method
     syntax:
@@ -409,22 +352,8 @@ items:
           description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function _sendMessage(path, message, message.body,
-        message.customProperties, message.brokerProperties.CorrelationId,
-        message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-        message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-        message.brokerProperties.TimeToLive, message.brokerProperties.To,
-        message.brokerProperties.ScheduledEnqueueTimeUtc,
-        message.brokerProperties.ReplyToSessionId, callback);
-    fullName: >-
-      ServiceBusService._sendMessage(path, message, message.body,
-      message.customProperties, message.brokerProperties.CorrelationId,
-      message.brokerProperties.SessionId, message.brokerProperties.MessageId,
-      message.brokerProperties.Label, message.brokerProperties.ReplyTo,
-      message.brokerProperties.TimeToLive, message.brokerProperties.To,
-      message.brokerProperties.ScheduledEnqueueTimeUtc,
-      message.brokerProperties.ReplyToSessionId, callback)
+      content: 'function _sendMessage(path, message, callback);'
+    fullName: 'ServiceBusService._sendMessage(path, message, callback)'
     children:
       - 'ServiceBusService#_sendMessage~message'
       - 'ServiceBusService#_sendMessage~webResource'
@@ -432,9 +361,7 @@ items:
   - uid: 'ServiceBusService#_receiveMessage'
     id: _receiveMessage
     parent: ServiceBusService
-    name: >-
-      _receiveMessage(path, options, options.isPeekLock,
-      options.timeoutIntervalInS, callback)
+    name: '_receiveMessage(path, options, callback)'
     summary: Receives a message.
     type: Method
     syntax:
@@ -462,12 +389,8 @@ items:
           description: "`error` will contain information\r                                                                      if an error occurs; otherwise `receivemessageresult` will contain\r                                                                      the message result information.\r                                                                      `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function _receiveMessage(path, options, options.isPeekLock,
-        options.timeoutIntervalInS, callback);
-    fullName: >-
-      ServiceBusService._receiveMessage(path, options, options.isPeekLock,
-      options.timeoutIntervalInS, callback)
+      content: 'function _receiveMessage(path, options, callback);'
+    fullName: 'ServiceBusService._receiveMessage(path, options, callback)'
     children:
       - 'ServiceBusService#_receiveMessage~options'
       - 'ServiceBusService#_receiveMessage~callback'
@@ -479,12 +402,7 @@ items:
   - uid: 'ServiceBusService#createQueue'
     id: createQueue
     parent: ServiceBusService
-    name: >-
-      createQueue(queuePath, options, options.MaxSizeInMegaBytes,
-      options.DefaultMessageTimeToLive, options.LockDuration,
-      options.RequiresSession, options.RequiresDuplicateDetection,
-      options.DeadLetteringOnMessageExpiration,
-      options.DuplicateDetectionHistoryTimeWindow, callback)
+    name: 'createQueue(queuePath, options, callback)'
     summary: Creates a queue.
     type: Method
     syntax:
@@ -544,28 +462,12 @@ items:
           description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `createqueueresult` will contain\r                                                                                  the new queue information.\r                                                                                  `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function createQueue(queuePath, options, options.MaxSizeInMegaBytes,
-        options.DefaultMessageTimeToLive, options.LockDuration,
-        options.RequiresSession, options.RequiresDuplicateDetection,
-        options.DeadLetteringOnMessageExpiration,
-        options.DuplicateDetectionHistoryTimeWindow, callback);
-    fullName: >-
-      ServiceBusService.createQueue(queuePath, options,
-      options.MaxSizeInMegaBytes, options.DefaultMessageTimeToLive,
-      options.LockDuration, options.RequiresSession,
-      options.RequiresDuplicateDetection,
-      options.DeadLetteringOnMessageExpiration,
-      options.DuplicateDetectionHistoryTimeWindow, callback)
+      content: 'function createQueue(queuePath, options, callback);'
+    fullName: 'ServiceBusService.createQueue(queuePath, options, callback)'
   - uid: 'ServiceBusService#createQueueIfNotExists'
     id: createQueueIfNotExists
     parent: ServiceBusService
-    name: >-
-      createQueueIfNotExists(queuePath, options, options.MaxSizeInMegaBytes,
-      options.DefaultMessageTimeToLive, options.LockDuration,
-      options.RequiresSession, options.RequiresDuplicateDetection,
-      options.DeadLetteringOnMessageExpiration,
-      options.DuplicateDetectionHistoryTimeWindow, callback)
+    name: 'createQueueIfNotExists(queuePath, options, callback)'
     summary: Creates a queue if it doesn't already exists.
     type: Method
     syntax:
@@ -625,20 +527,8 @@ items:
           description: "`error` will contain information\r                                                                                  if an error occurs; otherwise `queueCreated` will contain\r                                                                                  the new queue information.\r                                                                                  `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function createQueueIfNotExists(queuePath, options,
-        options.MaxSizeInMegaBytes, options.DefaultMessageTimeToLive,
-        options.LockDuration, options.RequiresSession,
-        options.RequiresDuplicateDetection,
-        options.DeadLetteringOnMessageExpiration,
-        options.DuplicateDetectionHistoryTimeWindow, callback);
-    fullName: >-
-      ServiceBusService.createQueueIfNotExists(queuePath, options,
-      options.MaxSizeInMegaBytes, options.DefaultMessageTimeToLive,
-      options.LockDuration, options.RequiresSession,
-      options.RequiresDuplicateDetection,
-      options.DeadLetteringOnMessageExpiration,
-      options.DuplicateDetectionHistoryTimeWindow, callback)
+      content: 'function createQueueIfNotExists(queuePath, options, callback);'
+    fullName: 'ServiceBusService.createQueueIfNotExists(queuePath, options, callback)'
     children:
       - 'ServiceBusService#createQueueIfNotExists~options'
       - 'ServiceBusService#createQueueIfNotExists~callback'
@@ -687,7 +577,7 @@ items:
   - uid: 'ServiceBusService#listQueues'
     id: listQueues
     parent: ServiceBusService
-    name: 'listQueues(options, options.top, options.skip, callback)'
+    name: 'listQueues(options, callback)'
     summary: Returns a list of queues.
     type: Method
     syntax:
@@ -706,16 +596,12 @@ items:
           description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listqueueresult` will contain\r                                                                      the list of queues.\r                                                                      `response` will contain information related to this operation."
       return:
         type: undefined
-      content: 'function listQueues(options, options.top, options.skip, callback);'
-    fullName: 'ServiceBusService.listQueues(options, options.top, options.skip, callback)'
+      content: 'function listQueues(options, callback);'
+    fullName: 'ServiceBusService.listQueues(options, callback)'
   - uid: 'ServiceBusService#createTopic'
     id: createTopic
     parent: ServiceBusService
-    name: >-
-      createTopic(topic, options, options.MaxSizeInMegabytes,
-      options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
-      options.DuplicateDetectionHistoryTimeWindow,
-      options.EnableBatchedOperations, options.SizeInBytes, callback)
+    name: 'createTopic(topic, options, callback)'
     summary: Creates a topic.
     type: Method
     syntax:
@@ -767,27 +653,12 @@ items:
           description: "`error` will contain information\r                                                                                        if an error occurs; otherwise `createtopicresult` will contain\r                                                                                        the new topic information.\r                                                                                        `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function createTopic(topic, options, options.MaxSizeInMegabytes,
-        options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
-        options.DuplicateDetectionHistoryTimeWindow,
-        options.EnableBatchedOperations, options.SizeInBytes, callback);
-    fullName: >-
-      ServiceBusService.createTopic(topic, options, options.MaxSizeInMegabytes,
-      options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
-      options.DuplicateDetectionHistoryTimeWindow,
-      options.EnableBatchedOperations, options.SizeInBytes, callback)
+      content: 'function createTopic(topic, options, callback);'
+    fullName: 'ServiceBusService.createTopic(topic, options, callback)'
   - uid: 'ServiceBusService#createTopicIfNotExists'
     id: createTopicIfNotExists
     parent: ServiceBusService
-    name: >-
-      createTopicIfNotExists(topic, options, options.MaxSizeInMegabytes,
-      options.DefaultMessageTimeToLive, options.RequiresDuplicateDetection,
-      options.DuplicateDetectionHistoryTimeWindow,
-      options.MaxSubscriptionsPerTopic, options.MaxSqlFiltersPerTopic,
-      options.MaxCorrelationFiltersPerTopic,
-      options.EnableDeadLetteringOnMessageExpiration,
-      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+    name: 'createTopicIfNotExists(topic, options, callback)'
     summary: Creates a topic if it doesn't exists.
     type: Method
     syntax:
@@ -855,24 +726,8 @@ items:
           description: "`error` will contain information\r                                                                                        if an error occurs; otherwise `topicCreated` will contain\r                                                                                        the new topic information.\r                                                                                        `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function createTopicIfNotExists(topic, options,
-        options.MaxSizeInMegabytes, options.DefaultMessageTimeToLive,
-        options.RequiresDuplicateDetection,
-        options.DuplicateDetectionHistoryTimeWindow,
-        options.MaxSubscriptionsPerTopic, options.MaxSqlFiltersPerTopic,
-        options.MaxCorrelationFiltersPerTopic,
-        options.EnableDeadLetteringOnMessageExpiration,
-        options.EnableDeadLetteringOnFilterEvaluationExceptions, callback);
-    fullName: >-
-      ServiceBusService.createTopicIfNotExists(topic, options,
-      options.MaxSizeInMegabytes, options.DefaultMessageTimeToLive,
-      options.RequiresDuplicateDetection,
-      options.DuplicateDetectionHistoryTimeWindow,
-      options.MaxSubscriptionsPerTopic, options.MaxSqlFiltersPerTopic,
-      options.MaxCorrelationFiltersPerTopic,
-      options.EnableDeadLetteringOnMessageExpiration,
-      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+      content: 'function createTopicIfNotExists(topic, options, callback);'
+    fullName: 'ServiceBusService.createTopicIfNotExists(topic, options, callback)'
     children:
       - 'ServiceBusService#createTopicIfNotExists~options'
       - 'ServiceBusService#createTopicIfNotExists~callback'
@@ -925,7 +780,7 @@ items:
   - uid: 'ServiceBusService#listTopics'
     id: listTopics
     parent: ServiceBusService
-    name: 'listTopics(options, options.top, options.skip, callback)'
+    name: 'listTopics(options, callback)'
     summary: Returns a list of topics.
     type: Method
     syntax:
@@ -944,17 +799,12 @@ items:
           description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listtopicsresult` will contain\r                                                                      the list of topics.\r                                                                      `response` will contain information related to this operation."
       return:
         type: undefined
-      content: 'function listTopics(options, options.top, options.skip, callback);'
-    fullName: 'ServiceBusService.listTopics(options, options.top, options.skip, callback)'
+      content: 'function listTopics(options, callback);'
+    fullName: 'ServiceBusService.listTopics(options, callback)'
   - uid: 'ServiceBusService#createSubscription'
     id: createSubscription
     parent: ServiceBusService
-    name: >-
-      createSubscription(topicPath, subscriptionPath, options,
-      options.LockDuration, options.RequiresSession,
-      options.DefaultMessageTimeToLive,
-      options.EnableDeadLetteringOnMessageExpiration,
-      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+    name: 'createSubscription(topicPath, subscriptionPath, options, callback)'
     summary: Creates a subscription.
     type: Method
     syntax:
@@ -1017,16 +867,10 @@ items:
         type: undefined
       content: >-
         function createSubscription(topicPath, subscriptionPath, options,
-        options.LockDuration, options.RequiresSession,
-        options.DefaultMessageTimeToLive,
-        options.EnableDeadLetteringOnMessageExpiration,
-        options.EnableDeadLetteringOnFilterEvaluationExceptions, callback);
+        callback);
     fullName: >-
       ServiceBusService.createSubscription(topicPath, subscriptionPath, options,
-      options.LockDuration, options.RequiresSession,
-      options.DefaultMessageTimeToLive,
-      options.EnableDeadLetteringOnMessageExpiration,
-      options.EnableDeadLetteringOnFilterEvaluationExceptions, callback)
+      callback)
     children:
       - 'ServiceBusService#createSubscription~subscriptionFullPath'
   - uid: 'ServiceBusService#deleteSubscription'
@@ -1089,7 +933,7 @@ items:
   - uid: 'ServiceBusService#listSubscriptions'
     id: listSubscriptions
     parent: ServiceBusService
-    name: 'listSubscriptions(topicPath, options, options.top, options.skip, callback)'
+    name: 'listSubscriptions(topicPath, options, callback)'
     summary: Returns a list of subscriptions.
     type: Method
     syntax:
@@ -1113,22 +957,15 @@ items:
           description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listsubscriptionresult` will contain\r                                                                      the list of subscriptions.\r                                                                      `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function listSubscriptions(topicPath, options, options.top,
-        options.skip, callback);
-    fullName: >-
-      ServiceBusService.listSubscriptions(topicPath, options, options.top,
-      options.skip, callback)
+      content: 'function listSubscriptions(topicPath, options, callback);'
+    fullName: 'ServiceBusService.listSubscriptions(topicPath, options, callback)'
     children:
       - 'ServiceBusService#listSubscriptions~path'
       - 'ServiceBusService#listSubscriptions~validateResult'
   - uid: 'ServiceBusService#createRule'
     id: createRule
     parent: ServiceBusService
-    name: >-
-      createRule(topicPath, subscriptionPath, rulePath, options,
-      options.trueFilter, options.falseFilter, options.sqlExpressionFilter,
-      options.correlationIdFilter, options.sqlRuleAction, callback)
+    name: 'createRule(topicPath, subscriptionPath, rulePath, options, callback)'
     summary: Creates a rule.
     type: Method
     syntax:
@@ -1185,13 +1022,10 @@ items:
         type: undefined
       content: >-
         function createRule(topicPath, subscriptionPath, rulePath, options,
-        options.trueFilter, options.falseFilter, options.sqlExpressionFilter,
-        options.correlationIdFilter, options.sqlRuleAction, callback);
+        callback);
     fullName: >-
       ServiceBusService.createRule(topicPath, subscriptionPath, rulePath,
-      options, options.trueFilter, options.falseFilter,
-      options.sqlExpressionFilter, options.correlationIdFilter,
-      options.sqlRuleAction, callback)
+      options, callback)
     children:
       - 'ServiceBusService#createRule~ruleFullPath'
   - uid: 'ServiceBusService#deleteRule'
@@ -1260,9 +1094,7 @@ items:
   - uid: 'ServiceBusService#listRules'
     id: listRules
     parent: ServiceBusService
-    name: >-
-      listRules(topicPath, subscriptionPath, options, options.top, options.skip,
-      callback)
+    name: 'listRules(topicPath, subscriptionPath, options, callback)'
     summary: Returns a list of rules.
     type: Method
     syntax:
@@ -1291,21 +1123,17 @@ items:
           description: "`error` will contain information\r                                                                      if an error occurs; otherwise `listrulesresult` will contain\r                                                                      the list of rules.\r                                                                      `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function listRules(topicPath, subscriptionPath, options, options.top,
-        options.skip, callback);
+      content: 'function listRules(topicPath, subscriptionPath, options, callback);'
     fullName: >-
       ServiceBusService.listRules(topicPath, subscriptionPath, options,
-      options.top, options.skip, callback)
+      callback)
     children:
       - 'ServiceBusService#listRules~rulesFullPath'
       - 'ServiceBusService#listRules~validateResult'
   - uid: 'ServiceBusService#createNotificationHub'
     id: createNotificationHub
     parent: ServiceBusService
-    name: >-
-      createNotificationHub(hubPath, options, options.wns, options.apns,
-      options.gcm, options.mpns, callback)
+    name: 'createNotificationHub(hubPath, options, callback)'
     summary: Creates a notification hub.
     type: Method
     syntax:
@@ -1333,12 +1161,8 @@ items:
           description: "`error` will contain information\r                                                      if an error occurs; otherwise `result` will contain\r                                                      the new notification hub information.\r                                                      `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function createNotificationHub(hubPath, options, options.wns,
-        options.apns, options.gcm, options.mpns, callback);
-    fullName: >-
-      ServiceBusService.createNotificationHub(hubPath, options, options.wns,
-      options.apns, options.gcm, options.mpns, callback)
+      content: 'function createNotificationHub(hubPath, options, callback);'
+    fullName: 'ServiceBusService.createNotificationHub(hubPath, options, callback)'
   - uid: 'ServiceBusService#getNotificationHub'
     id: getNotificationHub
     parent: ServiceBusService
@@ -1362,7 +1186,7 @@ items:
   - uid: 'ServiceBusService#listNotificationHubs'
     id: listNotificationHubs
     parent: ServiceBusService
-    name: 'listNotificationHubs(options, options.top, options.skip, callback)'
+    name: 'listNotificationHubs(options, callback)'
     summary: Returns a list of notification hubs.
     type: Method
     syntax:
@@ -1381,12 +1205,8 @@ items:
           description: "`error` will contain information\r                                                      if an error occurs; otherwise `result` will contain\r                                                      the list of notification hubs.\r                                                      `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function listNotificationHubs(options, options.top, options.skip,
-        callback);
-    fullName: >-
-      ServiceBusService.listNotificationHubs(options, options.top, options.skip,
-      callback)
+      content: 'function listNotificationHubs(options, callback);'
+    fullName: 'ServiceBusService.listNotificationHubs(options, callback)'
   - uid: 'ServiceBusService#deleteNotificationHub'
     id: deleteNotificationHub
     parent: ServiceBusService

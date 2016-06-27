@@ -30,7 +30,7 @@ items:
   - uid: 'GroupOperations~GroupOperations#addMember'
     id: addMember
     parent: GroupOperations~GroupOperations
-    name: 'addMember(groupObjectId, parameters, parameters.memberUrl, callback)'
+    name: 'addMember(groupObjectId, parameters, callback)'
     summary: "Add a memeber to a group.   (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151600.aspx for more\rinformation)"
     type: Method
     syntax:
@@ -49,12 +49,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function addMember(groupObjectId, parameters, parameters.memberUrl,
-        callback);
+      content: 'function addMember(groupObjectId, parameters, callback);'
     fullName: >-
       GroupOperations~GroupOperations.addMember(groupObjectId, parameters,
-      parameters.memberUrl, callback)
+      callback)
     children:
       - 'GroupOperations~GroupOperations#addMember~url2'
       - 'GroupOperations~GroupOperations#addMember~url2'
@@ -78,9 +76,7 @@ items:
   - uid: 'GroupOperations~GroupOperations#create'
     id: create
     parent: GroupOperations~GroupOperations
-    name: >-
-      create(parameters, parameters.displayName, parameters.mailEnabled,
-      parameters.mailNickname, parameters.securityEnabled, callback)
+    name: 'create(parameters, callback)'
     summary: "Create a group in the directory.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn151614.aspx for more\rinformation)"
     type: Method
     syntax:
@@ -105,14 +101,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(parameters, parameters.displayName,
-        parameters.mailEnabled, parameters.mailNickname,
-        parameters.securityEnabled, callback);
-    fullName: >-
-      GroupOperations~GroupOperations.create(parameters, parameters.displayName,
-      parameters.mailEnabled, parameters.mailNickname,
-      parameters.securityEnabled, callback)
+      content: 'function create(parameters, callback);'
+    fullName: 'GroupOperations~GroupOperations.create(parameters, callback)'
     children:
       - 'GroupOperations~GroupOperations#create~url2'
       - 'GroupOperations~GroupOperations#create~url2'
@@ -262,9 +252,7 @@ items:
   - uid: 'GroupOperations~GroupOperations#getMemberGroups'
     id: getMemberGroups
     parent: GroupOperations~GroupOperations
-    name: >-
-      getMemberGroups(parameters, parameters.objectId,
-      parameters.securityEnabledOnly, callback)
+    name: 'getMemberGroups(parameters, callback)'
     summary: "Gets a collection that contains the Object IDs of the groups of which the\rgroup is a member."
     type: Method
     syntax:
@@ -283,12 +271,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function getMemberGroups(parameters, parameters.objectId,
-        parameters.securityEnabledOnly, callback);
-    fullName: >-
-      GroupOperations~GroupOperations.getMemberGroups(parameters,
-      parameters.objectId, parameters.securityEnabledOnly, callback)
+      content: 'function getMemberGroups(parameters, callback);'
+    fullName: 'GroupOperations~GroupOperations.getMemberGroups(parameters, callback)'
     children:
       - 'GroupOperations~GroupOperations#getMemberGroups~url2'
       - 'GroupOperations~GroupOperations#getMemberGroups~url2'

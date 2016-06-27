@@ -36,9 +36,7 @@ items:
   - uid: 'Endpoints#listByProfile'
     id: listByProfile
     parent: Endpoints
-    name: >-
-      listByProfile(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'listByProfile(profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -61,10 +59,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link EndpointListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listByProfile(profileName, resourceGroupName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Endpoints.listByProfile(profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Endpoints.listByProfile(profileName, resourceGroupName, options, callback)'
     children:
       - 'Endpoints#listByProfile~client'
       - 'Endpoints#listByProfile~callback'
@@ -82,9 +78,7 @@ items:
   - uid: 'Endpoints#get'
     id: get
     parent: Endpoints
-    name: >-
-      get(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'get(endpointName, profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -110,10 +104,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(endpointName, profileName, resourceGroupName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Endpoints.get(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Endpoints#get~client'
       - 'Endpoints#get~callback'
@@ -133,13 +127,8 @@ items:
     id: create
     parent: Endpoints
     name: >-
-      create(endpointName, endpointProperties, endpointProperties.location,
-      endpointProperties.tags, endpointProperties.originHostHeader,
-      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      create(endpointName, endpointProperties, profileName, resourceGroupName,
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -197,24 +186,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function create(endpointName, endpointProperties,
-        endpointProperties.location, endpointProperties.tags,
-        endpointProperties.originHostHeader, endpointProperties.originPath,
-        endpointProperties.contentTypesToCompress,
-        endpointProperties.isCompressionEnabled,
-        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
-        endpointProperties.queryStringCachingBehavior,
-        endpointProperties.origins, profileName, resourceGroupName, options,
-        options.customHeaders, callback);
+        function create(endpointName, endpointProperties, profileName,
+        resourceGroupName, options, callback);
     fullName: >-
-      Endpoints.create(endpointName, endpointProperties,
-      endpointProperties.location, endpointProperties.tags,
-      endpointProperties.originHostHeader, endpointProperties.originPath,
-      endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      Endpoints.create(endpointName, endpointProperties, profileName,
+      resourceGroupName, options, callback)
     children:
       - 'Endpoints#create~client'
       - 'Endpoints#create~callback'
@@ -223,13 +199,8 @@ items:
     id: beginCreate
     parent: Endpoints
     name: >-
-      beginCreate(endpointName, endpointProperties, endpointProperties.location,
-      endpointProperties.tags, endpointProperties.originHostHeader,
-      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      beginCreate(endpointName, endpointProperties, profileName,
+      resourceGroupName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -287,24 +258,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function beginCreate(endpointName, endpointProperties,
-        endpointProperties.location, endpointProperties.tags,
-        endpointProperties.originHostHeader, endpointProperties.originPath,
-        endpointProperties.contentTypesToCompress,
-        endpointProperties.isCompressionEnabled,
-        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
-        endpointProperties.queryStringCachingBehavior,
-        endpointProperties.origins, profileName, resourceGroupName, options,
-        options.customHeaders, callback);
+        function beginCreate(endpointName, endpointProperties, profileName,
+        resourceGroupName, options, callback);
     fullName: >-
-      Endpoints.beginCreate(endpointName, endpointProperties,
-      endpointProperties.location, endpointProperties.tags,
-      endpointProperties.originHostHeader, endpointProperties.originPath,
-      endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, endpointProperties.origins,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      Endpoints.beginCreate(endpointName, endpointProperties, profileName,
+      resourceGroupName, options, callback)
     children:
       - 'Endpoints#beginCreate~client'
       - 'Endpoints#beginCreate~callback'
@@ -330,13 +288,8 @@ items:
     id: update
     parent: Endpoints
     name: >-
-      update(endpointName, endpointProperties, endpointProperties.tags,
-      endpointProperties.originHostHeader, endpointProperties.originPath,
-      endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      update(endpointName, endpointProperties, profileName, resourceGroupName,
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -388,22 +341,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function update(endpointName, endpointProperties,
-        endpointProperties.tags, endpointProperties.originHostHeader,
-        endpointProperties.originPath,
-        endpointProperties.contentTypesToCompress,
-        endpointProperties.isCompressionEnabled,
-        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
-        endpointProperties.queryStringCachingBehavior, profileName,
-        resourceGroupName, options, options.customHeaders, callback);
+        function update(endpointName, endpointProperties, profileName,
+        resourceGroupName, options, callback);
     fullName: >-
-      Endpoints.update(endpointName, endpointProperties,
-      endpointProperties.tags, endpointProperties.originHostHeader,
-      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      Endpoints.update(endpointName, endpointProperties, profileName,
+      resourceGroupName, options, callback)
     children:
       - 'Endpoints#update~client'
       - 'Endpoints#update~callback'
@@ -412,13 +354,8 @@ items:
     id: beginUpdate
     parent: Endpoints
     name: >-
-      beginUpdate(endpointName, endpointProperties, endpointProperties.tags,
-      endpointProperties.originHostHeader, endpointProperties.originPath,
-      endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      beginUpdate(endpointName, endpointProperties, profileName,
+      resourceGroupName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -470,22 +407,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function beginUpdate(endpointName, endpointProperties,
-        endpointProperties.tags, endpointProperties.originHostHeader,
-        endpointProperties.originPath,
-        endpointProperties.contentTypesToCompress,
-        endpointProperties.isCompressionEnabled,
-        endpointProperties.isHttpAllowed, endpointProperties.isHttpsAllowed,
-        endpointProperties.queryStringCachingBehavior, profileName,
-        resourceGroupName, options, options.customHeaders, callback);
+        function beginUpdate(endpointName, endpointProperties, profileName,
+        resourceGroupName, options, callback);
     fullName: >-
-      Endpoints.beginUpdate(endpointName, endpointProperties,
-      endpointProperties.tags, endpointProperties.originHostHeader,
-      endpointProperties.originPath, endpointProperties.contentTypesToCompress,
-      endpointProperties.isCompressionEnabled, endpointProperties.isHttpAllowed,
-      endpointProperties.isHttpsAllowed,
-      endpointProperties.queryStringCachingBehavior, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      Endpoints.beginUpdate(endpointName, endpointProperties, profileName,
+      resourceGroupName, options, callback)
     children:
       - 'Endpoints#beginUpdate~client'
       - 'Endpoints#beginUpdate~callback'
@@ -512,7 +438,7 @@ items:
     parent: Endpoints
     name: >-
       deleteIfExists(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -538,10 +464,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteIfExists(endpointName, profileName, resourceGroupName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Endpoints.deleteIfExists(endpointName, profileName, resourceGroupName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Endpoints#deleteIfExists~client'
       - 'Endpoints#deleteIfExists~callback'
@@ -551,7 +477,7 @@ items:
     parent: Endpoints
     name: >-
       beginDeleteIfExists(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -577,10 +503,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteIfExists(endpointName, profileName,
-        resourceGroupName, options, options.customHeaders, callback);
+        resourceGroupName, options, callback);
     fullName: >-
       Endpoints.beginDeleteIfExists(endpointName, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      resourceGroupName, options, callback)
     children:
       - 'Endpoints#beginDeleteIfExists~client'
       - 'Endpoints#beginDeleteIfExists~callback'
@@ -599,9 +525,7 @@ items:
   - uid: 'Endpoints#start'
     id: start
     parent: Endpoints
-    name: >-
-      start(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'start(endpointName, profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -627,10 +551,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function start(endpointName, profileName, resourceGroupName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Endpoints.start(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Endpoints#start~client'
       - 'Endpoints#start~callback'
@@ -640,7 +564,7 @@ items:
     parent: Endpoints
     name: >-
       beginStart(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -666,10 +590,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginStart(endpointName, profileName, resourceGroupName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Endpoints.beginStart(endpointName, profileName, resourceGroupName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Endpoints#beginStart~client'
       - 'Endpoints#beginStart~callback'
@@ -688,9 +612,7 @@ items:
   - uid: 'Endpoints#stop'
     id: stop
     parent: Endpoints
-    name: >-
-      stop(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'stop(endpointName, profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -716,10 +638,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function stop(endpointName, profileName, resourceGroupName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Endpoints.stop(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Endpoints#stop~client'
       - 'Endpoints#stop~callback'
@@ -727,9 +649,7 @@ items:
   - uid: 'Endpoints#beginStop'
     id: beginStop
     parent: Endpoints
-    name: >-
-      beginStop(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+    name: 'beginStop(endpointName, profileName, resourceGroupName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -755,10 +675,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Endpoint} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginStop(endpointName, profileName, resourceGroupName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Endpoints.beginStop(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Endpoints#beginStop~client'
       - 'Endpoints#beginStop~callback'
@@ -779,7 +699,7 @@ items:
     parent: Endpoints
     name: >-
       purgeContent(endpointName, profileName, resourceGroupName, contentPaths,
-      options, options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -808,10 +728,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function purgeContent(endpointName, profileName, resourceGroupName,
-        contentPaths, options, options.customHeaders, callback);
+        contentPaths, options, callback);
     fullName: >-
       Endpoints.purgeContent(endpointName, profileName, resourceGroupName,
-      contentPaths, options, options.customHeaders, callback)
+      contentPaths, options, callback)
     children:
       - 'Endpoints#purgeContent~client'
       - 'Endpoints#purgeContent~callback'
@@ -821,7 +741,7 @@ items:
     parent: Endpoints
     name: >-
       beginPurgeContent(endpointName, profileName, resourceGroupName,
-      contentPaths, options, options.customHeaders, callback)
+      contentPaths, options, callback)
     type: Method
     syntax:
       parameters:
@@ -850,10 +770,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginPurgeContent(endpointName, profileName, resourceGroupName,
-        contentPaths, options, options.customHeaders, callback);
+        contentPaths, options, callback);
     fullName: >-
       Endpoints.beginPurgeContent(endpointName, profileName, resourceGroupName,
-      contentPaths, options, options.customHeaders, callback)
+      contentPaths, options, callback)
     children:
       - 'Endpoints#beginPurgeContent~client'
       - 'Endpoints#beginPurgeContent~callback'
@@ -883,7 +803,7 @@ items:
     parent: Endpoints
     name: >-
       loadContent(endpointName, profileName, resourceGroupName, contentPaths,
-      options, options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -912,10 +832,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function loadContent(endpointName, profileName, resourceGroupName,
-        contentPaths, options, options.customHeaders, callback);
+        contentPaths, options, callback);
     fullName: >-
       Endpoints.loadContent(endpointName, profileName, resourceGroupName,
-      contentPaths, options, options.customHeaders, callback)
+      contentPaths, options, callback)
     children:
       - 'Endpoints#loadContent~client'
       - 'Endpoints#loadContent~callback'
@@ -925,7 +845,7 @@ items:
     parent: Endpoints
     name: >-
       beginLoadContent(endpointName, profileName, resourceGroupName,
-      contentPaths, options, options.customHeaders, callback)
+      contentPaths, options, callback)
     type: Method
     syntax:
       parameters:
@@ -954,10 +874,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginLoadContent(endpointName, profileName, resourceGroupName,
-        contentPaths, options, options.customHeaders, callback);
+        contentPaths, options, callback);
     fullName: >-
       Endpoints.beginLoadContent(endpointName, profileName, resourceGroupName,
-      contentPaths, options, options.customHeaders, callback)
+      contentPaths, options, callback)
     children:
       - 'Endpoints#beginLoadContent~client'
       - 'Endpoints#beginLoadContent~callback'
@@ -987,7 +907,7 @@ items:
     parent: Endpoints
     name: >-
       validateCustomDomain(endpointName, profileName, resourceGroupName,
-      hostName, options, options.customHeaders, callback)
+      hostName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -1016,10 +936,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ValidateCustomDomainOutput} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function validateCustomDomain(endpointName, profileName,
-        resourceGroupName, hostName, options, options.customHeaders, callback);
+        resourceGroupName, hostName, options, callback);
     fullName: >-
       Endpoints.validateCustomDomain(endpointName, profileName,
-      resourceGroupName, hostName, options, options.customHeaders, callback)
+      resourceGroupName, hostName, options, callback)
     children:
       - 'Endpoints#validateCustomDomain~client'
       - 'Endpoints#validateCustomDomain~callback'

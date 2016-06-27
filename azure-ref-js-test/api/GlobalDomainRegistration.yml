@@ -24,7 +24,7 @@ items:
   - uid: 'GlobalDomainRegistration#getAllDomains'
     id: getAllDomains
     parent: GlobalDomainRegistration
-    name: 'getAllDomains(options, options.customHeaders, callback)'
+    name: 'getAllDomains(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -39,10 +39,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function getAllDomains(options, options.customHeaders, callback);'
-    fullName: >-
-      GlobalDomainRegistration.getAllDomains(options, options.customHeaders,
-      callback)
+      content: 'function getAllDomains(options, callback);'
+    fullName: 'GlobalDomainRegistration.getAllDomains(options, callback)'
     children:
       - 'GlobalDomainRegistration#getAllDomains~client'
       - 'GlobalDomainRegistration#getAllDomains~callback'
@@ -58,7 +56,7 @@ items:
   - uid: 'GlobalDomainRegistration#getDomainControlCenterSsoRequest'
     id: getDomainControlCenterSsoRequest
     parent: GlobalDomainRegistration
-    name: 'getDomainControlCenterSsoRequest(options, options.customHeaders, callback)'
+    name: 'getDomainControlCenterSsoRequest(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -73,12 +71,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainControlCenterSsoRequest} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getDomainControlCenterSsoRequest(options,
-        options.customHeaders, callback);
+      content: 'function getDomainControlCenterSsoRequest(options, callback);'
     fullName: >-
       GlobalDomainRegistration.getDomainControlCenterSsoRequest(options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~client'
       - 'GlobalDomainRegistration#getDomainControlCenterSsoRequest~callback'
@@ -96,44 +92,8 @@ items:
     id: validateDomainPurchaseInformation
     parent: GlobalDomainRegistration
     name: >-
-      validateDomainPurchaseInformation(domainRegistrationInput,
-      domainRegistrationInput.domainRegistrationInputName,
-      domainRegistrationInput.contactAdmin,
-      domainRegistrationInput.contactBilling,
-      domainRegistrationInput.contactRegistrant,
-      domainRegistrationInput.contactTech,
-      domainRegistrationInput.contactTech.addressMailing,
-      domainRegistrationInput.contactTech.addressMailing.address1,
-      domainRegistrationInput.contactTech.addressMailing.address2,
-      domainRegistrationInput.contactTech.addressMailing.city,
-      domainRegistrationInput.contactTech.addressMailing.country,
-      domainRegistrationInput.contactTech.addressMailing.postalCode,
-      domainRegistrationInput.contactTech.addressMailing.state,
-      domainRegistrationInput.contactTech.email,
-      domainRegistrationInput.contactTech.fax,
-      domainRegistrationInput.contactTech.jobTitle,
-      domainRegistrationInput.contactTech.nameFirst,
-      domainRegistrationInput.contactTech.nameLast,
-      domainRegistrationInput.contactTech.nameMiddle,
-      domainRegistrationInput.contactTech.organization,
-      domainRegistrationInput.contactTech.phone,
-      domainRegistrationInput.registrationStatus,
-      domainRegistrationInput.provisioningState,
-      domainRegistrationInput.nameServers, domainRegistrationInput.privacy,
-      domainRegistrationInput.createdTime,
-      domainRegistrationInput.expirationTime,
-      domainRegistrationInput.lastRenewedTime,
-      domainRegistrationInput.autoRenew,
-      domainRegistrationInput.readyForDnsRecordManagement,
-      domainRegistrationInput.managedHostNames, domainRegistrationInput.consent,
-      domainRegistrationInput.consent.agreementKeys,
-      domainRegistrationInput.consent.agreedBy,
-      domainRegistrationInput.consent.agreedAt,
-      domainRegistrationInput.domainNotRenewableReasons,
-      domainRegistrationInput.id, domainRegistrationInput.name,
-      domainRegistrationInput.kind, domainRegistrationInput.location,
-      domainRegistrationInput.type, domainRegistrationInput.tags, options,
-      options.customHeaders, callback)
+      validateDomainPurchaseInformation(domainRegistrationInput, options,
+      callback)
     type: Method
     syntax:
       parameters:
@@ -276,83 +236,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function validateDomainPurchaseInformation(domainRegistrationInput,
-        domainRegistrationInput.domainRegistrationInputName,
-        domainRegistrationInput.contactAdmin,
-        domainRegistrationInput.contactBilling,
-        domainRegistrationInput.contactRegistrant,
-        domainRegistrationInput.contactTech,
-        domainRegistrationInput.contactTech.addressMailing,
-        domainRegistrationInput.contactTech.addressMailing.address1,
-        domainRegistrationInput.contactTech.addressMailing.address2,
-        domainRegistrationInput.contactTech.addressMailing.city,
-        domainRegistrationInput.contactTech.addressMailing.country,
-        domainRegistrationInput.contactTech.addressMailing.postalCode,
-        domainRegistrationInput.contactTech.addressMailing.state,
-        domainRegistrationInput.contactTech.email,
-        domainRegistrationInput.contactTech.fax,
-        domainRegistrationInput.contactTech.jobTitle,
-        domainRegistrationInput.contactTech.nameFirst,
-        domainRegistrationInput.contactTech.nameLast,
-        domainRegistrationInput.contactTech.nameMiddle,
-        domainRegistrationInput.contactTech.organization,
-        domainRegistrationInput.contactTech.phone,
-        domainRegistrationInput.registrationStatus,
-        domainRegistrationInput.provisioningState,
-        domainRegistrationInput.nameServers, domainRegistrationInput.privacy,
-        domainRegistrationInput.createdTime,
-        domainRegistrationInput.expirationTime,
-        domainRegistrationInput.lastRenewedTime,
-        domainRegistrationInput.autoRenew,
-        domainRegistrationInput.readyForDnsRecordManagement,
-        domainRegistrationInput.managedHostNames,
-        domainRegistrationInput.consent,
-        domainRegistrationInput.consent.agreementKeys,
-        domainRegistrationInput.consent.agreedBy,
-        domainRegistrationInput.consent.agreedAt,
-        domainRegistrationInput.domainNotRenewableReasons,
-        domainRegistrationInput.id, domainRegistrationInput.name,
-        domainRegistrationInput.kind, domainRegistrationInput.location,
-        domainRegistrationInput.type, domainRegistrationInput.tags, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       GlobalDomainRegistration.validateDomainPurchaseInformation(domainRegistrationInput,
-      domainRegistrationInput.domainRegistrationInputName,
-      domainRegistrationInput.contactAdmin,
-      domainRegistrationInput.contactBilling,
-      domainRegistrationInput.contactRegistrant,
-      domainRegistrationInput.contactTech,
-      domainRegistrationInput.contactTech.addressMailing,
-      domainRegistrationInput.contactTech.addressMailing.address1,
-      domainRegistrationInput.contactTech.addressMailing.address2,
-      domainRegistrationInput.contactTech.addressMailing.city,
-      domainRegistrationInput.contactTech.addressMailing.country,
-      domainRegistrationInput.contactTech.addressMailing.postalCode,
-      domainRegistrationInput.contactTech.addressMailing.state,
-      domainRegistrationInput.contactTech.email,
-      domainRegistrationInput.contactTech.fax,
-      domainRegistrationInput.contactTech.jobTitle,
-      domainRegistrationInput.contactTech.nameFirst,
-      domainRegistrationInput.contactTech.nameLast,
-      domainRegistrationInput.contactTech.nameMiddle,
-      domainRegistrationInput.contactTech.organization,
-      domainRegistrationInput.contactTech.phone,
-      domainRegistrationInput.registrationStatus,
-      domainRegistrationInput.provisioningState,
-      domainRegistrationInput.nameServers, domainRegistrationInput.privacy,
-      domainRegistrationInput.createdTime,
-      domainRegistrationInput.expirationTime,
-      domainRegistrationInput.lastRenewedTime,
-      domainRegistrationInput.autoRenew,
-      domainRegistrationInput.readyForDnsRecordManagement,
-      domainRegistrationInput.managedHostNames, domainRegistrationInput.consent,
-      domainRegistrationInput.consent.agreementKeys,
-      domainRegistrationInput.consent.agreedBy,
-      domainRegistrationInput.consent.agreedAt,
-      domainRegistrationInput.domainNotRenewableReasons,
-      domainRegistrationInput.id, domainRegistrationInput.name,
-      domainRegistrationInput.kind, domainRegistrationInput.location,
-      domainRegistrationInput.type, domainRegistrationInput.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'GlobalDomainRegistration#validateDomainPurchaseInformation~client'
       - 'GlobalDomainRegistration#validateDomainPurchaseInformation~callback'
@@ -379,9 +266,7 @@ items:
   - uid: 'GlobalDomainRegistration#checkDomainAvailability'
     id: checkDomainAvailability
     parent: GlobalDomainRegistration
-    name: >-
-      checkDomainAvailability(options, options.name, options.customHeaders,
-      callback)
+    name: 'checkDomainAvailability(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -399,12 +284,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DomainAvailablilityCheckResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function checkDomainAvailability(options, options.name,
-        options.customHeaders, callback);
-    fullName: >-
-      GlobalDomainRegistration.checkDomainAvailability(options, options.name,
-      options.customHeaders, callback)
+      content: 'function checkDomainAvailability(options, callback);'
+    fullName: 'GlobalDomainRegistration.checkDomainAvailability(options, callback)'
     children:
       - 'GlobalDomainRegistration#checkDomainAvailability~client'
       - 'GlobalDomainRegistration#checkDomainAvailability~callback'
@@ -429,10 +310,7 @@ items:
   - uid: 'GlobalDomainRegistration#listDomainRecommendations'
     id: listDomainRecommendations
     parent: GlobalDomainRegistration
-    name: >-
-      listDomainRecommendations(parameters, parameters.keywords,
-      parameters.maxDomainRecommendations, options, options.customHeaders,
-      callback)
+    name: 'listDomainRecommendations(parameters, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -456,14 +334,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NameIdentifierCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listDomainRecommendations(parameters, parameters.keywords,
-        parameters.maxDomainRecommendations, options, options.customHeaders,
-        callback);
+      content: 'function listDomainRecommendations(parameters, options, callback);'
     fullName: >-
-      GlobalDomainRegistration.listDomainRecommendations(parameters,
-      parameters.keywords, parameters.maxDomainRecommendations, options,
-      options.customHeaders, callback)
+      GlobalDomainRegistration.listDomainRecommendations(parameters, options,
+      callback)
     children:
       - 'GlobalDomainRegistration#listDomainRecommendations~client'
       - 'GlobalDomainRegistration#listDomainRecommendations~callback'

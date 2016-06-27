@@ -28,7 +28,7 @@ items:
     parent: ExpressRouteCircuitAuthorizations
     name: >-
       deleteMethod(resourceGroupName, circuitName, authorizationName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "The delete authorization operation deletes the specified authorization from\rthe specified ExpressRouteCircuit."
     type: Method
     syntax:
@@ -55,10 +55,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, circuitName, authorizationName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ExpressRouteCircuitAuthorizations.deleteMethod(resourceGroupName,
-      circuitName, authorizationName, options, options.customHeaders, callback)
+      circuitName, authorizationName, options, callback)
     children:
       - 'ExpressRouteCircuitAuthorizations#deleteMethod~client'
       - 'ExpressRouteCircuitAuthorizations#deleteMethod~callback'
@@ -68,7 +68,7 @@ items:
     parent: ExpressRouteCircuitAuthorizations
     name: >-
       beginDeleteMethod(resourceGroupName, circuitName, authorizationName,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: "The delete authorization operation deletes the specified authorization from\rthe specified ExpressRouteCircuit."
     type: Method
     syntax:
@@ -95,10 +95,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, circuitName,
-        authorizationName, options, options.customHeaders, callback);
+        authorizationName, options, callback);
     fullName: >-
       ExpressRouteCircuitAuthorizations.beginDeleteMethod(resourceGroupName,
-      circuitName, authorizationName, options, options.customHeaders, callback)
+      circuitName, authorizationName, options, callback)
     children:
       - 'ExpressRouteCircuitAuthorizations#beginDeleteMethod~client'
       - 'ExpressRouteCircuitAuthorizations#beginDeleteMethod~callback'
@@ -117,9 +117,7 @@ items:
   - uid: 'ExpressRouteCircuitAuthorizations#get'
     id: get
     parent: ExpressRouteCircuitAuthorizations
-    name: >-
-      get(resourceGroupName, circuitName, authorizationName, options,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, circuitName, authorizationName, options, callback)'
     summary: "The GET authorization operation retrieves the specified authorization from\rthe specified ExpressRouteCircuit."
     type: Method
     syntax:
@@ -146,10 +144,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitAuthorization} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, circuitName, authorizationName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ExpressRouteCircuitAuthorizations.get(resourceGroupName, circuitName,
-      authorizationName, options, options.customHeaders, callback)
+      authorizationName, options, callback)
     children:
       - 'ExpressRouteCircuitAuthorizations#get~client'
       - 'ExpressRouteCircuitAuthorizations#get~callback'
@@ -170,11 +168,7 @@ items:
     parent: ExpressRouteCircuitAuthorizations
     name: >-
       createOrUpdate(resourceGroupName, circuitName, authorizationName,
-      authorizationParameters, authorizationParameters.authorizationKey,
-      authorizationParameters.authorizationUseStatus,
-      authorizationParameters.provisioningState, authorizationParameters.name,
-      authorizationParameters.etag, authorizationParameters.id, options,
-      options.customHeaders, callback)
+      authorizationParameters, options, callback)
     summary: "The Put Authorization operation creates/updates an authorization in\rthespecified ExpressRouteCircuits"
     type: Method
     syntax:
@@ -222,20 +216,11 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitAuthorization} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, circuitName,
-        authorizationName, authorizationParameters,
-        authorizationParameters.authorizationKey,
-        authorizationParameters.authorizationUseStatus,
-        authorizationParameters.provisioningState, authorizationParameters.name,
-        authorizationParameters.etag, authorizationParameters.id, options,
-        options.customHeaders, callback);
+        authorizationName, authorizationParameters, options, callback);
     fullName: >-
       ExpressRouteCircuitAuthorizations.createOrUpdate(resourceGroupName,
-      circuitName, authorizationName, authorizationParameters,
-      authorizationParameters.authorizationKey,
-      authorizationParameters.authorizationUseStatus,
-      authorizationParameters.provisioningState, authorizationParameters.name,
-      authorizationParameters.etag, authorizationParameters.id, options,
-      options.customHeaders, callback)
+      circuitName, authorizationName, authorizationParameters, options,
+      callback)
     children:
       - 'ExpressRouteCircuitAuthorizations#createOrUpdate~client'
       - 'ExpressRouteCircuitAuthorizations#createOrUpdate~callback'
@@ -245,11 +230,7 @@ items:
     parent: ExpressRouteCircuitAuthorizations
     name: >-
       beginCreateOrUpdate(resourceGroupName, circuitName, authorizationName,
-      authorizationParameters, authorizationParameters.authorizationKey,
-      authorizationParameters.authorizationUseStatus,
-      authorizationParameters.provisioningState, authorizationParameters.name,
-      authorizationParameters.etag, authorizationParameters.id, options,
-      options.customHeaders, callback)
+      authorizationParameters, options, callback)
     summary: "The Put Authorization operation creates/updates an authorization in\rthespecified ExpressRouteCircuits"
     type: Method
     syntax:
@@ -297,20 +278,11 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitAuthorization} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, circuitName,
-        authorizationName, authorizationParameters,
-        authorizationParameters.authorizationKey,
-        authorizationParameters.authorizationUseStatus,
-        authorizationParameters.provisioningState, authorizationParameters.name,
-        authorizationParameters.etag, authorizationParameters.id, options,
-        options.customHeaders, callback);
+        authorizationName, authorizationParameters, options, callback);
     fullName: >-
       ExpressRouteCircuitAuthorizations.beginCreateOrUpdate(resourceGroupName,
-      circuitName, authorizationName, authorizationParameters,
-      authorizationParameters.authorizationKey,
-      authorizationParameters.authorizationUseStatus,
-      authorizationParameters.provisioningState, authorizationParameters.name,
-      authorizationParameters.etag, authorizationParameters.id, options,
-      options.customHeaders, callback)
+      circuitName, authorizationName, authorizationParameters, options,
+      callback)
     children:
       - 'ExpressRouteCircuitAuthorizations#beginCreateOrUpdate~client'
       - 'ExpressRouteCircuitAuthorizations#beginCreateOrUpdate~callback'
@@ -335,9 +307,7 @@ items:
   - uid: 'ExpressRouteCircuitAuthorizations#list'
     id: list
     parent: ExpressRouteCircuitAuthorizations
-    name: >-
-      list(resourceGroupName, circuitName, options, options.customHeaders,
-      callback)
+    name: 'list(resourceGroupName, circuitName, options, callback)'
     summary: "The List authorization operation retrieves all the authorizations in an\rExpressRouteCircuit."
     type: Method
     syntax:
@@ -359,12 +329,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AuthorizationListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, circuitName, options,
-        options.customHeaders, callback);
+      content: 'function list(resourceGroupName, circuitName, options, callback);'
     fullName: >-
       ExpressRouteCircuitAuthorizations.list(resourceGroupName, circuitName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ExpressRouteCircuitAuthorizations#list~client'
       - 'ExpressRouteCircuitAuthorizations#list~callback'
@@ -382,7 +350,7 @@ items:
   - uid: 'ExpressRouteCircuitAuthorizations#listNext'
     id: listNext
     parent: ExpressRouteCircuitAuthorizations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "The List authorization operation retrieves all the authorizations in an\rExpressRouteCircuit."
     type: Method
     syntax:
@@ -401,12 +369,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AuthorizationListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
+      content: 'function listNext(nextPageLink, options, callback);'
     fullName: >-
       ExpressRouteCircuitAuthorizations.listNext(nextPageLink, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ExpressRouteCircuitAuthorizations#listNext~client'
       - 'ExpressRouteCircuitAuthorizations#listNext~callback'

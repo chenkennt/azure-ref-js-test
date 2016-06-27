@@ -25,7 +25,7 @@ items:
   - uid: 'Features#listAll'
     id: listAll
     parent: Features
-    name: 'listAll(options, options.customHeaders, callback)'
+    name: 'listAll(options, callback)'
     summary: "Gets a list of previewed features for all the providers in the current\rsubscription."
     type: Method
     syntax:
@@ -41,8 +41,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listAll(options, options.customHeaders, callback);'
-    fullName: 'Features.listAll(options, options.customHeaders, callback)'
+      content: 'function listAll(options, callback);'
+    fullName: 'Features.listAll(options, callback)'
     children:
       - 'Features#listAll~client'
       - 'Features#listAll~callback'
@@ -58,7 +58,7 @@ items:
   - uid: 'Features#list'
     id: list
     parent: Features
-    name: 'list(resourceProviderNamespace, options, options.customHeaders, callback)'
+    name: 'list(resourceProviderNamespace, options, callback)'
     summary: Gets a list of previewed features of a resource provider.
     type: Method
     syntax:
@@ -77,12 +77,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceProviderNamespace, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Features.list(resourceProviderNamespace, options, options.customHeaders,
-      callback)
+      content: 'function list(resourceProviderNamespace, options, callback);'
+    fullName: 'Features.list(resourceProviderNamespace, options, callback)'
     children:
       - 'Features#list~client'
       - 'Features#list~callback'
@@ -99,9 +95,7 @@ items:
   - uid: 'Features#get'
     id: get
     parent: Features
-    name: >-
-      get(resourceProviderNamespace, featureName, options,
-      options.customHeaders, callback)
+    name: 'get(resourceProviderNamespace, featureName, options, callback)'
     summary: Get all features under the subscription.
     type: Method
     syntax:
@@ -123,12 +117,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(resourceProviderNamespace, featureName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Features.get(resourceProviderNamespace, featureName, options,
-      options.customHeaders, callback)
+      content: 'function get(resourceProviderNamespace, featureName, options, callback);'
+    fullName: 'Features.get(resourceProviderNamespace, featureName, options, callback)'
     children:
       - 'Features#get~client'
       - 'Features#get~callback'
@@ -146,9 +136,7 @@ items:
   - uid: 'Features#register'
     id: register
     parent: Features
-    name: >-
-      register(resourceProviderNamespace, featureName, options,
-      options.customHeaders, callback)
+    name: 'register(resourceProviderNamespace, featureName, options, callback)'
     summary: Registers for a previewed feature of a resource provider.
     type: Method
     syntax:
@@ -172,10 +160,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function register(resourceProviderNamespace, featureName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Features.register(resourceProviderNamespace, featureName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Features#register~client'
       - 'Features#register~callback'
@@ -193,7 +181,7 @@ items:
   - uid: 'Features#listAllNext'
     id: listAllNext
     parent: Features
-    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listAllNext(nextPageLink, options, callback)'
     summary: "Gets a list of previewed features for all the providers in the current\rsubscription."
     type: Method
     syntax:
@@ -212,12 +200,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAllNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Features.listAllNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listAllNext(nextPageLink, options, callback);'
+    fullName: 'Features.listAllNext(nextPageLink, options, callback)'
     children:
       - 'Features#listAllNext~client'
       - 'Features#listAllNext~callback'
@@ -231,7 +215,7 @@ items:
   - uid: 'Features#listNext'
     id: listNext
     parent: Features
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Gets a list of previewed features of a resource provider.
     type: Method
     syntax:
@@ -250,10 +234,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FeatureOperationsListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: 'Features.listNext(nextPageLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Features.listNext(nextPageLink, options, callback)'
     children:
       - 'Features#listNext~client'
       - 'Features#listNext~callback'

@@ -34,9 +34,7 @@ items:
   - uid: 'LabOperations#listBySubscription'
     id: listBySubscription
     parent: LabOperations
-    name: >-
-      listBySubscription(options, options.filter, options.top, options.orderBy,
-      options.customHeaders, callback)
+    name: 'listBySubscription(options, callback)'
     summary: List labs.
     type: Method
     syntax:
@@ -59,12 +57,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLab} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listBySubscription(options, options.filter, options.top,
-        options.orderBy, options.customHeaders, callback);
-    fullName: >-
-      LabOperations.listBySubscription(options, options.filter, options.top,
-      options.orderBy, options.customHeaders, callback)
+      content: 'function listBySubscription(options, callback);'
+    fullName: 'LabOperations.listBySubscription(options, callback)'
     children:
       - 'LabOperations#listBySubscription~client'
       - 'LabOperations#listBySubscription~callback'
@@ -83,9 +77,7 @@ items:
   - uid: 'LabOperations#listByResourceGroup'
     id: listByResourceGroup
     parent: LabOperations
-    name: >-
-      listByResourceGroup(resourceGroupName, options, options.filter,
-      options.top, options.orderBy, options.customHeaders, callback)
+    name: 'listByResourceGroup(resourceGroupName, options, callback)'
     summary: List labs.
     type: Method
     syntax:
@@ -111,13 +103,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLab} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroup(resourceGroupName, options, options.filter,
-        options.top, options.orderBy, options.customHeaders, callback);
-    fullName: >-
-      LabOperations.listByResourceGroup(resourceGroupName, options,
-      options.filter, options.top, options.orderBy, options.customHeaders,
-      callback)
+      content: 'function listByResourceGroup(resourceGroupName, options, callback);'
+    fullName: 'LabOperations.listByResourceGroup(resourceGroupName, options, callback)'
     children:
       - 'LabOperations#listByResourceGroup~client'
       - 'LabOperations#listByResourceGroup~callback'
@@ -137,9 +124,7 @@ items:
   - uid: 'LabOperations#getResource'
     id: getResource
     parent: LabOperations
-    name: >-
-      getResource(resourceGroupName, name, options, options.customHeaders,
-      callback)
+    name: 'getResource(resourceGroupName, name, options, callback)'
     summary: Get lab.
     type: Method
     syntax:
@@ -161,12 +146,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Lab} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getResource(resourceGroupName, name, options,
-        options.customHeaders, callback);
-    fullName: >-
-      LabOperations.getResource(resourceGroupName, name, options,
-      options.customHeaders, callback)
+      content: 'function getResource(resourceGroupName, name, options, callback);'
+    fullName: 'LabOperations.getResource(resourceGroupName, name, options, callback)'
     children:
       - 'LabOperations#getResource~client'
       - 'LabOperations#getResource~callback'
@@ -184,13 +165,7 @@ items:
   - uid: 'LabOperations#createOrUpdateResource'
     id: createOrUpdateResource
     parent: LabOperations
-    name: >-
-      createOrUpdateResource(resourceGroupName, name, lab,
-      lab.defaultStorageAccount, lab.artifactsStorageAccount,
-      lab.storageAccounts, lab.vaultName, lab.labStorageType,
-      lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-      lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-      options.customHeaders, callback)
+    name: 'createOrUpdateResource(resourceGroupName, name, lab, options, callback)'
     summary: "Create or replace an existing Lab. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -254,19 +229,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Lab} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function createOrUpdateResource(resourceGroupName, name, lab,
-        lab.defaultStorageAccount, lab.artifactsStorageAccount,
-        lab.storageAccounts, lab.vaultName, lab.labStorageType,
-        lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-        lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-        options.customHeaders, callback);
+        function createOrUpdateResource(resourceGroupName, name, lab, options,
+        callback);
     fullName: >-
       LabOperations.createOrUpdateResource(resourceGroupName, name, lab,
-      lab.defaultStorageAccount, lab.artifactsStorageAccount,
-      lab.storageAccounts, lab.vaultName, lab.labStorageType,
-      lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-      lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'LabOperations#createOrUpdateResource~client'
       - 'LabOperations#createOrUpdateResource~callback'
@@ -275,12 +242,8 @@ items:
     id: beginCreateOrUpdateResource
     parent: LabOperations
     name: >-
-      beginCreateOrUpdateResource(resourceGroupName, name, lab,
-      lab.defaultStorageAccount, lab.artifactsStorageAccount,
-      lab.storageAccounts, lab.vaultName, lab.labStorageType,
-      lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-      lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-      options.customHeaders, callback)
+      beginCreateOrUpdateResource(resourceGroupName, name, lab, options,
+      callback)
     summary: "Create or replace an existing Lab. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -345,18 +308,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Lab} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdateResource(resourceGroupName, name, lab,
-        lab.defaultStorageAccount, lab.artifactsStorageAccount,
-        lab.storageAccounts, lab.vaultName, lab.labStorageType,
-        lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-        lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       LabOperations.beginCreateOrUpdateResource(resourceGroupName, name, lab,
-      lab.defaultStorageAccount, lab.artifactsStorageAccount,
-      lab.storageAccounts, lab.vaultName, lab.labStorageType,
-      lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-      lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'LabOperations#beginCreateOrUpdateResource~client'
       - 'LabOperations#beginCreateOrUpdateResource~callback'
@@ -380,9 +335,7 @@ items:
   - uid: 'LabOperations#deleteResource'
     id: deleteResource
     parent: LabOperations
-    name: >-
-      deleteResource(resourceGroupName, name, options, options.customHeaders,
-      callback)
+    name: 'deleteResource(resourceGroupName, name, options, callback)'
     summary: Delete lab. This operation can take a while to complete.
     type: Method
     syntax:
@@ -404,12 +357,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteResource(resourceGroupName, name, options,
-        options.customHeaders, callback);
-    fullName: >-
-      LabOperations.deleteResource(resourceGroupName, name, options,
-      options.customHeaders, callback)
+      content: 'function deleteResource(resourceGroupName, name, options, callback);'
+    fullName: 'LabOperations.deleteResource(resourceGroupName, name, options, callback)'
     children:
       - 'LabOperations#deleteResource~client'
       - 'LabOperations#deleteResource~callback'
@@ -417,9 +366,7 @@ items:
   - uid: 'LabOperations#beginDeleteResource'
     id: beginDeleteResource
     parent: LabOperations
-    name: >-
-      beginDeleteResource(resourceGroupName, name, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteResource(resourceGroupName, name, options, callback)'
     summary: Delete lab. This operation can take a while to complete.
     type: Method
     syntax:
@@ -443,10 +390,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteResource(resourceGroupName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       LabOperations.beginDeleteResource(resourceGroupName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'LabOperations#beginDeleteResource~client'
       - 'LabOperations#beginDeleteResource~callback'
@@ -464,12 +411,7 @@ items:
   - uid: 'LabOperations#patchResource'
     id: patchResource
     parent: LabOperations
-    name: >-
-      patchResource(resourceGroupName, name, lab, lab.defaultStorageAccount,
-      lab.artifactsStorageAccount, lab.storageAccounts, lab.vaultName,
-      lab.labStorageType, lab.defaultVirtualNetworkId, lab.createdDate,
-      lab.provisioningState, lab.id, lab.name, lab.type, lab.location, lab.tags,
-      options, options.customHeaders, callback)
+    name: 'patchResource(resourceGroupName, name, lab, options, callback)'
     summary: Modify properties of labs.
     type: Method
     syntax:
@@ -532,20 +474,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Lab} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function patchResource(resourceGroupName, name, lab,
-        lab.defaultStorageAccount, lab.artifactsStorageAccount,
-        lab.storageAccounts, lab.vaultName, lab.labStorageType,
-        lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-        lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-        options.customHeaders, callback);
+      content: 'function patchResource(resourceGroupName, name, lab, options, callback);'
     fullName: >-
-      LabOperations.patchResource(resourceGroupName, name, lab,
-      lab.defaultStorageAccount, lab.artifactsStorageAccount,
-      lab.storageAccounts, lab.vaultName, lab.labStorageType,
-      lab.defaultVirtualNetworkId, lab.createdDate, lab.provisioningState,
-      lab.id, lab.name, lab.type, lab.location, lab.tags, options,
-      options.customHeaders, callback)
+      LabOperations.patchResource(resourceGroupName, name, lab, options,
+      callback)
     children:
       - 'LabOperations#patchResource~client'
       - 'LabOperations#patchResource~callback'
@@ -570,30 +502,8 @@ items:
     id: createEnvironment
     parent: LabOperations
     name: >-
-      createEnvironment(resourceGroupName, name, labVirtualMachine,
-      labVirtualMachine.notes, labVirtualMachine.ownerObjectId,
-      labVirtualMachine.createdByUserId, labVirtualMachine.createdByUser,
-      labVirtualMachine.computeId, labVirtualMachine.customImageId,
-      labVirtualMachine.osType, labVirtualMachine.size,
-      labVirtualMachine.userName, labVirtualMachine.password,
-      labVirtualMachine.sshKey, labVirtualMachine.isAuthenticationWithSshKey,
-      labVirtualMachine.fqdn, labVirtualMachine.labSubnetName,
-      labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      createEnvironment(resourceGroupName, name, labVirtualMachine, options,
+      callback)
     summary: "Create virtual machines in a Lab. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -718,54 +628,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createEnvironment(resourceGroupName, name, labVirtualMachine,
-        labVirtualMachine.notes, labVirtualMachine.ownerObjectId,
-        labVirtualMachine.createdByUserId, labVirtualMachine.createdByUser,
-        labVirtualMachine.computeId, labVirtualMachine.customImageId,
-        labVirtualMachine.osType, labVirtualMachine.size,
-        labVirtualMachine.userName, labVirtualMachine.password,
-        labVirtualMachine.sshKey, labVirtualMachine.isAuthenticationWithSshKey,
-        labVirtualMachine.fqdn, labVirtualMachine.labSubnetName,
-        labVirtualMachine.labVirtualNetworkId,
-        labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-        labVirtualMachine.artifactDeploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-        labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-        labVirtualMachine.galleryImageReference,
-        labVirtualMachine.galleryImageReference.offer,
-        labVirtualMachine.galleryImageReference.publisher,
-        labVirtualMachine.galleryImageReference.sku,
-        labVirtualMachine.galleryImageReference.osType,
-        labVirtualMachine.galleryImageReference.version,
-        labVirtualMachine.provisioningState, labVirtualMachine.id,
-        labVirtualMachine.name, labVirtualMachine.type,
-        labVirtualMachine.location, labVirtualMachine.tags, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       LabOperations.createEnvironment(resourceGroupName, name,
-      labVirtualMachine, labVirtualMachine.notes,
-      labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-      labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-      labVirtualMachine.customImageId, labVirtualMachine.osType,
-      labVirtualMachine.size, labVirtualMachine.userName,
-      labVirtualMachine.password, labVirtualMachine.sshKey,
-      labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-      labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      labVirtualMachine, options, callback)
     children:
       - 'LabOperations#createEnvironment~client'
       - 'LabOperations#createEnvironment~callback'
@@ -775,29 +641,7 @@ items:
     parent: LabOperations
     name: >-
       beginCreateEnvironment(resourceGroupName, name, labVirtualMachine,
-      labVirtualMachine.notes, labVirtualMachine.ownerObjectId,
-      labVirtualMachine.createdByUserId, labVirtualMachine.createdByUser,
-      labVirtualMachine.computeId, labVirtualMachine.customImageId,
-      labVirtualMachine.osType, labVirtualMachine.size,
-      labVirtualMachine.userName, labVirtualMachine.password,
-      labVirtualMachine.sshKey, labVirtualMachine.isAuthenticationWithSshKey,
-      labVirtualMachine.fqdn, labVirtualMachine.labSubnetName,
-      labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     summary: "Create virtual machines in a Lab. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -922,54 +766,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateEnvironment(resourceGroupName, name,
-        labVirtualMachine, labVirtualMachine.notes,
-        labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-        labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-        labVirtualMachine.customImageId, labVirtualMachine.osType,
-        labVirtualMachine.size, labVirtualMachine.userName,
-        labVirtualMachine.password, labVirtualMachine.sshKey,
-        labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-        labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-        labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-        labVirtualMachine.artifactDeploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-        labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-        labVirtualMachine.galleryImageReference,
-        labVirtualMachine.galleryImageReference.offer,
-        labVirtualMachine.galleryImageReference.publisher,
-        labVirtualMachine.galleryImageReference.sku,
-        labVirtualMachine.galleryImageReference.osType,
-        labVirtualMachine.galleryImageReference.version,
-        labVirtualMachine.provisioningState, labVirtualMachine.id,
-        labVirtualMachine.name, labVirtualMachine.type,
-        labVirtualMachine.location, labVirtualMachine.tags, options,
-        options.customHeaders, callback);
+        labVirtualMachine, options, callback);
     fullName: >-
       LabOperations.beginCreateEnvironment(resourceGroupName, name,
-      labVirtualMachine, labVirtualMachine.notes,
-      labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-      labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-      labVirtualMachine.customImageId, labVirtualMachine.osType,
-      labVirtualMachine.size, labVirtualMachine.userName,
-      labVirtualMachine.password, labVirtualMachine.sshKey,
-      labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-      labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      labVirtualMachine, options, callback)
     children:
       - 'LabOperations#beginCreateEnvironment~client'
       - 'LabOperations#beginCreateEnvironment~callback'
@@ -995,8 +795,7 @@ items:
     parent: LabOperations
     name: >-
       generateUploadUri(resourceGroupName, name, generateUploadUriParameter,
-      generateUploadUriParameter.blobName, options, options.customHeaders,
-      callback)
+      options, callback)
     summary: Generate a URI for uploading custom disk images to a Lab.
     type: Method
     syntax:
@@ -1025,12 +824,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GenerateUploadUriResponse} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function generateUploadUri(resourceGroupName, name,
-        generateUploadUriParameter, generateUploadUriParameter.blobName,
-        options, options.customHeaders, callback);
+        generateUploadUriParameter, options, callback);
     fullName: >-
       LabOperations.generateUploadUri(resourceGroupName, name,
-      generateUploadUriParameter, generateUploadUriParameter.blobName, options,
-      options.customHeaders, callback)
+      generateUploadUriParameter, options, callback)
     children:
       - 'LabOperations#generateUploadUri~client'
       - 'LabOperations#generateUploadUri~callback'
@@ -1054,9 +851,7 @@ items:
   - uid: 'LabOperations#listVhds'
     id: listVhds
     parent: LabOperations
-    name: >-
-      listVhds(resourceGroupName, name, options, options.customHeaders,
-      callback)
+    name: 'listVhds(resourceGroupName, name, options, callback)'
     summary: List disk images available for custom image creation.
     type: Method
     syntax:
@@ -1078,12 +873,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLabVhd} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listVhds(resourceGroupName, name, options,
-        options.customHeaders, callback);
-    fullName: >-
-      LabOperations.listVhds(resourceGroupName, name, options,
-      options.customHeaders, callback)
+      content: 'function listVhds(resourceGroupName, name, options, callback);'
+    fullName: 'LabOperations.listVhds(resourceGroupName, name, options, callback)'
     children:
       - 'LabOperations#listVhds~client'
       - 'LabOperations#listVhds~callback'
@@ -1101,9 +892,7 @@ items:
   - uid: 'LabOperations#listBySubscriptionNext'
     id: listBySubscriptionNext
     parent: LabOperations
-    name: >-
-      listBySubscriptionNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listBySubscriptionNext(nextPageLink, options, callback)'
     summary: List labs.
     type: Method
     syntax:
@@ -1122,12 +911,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLab} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listBySubscriptionNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      LabOperations.listBySubscriptionNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listBySubscriptionNext(nextPageLink, options, callback);'
+    fullName: 'LabOperations.listBySubscriptionNext(nextPageLink, options, callback)'
     children:
       - 'LabOperations#listBySubscriptionNext~client'
       - 'LabOperations#listBySubscriptionNext~callback'
@@ -1141,9 +926,7 @@ items:
   - uid: 'LabOperations#listByResourceGroupNext'
     id: listByResourceGroupNext
     parent: LabOperations
-    name: >-
-      listByResourceGroupNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listByResourceGroupNext(nextPageLink, options, callback)'
     summary: List labs.
     type: Method
     syntax:
@@ -1162,12 +945,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLab} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroupNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      LabOperations.listByResourceGroupNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listByResourceGroupNext(nextPageLink, options, callback);'
+    fullName: 'LabOperations.listByResourceGroupNext(nextPageLink, options, callback)'
     children:
       - 'LabOperations#listByResourceGroupNext~client'
       - 'LabOperations#listByResourceGroupNext~callback'
@@ -1181,7 +960,7 @@ items:
   - uid: 'LabOperations#listVhdsNext'
     id: listVhdsNext
     parent: LabOperations
-    name: 'listVhdsNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listVhdsNext(nextPageLink, options, callback)'
     summary: List disk images available for custom image creation.
     type: Method
     syntax:
@@ -1200,12 +979,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLabVhd} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listVhdsNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      LabOperations.listVhdsNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listVhdsNext(nextPageLink, options, callback);'
+    fullName: 'LabOperations.listVhdsNext(nextPageLink, options, callback)'
     children:
       - 'LabOperations#listVhdsNext~client'
       - 'LabOperations#listVhdsNext~callback'

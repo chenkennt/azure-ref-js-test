@@ -28,7 +28,7 @@ items:
     parent: Subnets
     name: >-
       deleteMethod(resourceGroupName, virtualNetworkName, subnetName, options,
-      options.customHeaders, callback)
+      callback)
     summary: The delete subnet operation deletes the specified subnet.
     type: Method
     syntax:
@@ -55,10 +55,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, virtualNetworkName, subnetName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Subnets.deleteMethod(resourceGroupName, virtualNetworkName, subnetName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Subnets#deleteMethod~client'
       - 'Subnets#deleteMethod~callback'
@@ -68,7 +68,7 @@ items:
     parent: Subnets
     name: >-
       beginDeleteMethod(resourceGroupName, virtualNetworkName, subnetName,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: The delete subnet operation deletes the specified subnet.
     type: Method
     syntax:
@@ -95,10 +95,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, virtualNetworkName,
-        subnetName, options, options.customHeaders, callback);
+        subnetName, options, callback);
     fullName: >-
       Subnets.beginDeleteMethod(resourceGroupName, virtualNetworkName,
-      subnetName, options, options.customHeaders, callback)
+      subnetName, options, callback)
     children:
       - 'Subnets#beginDeleteMethod~client'
       - 'Subnets#beginDeleteMethod~callback'
@@ -117,9 +117,7 @@ items:
   - uid: 'Subnets#get'
     id: get
     parent: Subnets
-    name: >-
-      get(resourceGroupName, virtualNetworkName, subnetName, options,
-      options.expand, options.customHeaders, callback)
+    name: 'get(resourceGroupName, virtualNetworkName, subnetName, options, callback)'
     summary: The Get subnet operation retreives information about the specified subnet.
     type: Method
     syntax:
@@ -149,10 +147,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Subnet} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, virtualNetworkName, subnetName, options,
-        options.expand, options.customHeaders, callback);
+        callback);
     fullName: >-
       Subnets.get(resourceGroupName, virtualNetworkName, subnetName, options,
-      options.expand, options.customHeaders, callback)
+      callback)
     children:
       - 'Subnets#get~client'
       - 'Subnets#get~callback'
@@ -174,25 +172,7 @@ items:
     parent: Subnets
     name: >-
       createOrUpdate(resourceGroupName, virtualNetworkName, subnetName,
-      subnetParameters, subnetParameters.addressPrefix,
-      subnetParameters.networkSecurityGroup,
-      subnetParameters.networkSecurityGroup.securityRules,
-      subnetParameters.networkSecurityGroup.defaultSecurityRules,
-      subnetParameters.networkSecurityGroup.networkInterfaces,
-      subnetParameters.networkSecurityGroup.subnets,
-      subnetParameters.networkSecurityGroup.resourceGuid,
-      subnetParameters.networkSecurityGroup.provisioningState,
-      subnetParameters.networkSecurityGroup.etag,
-      subnetParameters.networkSecurityGroup.id,
-      subnetParameters.networkSecurityGroup.location,
-      subnetParameters.networkSecurityGroup.tags, subnetParameters.routeTable,
-      subnetParameters.routeTable.routes, subnetParameters.routeTable.subnets,
-      subnetParameters.routeTable.provisioningState,
-      subnetParameters.routeTable.etag, subnetParameters.routeTable.id,
-      subnetParameters.routeTable.location, subnetParameters.routeTable.tags,
-      subnetParameters.ipConfigurations, subnetParameters.provisioningState,
-      subnetParameters.name, subnetParameters.etag, subnetParameters.id,
-      options, options.customHeaders, callback)
+      subnetParameters, options, callback)
     summary: "The Put Subnet operation creates/updates a subnet in thespecified virtual\rnetwork"
     type: Method
     syntax:
@@ -297,46 +277,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Subnet} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, virtualNetworkName,
-        subnetName, subnetParameters, subnetParameters.addressPrefix,
-        subnetParameters.networkSecurityGroup,
-        subnetParameters.networkSecurityGroup.securityRules,
-        subnetParameters.networkSecurityGroup.defaultSecurityRules,
-        subnetParameters.networkSecurityGroup.networkInterfaces,
-        subnetParameters.networkSecurityGroup.subnets,
-        subnetParameters.networkSecurityGroup.resourceGuid,
-        subnetParameters.networkSecurityGroup.provisioningState,
-        subnetParameters.networkSecurityGroup.etag,
-        subnetParameters.networkSecurityGroup.id,
-        subnetParameters.networkSecurityGroup.location,
-        subnetParameters.networkSecurityGroup.tags, subnetParameters.routeTable,
-        subnetParameters.routeTable.routes, subnetParameters.routeTable.subnets,
-        subnetParameters.routeTable.provisioningState,
-        subnetParameters.routeTable.etag, subnetParameters.routeTable.id,
-        subnetParameters.routeTable.location, subnetParameters.routeTable.tags,
-        subnetParameters.ipConfigurations, subnetParameters.provisioningState,
-        subnetParameters.name, subnetParameters.etag, subnetParameters.id,
-        options, options.customHeaders, callback);
+        subnetName, subnetParameters, options, callback);
     fullName: >-
       Subnets.createOrUpdate(resourceGroupName, virtualNetworkName, subnetName,
-      subnetParameters, subnetParameters.addressPrefix,
-      subnetParameters.networkSecurityGroup,
-      subnetParameters.networkSecurityGroup.securityRules,
-      subnetParameters.networkSecurityGroup.defaultSecurityRules,
-      subnetParameters.networkSecurityGroup.networkInterfaces,
-      subnetParameters.networkSecurityGroup.subnets,
-      subnetParameters.networkSecurityGroup.resourceGuid,
-      subnetParameters.networkSecurityGroup.provisioningState,
-      subnetParameters.networkSecurityGroup.etag,
-      subnetParameters.networkSecurityGroup.id,
-      subnetParameters.networkSecurityGroup.location,
-      subnetParameters.networkSecurityGroup.tags, subnetParameters.routeTable,
-      subnetParameters.routeTable.routes, subnetParameters.routeTable.subnets,
-      subnetParameters.routeTable.provisioningState,
-      subnetParameters.routeTable.etag, subnetParameters.routeTable.id,
-      subnetParameters.routeTable.location, subnetParameters.routeTable.tags,
-      subnetParameters.ipConfigurations, subnetParameters.provisioningState,
-      subnetParameters.name, subnetParameters.etag, subnetParameters.id,
-      options, options.customHeaders, callback)
+      subnetParameters, options, callback)
     children:
       - 'Subnets#createOrUpdate~client'
       - 'Subnets#createOrUpdate~callback'
@@ -346,25 +290,7 @@ items:
     parent: Subnets
     name: >-
       beginCreateOrUpdate(resourceGroupName, virtualNetworkName, subnetName,
-      subnetParameters, subnetParameters.addressPrefix,
-      subnetParameters.networkSecurityGroup,
-      subnetParameters.networkSecurityGroup.securityRules,
-      subnetParameters.networkSecurityGroup.defaultSecurityRules,
-      subnetParameters.networkSecurityGroup.networkInterfaces,
-      subnetParameters.networkSecurityGroup.subnets,
-      subnetParameters.networkSecurityGroup.resourceGuid,
-      subnetParameters.networkSecurityGroup.provisioningState,
-      subnetParameters.networkSecurityGroup.etag,
-      subnetParameters.networkSecurityGroup.id,
-      subnetParameters.networkSecurityGroup.location,
-      subnetParameters.networkSecurityGroup.tags, subnetParameters.routeTable,
-      subnetParameters.routeTable.routes, subnetParameters.routeTable.subnets,
-      subnetParameters.routeTable.provisioningState,
-      subnetParameters.routeTable.etag, subnetParameters.routeTable.id,
-      subnetParameters.routeTable.location, subnetParameters.routeTable.tags,
-      subnetParameters.ipConfigurations, subnetParameters.provisioningState,
-      subnetParameters.name, subnetParameters.etag, subnetParameters.id,
-      options, options.customHeaders, callback)
+      subnetParameters, options, callback)
     summary: "The Put Subnet operation creates/updates a subnet in thespecified virtual\rnetwork"
     type: Method
     syntax:
@@ -469,46 +395,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Subnet} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, virtualNetworkName,
-        subnetName, subnetParameters, subnetParameters.addressPrefix,
-        subnetParameters.networkSecurityGroup,
-        subnetParameters.networkSecurityGroup.securityRules,
-        subnetParameters.networkSecurityGroup.defaultSecurityRules,
-        subnetParameters.networkSecurityGroup.networkInterfaces,
-        subnetParameters.networkSecurityGroup.subnets,
-        subnetParameters.networkSecurityGroup.resourceGuid,
-        subnetParameters.networkSecurityGroup.provisioningState,
-        subnetParameters.networkSecurityGroup.etag,
-        subnetParameters.networkSecurityGroup.id,
-        subnetParameters.networkSecurityGroup.location,
-        subnetParameters.networkSecurityGroup.tags, subnetParameters.routeTable,
-        subnetParameters.routeTable.routes, subnetParameters.routeTable.subnets,
-        subnetParameters.routeTable.provisioningState,
-        subnetParameters.routeTable.etag, subnetParameters.routeTable.id,
-        subnetParameters.routeTable.location, subnetParameters.routeTable.tags,
-        subnetParameters.ipConfigurations, subnetParameters.provisioningState,
-        subnetParameters.name, subnetParameters.etag, subnetParameters.id,
-        options, options.customHeaders, callback);
+        subnetName, subnetParameters, options, callback);
     fullName: >-
       Subnets.beginCreateOrUpdate(resourceGroupName, virtualNetworkName,
-      subnetName, subnetParameters, subnetParameters.addressPrefix,
-      subnetParameters.networkSecurityGroup,
-      subnetParameters.networkSecurityGroup.securityRules,
-      subnetParameters.networkSecurityGroup.defaultSecurityRules,
-      subnetParameters.networkSecurityGroup.networkInterfaces,
-      subnetParameters.networkSecurityGroup.subnets,
-      subnetParameters.networkSecurityGroup.resourceGuid,
-      subnetParameters.networkSecurityGroup.provisioningState,
-      subnetParameters.networkSecurityGroup.etag,
-      subnetParameters.networkSecurityGroup.id,
-      subnetParameters.networkSecurityGroup.location,
-      subnetParameters.networkSecurityGroup.tags, subnetParameters.routeTable,
-      subnetParameters.routeTable.routes, subnetParameters.routeTable.subnets,
-      subnetParameters.routeTable.provisioningState,
-      subnetParameters.routeTable.etag, subnetParameters.routeTable.id,
-      subnetParameters.routeTable.location, subnetParameters.routeTable.tags,
-      subnetParameters.ipConfigurations, subnetParameters.provisioningState,
-      subnetParameters.name, subnetParameters.etag, subnetParameters.id,
-      options, options.customHeaders, callback)
+      subnetName, subnetParameters, options, callback)
     children:
       - 'Subnets#beginCreateOrUpdate~client'
       - 'Subnets#beginCreateOrUpdate~callback'
@@ -533,9 +423,7 @@ items:
   - uid: 'Subnets#list'
     id: list
     parent: Subnets
-    name: >-
-      list(resourceGroupName, virtualNetworkName, options,
-      options.customHeaders, callback)
+    name: 'list(resourceGroupName, virtualNetworkName, options, callback)'
     summary: The List subnets opertion retrieves all the subnets in a virtual network.
     type: Method
     syntax:
@@ -557,12 +445,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SubnetListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, virtualNetworkName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Subnets.list(resourceGroupName, virtualNetworkName, options,
-      options.customHeaders, callback)
+      content: 'function list(resourceGroupName, virtualNetworkName, options, callback);'
+    fullName: 'Subnets.list(resourceGroupName, virtualNetworkName, options, callback)'
     children:
       - 'Subnets#list~client'
       - 'Subnets#list~callback'
@@ -580,7 +464,7 @@ items:
   - uid: 'Subnets#listNext'
     id: listNext
     parent: Subnets
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: The List subnets opertion retrieves all the subnets in a virtual network.
     type: Method
     syntax:
@@ -599,10 +483,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SubnetListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: 'Subnets.listNext(nextPageLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Subnets.listNext(nextPageLink, options, callback)'
     children:
       - 'Subnets#listNext~client'
       - 'Subnets#listNext~callback'

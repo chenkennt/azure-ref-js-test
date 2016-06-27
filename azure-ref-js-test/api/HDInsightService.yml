@@ -37,26 +37,7 @@ items:
   - uid: 'HDInsightService#convertCreationObject'
     id: convertCreationObject
     parent: HDInsightService
-    name: >-
-      convertCreationObject(clusterCreationObject, clusterCreationObject.name,
-      clusterCreationObject.location,
-      clusterCreationObject.defaultStorageAccountName,
-      clusterCreationObject.defaultStorageAccountKey,
-      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
-      clusterCreationObject.password, clusterCreationObject.nodes,
-      clusterCreationObject.additionalStorageAccounts,
-      clusterCreationObject.additionalStorageAccounts.name,
-      clusterCreationObject.additionalStorageAccounts.key,
-      clusterCreationObject.oozieMetastore,
-      clusterCreationObject.oozieMetastore.server,
-      clusterCreationObject.oozieMetastore.database,
-      clusterCreationObject.oozieMetastore.user,
-      clusterCreationObject.oozieMetastore.password,
-      clusterCreationObject.hiveMetastore,
-      clusterCreationObject.hiveMetastore.server,
-      clusterCreationObject.hiveMetastore.database,
-      clusterCreationObject.hiveMetastore.user,
-      clusterCreationObject.hiveMetastore.password)
+    name: convertCreationObject(clusterCreationObject)
     summary: >-
       Converts a cluster creation object into a playload that is actually sent
       to the server to create the cluster.
@@ -131,47 +112,8 @@ items:
         - id: clusterCreationObject.hiveMetastore.password
           type: string
           description: The user password
-      content: >-
-        function convertCreationObject(clusterCreationObject,
-        clusterCreationObject.name, clusterCreationObject.location,
-        clusterCreationObject.defaultStorageAccountName,
-        clusterCreationObject.defaultStorageAccountKey,
-        clusterCreationObject.defaultStorageContainer,
-        clusterCreationObject.user, clusterCreationObject.password,
-        clusterCreationObject.nodes,
-        clusterCreationObject.additionalStorageAccounts,
-        clusterCreationObject.additionalStorageAccounts.name,
-        clusterCreationObject.additionalStorageAccounts.key,
-        clusterCreationObject.oozieMetastore,
-        clusterCreationObject.oozieMetastore.server,
-        clusterCreationObject.oozieMetastore.database,
-        clusterCreationObject.oozieMetastore.user,
-        clusterCreationObject.oozieMetastore.password,
-        clusterCreationObject.hiveMetastore,
-        clusterCreationObject.hiveMetastore.server,
-        clusterCreationObject.hiveMetastore.database,
-        clusterCreationObject.hiveMetastore.user,
-        clusterCreationObject.hiveMetastore.password);
-    fullName: >-
-      HDInsightService.convertCreationObject(clusterCreationObject,
-      clusterCreationObject.name, clusterCreationObject.location,
-      clusterCreationObject.defaultStorageAccountName,
-      clusterCreationObject.defaultStorageAccountKey,
-      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
-      clusterCreationObject.password, clusterCreationObject.nodes,
-      clusterCreationObject.additionalStorageAccounts,
-      clusterCreationObject.additionalStorageAccounts.name,
-      clusterCreationObject.additionalStorageAccounts.key,
-      clusterCreationObject.oozieMetastore,
-      clusterCreationObject.oozieMetastore.server,
-      clusterCreationObject.oozieMetastore.database,
-      clusterCreationObject.oozieMetastore.user,
-      clusterCreationObject.oozieMetastore.password,
-      clusterCreationObject.hiveMetastore,
-      clusterCreationObject.hiveMetastore.server,
-      clusterCreationObject.hiveMetastore.database,
-      clusterCreationObject.hiveMetastore.user,
-      clusterCreationObject.hiveMetastore.password)
+      content: function convertCreationObject(clusterCreationObject);
+    fullName: HDInsightService.convertCreationObject(clusterCreationObject)
     children:
       - 'HDInsightService#convertCreationObject~payload'
       - 'HDInsightService#convertCreationObject~i'
@@ -244,26 +186,7 @@ items:
   - uid: 'HDInsightService#createCluster'
     id: createCluster
     parent: HDInsightService
-    name: >-
-      createCluster(clusterCreationObject, clusterCreationObject.name,
-      clusterCreationObject.location,
-      clusterCreationObject.defaultStorageAccountName,
-      clusterCreationObject.defaultStorageAccountKey,
-      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
-      clusterCreationObject.password, clusterCreationObject.nodes,
-      clusterCreationObject.additionalStorageAccounts,
-      clusterCreationObject.additionalStorageAccounts.name,
-      clusterCreationObject.additionalStorageAccounts.key,
-      clusterCreationObject.oozieMetastore,
-      clusterCreationObject.oozieMetastore.server,
-      clusterCreationObject.oozieMetastore.database,
-      clusterCreationObject.oozieMetastore.user,
-      clusterCreationObject.oozieMetastore.password,
-      clusterCreationObject.hiveMetastore,
-      clusterCreationObject.hiveMetastore.server,
-      clusterCreationObject.hiveMetastore.database,
-      clusterCreationObject.hiveMetastore.user,
-      clusterCreationObject.hiveMetastore.password, callback)
+    name: 'createCluster(clusterCreationObject, callback)'
     summary: Creates a new HDInsight Cluster
     type: Method
     syntax:
@@ -337,47 +260,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                        if an error occurs; otherwise, `response`\r                                                        will contain information related to this operation."
-      content: >-
-        function createCluster(clusterCreationObject,
-        clusterCreationObject.name, clusterCreationObject.location,
-        clusterCreationObject.defaultStorageAccountName,
-        clusterCreationObject.defaultStorageAccountKey,
-        clusterCreationObject.defaultStorageContainer,
-        clusterCreationObject.user, clusterCreationObject.password,
-        clusterCreationObject.nodes,
-        clusterCreationObject.additionalStorageAccounts,
-        clusterCreationObject.additionalStorageAccounts.name,
-        clusterCreationObject.additionalStorageAccounts.key,
-        clusterCreationObject.oozieMetastore,
-        clusterCreationObject.oozieMetastore.server,
-        clusterCreationObject.oozieMetastore.database,
-        clusterCreationObject.oozieMetastore.user,
-        clusterCreationObject.oozieMetastore.password,
-        clusterCreationObject.hiveMetastore,
-        clusterCreationObject.hiveMetastore.server,
-        clusterCreationObject.hiveMetastore.database,
-        clusterCreationObject.hiveMetastore.user,
-        clusterCreationObject.hiveMetastore.password, callback);
-    fullName: >-
-      HDInsightService.createCluster(clusterCreationObject,
-      clusterCreationObject.name, clusterCreationObject.location,
-      clusterCreationObject.defaultStorageAccountName,
-      clusterCreationObject.defaultStorageAccountKey,
-      clusterCreationObject.defaultStorageContainer, clusterCreationObject.user,
-      clusterCreationObject.password, clusterCreationObject.nodes,
-      clusterCreationObject.additionalStorageAccounts,
-      clusterCreationObject.additionalStorageAccounts.name,
-      clusterCreationObject.additionalStorageAccounts.key,
-      clusterCreationObject.oozieMetastore,
-      clusterCreationObject.oozieMetastore.server,
-      clusterCreationObject.oozieMetastore.database,
-      clusterCreationObject.oozieMetastore.user,
-      clusterCreationObject.oozieMetastore.password,
-      clusterCreationObject.hiveMetastore,
-      clusterCreationObject.hiveMetastore.server,
-      clusterCreationObject.hiveMetastore.database,
-      clusterCreationObject.hiveMetastore.user,
-      clusterCreationObject.hiveMetastore.password, callback)
+      content: 'function createCluster(clusterCreationObject, callback);'
+    fullName: 'HDInsightService.createCluster(clusterCreationObject, callback)'
     children:
       - 'HDInsightService#createCluster~payload'
       - 'HDInsightService#createCluster~regionCloudServiceName'

@@ -364,9 +364,7 @@ items:
   - uid: 'KeyVaultClient#createKey'
     id: createKey
     parent: KeyVaultClient
-    name: >-
-      createKey(vault, keyName, request.kty, request.key_size, request.key_ops,
-      request.attributes, request.tags, callback)
+    name: 'createKey(vault, keyName, callback)'
     summary: >-
       Performs a CREATE KEY operation, which creates a key and stores in the
       service.
@@ -403,12 +401,8 @@ items:
         - id: callback
           type: KeyVaultClient~keyBundleCallback
           description: A callback that will be called on completion.
-      content: >-
-        function createKey(vault, keyName, request.kty, request.key_size,
-        request.key_ops, request.attributes, request.tags, callback);
-    fullName: >-
-      KeyVaultClient.createKey(vault, keyName, request.kty, request.key_size,
-      request.key_ops, request.attributes, request.tags, callback)
+      content: 'function createKey(vault, keyName, callback);'
+    fullName: 'KeyVaultClient.createKey(vault, keyName, callback)'
     children:
       - 'KeyVaultClient#createKey~result'
   - uid: 'KeyVaultClient#deleteKey'
@@ -435,9 +429,7 @@ items:
   - uid: 'KeyVaultClient#updateKey'
     id: updateKey
     parent: KeyVaultClient
-    name: >-
-      updateKey(keyIdentifier, request.key_ops, request.attributes,
-      request.tags, callback)
+    name: 'updateKey(keyIdentifier, callback)'
     summary: >-
       Performs an UPDATE KEY operation, which updates attributes of a key
       version.
@@ -463,20 +455,14 @@ items:
         - id: callback
           type: KeyVaultClient~keyBundleCallback
           description: A callback that will be called on completion.
-      content: >-
-        function updateKey(keyIdentifier, request.key_ops, request.attributes,
-        request.tags, callback);
-    fullName: >-
-      KeyVaultClient.updateKey(keyIdentifier, request.key_ops,
-      request.attributes, request.tags, callback)
+      content: 'function updateKey(keyIdentifier, callback);'
+    fullName: 'KeyVaultClient.updateKey(keyIdentifier, callback)'
     children:
       - 'KeyVaultClient#updateKey~result'
   - uid: 'KeyVaultClient#importKey'
     id: importKey
     parent: KeyVaultClient
-    name: >-
-      importKey(vault, keyName, request.key, request.hsm, request.attributes,
-      request.tags, callback)
+    name: 'importKey(vault, keyName, callback)'
     summary: >-
       Performs an IMPORT KEY operation, which imports existing key material into
       a new key that is stored on the service.
@@ -510,12 +496,8 @@ items:
         - id: callback
           type: KeyVaultClient~keyBundleCallback
           description: A callback that will be called on completion.
-      content: >-
-        function importKey(vault, keyName, request.key, request.hsm,
-        request.attributes, request.tags, callback);
-    fullName: >-
-      KeyVaultClient.importKey(vault, keyName, request.key, request.hsm,
-      request.attributes, request.tags, callback)
+      content: 'function importKey(vault, keyName, callback);'
+    fullName: 'KeyVaultClient.importKey(vault, keyName, callback)'
     children:
       - 'KeyVaultClient#importKey~keyIdentifier'
       - 'KeyVaultClient#importKey~result'
@@ -592,9 +574,7 @@ items:
   - uid: 'KeyVaultClient#setSecret'
     id: setSecret
     parent: KeyVaultClient
-    name: >-
-      setSecret(vault, secretName, request.value, request.contentType,
-      request.attributes, request.tags, callback)
+    name: 'setSecret(vault, secretName, callback)'
     summary: 'Performs a SET SECRET operation, which stores a secret in the service.'
     type: Method
     syntax:
@@ -622,21 +602,15 @@ items:
         - id: callback
           type: KeyVaultClient~secretBundleCallback
           description: A callback that will be called on completion.
-      content: >-
-        function setSecret(vault, secretName, request.value,
-        request.contentType, request.attributes, request.tags, callback);
-    fullName: >-
-      KeyVaultClient.setSecret(vault, secretName, request.value,
-      request.contentType, request.attributes, request.tags, callback)
+      content: 'function setSecret(vault, secretName, callback);'
+    fullName: 'KeyVaultClient.setSecret(vault, secretName, callback)'
     children:
       - 'KeyVaultClient#setSecret~secretIdentifier'
       - 'KeyVaultClient#setSecret~result'
   - uid: 'KeyVaultClient#updateSecret'
     id: updateSecret
     parent: KeyVaultClient
-    name: >-
-      updateSecret(secretIdentifier, request.contentType, request.attributes,
-      request.tags, callback)
+    name: 'updateSecret(secretIdentifier, callback)'
     summary: >-
       Performs an UPDATE SECRET operation, which updates attributes of a secret
       version.
@@ -660,12 +634,8 @@ items:
         - id: callback
           type: KeyVaultClient~secretBundleCallback
           description: A callback that will be called on completion.
-      content: >-
-        function updateSecret(secretIdentifier, request.contentType,
-        request.attributes, request.tags, callback);
-    fullName: >-
-      KeyVaultClient.updateSecret(secretIdentifier, request.contentType,
-      request.attributes, request.tags, callback)
+      content: 'function updateSecret(secretIdentifier, callback);'
+    fullName: 'KeyVaultClient.updateSecret(secretIdentifier, callback)'
     children:
       - 'KeyVaultClient#updateSecret~result'
   - uid: 'KeyVaultClient#deleteSecret'

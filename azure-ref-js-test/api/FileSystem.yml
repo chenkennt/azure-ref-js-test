@@ -38,9 +38,7 @@ items:
   - uid: 'FileSystem#concurrentAppend'
     id: concurrentAppend
     parent: FileSystem
-    name: >-
-      concurrentAppend(accountName, filePath, streamContents, options,
-      options.appendMode, options.customHeaders, callback)
+    name: 'concurrentAppend(accountName, filePath, streamContents, options, callback)'
     summary: "Appends to the specified file. This method supports multiple concurrent\rappends to the file. NOTE: Concurrent append and normal (serial) append\rCANNOT be used interchangeably. Once a file has been appended to using\reither append option, it can only be appended to using that append option."
     type: Method
     syntax:
@@ -70,10 +68,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function concurrentAppend(accountName, filePath, streamContents,
-        options, options.appendMode, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       FileSystem.concurrentAppend(accountName, filePath, streamContents,
-      options, options.appendMode, options.customHeaders, callback)
+      options, callback)
     children:
       - 'FileSystem#concurrentAppend~client'
       - 'FileSystem#concurrentAppend~callback'
@@ -96,9 +94,7 @@ items:
   - uid: 'FileSystem#checkAccess'
     id: checkAccess
     parent: FileSystem
-    name: >-
-      checkAccess(accountName, path, options, options.fsaction,
-      options.customHeaders, callback)
+    name: 'checkAccess(accountName, path, options, callback)'
     summary: Checks if the specified access is available at the given path.
     type: Method
     syntax:
@@ -123,12 +119,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function checkAccess(accountName, path, options, options.fsaction,
-        options.customHeaders, callback);
-    fullName: >-
-      FileSystem.checkAccess(accountName, path, options, options.fsaction,
-      options.customHeaders, callback)
+      content: 'function checkAccess(accountName, path, options, callback);'
+    fullName: 'FileSystem.checkAccess(accountName, path, options, callback)'
     children:
       - 'FileSystem#checkAccess~client'
       - 'FileSystem#checkAccess~callback'
@@ -148,7 +140,7 @@ items:
   - uid: 'FileSystem#mkdirs'
     id: mkdirs
     parent: FileSystem
-    name: 'mkdirs(accountName, path, options, options.customHeaders, callback)'
+    name: 'mkdirs(accountName, path, options, callback)'
     summary: Creates a directory.
     type: Method
     syntax:
@@ -170,12 +162,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileOperationResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function mkdirs(accountName, path, options, options.customHeaders,
-        callback);
-    fullName: >-
-      FileSystem.mkdirs(accountName, path, options, options.customHeaders,
-      callback)
+      content: 'function mkdirs(accountName, path, options, callback);'
+    fullName: 'FileSystem.mkdirs(accountName, path, options, callback)'
     children:
       - 'FileSystem#mkdirs~client'
       - 'FileSystem#mkdirs~callback'
@@ -194,9 +182,7 @@ items:
   - uid: 'FileSystem#concat'
     id: concat
     parent: FileSystem
-    name: >-
-      concat(accountName, destinationPath, sources, options,
-      options.customHeaders, callback)
+    name: 'concat(accountName, destinationPath, sources, options, callback)'
     summary: "Concatenates the list of source files into the destination file, removing\rall source files upon success."
     type: Method
     syntax:
@@ -223,10 +209,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function concat(accountName, destinationPath, sources, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       FileSystem.concat(accountName, destinationPath, sources, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'FileSystem#concat~client'
       - 'FileSystem#concat~callback'
@@ -248,7 +234,7 @@ items:
     parent: FileSystem
     name: >-
       msConcat(accountName, msConcatDestinationPath, streamContents, options,
-      options.deleteSourceDirectory, options.customHeaders, callback)
+      callback)
     summary: "Concatenates the list of source files into the destination file, deleting\rall source files upon success. This method accepts more source file paths\rthan the Concat method. This method and the parameters it accepts are\rsubject to change for usability in an upcoming version."
     type: Method
     syntax:
@@ -278,11 +264,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function msConcat(accountName, msConcatDestinationPath, streamContents,
-        options, options.deleteSourceDirectory, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       FileSystem.msConcat(accountName, msConcatDestinationPath, streamContents,
-      options, options.deleteSourceDirectory, options.customHeaders, callback)
+      options, callback)
     children:
       - 'FileSystem#msConcat~client'
       - 'FileSystem#msConcat~callback'
@@ -303,9 +288,7 @@ items:
   - uid: 'FileSystem#listFileStatus'
     id: listFileStatus
     parent: FileSystem
-    name: >-
-      listFileStatus(accountName, listFilePath, options, options.listSize,
-      options.listAfter, options.listBefore, options.customHeaders, callback)
+    name: 'listFileStatus(accountName, listFilePath, options, callback)'
     summary: "Get the list of file status objects specified by the file path, with\roptional pagination parameters"
     type: Method
     syntax:
@@ -336,14 +319,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileStatusesResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listFileStatus(accountName, listFilePath, options,
-        options.listSize, options.listAfter, options.listBefore,
-        options.customHeaders, callback);
-    fullName: >-
-      FileSystem.listFileStatus(accountName, listFilePath, options,
-      options.listSize, options.listAfter, options.listBefore,
-      options.customHeaders, callback)
+      content: 'function listFileStatus(accountName, listFilePath, options, callback);'
+    fullName: 'FileSystem.listFileStatus(accountName, listFilePath, options, callback)'
     children:
       - 'FileSystem#listFileStatus~client'
       - 'FileSystem#listFileStatus~callback'
@@ -367,7 +344,7 @@ items:
     parent: FileSystem
     name: >-
       getContentSummary(accountName, getContentSummaryFilePath, options,
-      options.customHeaders, callback)
+      callback)
     summary: Gets the file content summary object specified by the file path.
     type: Method
     syntax:
@@ -391,10 +368,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContentSummaryResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getContentSummary(accountName, getContentSummaryFilePath,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       FileSystem.getContentSummary(accountName, getContentSummaryFilePath,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'FileSystem#getContentSummary~client'
       - 'FileSystem#getContentSummary~callback'
@@ -413,9 +390,7 @@ items:
   - uid: 'FileSystem#getFileStatus'
     id: getFileStatus
     parent: FileSystem
-    name: >-
-      getFileStatus(accountName, getFilePath, options, options.customHeaders,
-      callback)
+    name: 'getFileStatus(accountName, getFilePath, options, callback)'
     summary: Get the file status object specified by the file path.
     type: Method
     syntax:
@@ -437,12 +412,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileStatusResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getFileStatus(accountName, getFilePath, options,
-        options.customHeaders, callback);
-    fullName: >-
-      FileSystem.getFileStatus(accountName, getFilePath, options,
-      options.customHeaders, callback)
+      content: 'function getFileStatus(accountName, getFilePath, options, callback);'
+    fullName: 'FileSystem.getFileStatus(accountName, getFilePath, options, callback)'
     children:
       - 'FileSystem#getFileStatus~client'
       - 'FileSystem#getFileStatus~callback'
@@ -461,9 +432,7 @@ items:
   - uid: 'FileSystem#append'
     id: append
     parent: FileSystem
-    name: >-
-      append(accountName, directFilePath, streamContents, options,
-      options.customHeaders, callback)
+    name: 'append(accountName, directFilePath, streamContents, options, callback)'
     summary: "Appends to the specified file. This method does not support multiple\rconcurrent appends to the file. NOTE: Concurrent append and normal\r(serial) append CANNOT be used interchangeably. Once a file has been\rappended to using either append option, it can only be appended to using\rthat append option. Use the ConcurrentAppend option if you would like\rsupport for concurrent appends."
     type: Method
     syntax:
@@ -490,10 +459,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function append(accountName, directFilePath, streamContents, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       FileSystem.append(accountName, directFilePath, streamContents, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'FileSystem#append~client'
       - 'FileSystem#append~callback'
@@ -515,9 +484,7 @@ items:
   - uid: 'FileSystem#create'
     id: create
     parent: FileSystem
-    name: >-
-      create(accountName, directFilePath, options, options.streamContents,
-      options.overwrite, options.customHeaders, callback)
+    name: 'create(accountName, directFilePath, options, callback)'
     summary: Creates a file with optionally specified content.
     type: Method
     syntax:
@@ -545,14 +512,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function create(accountName, directFilePath, options,
-        options.streamContents, options.overwrite, options.customHeaders,
-        callback);
-    fullName: >-
-      FileSystem.create(accountName, directFilePath, options,
-      options.streamContents, options.overwrite, options.customHeaders,
-      callback)
+      content: 'function create(accountName, directFilePath, options, callback);'
+    fullName: 'FileSystem.create(accountName, directFilePath, options, callback)'
     children:
       - 'FileSystem#create~client'
       - 'FileSystem#create~callback'
@@ -576,9 +537,7 @@ items:
   - uid: 'FileSystem#open'
     id: open
     parent: FileSystem
-    name: >-
-      open(accountName, directFilePath, options, options.length, options.offset,
-      options.customHeaders, callback)
+    name: 'open(accountName, directFilePath, options, callback)'
     summary: Opens and reads from the specified file.
     type: Method
     syntax:
@@ -604,12 +563,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function open(accountName, directFilePath, options, options.length,
-        options.offset, options.customHeaders, callback);
-    fullName: >-
-      FileSystem.open(accountName, directFilePath, options, options.length,
-      options.offset, options.customHeaders, callback)
+      content: 'function open(accountName, directFilePath, options, callback);'
+    fullName: 'FileSystem.open(accountName, directFilePath, options, callback)'
     children:
       - 'FileSystem#open~client'
       - 'FileSystem#open~callback'
@@ -631,9 +586,7 @@ items:
   - uid: 'FileSystem#setAcl'
     id: setAcl
     parent: FileSystem
-    name: >-
-      setAcl(accountName, setAclFilePath, aclspec, options,
-      options.customHeaders, callback)
+    name: 'setAcl(accountName, setAclFilePath, aclspec, options, callback)'
     summary: Sets the Access Control List (ACL) for a file or folder.
     type: Method
     syntax:
@@ -660,10 +613,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function setAcl(accountName, setAclFilePath, aclspec, options,
-        options.customHeaders, callback);
-    fullName: >-
-      FileSystem.setAcl(accountName, setAclFilePath, aclspec, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'FileSystem.setAcl(accountName, setAclFilePath, aclspec, options, callback)'
     children:
       - 'FileSystem#setAcl~client'
       - 'FileSystem#setAcl~callback'
@@ -684,7 +635,7 @@ items:
     parent: FileSystem
     name: >-
       modifyAclEntries(accountName, modifyAclFilePath, aclspec, options,
-      options.customHeaders, callback)
+      callback)
     summary: Modifies existing Access Control List (ACL) entries on a file or folder.
     type: Method
     syntax:
@@ -711,10 +662,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function modifyAclEntries(accountName, modifyAclFilePath, aclspec,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       FileSystem.modifyAclEntries(accountName, modifyAclFilePath, aclspec,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'FileSystem#modifyAclEntries~client'
       - 'FileSystem#modifyAclEntries~callback'
@@ -735,7 +686,7 @@ items:
     parent: FileSystem
     name: >-
       removeAclEntries(accountName, removeAclFilePath, aclspec, options,
-      options.customHeaders, callback)
+      callback)
     summary: Removes existing Access Control List (ACL) entries for a file or folder.
     type: Method
     syntax:
@@ -762,10 +713,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function removeAclEntries(accountName, removeAclFilePath, aclspec,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       FileSystem.removeAclEntries(accountName, removeAclFilePath, aclspec,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'FileSystem#removeAclEntries~client'
       - 'FileSystem#removeAclEntries~callback'
@@ -784,9 +735,7 @@ items:
   - uid: 'FileSystem#getAclStatus'
     id: getAclStatus
     parent: FileSystem
-    name: >-
-      getAclStatus(accountName, aclFilePath, options, options.customHeaders,
-      callback)
+    name: 'getAclStatus(accountName, aclFilePath, options, callback)'
     summary: >-
       Gets Access Control List (ACL) entries for the specified file or
       directory.
@@ -810,12 +759,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AclStatusResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getAclStatus(accountName, aclFilePath, options,
-        options.customHeaders, callback);
-    fullName: >-
-      FileSystem.getAclStatus(accountName, aclFilePath, options,
-      options.customHeaders, callback)
+      content: 'function getAclStatus(accountName, aclFilePath, options, callback);'
+    fullName: 'FileSystem.getAclStatus(accountName, aclFilePath, options, callback)'
     children:
       - 'FileSystem#getAclStatus~client'
       - 'FileSystem#getAclStatus~callback'
@@ -834,9 +779,7 @@ items:
   - uid: 'FileSystem#deleteMethod'
     id: deleteMethod
     parent: FileSystem
-    name: >-
-      deleteMethod(accountName, filePath, options, options.recursive,
-      options.customHeaders, callback)
+    name: 'deleteMethod(accountName, filePath, options, callback)'
     summary: 'Deletes the requested file or directory, optionally recursively.'
     type: Method
     syntax:
@@ -861,12 +804,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileOperationResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(accountName, filePath, options, options.recursive,
-        options.customHeaders, callback);
-    fullName: >-
-      FileSystem.deleteMethod(accountName, filePath, options, options.recursive,
-      options.customHeaders, callback)
+      content: 'function deleteMethod(accountName, filePath, options, callback);'
+    fullName: 'FileSystem.deleteMethod(accountName, filePath, options, callback)'
     children:
       - 'FileSystem#deleteMethod~client'
       - 'FileSystem#deleteMethod~callback'
@@ -886,9 +825,7 @@ items:
   - uid: 'FileSystem#rename'
     id: rename
     parent: FileSystem
-    name: >-
-      rename(accountName, renameFilePath, destination, options,
-      options.customHeaders, callback)
+    name: 'rename(accountName, renameFilePath, destination, options, callback)'
     summary: Rename a file or directory.
     type: Method
     syntax:
@@ -915,10 +852,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FileOperationResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function rename(accountName, renameFilePath, destination, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       FileSystem.rename(accountName, renameFilePath, destination, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'FileSystem#rename~client'
       - 'FileSystem#rename~callback'
@@ -937,9 +874,7 @@ items:
   - uid: 'FileSystem#setOwner'
     id: setOwner
     parent: FileSystem
-    name: >-
-      setOwner(accountName, setOwnerFilePath, options, options.owner,
-      options.group, options.customHeaders, callback)
+    name: 'setOwner(accountName, setOwnerFilePath, options, callback)'
     summary: Sets the owner of a file or directory.
     type: Method
     syntax:
@@ -967,12 +902,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function setOwner(accountName, setOwnerFilePath, options, options.owner,
-        options.group, options.customHeaders, callback);
-    fullName: >-
-      FileSystem.setOwner(accountName, setOwnerFilePath, options, options.owner,
-      options.group, options.customHeaders, callback)
+      content: 'function setOwner(accountName, setOwnerFilePath, options, callback);'
+    fullName: 'FileSystem.setOwner(accountName, setOwnerFilePath, options, callback)'
     children:
       - 'FileSystem#setOwner~client'
       - 'FileSystem#setOwner~callback'
@@ -993,9 +924,7 @@ items:
   - uid: 'FileSystem#setPermission'
     id: setPermission
     parent: FileSystem
-    name: >-
-      setPermission(accountName, setPermissionFilePath, options,
-      options.permission, options.customHeaders, callback)
+    name: 'setPermission(accountName, setPermissionFilePath, options, callback)'
     summary: Sets the permission of the file or folder.
     type: Method
     syntax:
@@ -1022,10 +951,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function setPermission(accountName, setPermissionFilePath, options,
-        options.permission, options.customHeaders, callback);
+        callback);
     fullName: >-
       FileSystem.setPermission(accountName, setPermissionFilePath, options,
-      options.permission, options.customHeaders, callback)
+      callback)
     children:
       - 'FileSystem#setPermission~client'
       - 'FileSystem#setPermission~callback'

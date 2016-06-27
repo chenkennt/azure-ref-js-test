@@ -50,10 +50,7 @@ items:
   - uid: 'ApplicationGatewayOperations~ApplicationGatewayOperations#addCertificate'
     id: addCertificate
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      addCertificate(gatewayName, certificateName, certificate,
-      certificate.data, certificate.certificateFormat, certificate.password,
-      certificate.statusCode, certificate.requestId, callback)
+    name: 'addCertificate(gatewayName, certificateName, certificate, callback)'
     summary: "The Add certificate operation adds the ssl certificate to the application\rgateway  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -87,13 +84,10 @@ items:
         description: The response stream.
       content: >-
         function addCertificate(gatewayName, certificateName, certificate,
-        certificate.data, certificate.certificateFormat, certificate.password,
-        certificate.statusCode, certificate.requestId, callback);
+        callback);
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.addCertificate(gatewayName,
-      certificateName, certificate, certificate.data,
-      certificate.certificateFormat, certificate.password,
-      certificate.statusCode, certificate.requestId, callback)
+      certificateName, certificate, callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#addCertificate~client2
@@ -101,10 +95,7 @@ items:
       ApplicationGatewayOperations~ApplicationGatewayOperations#beginAddCertificate
     id: beginAddCertificate
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      beginAddCertificate(gatewayName, certificateName, certificate,
-      certificate.data, certificate.certificateFormat, certificate.password,
-      certificate.statusCode, certificate.requestId, callback)
+    name: 'beginAddCertificate(gatewayName, certificateName, certificate, callback)'
     summary: "The Begin Add certificate operation adds the ssl certificate to the\rapplication gateway  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -138,13 +129,10 @@ items:
         description: The response stream.
       content: >-
         function beginAddCertificate(gatewayName, certificateName, certificate,
-        certificate.data, certificate.certificateFormat, certificate.password,
-        certificate.statusCode, certificate.requestId, callback);
+        callback);
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.beginAddCertificate(gatewayName,
-      certificateName, certificate, certificate.data,
-      certificate.certificateFormat, certificate.password,
-      certificate.statusCode, certificate.requestId, callback)
+      certificateName, certificate, callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#beginAddCertificate~url2
@@ -194,10 +182,7 @@ items:
       ApplicationGatewayOperations~ApplicationGatewayOperations#beginCreateApplicationGateway
     id: beginCreateApplicationGateway
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      beginCreateApplicationGateway(parameters, parameters.description,
-      parameters.gatewaySize, parameters.instanceCount, parameters.name,
-      parameters.subnets, parameters.vnetName, callback)
+    name: 'beginCreateApplicationGateway(parameters, callback)'
     summary: "The Begin Create Application Gateway operation  creates Application\rGateway with the specified  parameters.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -228,15 +213,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginCreateApplicationGateway(parameters,
-        parameters.description, parameters.gatewaySize,
-        parameters.instanceCount, parameters.name, parameters.subnets,
-        parameters.vnetName, callback);
+      content: 'function beginCreateApplicationGateway(parameters, callback);'
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.beginCreateApplicationGateway(parameters,
-      parameters.description, parameters.gatewaySize, parameters.instanceCount,
-      parameters.name, parameters.subnets, parameters.vnetName, callback)
+      callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#beginCreateApplicationGateway~url2
@@ -401,9 +381,7 @@ items:
       ApplicationGatewayOperations~ApplicationGatewayOperations#beginExecuteOperation
     id: beginExecuteOperation
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      beginExecuteOperation(gatewayName, parameters, parameters.operationType,
-      callback)
+    name: 'beginExecuteOperation(gatewayName, parameters, callback)'
     summary: "The Execute Application Gateway Operation executes specified operation on\rApplication Gateway .  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -422,12 +400,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginExecuteOperation(gatewayName, parameters,
-        parameters.operationType, callback);
+      content: 'function beginExecuteOperation(gatewayName, parameters, callback);'
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.beginExecuteOperation(gatewayName,
-      parameters, parameters.operationType, callback)
+      parameters, callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#beginExecuteOperation~url2
@@ -470,12 +446,7 @@ items:
   - uid: 'ApplicationGatewayOperations~ApplicationGatewayOperations#beginSetConfig'
     id: beginSetConfig
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      beginSetConfig(gatewayName, config, config.frontendIPConfigurations,
-      config.frontendPorts, config.probes, config.backendAddressPools,
-      config.backendHttpSettingsList, config.httpListeners,
-      config.httpLoadBalancingRules, config.statusCode, config.requestId,
-      callback)
+    name: 'beginSetConfig(gatewayName, config, callback)'
     summary: "The Begin Set Application Gateway config operation  sets the specified\rconfig on the application gateway  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -516,18 +487,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginSetConfig(gatewayName, config,
-        config.frontendIPConfigurations, config.frontendPorts, config.probes,
-        config.backendAddressPools, config.backendHttpSettingsList,
-        config.httpListeners, config.httpLoadBalancingRules, config.statusCode,
-        config.requestId, callback);
+      content: 'function beginSetConfig(gatewayName, config, callback);'
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.beginSetConfig(gatewayName,
-      config, config.frontendIPConfigurations, config.frontendPorts,
-      config.probes, config.backendAddressPools, config.backendHttpSettingsList,
-      config.httpListeners, config.httpLoadBalancingRules, config.statusCode,
-      config.requestId, callback)
+      config, callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#beginSetConfig~url2
@@ -707,11 +670,7 @@ items:
       ApplicationGatewayOperations~ApplicationGatewayOperations#beginUpdateApplicationGateway
     id: beginUpdateApplicationGateway
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      beginUpdateApplicationGateway(gatewayName, updateParameters,
-      updateParameters.description, updateParameters.gatewaySize,
-      updateParameters.instanceCount, updateParameters.subnets,
-      updateParameters.vnetName, callback)
+    name: 'beginUpdateApplicationGateway(gatewayName, updateParameters, callback)'
     summary: "The Begin Update Application Gateway operation  updates Application\rGateway with the specified  parameters.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -744,14 +703,10 @@ items:
         description: The response stream.
       content: >-
         function beginUpdateApplicationGateway(gatewayName, updateParameters,
-        updateParameters.description, updateParameters.gatewaySize,
-        updateParameters.instanceCount, updateParameters.subnets,
-        updateParameters.vnetName, callback);
+        callback);
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.beginUpdateApplicationGateway(gatewayName,
-      updateParameters, updateParameters.description,
-      updateParameters.gatewaySize, updateParameters.instanceCount,
-      updateParameters.subnets, updateParameters.vnetName, callback)
+      updateParameters, callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#beginUpdateApplicationGateway~url2
@@ -808,10 +763,7 @@ items:
   - uid: 'ApplicationGatewayOperations~ApplicationGatewayOperations#create'
     id: create
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      create(parameters, parameters.description, parameters.gatewaySize,
-      parameters.instanceCount, parameters.name, parameters.subnets,
-      parameters.vnetName, callback)
+    name: 'create(parameters, callback)'
     summary: "The Create Application Gateway operation  creates Application Gateway with\rthe specified parameters.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -842,14 +794,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(parameters, parameters.description,
-        parameters.gatewaySize, parameters.instanceCount, parameters.name,
-        parameters.subnets, parameters.vnetName, callback);
+      content: 'function create(parameters, callback);'
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.create(parameters,
-      parameters.description, parameters.gatewaySize, parameters.instanceCount,
-      parameters.name, parameters.subnets, parameters.vnetName, callback)
+      callback)
     children:
       - 'ApplicationGatewayOperations~ApplicationGatewayOperations#create~client2'
   - uid: 'ApplicationGatewayOperations~ApplicationGatewayOperations#deleteMethod'
@@ -905,9 +853,7 @@ items:
   - uid: 'ApplicationGatewayOperations~ApplicationGatewayOperations#executeOperation'
     id: executeOperation
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      executeOperation(gatewayName, parameters, parameters.operationType,
-      callback)
+    name: 'executeOperation(gatewayName, parameters, callback)'
     summary: "The Execute Application Gateway Operation executes specofoed operation in\rthe Application Gateway.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -926,12 +872,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function executeOperation(gatewayName, parameters,
-        parameters.operationType, callback);
+      content: 'function executeOperation(gatewayName, parameters, callback);'
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.executeOperation(gatewayName,
-      parameters, parameters.operationType, callback)
+      parameters, callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#executeOperation~client2
@@ -1190,12 +1134,7 @@ items:
   - uid: 'ApplicationGatewayOperations~ApplicationGatewayOperations#setConfig'
     id: setConfig
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      setConfig(gatewayName, config, config.frontendIPConfigurations,
-      config.frontendPorts, config.probes, config.backendAddressPools,
-      config.backendHttpSettingsList, config.httpListeners,
-      config.httpLoadBalancingRules, config.statusCode, config.requestId,
-      callback)
+    name: 'setConfig(gatewayName, config, callback)'
     summary: "The Set Application Gateway Config operation  sets the specified config on\rthe application gateway  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -1236,28 +1175,17 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function setConfig(gatewayName, config, config.frontendIPConfigurations,
-        config.frontendPorts, config.probes, config.backendAddressPools,
-        config.backendHttpSettingsList, config.httpListeners,
-        config.httpLoadBalancingRules, config.statusCode, config.requestId,
-        callback);
+      content: 'function setConfig(gatewayName, config, callback);'
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.setConfig(gatewayName,
-      config, config.frontendIPConfigurations, config.frontendPorts,
-      config.probes, config.backendAddressPools, config.backendHttpSettingsList,
-      config.httpListeners, config.httpLoadBalancingRules, config.statusCode,
-      config.requestId, callback)
+      config, callback)
     children:
       - >-
         ApplicationGatewayOperations~ApplicationGatewayOperations#setConfig~client2
   - uid: 'ApplicationGatewayOperations~ApplicationGatewayOperations#update'
     id: update
     parent: ApplicationGatewayOperations~ApplicationGatewayOperations
-    name: >-
-      update(gatewayName, updateParameters, updateParameters.description,
-      updateParameters.gatewaySize, updateParameters.instanceCount,
-      updateParameters.subnets, updateParameters.vnetName, callback)
+    name: 'update(gatewayName, updateParameters, callback)'
     summary: "The Update Application Gateway operation  updates Application Gateway with\rthe specified  parameters.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -1288,16 +1216,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function update(gatewayName, updateParameters,
-        updateParameters.description, updateParameters.gatewaySize,
-        updateParameters.instanceCount, updateParameters.subnets,
-        updateParameters.vnetName, callback);
+      content: 'function update(gatewayName, updateParameters, callback);'
     fullName: >-
       ApplicationGatewayOperations~ApplicationGatewayOperations.update(gatewayName,
-      updateParameters, updateParameters.description,
-      updateParameters.gatewaySize, updateParameters.instanceCount,
-      updateParameters.subnets, updateParameters.vnetName, callback)
+      updateParameters, callback)
     children:
       - 'ApplicationGatewayOperations~ApplicationGatewayOperations#update~client2'
 references:

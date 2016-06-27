@@ -43,7 +43,7 @@ items:
   - uid: 'QueueService#getServiceProperties'
     id: getServiceProperties
     parent: QueueService
-    name: 'getServiceProperties(options, options.timeoutIntervalInMs, callback)'
+    name: 'getServiceProperties(options, callback)'
     summary: >-
       Gets the properties of a storage account’s Queue service, including
       Microsoft Azure Storage Analytics.
@@ -59,12 +59,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `serviceProperties`\r                                                                     will contain the properties and `response`\r                                                                     will contain information related to this operation."
-      content: >-
-        function getServiceProperties(options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      QueueService.getServiceProperties(options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function getServiceProperties(options, callback);'
+    fullName: 'QueueService.getServiceProperties(options, callback)'
     children:
       - 'QueueService#getServiceProperties~options'
       - 'QueueService#getServiceProperties~webResource'
@@ -72,9 +68,7 @@ items:
   - uid: 'QueueService#setServiceProperties'
     id: setServiceProperties
     parent: QueueService
-    name: >-
-      setServiceProperties(serviceProperties, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'setServiceProperties(serviceProperties, options, callback)'
     summary: "Sets the properties of a storage account’s Queue service, including Microsoft Azure Storage Analytics.\rYou can also use this operation to set the default request version for all incoming requests that do not have a version specified."
     type: Method
     syntax:
@@ -91,12 +85,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `response`\r                                                                     will contain information related to this operation."
-      content: >-
-        function setServiceProperties(serviceProperties, options,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      QueueService.setServiceProperties(serviceProperties, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function setServiceProperties(serviceProperties, options, callback);'
+    fullName: 'QueueService.setServiceProperties(serviceProperties, options, callback)'
     children:
       - 'QueueService#setServiceProperties~options'
       - 'QueueService#setServiceProperties~servicePropertiesXml'
@@ -105,9 +95,7 @@ items:
   - uid: 'QueueService#listQueues'
     id: listQueues
     parent: QueueService
-    name: >-
-      listQueues(options, options.prefix, options.marker, options.maxresults,
-      options.include, options.timeoutIntervalInMs, callback)
+    name: 'listQueues(options, callback)'
     summary: Lists all queues under the given account.
     type: Method
     syntax:
@@ -143,14 +131,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueResults` will contain a list of\r                                                                        queue objects,\r                                                                        and `response` will contain information related to this operation.\r                                                                        If not all queue information could be retrieved,\r                                                                        `nextMarker` will contain a value that can be used\r                                                                        to retrieve the next section of the queue list."
-      content: >-
-        function listQueues(options, options.prefix, options.marker,
-        options.maxresults, options.include, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      QueueService.listQueues(options, options.prefix, options.marker,
-      options.maxresults, options.include, options.timeoutIntervalInMs,
-      callback)
+      content: 'function listQueues(options, callback);'
+    fullName: 'QueueService.listQueues(options, callback)'
     children:
       - 'QueueService#listQueues~options'
       - 'QueueService#listQueues~webResource'
@@ -159,9 +141,7 @@ items:
   - uid: 'QueueService#createQueue'
     id: createQueue
     parent: QueueService
-    name: >-
-      createQueue(queue, options, options.metadata, options.timeoutIntervalInMs,
-      callback)
+    name: 'createQueue(queue, options, callback)'
     summary: Creates a new queue under the given account.
     type: Method
     syntax:
@@ -181,12 +161,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueResult` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function createQueue(queue, options, options.metadata,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      QueueService.createQueue(queue, options, options.metadata,
-      options.timeoutIntervalInMs, callback)
+      content: 'function createQueue(queue, options, callback);'
+    fullName: 'QueueService.createQueue(queue, options, callback)'
     children:
       - 'QueueService#createQueue~options'
       - 'QueueService#createQueue~webResource'
@@ -194,9 +170,7 @@ items:
   - uid: 'QueueService#createQueueIfNotExists'
     id: createQueueIfNotExists
     parent: QueueService
-    name: >-
-      createQueueIfNotExists(queue, options, options.metadata,
-      options.timeoutIntervalInMs, callback)
+    name: 'createQueueIfNotExists(queue, options, callback)'
     summary: Creates a new queue under the given account if it doesn't exist.
     type: Method
     syntax:
@@ -216,12 +190,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueCreated` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function createQueueIfNotExists(queue, options, options.metadata,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      QueueService.createQueueIfNotExists(queue, options, options.metadata,
-      options.timeoutIntervalInMs, callback)
+      content: 'function createQueueIfNotExists(queue, options, callback);'
+    fullName: 'QueueService.createQueueIfNotExists(queue, options, callback)'
     children:
       - 'QueueService#createQueueIfNotExists~options'
       - 'QueueService#createQueueIfNotExists~webResource'
@@ -229,7 +199,7 @@ items:
   - uid: 'QueueService#deleteQueue'
     id: deleteQueue
     parent: QueueService
-    name: 'deleteQueue(queue, options, options.timeoutIntervalInMs, callback)'
+    name: 'deleteQueue(queue, options, callback)'
     summary: Permanently deletes the specified queue.
     type: Method
     syntax:
@@ -246,12 +216,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `deleted` will contain\r                                                              `true` if the operation was successful.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function deleteQueue(queue, options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      QueueService.deleteQueue(queue, options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function deleteQueue(queue, options, callback);'
+    fullName: 'QueueService.deleteQueue(queue, options, callback)'
     children:
       - 'QueueService#deleteQueue~options'
       - 'QueueService#deleteQueue~webResource'
@@ -259,7 +225,7 @@ items:
   - uid: 'QueueService#getQueueMetadata'
     id: getQueueMetadata
     parent: QueueService
-    name: 'getQueueMetadata(queue, options, options.timeoutIntervalInMs, callback)'
+    name: 'getQueueMetadata(queue, options, callback)'
     summary: 'Returns queue properties, including user-defined metadata.'
     type: Method
     syntax:
@@ -276,12 +242,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueResult` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function getQueueMetadata(queue, options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      QueueService.getQueueMetadata(queue, options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function getQueueMetadata(queue, options, callback);'
+    fullName: 'QueueService.getQueueMetadata(queue, options, callback)'
     children:
       - 'QueueService#getQueueMetadata~options'
       - 'QueueService#getQueueMetadata~webResource'
@@ -290,9 +252,7 @@ items:
   - uid: 'QueueService#setQueueMetadata'
     id: setQueueMetadata
     parent: QueueService
-    name: >-
-      setQueueMetadata(queue, metadata, options, options.timeoutIntervalInMs,
-      callback)
+    name: 'setQueueMetadata(queue, metadata, options, callback)'
     summary: >-
       Sets user-defined metadata on the specified queue. Metadata is associated
       with the queue as name-value pairs.
@@ -314,12 +274,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `queueResult` will contain\r                                                              the queue information.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function setQueueMetadata(queue, metadata, options,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      QueueService.setQueueMetadata(queue, metadata, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function setQueueMetadata(queue, metadata, options, callback);'
+    fullName: 'QueueService.setQueueMetadata(queue, metadata, options, callback)'
     children:
       - 'QueueService#setQueueMetadata~options'
       - 'QueueService#setQueueMetadata~webResource'
@@ -327,9 +283,7 @@ items:
   - uid: 'QueueService#createMessage'
     id: createMessage
     parent: QueueService
-    name: >-
-      createMessage(queue, messageText, options, options.messagettl,
-      options.visibilitytimeout, options.timeoutIntervalInMs, callback)
+    name: 'createMessage(queue, messageText, options, callback)'
     summary: "Adds a new message to the back of the message queue. A visibility timeout can also be specified to make the message\rinvisible until the visibility timeout expires. A message must be in a format that can be included in an XML request\rwith UTF-8 encoding. The encoded message can be up to 64KB in size for versions 2011-08-18 and newer, or 8KB in size\rfor previous versions."
     type: Method
     syntax:
@@ -364,13 +318,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResult` will contain\r                                                                        the result.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function createMessage(queue, messageText, options, options.messagettl,
-        options.visibilitytimeout, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      QueueService.createMessage(queue, messageText, options,
-      options.messagettl, options.visibilitytimeout,
-      options.timeoutIntervalInMs, callback)
+      content: 'function createMessage(queue, messageText, options, callback);'
+    fullName: 'QueueService.createMessage(queue, messageText, options, callback)'
     children:
       - 'QueueService#createMessage~options'
       - 'QueueService#createMessage~xmlMessageDescriptor'
@@ -379,9 +328,7 @@ items:
   - uid: 'QueueService#getMessages'
     id: getMessages
     parent: QueueService
-    name: >-
-      getMessages(queue, options, options.numofmessages, options.peekonly,
-      options.visibilitytimeout, options.timeoutIntervalInMs, callback)
+    name: 'getMessages(queue, options, callback)'
     summary: >-
       Retrieves a message from the queue and makes it invisible to other
       consumers.
@@ -419,14 +366,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResults` will contain\r                                                                        the message.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function getMessages(queue, options, options.numofmessages,
-        options.peekonly, options.visibilitytimeout,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      QueueService.getMessages(queue, options, options.numofmessages,
-      options.peekonly, options.visibilitytimeout, options.timeoutIntervalInMs,
-      callback)
+      content: 'function getMessages(queue, options, callback);'
+    fullName: 'QueueService.getMessages(queue, options, callback)'
     children:
       - 'QueueService#getMessages~options'
       - 'QueueService#getMessages~webResource'
@@ -434,9 +375,7 @@ items:
   - uid: 'QueueService#peekMessages'
     id: peekMessages
     parent: QueueService
-    name: >-
-      peekMessages(queue, options, options.numofmessages,
-      options.timeoutIntervalInMs, callback)
+    name: 'peekMessages(queue, options, callback)'
     summary: >-
       Retrieves a message from the front of the queue, without changing the
       message visibility.
@@ -461,21 +400,15 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResults` will contain\r                                                                        the message.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function peekMessages(queue, options, options.numofmessages,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      QueueService.peekMessages(queue, options, options.numofmessages,
-      options.timeoutIntervalInMs, callback)
+      content: 'function peekMessages(queue, options, callback);'
+    fullName: 'QueueService.peekMessages(queue, options, callback)'
     children:
       - 'QueueService#peekMessages~options'
       - 'QueueService#peekMessages~options'
   - uid: 'QueueService#deleteMessage'
     id: deleteMessage
     parent: QueueService
-    name: >-
-      deleteMessage(queue, messageid, popreceipt, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'deleteMessage(queue, messageid, popreceipt, options, callback)'
     summary: Deletes a specified message from the queue.
     type: Method
     syntax:
@@ -500,12 +433,10 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `successful` will contain\r                                                              `true` if the operation was successful.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function deleteMessage(queue, messageid, popreceipt, options,
-        options.timeoutIntervalInMs, callback);
+      content: 'function deleteMessage(queue, messageid, popreceipt, options, callback);'
     fullName: >-
       QueueService.deleteMessage(queue, messageid, popreceipt, options,
-      options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'QueueService#deleteMessage~options'
       - 'QueueService#deleteMessage~webResource'
@@ -513,7 +444,7 @@ items:
   - uid: 'QueueService#clearMessages'
     id: clearMessages
     parent: QueueService
-    name: 'clearMessages(queue, options, options.timeoutIntervalInMs, callback)'
+    name: 'clearMessages(queue, options, callback)'
     summary: Clears all messages from the queue.
     type: Method
     syntax:
@@ -530,12 +461,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
-      content: >-
-        function clearMessages(queue, options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      QueueService.clearMessages(queue, options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function clearMessages(queue, options, callback);'
+    fullName: 'QueueService.clearMessages(queue, options, callback)'
     children:
       - 'QueueService#clearMessages~options'
       - 'QueueService#clearMessages~webResource'
@@ -545,7 +472,7 @@ items:
     parent: QueueService
     name: >-
       updateMessage(queue, messageid, popreceipt, visibilitytimeout, options,
-      options.messagetext, options.timeoutIntervalInMs, callback)
+      callback)
     summary: "Updates the visibility timeout of a message. You can also use this operation to update the contents of a message.\rA message must be in a format that can be included in an XML request with UTF-8 encoding, and the encoded message can be up to 64KB in size."
     type: Method
     syntax:
@@ -582,11 +509,10 @@ items:
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `queueMessageResult` will contain\r                                                                        the message result information.\r                                                                        `response` will contain information related to this operation."
       content: >-
         function updateMessage(queue, messageid, popreceipt, visibilitytimeout,
-        options, options.messagetext, options.timeoutIntervalInMs, callback);
+        options, callback);
     fullName: >-
       QueueService.updateMessage(queue, messageid, popreceipt,
-      visibilitytimeout, options, options.messagetext,
-      options.timeoutIntervalInMs, callback)
+      visibilitytimeout, options, callback)
     children:
       - 'QueueService#updateMessage~options'
       - 'QueueService#updateMessage~content'

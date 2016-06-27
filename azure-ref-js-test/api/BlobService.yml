@@ -130,7 +130,7 @@ items:
   - uid: 'BlobService#getServiceProperties'
     id: getServiceProperties
     parent: BlobService
-    name: 'getServiceProperties(options, options.timeoutIntervalInMs, callback)'
+    name: 'getServiceProperties(options, callback)'
     summary: >-
       Gets the properties of a storage account’s Blob service, including
       Microsoft Azure Storage Analytics.
@@ -146,12 +146,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `serviceProperties`\r                                                                     will contain the properties and `response`\r                                                                     will contain information related to this operation."
-      content: >-
-        function getServiceProperties(options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      BlobService.getServiceProperties(options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function getServiceProperties(options, callback);'
+    fullName: 'BlobService.getServiceProperties(options, callback)'
     children:
       - 'BlobService#getServiceProperties~options'
       - 'BlobService#getServiceProperties~webResource'
@@ -159,9 +155,7 @@ items:
   - uid: 'BlobService#setServiceProperties'
     id: setServiceProperties
     parent: BlobService
-    name: >-
-      setServiceProperties(serviceProperties, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'setServiceProperties(serviceProperties, options, callback)'
     summary: "Sets the properties of a storage account’s Blob service, including Microsoft Azure Storage Analytics.\rYou can also use this operation to set the default request version for all incoming requests that do not have a version specified."
     type: Method
     syntax:
@@ -178,12 +172,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                     if an error occurs; otherwise, `response`\r                                                                     will contain information related to this operation."
-      content: >-
-        function setServiceProperties(serviceProperties, options,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.setServiceProperties(serviceProperties, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function setServiceProperties(serviceProperties, options, callback);'
+    fullName: 'BlobService.setServiceProperties(serviceProperties, options, callback)'
     children:
       - 'BlobService#setServiceProperties~options'
       - 'BlobService#setServiceProperties~servicePropertiesXml'
@@ -192,9 +182,7 @@ items:
   - uid: 'BlobService#listContainers'
     id: listContainers
     parent: BlobService
-    name: >-
-      listContainers(options, options.prefix, options.maxresults,
-      options.marker, options.include, options.timeoutIntervalInMs, callback)
+    name: 'listContainers(options, callback)'
     summary: Returns a list of the containers under the specified account.
     type: Method
     syntax:
@@ -229,12 +217,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `containers` will contain a list of\r                                                                        {@link BlobService~containerResult} objects,\r                                                                        and `response` will contain information related to this operation.\r                                                                        If not all container information could be retrieved,\r                                                                        `nextMarker` will contain a value that can be used\r                                                                        to retrieve the next section of the containers list."
-      content: >-
-        function listContainers(options, options.prefix, options.maxresults,
-        options.marker, options.include, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.listContainers(options, options.prefix, options.maxresults,
-      options.marker, options.include, options.timeoutIntervalInMs, callback)
+      content: 'function listContainers(options, callback);'
+    fullName: 'BlobService.listContainers(options, callback)'
     children:
       - 'BlobService#listContainers~options'
       - 'BlobService#listContainers~webResource'
@@ -243,9 +227,7 @@ items:
   - uid: 'BlobService#createContainer'
     id: createContainer
     parent: BlobService
-    name: >-
-      createContainer(container, options, options.metadata,
-      options.publicAccessLevel, options.timeoutIntervalInMs, callback)
+    name: 'createContainer(container, options, callback)'
     summary: "Creates a new container under the specified account.\rIf a container with the same name already exists, the operation fails."
     type: Method
     syntax:
@@ -270,12 +252,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} for the container.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function createContainer(container, options, options.metadata,
-        options.publicAccessLevel, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.createContainer(container, options, options.metadata,
-      options.publicAccessLevel, options.timeoutIntervalInMs, callback)
+      content: 'function createContainer(container, options, callback);'
+    fullName: 'BlobService.createContainer(container, options, callback)'
     children:
       - 'BlobService#createContainer~options'
       - 'BlobService#createContainer~webResource'
@@ -283,9 +261,7 @@ items:
   - uid: 'BlobService#createContainerIfNotExists'
     id: createContainerIfNotExists
     parent: BlobService
-    name: >-
-      createContainerIfNotExists(container, options, options.metadata,
-      options.publicAccessLevel, options.timeoutIntervalInMs, callback)
+    name: 'createContainerIfNotExists(container, options, callback)'
     summary: >-
       Creates a new container under the specified account if the container does
       not exists.
@@ -312,22 +288,14 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `containerCreated` will contain\r                                                              be true if the container was created, or false if the container\r                                                              already exists.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function createContainerIfNotExists(container, options,
-        options.metadata, options.publicAccessLevel,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.createContainerIfNotExists(container, options,
-      options.metadata, options.publicAccessLevel, options.timeoutIntervalInMs,
-      callback)
+      content: 'function createContainerIfNotExists(container, options, callback);'
+    fullName: 'BlobService.createContainerIfNotExists(container, options, callback)'
     children:
       - 'BlobService#createContainerIfNotExists~options'
   - uid: 'BlobService#getContainerProperties'
     id: getContainerProperties
     parent: BlobService
-    name: >-
-      getContainerProperties(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+    name: 'getContainerProperties(container, options, callback)'
     summary: Retrieves a container and its properties from a specified account.
     type: Method
     syntax:
@@ -347,12 +315,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} information for the container.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function getContainerProperties(container, options, options.leaseId,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.getContainerProperties(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+      content: 'function getContainerProperties(container, options, callback);'
+    fullName: 'BlobService.getContainerProperties(container, options, callback)'
     children:
       - 'BlobService#getContainerProperties~options'
       - 'BlobService#getContainerProperties~webResource'
@@ -361,9 +325,7 @@ items:
   - uid: 'BlobService#getContainerMetadata'
     id: getContainerMetadata
     parent: BlobService
-    name: >-
-      getContainerMetadata(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+    name: 'getContainerMetadata(container, options, callback)'
     summary: Returns all user-defined metadata for the container.
     type: Method
     syntax:
@@ -383,12 +345,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `container` will contain\r                                                                        the {@link BlobService~containerResult} information for the container.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function getContainerMetadata(container, options, options.leaseId,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.getContainerMetadata(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+      content: 'function getContainerMetadata(container, options, callback);'
+    fullName: 'BlobService.getContainerMetadata(container, options, callback)'
     children:
       - 'BlobService#getContainerMetadata~options'
       - 'BlobService#getContainerMetadata~webResource'
@@ -397,9 +355,7 @@ items:
   - uid: 'BlobService#setContainerMetadata'
     id: setContainerMetadata
     parent: BlobService
-    name: >-
-      setContainerMetadata(container, metadata, options, options.leaseId,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: 'setContainerMetadata(container, metadata, options, callback)'
     summary: "Sets the container's metadata.\r\rCalling the Set Container Metadata operation overwrites all existing metadata that is associated with the container.\rIt's not possible to modify an individual name/value pair."
     type: Method
     syntax:
@@ -427,14 +383,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
-      content: >-
-        function setContainerMetadata(container, metadata, options,
-        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      BlobService.setContainerMetadata(container, metadata, options,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+      content: 'function setContainerMetadata(container, metadata, options, callback);'
+    fullName: 'BlobService.setContainerMetadata(container, metadata, options, callback)'
     children:
       - 'BlobService#setContainerMetadata~options'
       - 'BlobService#setContainerMetadata~webResource'
@@ -442,9 +392,7 @@ items:
   - uid: 'BlobService#getContainerAcl'
     id: getContainerAcl
     parent: BlobService
-    name: >-
-      getContainerAcl(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+    name: 'getContainerAcl(container, options, callback)'
     summary: Gets the container's ACL.
     type: Method
     syntax:
@@ -464,12 +412,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} information for the container.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function getContainerAcl(container, options, options.leaseId,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.getContainerAcl(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+      content: 'function getContainerAcl(container, options, callback);'
+    fullName: 'BlobService.getContainerAcl(container, options, callback)'
     children:
       - 'BlobService#getContainerAcl~options'
       - 'BlobService#getContainerAcl~webResource'
@@ -477,9 +421,7 @@ items:
   - uid: 'BlobService#setContainerAcl'
     id: setContainerAcl
     parent: BlobService
-    name: >-
-      setContainerAcl(container, publicAccessLevel, options, options.leaseId,
-      options.signedIdentifiers, options.timeoutIntervalInMs, callback)
+    name: 'setContainerAcl(container, publicAccessLevel, options, callback)'
     summary: Updates the container's ACL.
     type: Method
     syntax:
@@ -509,11 +451,9 @@ items:
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `container` will contain\r                                                              the {@link BlobService~containerResult} information for the container.\r                                                              `response` will contain information related to this operation."
       content: >-
         function setContainerAcl(container, publicAccessLevel, options,
-        options.leaseId, options.signedIdentifiers, options.timeoutIntervalInMs,
         callback);
     fullName: >-
       BlobService.setContainerAcl(container, publicAccessLevel, options,
-      options.leaseId, options.signedIdentifiers, options.timeoutIntervalInMs,
       callback)
     children:
       - 'BlobService#setContainerAcl~options'
@@ -524,9 +464,7 @@ items:
   - uid: 'BlobService#deleteContainer'
     id: deleteContainer
     parent: BlobService
-    name: >-
-      deleteContainer(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+    name: 'deleteContainer(container, options, callback)'
     summary: "Marks the specified container for deletion.\rThe container and any blobs contained within it are later deleted during garbage collection."
     type: Method
     syntax:
@@ -546,12 +484,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function deleteContainer(container, options, options.leaseId,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.deleteContainer(container, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+      content: 'function deleteContainer(container, options, callback);'
+    fullName: 'BlobService.deleteContainer(container, options, callback)'
     children:
       - 'BlobService#deleteContainer~options'
       - 'BlobService#deleteContainer~webResource'
@@ -559,10 +493,7 @@ items:
   - uid: 'BlobService#listBlobs'
     id: listBlobs
     parent: BlobService
-    name: >-
-      listBlobs(container, options, options.prefix, options.delimiter,
-      options.maxresults, options.marker, options.include,
-      options.timeoutIntervalInMs, callback)
+    name: 'listBlobs(container, options, callback)'
     summary: Lists all of the blobs in the given container.
     type: Method
     syntax:
@@ -602,14 +533,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `blobs` will contain\r                                                              the blobs within the container.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function listBlobs(container, options, options.prefix,
-        options.delimiter, options.maxresults, options.marker, options.include,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.listBlobs(container, options, options.prefix,
-      options.delimiter, options.maxresults, options.marker, options.include,
-      options.timeoutIntervalInMs, callback)
+      content: 'function listBlobs(container, options, callback);'
+    fullName: 'BlobService.listBlobs(container, options, callback)'
     children:
       - 'BlobService#listBlobs~options'
       - 'BlobService#listBlobs~webResource'
@@ -618,10 +543,7 @@ items:
   - uid: 'BlobService#createPageBlob'
     id: createPageBlob
     parent: BlobService
-    name: >-
-      createPageBlob(container, blob, length, options, options.metadata,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+    name: 'createPageBlob(container, blob, length, options, callback)'
     summary: Writes a range of pages to a page blob.
     type: Method
     syntax:
@@ -656,14 +578,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
-      content: >-
-        function createPageBlob(container, blob, length, options,
-        options.metadata, options.leaseId, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.createPageBlob(container, blob, length, options,
-      options.metadata, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      content: 'function createPageBlob(container, blob, length, options, callback);'
+    fullName: 'BlobService.createPageBlob(container, blob, length, options, callback)'
     children:
       - 'BlobService#createPageBlob~options'
       - 'BlobService#createPageBlob~resourceName'
@@ -672,14 +588,7 @@ items:
   - uid: 'BlobService#putBlockBlobFromFile'
     id: putBlockBlobFromFile
     parent: BlobService
-    name: >-
-      putBlockBlobFromFile(container, blob, localFilename, options,
-      options.leaseId, options.metadata, options.setBlobContentMD5,
-      options.contentType, options.contentEncoding, options.contentLanguage,
-      options.contentMD5, options.cacheControl, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: 'putBlockBlobFromFile(container, blob, localFilename, options, callback)'
     summary: "Creates a new block blob or page blob, or updates the content of an existing block blob.\rUpdating an existing block blob overwrites any existing metadata on the blob. Partial updates are not supported with Put Blob; the content of the existing blob is overwritten with the content of the new blob. To perform a partial update of the content of a block blob, use the Put Block List operation.\rCalling Put Blob to create a page blob only initializes the blob. To add content to a page blob, call the Put Page operation."
     type: Method
     syntax:
@@ -756,20 +665,10 @@ items:
         type: undefined
       content: >-
         function putBlockBlobFromFile(container, blob, localFilename, options,
-        options.leaseId, options.metadata, options.setBlobContentMD5,
-        options.contentType, options.contentEncoding, options.contentLanguage,
-        options.contentMD5, options.cacheControl, options.contentTypeHeader,
-        options.contentEncodingHeader, options.contentLanguageHeader,
-        options.contentMD5Header, options.cacheControlHeader,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.putBlockBlobFromFile(container, blob, localFilename, options,
-      options.leaseId, options.metadata, options.setBlobContentMD5,
-      options.contentType, options.contentEncoding, options.contentLanguage,
-      options.contentMD5, options.cacheControl, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#putBlockBlobFromFile~options'
       - 'BlobService#putBlockBlobFromFile~self'
@@ -781,12 +680,7 @@ items:
     parent: BlobService
     name: >-
       putBlockBlobFromStream(container, blob, (Stream), streamLength, options,
-      options.leaseId, options.metadata, options.setBlobContentMD5,
-      options.contentType, options.contentEncoding, options.contentLanguage,
-      options.contentMD5, options.cacheControl, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      callback)
     summary: Uploads a block blob from a stream.
     type: Method
     syntax:
@@ -867,21 +761,10 @@ items:
         type: undefined
       content: >-
         function putBlockBlobFromStream(container, blob, (Stream), streamLength,
-        options, options.leaseId, options.metadata, options.setBlobContentMD5,
-        options.contentType, options.contentEncoding, options.contentLanguage,
-        options.contentMD5, options.cacheControl, options.contentTypeHeader,
-        options.contentEncodingHeader, options.contentLanguageHeader,
-        options.contentMD5Header, options.cacheControlHeader,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
+        options, callback);
     fullName: >-
       BlobService.putBlockBlobFromStream(container, blob, (Stream),
-      streamLength, options, options.leaseId, options.metadata,
-      options.setBlobContentMD5, options.contentType, options.contentEncoding,
-      options.contentLanguage, options.contentMD5, options.cacheControl,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.cacheControlHeader, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      streamLength, options, callback)
     children:
       - 'BlobService#putBlockBlobFromStream~options'
       - 'BlobService#putBlockBlobFromStream~speedSummary'
@@ -891,14 +774,7 @@ items:
   - uid: 'BlobService#createBlockBlobFromText'
     id: createBlockBlobFromText
     parent: BlobService
-    name: >-
-      createBlockBlobFromText(container, blob, text, options, options.leaseId,
-      options.metadata, options.setBlobContentMD5, options.contentType,
-      options.contentEncoding, options.contentLanguage, options.contentMD5,
-      options.cacheControl, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: 'createBlockBlobFromText(container, blob, text, options, callback)'
     summary: Uploads a block blob from a text string.
     type: Method
     syntax:
@@ -975,20 +851,10 @@ items:
         type: undefined
       content: >-
         function createBlockBlobFromText(container, blob, text, options,
-        options.leaseId, options.metadata, options.setBlobContentMD5,
-        options.contentType, options.contentEncoding, options.contentLanguage,
-        options.contentMD5, options.cacheControl, options.contentTypeHeader,
-        options.contentEncodingHeader, options.contentLanguageHeader,
-        options.contentMD5Header, options.cacheControlHeader,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.createBlockBlobFromText(container, blob, text, options,
-      options.leaseId, options.metadata, options.setBlobContentMD5,
-      options.contentType, options.contentEncoding, options.contentLanguage,
-      options.contentMD5, options.cacheControl, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#createBlockBlobFromText~options'
       - 'BlobService#createBlockBlobFromText~resourceName'
@@ -997,10 +863,7 @@ items:
   - uid: 'BlobService#getBlobProperties'
     id: getBlobProperties
     parent: BlobService
-    name: >-
-      getBlobProperties(container, blob, options, options.snapshotId,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+    name: 'getBlobProperties(container, blob, options, callback)'
     summary: "Returns all user-defined metadata, standard HTTP properties, and system properties for the blob.\rIt does not return the content of the blob."
     type: Method
     syntax:
@@ -1032,14 +895,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function getBlobProperties(container, blob, options, options.snapshotId,
-        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      BlobService.getBlobProperties(container, blob, options,
-      options.snapshotId, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      content: 'function getBlobProperties(container, blob, options, callback);'
+    fullName: 'BlobService.getBlobProperties(container, blob, options, callback)'
     children:
       - 'BlobService#getBlobProperties~options'
       - 'BlobService#getBlobProperties~resourceName'
@@ -1049,10 +906,7 @@ items:
   - uid: 'BlobService#getBlobMetadata'
     id: getBlobMetadata
     parent: BlobService
-    name: >-
-      getBlobMetadata(container, blob, options, options.snapshotId,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+    name: 'getBlobMetadata(container, blob, options, callback)'
     summary: Returns all user-defined metadata for the specified blob or snapshot.
     type: Method
     syntax:
@@ -1084,14 +938,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function getBlobMetadata(container, blob, options, options.snapshotId,
-        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      BlobService.getBlobMetadata(container, blob, options, options.snapshotId,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+      content: 'function getBlobMetadata(container, blob, options, callback);'
+    fullName: 'BlobService.getBlobMetadata(container, blob, options, callback)'
     children:
       - 'BlobService#getBlobMetadata~options'
       - 'BlobService#getBlobMetadata~resourceName'
@@ -1101,12 +949,7 @@ items:
   - uid: 'BlobService#setBlobProperties'
     id: setBlobProperties
     parent: BlobService
-    name: >-
-      setBlobProperties(container, blob, options, options.leaseId,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.cacheControlHeader, options.timeoutIntervalInMs,
-      options.accessConditions, callback)
+    name: 'setBlobProperties(container, blob, options, callback)'
     summary: "Returns all user-defined metadata, standard HTTP properties, and system properties for the blob.\rIt does not return the content of the blob."
     type: Method
     syntax:
@@ -1150,18 +993,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information about the blob.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function setBlobProperties(container, blob, options, options.leaseId,
-        options.contentTypeHeader, options.contentEncodingHeader,
-        options.contentLanguageHeader, options.contentMD5Header,
-        options.cacheControlHeader, options.timeoutIntervalInMs,
-        options.accessConditions, callback);
-    fullName: >-
-      BlobService.setBlobProperties(container, blob, options, options.leaseId,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.cacheControlHeader, options.timeoutIntervalInMs,
-      options.accessConditions, callback)
+      content: 'function setBlobProperties(container, blob, options, callback);'
+    fullName: 'BlobService.setBlobProperties(container, blob, options, callback)'
     children:
       - 'BlobService#setBlobProperties~options'
       - 'BlobService#setBlobProperties~resourceName'
@@ -1170,10 +1003,7 @@ items:
   - uid: 'BlobService#setBlobMetadata'
     id: setBlobMetadata
     parent: BlobService
-    name: >-
-      setBlobMetadata(container, blob, metadata, options, options.snapshotId,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+    name: 'setBlobMetadata(container, blob, metadata, options, callback)'
     summary: >-
       Sets user-defined metadata for the specified blob as one or more
       name-value pairs.
@@ -1210,14 +1040,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        information on the blob.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function setBlobMetadata(container, blob, metadata, options,
-        options.snapshotId, options.leaseId, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.setBlobMetadata(container, blob, metadata, options,
-      options.snapshotId, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      content: 'function setBlobMetadata(container, blob, metadata, options, callback);'
+    fullName: 'BlobService.setBlobMetadata(container, blob, metadata, options, callback)'
     children:
       - 'BlobService#setBlobMetadata~options'
       - 'BlobService#setBlobMetadata~resourceName'
@@ -1226,16 +1050,7 @@ items:
   - uid: 'BlobService#getBlob'
     id: getBlob
     parent: BlobService
-    name: >-
-      getBlob(container, blob, options, options.snapshotId, options.leaseId,
-      options.blobType, options.contentType, options.contentEncoding,
-      options.contentLanguage, options.contentMD5, options.cacheControl,
-      options.rangeStart, options.rangeEnd, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.rangeStartHeader,
-      options.rangeEndHeader, options.rangeGetContentMd5,
-      options.cacheControlHeader, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+    name: 'getBlob(container, blob, options, callback)'
     summary: Downloads a blob into a stream.
     type: Method
     syntax:
@@ -1326,26 +1141,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blockBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function getBlob(container, blob, options, options.snapshotId,
-        options.leaseId, options.blobType, options.contentType,
-        options.contentEncoding, options.contentLanguage, options.contentMD5,
-        options.cacheControl, options.rangeStart, options.rangeEnd,
-        options.contentTypeHeader, options.contentEncodingHeader,
-        options.contentLanguageHeader, options.contentMD5Header,
-        options.rangeStartHeader, options.rangeEndHeader,
-        options.rangeGetContentMd5, options.cacheControlHeader,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.getBlob(container, blob, options, options.snapshotId,
-      options.leaseId, options.blobType, options.contentType,
-      options.contentEncoding, options.contentLanguage, options.contentMD5,
-      options.cacheControl, options.rangeStart, options.rangeEnd,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.rangeStartHeader, options.rangeEndHeader,
-      options.rangeGetContentMd5, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      content: 'function getBlob(container, blob, options, callback);'
+    fullName: 'BlobService.getBlob(container, blob, options, callback)'
     children:
       - 'BlobService#getBlob~options'
       - 'BlobService#getBlob~resourceName'
@@ -1354,17 +1151,7 @@ items:
   - uid: 'BlobService#getBlobToFile'
     id: getBlobToFile
     parent: BlobService
-    name: >-
-      getBlobToFile(container, blob, localFileName, options,
-      options.speedSummary, options.snapshotId, options.leaseId,
-      options.contentType, options.contentEncoding, options.contentLanguage,
-      options.contentMD5, options.cacheControl, options.rangeStart,
-      options.rangeEnd, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.rangeStartHeader,
-      options.rangeEndHeader, options.rangeGetContentMd5,
-      options.cacheControlHeader, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+    name: 'getBlobToFile(container, blob, localFileName, options, callback)'
     summary: Downloads a blob into a file.
     type: Method
     syntax:
@@ -1462,26 +1249,10 @@ items:
         type: SpeedSummary
       content: >-
         function getBlobToFile(container, blob, localFileName, options,
-        options.speedSummary, options.snapshotId, options.leaseId,
-        options.contentType, options.contentEncoding, options.contentLanguage,
-        options.contentMD5, options.cacheControl, options.rangeStart,
-        options.rangeEnd, options.contentTypeHeader,
-        options.contentEncodingHeader, options.contentLanguageHeader,
-        options.contentMD5Header, options.rangeStartHeader,
-        options.rangeEndHeader, options.rangeGetContentMd5,
-        options.cacheControlHeader, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.getBlobToFile(container, blob, localFileName, options,
-      options.speedSummary, options.snapshotId, options.leaseId,
-      options.contentType, options.contentEncoding, options.contentLanguage,
-      options.contentMD5, options.cacheControl, options.rangeStart,
-      options.rangeEnd, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.rangeStartHeader,
-      options.rangeEndHeader, options.rangeGetContentMd5,
-      options.cacheControlHeader, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#getBlobToFile~options'
       - 'BlobService#getBlobToFile~propertiesRequestOptions'
@@ -1489,16 +1260,7 @@ items:
   - uid: 'BlobService#getBlobToStream'
     id: getBlobToStream
     parent: BlobService
-    name: >-
-      getBlobToStream(container, blob, writeStream, options, options.snapshotId,
-      options.leaseId, options.blobType, options.contentType,
-      options.contentEncoding, options.contentLanguage, options.contentMD5,
-      options.cacheControl, options.rangeStart, options.rangeEnd,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.rangeStartHeader, options.rangeEndHeader,
-      options.rangeGetContentMd5, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: 'getBlobToStream(container, blob, writeStream, options, callback)'
     summary: Downloads a blob into a stream.
     type: Method
     syntax:
@@ -1594,41 +1356,16 @@ items:
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blockBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
       content: >-
         function getBlobToStream(container, blob, writeStream, options,
-        options.snapshotId, options.leaseId, options.blobType,
-        options.contentType, options.contentEncoding, options.contentLanguage,
-        options.contentMD5, options.cacheControl, options.rangeStart,
-        options.rangeEnd, options.contentTypeHeader,
-        options.contentEncodingHeader, options.contentLanguageHeader,
-        options.contentMD5Header, options.rangeStartHeader,
-        options.rangeEndHeader, options.rangeGetContentMd5,
-        options.cacheControlHeader, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.getBlobToStream(container, blob, writeStream, options,
-      options.snapshotId, options.leaseId, options.blobType,
-      options.contentType, options.contentEncoding, options.contentLanguage,
-      options.contentMD5, options.cacheControl, options.rangeStart,
-      options.rangeEnd, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.rangeStartHeader,
-      options.rangeEndHeader, options.rangeGetContentMd5,
-      options.cacheControlHeader, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#getBlobToStream~options'
   - uid: 'BlobService#getBlobToText'
     id: getBlobToText
     parent: BlobService
-    name: >-
-      getBlobToText(container, blob, options, options.snapshotId,
-      options.leaseId, options.blobType, options.contentType,
-      options.contentEncoding, options.contentLanguage, options.contentMD5,
-      options.cacheControl, options.rangeStart, options.rangeEnd,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.rangeStartHeader, options.rangeEndHeader,
-      options.rangeGetContentMd5, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: 'getBlobToText(container, blob, options, callback)'
     summary: Downloads a blob into a text string.
     type: Method
     syntax:
@@ -1719,26 +1456,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `text` will contain the blob contents,\r                                                                        and `blockBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function getBlobToText(container, blob, options, options.snapshotId,
-        options.leaseId, options.blobType, options.contentType,
-        options.contentEncoding, options.contentLanguage, options.contentMD5,
-        options.cacheControl, options.rangeStart, options.rangeEnd,
-        options.contentTypeHeader, options.contentEncodingHeader,
-        options.contentLanguageHeader, options.contentMD5Header,
-        options.rangeStartHeader, options.rangeEndHeader,
-        options.rangeGetContentMd5, options.cacheControlHeader,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.getBlobToText(container, blob, options, options.snapshotId,
-      options.leaseId, options.blobType, options.contentType,
-      options.contentEncoding, options.contentLanguage, options.contentMD5,
-      options.cacheControl, options.rangeStart, options.rangeEnd,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.rangeStartHeader, options.rangeEndHeader,
-      options.rangeGetContentMd5, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      content: 'function getBlobToText(container, blob, options, callback);'
+    fullName: 'BlobService.getBlobToText(container, blob, options, callback)'
     children:
       - 'BlobService#getBlobToText~options'
       - 'BlobService#getBlobToText~resourceName'
@@ -1747,9 +1466,7 @@ items:
   - uid: 'BlobService#deleteBlob'
     id: deleteBlob
     parent: BlobService
-    name: >-
-      deleteBlob(container, blob, options, options.snapshotId, options.leaseId,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: 'deleteBlob(container, blob, options, callback)'
     summary: "Marks the specified blob or snapshot for deletion. The blob is later deleted during garbage collection.\rIn order to delete a blob, you must delete all of its snapshots. You can delete both at the same time with the Delete Blob operation."
     type: Method
     syntax:
@@ -1781,14 +1498,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `isSuccessful` will contain\r                                                              `true` if the operation was successful.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function deleteBlob(container, blob, options, options.snapshotId,
-        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      BlobService.deleteBlob(container, blob, options, options.snapshotId,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+      content: 'function deleteBlob(container, blob, options, callback);'
+    fullName: 'BlobService.deleteBlob(container, blob, options, callback)'
     children:
       - 'BlobService#deleteBlob~options'
       - 'BlobService#deleteBlob~resourceName'
@@ -1797,10 +1508,7 @@ items:
   - uid: 'BlobService#createBlobSnapshot'
     id: createBlobSnapshot
     parent: BlobService
-    name: >-
-      createBlobSnapshot(container, blob, options, options.snapshotId,
-      options.metadata, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+    name: 'createBlobSnapshot(container, blob, options, callback)'
     summary: Creates a read-only snapshot of a blob.
     type: Method
     syntax:
@@ -1835,14 +1543,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `snapshotId` will contain\r                                                              the ID of the snapshot.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function createBlobSnapshot(container, blob, options,
-        options.snapshotId, options.metadata, options.leaseId,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.createBlobSnapshot(container, blob, options,
-      options.snapshotId, options.metadata, options.leaseId,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      content: 'function createBlobSnapshot(container, blob, options, callback);'
+    fullName: 'BlobService.createBlobSnapshot(container, blob, options, callback)'
     children:
       - 'BlobService#createBlobSnapshot~options'
       - 'BlobService#createBlobSnapshot~resourceName'
@@ -1851,11 +1553,7 @@ items:
   - uid: 'BlobService#copyBlob'
     id: copyBlob
     parent: BlobService
-    name: >-
-      copyBlob(sourceUri, targetContainer, targetBlob, options,
-      options.snapshotId, options.metadata, options.leaseId,
-      options.sourceLeaseId, options.accessConditions,
-      options.sourceAccessConditions, options.timeoutIntervalInMs, callback)
+    name: 'copyBlob(sourceUri, targetContainer, targetBlob, options, callback)'
     summary: >-
       Copies a blob to a destination within the storage account. The Copy Blob
       operation copies the entire committed blob.
@@ -1906,14 +1604,10 @@ items:
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
       content: >-
         function copyBlob(sourceUri, targetContainer, targetBlob, options,
-        options.snapshotId, options.metadata, options.leaseId,
-        options.sourceLeaseId, options.accessConditions,
-        options.sourceAccessConditions, options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.copyBlob(sourceUri, targetContainer, targetBlob, options,
-      options.snapshotId, options.metadata, options.leaseId,
-      options.sourceLeaseId, options.accessConditions,
-      options.sourceAccessConditions, options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#copyBlob~options'
       - 'BlobService#copyBlob~targetResourceName'
@@ -1923,9 +1617,7 @@ items:
   - uid: 'BlobService#abortCopyBlob'
     id: abortCopyBlob
     parent: BlobService
-    name: >-
-      abortCopyBlob(container, blob, copyId, options, options.leaseId,
-      options.timeoutIntervalInMs, callback)
+    name: 'abortCopyBlob(container, blob, copyId, options, callback)'
     summary: Abort a blob copy operation.
     type: Method
     syntax:
@@ -1951,12 +1643,8 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function abortCopyBlob(container, blob, copyId, options,
-        options.leaseId, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.abortCopyBlob(container, blob, copyId, options,
-      options.leaseId, options.timeoutIntervalInMs, callback)
+      content: 'function abortCopyBlob(container, blob, copyId, options, callback);'
+    fullName: 'BlobService.abortCopyBlob(container, blob, copyId, options, callback)'
     children:
       - 'BlobService#abortCopyBlob~options'
       - 'BlobService#abortCopyBlob~resourceName'
@@ -1965,10 +1653,7 @@ items:
   - uid: 'BlobService#statusOfCopyBlob'
     id: statusOfCopyBlob
     parent: BlobService
-    name: >-
-      statusOfCopyBlob(targetContainer, targetBlob, options, options.metadata,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+    name: 'statusOfCopyBlob(targetContainer, targetBlob, options, callback)'
     summary: Gets the status of the copyBlob operation
     type: Method
     syntax:
@@ -2002,12 +1687,10 @@ items:
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `blob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
       content: >-
         function statusOfCopyBlob(targetContainer, targetBlob, options,
-        options.metadata, options.leaseId, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.statusOfCopyBlob(targetContainer, targetBlob, options,
-      options.metadata, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#statusOfCopyBlob~options'
       - 'BlobService#statusOfCopyBlob~targetResourceName'
@@ -2016,10 +1699,7 @@ items:
   - uid: 'BlobService#acquireLease'
     id: acquireLease
     parent: BlobService
-    name: >-
-      acquireLease(container, blob, options, options.leaseDuration,
-      options.proposedLeaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+    name: 'acquireLease(container, blob, options, callback)'
     summary: Acquires a new lease on the blob.
     type: Method
     syntax:
@@ -2051,22 +1731,14 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `lease` will contain\r                                                                        the lease information.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function acquireLease(container, blob, options, options.leaseDuration,
-        options.proposedLeaseId, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.acquireLease(container, blob, options, options.leaseDuration,
-      options.proposedLeaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      content: 'function acquireLease(container, blob, options, callback);'
+    fullName: 'BlobService.acquireLease(container, blob, options, callback)'
     children:
       - 'BlobService#acquireLease~options'
   - uid: 'BlobService#renewLease'
     id: renewLease
     parent: BlobService
-    name: >-
-      renewLease(container, blob, leaseId, options, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+    name: 'renewLease(container, blob, leaseId, options, callback)'
     summary: Renews an existing lease.
     type: Method
     syntax:
@@ -2095,20 +1767,14 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `lease` will contain\r                                                              the lease information.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function renewLease(container, blob, leaseId, options,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.renewLease(container, blob, leaseId, options,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      content: 'function renewLease(container, blob, leaseId, options, callback);'
+    fullName: 'BlobService.renewLease(container, blob, leaseId, options, callback)'
     children:
       - 'BlobService#renewLease~options'
   - uid: 'BlobService#releaseLease'
     id: releaseLease
     parent: BlobService
-    name: >-
-      releaseLease(container, blob, leaseId, options, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+    name: 'releaseLease(container, blob, leaseId, options, callback)'
     summary: Releases the lease on the blob.
     type: Method
     syntax:
@@ -2137,20 +1803,14 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `lease` will contain\r                                                              the lease information.\r                                                              `response` will contain information related to this operation."
-      content: >-
-        function releaseLease(container, blob, leaseId, options,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.releaseLease(container, blob, leaseId, options,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      content: 'function releaseLease(container, blob, leaseId, options, callback);'
+    fullName: 'BlobService.releaseLease(container, blob, leaseId, options, callback)'
     children:
       - 'BlobService#releaseLease~options'
   - uid: 'BlobService#breakLease'
     id: breakLease
     parent: BlobService
-    name: >-
-      breakLease(container, blob, leaseId, options, options.leaseBreakPeriod,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: 'breakLease(container, blob, leaseId, options, callback)'
     summary: >-
       Breaks the lease but ensures that another client cannot acquire a new
       lease until the current lease period has expired.
@@ -2184,23 +1844,14 @@ items:
         - id: callback
           type: function
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `lease` will contain\r                                                                        the lease information.\r                                                                        `response` will contain information related to this operation."
-      content: >-
-        function breakLease(container, blob, leaseId, options,
-        options.leaseBreakPeriod, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      BlobService.breakLease(container, blob, leaseId, options,
-      options.leaseBreakPeriod, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      content: 'function breakLease(container, blob, leaseId, options, callback);'
+    fullName: 'BlobService.breakLease(container, blob, leaseId, options, callback)'
     children:
       - 'BlobService#breakLease~options'
   - uid: 'BlobService#clearBlobPages'
     id: clearBlobPages
     parent: BlobService
-    name: >-
-      clearBlobPages(container, blob, rangeStart, rangeEnd, options,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
-      callback)
+    name: 'clearBlobPages(container, blob, rangeStart, rangeEnd, options, callback)'
     summary: Clears a page blob.
     type: Method
     syntax:
@@ -2237,11 +1888,9 @@ items:
           description: "`error` will contain information\r                                                              if an error occurs; otherwise \r                                                              `response` will contain information related to this operation."
       content: >-
         function clearBlobPages(container, blob, rangeStart, rangeEnd, options,
-        options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
         callback);
     fullName: >-
       BlobService.clearBlobPages(container, blob, rangeStart, rangeEnd, options,
-      options.leaseId, options.accessConditions, options.timeoutIntervalInMs,
       callback)
     children:
       - 'BlobService#clearBlobPages~options'
@@ -2253,8 +1902,7 @@ items:
     parent: BlobService
     name: >-
       createBlobPagesFromStream(container, blob, readStream, rangeStart,
-      rangeEnd, options, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      rangeEnd, options, callback)
     summary: Updates a page blob from a stream.
     type: Method
     syntax:
@@ -2294,12 +1942,10 @@ items:
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `pageBlob` will contain\r                                                              the blob information.\r                                                              `response` will contain information related to this operation."
       content: >-
         function createBlobPagesFromStream(container, blob, readStream,
-        rangeStart, rangeEnd, options, options.leaseId,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
+        rangeStart, rangeEnd, options, callback);
     fullName: >-
       BlobService.createBlobPagesFromStream(container, blob, readStream,
-      rangeStart, rangeEnd, options, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      rangeStart, rangeEnd, options, callback)
     children:
       - 'BlobService#createBlobPagesFromStream~options'
       - 'BlobService#createBlobPagesFromStream~webResource'
@@ -2310,8 +1956,7 @@ items:
     parent: BlobService
     name: >-
       createBlobPagesFromText(container, blob, text, rangeStart, rangeEnd,
-      options, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      options, callback)
     summary: Updates a page blob from text.
     type: Method
     syntax:
@@ -2351,12 +1996,10 @@ items:
           description: "`error` will contain information\r                                                                        if an error occurs; otherwise `pageBlob` will contain\r                                                                        the blob information.\r                                                                        `response` will contain information related to this operation."
       content: >-
         function createBlobPagesFromText(container, blob, text, rangeStart,
-        rangeEnd, options, options.leaseId, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
+        rangeEnd, options, callback);
     fullName: >-
       BlobService.createBlobPagesFromText(container, blob, text, rangeStart,
-      rangeEnd, options, options.leaseId, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      rangeEnd, options, callback)
     children:
       - 'BlobService#createBlobPagesFromText~options'
       - 'BlobService#createBlobPagesFromText~request'
@@ -2365,10 +2008,7 @@ items:
   - uid: 'BlobService#listBlobRegions'
     id: listBlobRegions
     parent: BlobService
-    name: >-
-      listBlobRegions(container, blob, rangeStart, rangeEnd, options,
-      options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
-      callback)
+    name: 'listBlobRegions(container, blob, rangeStart, rangeEnd, options, callback)'
     summary: Lists page blob regions.
     type: Method
     syntax:
@@ -2402,12 +2042,10 @@ items:
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `pageRegions` will contain\r                                                              the page region information.\r                                                              `response` will contain information related to this operation."
       content: >-
         function listBlobRegions(container, blob, rangeStart, rangeEnd, options,
-        options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
         callback);
     fullName: >-
       BlobService.listBlobRegions(container, blob, rangeStart, rangeEnd,
-      options, options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
-      callback)
+      options, callback)
     children:
       - 'BlobService#listBlobRegions~options'
       - 'BlobService#listBlobRegions~resourceName'
@@ -2419,8 +2057,7 @@ items:
     parent: BlobService
     name: >-
       createBlobBlockFromText(blockId, container, blob, content, options,
-      options.leaseId, options.contentMD5, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      callback)
     summary: Creates a new block to be committed as part of a blob.
     type: Method
     syntax:
@@ -2462,12 +2099,10 @@ items:
         type: undefined
       content: >-
         function createBlobBlockFromText(blockId, container, blob, content,
-        options, options.leaseId, options.contentMD5, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
+        options, callback);
     fullName: >-
       BlobService.createBlobBlockFromText(blockId, container, blob, content,
-      options, options.leaseId, options.contentMD5, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+      options, callback)
     children:
       - 'BlobService#createBlobBlockFromText~options'
       - 'BlobService#createBlobBlockFromText~resourceName'
@@ -2478,8 +2113,7 @@ items:
     parent: BlobService
     name: >-
       createBlobBlockFromStream(blockId, container, blob, readStream,
-      streamLength, options, options.leaseId, options.contentMD5,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      streamLength, options, callback)
     summary: Creates a new block to be committed as part of a blob.
     type: Method
     syntax:
@@ -2522,12 +2156,10 @@ items:
           description: "`error` will contain information\r                                                            if an error occurs; otherwise \r                                                            `response` will contain information related to this operation."
       content: >-
         function createBlobBlockFromStream(blockId, container, blob, readStream,
-        streamLength, options, options.leaseId, options.contentMD5,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
+        streamLength, options, callback);
     fullName: >-
       BlobService.createBlobBlockFromStream(blockId, container, blob,
-      readStream, streamLength, options, options.leaseId, options.contentMD5,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      readStream, streamLength, options, callback)
     children:
       - 'BlobService#createBlobBlockFromStream~options'
       - 'BlobService#createBlobBlockFromStream~resourceName'
@@ -2536,14 +2168,7 @@ items:
   - uid: 'BlobService#commitBlobBlocks'
     id: commitBlobBlocks
     parent: BlobService
-    name: >-
-      commitBlobBlocks(container, blob, blockList, options, options.metadata,
-      options.leaseId, options.contentType, options.contentEncoding,
-      options.contentLanguage, options.contentMD5, options.cacheControl,
-      options.contentTypeHeader, options.contentEncodingHeader,
-      options.contentLanguageHeader, options.contentMD5Header,
-      options.cacheControlHeader, options.accessConditions,
-      options.timeoutIntervalInMs, callback)
+    name: 'commitBlobBlocks(container, blob, blockList, options, callback)'
     summary: "Writes a blob by specifying the list of block IDs that make up the blob.\rIn order to be written as part of a blob, a block must have been successfully written to the server in a prior\rcreateBlobBlock operation."
     type: Method
     syntax:
@@ -2612,20 +2237,10 @@ items:
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `blocklist` will contain\r                                                              the blocklist information.\r                                                              `response` will contain information related to this operation."
       content: >-
         function commitBlobBlocks(container, blob, blockList, options,
-        options.metadata, options.leaseId, options.contentType,
-        options.contentEncoding, options.contentLanguage, options.contentMD5,
-        options.cacheControl, options.contentTypeHeader,
-        options.contentEncodingHeader, options.contentLanguageHeader,
-        options.contentMD5Header, options.cacheControlHeader,
-        options.accessConditions, options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.commitBlobBlocks(container, blob, blockList, options,
-      options.metadata, options.leaseId, options.contentType,
-      options.contentEncoding, options.contentLanguage, options.contentMD5,
-      options.cacheControl, options.contentTypeHeader,
-      options.contentEncodingHeader, options.contentLanguageHeader,
-      options.contentMD5Header, options.cacheControlHeader,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#commitBlobBlocks~options'
       - 'BlobService#commitBlobBlocks~blockListXml'
@@ -2635,10 +2250,7 @@ items:
   - uid: 'BlobService#listBlobBlocks'
     id: listBlobBlocks
     parent: BlobService
-    name: >-
-      listBlobBlocks(container, blob, blocklisttype, options,
-      options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
-      callback)
+    name: 'listBlobBlocks(container, blob, blocklisttype, options, callback)'
     summary: >-
       Retrieves the list of blocks that have been uploaded as part of a block
       blob.
@@ -2671,11 +2283,9 @@ items:
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `blocklist` will contain\r                                                              the blocklist information.\r                                                              `response` will contain information related to this operation."
       content: >-
         function listBlobBlocks(container, blob, blocklisttype, options,
-        options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
         callback);
     fullName: >-
       BlobService.listBlobBlocks(container, blob, blocklisttype, options,
-      options.snapshotId, options.leaseId, options.timeoutIntervalInMs,
       callback)
     children:
       - 'BlobService#listBlobBlocks~options'
@@ -2685,11 +2295,7 @@ items:
   - uid: 'BlobService#generateSharedAccessSignature'
     id: generateSharedAccessSignature
     parent: BlobService
-    name: >-
-      generateSharedAccessSignature(container, blob, sharedAccessPolicy,
-      sharedAccessPolicy.Id, sharedAccessPolicy.AccessPolicy.Permissions,
-      sharedAccessPolicy.AccessPolicy.Start,
-      sharedAccessPolicy.AccessPolicy.Expiry)
+    name: 'generateSharedAccessSignature(container, blob, sharedAccessPolicy)'
     summary: Retrieves a shared access URL.
     type: Method
     syntax:
@@ -2724,16 +2330,10 @@ items:
         description: An object with the shared access signature.
       content: >-
         function generateSharedAccessSignature(container, blob,
-        sharedAccessPolicy, sharedAccessPolicy.Id,
-        sharedAccessPolicy.AccessPolicy.Permissions,
-        sharedAccessPolicy.AccessPolicy.Start,
-        sharedAccessPolicy.AccessPolicy.Expiry);
+        sharedAccessPolicy);
     fullName: >-
       BlobService.generateSharedAccessSignature(container, blob,
-      sharedAccessPolicy, sharedAccessPolicy.Id,
-      sharedAccessPolicy.AccessPolicy.Permissions,
-      sharedAccessPolicy.AccessPolicy.Start,
-      sharedAccessPolicy.AccessPolicy.Expiry)
+      sharedAccessPolicy)
     children:
       - 'BlobService#generateSharedAccessSignature~resourceType'
       - 'BlobService#generateSharedAccessSignature~resourceType'
@@ -2744,11 +2344,7 @@ items:
   - uid: 'BlobService#getBlobUrl'
     id: getBlobUrl
     parent: BlobService
-    name: >-
-      getBlobUrl(container, blob, sharedAccessPolicy, sharedAccessPolicy.Id,
-      sharedAccessPolicy.AccessPolicy.Permissions,
-      sharedAccessPolicy.AccessPolicy.Start,
-      sharedAccessPolicy.AccessPolicy.Expiry)
+    name: 'getBlobUrl(container, blob, sharedAccessPolicy)'
     summary: Retrieves a blob URL.
     type: Method
     syntax:
@@ -2781,26 +2377,15 @@ items:
       return:
         type: object
         description: An object with the blob URL.
-      content: >-
-        function getBlobUrl(container, blob, sharedAccessPolicy,
-        sharedAccessPolicy.Id, sharedAccessPolicy.AccessPolicy.Permissions,
-        sharedAccessPolicy.AccessPolicy.Start,
-        sharedAccessPolicy.AccessPolicy.Expiry);
-    fullName: >-
-      BlobService.getBlobUrl(container, blob, sharedAccessPolicy,
-      sharedAccessPolicy.Id, sharedAccessPolicy.AccessPolicy.Permissions,
-      sharedAccessPolicy.AccessPolicy.Start,
-      sharedAccessPolicy.AccessPolicy.Expiry)
+      content: 'function getBlobUrl(container, blob, sharedAccessPolicy);'
+    fullName: 'BlobService.getBlobUrl(container, blob, sharedAccessPolicy)'
     children:
       - 'BlobService#getBlobUrl~signedQueryString'
       - 'BlobService#getBlobUrl~signedQueryString'
   - uid: 'BlobService#_leaseBlobImpl'
     id: _leaseBlobImpl
     parent: BlobService
-    name: >-
-      _leaseBlobImpl(container, blob, leaseId, leaseAction, options,
-      options.leaseBreakPeriod, options.leaseDuration, options.proposedLeaseId,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+    name: '_leaseBlobImpl(container, blob, leaseId, leaseAction, options, callback)'
     summary: Establishes and manages a one-minute lock on a blob for write operations.
     type: Method
     syntax:
@@ -2843,13 +2428,10 @@ items:
           description: "`error` will contain information\r                                                              if an error occurs; otherwise `lease` will contain\r                                                              the lease information.\r                                                              `response` will contain information related to this operation."
       content: >-
         function _leaseBlobImpl(container, blob, leaseId, leaseAction, options,
-        options.leaseBreakPeriod, options.leaseDuration,
-        options.proposedLeaseId, options.accessConditions,
-        options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService._leaseBlobImpl(container, blob, leaseId, leaseAction, options,
-      options.leaseBreakPeriod, options.leaseDuration, options.proposedLeaseId,
-      options.accessConditions, options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'BlobService#_leaseBlobImpl~options'
       - 'BlobService#_leaseBlobImpl~resourceName'
@@ -2872,19 +2454,7 @@ items:
   - uid: 'BlobService#createBlob'
     id: createBlob
     parent: BlobService
-    name: >-
-      createBlob(container, blob, blobType, optionsOrCallback,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
-      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
-      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
-      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+    name: 'createBlob(container, blob, blobType, optionsOrCallback, callback)'
     summary: Uploads a block blob.
     type: Method
     syntax:
@@ -2970,30 +2540,9 @@ items:
         type: Stream
       content: >-
         function createBlob(container, blob, blobType, optionsOrCallback,
-        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
-        optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
-        optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
-        optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       BlobService.createBlob(container, blob, blobType, optionsOrCallback,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
-      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
-      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
-      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
       callback)
     children:
       - 'BlobService#createBlob~options'
@@ -3004,15 +2553,6 @@ items:
     parent: BlobService
     name: >-
       createBlockBlobFromFile(container, blob, localFilename, optionsOrCallback,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
-      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
-      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
       callback)
     summary: "Creates a new block blob or updates the content of an existing block blob.\rUpdating an existing block blob overwrites any existing metadata on the blob. Partial updates are not supported with Put Blob; the content of the existing blob is overwritten with the content of the new blob. To perform a partial update of the content of a block blob, use the Put Block List operation.\rCalling Put Blob to create a page blob only initializes the blob. To add content to a page blob, call the Put Page operation."
     type: Method
@@ -3093,31 +2633,10 @@ items:
         type: SpeedSummary
       content: >-
         function createBlockBlobFromFile(container, blob, localFilename,
-        optionsOrCallback, optionsOrCallback.blockIdPrefix,
-        optionsOrCallback.leaseId, optionsOrCallback.metadata,
-        optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-        optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        optionsOrCallback, callback);
     fullName: >-
       BlobService.createBlockBlobFromFile(container, blob, localFilename,
-      optionsOrCallback, optionsOrCallback.blockIdPrefix,
-      optionsOrCallback.leaseId, optionsOrCallback.metadata,
-      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      optionsOrCallback, callback)
     children:
       - 'BlobService#createBlockBlobFromFile~options'
       - 'BlobService#createBlockBlobFromFile~self'
@@ -3126,18 +2645,7 @@ items:
     parent: BlobService
     name: >-
       createBlockBlobFromStream(container, blob, (Stream), streamLength,
-      optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
-      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
-      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
-      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      optionsOrCallback, callback)
     summary: Uploads a block blob from a stream.
     type: Method
     syntax:
@@ -3230,33 +2738,10 @@ items:
         type: SpeedSummary
       content: >-
         function createBlockBlobFromStream(container, blob, (Stream),
-        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
-        optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
-        optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
-        optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        streamLength, optionsOrCallback, callback);
     fullName: >-
       BlobService.createBlockBlobFromStream(container, blob, (Stream),
-      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blobType,
-      optionsOrCallback.contentType, optionsOrCallback.contentEncoding,
-      optionsOrCallback.contentLanguage, optionsOrCallback.contentMD5,
-      optionsOrCallback.cacheControl, optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      streamLength, optionsOrCallback, callback)
     children:
       - 'BlobService#createBlockBlobFromStream~options'
   - uid: 'BlobService#generateBlockIdPrefix'
@@ -3284,20 +2769,7 @@ items:
     parent: BlobService
     name: >-
       _getBlobToFile(container, blob, localFileName, optionsOrCallback,
-      optionsOrCallback.speedSummary, optionsOrCallback.checkMD5sum,
-      optionsOrCallback.ParallelOperationThreadCount,
-      optionsOrCallback.snapshotId, optionsOrCallback.leaseId,
-      optionsOrCallback.blobType, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.rangeStart, optionsOrCallback.rangeEnd,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.rangeStartHeader,
-      optionsOrCallback.rangeEndHeader, optionsOrCallback.rangeGetContentMd5,
-      optionsOrCallback.cacheControlHeader, optionsOrCallback.accessConditions,
-      optionsOrCallback.timeoutIntervalInMs, callback)
+      callback)
     summary: Downloads a blockblob or pageblob into a file.
     type: Method
     syntax:
@@ -3406,39 +2878,10 @@ items:
         type: SpeedSummary
       content: >-
         function _getBlobToFile(container, blob, localFileName,
-        optionsOrCallback, optionsOrCallback.speedSummary,
-        optionsOrCallback.checkMD5sum,
-        optionsOrCallback.ParallelOperationThreadCount,
-        optionsOrCallback.snapshotId, optionsOrCallback.leaseId,
-        optionsOrCallback.blobType, optionsOrCallback.contentType,
-        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-        optionsOrCallback.rangeStart, optionsOrCallback.rangeEnd,
-        optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header, optionsOrCallback.rangeStartHeader,
-        optionsOrCallback.rangeEndHeader, optionsOrCallback.rangeGetContentMd5,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        optionsOrCallback, callback);
     fullName: >-
       BlobService._getBlobToFile(container, blob, localFileName,
-      optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.checkMD5sum,
-      optionsOrCallback.ParallelOperationThreadCount,
-      optionsOrCallback.snapshotId, optionsOrCallback.leaseId,
-      optionsOrCallback.blobType, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.rangeStart, optionsOrCallback.rangeEnd,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.rangeStartHeader,
-      optionsOrCallback.rangeEndHeader, optionsOrCallback.rangeGetContentMd5,
-      optionsOrCallback.cacheControlHeader, optionsOrCallback.accessConditions,
-      optionsOrCallback.timeoutIntervalInMs, callback)
+      optionsOrCallback, callback)
     children:
       - 'BlobService#_getBlobToFile~options'
       - 'BlobService#_getBlobToFile~rangeStream'
@@ -3462,17 +2905,6 @@ items:
     parent: BlobService
     name: >-
       createPageBlobFromFile(container, blob, (string), optionsOrCallback,
-      optionsOrCallback.speedSummary, optionsOrCallback.blockIdPrefix,
-      optionsOrCallback.leaseId, optionsOrCallback.metadata,
-      optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
       callback)
     summary: Uploads a page blob from file.
     type: Method
@@ -3560,33 +2992,10 @@ items:
         type: SpeedSummary
       content: >-
         function createPageBlobFromFile(container, blob, (string),
-        optionsOrCallback, optionsOrCallback.speedSummary,
-        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-        optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
-        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-        optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        optionsOrCallback, callback);
     fullName: >-
       BlobService.createPageBlobFromFile(container, blob, (string),
-      optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      optionsOrCallback, callback)
     children:
       - 'BlobService#createPageBlobFromFile~options'
       - 'BlobService#createPageBlobFromFile~self'
@@ -3595,18 +3004,7 @@ items:
     parent: BlobService
     name: >-
       createPageBlobFromStream(container, blob, (Stream), streamLength,
-      optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      optionsOrCallback, callback)
     summary: Uploads a page blob from a stream.
     type: Method
     syntax:
@@ -3696,33 +3094,10 @@ items:
         type: SpeedSummary
       content: >-
         function createPageBlobFromStream(container, blob, (Stream),
-        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-        optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-        optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-        optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
-        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-        optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        streamLength, optionsOrCallback, callback);
     fullName: >-
       BlobService.createPageBlobFromStream(container, blob, (Stream),
-      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.blockIdPrefix, optionsOrCallback.leaseId,
-      optionsOrCallback.metadata, optionsOrCallback.setBlobContentMD5,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      streamLength, optionsOrCallback, callback)
     children:
       - 'BlobService#createPageBlobFromStream~options'
       - 'BlobService#createPageBlobFromStream~self'
@@ -3732,19 +3107,7 @@ items:
     parent: BlobService
     name: >-
       _createBlobFromStream(container, blob, blobType, (Stream), streamLength,
-      optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.ParallelOperationThreadCount,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
-      optionsOrCallback.leaseId, optionsOrCallback.metadata,
-      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      optionsOrCallback, callback)
     summary: Uploads a block blob or page blob from a stream.
     type: Method
     syntax:
@@ -3839,35 +3202,10 @@ items:
         type: SpeedSummary
       content: >-
         function _createBlobFromStream(container, blob, blobType, (Stream),
-        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-        optionsOrCallback.ParallelOperationThreadCount,
-        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
-        optionsOrCallback.leaseId, optionsOrCallback.metadata,
-        optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-        optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        streamLength, optionsOrCallback, callback);
     fullName: >-
       BlobService._createBlobFromStream(container, blob, blobType, (Stream),
-      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.ParallelOperationThreadCount,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
-      optionsOrCallback.leaseId, optionsOrCallback.metadata,
-      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      streamLength, optionsOrCallback, callback)
     children:
       - 'BlobService#_createBlobFromStream~options'
       - 'BlobService#_createBlobFromStream~readOptions'
@@ -3877,19 +3215,7 @@ items:
     parent: BlobService
     name: >-
       _createBlobFromChunkStream(container, blob, blobType, (Stream),
-      streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.ParallelOperationThreadCount,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
-      optionsOrCallback.leaseId, optionsOrCallback.metadata,
-      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      streamLength, optionsOrCallback, callback)
     summary: Uploads a block blob or page blob from a stream.
     type: Method
     syntax:
@@ -3984,35 +3310,10 @@ items:
         type: SpeedSummary
       content: >-
         function _createBlobFromChunkStream(container, blob, blobType, (Stream),
-        streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-        optionsOrCallback.ParallelOperationThreadCount,
-        optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
-        optionsOrCallback.leaseId, optionsOrCallback.metadata,
-        optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-        optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-        optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-        optionsOrCallback.contentTypeHeader,
-        optionsOrCallback.contentEncodingHeader,
-        optionsOrCallback.contentLanguageHeader,
-        optionsOrCallback.contentMD5Header,
-        optionsOrCallback.cacheControlHeader,
-        optionsOrCallback.accessConditions,
-        optionsOrCallback.timeoutIntervalInMs, callback);
+        streamLength, optionsOrCallback, callback);
     fullName: >-
       BlobService._createBlobFromChunkStream(container, blob, blobType,
-      (Stream), streamLength, optionsOrCallback, optionsOrCallback.speedSummary,
-      optionsOrCallback.ParallelOperationThreadCount,
-      optionsOrCallback.useTransactionalMD5, optionsOrCallback.blockIdPrefix,
-      optionsOrCallback.leaseId, optionsOrCallback.metadata,
-      optionsOrCallback.setBlobContentMD5, optionsOrCallback.contentType,
-      optionsOrCallback.contentEncoding, optionsOrCallback.contentLanguage,
-      optionsOrCallback.contentMD5, optionsOrCallback.cacheControl,
-      optionsOrCallback.contentTypeHeader,
-      optionsOrCallback.contentEncodingHeader,
-      optionsOrCallback.contentLanguageHeader,
-      optionsOrCallback.contentMD5Header, optionsOrCallback.cacheControlHeader,
-      optionsOrCallback.accessConditions, optionsOrCallback.timeoutIntervalInMs,
-      callback)
+      (Stream), streamLength, optionsOrCallback, callback)
     children:
       - 'BlobService#_createBlobFromChunkStream~options'
       - 'BlobService#_createBlobFromChunkStream~sizeLimitation'

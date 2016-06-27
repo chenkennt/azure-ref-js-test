@@ -126,7 +126,7 @@ items:
   - uid: 'ServiceFabricClient#getClusterManifest'
     id: getClusterManifest
     parent: ServiceFabricClient
-    name: 'getClusterManifest(options, options.customHeaders, callback)'
+    name: 'getClusterManifest(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -141,10 +141,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function getClusterManifest(options, options.customHeaders, callback);'
-    fullName: >-
-      ServiceFabricClient.getClusterManifest(options, options.customHeaders,
-      callback)
+      content: 'function getClusterManifest(options, callback);'
+    fullName: 'ServiceFabricClient.getClusterManifest(options, callback)'
     children:
       - 'ServiceFabricClient#getClusterManifest~client'
       - 'ServiceFabricClient#getClusterManifest~callback'
@@ -159,13 +157,7 @@ items:
   - uid: 'ServiceFabricClient#sendClusterHealthReport'
     id: sendClusterHealthReport
     parent: ServiceFabricClient
-    name: >-
-      sendClusterHealthReport(clusterHealthReport, clusterHealthReport.sourceId,
-      clusterHealthReport.property, clusterHealthReport.healthState,
-      clusterHealthReport.description,
-      clusterHealthReport.timeToLiveInMilliSeconds,
-      clusterHealthReport.sequenceNumber, clusterHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+    name: 'sendClusterHealthReport(clusterHealthReport, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -198,20 +190,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function sendClusterHealthReport(clusterHealthReport,
-        clusterHealthReport.sourceId, clusterHealthReport.property,
-        clusterHealthReport.healthState, clusterHealthReport.description,
-        clusterHealthReport.timeToLiveInMilliSeconds,
-        clusterHealthReport.sequenceNumber,
-        clusterHealthReport.removeWhenExpired, options, options.customHeaders,
+        function sendClusterHealthReport(clusterHealthReport, options,
         callback);
     fullName: >-
-      ServiceFabricClient.sendClusterHealthReport(clusterHealthReport,
-      clusterHealthReport.sourceId, clusterHealthReport.property,
-      clusterHealthReport.healthState, clusterHealthReport.description,
-      clusterHealthReport.timeToLiveInMilliSeconds,
-      clusterHealthReport.sequenceNumber, clusterHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+      ServiceFabricClient.sendClusterHealthReport(clusterHealthReport, options,
+      callback)
     children:
       - 'ServiceFabricClient#sendClusterHealthReport~client'
       - 'ServiceFabricClient#sendClusterHealthReport~callback'
@@ -232,9 +215,7 @@ items:
   - uid: 'ServiceFabricClient#getNodeList'
     id: getNodeList
     parent: ServiceFabricClient
-    name: >-
-      getNodeList(options, options.continuationToken, options.customHeaders,
-      callback)
+    name: 'getNodeList(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -252,12 +233,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getNodeList(options, options.continuationToken,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getNodeList(options, options.continuationToken,
-      options.customHeaders, callback)
+      content: 'function getNodeList(options, callback);'
+    fullName: 'ServiceFabricClient.getNodeList(options, callback)'
     children:
       - 'ServiceFabricClient#getNodeList~client'
       - 'ServiceFabricClient#getNodeList~callback'
@@ -273,9 +250,7 @@ items:
   - uid: 'ServiceFabricClient#getNode'
     id: getNode
     parent: ServiceFabricClient
-    name: >-
-      getNode(nodeName, options, options.continuationToken,
-      options.customHeaders, callback)
+    name: 'getNode(nodeName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -296,12 +271,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Node} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getNode(nodeName, options, options.continuationToken,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getNode(nodeName, options, options.continuationToken,
-      options.customHeaders, callback)
+      content: 'function getNode(nodeName, options, callback);'
+    fullName: 'ServiceFabricClient.getNode(nodeName, options, callback)'
     children:
       - 'ServiceFabricClient#getNode~client'
       - 'ServiceFabricClient#getNode~callback'
@@ -318,7 +289,7 @@ items:
   - uid: 'ServiceFabricClient#enableNode'
     id: enableNode
     parent: ServiceFabricClient
-    name: 'enableNode(nodeName, options, options.customHeaders, callback)'
+    name: 'enableNode(nodeName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -336,10 +307,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function enableNode(nodeName, options, options.customHeaders, callback);'
-    fullName: >-
-      ServiceFabricClient.enableNode(nodeName, options, options.customHeaders,
-      callback)
+      content: 'function enableNode(nodeName, options, callback);'
+    fullName: 'ServiceFabricClient.enableNode(nodeName, options, callback)'
     children:
       - 'ServiceFabricClient#enableNode~client'
       - 'ServiceFabricClient#enableNode~callback'
@@ -355,9 +324,7 @@ items:
   - uid: 'ServiceFabricClient#disableNode'
     id: disableNode
     parent: ServiceFabricClient
-    name: >-
-      disableNode(nodeName, disableNode, disableNode.deactivationIntent,
-      options, options.customHeaders, callback)
+    name: 'disableNode(nodeName, disableNode, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -380,13 +347,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function disableNode(nodeName, disableNode,
-        disableNode.deactivationIntent, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.disableNode(nodeName, disableNode,
-      disableNode.deactivationIntent, options, options.customHeaders, callback)
+      content: 'function disableNode(nodeName, disableNode, options, callback);'
+    fullName: 'ServiceFabricClient.disableNode(nodeName, disableNode, options, callback)'
     children:
       - 'ServiceFabricClient#disableNode~client'
       - 'ServiceFabricClient#disableNode~callback'
@@ -408,7 +370,7 @@ items:
   - uid: 'ServiceFabricClient#removeNodeState'
     id: removeNodeState
     parent: ServiceFabricClient
-    name: 'removeNodeState(nodeName, options, options.customHeaders, callback)'
+    name: 'removeNodeState(nodeName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -426,12 +388,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function removeNodeState(nodeName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.removeNodeState(nodeName, options,
-      options.customHeaders, callback)
+      content: 'function removeNodeState(nodeName, options, callback);'
+    fullName: 'ServiceFabricClient.removeNodeState(nodeName, options, callback)'
     children:
       - 'ServiceFabricClient#removeNodeState~client'
       - 'ServiceFabricClient#removeNodeState~callback'
@@ -447,9 +405,7 @@ items:
   - uid: 'ServiceFabricClient#getNodeHealth'
     id: getNodeHealth
     parent: ServiceFabricClient
-    name: >-
-      getNodeHealth(nodeName, options, options.eventsHealthStateFilter,
-      options.customHeaders, callback)
+    name: 'getNodeHealth(nodeName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -470,12 +426,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeHealth} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getNodeHealth(nodeName, options,
-        options.eventsHealthStateFilter, options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getNodeHealth(nodeName, options,
-      options.eventsHealthStateFilter, options.customHeaders, callback)
+      content: 'function getNodeHealth(nodeName, options, callback);'
+    fullName: 'ServiceFabricClient.getNodeHealth(nodeName, options, callback)'
     children:
       - 'ServiceFabricClient#getNodeHealth~client'
       - 'ServiceFabricClient#getNodeHealth~callback'
@@ -492,9 +444,7 @@ items:
   - uid: 'ServiceFabricClient#getDeployedApplicationList'
     id: getDeployedApplicationList
     parent: ServiceFabricClient
-    name: >-
-      getDeployedApplicationList(nodeName, options, options.customHeaders,
-      callback)
+    name: 'getDeployedApplicationList(nodeName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -512,12 +462,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getDeployedApplicationList(nodeName, options,
-        options.customHeaders, callback);
+      content: 'function getDeployedApplicationList(nodeName, options, callback);'
     fullName: >-
       ServiceFabricClient.getDeployedApplicationList(nodeName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getDeployedApplicationList~client'
       - 'ServiceFabricClient#getDeployedApplicationList~callback'
@@ -533,9 +481,7 @@ items:
   - uid: 'ServiceFabricClient#getDeployedApplication'
     id: getDeployedApplication
     parent: ServiceFabricClient
-    name: >-
-      getDeployedApplication(nodeName, applicationName, options,
-      options.customHeaders, callback)
+    name: 'getDeployedApplication(nodeName, applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -558,10 +504,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DeployedApplication} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedApplication(nodeName, applicationName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.getDeployedApplication(nodeName, applicationName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#getDeployedApplication~client'
       - 'ServiceFabricClient#getDeployedApplication~callback'
@@ -578,11 +524,7 @@ items:
   - uid: 'ServiceFabricClient#getDeployedApplicationHealth'
     id: getDeployedApplicationHealth
     parent: ServiceFabricClient
-    name: >-
-      getDeployedApplicationHealth(nodeName, applicationName, options,
-      options.eventsHealthStateFilter,
-      options.deployedServicePackagesHealthStateFilter, options.customHeaders,
-      callback)
+    name: 'getDeployedApplicationHealth(nodeName, applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -611,14 +553,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DeployedApplicationHealth} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedApplicationHealth(nodeName, applicationName,
-        options, options.eventsHealthStateFilter,
-        options.deployedServicePackagesHealthStateFilter, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       ServiceFabricClient.getDeployedApplicationHealth(nodeName,
-      applicationName, options, options.eventsHealthStateFilter,
-      options.deployedServicePackagesHealthStateFilter, options.customHeaders,
-      callback)
+      applicationName, options, callback)
     children:
       - 'ServiceFabricClient#getDeployedApplicationHealth~client'
       - 'ServiceFabricClient#getDeployedApplicationHealth~callback'
@@ -638,7 +576,7 @@ items:
   - uid: 'ServiceFabricClient#getNodeLoadInformation'
     id: getNodeLoadInformation
     parent: ServiceFabricClient
-    name: 'getNodeLoadInformation(nodeName, options, options.customHeaders, callback)'
+    name: 'getNodeLoadInformation(nodeName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -656,12 +594,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NodeLoadInformation} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getNodeLoadInformation(nodeName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getNodeLoadInformation(nodeName, options,
-      options.customHeaders, callback)
+      content: 'function getNodeLoadInformation(nodeName, options, callback);'
+    fullName: 'ServiceFabricClient.getNodeLoadInformation(nodeName, options, callback)'
     children:
       - 'ServiceFabricClient#getNodeLoadInformation~client'
       - 'ServiceFabricClient#getNodeLoadInformation~callback'
@@ -677,9 +611,7 @@ items:
   - uid: 'ServiceFabricClient#getDeployedCodePackage'
     id: getDeployedCodePackage
     parent: ServiceFabricClient
-    name: >-
-      getDeployedCodePackage(nodeName, applicationName, options,
-      options.customHeaders, callback)
+    name: 'getDeployedCodePackage(nodeName, applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -702,10 +634,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedCodePackage(nodeName, applicationName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.getDeployedCodePackage(nodeName, applicationName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#getDeployedCodePackage~client'
       - 'ServiceFabricClient#getDeployedCodePackage~callback'
@@ -722,9 +654,7 @@ items:
   - uid: 'ServiceFabricClient#getDeployedReplica'
     id: getDeployedReplica
     parent: ServiceFabricClient
-    name: >-
-      getDeployedReplica(nodeName, applicationName, options,
-      options.customHeaders, callback)
+    name: 'getDeployedReplica(nodeName, applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -747,10 +677,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedReplica(nodeName, applicationName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.getDeployedReplica(nodeName, applicationName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getDeployedReplica~client'
       - 'ServiceFabricClient#getDeployedReplica~callback'
@@ -769,7 +699,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       getDeployedReplicaDetail(nodeName, partitionName, replicaId, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -795,10 +725,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DeployedReplicaDetail} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedReplicaDetail(nodeName, partitionName, replicaId,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ServiceFabricClient.getDeployedReplicaDetail(nodeName, partitionName,
-      replicaId, options, options.customHeaders, callback)
+      replicaId, options, callback)
     children:
       - 'ServiceFabricClient#getDeployedReplicaDetail~client'
       - 'ServiceFabricClient#getDeployedReplicaDetail~callback'
@@ -816,9 +746,7 @@ items:
   - uid: 'ServiceFabricClient#getDeployedServicePackage'
     id: getDeployedServicePackage
     parent: ServiceFabricClient
-    name: >-
-      getDeployedServicePackage(nodeName, applicationName, options,
-      options.customHeaders, callback)
+    name: 'getDeployedServicePackage(nodeName, applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -841,10 +769,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedServicePackage(nodeName, applicationName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.getDeployedServicePackage(nodeName, applicationName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#getDeployedServicePackage~client'
       - 'ServiceFabricClient#getDeployedServicePackage~callback'
@@ -863,8 +791,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       getDeployedServicePackageHealth(nodeName, applicationName,
-      servicePackageName, options, options.eventsHealthStateFilter,
-      options.customHeaders, callback)
+      servicePackageName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -893,12 +820,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DeployedServicePackageHealth} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedServicePackageHealth(nodeName, applicationName,
-        servicePackageName, options, options.eventsHealthStateFilter,
-        options.customHeaders, callback);
+        servicePackageName, options, callback);
     fullName: >-
       ServiceFabricClient.getDeployedServicePackageHealth(nodeName,
-      applicationName, servicePackageName, options,
-      options.eventsHealthStateFilter, options.customHeaders, callback)
+      applicationName, servicePackageName, options, callback)
     children:
       - 'ServiceFabricClient#getDeployedServicePackageHealth~client'
       - 'ServiceFabricClient#getDeployedServicePackageHealth~callback'
@@ -918,9 +843,7 @@ items:
   - uid: 'ServiceFabricClient#getDeployedServiceType'
     id: getDeployedServiceType
     parent: ServiceFabricClient
-    name: >-
-      getDeployedServiceType(nodeName, applicationName, options,
-      options.customHeaders, callback)
+    name: 'getDeployedServiceType(nodeName, applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -943,10 +866,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getDeployedServiceType(nodeName, applicationName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.getDeployedServiceType(nodeName, applicationName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#getDeployedServiceType~client'
       - 'ServiceFabricClient#getDeployedServiceType~callback'
@@ -963,13 +886,7 @@ items:
   - uid: 'ServiceFabricClient#sendNodeHealthReport'
     id: sendNodeHealthReport
     parent: ServiceFabricClient
-    name: >-
-      sendNodeHealthReport(nodeName, nodeHealthReport,
-      nodeHealthReport.sourceId, nodeHealthReport.property,
-      nodeHealthReport.healthState, nodeHealthReport.description,
-      nodeHealthReport.timeToLiveInMilliSeconds,
-      nodeHealthReport.sequenceNumber, nodeHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+    name: 'sendNodeHealthReport(nodeName, nodeHealthReport, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1005,19 +922,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function sendNodeHealthReport(nodeName, nodeHealthReport,
-        nodeHealthReport.sourceId, nodeHealthReport.property,
-        nodeHealthReport.healthState, nodeHealthReport.description,
-        nodeHealthReport.timeToLiveInMilliSeconds,
-        nodeHealthReport.sequenceNumber, nodeHealthReport.removeWhenExpired,
-        options, options.customHeaders, callback);
+        function sendNodeHealthReport(nodeName, nodeHealthReport, options,
+        callback);
     fullName: >-
       ServiceFabricClient.sendNodeHealthReport(nodeName, nodeHealthReport,
-      nodeHealthReport.sourceId, nodeHealthReport.property,
-      nodeHealthReport.healthState, nodeHealthReport.description,
-      nodeHealthReport.timeToLiveInMilliSeconds,
-      nodeHealthReport.sequenceNumber, nodeHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#sendNodeHealthReport~client'
       - 'ServiceFabricClient#sendNodeHealthReport~callback'
@@ -1041,14 +950,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       sendDeployedApplicationHealthReport(nodeName, applicationName,
-      deployedApplicationHealthReport, deployedApplicationHealthReport.sourceId,
-      deployedApplicationHealthReport.property,
-      deployedApplicationHealthReport.healthState,
-      deployedApplicationHealthReport.description,
-      deployedApplicationHealthReport.timeToLiveInMilliSeconds,
-      deployedApplicationHealthReport.sequenceNumber,
-      deployedApplicationHealthReport.removeWhenExpired, options,
-      options.customHeaders, callback)
+      deployedApplicationHealthReport, options, callback)
     type: Method
     syntax:
       parameters:
@@ -1088,26 +990,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function sendDeployedApplicationHealthReport(nodeName, applicationName,
-        deployedApplicationHealthReport,
-        deployedApplicationHealthReport.sourceId,
-        deployedApplicationHealthReport.property,
-        deployedApplicationHealthReport.healthState,
-        deployedApplicationHealthReport.description,
-        deployedApplicationHealthReport.timeToLiveInMilliSeconds,
-        deployedApplicationHealthReport.sequenceNumber,
-        deployedApplicationHealthReport.removeWhenExpired, options,
-        options.customHeaders, callback);
+        deployedApplicationHealthReport, options, callback);
     fullName: >-
       ServiceFabricClient.sendDeployedApplicationHealthReport(nodeName,
-      applicationName, deployedApplicationHealthReport,
-      deployedApplicationHealthReport.sourceId,
-      deployedApplicationHealthReport.property,
-      deployedApplicationHealthReport.healthState,
-      deployedApplicationHealthReport.description,
-      deployedApplicationHealthReport.timeToLiveInMilliSeconds,
-      deployedApplicationHealthReport.sequenceNumber,
-      deployedApplicationHealthReport.removeWhenExpired, options,
-      options.customHeaders, callback)
+      applicationName, deployedApplicationHealthReport, options, callback)
     children:
       - 'ServiceFabricClient#sendDeployedApplicationHealthReport~client'
       - 'ServiceFabricClient#sendDeployedApplicationHealthReport~callback'
@@ -1134,15 +1020,8 @@ items:
     parent: ServiceFabricClient
     name: >-
       sendDeployedServicePackageHealthReport(nodeName, applicationName,
-      serviceManifestName, deployedServicePackageHealthReport,
-      deployedServicePackageHealthReport.sourceId,
-      deployedServicePackageHealthReport.property,
-      deployedServicePackageHealthReport.healthState,
-      deployedServicePackageHealthReport.description,
-      deployedServicePackageHealthReport.timeToLiveInMilliSeconds,
-      deployedServicePackageHealthReport.sequenceNumber,
-      deployedServicePackageHealthReport.removeWhenExpired, options,
-      options.customHeaders, callback)
+      serviceManifestName, deployedServicePackageHealthReport, options,
+      callback)
     type: Method
     syntax:
       parameters:
@@ -1186,26 +1065,11 @@ items:
       content: >-
         function sendDeployedServicePackageHealthReport(nodeName,
         applicationName, serviceManifestName,
-        deployedServicePackageHealthReport,
-        deployedServicePackageHealthReport.sourceId,
-        deployedServicePackageHealthReport.property,
-        deployedServicePackageHealthReport.healthState,
-        deployedServicePackageHealthReport.description,
-        deployedServicePackageHealthReport.timeToLiveInMilliSeconds,
-        deployedServicePackageHealthReport.sequenceNumber,
-        deployedServicePackageHealthReport.removeWhenExpired, options,
-        options.customHeaders, callback);
+        deployedServicePackageHealthReport, options, callback);
     fullName: >-
       ServiceFabricClient.sendDeployedServicePackageHealthReport(nodeName,
       applicationName, serviceManifestName, deployedServicePackageHealthReport,
-      deployedServicePackageHealthReport.sourceId,
-      deployedServicePackageHealthReport.property,
-      deployedServicePackageHealthReport.healthState,
-      deployedServicePackageHealthReport.description,
-      deployedServicePackageHealthReport.timeToLiveInMilliSeconds,
-      deployedServicePackageHealthReport.sequenceNumber,
-      deployedServicePackageHealthReport.removeWhenExpired, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#sendDeployedServicePackageHealthReport~client'
       - 'ServiceFabricClient#sendDeployedServicePackageHealthReport~callback'
@@ -1234,7 +1098,7 @@ items:
   - uid: 'ServiceFabricClient#getApplicationTypeList'
     id: getApplicationTypeList
     parent: ServiceFabricClient
-    name: 'getApplicationTypeList(options, options.customHeaders, callback)'
+    name: 'getApplicationTypeList(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1249,12 +1113,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getApplicationTypeList(options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.getApplicationTypeList(options, options.customHeaders,
-      callback)
+      content: 'function getApplicationTypeList(options, callback);'
+    fullName: 'ServiceFabricClient.getApplicationTypeList(options, callback)'
     children:
       - 'ServiceFabricClient#getApplicationTypeList~client'
       - 'ServiceFabricClient#getApplicationTypeList~callback'
@@ -1269,9 +1129,7 @@ items:
   - uid: 'ServiceFabricClient#getApplicationType'
     id: getApplicationType
     parent: ServiceFabricClient
-    name: >-
-      getApplicationType(applicationTypeName, options, options.customHeaders,
-      callback)
+    name: 'getApplicationType(applicationTypeName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1289,12 +1147,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getApplicationType(applicationTypeName, options,
-        options.customHeaders, callback);
+      content: 'function getApplicationType(applicationTypeName, options, callback);'
     fullName: >-
       ServiceFabricClient.getApplicationType(applicationTypeName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getApplicationType~client'
       - 'ServiceFabricClient#getApplicationType~callback'
@@ -1312,7 +1168,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       getServiceManifest(applicationTypeName, applicationTypeVersion,
-      serviceManifestName, options, options.customHeaders, callback)
+      serviceManifestName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -1338,11 +1194,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServiceManifest} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getServiceManifest(applicationTypeName, applicationTypeVersion,
-        serviceManifestName, options, options.customHeaders, callback);
+        serviceManifestName, options, callback);
     fullName: >-
       ServiceFabricClient.getServiceManifest(applicationTypeName,
-      applicationTypeVersion, serviceManifestName, options,
-      options.customHeaders, callback)
+      applicationTypeVersion, serviceManifestName, options, callback)
     children:
       - 'ServiceFabricClient#getServiceManifest~client'
       - 'ServiceFabricClient#getServiceManifest~callback'
@@ -1360,7 +1215,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       getServiceType(applicationTypeName, applicationTypeVersion, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -1383,10 +1238,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getServiceType(applicationTypeName, applicationTypeVersion,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ServiceFabricClient.getServiceType(applicationTypeName,
-      applicationTypeVersion, options, options.customHeaders, callback)
+      applicationTypeVersion, options, callback)
     children:
       - 'ServiceFabricClient#getServiceType~client'
       - 'ServiceFabricClient#getServiceType~callback'
@@ -1404,7 +1259,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       getApplicationManifest(applicationTypeName, applicationTypeVersion,
-      options, options.continuationToken, options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -1430,12 +1285,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationManifest} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getApplicationManifest(applicationTypeName,
-        applicationTypeVersion, options, options.continuationToken,
-        options.customHeaders, callback);
+        applicationTypeVersion, options, callback);
     fullName: >-
       ServiceFabricClient.getApplicationManifest(applicationTypeName,
-      applicationTypeVersion, options, options.continuationToken,
-      options.customHeaders, callback)
+      applicationTypeVersion, options, callback)
     children:
       - 'ServiceFabricClient#getApplicationManifest~client'
       - 'ServiceFabricClient#getApplicationManifest~callback'
@@ -1452,10 +1305,7 @@ items:
   - uid: 'ServiceFabricClient#registerApplicationType'
     id: registerApplicationType
     parent: ServiceFabricClient
-    name: >-
-      registerApplicationType(registerApplicationType,
-      registerApplicationType.applicationTypeBuildPath, options,
-      options.customHeaders, callback)
+    name: 'registerApplicationType(registerApplicationType, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1476,13 +1326,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function registerApplicationType(registerApplicationType,
-        registerApplicationType.applicationTypeBuildPath, options,
-        options.customHeaders, callback);
+        function registerApplicationType(registerApplicationType, options,
+        callback);
     fullName: >-
       ServiceFabricClient.registerApplicationType(registerApplicationType,
-      registerApplicationType.applicationTypeBuildPath, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#registerApplicationType~client'
       - 'ServiceFabricClient#registerApplicationType~callback'
@@ -1505,8 +1353,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       unregisterApplicationType(applicationTypeName, unregisterApplicationType,
-      unregisterApplicationType.applicationTypeVersion, options,
-      options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -1531,14 +1378,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function unregisterApplicationType(applicationTypeName,
-        unregisterApplicationType,
-        unregisterApplicationType.applicationTypeVersion, options,
-        options.customHeaders, callback);
+        unregisterApplicationType, options, callback);
     fullName: >-
       ServiceFabricClient.unregisterApplicationType(applicationTypeName,
-      unregisterApplicationType,
-      unregisterApplicationType.applicationTypeVersion, options,
-      options.customHeaders, callback)
+      unregisterApplicationType, options, callback)
     children:
       - 'ServiceFabricClient#unregisterApplicationType~client'
       - 'ServiceFabricClient#unregisterApplicationType~callback'
@@ -1560,9 +1403,7 @@ items:
   - uid: 'ServiceFabricClient#getApplicationList'
     id: getApplicationList
     parent: ServiceFabricClient
-    name: >-
-      getApplicationList(options, options.continuationToken,
-      options.customHeaders, callback)
+    name: 'getApplicationList(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1580,12 +1421,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getApplicationList(options, options.continuationToken,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getApplicationList(options, options.continuationToken,
-      options.customHeaders, callback)
+      content: 'function getApplicationList(options, callback);'
+    fullName: 'ServiceFabricClient.getApplicationList(options, callback)'
     children:
       - 'ServiceFabricClient#getApplicationList~client'
       - 'ServiceFabricClient#getApplicationList~callback'
@@ -1601,9 +1438,7 @@ items:
   - uid: 'ServiceFabricClient#getApplication'
     id: getApplication
     parent: ServiceFabricClient
-    name: >-
-      getApplication(applicationName, options, options.continuationToken,
-      options.customHeaders, callback)
+    name: 'getApplication(applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1624,12 +1459,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Application} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getApplication(applicationName, options,
-        options.continuationToken, options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getApplication(applicationName, options,
-      options.continuationToken, options.customHeaders, callback)
+      content: 'function getApplication(applicationName, options, callback);'
+    fullName: 'ServiceFabricClient.getApplication(applicationName, options, callback)'
     children:
       - 'ServiceFabricClient#getApplication~client'
       - 'ServiceFabricClient#getApplication~callback'
@@ -1646,7 +1477,7 @@ items:
   - uid: 'ServiceFabricClient#getServiceList'
     id: getServiceList
     parent: ServiceFabricClient
-    name: 'getServiceList(applicationName, options, options.customHeaders, callback)'
+    name: 'getServiceList(applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1664,12 +1495,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getServiceList(applicationName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.getServiceList(applicationName, options,
-      options.customHeaders, callback)
+      content: 'function getServiceList(applicationName, options, callback);'
+    fullName: 'ServiceFabricClient.getServiceList(applicationName, options, callback)'
     children:
       - 'ServiceFabricClient#getServiceList~client'
       - 'ServiceFabricClient#getServiceList~callback'
@@ -1685,9 +1512,7 @@ items:
   - uid: 'ServiceFabricClient#getService'
     id: getService
     parent: ServiceFabricClient
-    name: >-
-      getService(applicationName, serviceName, options, options.customHeaders,
-      callback)
+    name: 'getService(applicationName, serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1708,12 +1533,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Service} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getService(applicationName, serviceName, options,
-        options.customHeaders, callback);
+      content: 'function getService(applicationName, serviceName, options, callback);'
     fullName: >-
       ServiceFabricClient.getService(applicationName, serviceName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getService~client'
       - 'ServiceFabricClient#getService~callback'
@@ -1732,7 +1555,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       getServiceGroupDescription(applicationName, serviceName, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -1755,10 +1578,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServiceGroupDescription} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getServiceGroupDescription(applicationName, serviceName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ServiceFabricClient.getServiceGroupDescription(applicationName,
-      serviceName, options, options.customHeaders, callback)
+      serviceName, options, callback)
     children:
       - 'ServiceFabricClient#getServiceGroupDescription~client'
       - 'ServiceFabricClient#getServiceGroupDescription~callback'
@@ -1775,9 +1598,7 @@ items:
   - uid: 'ServiceFabricClient#getServiceGroupMember'
     id: getServiceGroupMember
     parent: ServiceFabricClient
-    name: >-
-      getServiceGroupMember(applicationName, serviceName, options,
-      options.customHeaders, callback)
+    name: 'getServiceGroupMember(applicationName, serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1800,10 +1621,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServiceGroupMember} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getServiceGroupMember(applicationName, serviceName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.getServiceGroupMember(applicationName, serviceName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#getServiceGroupMember~client'
       - 'ServiceFabricClient#getServiceGroupMember~callback'
@@ -1820,11 +1641,7 @@ items:
   - uid: 'ServiceFabricClient#getApplicationHealth'
     id: getApplicationHealth
     parent: ServiceFabricClient
-    name: >-
-      getApplicationHealth(applicationName, options,
-      options.eventsHealthStateFilter,
-      options.deployedApplicationsHealthStateFilter, options.customHeaders,
-      callback)
+    name: 'getApplicationHealth(applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1848,15 +1665,9 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationHealth} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getApplicationHealth(applicationName, options,
-        options.eventsHealthStateFilter,
-        options.deployedApplicationsHealthStateFilter, options.customHeaders,
-        callback);
+      content: 'function getApplicationHealth(applicationName, options, callback);'
     fullName: >-
       ServiceFabricClient.getApplicationHealth(applicationName, options,
-      options.eventsHealthStateFilter,
-      options.deployedApplicationsHealthStateFilter, options.customHeaders,
       callback)
     children:
       - 'ServiceFabricClient#getApplicationHealth~client'
@@ -1876,9 +1687,7 @@ items:
   - uid: 'ServiceFabricClient#getApplicationUpgrade'
     id: getApplicationUpgrade
     parent: ServiceFabricClient
-    name: >-
-      getApplicationUpgrade(applicationName, options, options.customHeaders,
-      callback)
+    name: 'getApplicationUpgrade(applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -1896,12 +1705,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationUpgrade} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getApplicationUpgrade(applicationName, options,
-        options.customHeaders, callback);
+      content: 'function getApplicationUpgrade(applicationName, options, callback);'
     fullName: >-
       ServiceFabricClient.getApplicationUpgrade(applicationName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getApplicationUpgrade~client'
       - 'ServiceFabricClient#getApplicationUpgrade~callback'
@@ -1919,12 +1726,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       sendApplicationHealthReport(applicationName, applicationHealthReport,
-      applicationHealthReport.sourceId, applicationHealthReport.property,
-      applicationHealthReport.healthState, applicationHealthReport.description,
-      applicationHealthReport.timeToLiveInMilliSeconds,
-      applicationHealthReport.sequenceNumber,
-      applicationHealthReport.removeWhenExpired, options, options.customHeaders,
-      callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -1961,22 +1763,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function sendApplicationHealthReport(applicationName,
-        applicationHealthReport, applicationHealthReport.sourceId,
-        applicationHealthReport.property, applicationHealthReport.healthState,
-        applicationHealthReport.description,
-        applicationHealthReport.timeToLiveInMilliSeconds,
-        applicationHealthReport.sequenceNumber,
-        applicationHealthReport.removeWhenExpired, options,
-        options.customHeaders, callback);
+        applicationHealthReport, options, callback);
     fullName: >-
       ServiceFabricClient.sendApplicationHealthReport(applicationName,
-      applicationHealthReport, applicationHealthReport.sourceId,
-      applicationHealthReport.property, applicationHealthReport.healthState,
-      applicationHealthReport.description,
-      applicationHealthReport.timeToLiveInMilliSeconds,
-      applicationHealthReport.sequenceNumber,
-      applicationHealthReport.removeWhenExpired, options, options.customHeaders,
-      callback)
+      applicationHealthReport, options, callback)
     children:
       - 'ServiceFabricClient#sendApplicationHealthReport~client'
       - 'ServiceFabricClient#sendApplicationHealthReport~callback'
@@ -1998,11 +1788,7 @@ items:
   - uid: 'ServiceFabricClient#newApplication'
     id: newApplication
     parent: ServiceFabricClient
-    name: >-
-      newApplication(applicationDescription, applicationDescription.name,
-      applicationDescription.typeName, applicationDescription.typeVersion,
-      applicationDescription.parameterList, options, options.customHeaders,
-      callback)
+    name: 'newApplication(applicationDescription, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -2028,17 +1814,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function newApplication(applicationDescription,
-        applicationDescription.name, applicationDescription.typeName,
-        applicationDescription.typeVersion,
-        applicationDescription.parameterList, options, options.customHeaders,
-        callback);
+      content: 'function newApplication(applicationDescription, options, callback);'
     fullName: >-
-      ServiceFabricClient.newApplication(applicationDescription,
-      applicationDescription.name, applicationDescription.typeName,
-      applicationDescription.typeVersion, applicationDescription.parameterList,
-      options, options.customHeaders, callback)
+      ServiceFabricClient.newApplication(applicationDescription, options,
+      callback)
     children:
       - 'ServiceFabricClient#newApplication~client'
       - 'ServiceFabricClient#newApplication~callback'
@@ -2059,24 +1838,7 @@ items:
   - uid: 'ServiceFabricClient#newService'
     id: newService
     parent: ServiceFabricClient
-    name: >-
-      newService(applicationName, serviceDescription,
-      serviceDescription.applicationName, serviceDescription.serviceName,
-      serviceDescription.serviceTypeName,
-      serviceDescription.partitionDescription,
-      serviceDescription.partitionDescription.partitionScheme,
-      serviceDescription.partitionDescription.count,
-      serviceDescription.partitionDescription.names,
-      serviceDescription.partitionDescription.lowKey,
-      serviceDescription.partitionDescription.highKey,
-      serviceDescription.placementConstraints,
-      serviceDescription.correlationScheme,
-      serviceDescription.serviceLoadMetrics,
-      serviceDescription.servicePlacementPolicies,
-      serviceDescription.servicePlacementPolicies.serviceName,
-      serviceDescription.servicePlacementPolicies.serviceCorrelationScheme,
-      serviceDescription.flags, serviceDescription.ServiceKind, options,
-      options.customHeaders, callback)
+    name: 'newService(applicationName, serviceDescription, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -2133,41 +1895,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function newService(applicationName, serviceDescription,
-        serviceDescription.applicationName, serviceDescription.serviceName,
-        serviceDescription.serviceTypeName,
-        serviceDescription.partitionDescription,
-        serviceDescription.partitionDescription.partitionScheme,
-        serviceDescription.partitionDescription.count,
-        serviceDescription.partitionDescription.names,
-        serviceDescription.partitionDescription.lowKey,
-        serviceDescription.partitionDescription.highKey,
-        serviceDescription.placementConstraints,
-        serviceDescription.correlationScheme,
-        serviceDescription.serviceLoadMetrics,
-        serviceDescription.servicePlacementPolicies,
-        serviceDescription.servicePlacementPolicies.serviceName,
-        serviceDescription.servicePlacementPolicies.serviceCorrelationScheme,
-        serviceDescription.flags, serviceDescription.ServiceKind, options,
-        options.customHeaders, callback);
+        function newService(applicationName, serviceDescription, options,
+        callback);
     fullName: >-
       ServiceFabricClient.newService(applicationName, serviceDescription,
-      serviceDescription.applicationName, serviceDescription.serviceName,
-      serviceDescription.serviceTypeName,
-      serviceDescription.partitionDescription,
-      serviceDescription.partitionDescription.partitionScheme,
-      serviceDescription.partitionDescription.count,
-      serviceDescription.partitionDescription.names,
-      serviceDescription.partitionDescription.lowKey,
-      serviceDescription.partitionDescription.highKey,
-      serviceDescription.placementConstraints,
-      serviceDescription.correlationScheme,
-      serviceDescription.serviceLoadMetrics,
-      serviceDescription.servicePlacementPolicies,
-      serviceDescription.servicePlacementPolicies.serviceName,
-      serviceDescription.servicePlacementPolicies.serviceCorrelationScheme,
-      serviceDescription.flags, serviceDescription.ServiceKind, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#newService~client'
       - 'ServiceFabricClient#newService~callback'
@@ -2191,9 +1923,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       newServiceFromTemplate(applicationName, serviceDescriptionTemplate,
-      serviceDescriptionTemplate.serviceName,
-      serviceDescriptionTemplate.serviceTypeName, options,
-      options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -2220,14 +1950,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function newServiceFromTemplate(applicationName,
-        serviceDescriptionTemplate, serviceDescriptionTemplate.serviceName,
-        serviceDescriptionTemplate.serviceTypeName, options,
-        options.customHeaders, callback);
+        serviceDescriptionTemplate, options, callback);
     fullName: >-
       ServiceFabricClient.newServiceFromTemplate(applicationName,
-      serviceDescriptionTemplate, serviceDescriptionTemplate.serviceName,
-      serviceDescriptionTemplate.serviceTypeName, options,
-      options.customHeaders, callback)
+      serviceDescriptionTemplate, options, callback)
     children:
       - 'ServiceFabricClient#newServiceFromTemplate~client'
       - 'ServiceFabricClient#newServiceFromTemplate~callback'
@@ -2250,25 +1976,7 @@ items:
     id: newServiceGroup
     parent: ServiceFabricClient
     name: >-
-      newServiceGroup(applicationName, serviceGroupDescription,
-      serviceGroupDescription.applicationName,
-      serviceGroupDescription.serviceName,
-      serviceGroupDescription.serviceTypeName,
-      serviceGroupDescription.partitionDescription,
-      serviceGroupDescription.partitionDescription.partitionScheme,
-      serviceGroupDescription.partitionDescription.count,
-      serviceGroupDescription.partitionDescription.names,
-      serviceGroupDescription.partitionDescription.lowKey,
-      serviceGroupDescription.partitionDescription.highKey,
-      serviceGroupDescription.placementConstraints,
-      serviceGroupDescription.correlationScheme,
-      serviceGroupDescription.serviceLoadMetrics,
-      serviceGroupDescription.servicePlacementPolicies,
-      serviceGroupDescription.servicePlacementPolicies.serviceName,
-      serviceGroupDescription.servicePlacementPolicies.serviceCorrelationScheme,
-      serviceGroupDescription.flags,
-      serviceGroupDescription.serviceGroupMemberDescription,
-      serviceGroupDescription.ServiceKind, options, options.customHeaders,
+      newServiceGroup(applicationName, serviceGroupDescription, options,
       callback)
     type: Method
     syntax:
@@ -2330,46 +2038,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function newServiceGroup(applicationName, serviceGroupDescription,
-        serviceGroupDescription.applicationName,
-        serviceGroupDescription.serviceName,
-        serviceGroupDescription.serviceTypeName,
-        serviceGroupDescription.partitionDescription,
-        serviceGroupDescription.partitionDescription.partitionScheme,
-        serviceGroupDescription.partitionDescription.count,
-        serviceGroupDescription.partitionDescription.names,
-        serviceGroupDescription.partitionDescription.lowKey,
-        serviceGroupDescription.partitionDescription.highKey,
-        serviceGroupDescription.placementConstraints,
-        serviceGroupDescription.correlationScheme,
-        serviceGroupDescription.serviceLoadMetrics,
-        serviceGroupDescription.servicePlacementPolicies,
-        serviceGroupDescription.servicePlacementPolicies.serviceName,
-        serviceGroupDescription.servicePlacementPolicies.serviceCorrelationScheme,
-        serviceGroupDescription.flags,
-        serviceGroupDescription.serviceGroupMemberDescription,
-        serviceGroupDescription.ServiceKind, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       ServiceFabricClient.newServiceGroup(applicationName,
-      serviceGroupDescription, serviceGroupDescription.applicationName,
-      serviceGroupDescription.serviceName,
-      serviceGroupDescription.serviceTypeName,
-      serviceGroupDescription.partitionDescription,
-      serviceGroupDescription.partitionDescription.partitionScheme,
-      serviceGroupDescription.partitionDescription.count,
-      serviceGroupDescription.partitionDescription.names,
-      serviceGroupDescription.partitionDescription.lowKey,
-      serviceGroupDescription.partitionDescription.highKey,
-      serviceGroupDescription.placementConstraints,
-      serviceGroupDescription.correlationScheme,
-      serviceGroupDescription.serviceLoadMetrics,
-      serviceGroupDescription.servicePlacementPolicies,
-      serviceGroupDescription.servicePlacementPolicies.serviceName,
-      serviceGroupDescription.servicePlacementPolicies.serviceCorrelationScheme,
-      serviceGroupDescription.flags,
-      serviceGroupDescription.serviceGroupMemberDescription,
-      serviceGroupDescription.ServiceKind, options, options.customHeaders,
-      callback)
+      serviceGroupDescription, options, callback)
     children:
       - 'ServiceFabricClient#newServiceGroup~client'
       - 'ServiceFabricClient#newServiceGroup~callback'
@@ -2393,9 +2065,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       newServiceGroupFromTemplate(applicationName, serviceDescriptionTemplate,
-      serviceDescriptionTemplate.serviceName,
-      serviceDescriptionTemplate.serviceTypeName, options,
-      options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -2422,14 +2092,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function newServiceGroupFromTemplate(applicationName,
-        serviceDescriptionTemplate, serviceDescriptionTemplate.serviceName,
-        serviceDescriptionTemplate.serviceTypeName, options,
-        options.customHeaders, callback);
+        serviceDescriptionTemplate, options, callback);
     fullName: >-
       ServiceFabricClient.newServiceGroupFromTemplate(applicationName,
-      serviceDescriptionTemplate, serviceDescriptionTemplate.serviceName,
-      serviceDescriptionTemplate.serviceTypeName, options,
-      options.customHeaders, callback)
+      serviceDescriptionTemplate, options, callback)
     children:
       - 'ServiceFabricClient#newServiceGroupFromTemplate~client'
       - 'ServiceFabricClient#newServiceGroupFromTemplate~callback'
@@ -2453,9 +2119,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       updateServiceGroup(applicationName, serviceName,
-      serviceGroupUpdateDescription, serviceGroupUpdateDescription.flags,
-      serviceGroupUpdateDescription.ServiceKind, options, options.customHeaders,
-      callback)
+      serviceGroupUpdateDescription, options, callback)
     type: Method
     syntax:
       parameters:
@@ -2486,14 +2150,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function updateServiceGroup(applicationName, serviceName,
-        serviceGroupUpdateDescription, serviceGroupUpdateDescription.flags,
-        serviceGroupUpdateDescription.ServiceKind, options,
-        options.customHeaders, callback);
+        serviceGroupUpdateDescription, options, callback);
     fullName: >-
       ServiceFabricClient.updateServiceGroup(applicationName, serviceName,
-      serviceGroupUpdateDescription, serviceGroupUpdateDescription.flags,
-      serviceGroupUpdateDescription.ServiceKind, options, options.customHeaders,
-      callback)
+      serviceGroupUpdateDescription, options, callback)
     children:
       - 'ServiceFabricClient#updateServiceGroup~client'
       - 'ServiceFabricClient#updateServiceGroup~callback'
@@ -2516,9 +2176,7 @@ items:
   - uid: 'ServiceFabricClient#removeApplication'
     id: removeApplication
     parent: ServiceFabricClient
-    name: >-
-      removeApplication(applicationName, options, options.customHeaders,
-      callback)
+    name: 'removeApplication(applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -2536,12 +2194,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function removeApplication(applicationName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.removeApplication(applicationName, options,
-      options.customHeaders, callback)
+      content: 'function removeApplication(applicationName, options, callback);'
+    fullName: 'ServiceFabricClient.removeApplication(applicationName, options, callback)'
     children:
       - 'ServiceFabricClient#removeApplication~client'
       - 'ServiceFabricClient#removeApplication~callback'
@@ -2559,29 +2213,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       startApplicationUpgrade(applicationName,
-      startApplicationUpgradeDescription,
-      startApplicationUpgradeDescription.name,
-      startApplicationUpgradeDescription.targetApplicationTypeVersion,
-      startApplicationUpgradeDescription.parameters,
-      startApplicationUpgradeDescription.upgradeKind,
-      startApplicationUpgradeDescription.rollingUpgradeMode,
-      startApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds,
-      startApplicationUpgradeDescription.forceRestart,
-      startApplicationUpgradeDescription.monitoringPolicy,
-      startApplicationUpgradeDescription.monitoringPolicy.failureAction,
-      startApplicationUpgradeDescription.monitoringPolicy.healthCheckWaitDurationInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.healthCheckStableDurationInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.healthCheckRetryTimeoutInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.upgradeTimeoutInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.upgradeDomainTimeoutInMilliseconds,
-      startApplicationUpgradeDescription.applicationHealthPolicy,
-      startApplicationUpgradeDescription.applicationHealthPolicy.considerWarningAsError,
-      startApplicationUpgradeDescription.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition,
-      options, options.customHeaders, callback)
+      startApplicationUpgradeDescription, options, callback)
     type: Method
     syntax:
       parameters:
@@ -2658,54 +2290,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function startApplicationUpgrade(applicationName,
-        startApplicationUpgradeDescription,
-        startApplicationUpgradeDescription.name,
-        startApplicationUpgradeDescription.targetApplicationTypeVersion,
-        startApplicationUpgradeDescription.parameters,
-        startApplicationUpgradeDescription.upgradeKind,
-        startApplicationUpgradeDescription.rollingUpgradeMode,
-        startApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds,
-        startApplicationUpgradeDescription.forceRestart,
-        startApplicationUpgradeDescription.monitoringPolicy,
-        startApplicationUpgradeDescription.monitoringPolicy.failureAction,
-        startApplicationUpgradeDescription.monitoringPolicy.healthCheckWaitDurationInMilliseconds,
-        startApplicationUpgradeDescription.monitoringPolicy.healthCheckStableDurationInMilliseconds,
-        startApplicationUpgradeDescription.monitoringPolicy.healthCheckRetryTimeoutInMilliseconds,
-        startApplicationUpgradeDescription.monitoringPolicy.upgradeTimeoutInMilliseconds,
-        startApplicationUpgradeDescription.monitoringPolicy.upgradeDomainTimeoutInMilliseconds,
-        startApplicationUpgradeDescription.applicationHealthPolicy,
-        startApplicationUpgradeDescription.applicationHealthPolicy.considerWarningAsError,
-        startApplicationUpgradeDescription.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications,
-        startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy,
-        startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices,
-        startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService,
-        startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition,
-        options, options.customHeaders, callback);
+        startApplicationUpgradeDescription, options, callback);
     fullName: >-
       ServiceFabricClient.startApplicationUpgrade(applicationName,
-      startApplicationUpgradeDescription,
-      startApplicationUpgradeDescription.name,
-      startApplicationUpgradeDescription.targetApplicationTypeVersion,
-      startApplicationUpgradeDescription.parameters,
-      startApplicationUpgradeDescription.upgradeKind,
-      startApplicationUpgradeDescription.rollingUpgradeMode,
-      startApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds,
-      startApplicationUpgradeDescription.forceRestart,
-      startApplicationUpgradeDescription.monitoringPolicy,
-      startApplicationUpgradeDescription.monitoringPolicy.failureAction,
-      startApplicationUpgradeDescription.monitoringPolicy.healthCheckWaitDurationInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.healthCheckStableDurationInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.healthCheckRetryTimeoutInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.upgradeTimeoutInMilliseconds,
-      startApplicationUpgradeDescription.monitoringPolicy.upgradeDomainTimeoutInMilliseconds,
-      startApplicationUpgradeDescription.applicationHealthPolicy,
-      startApplicationUpgradeDescription.applicationHealthPolicy.considerWarningAsError,
-      startApplicationUpgradeDescription.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService,
-      startApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition,
-      options, options.customHeaders, callback)
+      startApplicationUpgradeDescription, options, callback)
     children:
       - 'ServiceFabricClient#startApplicationUpgrade~client'
       - 'ServiceFabricClient#startApplicationUpgrade~callback'
@@ -2729,27 +2317,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       updateApplicationUpgrade(applicationName,
-      updateApplicationUpgradeDescription,
-      updateApplicationUpgradeDescription.name,
-      updateApplicationUpgradeDescription.upgradeKind,
-      updateApplicationUpgradeDescription.updateDescription,
-      updateApplicationUpgradeDescription.updateDescription.rollingUpgradeMode,
-      updateApplicationUpgradeDescription.updateDescription.forceRestart,
-      updateApplicationUpgradeDescription.updateDescription.failureAction,
-      updateApplicationUpgradeDescription.updateDescription.upgradeReplicaSetCheckTimeoutInSeconds,
-      updateApplicationUpgradeDescription.updateDescription.healthCheckWaitDurationInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.healthCheckStableDurationInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.healthCheckRetryTimeoutInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.upgradeTimeoutInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.upgradeDomainTimeoutInMilliseconds,
-      updateApplicationUpgradeDescription.applicationHealthPolicy,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.considerWarningAsError,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition,
-      options, options.customHeaders, callback)
+      updateApplicationUpgradeDescription, options, callback)
     type: Method
     syntax:
       parameters:
@@ -2823,50 +2391,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function updateApplicationUpgrade(applicationName,
-        updateApplicationUpgradeDescription,
-        updateApplicationUpgradeDescription.name,
-        updateApplicationUpgradeDescription.upgradeKind,
-        updateApplicationUpgradeDescription.updateDescription,
-        updateApplicationUpgradeDescription.updateDescription.rollingUpgradeMode,
-        updateApplicationUpgradeDescription.updateDescription.forceRestart,
-        updateApplicationUpgradeDescription.updateDescription.failureAction,
-        updateApplicationUpgradeDescription.updateDescription.upgradeReplicaSetCheckTimeoutInSeconds,
-        updateApplicationUpgradeDescription.updateDescription.healthCheckWaitDurationInMilliseconds,
-        updateApplicationUpgradeDescription.updateDescription.healthCheckStableDurationInMilliseconds,
-        updateApplicationUpgradeDescription.updateDescription.healthCheckRetryTimeoutInMilliseconds,
-        updateApplicationUpgradeDescription.updateDescription.upgradeTimeoutInMilliseconds,
-        updateApplicationUpgradeDescription.updateDescription.upgradeDomainTimeoutInMilliseconds,
-        updateApplicationUpgradeDescription.applicationHealthPolicy,
-        updateApplicationUpgradeDescription.applicationHealthPolicy.considerWarningAsError,
-        updateApplicationUpgradeDescription.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications,
-        updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy,
-        updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices,
-        updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService,
-        updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition,
-        options, options.customHeaders, callback);
+        updateApplicationUpgradeDescription, options, callback);
     fullName: >-
       ServiceFabricClient.updateApplicationUpgrade(applicationName,
-      updateApplicationUpgradeDescription,
-      updateApplicationUpgradeDescription.name,
-      updateApplicationUpgradeDescription.upgradeKind,
-      updateApplicationUpgradeDescription.updateDescription,
-      updateApplicationUpgradeDescription.updateDescription.rollingUpgradeMode,
-      updateApplicationUpgradeDescription.updateDescription.forceRestart,
-      updateApplicationUpgradeDescription.updateDescription.failureAction,
-      updateApplicationUpgradeDescription.updateDescription.upgradeReplicaSetCheckTimeoutInSeconds,
-      updateApplicationUpgradeDescription.updateDescription.healthCheckWaitDurationInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.healthCheckStableDurationInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.healthCheckRetryTimeoutInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.upgradeTimeoutInMilliseconds,
-      updateApplicationUpgradeDescription.updateDescription.upgradeDomainTimeoutInMilliseconds,
-      updateApplicationUpgradeDescription.applicationHealthPolicy,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.considerWarningAsError,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService,
-      updateApplicationUpgradeDescription.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition,
-      options, options.customHeaders, callback)
+      updateApplicationUpgradeDescription, options, callback)
     children:
       - 'ServiceFabricClient#updateApplicationUpgrade~client'
       - 'ServiceFabricClient#updateApplicationUpgrade~callback'
@@ -2890,8 +2418,7 @@ items:
     parent: ServiceFabricClient
     name: >-
       resumeApplicationUpgrade(applicationName, resumeApplicationUpgrade,
-      resumeApplicationUpgrade.upgradeDomainName, options,
-      options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -2916,12 +2443,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function resumeApplicationUpgrade(applicationName,
-        resumeApplicationUpgrade, resumeApplicationUpgrade.upgradeDomainName,
-        options, options.customHeaders, callback);
+        resumeApplicationUpgrade, options, callback);
     fullName: >-
       ServiceFabricClient.resumeApplicationUpgrade(applicationName,
-      resumeApplicationUpgrade, resumeApplicationUpgrade.upgradeDomainName,
-      options, options.customHeaders, callback)
+      resumeApplicationUpgrade, options, callback)
     children:
       - 'ServiceFabricClient#resumeApplicationUpgrade~client'
       - 'ServiceFabricClient#resumeApplicationUpgrade~callback'
@@ -2943,9 +2468,7 @@ items:
   - uid: 'ServiceFabricClient#startApplicationUpgradeRollback'
     id: startApplicationUpgradeRollback
     parent: ServiceFabricClient
-    name: >-
-      startApplicationUpgradeRollback(applicationName, options,
-      options.customHeaders, callback)
+    name: 'startApplicationUpgradeRollback(applicationName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -2965,10 +2488,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function startApplicationUpgradeRollback(applicationName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.startApplicationUpgradeRollback(applicationName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#startApplicationUpgradeRollback~client'
       - 'ServiceFabricClient#startApplicationUpgradeRollback~callback'
@@ -2984,10 +2507,7 @@ items:
   - uid: 'ServiceFabricClient#updateService'
     id: updateService
     parent: ServiceFabricClient
-    name: >-
-      updateService(serviceName, serviceUpdateDescription,
-      serviceUpdateDescription.flags, serviceUpdateDescription.ServiceKind,
-      options, options.customHeaders, callback)
+    name: 'updateService(serviceName, serviceUpdateDescription, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3014,13 +2534,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function updateService(serviceName, serviceUpdateDescription,
-        serviceUpdateDescription.flags, serviceUpdateDescription.ServiceKind,
-        options, options.customHeaders, callback);
+        function updateService(serviceName, serviceUpdateDescription, options,
+        callback);
     fullName: >-
       ServiceFabricClient.updateService(serviceName, serviceUpdateDescription,
-      serviceUpdateDescription.flags, serviceUpdateDescription.ServiceKind,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#updateService~client'
       - 'ServiceFabricClient#updateService~callback'
@@ -3042,7 +2560,7 @@ items:
   - uid: 'ServiceFabricClient#removeService'
     id: removeService
     parent: ServiceFabricClient
-    name: 'removeService(serviceName, options, options.customHeaders, callback)'
+    name: 'removeService(serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3060,12 +2578,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function removeService(serviceName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.removeService(serviceName, options,
-      options.customHeaders, callback)
+      content: 'function removeService(serviceName, options, callback);'
+    fullName: 'ServiceFabricClient.removeService(serviceName, options, callback)'
     children:
       - 'ServiceFabricClient#removeService~client'
       - 'ServiceFabricClient#removeService~callback'
@@ -3081,9 +2595,7 @@ items:
   - uid: 'ServiceFabricClient#removeServiceGroup'
     id: removeServiceGroup
     parent: ServiceFabricClient
-    name: >-
-      removeServiceGroup(applicationName, serviceName, options,
-      options.customHeaders, callback)
+    name: 'removeServiceGroup(applicationName, serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3106,10 +2618,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function removeServiceGroup(applicationName, serviceName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.removeServiceGroup(applicationName, serviceName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#removeServiceGroup~client'
       - 'ServiceFabricClient#removeServiceGroup~callback'
@@ -3126,9 +2638,7 @@ items:
   - uid: 'ServiceFabricClient#getServiceDescription'
     id: getServiceDescription
     parent: ServiceFabricClient
-    name: >-
-      getServiceDescription(serviceName, options, options.customHeaders,
-      callback)
+    name: 'getServiceDescription(serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3146,12 +2656,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServiceDescription} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getServiceDescription(serviceName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getServiceDescription(serviceName, options,
-      options.customHeaders, callback)
+      content: 'function getServiceDescription(serviceName, options, callback);'
+    fullName: 'ServiceFabricClient.getServiceDescription(serviceName, options, callback)'
     children:
       - 'ServiceFabricClient#getServiceDescription~client'
       - 'ServiceFabricClient#getServiceDescription~callback'
@@ -3167,10 +2673,7 @@ items:
   - uid: 'ServiceFabricClient#resolveService'
     id: resolveService
     parent: ServiceFabricClient
-    name: >-
-      resolveService(serviceName, options, options.partitionKeyType,
-      options.partitionKeyValue, options.previousRspVersion,
-      options.customHeaders, callback)
+    name: 'resolveService(serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3197,14 +2700,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResolvedServicePartition} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function resolveService(serviceName, options, options.partitionKeyType,
-        options.partitionKeyValue, options.previousRspVersion,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.resolveService(serviceName, options,
-      options.partitionKeyType, options.partitionKeyValue,
-      options.previousRspVersion, options.customHeaders, callback)
+      content: 'function resolveService(serviceName, options, callback);'
+    fullName: 'ServiceFabricClient.resolveService(serviceName, options, callback)'
     children:
       - 'ServiceFabricClient#resolveService~client'
       - 'ServiceFabricClient#resolveService~callback'
@@ -3223,7 +2720,7 @@ items:
   - uid: 'ServiceFabricClient#getServiceHealth'
     id: getServiceHealth
     parent: ServiceFabricClient
-    name: 'getServiceHealth(serviceName, options, options.customHeaders, callback)'
+    name: 'getServiceHealth(serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3241,12 +2738,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ServiceHealth} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getServiceHealth(serviceName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.getServiceHealth(serviceName, options,
-      options.customHeaders, callback)
+      content: 'function getServiceHealth(serviceName, options, callback);'
+    fullName: 'ServiceFabricClient.getServiceHealth(serviceName, options, callback)'
     children:
       - 'ServiceFabricClient#getServiceHealth~client'
       - 'ServiceFabricClient#getServiceHealth~callback'
@@ -3262,13 +2755,7 @@ items:
   - uid: 'ServiceFabricClient#sendServiceHealth'
     id: sendServiceHealth
     parent: ServiceFabricClient
-    name: >-
-      sendServiceHealth(serviceName, serviceHealthReport,
-      serviceHealthReport.sourceId, serviceHealthReport.property,
-      serviceHealthReport.healthState, serviceHealthReport.description,
-      serviceHealthReport.timeToLiveInMilliSeconds,
-      serviceHealthReport.sequenceNumber, serviceHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+    name: 'sendServiceHealth(serviceName, serviceHealthReport, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3304,20 +2791,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function sendServiceHealth(serviceName, serviceHealthReport,
-        serviceHealthReport.sourceId, serviceHealthReport.property,
-        serviceHealthReport.healthState, serviceHealthReport.description,
-        serviceHealthReport.timeToLiveInMilliSeconds,
-        serviceHealthReport.sequenceNumber,
-        serviceHealthReport.removeWhenExpired, options, options.customHeaders,
+        function sendServiceHealth(serviceName, serviceHealthReport, options,
         callback);
     fullName: >-
       ServiceFabricClient.sendServiceHealth(serviceName, serviceHealthReport,
-      serviceHealthReport.sourceId, serviceHealthReport.property,
-      serviceHealthReport.healthState, serviceHealthReport.description,
-      serviceHealthReport.timeToLiveInMilliSeconds,
-      serviceHealthReport.sequenceNumber, serviceHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#sendServiceHealth~client'
       - 'ServiceFabricClient#sendServiceHealth~callback'
@@ -3339,7 +2817,7 @@ items:
   - uid: 'ServiceFabricClient#getPartitionList'
     id: getPartitionList
     parent: ServiceFabricClient
-    name: 'getPartitionList(serviceName, options, options.customHeaders, callback)'
+    name: 'getPartitionList(serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3357,12 +2835,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getPartitionList(serviceName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.getPartitionList(serviceName, options,
-      options.customHeaders, callback)
+      content: 'function getPartitionList(serviceName, options, callback);'
+    fullName: 'ServiceFabricClient.getPartitionList(serviceName, options, callback)'
     children:
       - 'ServiceFabricClient#getPartitionList~client'
       - 'ServiceFabricClient#getPartitionList~callback'
@@ -3378,9 +2852,7 @@ items:
   - uid: 'ServiceFabricClient#getPartition'
     id: getPartition
     parent: ServiceFabricClient
-    name: >-
-      getPartition(serviceName, partitionId, options, options.customHeaders,
-      callback)
+    name: 'getPartition(serviceName, partitionId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3401,12 +2873,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Partition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getPartition(serviceName, partitionId, options,
-        options.customHeaders, callback);
+      content: 'function getPartition(serviceName, partitionId, options, callback);'
     fullName: >-
       ServiceFabricClient.getPartition(serviceName, partitionId, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getPartition~client'
       - 'ServiceFabricClient#getPartition~callback'
@@ -3423,7 +2893,7 @@ items:
   - uid: 'ServiceFabricClient#repairPartitionList'
     id: repairPartitionList
     parent: ServiceFabricClient
-    name: 'repairPartitionList(serviceName, options, options.customHeaders, callback)'
+    name: 'repairPartitionList(serviceName, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3441,12 +2911,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function repairPartitionList(serviceName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.repairPartitionList(serviceName, options,
-      options.customHeaders, callback)
+      content: 'function repairPartitionList(serviceName, options, callback);'
+    fullName: 'ServiceFabricClient.repairPartitionList(serviceName, options, callback)'
     children:
       - 'ServiceFabricClient#repairPartitionList~client'
       - 'ServiceFabricClient#repairPartitionList~callback'
@@ -3462,7 +2928,7 @@ items:
   - uid: 'ServiceFabricClient#repairPartition'
     id: repairPartition
     parent: ServiceFabricClient
-    name: 'repairPartition(partitionId, options, options.customHeaders, callback)'
+    name: 'repairPartition(partitionId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3480,12 +2946,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function repairPartition(partitionId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.repairPartition(partitionId, options,
-      options.customHeaders, callback)
+      content: 'function repairPartition(partitionId, options, callback);'
+    fullName: 'ServiceFabricClient.repairPartition(partitionId, options, callback)'
     children:
       - 'ServiceFabricClient#repairPartition~client'
       - 'ServiceFabricClient#repairPartition~callback'
@@ -3501,7 +2963,7 @@ items:
   - uid: 'ServiceFabricClient#resetPartitionLoad'
     id: resetPartitionLoad
     parent: ServiceFabricClient
-    name: 'resetPartitionLoad(partitionId, options, options.customHeaders, callback)'
+    name: 'resetPartitionLoad(partitionId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3519,12 +2981,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function resetPartitionLoad(partitionId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.resetPartitionLoad(partitionId, options,
-      options.customHeaders, callback)
+      content: 'function resetPartitionLoad(partitionId, options, callback);'
+    fullName: 'ServiceFabricClient.resetPartitionLoad(partitionId, options, callback)'
     children:
       - 'ServiceFabricClient#resetPartitionLoad~client'
       - 'ServiceFabricClient#resetPartitionLoad~callback'
@@ -3540,7 +2998,7 @@ items:
   - uid: 'ServiceFabricClient#getReplicaList'
     id: getReplicaList
     parent: ServiceFabricClient
-    name: 'getReplicaList(partitionId, options, options.customHeaders, callback)'
+    name: 'getReplicaList(partitionId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3558,12 +3016,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {array} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getReplicaList(partitionId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.getReplicaList(partitionId, options,
-      options.customHeaders, callback)
+      content: 'function getReplicaList(partitionId, options, callback);'
+    fullName: 'ServiceFabricClient.getReplicaList(partitionId, options, callback)'
     children:
       - 'ServiceFabricClient#getReplicaList~client'
       - 'ServiceFabricClient#getReplicaList~callback'
@@ -3579,9 +3033,7 @@ items:
   - uid: 'ServiceFabricClient#getReplica'
     id: getReplica
     parent: ServiceFabricClient
-    name: >-
-      getReplica(partitionId, replicaId, options, options.customHeaders,
-      callback)
+    name: 'getReplica(partitionId, replicaId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3602,12 +3054,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Replica} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getReplica(partitionId, replicaId, options,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getReplica(partitionId, replicaId, options,
-      options.customHeaders, callback)
+      content: 'function getReplica(partitionId, replicaId, options, callback);'
+    fullName: 'ServiceFabricClient.getReplica(partitionId, replicaId, options, callback)'
     children:
       - 'ServiceFabricClient#getReplica~client'
       - 'ServiceFabricClient#getReplica~callback'
@@ -3624,9 +3072,7 @@ items:
   - uid: 'ServiceFabricClient#getPartitionHealth'
     id: getPartitionHealth
     parent: ServiceFabricClient
-    name: >-
-      getPartitionHealth(partitionId, options, options.eventsHealthStateFilter,
-      options.replicasHealthStateFilter, options.customHeaders, callback)
+    name: 'getPartitionHealth(partitionId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3650,14 +3096,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PartitionHealth} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getPartitionHealth(partitionId, options,
-        options.eventsHealthStateFilter, options.replicasHealthStateFilter,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getPartitionHealth(partitionId, options,
-      options.eventsHealthStateFilter, options.replicasHealthStateFilter,
-      options.customHeaders, callback)
+      content: 'function getPartitionHealth(partitionId, options, callback);'
+    fullName: 'ServiceFabricClient.getPartitionHealth(partitionId, options, callback)'
     children:
       - 'ServiceFabricClient#getPartitionHealth~client'
       - 'ServiceFabricClient#getPartitionHealth~callback'
@@ -3676,12 +3116,7 @@ items:
     id: sendPartitionHealthReport
     parent: ServiceFabricClient
     name: >-
-      sendPartitionHealthReport(partitionId, partitionHealthReport,
-      partitionHealthReport.sourceId, partitionHealthReport.property,
-      partitionHealthReport.healthState, partitionHealthReport.description,
-      partitionHealthReport.timeToLiveInMilliSeconds,
-      partitionHealthReport.sequenceNumber,
-      partitionHealthReport.removeWhenExpired, options, options.customHeaders,
+      sendPartitionHealthReport(partitionId, partitionHealthReport, options,
       callback)
     type: Method
     syntax:
@@ -3719,21 +3154,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function sendPartitionHealthReport(partitionId, partitionHealthReport,
-        partitionHealthReport.sourceId, partitionHealthReport.property,
-        partitionHealthReport.healthState, partitionHealthReport.description,
-        partitionHealthReport.timeToLiveInMilliSeconds,
-        partitionHealthReport.sequenceNumber,
-        partitionHealthReport.removeWhenExpired, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       ServiceFabricClient.sendPartitionHealthReport(partitionId,
-      partitionHealthReport, partitionHealthReport.sourceId,
-      partitionHealthReport.property, partitionHealthReport.healthState,
-      partitionHealthReport.description,
-      partitionHealthReport.timeToLiveInMilliSeconds,
-      partitionHealthReport.sequenceNumber,
-      partitionHealthReport.removeWhenExpired, options, options.customHeaders,
-      callback)
+      partitionHealthReport, options, callback)
     children:
       - 'ServiceFabricClient#sendPartitionHealthReport~client'
       - 'ServiceFabricClient#sendPartitionHealthReport~callback'
@@ -3755,9 +3179,7 @@ items:
   - uid: 'ServiceFabricClient#getReplicaHealth'
     id: getReplicaHealth
     parent: ServiceFabricClient
-    name: >-
-      getReplicaHealth(partitionId, replicaId, options,
-      options.eventsHealthStateFilter, options.customHeaders, callback)
+    name: 'getReplicaHealth(partitionId, replicaId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3781,12 +3203,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ReplicaHealth} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getReplicaHealth(partitionId, replicaId, options,
-        options.eventsHealthStateFilter, options.customHeaders, callback);
+      content: 'function getReplicaHealth(partitionId, replicaId, options, callback);'
     fullName: >-
       ServiceFabricClient.getReplicaHealth(partitionId, replicaId, options,
-      options.eventsHealthStateFilter, options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getReplicaHealth~client'
       - 'ServiceFabricClient#getReplicaHealth~callback'
@@ -3805,12 +3225,8 @@ items:
     id: sendReplicaHealth
     parent: ServiceFabricClient
     name: >-
-      sendReplicaHealth(partitionId, replicaId, replicaHealthReport,
-      replicaHealthReport.sourceId, replicaHealthReport.property,
-      replicaHealthReport.healthState, replicaHealthReport.description,
-      replicaHealthReport.timeToLiveInMilliSeconds,
-      replicaHealthReport.sequenceNumber, replicaHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+      sendReplicaHealth(partitionId, replicaId, replicaHealthReport, options,
+      callback)
     type: Method
     syntax:
       parameters:
@@ -3850,20 +3266,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {string} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function sendReplicaHealth(partitionId, replicaId, replicaHealthReport,
-        replicaHealthReport.sourceId, replicaHealthReport.property,
-        replicaHealthReport.healthState, replicaHealthReport.description,
-        replicaHealthReport.timeToLiveInMilliSeconds,
-        replicaHealthReport.sequenceNumber,
-        replicaHealthReport.removeWhenExpired, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       ServiceFabricClient.sendReplicaHealth(partitionId, replicaId,
-      replicaHealthReport, replicaHealthReport.sourceId,
-      replicaHealthReport.property, replicaHealthReport.healthState,
-      replicaHealthReport.description,
-      replicaHealthReport.timeToLiveInMilliSeconds,
-      replicaHealthReport.sequenceNumber, replicaHealthReport.removeWhenExpired,
-      options, options.customHeaders, callback)
+      replicaHealthReport, options, callback)
     children:
       - 'ServiceFabricClient#sendReplicaHealth~client'
       - 'ServiceFabricClient#sendReplicaHealth~callback'
@@ -3886,9 +3292,7 @@ items:
   - uid: 'ServiceFabricClient#getPartitionLoadInformation'
     id: getPartitionLoadInformation
     parent: ServiceFabricClient
-    name: >-
-      getPartitionLoadInformation(partitionId, options, options.customHeaders,
-      callback)
+    name: 'getPartitionLoadInformation(partitionId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3906,12 +3310,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PartitionLoadInformation} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getPartitionLoadInformation(partitionId, options,
-        options.customHeaders, callback);
+      content: 'function getPartitionLoadInformation(partitionId, options, callback);'
     fullName: >-
       ServiceFabricClient.getPartitionLoadInformation(partitionId, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ServiceFabricClient#getPartitionLoadInformation~client'
       - 'ServiceFabricClient#getPartitionLoadInformation~callback'
@@ -3927,9 +3329,7 @@ items:
   - uid: 'ServiceFabricClient#getReplicaLoadInformation'
     id: getReplicaLoadInformation
     parent: ServiceFabricClient
-    name: >-
-      getReplicaLoadInformation(partitionId, replicaId, options,
-      options.customHeaders, callback)
+    name: 'getReplicaLoadInformation(partitionId, replicaId, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3952,10 +3352,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ReplicaLoadInformation} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getReplicaLoadInformation(partitionId, replicaId, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ServiceFabricClient.getReplicaLoadInformation(partitionId, replicaId,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ServiceFabricClient#getReplicaLoadInformation~client'
       - 'ServiceFabricClient#getReplicaLoadInformation~callback'
@@ -3972,7 +3372,7 @@ items:
   - uid: 'ServiceFabricClient#getClusterLoadInformation'
     id: getClusterLoadInformation
     parent: ServiceFabricClient
-    name: 'getClusterLoadInformation(options, options.customHeaders, callback)'
+    name: 'getClusterLoadInformation(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -3987,12 +3387,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ClusterLoadInformation} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getClusterLoadInformation(options, options.customHeaders,
-        callback);
-    fullName: >-
-      ServiceFabricClient.getClusterLoadInformation(options,
-      options.customHeaders, callback)
+      content: 'function getClusterLoadInformation(options, callback);'
+    fullName: 'ServiceFabricClient.getClusterLoadInformation(options, callback)'
     children:
       - 'ServiceFabricClient#getClusterLoadInformation~client'
       - 'ServiceFabricClient#getClusterLoadInformation~callback'
@@ -4007,10 +3403,7 @@ items:
   - uid: 'ServiceFabricClient#getClusterHealth'
     id: getClusterHealth
     parent: ServiceFabricClient
-    name: >-
-      getClusterHealth(options, options.eventsHealthStateFilter,
-      options.nodesHealthStateFilter, options.applicationsHealthStateFilter,
-      options.customHeaders, callback)
+    name: 'getClusterHealth(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -4034,14 +3427,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ClusterHealth} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getClusterHealth(options, options.eventsHealthStateFilter,
-        options.nodesHealthStateFilter, options.applicationsHealthStateFilter,
-        options.customHeaders, callback);
-    fullName: >-
-      ServiceFabricClient.getClusterHealth(options,
-      options.eventsHealthStateFilter, options.nodesHealthStateFilter,
-      options.applicationsHealthStateFilter, options.customHeaders, callback)
+      content: 'function getClusterHealth(options, callback);'
+    fullName: 'ServiceFabricClient.getClusterHealth(options, callback)'
     children:
       - 'ServiceFabricClient#getClusterHealth~client'
       - 'ServiceFabricClient#getClusterHealth~callback'
@@ -4059,7 +3446,7 @@ items:
   - uid: 'ServiceFabricClient#getUpgradeProgress'
     id: getUpgradeProgress
     parent: ServiceFabricClient
-    name: 'getUpgradeProgress(options, options.customHeaders, callback)'
+    name: 'getUpgradeProgress(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -4074,10 +3461,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ClusterUpgradeProgress} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function getUpgradeProgress(options, options.customHeaders, callback);'
-    fullName: >-
-      ServiceFabricClient.getUpgradeProgress(options, options.customHeaders,
-      callback)
+      content: 'function getUpgradeProgress(options, callback);'
+    fullName: 'ServiceFabricClient.getUpgradeProgress(options, callback)'
     children:
       - 'ServiceFabricClient#getUpgradeProgress~client'
       - 'ServiceFabricClient#getUpgradeProgress~callback'

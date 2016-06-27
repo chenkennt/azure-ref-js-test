@@ -35,10 +35,7 @@ items:
   - uid: 'Namespaces#checkAvailability'
     id: checkAvailability
     parent: Namespaces
-    name: >-
-      checkAvailability(parameters, parameters.name, parameters.location,
-      parameters.tags, parameters.isAvailiable, options, options.customHeaders,
-      callback)
+    name: 'checkAvailability(parameters, options, callback)'
     summary: "Checks the availability of the given service namespace across all Windows\rAzure subscriptions. This is useful because the domain name is created\rbased on the service namespace name."
     type: Method
     syntax:
@@ -69,14 +66,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckAvailabilityResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function checkAvailability(parameters, parameters.name,
-        parameters.location, parameters.tags, parameters.isAvailiable, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Namespaces.checkAvailability(parameters, parameters.name,
-      parameters.location, parameters.tags, parameters.isAvailiable, options,
-      options.customHeaders, callback)
+      content: 'function checkAvailability(parameters, options, callback);'
+    fullName: 'Namespaces.checkAvailability(parameters, options, callback)'
     children:
       - 'Namespaces#checkAvailability~client'
       - 'Namespaces#checkAvailability~callback'
@@ -99,14 +90,7 @@ items:
     id: createOrUpdate
     parent: Namespaces
     name: >-
-      createOrUpdate(resourceGroupName, namespaceName, parameters,
-      parameters.location, parameters.tags, parameters.properties,
-      parameters.properties.name, parameters.properties.provisioningState,
-      parameters.properties.region, parameters.properties.status,
-      parameters.properties.createdAt, parameters.properties.serviceBusEndpoint,
-      parameters.properties.subscriptionId, parameters.properties.scaleUnit,
-      parameters.properties.enabled, parameters.properties.critical,
-      parameters.properties.namespaceType, options, options.customHeaders,
+      createOrUpdate(resourceGroupName, namespaceName, parameters, options,
       callback)
     summary: "Creates/Updates a service namespace. Once created, this namespace's\rresource manifest is immutable. This operation is idempotent."
     type: Method
@@ -176,25 +160,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, namespaceName, parameters,
-        parameters.location, parameters.tags, parameters.properties,
-        parameters.properties.name, parameters.properties.provisioningState,
-        parameters.properties.region, parameters.properties.status,
-        parameters.properties.createdAt,
-        parameters.properties.serviceBusEndpoint,
-        parameters.properties.subscriptionId, parameters.properties.scaleUnit,
-        parameters.properties.enabled, parameters.properties.critical,
-        parameters.properties.namespaceType, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       Namespaces.createOrUpdate(resourceGroupName, namespaceName, parameters,
-      parameters.location, parameters.tags, parameters.properties,
-      parameters.properties.name, parameters.properties.provisioningState,
-      parameters.properties.region, parameters.properties.status,
-      parameters.properties.createdAt, parameters.properties.serviceBusEndpoint,
-      parameters.properties.subscriptionId, parameters.properties.scaleUnit,
-      parameters.properties.enabled, parameters.properties.critical,
-      parameters.properties.namespaceType, options, options.customHeaders,
-      callback)
+      options, callback)
     children:
       - 'Namespaces#createOrUpdate~client'
       - 'Namespaces#createOrUpdate~callback'
@@ -218,9 +187,7 @@ items:
   - uid: 'Namespaces#deleteMethod'
     id: deleteMethod
     parent: Namespaces
-    name: >-
-      deleteMethod(resourceGroupName, namespaceName, options,
-      options.customHeaders, callback)
+    name: 'deleteMethod(resourceGroupName, namespaceName, options, callback)'
     summary: "Deletes an existing namespace. This operation also removes all associated\rnotificationHubs under the namespace."
     type: Method
     syntax:
@@ -244,10 +211,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, namespaceName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Namespaces.deleteMethod(resourceGroupName, namespaceName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Namespaces#deleteMethod~client'
       - 'Namespaces#deleteMethod~callback'
@@ -255,9 +222,7 @@ items:
   - uid: 'Namespaces#beginDeleteMethod'
     id: beginDeleteMethod
     parent: Namespaces
-    name: >-
-      beginDeleteMethod(resourceGroupName, namespaceName, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteMethod(resourceGroupName, namespaceName, options, callback)'
     summary: "Deletes an existing namespace. This operation also removes all associated\rnotificationHubs under the namespace."
     type: Method
     syntax:
@@ -281,10 +246,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, namespaceName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Namespaces.beginDeleteMethod(resourceGroupName, namespaceName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Namespaces#beginDeleteMethod~client'
       - 'Namespaces#beginDeleteMethod~callback'
@@ -302,9 +267,7 @@ items:
   - uid: 'Namespaces#get'
     id: get
     parent: Namespaces
-    name: >-
-      get(resourceGroupName, namespaceName, options, options.customHeaders,
-      callback)
+    name: 'get(resourceGroupName, namespaceName, options, callback)'
     summary: Returns the description for the specified namespace.
     type: Method
     syntax:
@@ -326,12 +289,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(resourceGroupName, namespaceName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Namespaces.get(resourceGroupName, namespaceName, options,
-      options.customHeaders, callback)
+      content: 'function get(resourceGroupName, namespaceName, options, callback);'
+    fullName: 'Namespaces.get(resourceGroupName, namespaceName, options, callback)'
     children:
       - 'Namespaces#get~client'
       - 'Namespaces#get~callback'
@@ -351,13 +310,7 @@ items:
     parent: Namespaces
     name: >-
       createOrUpdateAuthorizationRule(resourceGroupName, namespaceName,
-      authorizationRuleName, parameters, parameters.location, parameters.name,
-      parameters.properties, parameters.properties.primaryKey,
-      parameters.properties.secondaryKey, parameters.properties.keyName,
-      parameters.properties.claimType, parameters.properties.claimValue,
-      parameters.properties.rights, parameters.properties.createdTime,
-      parameters.properties.modifiedTime, parameters.properties.revision,
-      options, options.customHeaders, callback)
+      authorizationRuleName, parameters, options, callback)
     summary: Creates an authorization rule for a namespace
     type: Method
     syntax:
@@ -423,23 +376,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleResource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateAuthorizationRule(resourceGroupName,
-        namespaceName, authorizationRuleName, parameters, parameters.location,
-        parameters.name, parameters.properties,
-        parameters.properties.primaryKey, parameters.properties.secondaryKey,
-        parameters.properties.keyName, parameters.properties.claimType,
-        parameters.properties.claimValue, parameters.properties.rights,
-        parameters.properties.createdTime, parameters.properties.modifiedTime,
-        parameters.properties.revision, options, options.customHeaders,
-        callback);
+        namespaceName, authorizationRuleName, parameters, options, callback);
     fullName: >-
       Namespaces.createOrUpdateAuthorizationRule(resourceGroupName,
-      namespaceName, authorizationRuleName, parameters, parameters.location,
-      parameters.name, parameters.properties, parameters.properties.primaryKey,
-      parameters.properties.secondaryKey, parameters.properties.keyName,
-      parameters.properties.claimType, parameters.properties.claimValue,
-      parameters.properties.rights, parameters.properties.createdTime,
-      parameters.properties.modifiedTime, parameters.properties.revision,
-      options, options.customHeaders, callback)
+      namespaceName, authorizationRuleName, parameters, options, callback)
     children:
       - 'Namespaces#createOrUpdateAuthorizationRule~client'
       - 'Namespaces#createOrUpdateAuthorizationRule~callback'
@@ -466,7 +406,7 @@ items:
     parent: Namespaces
     name: >-
       deleteAuthorizationRule(resourceGroupName, namespaceName,
-      authorizationRuleName, options, options.customHeaders, callback)
+      authorizationRuleName, options, callback)
     summary: Deletes a namespace authorization rule
     type: Method
     syntax:
@@ -493,10 +433,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteAuthorizationRule(resourceGroupName, namespaceName,
-        authorizationRuleName, options, options.customHeaders, callback);
+        authorizationRuleName, options, callback);
     fullName: >-
       Namespaces.deleteAuthorizationRule(resourceGroupName, namespaceName,
-      authorizationRuleName, options, options.customHeaders, callback)
+      authorizationRuleName, options, callback)
     children:
       - 'Namespaces#deleteAuthorizationRule~client'
       - 'Namespaces#deleteAuthorizationRule~callback'
@@ -517,7 +457,7 @@ items:
     parent: Namespaces
     name: >-
       getAuthorizationRule(resourceGroupName, namespaceName,
-      authorizationRuleName, options, options.customHeaders, callback)
+      authorizationRuleName, options, callback)
     summary: Gets an authorization rule for a namespace by name.
     type: Method
     syntax:
@@ -544,10 +484,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleResource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getAuthorizationRule(resourceGroupName, namespaceName,
-        authorizationRuleName, options, options.customHeaders, callback);
+        authorizationRuleName, options, callback);
     fullName: >-
       Namespaces.getAuthorizationRule(resourceGroupName, namespaceName,
-      authorizationRuleName, options, options.customHeaders, callback)
+      authorizationRuleName, options, callback)
     children:
       - 'Namespaces#getAuthorizationRule~client'
       - 'Namespaces#getAuthorizationRule~callback'
@@ -566,9 +506,7 @@ items:
   - uid: 'Namespaces#getLongRunningOperationStatus'
     id: getLongRunningOperationStatus
     parent: Namespaces
-    name: >-
-      getLongRunningOperationStatus(operationStatusLink, options,
-      options.customHeaders, callback)
+    name: 'getLongRunningOperationStatus(operationStatusLink, options, callback)'
     summary: "The Get Operation Status operation returns the status of the specified\roperation. After calling an asynchronous operation, you can call Get\rOperation Status to determine whether the operation has succeeded, failed,\ror is still in progress."
     type: Method
     syntax:
@@ -589,10 +527,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getLongRunningOperationStatus(operationStatusLink, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Namespaces.getLongRunningOperationStatus(operationStatusLink, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Namespaces#getLongRunningOperationStatus~client'
       - 'Namespaces#getLongRunningOperationStatus~callback'
@@ -608,7 +546,7 @@ items:
   - uid: 'Namespaces#list'
     id: list
     parent: Namespaces
-    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'list(resourceGroupName, options, callback)'
     summary: Lists the available namespaces within a resourceGroup.
     type: Method
     syntax:
@@ -627,12 +565,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Namespaces.list(resourceGroupName, options, options.customHeaders,
-      callback)
+      content: 'function list(resourceGroupName, options, callback);'
+    fullName: 'Namespaces.list(resourceGroupName, options, callback)'
     children:
       - 'Namespaces#list~client'
       - 'Namespaces#list~callback'
@@ -649,7 +583,7 @@ items:
   - uid: 'Namespaces#listAll'
     id: listAll
     parent: Namespaces
-    name: 'listAll(options, options.customHeaders, callback)'
+    name: 'listAll(options, callback)'
     summary: "Lists all the available namespaces within the subscription irrespective of\rthe resourceGroups."
     type: Method
     syntax:
@@ -665,8 +599,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listAll(options, options.customHeaders, callback);'
-    fullName: 'Namespaces.listAll(options, options.customHeaders, callback)'
+      content: 'function listAll(options, callback);'
+    fullName: 'Namespaces.listAll(options, callback)'
     children:
       - 'Namespaces#listAll~client'
       - 'Namespaces#listAll~callback'
@@ -684,7 +618,7 @@ items:
     parent: Namespaces
     name: >-
       listAuthorizationRules(resourceGroupName, namespaceName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Gets the authorization rules for a namespace.
     type: Method
     syntax:
@@ -708,10 +642,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listAuthorizationRules(resourceGroupName, namespaceName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Namespaces.listAuthorizationRules(resourceGroupName, namespaceName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Namespaces#listAuthorizationRules~client'
       - 'Namespaces#listAuthorizationRules~callback'
@@ -731,7 +665,7 @@ items:
     parent: Namespaces
     name: >-
       listKeys(resourceGroupName, namespaceName, authorizationRuleName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Gets the Primary and Secondary ConnectionStrings to the namespace
     type: Method
     syntax:
@@ -758,10 +692,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceListKeys} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listKeys(resourceGroupName, namespaceName,
-        authorizationRuleName, options, options.customHeaders, callback);
+        authorizationRuleName, options, callback);
     fullName: >-
       Namespaces.listKeys(resourceGroupName, namespaceName,
-      authorizationRuleName, options, options.customHeaders, callback)
+      authorizationRuleName, options, callback)
     children:
       - 'Namespaces#listKeys~client'
       - 'Namespaces#listKeys~callback'
@@ -780,7 +714,7 @@ items:
   - uid: 'Namespaces#listNext'
     id: listNext
     parent: Namespaces
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Lists the available namespaces within a resourceGroup.
     type: Method
     syntax:
@@ -799,12 +733,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Namespaces.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Namespaces.listNext(nextPageLink, options, callback)'
     children:
       - 'Namespaces#listNext~client'
       - 'Namespaces#listNext~callback'
@@ -818,7 +748,7 @@ items:
   - uid: 'Namespaces#listAllNext'
     id: listAllNext
     parent: Namespaces
-    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listAllNext(nextPageLink, options, callback)'
     summary: "Lists all the available namespaces within the subscription irrespective of\rthe resourceGroups."
     type: Method
     syntax:
@@ -837,12 +767,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NamespaceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAllNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Namespaces.listAllNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listAllNext(nextPageLink, options, callback);'
+    fullName: 'Namespaces.listAllNext(nextPageLink, options, callback)'
     children:
       - 'Namespaces#listAllNext~client'
       - 'Namespaces#listAllNext~callback'
@@ -856,9 +782,7 @@ items:
   - uid: 'Namespaces#listAuthorizationRulesNext'
     id: listAuthorizationRulesNext
     parent: Namespaces
-    name: >-
-      listAuthorizationRulesNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listAuthorizationRulesNext(nextPageLink, options, callback)'
     summary: Gets the authorization rules for a namespace.
     type: Method
     syntax:
@@ -877,12 +801,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAuthorizationRulesNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Namespaces.listAuthorizationRulesNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listAuthorizationRulesNext(nextPageLink, options, callback);'
+    fullName: 'Namespaces.listAuthorizationRulesNext(nextPageLink, options, callback)'
     children:
       - 'Namespaces#listAuthorizationRulesNext~client'
       - 'Namespaces#listAuthorizationRulesNext~callback'

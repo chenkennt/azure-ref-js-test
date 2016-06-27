@@ -28,15 +28,7 @@ items:
   - uid: 'Redis#createOrUpdate'
     id: createOrUpdate
     parent: Redis
-    name: >-
-      createOrUpdate(resourceGroupName, name, parameters,
-      parameters.redisVersion, parameters.sku, parameters.sku.name,
-      parameters.sku.family, parameters.sku.capacity,
-      parameters.redisConfiguration, parameters.enableNonSslPort,
-      parameters.tenantSettings, parameters.shardCount,
-      parameters.virtualNetwork, parameters.subnet, parameters.staticIP,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+    name: 'createOrUpdate(resourceGroupName, name, parameters, options, callback)'
     summary: "Create a redis cache, or replace (overwrite/recreate, with potential\rdowntime) an existing cache"
     type: Method
     syntax:
@@ -104,22 +96,10 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisResourceWithAccessKey} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function createOrUpdate(resourceGroupName, name, parameters,
-        parameters.redisVersion, parameters.sku, parameters.sku.name,
-        parameters.sku.family, parameters.sku.capacity,
-        parameters.redisConfiguration, parameters.enableNonSslPort,
-        parameters.tenantSettings, parameters.shardCount,
-        parameters.virtualNetwork, parameters.subnet, parameters.staticIP,
-        parameters.location, parameters.tags, options, options.customHeaders,
+        function createOrUpdate(resourceGroupName, name, parameters, options,
         callback);
     fullName: >-
-      Redis.createOrUpdate(resourceGroupName, name, parameters,
-      parameters.redisVersion, parameters.sku, parameters.sku.name,
-      parameters.sku.family, parameters.sku.capacity,
-      parameters.redisConfiguration, parameters.enableNonSslPort,
-      parameters.tenantSettings, parameters.shardCount,
-      parameters.virtualNetwork, parameters.subnet, parameters.staticIP,
-      parameters.location, parameters.tags, options, options.customHeaders,
+      Redis.createOrUpdate(resourceGroupName, name, parameters, options,
       callback)
     children:
       - 'Redis#createOrUpdate~client'
@@ -144,9 +124,7 @@ items:
   - uid: 'Redis#deleteMethod'
     id: deleteMethod
     parent: Redis
-    name: >-
-      deleteMethod(resourceGroupName, name, options, options.customHeaders,
-      callback)
+    name: 'deleteMethod(resourceGroupName, name, options, callback)'
     summary: Deletes a redis cache. This operation takes a while to complete.
     type: Method
     syntax:
@@ -168,12 +146,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(resourceGroupName, name, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Redis.deleteMethod(resourceGroupName, name, options,
-      options.customHeaders, callback)
+      content: 'function deleteMethod(resourceGroupName, name, options, callback);'
+    fullName: 'Redis.deleteMethod(resourceGroupName, name, options, callback)'
     children:
       - 'Redis#deleteMethod~client'
       - 'Redis#deleteMethod~callback'
@@ -191,7 +165,7 @@ items:
   - uid: 'Redis#get'
     id: get
     parent: Redis
-    name: 'get(resourceGroupName, name, options, options.customHeaders, callback)'
+    name: 'get(resourceGroupName, name, options, callback)'
     summary: Gets a redis cache (resource description).
     type: Method
     syntax:
@@ -213,12 +187,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisResource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(resourceGroupName, name, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Redis.get(resourceGroupName, name, options, options.customHeaders,
-      callback)
+      content: 'function get(resourceGroupName, name, options, callback);'
+    fullName: 'Redis.get(resourceGroupName, name, options, callback)'
     children:
       - 'Redis#get~client'
       - 'Redis#get~callback'
@@ -236,9 +206,7 @@ items:
   - uid: 'Redis#listByResourceGroup'
     id: listByResourceGroup
     parent: Redis
-    name: >-
-      listByResourceGroup(resourceGroupName, options, options.customHeaders,
-      callback)
+    name: 'listByResourceGroup(resourceGroupName, options, callback)'
     summary: Gets all redis caches in a resource group.
     type: Method
     syntax:
@@ -257,12 +225,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroup(resourceGroupName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Redis.listByResourceGroup(resourceGroupName, options,
-      options.customHeaders, callback)
+      content: 'function listByResourceGroup(resourceGroupName, options, callback);'
+    fullName: 'Redis.listByResourceGroup(resourceGroupName, options, callback)'
     children:
       - 'Redis#listByResourceGroup~client'
       - 'Redis#listByResourceGroup~callback'
@@ -279,7 +243,7 @@ items:
   - uid: 'Redis#list'
     id: list
     parent: Redis
-    name: 'list(options, options.customHeaders, callback)'
+    name: 'list(options, callback)'
     summary: Gets all redis caches in the specified subscription.
     type: Method
     syntax:
@@ -295,8 +259,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function list(options, options.customHeaders, callback);'
-    fullName: 'Redis.list(options, options.customHeaders, callback)'
+      content: 'function list(options, callback);'
+    fullName: 'Redis.list(options, callback)'
     children:
       - 'Redis#list~client'
       - 'Redis#list~callback'
@@ -312,9 +276,7 @@ items:
   - uid: 'Redis#listKeys'
     id: listKeys
     parent: Redis
-    name: >-
-      listKeys(resourceGroupName, name, options, options.customHeaders,
-      callback)
+    name: 'listKeys(resourceGroupName, name, options, callback)'
     summary: "Retrieve a redis cache's access keys. This operation requires write\rpermission to the cache resource."
     type: Method
     syntax:
@@ -336,12 +298,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListKeysResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listKeys(resourceGroupName, name, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Redis.listKeys(resourceGroupName, name, options, options.customHeaders,
-      callback)
+      content: 'function listKeys(resourceGroupName, name, options, callback);'
+    fullName: 'Redis.listKeys(resourceGroupName, name, options, callback)'
     children:
       - 'Redis#listKeys~client'
       - 'Redis#listKeys~callback'
@@ -359,9 +317,7 @@ items:
   - uid: 'Redis#regenerateKey'
     id: regenerateKey
     parent: Redis
-    name: >-
-      regenerateKey(resourceGroupName, name, keyType, options,
-      options.customHeaders, callback)
+    name: 'regenerateKey(resourceGroupName, name, keyType, options, callback)'
     summary: "Regenerate redis cache's access keys. This operation requires write\rpermission to the cache resource."
     type: Method
     syntax:
@@ -388,10 +344,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListKeysResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function regenerateKey(resourceGroupName, name, keyType, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Redis.regenerateKey(resourceGroupName, name, keyType, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Redis.regenerateKey(resourceGroupName, name, keyType, options, callback)'
     children:
       - 'Redis#regenerateKey~client'
       - 'Redis#regenerateKey~callback'
@@ -418,9 +372,7 @@ items:
   - uid: 'Redis#listByResourceGroupNext'
     id: listByResourceGroupNext
     parent: Redis
-    name: >-
-      listByResourceGroupNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listByResourceGroupNext(nextPageLink, options, callback)'
     summary: Gets all redis caches in a resource group.
     type: Method
     syntax:
@@ -439,12 +391,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroupNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Redis.listByResourceGroupNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listByResourceGroupNext(nextPageLink, options, callback);'
+    fullName: 'Redis.listByResourceGroupNext(nextPageLink, options, callback)'
     children:
       - 'Redis#listByResourceGroupNext~client'
       - 'Redis#listByResourceGroupNext~callback'
@@ -458,7 +406,7 @@ items:
   - uid: 'Redis#listNext'
     id: listNext
     parent: Redis
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Gets all redis caches in the specified subscription.
     type: Method
     syntax:
@@ -477,10 +425,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RedisListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: 'Redis.listNext(nextPageLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Redis.listNext(nextPageLink, options, callback)'
     children:
       - 'Redis#listNext~client'
       - 'Redis#listNext~callback'

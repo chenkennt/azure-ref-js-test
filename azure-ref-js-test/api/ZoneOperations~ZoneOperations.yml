@@ -25,13 +25,7 @@ items:
   - uid: 'ZoneOperations~ZoneOperations#createOrUpdate'
     id: createOrUpdate
     parent: ZoneOperations~ZoneOperations
-    name: >-
-      createOrUpdate(resourceGroupName, zoneName, parameters, parameters.zone,
-      parameters.zone.eTag, parameters.zone.properties,
-      parameters.zone.properties.maxNumberOfRecordSets,
-      parameters.zone.properties.numberOfRecordSets, parameters.zone.id,
-      parameters.zone.name, parameters.zone.type, parameters.zone.location,
-      parameters.zone.tags, parameters.ifNoneMatch, callback)
+    name: 'createOrUpdate(resourceGroupName, zoneName, parameters, callback)'
     summary: Creates a DNS zone within a resource group.
     type: Method
     syntax:
@@ -85,19 +79,10 @@ items:
         description: The response stream.
       content: >-
         function createOrUpdate(resourceGroupName, zoneName, parameters,
-        parameters.zone, parameters.zone.eTag, parameters.zone.properties,
-        parameters.zone.properties.maxNumberOfRecordSets,
-        parameters.zone.properties.numberOfRecordSets, parameters.zone.id,
-        parameters.zone.name, parameters.zone.type, parameters.zone.location,
-        parameters.zone.tags, parameters.ifNoneMatch, callback);
+        callback);
     fullName: >-
       ZoneOperations~ZoneOperations.createOrUpdate(resourceGroupName, zoneName,
-      parameters, parameters.zone, parameters.zone.eTag,
-      parameters.zone.properties,
-      parameters.zone.properties.maxNumberOfRecordSets,
-      parameters.zone.properties.numberOfRecordSets, parameters.zone.id,
-      parameters.zone.name, parameters.zone.type, parameters.zone.location,
-      parameters.zone.tags, parameters.ifNoneMatch, callback)
+      parameters, callback)
     children:
       - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
       - 'ZoneOperations~ZoneOperations#createOrUpdate~url2'
@@ -129,9 +114,7 @@ items:
   - uid: 'ZoneOperations~ZoneOperations#deleteMethod'
     id: deleteMethod
     parent: ZoneOperations~ZoneOperations
-    name: >-
-      deleteMethod(resourceGroupName, zoneName, parameters, parameters.ifMatch,
-      callback)
+    name: 'deleteMethod(resourceGroupName, zoneName, parameters, callback)'
     summary: Removes a DNS zone from a resource group.
     type: Method
     syntax:
@@ -155,10 +138,10 @@ items:
         description: The response stream.
       content: >-
         function deleteMethod(resourceGroupName, zoneName, parameters,
-        parameters.ifMatch, callback);
+        callback);
     fullName: >-
       ZoneOperations~ZoneOperations.deleteMethod(resourceGroupName, zoneName,
-      parameters, parameters.ifMatch, callback)
+      parameters, callback)
     children:
       - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
       - 'ZoneOperations~ZoneOperations#deleteMethod~url2'
@@ -219,9 +202,7 @@ items:
   - uid: 'ZoneOperations~ZoneOperations#list'
     id: list
     parent: ZoneOperations~ZoneOperations
-    name: >-
-      list(resourceGroupName, parametersOrCallback, parametersOrCallback.top,
-      parametersOrCallback.filter, callback)
+    name: 'list(resourceGroupName, parametersOrCallback, callback)'
     summary: Lists the DNS zones within a resource group.
     type: Method
     syntax:
@@ -243,13 +224,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function list(resourceGroupName, parametersOrCallback,
-        parametersOrCallback.top, parametersOrCallback.filter, callback);
+      content: 'function list(resourceGroupName, parametersOrCallback, callback);'
     fullName: >-
       ZoneOperations~ZoneOperations.list(resourceGroupName,
-      parametersOrCallback, parametersOrCallback.top,
-      parametersOrCallback.filter, callback)
+      parametersOrCallback, callback)
     children:
       - 'ZoneOperations~ZoneOperations#list~parameters'
       - 'ZoneOperations~ZoneOperations#list~callback'

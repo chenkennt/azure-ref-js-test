@@ -25,9 +25,7 @@ items:
   - uid: 'FormulaOperations#list'
     id: list
     parent: FormulaOperations
-    name: >-
-      list(resourceGroupName, labName, options, options.filter, options.top,
-      options.orderBy, options.customHeaders, callback)
+    name: 'list(resourceGroupName, labName, options, callback)'
     summary: List formulas.
     type: Method
     syntax:
@@ -56,13 +54,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationFormula} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, labName, options, options.filter,
-        options.top, options.orderBy, options.customHeaders, callback);
-    fullName: >-
-      FormulaOperations.list(resourceGroupName, labName, options,
-      options.filter, options.top, options.orderBy, options.customHeaders,
-      callback)
+      content: 'function list(resourceGroupName, labName, options, callback);'
+    fullName: 'FormulaOperations.list(resourceGroupName, labName, options, callback)'
     children:
       - 'FormulaOperations#list~client'
       - 'FormulaOperations#list~callback'
@@ -83,9 +76,7 @@ items:
   - uid: 'FormulaOperations#getResource'
     id: getResource
     parent: FormulaOperations
-    name: >-
-      getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'getResource(resourceGroupName, labName, name, options, callback)'
     summary: Get formula.
     type: Method
     syntax:
@@ -112,10 +103,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Formula} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       FormulaOperations.getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'FormulaOperations#getResource~client'
       - 'FormulaOperations#getResource~callback'
@@ -135,36 +126,8 @@ items:
     id: createOrUpdateResource
     parent: FormulaOperations
     name: >-
-      createOrUpdateResource(resourceGroupName, labName, name, formula,
-      formula.description, formula.author, formula.osType, formula.creationDate,
-      formula.formulaContent, formula.formulaContent.notes,
-      formula.formulaContent.ownerObjectId,
-      formula.formulaContent.createdByUserId,
-      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
-      formula.formulaContent.customImageId, formula.formulaContent.osType,
-      formula.formulaContent.size, formula.formulaContent.userName,
-      formula.formulaContent.password, formula.formulaContent.sshKey,
-      formula.formulaContent.isAuthenticationWithSshKey,
-      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
-      formula.formulaContent.labVirtualNetworkId,
-      formula.formulaContent.disallowPublicIpAddress,
-      formula.formulaContent.artifacts,
-      formula.formulaContent.artifactDeploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
-      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
-      formula.formulaContent.galleryImageReference,
-      formula.formulaContent.galleryImageReference.offer,
-      formula.formulaContent.galleryImageReference.publisher,
-      formula.formulaContent.galleryImageReference.sku,
-      formula.formulaContent.galleryImageReference.osType,
-      formula.formulaContent.galleryImageReference.version,
-      formula.formulaContent.provisioningState, formula.formulaContent.id,
-      formula.formulaContent.name, formula.formulaContent.type,
-      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
-      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
-      formula.type, formula.location, formula.tags, options,
-      options.customHeaders, callback)
+      createOrUpdateResource(resourceGroupName, labName, name, formula, options,
+      callback)
     summary: "Create or replace an existing Formula. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -331,66 +294,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Formula} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateResource(resourceGroupName, labName, name,
-        formula, formula.description, formula.author, formula.osType,
-        formula.creationDate, formula.formulaContent,
-        formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
-        formula.formulaContent.createdByUserId,
-        formula.formulaContent.createdByUser, formula.formulaContent.computeId,
-        formula.formulaContent.customImageId, formula.formulaContent.osType,
-        formula.formulaContent.size, formula.formulaContent.userName,
-        formula.formulaContent.password, formula.formulaContent.sshKey,
-        formula.formulaContent.isAuthenticationWithSshKey,
-        formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
-        formula.formulaContent.labVirtualNetworkId,
-        formula.formulaContent.disallowPublicIpAddress,
-        formula.formulaContent.artifacts,
-        formula.formulaContent.artifactDeploymentStatus,
-        formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
-        formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
-        formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
-        formula.formulaContent.galleryImageReference,
-        formula.formulaContent.galleryImageReference.offer,
-        formula.formulaContent.galleryImageReference.publisher,
-        formula.formulaContent.galleryImageReference.sku,
-        formula.formulaContent.galleryImageReference.osType,
-        formula.formulaContent.galleryImageReference.version,
-        formula.formulaContent.provisioningState, formula.formulaContent.id,
-        formula.formulaContent.name, formula.formulaContent.type,
-        formula.formulaContent.location, formula.formulaContent.tags,
-        formula.vm, formula.vm.labVmId, formula.provisioningState, formula.id,
-        formula.name, formula.type, formula.location, formula.tags, options,
-        options.customHeaders, callback);
+        formula, options, callback);
     fullName: >-
       FormulaOperations.createOrUpdateResource(resourceGroupName, labName, name,
-      formula, formula.description, formula.author, formula.osType,
-      formula.creationDate, formula.formulaContent,
-      formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
-      formula.formulaContent.createdByUserId,
-      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
-      formula.formulaContent.customImageId, formula.formulaContent.osType,
-      formula.formulaContent.size, formula.formulaContent.userName,
-      formula.formulaContent.password, formula.formulaContent.sshKey,
-      formula.formulaContent.isAuthenticationWithSshKey,
-      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
-      formula.formulaContent.labVirtualNetworkId,
-      formula.formulaContent.disallowPublicIpAddress,
-      formula.formulaContent.artifacts,
-      formula.formulaContent.artifactDeploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
-      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
-      formula.formulaContent.galleryImageReference,
-      formula.formulaContent.galleryImageReference.offer,
-      formula.formulaContent.galleryImageReference.publisher,
-      formula.formulaContent.galleryImageReference.sku,
-      formula.formulaContent.galleryImageReference.osType,
-      formula.formulaContent.galleryImageReference.version,
-      formula.formulaContent.provisioningState, formula.formulaContent.id,
-      formula.formulaContent.name, formula.formulaContent.type,
-      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
-      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
-      formula.type, formula.location, formula.tags, options,
-      options.customHeaders, callback)
+      formula, options, callback)
     children:
       - 'FormulaOperations#createOrUpdateResource~client'
       - 'FormulaOperations#createOrUpdateResource~callback'
@@ -400,35 +307,7 @@ items:
     parent: FormulaOperations
     name: >-
       beginCreateOrUpdateResource(resourceGroupName, labName, name, formula,
-      formula.description, formula.author, formula.osType, formula.creationDate,
-      formula.formulaContent, formula.formulaContent.notes,
-      formula.formulaContent.ownerObjectId,
-      formula.formulaContent.createdByUserId,
-      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
-      formula.formulaContent.customImageId, formula.formulaContent.osType,
-      formula.formulaContent.size, formula.formulaContent.userName,
-      formula.formulaContent.password, formula.formulaContent.sshKey,
-      formula.formulaContent.isAuthenticationWithSshKey,
-      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
-      formula.formulaContent.labVirtualNetworkId,
-      formula.formulaContent.disallowPublicIpAddress,
-      formula.formulaContent.artifacts,
-      formula.formulaContent.artifactDeploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
-      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
-      formula.formulaContent.galleryImageReference,
-      formula.formulaContent.galleryImageReference.offer,
-      formula.formulaContent.galleryImageReference.publisher,
-      formula.formulaContent.galleryImageReference.sku,
-      formula.formulaContent.galleryImageReference.osType,
-      formula.formulaContent.galleryImageReference.version,
-      formula.formulaContent.provisioningState, formula.formulaContent.id,
-      formula.formulaContent.name, formula.formulaContent.type,
-      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
-      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
-      formula.type, formula.location, formula.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     summary: "Create or replace an existing Formula. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -595,66 +474,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Formula} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdateResource(resourceGroupName, labName, name,
-        formula, formula.description, formula.author, formula.osType,
-        formula.creationDate, formula.formulaContent,
-        formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
-        formula.formulaContent.createdByUserId,
-        formula.formulaContent.createdByUser, formula.formulaContent.computeId,
-        formula.formulaContent.customImageId, formula.formulaContent.osType,
-        formula.formulaContent.size, formula.formulaContent.userName,
-        formula.formulaContent.password, formula.formulaContent.sshKey,
-        formula.formulaContent.isAuthenticationWithSshKey,
-        formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
-        formula.formulaContent.labVirtualNetworkId,
-        formula.formulaContent.disallowPublicIpAddress,
-        formula.formulaContent.artifacts,
-        formula.formulaContent.artifactDeploymentStatus,
-        formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
-        formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
-        formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
-        formula.formulaContent.galleryImageReference,
-        formula.formulaContent.galleryImageReference.offer,
-        formula.formulaContent.galleryImageReference.publisher,
-        formula.formulaContent.galleryImageReference.sku,
-        formula.formulaContent.galleryImageReference.osType,
-        formula.formulaContent.galleryImageReference.version,
-        formula.formulaContent.provisioningState, formula.formulaContent.id,
-        formula.formulaContent.name, formula.formulaContent.type,
-        formula.formulaContent.location, formula.formulaContent.tags,
-        formula.vm, formula.vm.labVmId, formula.provisioningState, formula.id,
-        formula.name, formula.type, formula.location, formula.tags, options,
-        options.customHeaders, callback);
+        formula, options, callback);
     fullName: >-
       FormulaOperations.beginCreateOrUpdateResource(resourceGroupName, labName,
-      name, formula, formula.description, formula.author, formula.osType,
-      formula.creationDate, formula.formulaContent,
-      formula.formulaContent.notes, formula.formulaContent.ownerObjectId,
-      formula.formulaContent.createdByUserId,
-      formula.formulaContent.createdByUser, formula.formulaContent.computeId,
-      formula.formulaContent.customImageId, formula.formulaContent.osType,
-      formula.formulaContent.size, formula.formulaContent.userName,
-      formula.formulaContent.password, formula.formulaContent.sshKey,
-      formula.formulaContent.isAuthenticationWithSshKey,
-      formula.formulaContent.fqdn, formula.formulaContent.labSubnetName,
-      formula.formulaContent.labVirtualNetworkId,
-      formula.formulaContent.disallowPublicIpAddress,
-      formula.formulaContent.artifacts,
-      formula.formulaContent.artifactDeploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.deploymentStatus,
-      formula.formulaContent.artifactDeploymentStatus.artifactsApplied,
-      formula.formulaContent.artifactDeploymentStatus.totalArtifacts,
-      formula.formulaContent.galleryImageReference,
-      formula.formulaContent.galleryImageReference.offer,
-      formula.formulaContent.galleryImageReference.publisher,
-      formula.formulaContent.galleryImageReference.sku,
-      formula.formulaContent.galleryImageReference.osType,
-      formula.formulaContent.galleryImageReference.version,
-      formula.formulaContent.provisioningState, formula.formulaContent.id,
-      formula.formulaContent.name, formula.formulaContent.type,
-      formula.formulaContent.location, formula.formulaContent.tags, formula.vm,
-      formula.vm.labVmId, formula.provisioningState, formula.id, formula.name,
-      formula.type, formula.location, formula.tags, options,
-      options.customHeaders, callback)
+      name, formula, options, callback)
     children:
       - 'FormulaOperations#beginCreateOrUpdateResource~client'
       - 'FormulaOperations#beginCreateOrUpdateResource~callback'
@@ -679,9 +502,7 @@ items:
   - uid: 'FormulaOperations#deleteResource'
     id: deleteResource
     parent: FormulaOperations
-    name: >-
-      deleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'deleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete formula.
     type: Method
     syntax:
@@ -708,10 +529,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       FormulaOperations.deleteResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'FormulaOperations#deleteResource~client'
       - 'FormulaOperations#deleteResource~callback'
@@ -730,7 +551,7 @@ items:
   - uid: 'FormulaOperations#listNext'
     id: listNext
     parent: FormulaOperations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: List formulas.
     type: Method
     syntax:
@@ -749,12 +570,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationFormula} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      FormulaOperations.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'FormulaOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'FormulaOperations#listNext~client'
       - 'FormulaOperations#listNext~callback'

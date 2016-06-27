@@ -33,9 +33,7 @@ items:
   - uid: 'Android#getMAMPolicies'
     id: getMAMPolicies
     parent: Android
-    name: >-
-      getMAMPolicies(hostName, options, options.filter, options.top,
-      options.select, options.customHeaders, callback)
+    name: 'getMAMPolicies(hostName, options, callback)'
     summary: Returns Intune Android policies.
     type: Method
     syntax:
@@ -62,12 +60,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AndroidMAMPolicyCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getMAMPolicies(hostName, options, options.filter, options.top,
-        options.select, options.customHeaders, callback);
-    fullName: >-
-      Android.getMAMPolicies(hostName, options, options.filter, options.top,
-      options.select, options.customHeaders, callback)
+      content: 'function getMAMPolicies(hostName, options, callback);'
+    fullName: 'Android.getMAMPolicies(hostName, options, callback)'
     children:
       - 'Android#getMAMPolicies~client'
       - 'Android#getMAMPolicies~callback'
@@ -86,9 +80,7 @@ items:
   - uid: 'Android#getMAMPolicyByName'
     id: getMAMPolicyByName
     parent: Android
-    name: >-
-      getMAMPolicyByName(hostName, policyName, options, options.select,
-      options.customHeaders, callback)
+    name: 'getMAMPolicyByName(hostName, policyName, options, callback)'
     summary: Returns AndroidMAMPolicy with given name.
     type: Method
     syntax:
@@ -113,12 +105,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AndroidMAMPolicy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getMAMPolicyByName(hostName, policyName, options,
-        options.select, options.customHeaders, callback);
-    fullName: >-
-      Android.getMAMPolicyByName(hostName, policyName, options, options.select,
-      options.customHeaders, callback)
+      content: 'function getMAMPolicyByName(hostName, policyName, options, callback);'
+    fullName: 'Android.getMAMPolicyByName(hostName, policyName, options, callback)'
     children:
       - 'Android#getMAMPolicyByName~client'
       - 'Android#getMAMPolicyByName~callback'
@@ -137,9 +125,8 @@ items:
     id: createOrUpdateMAMPolicy
     parent: Android
     name: >-
-      createOrUpdateMAMPolicy(hostName, policyName, parameters,
-      parameters.screenCapture, parameters.fileEncryption, parameters.tags,
-      parameters.location, options, options.customHeaders, callback)
+      createOrUpdateMAMPolicy(hostName, policyName, parameters, options,
+      callback)
     summary: Creates or updates AndroidMAMPolicy.
     type: Method
     syntax:
@@ -178,12 +165,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AndroidMAMPolicy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateMAMPolicy(hostName, policyName, parameters,
-        parameters.screenCapture, parameters.fileEncryption, parameters.tags,
-        parameters.location, options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
-      Android.createOrUpdateMAMPolicy(hostName, policyName, parameters,
-      parameters.screenCapture, parameters.fileEncryption, parameters.tags,
-      parameters.location, options, options.customHeaders, callback)
+      Android.createOrUpdateMAMPolicy(hostName, policyName, parameters, options,
+      callback)
     children:
       - 'Android#createOrUpdateMAMPolicy~client'
       - 'Android#createOrUpdateMAMPolicy~callback'
@@ -206,10 +191,7 @@ items:
   - uid: 'Android#patchMAMPolicy'
     id: patchMAMPolicy
     parent: Android
-    name: >-
-      patchMAMPolicy(hostName, policyName, parameters, parameters.screenCapture,
-      parameters.fileEncryption, parameters.tags, parameters.location, options,
-      options.customHeaders, callback)
+    name: 'patchMAMPolicy(hostName, policyName, parameters, options, callback)'
     summary: Patch AndroidMAMPolicy.
     type: Method
     syntax:
@@ -247,13 +229,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AndroidMAMPolicy} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function patchMAMPolicy(hostName, policyName, parameters,
-        parameters.screenCapture, parameters.fileEncryption, parameters.tags,
-        parameters.location, options, options.customHeaders, callback);
+        function patchMAMPolicy(hostName, policyName, parameters, options,
+        callback);
     fullName: >-
-      Android.patchMAMPolicy(hostName, policyName, parameters,
-      parameters.screenCapture, parameters.fileEncryption, parameters.tags,
-      parameters.location, options, options.customHeaders, callback)
+      Android.patchMAMPolicy(hostName, policyName, parameters, options,
+      callback)
     children:
       - 'Android#patchMAMPolicy~client'
       - 'Android#patchMAMPolicy~callback'
@@ -276,9 +256,7 @@ items:
   - uid: 'Android#deleteMAMPolicy'
     id: deleteMAMPolicy
     parent: Android
-    name: >-
-      deleteMAMPolicy(hostName, policyName, options, options.customHeaders,
-      callback)
+    name: 'deleteMAMPolicy(hostName, policyName, options, callback)'
     summary: Delete Android Policy
     type: Method
     syntax:
@@ -300,12 +278,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMAMPolicy(hostName, policyName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Android.deleteMAMPolicy(hostName, policyName, options,
-      options.customHeaders, callback)
+      content: 'function deleteMAMPolicy(hostName, policyName, options, callback);'
+    fullName: 'Android.deleteMAMPolicy(hostName, policyName, options, callback)'
     children:
       - 'Android#deleteMAMPolicy~client'
       - 'Android#deleteMAMPolicy~callback'
@@ -322,9 +296,7 @@ items:
   - uid: 'Android#getAppForMAMPolicy'
     id: getAppForMAMPolicy
     parent: Android
-    name: >-
-      getAppForMAMPolicy(hostName, policyName, options, options.filter,
-      options.top, options.select, options.customHeaders, callback)
+    name: 'getAppForMAMPolicy(hostName, policyName, options, callback)'
     summary: Get apps for an AndroidMAMPolicy.
     type: Method
     syntax:
@@ -354,13 +326,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getAppForMAMPolicy(hostName, policyName, options,
-        options.filter, options.top, options.select, options.customHeaders,
-        callback);
-    fullName: >-
-      Android.getAppForMAMPolicy(hostName, policyName, options, options.filter,
-      options.top, options.select, options.customHeaders, callback)
+      content: 'function getAppForMAMPolicy(hostName, policyName, options, callback);'
+    fullName: 'Android.getAppForMAMPolicy(hostName, policyName, options, callback)'
     children:
       - 'Android#getAppForMAMPolicy~client'
       - 'Android#getAppForMAMPolicy~callback'
@@ -381,9 +348,8 @@ items:
     id: addAppForMAMPolicy
     parent: Android
     name: >-
-      addAppForMAMPolicy(hostName, policyName, appName, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      addAppForMAMPolicy(hostName, policyName, appName, parameters, options,
+      callback)
     summary: Add app to an AndroidMAMPolicy.
     type: Method
     syntax:
@@ -417,12 +383,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function addAppForMAMPolicy(hostName, policyName, appName, parameters,
-        parameters.properties, parameters.properties.url, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Android.addAppForMAMPolicy(hostName, policyName, appName, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'Android#addAppForMAMPolicy~client'
       - 'Android#addAppForMAMPolicy~callback'
@@ -446,9 +410,7 @@ items:
   - uid: 'Android#deleteAppForMAMPolicy'
     id: deleteAppForMAMPolicy
     parent: Android
-    name: >-
-      deleteAppForMAMPolicy(hostName, policyName, appName, options,
-      options.customHeaders, callback)
+    name: 'deleteAppForMAMPolicy(hostName, policyName, appName, options, callback)'
     summary: Delete App for Android Policy
     type: Method
     syntax:
@@ -475,10 +437,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteAppForMAMPolicy(hostName, policyName, appName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Android.deleteAppForMAMPolicy(hostName, policyName, appName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Android#deleteAppForMAMPolicy~client'
       - 'Android#deleteAppForMAMPolicy~callback'
@@ -496,9 +458,7 @@ items:
   - uid: 'Android#getGroupsForMAMPolicy'
     id: getGroupsForMAMPolicy
     parent: Android
-    name: >-
-      getGroupsForMAMPolicy(hostName, policyName, options,
-      options.customHeaders, callback)
+    name: 'getGroupsForMAMPolicy(hostName, policyName, options, callback)'
     summary: Returns groups for a given AndroidMAMPolicy.
     type: Method
     syntax:
@@ -520,12 +480,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupsCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getGroupsForMAMPolicy(hostName, policyName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Android.getGroupsForMAMPolicy(hostName, policyName, options,
-      options.customHeaders, callback)
+      content: 'function getGroupsForMAMPolicy(hostName, policyName, options, callback);'
+    fullName: 'Android.getGroupsForMAMPolicy(hostName, policyName, options, callback)'
     children:
       - 'Android#getGroupsForMAMPolicy~client'
       - 'Android#getGroupsForMAMPolicy~callback'
@@ -543,9 +499,8 @@ items:
     id: addGroupForMAMPolicy
     parent: Android
     name: >-
-      addGroupForMAMPolicy(hostName, policyName, groupId, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      addGroupForMAMPolicy(hostName, policyName, groupId, parameters, options,
+      callback)
     summary: Add group to an AndroidMAMPolicy.
     type: Method
     syntax:
@@ -579,12 +534,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function addGroupForMAMPolicy(hostName, policyName, groupId, parameters,
-        parameters.properties, parameters.properties.url, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Android.addGroupForMAMPolicy(hostName, policyName, groupId, parameters,
-      parameters.properties, parameters.properties.url, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'Android#addGroupForMAMPolicy~client'
       - 'Android#addGroupForMAMPolicy~callback'
@@ -608,9 +561,7 @@ items:
   - uid: 'Android#deleteGroupForMAMPolicy'
     id: deleteGroupForMAMPolicy
     parent: Android
-    name: >-
-      deleteGroupForMAMPolicy(hostName, policyName, groupId, options,
-      options.customHeaders, callback)
+    name: 'deleteGroupForMAMPolicy(hostName, policyName, groupId, options, callback)'
     summary: Delete Group for Android Policy
     type: Method
     syntax:
@@ -637,10 +588,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteGroupForMAMPolicy(hostName, policyName, groupId, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Android.deleteGroupForMAMPolicy(hostName, policyName, groupId, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Android#deleteGroupForMAMPolicy~client'
       - 'Android#deleteGroupForMAMPolicy~callback'
@@ -658,7 +609,7 @@ items:
   - uid: 'Android#getMAMPoliciesNext'
     id: getMAMPoliciesNext
     parent: Android
-    name: 'getMAMPoliciesNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'getMAMPoliciesNext(nextPageLink, options, callback)'
     summary: Returns Intune Android policies.
     type: Method
     syntax:
@@ -677,12 +628,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AndroidMAMPolicyCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getMAMPoliciesNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Android.getMAMPoliciesNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function getMAMPoliciesNext(nextPageLink, options, callback);'
+    fullName: 'Android.getMAMPoliciesNext(nextPageLink, options, callback)'
     children:
       - 'Android#getMAMPoliciesNext~client'
       - 'Android#getMAMPoliciesNext~callback'
@@ -696,9 +643,7 @@ items:
   - uid: 'Android#getAppForMAMPolicyNext'
     id: getAppForMAMPolicyNext
     parent: Android
-    name: >-
-      getAppForMAMPolicyNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'getAppForMAMPolicyNext(nextPageLink, options, callback)'
     summary: Get apps for an AndroidMAMPolicy.
     type: Method
     syntax:
@@ -717,12 +662,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getAppForMAMPolicyNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Android.getAppForMAMPolicyNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function getAppForMAMPolicyNext(nextPageLink, options, callback);'
+    fullName: 'Android.getAppForMAMPolicyNext(nextPageLink, options, callback)'
     children:
       - 'Android#getAppForMAMPolicyNext~client'
       - 'Android#getAppForMAMPolicyNext~callback'
@@ -736,9 +677,7 @@ items:
   - uid: 'Android#getGroupsForMAMPolicyNext'
     id: getGroupsForMAMPolicyNext
     parent: Android
-    name: >-
-      getGroupsForMAMPolicyNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'getGroupsForMAMPolicyNext(nextPageLink, options, callback)'
     summary: Returns groups for a given AndroidMAMPolicy.
     type: Method
     syntax:
@@ -757,12 +696,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupsCollection} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getGroupsForMAMPolicyNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Android.getGroupsForMAMPolicyNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function getGroupsForMAMPolicyNext(nextPageLink, options, callback);'
+    fullName: 'Android.getGroupsForMAMPolicyNext(nextPageLink, options, callback)'
     children:
       - 'Android#getGroupsForMAMPolicyNext~client'
       - 'Android#getGroupsForMAMPolicyNext~callback'

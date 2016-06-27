@@ -28,28 +28,7 @@ items:
     parent: RecordSetOperations~RecordSetOperations
     name: >-
       createOrUpdate(resourceGroupName, zoneName, relativeRecordSetName,
-      recordType, parameters, parameters.recordSet, parameters.recordSet.eTag,
-      parameters.recordSet.properties, parameters.recordSet.properties.ttl,
-      parameters.recordSet.properties.aRecords,
-      parameters.recordSet.properties.aaaaRecords,
-      parameters.recordSet.properties.mxRecords,
-      parameters.recordSet.properties.nsRecords,
-      parameters.recordSet.properties.ptrRecords,
-      parameters.recordSet.properties.srvRecords,
-      parameters.recordSet.properties.txtRecords,
-      parameters.recordSet.properties.cnameRecord,
-      parameters.recordSet.properties.cnameRecord.cname,
-      parameters.recordSet.properties.soaRecord,
-      parameters.recordSet.properties.soaRecord.host,
-      parameters.recordSet.properties.soaRecord.email,
-      parameters.recordSet.properties.soaRecord.serialNumber,
-      parameters.recordSet.properties.soaRecord.refreshTime,
-      parameters.recordSet.properties.soaRecord.retryTime,
-      parameters.recordSet.properties.soaRecord.expireTime,
-      parameters.recordSet.properties.soaRecord.minimumTtl,
-      parameters.recordSet.id, parameters.recordSet.name,
-      parameters.recordSet.type, parameters.recordSet.location,
-      parameters.recordSet.tags, parameters.ifNoneMatch, callback)
+      recordType, parameters, callback)
     summary: Creates a RecordSet within a DNS zone.
     type: Method
     syntax:
@@ -157,54 +136,10 @@ items:
         description: The response stream.
       content: >-
         function createOrUpdate(resourceGroupName, zoneName,
-        relativeRecordSetName, recordType, parameters, parameters.recordSet,
-        parameters.recordSet.eTag, parameters.recordSet.properties,
-        parameters.recordSet.properties.ttl,
-        parameters.recordSet.properties.aRecords,
-        parameters.recordSet.properties.aaaaRecords,
-        parameters.recordSet.properties.mxRecords,
-        parameters.recordSet.properties.nsRecords,
-        parameters.recordSet.properties.ptrRecords,
-        parameters.recordSet.properties.srvRecords,
-        parameters.recordSet.properties.txtRecords,
-        parameters.recordSet.properties.cnameRecord,
-        parameters.recordSet.properties.cnameRecord.cname,
-        parameters.recordSet.properties.soaRecord,
-        parameters.recordSet.properties.soaRecord.host,
-        parameters.recordSet.properties.soaRecord.email,
-        parameters.recordSet.properties.soaRecord.serialNumber,
-        parameters.recordSet.properties.soaRecord.refreshTime,
-        parameters.recordSet.properties.soaRecord.retryTime,
-        parameters.recordSet.properties.soaRecord.expireTime,
-        parameters.recordSet.properties.soaRecord.minimumTtl,
-        parameters.recordSet.id, parameters.recordSet.name,
-        parameters.recordSet.type, parameters.recordSet.location,
-        parameters.recordSet.tags, parameters.ifNoneMatch, callback);
+        relativeRecordSetName, recordType, parameters, callback);
     fullName: >-
       RecordSetOperations~RecordSetOperations.createOrUpdate(resourceGroupName,
-      zoneName, relativeRecordSetName, recordType, parameters,
-      parameters.recordSet, parameters.recordSet.eTag,
-      parameters.recordSet.properties, parameters.recordSet.properties.ttl,
-      parameters.recordSet.properties.aRecords,
-      parameters.recordSet.properties.aaaaRecords,
-      parameters.recordSet.properties.mxRecords,
-      parameters.recordSet.properties.nsRecords,
-      parameters.recordSet.properties.ptrRecords,
-      parameters.recordSet.properties.srvRecords,
-      parameters.recordSet.properties.txtRecords,
-      parameters.recordSet.properties.cnameRecord,
-      parameters.recordSet.properties.cnameRecord.cname,
-      parameters.recordSet.properties.soaRecord,
-      parameters.recordSet.properties.soaRecord.host,
-      parameters.recordSet.properties.soaRecord.email,
-      parameters.recordSet.properties.soaRecord.serialNumber,
-      parameters.recordSet.properties.soaRecord.refreshTime,
-      parameters.recordSet.properties.soaRecord.retryTime,
-      parameters.recordSet.properties.soaRecord.expireTime,
-      parameters.recordSet.properties.soaRecord.minimumTtl,
-      parameters.recordSet.id, parameters.recordSet.name,
-      parameters.recordSet.type, parameters.recordSet.location,
-      parameters.recordSet.tags, parameters.ifNoneMatch, callback)
+      zoneName, relativeRecordSetName, recordType, parameters, callback)
     children:
       - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex1'
       - 'RecordSetOperations~RecordSetOperations#createOrUpdate~loweredIndex1'
@@ -307,7 +242,7 @@ items:
     parent: RecordSetOperations~RecordSetOperations
     name: >-
       deleteMethod(resourceGroupName, zoneName, relativeRecordSetName,
-      recordType, parameters, parameters.ifMatch, callback)
+      recordType, parameters, callback)
     summary: Removes a RecordSet from a DNS zone.
     type: Method
     syntax:
@@ -337,12 +272,10 @@ items:
         description: The response stream.
       content: >-
         function deleteMethod(resourceGroupName, zoneName,
-        relativeRecordSetName, recordType, parameters, parameters.ifMatch,
-        callback);
+        relativeRecordSetName, recordType, parameters, callback);
     fullName: >-
       RecordSetOperations~RecordSetOperations.deleteMethod(resourceGroupName,
-      zoneName, relativeRecordSetName, recordType, parameters,
-      parameters.ifMatch, callback)
+      zoneName, relativeRecordSetName, recordType, parameters, callback)
     children:
       - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
       - 'RecordSetOperations~RecordSetOperations#deleteMethod~url2'
@@ -425,7 +358,7 @@ items:
     parent: RecordSetOperations~RecordSetOperations
     name: >-
       list(resourceGroupName, zoneName, recordType, parametersOrCallback,
-      parametersOrCallback.top, parametersOrCallback.filter, callback)
+      callback)
     summary: Lists the RecordSets of a specified type in a DNS zone.
     type: Method
     syntax:
@@ -455,12 +388,10 @@ items:
         description: The response stream.
       content: >-
         function list(resourceGroupName, zoneName, recordType,
-        parametersOrCallback, parametersOrCallback.top,
-        parametersOrCallback.filter, callback);
+        parametersOrCallback, callback);
     fullName: >-
       RecordSetOperations~RecordSetOperations.list(resourceGroupName, zoneName,
-      recordType, parametersOrCallback, parametersOrCallback.top,
-      parametersOrCallback.filter, callback)
+      recordType, parametersOrCallback, callback)
     children:
       - 'RecordSetOperations~RecordSetOperations#list~parameters'
       - 'RecordSetOperations~RecordSetOperations#list~callback'
@@ -488,9 +419,7 @@ items:
   - uid: 'RecordSetOperations~RecordSetOperations#listAll'
     id: listAll
     parent: RecordSetOperations~RecordSetOperations
-    name: >-
-      listAll(resourceGroupName, zoneName, parametersOrCallback,
-      parametersOrCallback.top, parametersOrCallback.filter, callback)
+    name: 'listAll(resourceGroupName, zoneName, parametersOrCallback, callback)'
     summary: Lists all RecordSets in a DNS zone.
     type: Method
     syntax:
@@ -517,11 +446,10 @@ items:
         description: The response stream.
       content: >-
         function listAll(resourceGroupName, zoneName, parametersOrCallback,
-        parametersOrCallback.top, parametersOrCallback.filter, callback);
+        callback);
     fullName: >-
       RecordSetOperations~RecordSetOperations.listAll(resourceGroupName,
-      zoneName, parametersOrCallback, parametersOrCallback.top,
-      parametersOrCallback.filter, callback)
+      zoneName, parametersOrCallback, callback)
     children:
       - 'RecordSetOperations~RecordSetOperations#listAll~parameters'
       - 'RecordSetOperations~RecordSetOperations#listAll~callback'

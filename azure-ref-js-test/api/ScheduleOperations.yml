@@ -29,9 +29,7 @@ items:
   - uid: 'ScheduleOperations#list'
     id: list
     parent: ScheduleOperations
-    name: >-
-      list(resourceGroupName, labName, options, options.filter, options.top,
-      options.orderBy, options.customHeaders, callback)
+    name: 'list(resourceGroupName, labName, options, callback)'
     summary: List schedules.
     type: Method
     syntax:
@@ -60,13 +58,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationSchedule} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, labName, options, options.filter,
-        options.top, options.orderBy, options.customHeaders, callback);
-    fullName: >-
-      ScheduleOperations.list(resourceGroupName, labName, options,
-      options.filter, options.top, options.orderBy, options.customHeaders,
-      callback)
+      content: 'function list(resourceGroupName, labName, options, callback);'
+    fullName: 'ScheduleOperations.list(resourceGroupName, labName, options, callback)'
     children:
       - 'ScheduleOperations#list~client'
       - 'ScheduleOperations#list~callback'
@@ -87,9 +80,7 @@ items:
   - uid: 'ScheduleOperations#getResource'
     id: getResource
     parent: ScheduleOperations
-    name: >-
-      getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'getResource(resourceGroupName, labName, name, options, callback)'
     summary: Get schedule.
     type: Method
     syntax:
@@ -116,10 +107,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ScheduleOperations.getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ScheduleOperations#getResource~client'
       - 'ScheduleOperations#getResource~callback'
@@ -140,13 +131,7 @@ items:
     parent: ScheduleOperations
     name: >-
       createOrUpdateResource(resourceGroupName, labName, name, schedule,
-      schedule.status, schedule.taskType, schedule.weeklyRecurrence,
-      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
-      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
-      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
-      schedule.timeZoneId, schedule.provisioningState, schedule.id,
-      schedule.name, schedule.type, schedule.location, schedule.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     summary: "Create or replace an existing schedule. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -222,23 +207,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateResource(resourceGroupName, labName, name,
-        schedule, schedule.status, schedule.taskType, schedule.weeklyRecurrence,
-        schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
-        schedule.dailyRecurrence, schedule.dailyRecurrence.time,
-        schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
-        schedule.timeZoneId, schedule.provisioningState, schedule.id,
-        schedule.name, schedule.type, schedule.location, schedule.tags, options,
-        options.customHeaders, callback);
+        schedule, options, callback);
     fullName: >-
       ScheduleOperations.createOrUpdateResource(resourceGroupName, labName,
-      name, schedule, schedule.status, schedule.taskType,
-      schedule.weeklyRecurrence, schedule.weeklyRecurrence.weekdays,
-      schedule.weeklyRecurrence.time, schedule.dailyRecurrence,
-      schedule.dailyRecurrence.time, schedule.hourlyRecurrence,
-      schedule.hourlyRecurrence.minute, schedule.timeZoneId,
-      schedule.provisioningState, schedule.id, schedule.name, schedule.type,
-      schedule.location, schedule.tags, options, options.customHeaders,
-      callback)
+      name, schedule, options, callback)
     children:
       - 'ScheduleOperations#createOrUpdateResource~client'
       - 'ScheduleOperations#createOrUpdateResource~callback'
@@ -248,13 +220,7 @@ items:
     parent: ScheduleOperations
     name: >-
       beginCreateOrUpdateResource(resourceGroupName, labName, name, schedule,
-      schedule.status, schedule.taskType, schedule.weeklyRecurrence,
-      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
-      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
-      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
-      schedule.timeZoneId, schedule.provisioningState, schedule.id,
-      schedule.name, schedule.type, schedule.location, schedule.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     summary: "Create or replace an existing schedule. This operation can take a while to\rcomplete."
     type: Method
     syntax:
@@ -330,23 +296,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdateResource(resourceGroupName, labName, name,
-        schedule, schedule.status, schedule.taskType, schedule.weeklyRecurrence,
-        schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
-        schedule.dailyRecurrence, schedule.dailyRecurrence.time,
-        schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
-        schedule.timeZoneId, schedule.provisioningState, schedule.id,
-        schedule.name, schedule.type, schedule.location, schedule.tags, options,
-        options.customHeaders, callback);
+        schedule, options, callback);
     fullName: >-
       ScheduleOperations.beginCreateOrUpdateResource(resourceGroupName, labName,
-      name, schedule, schedule.status, schedule.taskType,
-      schedule.weeklyRecurrence, schedule.weeklyRecurrence.weekdays,
-      schedule.weeklyRecurrence.time, schedule.dailyRecurrence,
-      schedule.dailyRecurrence.time, schedule.hourlyRecurrence,
-      schedule.hourlyRecurrence.minute, schedule.timeZoneId,
-      schedule.provisioningState, schedule.id, schedule.name, schedule.type,
-      schedule.location, schedule.tags, options, options.customHeaders,
-      callback)
+      name, schedule, options, callback)
     children:
       - 'ScheduleOperations#beginCreateOrUpdateResource~client'
       - 'ScheduleOperations#beginCreateOrUpdateResource~callback'
@@ -371,9 +324,7 @@ items:
   - uid: 'ScheduleOperations#deleteResource'
     id: deleteResource
     parent: ScheduleOperations
-    name: >-
-      deleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'deleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete schedule. This operation can take a while to complete.
     type: Method
     syntax:
@@ -400,10 +351,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ScheduleOperations.deleteResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ScheduleOperations#deleteResource~client'
       - 'ScheduleOperations#deleteResource~callback'
@@ -411,9 +362,7 @@ items:
   - uid: 'ScheduleOperations#beginDeleteResource'
     id: beginDeleteResource
     parent: ScheduleOperations
-    name: >-
-      beginDeleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete schedule. This operation can take a while to complete.
     type: Method
     syntax:
@@ -440,10 +389,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ScheduleOperations.beginDeleteResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ScheduleOperations#beginDeleteResource~client'
       - 'ScheduleOperations#beginDeleteResource~callback'
@@ -463,14 +412,8 @@ items:
     id: patchResource
     parent: ScheduleOperations
     name: >-
-      patchResource(resourceGroupName, labName, name, schedule, schedule.status,
-      schedule.taskType, schedule.weeklyRecurrence,
-      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
-      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
-      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
-      schedule.timeZoneId, schedule.provisioningState, schedule.id,
-      schedule.name, schedule.type, schedule.location, schedule.tags, options,
-      options.customHeaders, callback)
+      patchResource(resourceGroupName, labName, name, schedule, options,
+      callback)
     summary: Modify properties of schedules.
     type: Method
     syntax:
@@ -546,22 +489,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Schedule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function patchResource(resourceGroupName, labName, name, schedule,
-        schedule.status, schedule.taskType, schedule.weeklyRecurrence,
-        schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
-        schedule.dailyRecurrence, schedule.dailyRecurrence.time,
-        schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
-        schedule.timeZoneId, schedule.provisioningState, schedule.id,
-        schedule.name, schedule.type, schedule.location, schedule.tags, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ScheduleOperations.patchResource(resourceGroupName, labName, name,
-      schedule, schedule.status, schedule.taskType, schedule.weeklyRecurrence,
-      schedule.weeklyRecurrence.weekdays, schedule.weeklyRecurrence.time,
-      schedule.dailyRecurrence, schedule.dailyRecurrence.time,
-      schedule.hourlyRecurrence, schedule.hourlyRecurrence.minute,
-      schedule.timeZoneId, schedule.provisioningState, schedule.id,
-      schedule.name, schedule.type, schedule.location, schedule.tags, options,
-      options.customHeaders, callback)
+      schedule, options, callback)
     children:
       - 'ScheduleOperations#patchResource~client'
       - 'ScheduleOperations#patchResource~callback'
@@ -586,9 +517,7 @@ items:
   - uid: 'ScheduleOperations#execute'
     id: execute
     parent: ScheduleOperations
-    name: >-
-      execute(resourceGroupName, labName, name, options, options.customHeaders,
-      callback)
+    name: 'execute(resourceGroupName, labName, name, options, callback)'
     summary: Execute a schedule. This operation can take a while to complete.
     type: Method
     syntax:
@@ -613,12 +542,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function execute(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+      content: 'function execute(resourceGroupName, labName, name, options, callback);'
     fullName: >-
       ScheduleOperations.execute(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ScheduleOperations#execute~client'
       - 'ScheduleOperations#execute~callback'
@@ -626,9 +553,7 @@ items:
   - uid: 'ScheduleOperations#beginExecute'
     id: beginExecute
     parent: ScheduleOperations
-    name: >-
-      beginExecute(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'beginExecute(resourceGroupName, labName, name, options, callback)'
     summary: Execute a schedule. This operation can take a while to complete.
     type: Method
     syntax:
@@ -655,10 +580,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginExecute(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ScheduleOperations.beginExecute(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ScheduleOperations#beginExecute~client'
       - 'ScheduleOperations#beginExecute~callback'
@@ -677,7 +602,7 @@ items:
   - uid: 'ScheduleOperations#listNext'
     id: listNext
     parent: ScheduleOperations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: List schedules.
     type: Method
     syntax:
@@ -696,12 +621,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationSchedule} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ScheduleOperations.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'ScheduleOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'ScheduleOperations#listNext~client'
       - 'ScheduleOperations#listNext~callback'

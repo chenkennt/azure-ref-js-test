@@ -28,7 +28,7 @@ items:
     parent: Routes
     name: >-
       deleteMethod(resourceGroupName, routeTableName, routeName, options,
-      options.customHeaders, callback)
+      callback)
     summary: The delete route operation deletes the specified route from a route table.
     type: Method
     syntax:
@@ -55,10 +55,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, routeTableName, routeName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Routes.deleteMethod(resourceGroupName, routeTableName, routeName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Routes#deleteMethod~client'
       - 'Routes#deleteMethod~callback'
@@ -68,7 +68,7 @@ items:
     parent: Routes
     name: >-
       beginDeleteMethod(resourceGroupName, routeTableName, routeName, options,
-      options.customHeaders, callback)
+      callback)
     summary: The delete route operation deletes the specified route from a route table.
     type: Method
     syntax:
@@ -95,10 +95,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, routeTableName, routeName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Routes.beginDeleteMethod(resourceGroupName, routeTableName, routeName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Routes#beginDeleteMethod~client'
       - 'Routes#beginDeleteMethod~callback'
@@ -117,9 +117,7 @@ items:
   - uid: 'Routes#get'
     id: get
     parent: Routes
-    name: >-
-      get(resourceGroupName, routeTableName, routeName, options,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, routeTableName, routeName, options, callback)'
     summary: "The Get route operation retreives information about the specified route\rfrom the route table."
     type: Method
     syntax:
@@ -146,10 +144,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Route} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, routeTableName, routeName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Routes.get(resourceGroupName, routeTableName, routeName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Routes#get~client'
       - 'Routes#get~callback'
@@ -170,11 +168,7 @@ items:
     parent: Routes
     name: >-
       createOrUpdate(resourceGroupName, routeTableName, routeName,
-      routeParameters, routeParameters.addressPrefix,
-      routeParameters.nextHopType, routeParameters.nextHopIpAddress,
-      routeParameters.provisioningState, routeParameters.name,
-      routeParameters.etag, routeParameters.id, options, options.customHeaders,
-      callback)
+      routeParameters, options, callback)
     summary: >-
       The Put route operation creates/updates a route in the specified route
       table
@@ -227,18 +221,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Route} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, routeTableName, routeName,
-        routeParameters, routeParameters.addressPrefix,
-        routeParameters.nextHopType, routeParameters.nextHopIpAddress,
-        routeParameters.provisioningState, routeParameters.name,
-        routeParameters.etag, routeParameters.id, options,
-        options.customHeaders, callback);
+        routeParameters, options, callback);
     fullName: >-
       Routes.createOrUpdate(resourceGroupName, routeTableName, routeName,
-      routeParameters, routeParameters.addressPrefix,
-      routeParameters.nextHopType, routeParameters.nextHopIpAddress,
-      routeParameters.provisioningState, routeParameters.name,
-      routeParameters.etag, routeParameters.id, options, options.customHeaders,
-      callback)
+      routeParameters, options, callback)
     children:
       - 'Routes#createOrUpdate~client'
       - 'Routes#createOrUpdate~callback'
@@ -248,11 +234,7 @@ items:
     parent: Routes
     name: >-
       beginCreateOrUpdate(resourceGroupName, routeTableName, routeName,
-      routeParameters, routeParameters.addressPrefix,
-      routeParameters.nextHopType, routeParameters.nextHopIpAddress,
-      routeParameters.provisioningState, routeParameters.name,
-      routeParameters.etag, routeParameters.id, options, options.customHeaders,
-      callback)
+      routeParameters, options, callback)
     summary: >-
       The Put route operation creates/updates a route in the specified route
       table
@@ -305,18 +287,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Route} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, routeTableName,
-        routeName, routeParameters, routeParameters.addressPrefix,
-        routeParameters.nextHopType, routeParameters.nextHopIpAddress,
-        routeParameters.provisioningState, routeParameters.name,
-        routeParameters.etag, routeParameters.id, options,
-        options.customHeaders, callback);
+        routeName, routeParameters, options, callback);
     fullName: >-
       Routes.beginCreateOrUpdate(resourceGroupName, routeTableName, routeName,
-      routeParameters, routeParameters.addressPrefix,
-      routeParameters.nextHopType, routeParameters.nextHopIpAddress,
-      routeParameters.provisioningState, routeParameters.name,
-      routeParameters.etag, routeParameters.id, options, options.customHeaders,
-      callback)
+      routeParameters, options, callback)
     children:
       - 'Routes#beginCreateOrUpdate~client'
       - 'Routes#beginCreateOrUpdate~callback'
@@ -341,9 +315,7 @@ items:
   - uid: 'Routes#list'
     id: list
     parent: Routes
-    name: >-
-      list(resourceGroupName, routeTableName, options, options.customHeaders,
-      callback)
+    name: 'list(resourceGroupName, routeTableName, options, callback)'
     summary: "The List network security rule opertion retrieves all the routes in a route\rtable."
     type: Method
     syntax:
@@ -365,12 +337,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RouteListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, routeTableName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Routes.list(resourceGroupName, routeTableName, options,
-      options.customHeaders, callback)
+      content: 'function list(resourceGroupName, routeTableName, options, callback);'
+    fullName: 'Routes.list(resourceGroupName, routeTableName, options, callback)'
     children:
       - 'Routes#list~client'
       - 'Routes#list~callback'
@@ -388,7 +356,7 @@ items:
   - uid: 'Routes#listNext'
     id: listNext
     parent: Routes
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "The List network security rule opertion retrieves all the routes in a route\rtable."
     type: Method
     syntax:
@@ -407,10 +375,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RouteListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: 'Routes.listNext(nextPageLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Routes.listNext(nextPageLink, options, callback)'
     children:
       - 'Routes#listNext~client'
       - 'Routes#listNext~callback'

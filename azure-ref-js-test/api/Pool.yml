@@ -37,17 +37,7 @@ items:
   - uid: 'Pool#listPoolUsageMetrics'
     id: listPoolUsageMetrics
     parent: Pool
-    name: >-
-      listPoolUsageMetrics(options, options.poolListPoolUsageMetricsOptions,
-      options.poolListPoolUsageMetricsOptions.startTime,
-      options.poolListPoolUsageMetricsOptions.endTime,
-      options.poolListPoolUsageMetricsOptions.filter,
-      options.poolListPoolUsageMetricsOptions.maxResults,
-      options.poolListPoolUsageMetricsOptions.timeout,
-      options.poolListPoolUsageMetricsOptions.clientRequestId,
-      options.poolListPoolUsageMetricsOptions.returnClientRequestId,
-      options.poolListPoolUsageMetricsOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'listPoolUsageMetrics(options, callback)'
     summary: "Lists the usage metrics, aggregated by pool across individual time\rintervals, for the specified account."
     type: Method
     syntax:
@@ -90,30 +80,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PoolListPoolUsageMetricsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listPoolUsageMetrics(options,
-        options.poolListPoolUsageMetricsOptions,
-        options.poolListPoolUsageMetricsOptions.startTime,
-        options.poolListPoolUsageMetricsOptions.endTime,
-        options.poolListPoolUsageMetricsOptions.filter,
-        options.poolListPoolUsageMetricsOptions.maxResults,
-        options.poolListPoolUsageMetricsOptions.timeout,
-        options.poolListPoolUsageMetricsOptions.clientRequestId,
-        options.poolListPoolUsageMetricsOptions.returnClientRequestId,
-        options.poolListPoolUsageMetricsOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.listPoolUsageMetrics(options,
-      options.poolListPoolUsageMetricsOptions,
-      options.poolListPoolUsageMetricsOptions.startTime,
-      options.poolListPoolUsageMetricsOptions.endTime,
-      options.poolListPoolUsageMetricsOptions.filter,
-      options.poolListPoolUsageMetricsOptions.maxResults,
-      options.poolListPoolUsageMetricsOptions.timeout,
-      options.poolListPoolUsageMetricsOptions.clientRequestId,
-      options.poolListPoolUsageMetricsOptions.returnClientRequestId,
-      options.poolListPoolUsageMetricsOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function listPoolUsageMetrics(options, callback);'
+    fullName: 'Pool.listPoolUsageMetrics(options, callback)'
     children:
       - 'Pool#listPoolUsageMetrics~client'
       - 'Pool#listPoolUsageMetrics~callback'
@@ -145,14 +113,7 @@ items:
   - uid: 'Pool#getAllPoolsLifetimeStatistics'
     id: getAllPoolsLifetimeStatistics
     parent: Pool
-    name: >-
-      getAllPoolsLifetimeStatistics(options,
-      options.poolGetAllPoolsLifetimeStatisticsOptions,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.timeout,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.clientRequestId,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.returnClientRequestId,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.ocpDate,
-      options.customHeaders, callback)
+    name: 'getAllPoolsLifetimeStatistics(options, callback)'
     summary: "Gets lifetime summary statistics for all of the pools in the specified\raccount. Statistics are aggregated across all pools that have ever existed\rin the account, from account creation to the last update time of the\rstatistics."
     type: Method
     syntax:
@@ -184,22 +145,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PoolStatistics} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getAllPoolsLifetimeStatistics(options,
-        options.poolGetAllPoolsLifetimeStatisticsOptions,
-        options.poolGetAllPoolsLifetimeStatisticsOptions.timeout,
-        options.poolGetAllPoolsLifetimeStatisticsOptions.clientRequestId,
-        options.poolGetAllPoolsLifetimeStatisticsOptions.returnClientRequestId,
-        options.poolGetAllPoolsLifetimeStatisticsOptions.ocpDate,
-        options.customHeaders, callback);
-    fullName: >-
-      Pool.getAllPoolsLifetimeStatistics(options,
-      options.poolGetAllPoolsLifetimeStatisticsOptions,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.timeout,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.clientRequestId,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.returnClientRequestId,
-      options.poolGetAllPoolsLifetimeStatisticsOptions.ocpDate,
-      options.customHeaders, callback)
+      content: 'function getAllPoolsLifetimeStatistics(options, callback);'
+    fullName: 'Pool.getAllPoolsLifetimeStatistics(options, callback)'
     children:
       - 'Pool#getAllPoolsLifetimeStatistics~client'
       - 'Pool#getAllPoolsLifetimeStatistics~callback'
@@ -224,33 +171,7 @@ items:
   - uid: 'Pool#add'
     id: add
     parent: Pool
-    name: >-
-      add(pool, pool.id, pool.displayName, pool.vmSize,
-      pool.cloudServiceConfiguration, pool.cloudServiceConfiguration.osFamily,
-      pool.cloudServiceConfiguration.targetOSVersion,
-      pool.cloudServiceConfiguration.currentOSVersion,
-      pool.virtualMachineConfiguration,
-      pool.virtualMachineConfiguration.imageReference,
-      pool.virtualMachineConfiguration.imageReference.publisher,
-      pool.virtualMachineConfiguration.imageReference.offer,
-      pool.virtualMachineConfiguration.imageReference.sku,
-      pool.virtualMachineConfiguration.imageReference.version,
-      pool.virtualMachineConfiguration.nodeAgentSKUId,
-      pool.virtualMachineConfiguration.windowsConfiguration,
-      pool.virtualMachineConfiguration.windowsConfiguration.enableAutomaticUpdates,
-      pool.resizeTimeout, pool.targetDedicated, pool.enableAutoScale,
-      pool.autoScaleFormula, pool.autoScaleEvaluationInterval,
-      pool.enableInterNodeCommunication, pool.startTask,
-      pool.startTask.commandLine, pool.startTask.resourceFiles,
-      pool.startTask.environmentSettings, pool.startTask.runElevated,
-      pool.startTask.maxTaskRetryCount, pool.startTask.waitForSuccess,
-      pool.certificateReferences, pool.applicationPackageReferences,
-      pool.maxTasksPerNode, pool.taskSchedulingPolicy,
-      pool.taskSchedulingPolicy.nodeFillType, pool.metadata, options,
-      options.poolAddOptions, options.poolAddOptions.timeout,
-      options.poolAddOptions.clientRequestId,
-      options.poolAddOptions.returnClientRequestId,
-      options.poolAddOptions.ocpDate, options.customHeaders, callback)
+    name: 'add(pool, options, callback)'
     summary: Adds a pool to the specified account.
     type: Method
     syntax:
@@ -390,60 +311,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function add(pool, pool.id, pool.displayName, pool.vmSize,
-        pool.cloudServiceConfiguration, pool.cloudServiceConfiguration.osFamily,
-        pool.cloudServiceConfiguration.targetOSVersion,
-        pool.cloudServiceConfiguration.currentOSVersion,
-        pool.virtualMachineConfiguration,
-        pool.virtualMachineConfiguration.imageReference,
-        pool.virtualMachineConfiguration.imageReference.publisher,
-        pool.virtualMachineConfiguration.imageReference.offer,
-        pool.virtualMachineConfiguration.imageReference.sku,
-        pool.virtualMachineConfiguration.imageReference.version,
-        pool.virtualMachineConfiguration.nodeAgentSKUId,
-        pool.virtualMachineConfiguration.windowsConfiguration,
-        pool.virtualMachineConfiguration.windowsConfiguration.enableAutomaticUpdates,
-        pool.resizeTimeout, pool.targetDedicated, pool.enableAutoScale,
-        pool.autoScaleFormula, pool.autoScaleEvaluationInterval,
-        pool.enableInterNodeCommunication, pool.startTask,
-        pool.startTask.commandLine, pool.startTask.resourceFiles,
-        pool.startTask.environmentSettings, pool.startTask.runElevated,
-        pool.startTask.maxTaskRetryCount, pool.startTask.waitForSuccess,
-        pool.certificateReferences, pool.applicationPackageReferences,
-        pool.maxTasksPerNode, pool.taskSchedulingPolicy,
-        pool.taskSchedulingPolicy.nodeFillType, pool.metadata, options,
-        options.poolAddOptions, options.poolAddOptions.timeout,
-        options.poolAddOptions.clientRequestId,
-        options.poolAddOptions.returnClientRequestId,
-        options.poolAddOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      Pool.add(pool, pool.id, pool.displayName, pool.vmSize,
-      pool.cloudServiceConfiguration, pool.cloudServiceConfiguration.osFamily,
-      pool.cloudServiceConfiguration.targetOSVersion,
-      pool.cloudServiceConfiguration.currentOSVersion,
-      pool.virtualMachineConfiguration,
-      pool.virtualMachineConfiguration.imageReference,
-      pool.virtualMachineConfiguration.imageReference.publisher,
-      pool.virtualMachineConfiguration.imageReference.offer,
-      pool.virtualMachineConfiguration.imageReference.sku,
-      pool.virtualMachineConfiguration.imageReference.version,
-      pool.virtualMachineConfiguration.nodeAgentSKUId,
-      pool.virtualMachineConfiguration.windowsConfiguration,
-      pool.virtualMachineConfiguration.windowsConfiguration.enableAutomaticUpdates,
-      pool.resizeTimeout, pool.targetDedicated, pool.enableAutoScale,
-      pool.autoScaleFormula, pool.autoScaleEvaluationInterval,
-      pool.enableInterNodeCommunication, pool.startTask,
-      pool.startTask.commandLine, pool.startTask.resourceFiles,
-      pool.startTask.environmentSettings, pool.startTask.runElevated,
-      pool.startTask.maxTaskRetryCount, pool.startTask.waitForSuccess,
-      pool.certificateReferences, pool.applicationPackageReferences,
-      pool.maxTasksPerNode, pool.taskSchedulingPolicy,
-      pool.taskSchedulingPolicy.nodeFillType, pool.metadata, options,
-      options.poolAddOptions, options.poolAddOptions.timeout,
-      options.poolAddOptions.clientRequestId,
-      options.poolAddOptions.returnClientRequestId,
-      options.poolAddOptions.ocpDate, options.customHeaders, callback)
+      content: 'function add(pool, options, callback);'
+    fullName: 'Pool.add(pool, options, callback)'
     children:
       - 'Pool#add~client'
       - 'Pool#add~callback'
@@ -473,13 +342,7 @@ items:
   - uid: 'Pool#list'
     id: list
     parent: Pool
-    name: >-
-      list(options, options.poolListOptions, options.poolListOptions.filter,
-      options.poolListOptions.select, options.poolListOptions.expand,
-      options.poolListOptions.maxResults, options.poolListOptions.timeout,
-      options.poolListOptions.clientRequestId,
-      options.poolListOptions.returnClientRequestId,
-      options.poolListOptions.ocpDate, options.customHeaders, callback)
+    name: 'list(options, callback)'
     summary: Lists all of the pools in the specified account.
     type: Method
     syntax:
@@ -522,21 +385,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudPoolListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(options, options.poolListOptions,
-        options.poolListOptions.filter, options.poolListOptions.select,
-        options.poolListOptions.expand, options.poolListOptions.maxResults,
-        options.poolListOptions.timeout,
-        options.poolListOptions.clientRequestId,
-        options.poolListOptions.returnClientRequestId,
-        options.poolListOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      Pool.list(options, options.poolListOptions,
-      options.poolListOptions.filter, options.poolListOptions.select,
-      options.poolListOptions.expand, options.poolListOptions.maxResults,
-      options.poolListOptions.timeout, options.poolListOptions.clientRequestId,
-      options.poolListOptions.returnClientRequestId,
-      options.poolListOptions.ocpDate, options.customHeaders, callback)
+      content: 'function list(options, callback);'
+    fullName: 'Pool.list(options, callback)'
     children:
       - 'Pool#list~client'
       - 'Pool#list~callback'
@@ -568,17 +418,7 @@ items:
   - uid: 'Pool#deleteMethod'
     id: deleteMethod
     parent: Pool
-    name: >-
-      deleteMethod(poolId, options, options.poolDeleteMethodOptions,
-      options.poolDeleteMethodOptions.timeout,
-      options.poolDeleteMethodOptions.clientRequestId,
-      options.poolDeleteMethodOptions.returnClientRequestId,
-      options.poolDeleteMethodOptions.ocpDate,
-      options.poolDeleteMethodOptions.ifMatch,
-      options.poolDeleteMethodOptions.ifNoneMatch,
-      options.poolDeleteMethodOptions.ifModifiedSince,
-      options.poolDeleteMethodOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'deleteMethod(poolId, options, callback)'
     summary: Deletes a pool from the specified account.
     type: Method
     syntax:
@@ -624,28 +464,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(poolId, options, options.poolDeleteMethodOptions,
-        options.poolDeleteMethodOptions.timeout,
-        options.poolDeleteMethodOptions.clientRequestId,
-        options.poolDeleteMethodOptions.returnClientRequestId,
-        options.poolDeleteMethodOptions.ocpDate,
-        options.poolDeleteMethodOptions.ifMatch,
-        options.poolDeleteMethodOptions.ifNoneMatch,
-        options.poolDeleteMethodOptions.ifModifiedSince,
-        options.poolDeleteMethodOptions.ifUnmodifiedSince,
-        options.customHeaders, callback);
-    fullName: >-
-      Pool.deleteMethod(poolId, options, options.poolDeleteMethodOptions,
-      options.poolDeleteMethodOptions.timeout,
-      options.poolDeleteMethodOptions.clientRequestId,
-      options.poolDeleteMethodOptions.returnClientRequestId,
-      options.poolDeleteMethodOptions.ocpDate,
-      options.poolDeleteMethodOptions.ifMatch,
-      options.poolDeleteMethodOptions.ifNoneMatch,
-      options.poolDeleteMethodOptions.ifModifiedSince,
-      options.poolDeleteMethodOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function deleteMethod(poolId, options, callback);'
+    fullName: 'Pool.deleteMethod(poolId, options, callback)'
     children:
       - 'Pool#deleteMethod~client'
       - 'Pool#deleteMethod~callback'
@@ -678,16 +498,7 @@ items:
   - uid: 'Pool#exists'
     id: exists
     parent: Pool
-    name: >-
-      exists(poolId, options, options.poolExistsOptions,
-      options.poolExistsOptions.timeout,
-      options.poolExistsOptions.clientRequestId,
-      options.poolExistsOptions.returnClientRequestId,
-      options.poolExistsOptions.ocpDate, options.poolExistsOptions.ifMatch,
-      options.poolExistsOptions.ifNoneMatch,
-      options.poolExistsOptions.ifModifiedSince,
-      options.poolExistsOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'exists(poolId, options, callback)'
     summary: Gets basic properties of a pool.
     type: Method
     syntax:
@@ -733,26 +544,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {boolean} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function exists(poolId, options, options.poolExistsOptions,
-        options.poolExistsOptions.timeout,
-        options.poolExistsOptions.clientRequestId,
-        options.poolExistsOptions.returnClientRequestId,
-        options.poolExistsOptions.ocpDate, options.poolExistsOptions.ifMatch,
-        options.poolExistsOptions.ifNoneMatch,
-        options.poolExistsOptions.ifModifiedSince,
-        options.poolExistsOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.exists(poolId, options, options.poolExistsOptions,
-      options.poolExistsOptions.timeout,
-      options.poolExistsOptions.clientRequestId,
-      options.poolExistsOptions.returnClientRequestId,
-      options.poolExistsOptions.ocpDate, options.poolExistsOptions.ifMatch,
-      options.poolExistsOptions.ifNoneMatch,
-      options.poolExistsOptions.ifModifiedSince,
-      options.poolExistsOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function exists(poolId, options, callback);'
+    fullName: 'Pool.exists(poolId, options, callback)'
     children:
       - 'Pool#exists~client'
       - 'Pool#exists~callback'
@@ -785,15 +578,7 @@ items:
   - uid: 'Pool#get'
     id: get
     parent: Pool
-    name: >-
-      get(poolId, options, options.poolGetOptions,
-      options.poolGetOptions.select, options.poolGetOptions.expand,
-      options.poolGetOptions.timeout, options.poolGetOptions.clientRequestId,
-      options.poolGetOptions.returnClientRequestId,
-      options.poolGetOptions.ocpDate, options.poolGetOptions.ifMatch,
-      options.poolGetOptions.ifNoneMatch,
-      options.poolGetOptions.ifModifiedSince,
-      options.poolGetOptions.ifUnmodifiedSince, options.customHeaders, callback)
+    name: 'get(poolId, options, callback)'
     summary: Gets information about the specified pool.
     type: Method
     syntax:
@@ -845,25 +630,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudPool} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(poolId, options, options.poolGetOptions,
-        options.poolGetOptions.select, options.poolGetOptions.expand,
-        options.poolGetOptions.timeout, options.poolGetOptions.clientRequestId,
-        options.poolGetOptions.returnClientRequestId,
-        options.poolGetOptions.ocpDate, options.poolGetOptions.ifMatch,
-        options.poolGetOptions.ifNoneMatch,
-        options.poolGetOptions.ifModifiedSince,
-        options.poolGetOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.get(poolId, options, options.poolGetOptions,
-      options.poolGetOptions.select, options.poolGetOptions.expand,
-      options.poolGetOptions.timeout, options.poolGetOptions.clientRequestId,
-      options.poolGetOptions.returnClientRequestId,
-      options.poolGetOptions.ocpDate, options.poolGetOptions.ifMatch,
-      options.poolGetOptions.ifNoneMatch,
-      options.poolGetOptions.ifModifiedSince,
-      options.poolGetOptions.ifUnmodifiedSince, options.customHeaders, callback)
+      content: 'function get(poolId, options, callback);'
+    fullName: 'Pool.get(poolId, options, callback)'
     children:
       - 'Pool#get~client'
       - 'Pool#get~callback'
@@ -900,25 +668,7 @@ items:
   - uid: 'Pool#patch'
     id: patch
     parent: Pool
-    name: >-
-      patch(poolId, poolPatchParameter, poolPatchParameter.startTask,
-      poolPatchParameter.startTask.commandLine,
-      poolPatchParameter.startTask.resourceFiles,
-      poolPatchParameter.startTask.environmentSettings,
-      poolPatchParameter.startTask.runElevated,
-      poolPatchParameter.startTask.maxTaskRetryCount,
-      poolPatchParameter.startTask.waitForSuccess,
-      poolPatchParameter.certificateReferences,
-      poolPatchParameter.applicationPackageReferences,
-      poolPatchParameter.metadata, options, options.poolPatchOptions,
-      options.poolPatchOptions.timeout,
-      options.poolPatchOptions.clientRequestId,
-      options.poolPatchOptions.returnClientRequestId,
-      options.poolPatchOptions.ocpDate, options.poolPatchOptions.ifMatch,
-      options.poolPatchOptions.ifNoneMatch,
-      options.poolPatchOptions.ifModifiedSince,
-      options.poolPatchOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'patch(poolId, poolPatchParameter, options, callback)'
     summary: Updates the properties of a pool.
     type: Method
     syntax:
@@ -997,44 +747,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function patch(poolId, poolPatchParameter, poolPatchParameter.startTask,
-        poolPatchParameter.startTask.commandLine,
-        poolPatchParameter.startTask.resourceFiles,
-        poolPatchParameter.startTask.environmentSettings,
-        poolPatchParameter.startTask.runElevated,
-        poolPatchParameter.startTask.maxTaskRetryCount,
-        poolPatchParameter.startTask.waitForSuccess,
-        poolPatchParameter.certificateReferences,
-        poolPatchParameter.applicationPackageReferences,
-        poolPatchParameter.metadata, options, options.poolPatchOptions,
-        options.poolPatchOptions.timeout,
-        options.poolPatchOptions.clientRequestId,
-        options.poolPatchOptions.returnClientRequestId,
-        options.poolPatchOptions.ocpDate, options.poolPatchOptions.ifMatch,
-        options.poolPatchOptions.ifNoneMatch,
-        options.poolPatchOptions.ifModifiedSince,
-        options.poolPatchOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.patch(poolId, poolPatchParameter, poolPatchParameter.startTask,
-      poolPatchParameter.startTask.commandLine,
-      poolPatchParameter.startTask.resourceFiles,
-      poolPatchParameter.startTask.environmentSettings,
-      poolPatchParameter.startTask.runElevated,
-      poolPatchParameter.startTask.maxTaskRetryCount,
-      poolPatchParameter.startTask.waitForSuccess,
-      poolPatchParameter.certificateReferences,
-      poolPatchParameter.applicationPackageReferences,
-      poolPatchParameter.metadata, options, options.poolPatchOptions,
-      options.poolPatchOptions.timeout,
-      options.poolPatchOptions.clientRequestId,
-      options.poolPatchOptions.returnClientRequestId,
-      options.poolPatchOptions.ocpDate, options.poolPatchOptions.ifMatch,
-      options.poolPatchOptions.ifNoneMatch,
-      options.poolPatchOptions.ifModifiedSince,
-      options.poolPatchOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function patch(poolId, poolPatchParameter, options, callback);'
+    fullName: 'Pool.patch(poolId, poolPatchParameter, options, callback)'
     children:
       - 'Pool#patch~client'
       - 'Pool#patch~callback'
@@ -1073,13 +787,7 @@ items:
   - uid: 'Pool#disableAutoScale'
     id: disableAutoScale
     parent: Pool
-    name: >-
-      disableAutoScale(poolId, options, options.poolDisableAutoScaleOptions,
-      options.poolDisableAutoScaleOptions.timeout,
-      options.poolDisableAutoScaleOptions.clientRequestId,
-      options.poolDisableAutoScaleOptions.returnClientRequestId,
-      options.poolDisableAutoScaleOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'disableAutoScale(poolId, options, callback)'
     summary: Disables automatic scaling for a pool.
     type: Method
     syntax:
@@ -1113,22 +821,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function disableAutoScale(poolId, options,
-        options.poolDisableAutoScaleOptions,
-        options.poolDisableAutoScaleOptions.timeout,
-        options.poolDisableAutoScaleOptions.clientRequestId,
-        options.poolDisableAutoScaleOptions.returnClientRequestId,
-        options.poolDisableAutoScaleOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.disableAutoScale(poolId, options,
-      options.poolDisableAutoScaleOptions,
-      options.poolDisableAutoScaleOptions.timeout,
-      options.poolDisableAutoScaleOptions.clientRequestId,
-      options.poolDisableAutoScaleOptions.returnClientRequestId,
-      options.poolDisableAutoScaleOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function disableAutoScale(poolId, options, callback);'
+    fullName: 'Pool.disableAutoScale(poolId, options, callback)'
     children:
       - 'Pool#disableAutoScale~client'
       - 'Pool#disableAutoScale~callback'
@@ -1153,20 +847,7 @@ items:
   - uid: 'Pool#enableAutoScale'
     id: enableAutoScale
     parent: Pool
-    name: >-
-      enableAutoScale(poolId, poolEnableAutoScaleParameter,
-      poolEnableAutoScaleParameter.autoScaleFormula,
-      poolEnableAutoScaleParameter.autoScaleEvaluationInterval, options,
-      options.poolEnableAutoScaleOptions,
-      options.poolEnableAutoScaleOptions.timeout,
-      options.poolEnableAutoScaleOptions.clientRequestId,
-      options.poolEnableAutoScaleOptions.returnClientRequestId,
-      options.poolEnableAutoScaleOptions.ocpDate,
-      options.poolEnableAutoScaleOptions.ifMatch,
-      options.poolEnableAutoScaleOptions.ifNoneMatch,
-      options.poolEnableAutoScaleOptions.ifModifiedSince,
-      options.poolEnableAutoScaleOptions.ifUnmodifiedSince,
-      options.customHeaders, callback)
+    name: 'enableAutoScale(poolId, poolEnableAutoScaleParameter, options, callback)'
     summary: Enables automatic scaling for a pool.
     type: Method
     syntax:
@@ -1222,33 +903,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function enableAutoScale(poolId, poolEnableAutoScaleParameter,
-        poolEnableAutoScaleParameter.autoScaleFormula,
-        poolEnableAutoScaleParameter.autoScaleEvaluationInterval, options,
-        options.poolEnableAutoScaleOptions,
-        options.poolEnableAutoScaleOptions.timeout,
-        options.poolEnableAutoScaleOptions.clientRequestId,
-        options.poolEnableAutoScaleOptions.returnClientRequestId,
-        options.poolEnableAutoScaleOptions.ocpDate,
-        options.poolEnableAutoScaleOptions.ifMatch,
-        options.poolEnableAutoScaleOptions.ifNoneMatch,
-        options.poolEnableAutoScaleOptions.ifModifiedSince,
-        options.poolEnableAutoScaleOptions.ifUnmodifiedSince,
-        options.customHeaders, callback);
+        function enableAutoScale(poolId, poolEnableAutoScaleParameter, options,
+        callback);
     fullName: >-
-      Pool.enableAutoScale(poolId, poolEnableAutoScaleParameter,
-      poolEnableAutoScaleParameter.autoScaleFormula,
-      poolEnableAutoScaleParameter.autoScaleEvaluationInterval, options,
-      options.poolEnableAutoScaleOptions,
-      options.poolEnableAutoScaleOptions.timeout,
-      options.poolEnableAutoScaleOptions.clientRequestId,
-      options.poolEnableAutoScaleOptions.returnClientRequestId,
-      options.poolEnableAutoScaleOptions.ocpDate,
-      options.poolEnableAutoScaleOptions.ifMatch,
-      options.poolEnableAutoScaleOptions.ifNoneMatch,
-      options.poolEnableAutoScaleOptions.ifModifiedSince,
-      options.poolEnableAutoScaleOptions.ifUnmodifiedSince,
-      options.customHeaders, callback)
+      Pool.enableAutoScale(poolId, poolEnableAutoScaleParameter, options,
+      callback)
     children:
       - 'Pool#enableAutoScale~client'
       - 'Pool#enableAutoScale~callback'
@@ -1287,14 +946,7 @@ items:
   - uid: 'Pool#evaluateAutoScale'
     id: evaluateAutoScale
     parent: Pool
-    name: >-
-      evaluateAutoScale(poolId, autoScaleFormula, options,
-      options.poolEvaluateAutoScaleOptions,
-      options.poolEvaluateAutoScaleOptions.timeout,
-      options.poolEvaluateAutoScaleOptions.clientRequestId,
-      options.poolEvaluateAutoScaleOptions.returnClientRequestId,
-      options.poolEvaluateAutoScaleOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'evaluateAutoScale(poolId, autoScaleFormula, options, callback)'
     summary: Gets the result of evaluating an automatic scaling formula on the pool.
     type: Method
     syntax:
@@ -1331,22 +983,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AutoScaleRun} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function evaluateAutoScale(poolId, autoScaleFormula, options,
-        options.poolEvaluateAutoScaleOptions,
-        options.poolEvaluateAutoScaleOptions.timeout,
-        options.poolEvaluateAutoScaleOptions.clientRequestId,
-        options.poolEvaluateAutoScaleOptions.returnClientRequestId,
-        options.poolEvaluateAutoScaleOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.evaluateAutoScale(poolId, autoScaleFormula, options,
-      options.poolEvaluateAutoScaleOptions,
-      options.poolEvaluateAutoScaleOptions.timeout,
-      options.poolEvaluateAutoScaleOptions.clientRequestId,
-      options.poolEvaluateAutoScaleOptions.returnClientRequestId,
-      options.poolEvaluateAutoScaleOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function evaluateAutoScale(poolId, autoScaleFormula, options, callback);'
+    fullName: 'Pool.evaluateAutoScale(poolId, autoScaleFormula, options, callback)'
     children:
       - 'Pool#evaluateAutoScale~client'
       - 'Pool#evaluateAutoScale~callback'
@@ -1378,18 +1016,7 @@ items:
   - uid: 'Pool#resize'
     id: resize
     parent: Pool
-    name: >-
-      resize(poolId, poolResizeParameter, poolResizeParameter.targetDedicated,
-      poolResizeParameter.resizeTimeout,
-      poolResizeParameter.nodeDeallocationOption, options,
-      options.poolResizeOptions, options.poolResizeOptions.timeout,
-      options.poolResizeOptions.clientRequestId,
-      options.poolResizeOptions.returnClientRequestId,
-      options.poolResizeOptions.ocpDate, options.poolResizeOptions.ifMatch,
-      options.poolResizeOptions.ifNoneMatch,
-      options.poolResizeOptions.ifModifiedSince,
-      options.poolResizeOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'resize(poolId, poolResizeParameter, options, callback)'
     summary: Changes the number of compute nodes that are assigned to a pool.
     type: Method
     syntax:
@@ -1447,30 +1074,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function resize(poolId, poolResizeParameter,
-        poolResizeParameter.targetDedicated, poolResizeParameter.resizeTimeout,
-        poolResizeParameter.nodeDeallocationOption, options,
-        options.poolResizeOptions, options.poolResizeOptions.timeout,
-        options.poolResizeOptions.clientRequestId,
-        options.poolResizeOptions.returnClientRequestId,
-        options.poolResizeOptions.ocpDate, options.poolResizeOptions.ifMatch,
-        options.poolResizeOptions.ifNoneMatch,
-        options.poolResizeOptions.ifModifiedSince,
-        options.poolResizeOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.resize(poolId, poolResizeParameter,
-      poolResizeParameter.targetDedicated, poolResizeParameter.resizeTimeout,
-      poolResizeParameter.nodeDeallocationOption, options,
-      options.poolResizeOptions, options.poolResizeOptions.timeout,
-      options.poolResizeOptions.clientRequestId,
-      options.poolResizeOptions.returnClientRequestId,
-      options.poolResizeOptions.ocpDate, options.poolResizeOptions.ifMatch,
-      options.poolResizeOptions.ifNoneMatch,
-      options.poolResizeOptions.ifModifiedSince,
-      options.poolResizeOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function resize(poolId, poolResizeParameter, options, callback);'
+    fullName: 'Pool.resize(poolId, poolResizeParameter, options, callback)'
     children:
       - 'Pool#resize~client'
       - 'Pool#resize~callback'
@@ -1509,17 +1114,7 @@ items:
   - uid: 'Pool#stopResize'
     id: stopResize
     parent: Pool
-    name: >-
-      stopResize(poolId, options, options.poolStopResizeOptions,
-      options.poolStopResizeOptions.timeout,
-      options.poolStopResizeOptions.clientRequestId,
-      options.poolStopResizeOptions.returnClientRequestId,
-      options.poolStopResizeOptions.ocpDate,
-      options.poolStopResizeOptions.ifMatch,
-      options.poolStopResizeOptions.ifNoneMatch,
-      options.poolStopResizeOptions.ifModifiedSince,
-      options.poolStopResizeOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'stopResize(poolId, options, callback)'
     summary: "Stops an ongoing resize operation on the pool. This does not restore the\rpool to its previous state before the resize operation: it only stops any\rfurther changes being made, and the pool maintains its current state."
     type: Method
     syntax:
@@ -1565,28 +1160,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function stopResize(poolId, options, options.poolStopResizeOptions,
-        options.poolStopResizeOptions.timeout,
-        options.poolStopResizeOptions.clientRequestId,
-        options.poolStopResizeOptions.returnClientRequestId,
-        options.poolStopResizeOptions.ocpDate,
-        options.poolStopResizeOptions.ifMatch,
-        options.poolStopResizeOptions.ifNoneMatch,
-        options.poolStopResizeOptions.ifModifiedSince,
-        options.poolStopResizeOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.stopResize(poolId, options, options.poolStopResizeOptions,
-      options.poolStopResizeOptions.timeout,
-      options.poolStopResizeOptions.clientRequestId,
-      options.poolStopResizeOptions.returnClientRequestId,
-      options.poolStopResizeOptions.ocpDate,
-      options.poolStopResizeOptions.ifMatch,
-      options.poolStopResizeOptions.ifNoneMatch,
-      options.poolStopResizeOptions.ifModifiedSince,
-      options.poolStopResizeOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function stopResize(poolId, options, callback);'
+    fullName: 'Pool.stopResize(poolId, options, callback)'
     children:
       - 'Pool#stopResize~client'
       - 'Pool#stopResize~callback'
@@ -1619,24 +1194,7 @@ items:
   - uid: 'Pool#updateProperties'
     id: updateProperties
     parent: Pool
-    name: >-
-      updateProperties(poolId, poolUpdatePropertiesParameter,
-      poolUpdatePropertiesParameter.startTask,
-      poolUpdatePropertiesParameter.startTask.commandLine,
-      poolUpdatePropertiesParameter.startTask.resourceFiles,
-      poolUpdatePropertiesParameter.startTask.environmentSettings,
-      poolUpdatePropertiesParameter.startTask.runElevated,
-      poolUpdatePropertiesParameter.startTask.maxTaskRetryCount,
-      poolUpdatePropertiesParameter.startTask.waitForSuccess,
-      poolUpdatePropertiesParameter.certificateReferences,
-      poolUpdatePropertiesParameter.applicationPackageReferences,
-      poolUpdatePropertiesParameter.metadata, options,
-      options.poolUpdatePropertiesOptions,
-      options.poolUpdatePropertiesOptions.timeout,
-      options.poolUpdatePropertiesOptions.clientRequestId,
-      options.poolUpdatePropertiesOptions.returnClientRequestId,
-      options.poolUpdatePropertiesOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'updateProperties(poolId, poolUpdatePropertiesParameter, options, callback)'
     summary: Updates the properties of a pool.
     type: Method
     syntax:
@@ -1707,39 +1265,9 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function updateProperties(poolId, poolUpdatePropertiesParameter,
-        poolUpdatePropertiesParameter.startTask,
-        poolUpdatePropertiesParameter.startTask.commandLine,
-        poolUpdatePropertiesParameter.startTask.resourceFiles,
-        poolUpdatePropertiesParameter.startTask.environmentSettings,
-        poolUpdatePropertiesParameter.startTask.runElevated,
-        poolUpdatePropertiesParameter.startTask.maxTaskRetryCount,
-        poolUpdatePropertiesParameter.startTask.waitForSuccess,
-        poolUpdatePropertiesParameter.certificateReferences,
-        poolUpdatePropertiesParameter.applicationPackageReferences,
-        poolUpdatePropertiesParameter.metadata, options,
-        options.poolUpdatePropertiesOptions,
-        options.poolUpdatePropertiesOptions.timeout,
-        options.poolUpdatePropertiesOptions.clientRequestId,
-        options.poolUpdatePropertiesOptions.returnClientRequestId,
-        options.poolUpdatePropertiesOptions.ocpDate, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
-      Pool.updateProperties(poolId, poolUpdatePropertiesParameter,
-      poolUpdatePropertiesParameter.startTask,
-      poolUpdatePropertiesParameter.startTask.commandLine,
-      poolUpdatePropertiesParameter.startTask.resourceFiles,
-      poolUpdatePropertiesParameter.startTask.environmentSettings,
-      poolUpdatePropertiesParameter.startTask.runElevated,
-      poolUpdatePropertiesParameter.startTask.maxTaskRetryCount,
-      poolUpdatePropertiesParameter.startTask.waitForSuccess,
-      poolUpdatePropertiesParameter.certificateReferences,
-      poolUpdatePropertiesParameter.applicationPackageReferences,
-      poolUpdatePropertiesParameter.metadata, options,
-      options.poolUpdatePropertiesOptions,
-      options.poolUpdatePropertiesOptions.timeout,
-      options.poolUpdatePropertiesOptions.clientRequestId,
-      options.poolUpdatePropertiesOptions.returnClientRequestId,
-      options.poolUpdatePropertiesOptions.ocpDate, options.customHeaders,
+      Pool.updateProperties(poolId, poolUpdatePropertiesParameter, options,
       callback)
     children:
       - 'Pool#updateProperties~client'
@@ -1771,17 +1299,7 @@ items:
   - uid: 'Pool#upgradeOS'
     id: upgradeOS
     parent: Pool
-    name: >-
-      upgradeOS(poolId, targetOSVersion, options, options.poolUpgradeOSOptions,
-      options.poolUpgradeOSOptions.timeout,
-      options.poolUpgradeOSOptions.clientRequestId,
-      options.poolUpgradeOSOptions.returnClientRequestId,
-      options.poolUpgradeOSOptions.ocpDate,
-      options.poolUpgradeOSOptions.ifMatch,
-      options.poolUpgradeOSOptions.ifNoneMatch,
-      options.poolUpgradeOSOptions.ifModifiedSince,
-      options.poolUpgradeOSOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'upgradeOS(poolId, targetOSVersion, options, callback)'
     summary: Upgrades the operating system of the specified pool.
     type: Method
     syntax:
@@ -1830,28 +1348,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function upgradeOS(poolId, targetOSVersion, options,
-        options.poolUpgradeOSOptions, options.poolUpgradeOSOptions.timeout,
-        options.poolUpgradeOSOptions.clientRequestId,
-        options.poolUpgradeOSOptions.returnClientRequestId,
-        options.poolUpgradeOSOptions.ocpDate,
-        options.poolUpgradeOSOptions.ifMatch,
-        options.poolUpgradeOSOptions.ifNoneMatch,
-        options.poolUpgradeOSOptions.ifModifiedSince,
-        options.poolUpgradeOSOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.upgradeOS(poolId, targetOSVersion, options,
-      options.poolUpgradeOSOptions, options.poolUpgradeOSOptions.timeout,
-      options.poolUpgradeOSOptions.clientRequestId,
-      options.poolUpgradeOSOptions.returnClientRequestId,
-      options.poolUpgradeOSOptions.ocpDate,
-      options.poolUpgradeOSOptions.ifMatch,
-      options.poolUpgradeOSOptions.ifNoneMatch,
-      options.poolUpgradeOSOptions.ifModifiedSince,
-      options.poolUpgradeOSOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function upgradeOS(poolId, targetOSVersion, options, callback);'
+    fullName: 'Pool.upgradeOS(poolId, targetOSVersion, options, callback)'
     children:
       - 'Pool#upgradeOS~client'
       - 'Pool#upgradeOS~callback'
@@ -1891,19 +1389,7 @@ items:
   - uid: 'Pool#removeNodes'
     id: removeNodes
     parent: Pool
-    name: >-
-      removeNodes(poolId, nodeRemoveParameter, nodeRemoveParameter.nodeList,
-      nodeRemoveParameter.resizeTimeout,
-      nodeRemoveParameter.nodeDeallocationOption, options,
-      options.poolRemoveNodesOptions, options.poolRemoveNodesOptions.timeout,
-      options.poolRemoveNodesOptions.clientRequestId,
-      options.poolRemoveNodesOptions.returnClientRequestId,
-      options.poolRemoveNodesOptions.ocpDate,
-      options.poolRemoveNodesOptions.ifMatch,
-      options.poolRemoveNodesOptions.ifNoneMatch,
-      options.poolRemoveNodesOptions.ifModifiedSince,
-      options.poolRemoveNodesOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'removeNodes(poolId, nodeRemoveParameter, options, callback)'
     summary: Removes compute nodes from the specified pool.
     type: Method
     syntax:
@@ -1961,32 +1447,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function removeNodes(poolId, nodeRemoveParameter,
-        nodeRemoveParameter.nodeList, nodeRemoveParameter.resizeTimeout,
-        nodeRemoveParameter.nodeDeallocationOption, options,
-        options.poolRemoveNodesOptions, options.poolRemoveNodesOptions.timeout,
-        options.poolRemoveNodesOptions.clientRequestId,
-        options.poolRemoveNodesOptions.returnClientRequestId,
-        options.poolRemoveNodesOptions.ocpDate,
-        options.poolRemoveNodesOptions.ifMatch,
-        options.poolRemoveNodesOptions.ifNoneMatch,
-        options.poolRemoveNodesOptions.ifModifiedSince,
-        options.poolRemoveNodesOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Pool.removeNodes(poolId, nodeRemoveParameter,
-      nodeRemoveParameter.nodeList, nodeRemoveParameter.resizeTimeout,
-      nodeRemoveParameter.nodeDeallocationOption, options,
-      options.poolRemoveNodesOptions, options.poolRemoveNodesOptions.timeout,
-      options.poolRemoveNodesOptions.clientRequestId,
-      options.poolRemoveNodesOptions.returnClientRequestId,
-      options.poolRemoveNodesOptions.ocpDate,
-      options.poolRemoveNodesOptions.ifMatch,
-      options.poolRemoveNodesOptions.ifNoneMatch,
-      options.poolRemoveNodesOptions.ifModifiedSince,
-      options.poolRemoveNodesOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function removeNodes(poolId, nodeRemoveParameter, options, callback);'
+    fullName: 'Pool.removeNodes(poolId, nodeRemoveParameter, options, callback)'
     children:
       - 'Pool#removeNodes~client'
       - 'Pool#removeNodes~callback'
@@ -2025,13 +1487,7 @@ items:
   - uid: 'Pool#listPoolUsageMetricsNext'
     id: listPoolUsageMetricsNext
     parent: Pool
-    name: >-
-      listPoolUsageMetricsNext(nextPageLink, options,
-      options.poolListPoolUsageMetricsNextOptions,
-      options.poolListPoolUsageMetricsNextOptions.clientRequestId,
-      options.poolListPoolUsageMetricsNextOptions.returnClientRequestId,
-      options.poolListPoolUsageMetricsNextOptions.ocpDate,
-      options.customHeaders, callback)
+    name: 'listPoolUsageMetricsNext(nextPageLink, options, callback)'
     summary: "Lists the usage metrics, aggregated by pool across individual time\rintervals, for the specified account."
     type: Method
     syntax:
@@ -2062,20 +1518,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PoolListPoolUsageMetricsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listPoolUsageMetricsNext(nextPageLink, options,
-        options.poolListPoolUsageMetricsNextOptions,
-        options.poolListPoolUsageMetricsNextOptions.clientRequestId,
-        options.poolListPoolUsageMetricsNextOptions.returnClientRequestId,
-        options.poolListPoolUsageMetricsNextOptions.ocpDate,
-        options.customHeaders, callback);
-    fullName: >-
-      Pool.listPoolUsageMetricsNext(nextPageLink, options,
-      options.poolListPoolUsageMetricsNextOptions,
-      options.poolListPoolUsageMetricsNextOptions.clientRequestId,
-      options.poolListPoolUsageMetricsNextOptions.returnClientRequestId,
-      options.poolListPoolUsageMetricsNextOptions.ocpDate,
-      options.customHeaders, callback)
+      content: 'function listPoolUsageMetricsNext(nextPageLink, options, callback);'
+    fullName: 'Pool.listPoolUsageMetricsNext(nextPageLink, options, callback)'
     children:
       - 'Pool#listPoolUsageMetricsNext~client'
       - 'Pool#listPoolUsageMetricsNext~callback'
@@ -2096,11 +1540,7 @@ items:
   - uid: 'Pool#listNext'
     id: listNext
     parent: Pool
-    name: >-
-      listNext(nextPageLink, options, options.poolListNextOptions,
-      options.poolListNextOptions.clientRequestId,
-      options.poolListNextOptions.returnClientRequestId,
-      options.poolListNextOptions.ocpDate, options.customHeaders, callback)
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Lists all of the pools in the specified account.
     type: Method
     syntax:
@@ -2131,16 +1571,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudPoolListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.poolListNextOptions,
-        options.poolListNextOptions.clientRequestId,
-        options.poolListNextOptions.returnClientRequestId,
-        options.poolListNextOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      Pool.listNext(nextPageLink, options, options.poolListNextOptions,
-      options.poolListNextOptions.clientRequestId,
-      options.poolListNextOptions.returnClientRequestId,
-      options.poolListNextOptions.ocpDate, options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Pool.listNext(nextPageLink, options, callback)'
     children:
       - 'Pool#listNext~client'
       - 'Pool#listNext~callback'

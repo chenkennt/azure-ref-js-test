@@ -31,15 +31,7 @@ items:
   - uid: 'ComputeNodeOperations#addUser'
     id: addUser
     parent: ComputeNodeOperations
-    name: >-
-      addUser(poolId, nodeId, user, user.name, user.isAdmin, user.expiryTime,
-      user.password, user.sshPublicKey, options,
-      options.computeNodeAddUserOptions,
-      options.computeNodeAddUserOptions.timeout,
-      options.computeNodeAddUserOptions.clientRequestId,
-      options.computeNodeAddUserOptions.returnClientRequestId,
-      options.computeNodeAddUserOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'addUser(poolId, nodeId, user, options, callback)'
     summary: Adds a user account to the specified compute node.
     type: Method
     syntax:
@@ -94,24 +86,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function addUser(poolId, nodeId, user, user.name, user.isAdmin,
-        user.expiryTime, user.password, user.sshPublicKey, options,
-        options.computeNodeAddUserOptions,
-        options.computeNodeAddUserOptions.timeout,
-        options.computeNodeAddUserOptions.clientRequestId,
-        options.computeNodeAddUserOptions.returnClientRequestId,
-        options.computeNodeAddUserOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      ComputeNodeOperations.addUser(poolId, nodeId, user, user.name,
-      user.isAdmin, user.expiryTime, user.password, user.sshPublicKey, options,
-      options.computeNodeAddUserOptions,
-      options.computeNodeAddUserOptions.timeout,
-      options.computeNodeAddUserOptions.clientRequestId,
-      options.computeNodeAddUserOptions.returnClientRequestId,
-      options.computeNodeAddUserOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function addUser(poolId, nodeId, user, options, callback);'
+    fullName: 'ComputeNodeOperations.addUser(poolId, nodeId, user, options, callback)'
     children:
       - 'ComputeNodeOperations#addUser~client'
       - 'ComputeNodeOperations#addUser~callback'
@@ -143,14 +119,7 @@ items:
   - uid: 'ComputeNodeOperations#deleteUser'
     id: deleteUser
     parent: ComputeNodeOperations
-    name: >-
-      deleteUser(poolId, nodeId, userName, options,
-      options.computeNodeDeleteUserOptions,
-      options.computeNodeDeleteUserOptions.timeout,
-      options.computeNodeDeleteUserOptions.clientRequestId,
-      options.computeNodeDeleteUserOptions.returnClientRequestId,
-      options.computeNodeDeleteUserOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'deleteUser(poolId, nodeId, userName, options, callback)'
     summary: Deletes a user account from the specified compute node.
     type: Method
     syntax:
@@ -190,21 +159,9 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteUser(poolId, nodeId, userName, options,
-        options.computeNodeDeleteUserOptions,
-        options.computeNodeDeleteUserOptions.timeout,
-        options.computeNodeDeleteUserOptions.clientRequestId,
-        options.computeNodeDeleteUserOptions.returnClientRequestId,
-        options.computeNodeDeleteUserOptions.ocpDate, options.customHeaders,
-        callback);
+      content: 'function deleteUser(poolId, nodeId, userName, options, callback);'
     fullName: >-
       ComputeNodeOperations.deleteUser(poolId, nodeId, userName, options,
-      options.computeNodeDeleteUserOptions,
-      options.computeNodeDeleteUserOptions.timeout,
-      options.computeNodeDeleteUserOptions.clientRequestId,
-      options.computeNodeDeleteUserOptions.returnClientRequestId,
-      options.computeNodeDeleteUserOptions.ocpDate, options.customHeaders,
       callback)
     children:
       - 'ComputeNodeOperations#deleteUser~client'
@@ -233,14 +190,7 @@ items:
     id: updateUser
     parent: ComputeNodeOperations
     name: >-
-      updateUser(poolId, nodeId, userName, nodeUpdateUserParameter,
-      nodeUpdateUserParameter.password, nodeUpdateUserParameter.expiryTime,
-      nodeUpdateUserParameter.sshPublicKey, options,
-      options.computeNodeUpdateUserOptions,
-      options.computeNodeUpdateUserOptions.timeout,
-      options.computeNodeUpdateUserOptions.clientRequestId,
-      options.computeNodeUpdateUserOptions.returnClientRequestId,
-      options.computeNodeUpdateUserOptions.ocpDate, options.customHeaders,
+      updateUser(poolId, nodeId, userName, nodeUpdateUserParameter, options,
       callback)
     summary: "Updates the password or expiration time of a user account on the specified\rcompute node."
     type: Method
@@ -295,24 +245,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function updateUser(poolId, nodeId, userName, nodeUpdateUserParameter,
-        nodeUpdateUserParameter.password, nodeUpdateUserParameter.expiryTime,
-        nodeUpdateUserParameter.sshPublicKey, options,
-        options.computeNodeUpdateUserOptions,
-        options.computeNodeUpdateUserOptions.timeout,
-        options.computeNodeUpdateUserOptions.clientRequestId,
-        options.computeNodeUpdateUserOptions.returnClientRequestId,
-        options.computeNodeUpdateUserOptions.ocpDate, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       ComputeNodeOperations.updateUser(poolId, nodeId, userName,
-      nodeUpdateUserParameter, nodeUpdateUserParameter.password,
-      nodeUpdateUserParameter.expiryTime, nodeUpdateUserParameter.sshPublicKey,
-      options, options.computeNodeUpdateUserOptions,
-      options.computeNodeUpdateUserOptions.timeout,
-      options.computeNodeUpdateUserOptions.clientRequestId,
-      options.computeNodeUpdateUserOptions.returnClientRequestId,
-      options.computeNodeUpdateUserOptions.ocpDate, options.customHeaders,
-      callback)
+      nodeUpdateUserParameter, options, callback)
     children:
       - 'ComputeNodeOperations#updateUser~client'
       - 'ComputeNodeOperations#updateUser~callback'
@@ -345,13 +281,7 @@ items:
   - uid: 'ComputeNodeOperations#get'
     id: get
     parent: ComputeNodeOperations
-    name: >-
-      get(poolId, nodeId, options, options.computeNodeGetOptions,
-      options.computeNodeGetOptions.select,
-      options.computeNodeGetOptions.timeout,
-      options.computeNodeGetOptions.clientRequestId,
-      options.computeNodeGetOptions.returnClientRequestId,
-      options.computeNodeGetOptions.ocpDate, options.customHeaders, callback)
+    name: 'get(poolId, nodeId, options, callback)'
     summary: Gets information about the specified compute node.
     type: Method
     syntax:
@@ -391,20 +321,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNode} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(poolId, nodeId, options, options.computeNodeGetOptions,
-        options.computeNodeGetOptions.select,
-        options.computeNodeGetOptions.timeout,
-        options.computeNodeGetOptions.clientRequestId,
-        options.computeNodeGetOptions.returnClientRequestId,
-        options.computeNodeGetOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      ComputeNodeOperations.get(poolId, nodeId, options,
-      options.computeNodeGetOptions, options.computeNodeGetOptions.select,
-      options.computeNodeGetOptions.timeout,
-      options.computeNodeGetOptions.clientRequestId,
-      options.computeNodeGetOptions.returnClientRequestId,
-      options.computeNodeGetOptions.ocpDate, options.customHeaders, callback)
+      content: 'function get(poolId, nodeId, options, callback);'
+    fullName: 'ComputeNodeOperations.get(poolId, nodeId, options, callback)'
     children:
       - 'ComputeNodeOperations#get~client'
       - 'ComputeNodeOperations#get~callback'
@@ -432,13 +350,7 @@ items:
   - uid: 'ComputeNodeOperations#reboot'
     id: reboot
     parent: ComputeNodeOperations
-    name: >-
-      reboot(poolId, nodeId, options, options.nodeRebootOption,
-      options.computeNodeRebootOptions,
-      options.computeNodeRebootOptions.timeout,
-      options.computeNodeRebootOptions.clientRequestId,
-      options.computeNodeRebootOptions.returnClientRequestId,
-      options.computeNodeRebootOptions.ocpDate, options.customHeaders, callback)
+    name: 'reboot(poolId, nodeId, options, callback)'
     summary: Restarts the specified compute node.
     type: Method
     syntax:
@@ -478,21 +390,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function reboot(poolId, nodeId, options, options.nodeRebootOption,
-        options.computeNodeRebootOptions,
-        options.computeNodeRebootOptions.timeout,
-        options.computeNodeRebootOptions.clientRequestId,
-        options.computeNodeRebootOptions.returnClientRequestId,
-        options.computeNodeRebootOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      ComputeNodeOperations.reboot(poolId, nodeId, options,
-      options.nodeRebootOption, options.computeNodeRebootOptions,
-      options.computeNodeRebootOptions.timeout,
-      options.computeNodeRebootOptions.clientRequestId,
-      options.computeNodeRebootOptions.returnClientRequestId,
-      options.computeNodeRebootOptions.ocpDate, options.customHeaders, callback)
+      content: 'function reboot(poolId, nodeId, options, callback);'
+    fullName: 'ComputeNodeOperations.reboot(poolId, nodeId, options, callback)'
     children:
       - 'ComputeNodeOperations#reboot~client'
       - 'ComputeNodeOperations#reboot~callback'
@@ -528,14 +427,7 @@ items:
   - uid: 'ComputeNodeOperations#reimage'
     id: reimage
     parent: ComputeNodeOperations
-    name: >-
-      reimage(poolId, nodeId, options, options.nodeReimageOption,
-      options.computeNodeReimageOptions,
-      options.computeNodeReimageOptions.timeout,
-      options.computeNodeReimageOptions.clientRequestId,
-      options.computeNodeReimageOptions.returnClientRequestId,
-      options.computeNodeReimageOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'reimage(poolId, nodeId, options, callback)'
     summary: Reinstalls the operating system on the specified compute node.
     type: Method
     syntax:
@@ -575,22 +467,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function reimage(poolId, nodeId, options, options.nodeReimageOption,
-        options.computeNodeReimageOptions,
-        options.computeNodeReimageOptions.timeout,
-        options.computeNodeReimageOptions.clientRequestId,
-        options.computeNodeReimageOptions.returnClientRequestId,
-        options.computeNodeReimageOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      ComputeNodeOperations.reimage(poolId, nodeId, options,
-      options.nodeReimageOption, options.computeNodeReimageOptions,
-      options.computeNodeReimageOptions.timeout,
-      options.computeNodeReimageOptions.clientRequestId,
-      options.computeNodeReimageOptions.returnClientRequestId,
-      options.computeNodeReimageOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function reimage(poolId, nodeId, options, callback);'
+    fullName: 'ComputeNodeOperations.reimage(poolId, nodeId, options, callback)'
     children:
       - 'ComputeNodeOperations#reimage~client'
       - 'ComputeNodeOperations#reimage~callback'
@@ -626,15 +504,7 @@ items:
   - uid: 'ComputeNodeOperations#disableScheduling'
     id: disableScheduling
     parent: ComputeNodeOperations
-    name: >-
-      disableScheduling(poolId, nodeId, options,
-      options.nodeDisableSchedulingOption,
-      options.computeNodeDisableSchedulingOptions,
-      options.computeNodeDisableSchedulingOptions.timeout,
-      options.computeNodeDisableSchedulingOptions.clientRequestId,
-      options.computeNodeDisableSchedulingOptions.returnClientRequestId,
-      options.computeNodeDisableSchedulingOptions.ocpDate,
-      options.customHeaders, callback)
+    name: 'disableScheduling(poolId, nodeId, options, callback)'
     summary: Disable task scheduling of the specified compute node.
     type: Method
     syntax:
@@ -674,24 +544,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function disableScheduling(poolId, nodeId, options,
-        options.nodeDisableSchedulingOption,
-        options.computeNodeDisableSchedulingOptions,
-        options.computeNodeDisableSchedulingOptions.timeout,
-        options.computeNodeDisableSchedulingOptions.clientRequestId,
-        options.computeNodeDisableSchedulingOptions.returnClientRequestId,
-        options.computeNodeDisableSchedulingOptions.ocpDate,
-        options.customHeaders, callback);
-    fullName: >-
-      ComputeNodeOperations.disableScheduling(poolId, nodeId, options,
-      options.nodeDisableSchedulingOption,
-      options.computeNodeDisableSchedulingOptions,
-      options.computeNodeDisableSchedulingOptions.timeout,
-      options.computeNodeDisableSchedulingOptions.clientRequestId,
-      options.computeNodeDisableSchedulingOptions.returnClientRequestId,
-      options.computeNodeDisableSchedulingOptions.ocpDate,
-      options.customHeaders, callback)
+      content: 'function disableScheduling(poolId, nodeId, options, callback);'
+    fullName: 'ComputeNodeOperations.disableScheduling(poolId, nodeId, options, callback)'
     children:
       - 'ComputeNodeOperations#disableScheduling~client'
       - 'ComputeNodeOperations#disableScheduling~callback'
@@ -728,14 +582,7 @@ items:
   - uid: 'ComputeNodeOperations#enableScheduling'
     id: enableScheduling
     parent: ComputeNodeOperations
-    name: >-
-      enableScheduling(poolId, nodeId, options,
-      options.computeNodeEnableSchedulingOptions,
-      options.computeNodeEnableSchedulingOptions.timeout,
-      options.computeNodeEnableSchedulingOptions.clientRequestId,
-      options.computeNodeEnableSchedulingOptions.returnClientRequestId,
-      options.computeNodeEnableSchedulingOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'enableScheduling(poolId, nodeId, options, callback)'
     summary: Enable task scheduling of the specified compute node.
     type: Method
     syntax:
@@ -772,22 +619,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function enableScheduling(poolId, nodeId, options,
-        options.computeNodeEnableSchedulingOptions,
-        options.computeNodeEnableSchedulingOptions.timeout,
-        options.computeNodeEnableSchedulingOptions.clientRequestId,
-        options.computeNodeEnableSchedulingOptions.returnClientRequestId,
-        options.computeNodeEnableSchedulingOptions.ocpDate,
-        options.customHeaders, callback);
-    fullName: >-
-      ComputeNodeOperations.enableScheduling(poolId, nodeId, options,
-      options.computeNodeEnableSchedulingOptions,
-      options.computeNodeEnableSchedulingOptions.timeout,
-      options.computeNodeEnableSchedulingOptions.clientRequestId,
-      options.computeNodeEnableSchedulingOptions.returnClientRequestId,
-      options.computeNodeEnableSchedulingOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function enableScheduling(poolId, nodeId, options, callback);'
+    fullName: 'ComputeNodeOperations.enableScheduling(poolId, nodeId, options, callback)'
     children:
       - 'ComputeNodeOperations#enableScheduling~client'
       - 'ComputeNodeOperations#enableScheduling~callback'
@@ -814,14 +647,7 @@ items:
   - uid: 'ComputeNodeOperations#getRemoteLoginSettings'
     id: getRemoteLoginSettings
     parent: ComputeNodeOperations
-    name: >-
-      getRemoteLoginSettings(poolId, nodeId, options,
-      options.computeNodeGetRemoteLoginSettingsOptions,
-      options.computeNodeGetRemoteLoginSettingsOptions.timeout,
-      options.computeNodeGetRemoteLoginSettingsOptions.clientRequestId,
-      options.computeNodeGetRemoteLoginSettingsOptions.returnClientRequestId,
-      options.computeNodeGetRemoteLoginSettingsOptions.ocpDate,
-      options.customHeaders, callback)
+    name: 'getRemoteLoginSettings(poolId, nodeId, options, callback)'
     summary: Gets the settings required for remote login to a compute node.
     type: Method
     syntax:
@@ -859,22 +685,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNodeGetRemoteLoginSettingsResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getRemoteLoginSettings(poolId, nodeId, options,
-        options.computeNodeGetRemoteLoginSettingsOptions,
-        options.computeNodeGetRemoteLoginSettingsOptions.timeout,
-        options.computeNodeGetRemoteLoginSettingsOptions.clientRequestId,
-        options.computeNodeGetRemoteLoginSettingsOptions.returnClientRequestId,
-        options.computeNodeGetRemoteLoginSettingsOptions.ocpDate,
-        options.customHeaders, callback);
+      content: 'function getRemoteLoginSettings(poolId, nodeId, options, callback);'
     fullName: >-
       ComputeNodeOperations.getRemoteLoginSettings(poolId, nodeId, options,
-      options.computeNodeGetRemoteLoginSettingsOptions,
-      options.computeNodeGetRemoteLoginSettingsOptions.timeout,
-      options.computeNodeGetRemoteLoginSettingsOptions.clientRequestId,
-      options.computeNodeGetRemoteLoginSettingsOptions.returnClientRequestId,
-      options.computeNodeGetRemoteLoginSettingsOptions.ocpDate,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ComputeNodeOperations#getRemoteLoginSettings~client'
       - 'ComputeNodeOperations#getRemoteLoginSettings~callback'
@@ -901,14 +715,7 @@ items:
   - uid: 'ComputeNodeOperations#getRemoteDesktop'
     id: getRemoteDesktop
     parent: ComputeNodeOperations
-    name: >-
-      getRemoteDesktop(poolId, nodeId, options,
-      options.computeNodeGetRemoteDesktopOptions,
-      options.computeNodeGetRemoteDesktopOptions.timeout,
-      options.computeNodeGetRemoteDesktopOptions.clientRequestId,
-      options.computeNodeGetRemoteDesktopOptions.returnClientRequestId,
-      options.computeNodeGetRemoteDesktopOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'getRemoteDesktop(poolId, nodeId, options, callback)'
     summary: Gets the Remote Desktop Protocol file for the specified compute node.
     type: Method
     syntax:
@@ -945,22 +752,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getRemoteDesktop(poolId, nodeId, options,
-        options.computeNodeGetRemoteDesktopOptions,
-        options.computeNodeGetRemoteDesktopOptions.timeout,
-        options.computeNodeGetRemoteDesktopOptions.clientRequestId,
-        options.computeNodeGetRemoteDesktopOptions.returnClientRequestId,
-        options.computeNodeGetRemoteDesktopOptions.ocpDate,
-        options.customHeaders, callback);
-    fullName: >-
-      ComputeNodeOperations.getRemoteDesktop(poolId, nodeId, options,
-      options.computeNodeGetRemoteDesktopOptions,
-      options.computeNodeGetRemoteDesktopOptions.timeout,
-      options.computeNodeGetRemoteDesktopOptions.clientRequestId,
-      options.computeNodeGetRemoteDesktopOptions.returnClientRequestId,
-      options.computeNodeGetRemoteDesktopOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function getRemoteDesktop(poolId, nodeId, options, callback);'
+    fullName: 'ComputeNodeOperations.getRemoteDesktop(poolId, nodeId, options, callback)'
     children:
       - 'ComputeNodeOperations#getRemoteDesktop~client'
       - 'ComputeNodeOperations#getRemoteDesktop~callback'
@@ -987,15 +780,7 @@ items:
   - uid: 'ComputeNodeOperations#list'
     id: list
     parent: ComputeNodeOperations
-    name: >-
-      list(poolId, options, options.computeNodeListOptions,
-      options.computeNodeListOptions.filter,
-      options.computeNodeListOptions.select,
-      options.computeNodeListOptions.maxResults,
-      options.computeNodeListOptions.timeout,
-      options.computeNodeListOptions.clientRequestId,
-      options.computeNodeListOptions.returnClientRequestId,
-      options.computeNodeListOptions.ocpDate, options.customHeaders, callback)
+    name: 'list(poolId, options, callback)'
     summary: Lists the compute nodes in the specified pool.
     type: Method
     syntax:
@@ -1038,25 +823,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNodeListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(poolId, options, options.computeNodeListOptions,
-        options.computeNodeListOptions.filter,
-        options.computeNodeListOptions.select,
-        options.computeNodeListOptions.maxResults,
-        options.computeNodeListOptions.timeout,
-        options.computeNodeListOptions.clientRequestId,
-        options.computeNodeListOptions.returnClientRequestId,
-        options.computeNodeListOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      ComputeNodeOperations.list(poolId, options,
-      options.computeNodeListOptions, options.computeNodeListOptions.filter,
-      options.computeNodeListOptions.select,
-      options.computeNodeListOptions.maxResults,
-      options.computeNodeListOptions.timeout,
-      options.computeNodeListOptions.clientRequestId,
-      options.computeNodeListOptions.returnClientRequestId,
-      options.computeNodeListOptions.ocpDate, options.customHeaders, callback)
+      content: 'function list(poolId, options, callback);'
+    fullName: 'ComputeNodeOperations.list(poolId, options, callback)'
     children:
       - 'ComputeNodeOperations#list~client'
       - 'ComputeNodeOperations#list~callback'
@@ -1087,12 +855,7 @@ items:
   - uid: 'ComputeNodeOperations#listNext'
     id: listNext
     parent: ComputeNodeOperations
-    name: >-
-      listNext(nextPageLink, options, options.computeNodeListNextOptions,
-      options.computeNodeListNextOptions.clientRequestId,
-      options.computeNodeListNextOptions.returnClientRequestId,
-      options.computeNodeListNextOptions.ocpDate, options.customHeaders,
-      callback)
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Lists the compute nodes in the specified pool.
     type: Method
     syntax:
@@ -1123,20 +886,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ComputeNodeListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options,
-        options.computeNodeListNextOptions,
-        options.computeNodeListNextOptions.clientRequestId,
-        options.computeNodeListNextOptions.returnClientRequestId,
-        options.computeNodeListNextOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      ComputeNodeOperations.listNext(nextPageLink, options,
-      options.computeNodeListNextOptions,
-      options.computeNodeListNextOptions.clientRequestId,
-      options.computeNodeListNextOptions.returnClientRequestId,
-      options.computeNodeListNextOptions.ocpDate, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'ComputeNodeOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'ComputeNodeOperations#listNext~client'
       - 'ComputeNodeOperations#listNext~callback'

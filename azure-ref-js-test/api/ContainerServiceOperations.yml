@@ -27,17 +27,7 @@ items:
     parent: ContainerServiceOperations
     name: >-
       createOrUpdate(resourceGroupName, containerServiceName, parameters,
-      parameters.orchestratorProfile,
-      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
-      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
-      parameters.agentPoolProfiles, parameters.windowsProfile,
-      parameters.windowsProfile.adminUsername,
-      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
-      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
-      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
-      parameters.diagnosticsProfile.vmDiagnostics,
-      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
-      parameters.tags, options, options.customHeaders, callback)
+      options, callback)
     summary: The operation to create or update a container service.
     type: Method
     syntax:
@@ -118,31 +108,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerService} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, containerServiceName,
-        parameters, parameters.orchestratorProfile,
-        parameters.orchestratorProfile.orchestratorType,
-        parameters.masterProfile, parameters.masterProfile.count,
-        parameters.masterProfile.dnsPrefix, parameters.agentPoolProfiles,
-        parameters.windowsProfile, parameters.windowsProfile.adminUsername,
-        parameters.windowsProfile.adminPassword, parameters.linuxProfile,
-        parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
-        parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
-        parameters.diagnosticsProfile.vmDiagnostics,
-        parameters.diagnosticsProfile.vmDiagnostics.enabled,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        parameters, options, callback);
     fullName: >-
       ContainerServiceOperations.createOrUpdate(resourceGroupName,
-      containerServiceName, parameters, parameters.orchestratorProfile,
-      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
-      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
-      parameters.agentPoolProfiles, parameters.windowsProfile,
-      parameters.windowsProfile.adminUsername,
-      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
-      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
-      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
-      parameters.diagnosticsProfile.vmDiagnostics,
-      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
-      parameters.tags, options, options.customHeaders, callback)
+      containerServiceName, parameters, options, callback)
     children:
       - 'ContainerServiceOperations#createOrUpdate~client'
       - 'ContainerServiceOperations#createOrUpdate~callback'
@@ -152,17 +121,7 @@ items:
     parent: ContainerServiceOperations
     name: >-
       beginCreateOrUpdate(resourceGroupName, containerServiceName, parameters,
-      parameters.orchestratorProfile,
-      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
-      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
-      parameters.agentPoolProfiles, parameters.windowsProfile,
-      parameters.windowsProfile.adminUsername,
-      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
-      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
-      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
-      parameters.diagnosticsProfile.vmDiagnostics,
-      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
-      parameters.tags, options, options.customHeaders, callback)
+      options, callback)
     summary: The operation to create or update a container service.
     type: Method
     syntax:
@@ -243,31 +202,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerService} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, containerServiceName,
-        parameters, parameters.orchestratorProfile,
-        parameters.orchestratorProfile.orchestratorType,
-        parameters.masterProfile, parameters.masterProfile.count,
-        parameters.masterProfile.dnsPrefix, parameters.agentPoolProfiles,
-        parameters.windowsProfile, parameters.windowsProfile.adminUsername,
-        parameters.windowsProfile.adminPassword, parameters.linuxProfile,
-        parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
-        parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
-        parameters.diagnosticsProfile.vmDiagnostics,
-        parameters.diagnosticsProfile.vmDiagnostics.enabled,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        parameters, options, callback);
     fullName: >-
       ContainerServiceOperations.beginCreateOrUpdate(resourceGroupName,
-      containerServiceName, parameters, parameters.orchestratorProfile,
-      parameters.orchestratorProfile.orchestratorType, parameters.masterProfile,
-      parameters.masterProfile.count, parameters.masterProfile.dnsPrefix,
-      parameters.agentPoolProfiles, parameters.windowsProfile,
-      parameters.windowsProfile.adminUsername,
-      parameters.windowsProfile.adminPassword, parameters.linuxProfile,
-      parameters.linuxProfile.adminUsername, parameters.linuxProfile.ssh,
-      parameters.linuxProfile.ssh.publicKeys, parameters.diagnosticsProfile,
-      parameters.diagnosticsProfile.vmDiagnostics,
-      parameters.diagnosticsProfile.vmDiagnostics.enabled, parameters.location,
-      parameters.tags, options, options.customHeaders, callback)
+      containerServiceName, parameters, options, callback)
     children:
       - 'ContainerServiceOperations#beginCreateOrUpdate~client'
       - 'ContainerServiceOperations#beginCreateOrUpdate~callback'
@@ -292,9 +230,7 @@ items:
   - uid: 'ContainerServiceOperations#get'
     id: get
     parent: ContainerServiceOperations
-    name: >-
-      get(resourceGroupName, containerServiceName, options,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, containerServiceName, options, callback)'
     summary: The operation to get a container service.
     type: Method
     syntax:
@@ -318,10 +254,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerService} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, containerServiceName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ContainerServiceOperations.get(resourceGroupName, containerServiceName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ContainerServiceOperations#get~client'
       - 'ContainerServiceOperations#get~callback'
@@ -340,9 +276,7 @@ items:
   - uid: 'ContainerServiceOperations#deleteMethod'
     id: deleteMethod
     parent: ContainerServiceOperations
-    name: >-
-      deleteMethod(resourceGroupName, containerServiceName, options,
-      options.customHeaders, callback)
+    name: 'deleteMethod(resourceGroupName, containerServiceName, options, callback)'
     summary: The operation to delete a container service.
     type: Method
     syntax:
@@ -366,10 +300,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, containerServiceName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ContainerServiceOperations.deleteMethod(resourceGroupName,
-      containerServiceName, options, options.customHeaders, callback)
+      containerServiceName, options, callback)
     children:
       - 'ContainerServiceOperations#deleteMethod~client'
       - 'ContainerServiceOperations#deleteMethod~callback'
@@ -379,7 +313,7 @@ items:
     parent: ContainerServiceOperations
     name: >-
       beginDeleteMethod(resourceGroupName, containerServiceName, options,
-      options.customHeaders, callback)
+      callback)
     summary: The operation to delete a container service.
     type: Method
     syntax:
@@ -403,10 +337,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, containerServiceName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ContainerServiceOperations.beginDeleteMethod(resourceGroupName,
-      containerServiceName, options, options.customHeaders, callback)
+      containerServiceName, options, callback)
     children:
       - 'ContainerServiceOperations#beginDeleteMethod~client'
       - 'ContainerServiceOperations#beginDeleteMethod~callback'
@@ -425,7 +359,7 @@ items:
   - uid: 'ContainerServiceOperations#list'
     id: list
     parent: ContainerServiceOperations
-    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'list(resourceGroupName, options, callback)'
     summary: The operation to list container services.
     type: Method
     syntax:
@@ -444,12 +378,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ContainerServiceListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ContainerServiceOperations.list(resourceGroupName, options,
-      options.customHeaders, callback)
+      content: 'function list(resourceGroupName, options, callback);'
+    fullName: 'ContainerServiceOperations.list(resourceGroupName, options, callback)'
     children:
       - 'ContainerServiceOperations#list~client'
       - 'ContainerServiceOperations#list~callback'

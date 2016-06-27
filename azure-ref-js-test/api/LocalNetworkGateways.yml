@@ -28,14 +28,7 @@ items:
     parent: LocalNetworkGateways
     name: >-
       createOrUpdate(resourceGroupName, localNetworkGatewayName, parameters,
-      parameters.localNetworkAddressSpace,
-      parameters.localNetworkAddressSpace.addressPrefixes,
-      parameters.gatewayIpAddress, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      options, callback)
     summary: "The Put LocalNetworkGateway operation creates/updates a local network\rgateway in the specified resource group through Network resource provider."
     type: Method
     syntax:
@@ -101,24 +94,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, localNetworkGatewayName,
-        parameters, parameters.localNetworkAddressSpace,
-        parameters.localNetworkAddressSpace.addressPrefixes,
-        parameters.gatewayIpAddress, parameters.bgpSettings,
-        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-        parameters.bgpSettings.peerWeight, parameters.resourceGuid,
-        parameters.provisioningState, parameters.etag, parameters.id,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        parameters, options, callback);
     fullName: >-
       LocalNetworkGateways.createOrUpdate(resourceGroupName,
-      localNetworkGatewayName, parameters, parameters.localNetworkAddressSpace,
-      parameters.localNetworkAddressSpace.addressPrefixes,
-      parameters.gatewayIpAddress, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      localNetworkGatewayName, parameters, options, callback)
     children:
       - 'LocalNetworkGateways#createOrUpdate~client'
       - 'LocalNetworkGateways#createOrUpdate~callback'
@@ -128,14 +107,7 @@ items:
     parent: LocalNetworkGateways
     name: >-
       beginCreateOrUpdate(resourceGroupName, localNetworkGatewayName,
-      parameters, parameters.localNetworkAddressSpace,
-      parameters.localNetworkAddressSpace.addressPrefixes,
-      parameters.gatewayIpAddress, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     summary: "The Put LocalNetworkGateway operation creates/updates a local network\rgateway in the specified resource group through Network resource provider."
     type: Method
     syntax:
@@ -201,24 +173,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, localNetworkGatewayName,
-        parameters, parameters.localNetworkAddressSpace,
-        parameters.localNetworkAddressSpace.addressPrefixes,
-        parameters.gatewayIpAddress, parameters.bgpSettings,
-        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-        parameters.bgpSettings.peerWeight, parameters.resourceGuid,
-        parameters.provisioningState, parameters.etag, parameters.id,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        parameters, options, callback);
     fullName: >-
       LocalNetworkGateways.beginCreateOrUpdate(resourceGroupName,
-      localNetworkGatewayName, parameters, parameters.localNetworkAddressSpace,
-      parameters.localNetworkAddressSpace.addressPrefixes,
-      parameters.gatewayIpAddress, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      localNetworkGatewayName, parameters, options, callback)
     children:
       - 'LocalNetworkGateways#beginCreateOrUpdate~client'
       - 'LocalNetworkGateways#beginCreateOrUpdate~callback'
@@ -242,9 +200,7 @@ items:
   - uid: 'LocalNetworkGateways#get'
     id: get
     parent: LocalNetworkGateways
-    name: >-
-      get(resourceGroupName, localNetworkGatewayName, options,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, localNetworkGatewayName, options, callback)'
     summary: "The Get LocalNetworkGateway operation retrieves information about the\rspecified local network gateway through Network resource provider."
     type: Method
     syntax:
@@ -268,10 +224,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGateway} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, localNetworkGatewayName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       LocalNetworkGateways.get(resourceGroupName, localNetworkGatewayName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'LocalNetworkGateways#get~client'
       - 'LocalNetworkGateways#get~callback'
@@ -291,7 +247,7 @@ items:
     parent: LocalNetworkGateways
     name: >-
       deleteMethod(resourceGroupName, localNetworkGatewayName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "The Delete LocalNetworkGateway operation deletes the specifed local network\rGateway through Network resource provider."
     type: Method
     syntax:
@@ -315,10 +271,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, localNetworkGatewayName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       LocalNetworkGateways.deleteMethod(resourceGroupName,
-      localNetworkGatewayName, options, options.customHeaders, callback)
+      localNetworkGatewayName, options, callback)
     children:
       - 'LocalNetworkGateways#deleteMethod~client'
       - 'LocalNetworkGateways#deleteMethod~callback'
@@ -328,7 +284,7 @@ items:
     parent: LocalNetworkGateways
     name: >-
       beginDeleteMethod(resourceGroupName, localNetworkGatewayName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "The Delete LocalNetworkGateway operation deletes the specifed local network\rGateway through Network resource provider."
     type: Method
     syntax:
@@ -352,10 +308,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, localNetworkGatewayName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       LocalNetworkGateways.beginDeleteMethod(resourceGroupName,
-      localNetworkGatewayName, options, options.customHeaders, callback)
+      localNetworkGatewayName, options, callback)
     children:
       - 'LocalNetworkGateways#beginDeleteMethod~client'
       - 'LocalNetworkGateways#beginDeleteMethod~callback'
@@ -373,7 +329,7 @@ items:
   - uid: 'LocalNetworkGateways#list'
     id: list
     parent: LocalNetworkGateways
-    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'list(resourceGroupName, options, callback)'
     summary: "The List LocalNetworkGateways opertion retrieves all the local network\rgateways stored."
     type: Method
     syntax:
@@ -392,12 +348,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGatewayListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      LocalNetworkGateways.list(resourceGroupName, options,
-      options.customHeaders, callback)
+      content: 'function list(resourceGroupName, options, callback);'
+    fullName: 'LocalNetworkGateways.list(resourceGroupName, options, callback)'
     children:
       - 'LocalNetworkGateways#list~client'
       - 'LocalNetworkGateways#list~callback'
@@ -414,7 +366,7 @@ items:
   - uid: 'LocalNetworkGateways#listNext'
     id: listNext
     parent: LocalNetworkGateways
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "The List LocalNetworkGateways opertion retrieves all the local network\rgateways stored."
     type: Method
     syntax:
@@ -433,12 +385,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LocalNetworkGatewayListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      LocalNetworkGateways.listNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'LocalNetworkGateways.listNext(nextPageLink, options, callback)'
     children:
       - 'LocalNetworkGateways#listNext~client'
       - 'LocalNetworkGateways#listNext~callback'

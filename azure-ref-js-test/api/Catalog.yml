@@ -60,8 +60,7 @@ items:
     id: createSecret
     parent: Catalog
     name: >-
-      createSecret(accountName, databaseName, secretName, parameters,
-      parameters.password, parameters.uri, options, options.customHeaders,
+      createSecret(accountName, databaseName, secretName, parameters, options,
       callback)
     summary: "Creates the specified secret for use with external data sources in the\rspecified database."
     type: Method
@@ -98,12 +97,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSecret} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createSecret(accountName, databaseName, secretName, parameters,
-        parameters.password, parameters.uri, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       Catalog.createSecret(accountName, databaseName, secretName, parameters,
-      parameters.password, parameters.uri, options, options.customHeaders,
-      callback)
+      options, callback)
     children:
       - 'Catalog#createSecret~client'
       - 'Catalog#createSecret~callback'
@@ -129,8 +126,7 @@ items:
     id: updateSecret
     parent: Catalog
     name: >-
-      updateSecret(accountName, databaseName, secretName, parameters,
-      parameters.password, parameters.uri, options, options.customHeaders,
+      updateSecret(accountName, databaseName, secretName, parameters, options,
       callback)
     summary: "Modifies the specified secret for use with external data sources in the\rspecified database"
     type: Method
@@ -167,12 +163,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSecret} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function updateSecret(accountName, databaseName, secretName, parameters,
-        parameters.password, parameters.uri, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       Catalog.updateSecret(accountName, databaseName, secretName, parameters,
-      parameters.password, parameters.uri, options, options.customHeaders,
-      callback)
+      options, callback)
     children:
       - 'Catalog#updateSecret~client'
       - 'Catalog#updateSecret~callback'
@@ -197,9 +191,7 @@ items:
   - uid: 'Catalog#getSecret'
     id: getSecret
     parent: Catalog
-    name: >-
-      getSecret(accountName, databaseName, secretName, options,
-      options.customHeaders, callback)
+    name: 'getSecret(accountName, databaseName, secretName, options, callback)'
     summary: Gets the specified secret in the specified database
     type: Method
     syntax:
@@ -226,10 +218,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSecret} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getSecret(accountName, databaseName, secretName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Catalog.getSecret(accountName, databaseName, secretName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#getSecret~client'
       - 'Catalog#getSecret~callback'
@@ -248,9 +240,7 @@ items:
   - uid: 'Catalog#deleteSecret'
     id: deleteSecret
     parent: Catalog
-    name: >-
-      deleteSecret(accountName, databaseName, secretName, options,
-      options.customHeaders, callback)
+    name: 'deleteSecret(accountName, databaseName, secretName, options, callback)'
     summary: Deletes the specified secret in the specified database
     type: Method
     syntax:
@@ -277,10 +267,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteSecret(accountName, databaseName, secretName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Catalog.deleteSecret(accountName, databaseName, secretName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#deleteSecret~client'
       - 'Catalog#deleteSecret~callback'
@@ -299,9 +289,7 @@ items:
   - uid: 'Catalog#deleteAllSecrets'
     id: deleteAllSecrets
     parent: Catalog
-    name: >-
-      deleteAllSecrets(accountName, databaseName, options,
-      options.customHeaders, callback)
+    name: 'deleteAllSecrets(accountName, databaseName, options, callback)'
     summary: Deletes all secrets in the specified database
     type: Method
     syntax:
@@ -323,12 +311,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteAllSecrets(accountName, databaseName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.deleteAllSecrets(accountName, databaseName, options,
-      options.customHeaders, callback)
+      content: 'function deleteAllSecrets(accountName, databaseName, options, callback);'
+    fullName: 'Catalog.deleteAllSecrets(accountName, databaseName, options, callback)'
     children:
       - 'Catalog#deleteAllSecrets~client'
       - 'Catalog#deleteAllSecrets~callback'
@@ -348,7 +332,7 @@ items:
     parent: Catalog
     name: >-
       getExternalDataSource(accountName, databaseName, externalDataSourceName,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: "Retrieves the specified external data source from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -375,10 +359,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlExternalDataSource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getExternalDataSource(accountName, databaseName,
-        externalDataSourceName, options, options.customHeaders, callback);
+        externalDataSourceName, options, callback);
     fullName: >-
       Catalog.getExternalDataSource(accountName, databaseName,
-      externalDataSourceName, options, options.customHeaders, callback)
+      externalDataSourceName, options, callback)
     children:
       - 'Catalog#getExternalDataSource~client'
       - 'Catalog#getExternalDataSource~callback'
@@ -397,10 +381,7 @@ items:
   - uid: 'Catalog#listExternalDataSources'
     id: listExternalDataSources
     parent: Catalog
-    name: >-
-      listExternalDataSources(accountName, databaseName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listExternalDataSources(accountName, databaseName, options, callback)'
     summary: "Retrieves the list of external data sources from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -445,13 +426,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlExternalDataSourceList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listExternalDataSources(accountName, databaseName, options,
-        options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
         callback);
     fullName: >-
       Catalog.listExternalDataSources(accountName, databaseName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#listExternalDataSources~client'
       - 'Catalog#listExternalDataSources~callback'
@@ -478,7 +456,7 @@ items:
     parent: Catalog
     name: >-
       getCredential(accountName, databaseName, credentialName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Retrieves the specified credential from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -505,10 +483,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlCredential} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getCredential(accountName, databaseName, credentialName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Catalog.getCredential(accountName, databaseName, credentialName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#getCredential~client'
       - 'Catalog#getCredential~callback'
@@ -527,10 +505,7 @@ items:
   - uid: 'Catalog#listCredentials'
     id: listCredentials
     parent: Catalog
-    name: >-
-      listCredentials(accountName, databaseName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listCredentials(accountName, databaseName, options, callback)'
     summary: Retrieves the list of credentials from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -573,15 +548,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlCredentialList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listCredentials(accountName, databaseName, options,
-        options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
-        callback);
-    fullName: >-
-      Catalog.listCredentials(accountName, databaseName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      content: 'function listCredentials(accountName, databaseName, options, callback);'
+    fullName: 'Catalog.listCredentials(accountName, databaseName, options, callback)'
     children:
       - 'Catalog#listCredentials~client'
       - 'Catalog#listCredentials~callback'
@@ -608,7 +576,7 @@ items:
     parent: Catalog
     name: >-
       getProcedure(accountName, databaseName, schemaName, procedureName,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: Retrieves the specified procedure from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -638,10 +606,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlProcedure} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getProcedure(accountName, databaseName, schemaName,
-        procedureName, options, options.customHeaders, callback);
+        procedureName, options, callback);
     fullName: >-
       Catalog.getProcedure(accountName, databaseName, schemaName, procedureName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Catalog#getProcedure~client'
       - 'Catalog#getProcedure~callback'
@@ -661,10 +629,7 @@ items:
   - uid: 'Catalog#listProcedures'
     id: listProcedures
     parent: Catalog
-    name: >-
-      listProcedures(accountName, databaseName, schemaName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listProcedures(accountName, databaseName, schemaName, options, callback)'
     summary: Retrieves the list of procedures from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -712,13 +677,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlProcedureList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listProcedures(accountName, databaseName, schemaName, options,
-        options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
         callback);
     fullName: >-
       Catalog.listProcedures(accountName, databaseName, schemaName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#listProcedures~client'
       - 'Catalog#listProcedures~callback'
@@ -746,7 +708,7 @@ items:
     parent: Catalog
     name: >-
       getTable(accountName, databaseName, schemaName, tableName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Retrieves the specified table from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -776,10 +738,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTable} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getTable(accountName, databaseName, schemaName, tableName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Catalog.getTable(accountName, databaseName, schemaName, tableName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Catalog#getTable~client'
       - 'Catalog#getTable~callback'
@@ -799,10 +761,7 @@ items:
   - uid: 'Catalog#listTables'
     id: listTables
     parent: Catalog
-    name: >-
-      listTables(accountName, databaseName, schemaName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listTables(accountName, databaseName, schemaName, options, callback)'
     summary: Retrieves the list of tables from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -850,13 +809,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listTables(accountName, databaseName, schemaName, options,
-        options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
         callback);
     fullName: >-
       Catalog.listTables(accountName, databaseName, schemaName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#listTables~client'
       - 'Catalog#listTables~callback'
@@ -884,7 +840,7 @@ items:
     parent: Catalog
     name: >-
       getView(accountName, databaseName, schemaName, viewName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Retrieves the specified view from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -914,10 +870,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlView} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getView(accountName, databaseName, schemaName, viewName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Catalog.getView(accountName, databaseName, schemaName, viewName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#getView~client'
       - 'Catalog#getView~callback'
@@ -937,10 +893,7 @@ items:
   - uid: 'Catalog#listViews'
     id: listViews
     parent: Catalog
-    name: >-
-      listViews(accountName, databaseName, schemaName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listViews(accountName, databaseName, schemaName, options, callback)'
     summary: Retrieves the list of views from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -988,13 +941,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlViewList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listViews(accountName, databaseName, schemaName, options,
-        options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
         callback);
     fullName: >-
       Catalog.listViews(accountName, databaseName, schemaName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#listViews~client'
       - 'Catalog#listViews~callback'
@@ -1022,7 +972,7 @@ items:
     parent: Catalog
     name: >-
       getTableStatistic(accountName, databaseName, schemaName, tableName,
-      statisticsName, options, options.customHeaders, callback)
+      statisticsName, options, callback)
     summary: "Retrieves the specified table statistics from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -1055,10 +1005,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableStatistics} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getTableStatistic(accountName, databaseName, schemaName,
-        tableName, statisticsName, options, options.customHeaders, callback);
+        tableName, statisticsName, options, callback);
     fullName: >-
       Catalog.getTableStatistic(accountName, databaseName, schemaName,
-      tableName, statisticsName, options, options.customHeaders, callback)
+      tableName, statisticsName, options, callback)
     children:
       - 'Catalog#getTableStatistic~client'
       - 'Catalog#getTableStatistic~callback'
@@ -1081,9 +1031,7 @@ items:
     parent: Catalog
     name: >-
       listTableStatistics(accountName, databaseName, schemaName, tableName,
-      options, options.filter, options.top, options.skip, options.expand,
-      options.select, options.orderby, options.count, options.customHeaders,
-      callback)
+      options, callback)
     summary: >-
       Retrieves the list of table statistics from the Data Lake Analytics
       catalog.
@@ -1136,14 +1084,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableStatisticsList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listTableStatistics(accountName, databaseName, schemaName,
-        tableName, options, options.filter, options.top, options.skip,
-        options.expand, options.select, options.orderby, options.count,
-        options.customHeaders, callback);
+        tableName, options, callback);
     fullName: >-
       Catalog.listTableStatistics(accountName, databaseName, schemaName,
-      tableName, options, options.filter, options.top, options.skip,
-      options.expand, options.select, options.orderby, options.count,
-      options.customHeaders, callback)
+      tableName, options, callback)
     children:
       - 'Catalog#listTableStatistics~client'
       - 'Catalog#listTableStatistics~callback'
@@ -1172,7 +1116,7 @@ items:
     parent: Catalog
     name: >-
       getTablePartition(accountName, databaseName, schemaName, tableName,
-      partitionName, options, options.customHeaders, callback)
+      partitionName, options, callback)
     summary: "Retrieves the specified table partition from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -1205,10 +1149,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTablePartition} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getTablePartition(accountName, databaseName, schemaName,
-        tableName, partitionName, options, options.customHeaders, callback);
+        tableName, partitionName, options, callback);
     fullName: >-
       Catalog.getTablePartition(accountName, databaseName, schemaName,
-      tableName, partitionName, options, options.customHeaders, callback)
+      tableName, partitionName, options, callback)
     children:
       - 'Catalog#getTablePartition~client'
       - 'Catalog#getTablePartition~callback'
@@ -1231,9 +1175,7 @@ items:
     parent: Catalog
     name: >-
       listTablePartitions(accountName, databaseName, schemaName, tableName,
-      options, options.filter, options.top, options.skip, options.expand,
-      options.select, options.orderby, options.count, options.customHeaders,
-      callback)
+      options, callback)
     summary: >-
       Retrieves the list of table partitions from the Data Lake Analytics
       catalog.
@@ -1286,14 +1228,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTablePartitionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listTablePartitions(accountName, databaseName, schemaName,
-        tableName, options, options.filter, options.top, options.skip,
-        options.expand, options.select, options.orderby, options.count,
-        options.customHeaders, callback);
+        tableName, options, callback);
     fullName: >-
       Catalog.listTablePartitions(accountName, databaseName, schemaName,
-      tableName, options, options.filter, options.top, options.skip,
-      options.expand, options.select, options.orderby, options.count,
-      options.customHeaders, callback)
+      tableName, options, callback)
     children:
       - 'Catalog#listTablePartitions~client'
       - 'Catalog#listTablePartitions~callback'
@@ -1320,10 +1258,7 @@ items:
   - uid: 'Catalog#listTypes'
     id: listTypes
     parent: Catalog
-    name: >-
-      listTypes(accountName, databaseName, schemaName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listTypes(accountName, databaseName, schemaName, options, callback)'
     summary: "Retrieves the list of types within the specified database and schema from\rthe Data Lake Analytics catalog."
     type: Method
     syntax:
@@ -1371,13 +1306,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTypeList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listTypes(accountName, databaseName, schemaName, options,
-        options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
         callback);
     fullName: >-
       Catalog.listTypes(accountName, databaseName, schemaName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#listTypes~client'
       - 'Catalog#listTypes~callback'
@@ -1405,7 +1337,7 @@ items:
     parent: Catalog
     name: >-
       getTableValuedFunction(accountName, databaseName, schemaName,
-      tableValuedFunctionName, options, options.customHeaders, callback)
+      tableValuedFunctionName, options, callback)
     summary: "Retrieves the specified table valued function from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -1435,10 +1367,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableValuedFunction} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getTableValuedFunction(accountName, databaseName, schemaName,
-        tableValuedFunctionName, options, options.customHeaders, callback);
+        tableValuedFunctionName, options, callback);
     fullName: >-
       Catalog.getTableValuedFunction(accountName, databaseName, schemaName,
-      tableValuedFunctionName, options, options.customHeaders, callback)
+      tableValuedFunctionName, options, callback)
     children:
       - 'Catalog#getTableValuedFunction~client'
       - 'Catalog#getTableValuedFunction~callback'
@@ -1460,8 +1392,7 @@ items:
     parent: Catalog
     name: >-
       listTableValuedFunctions(accountName, databaseName, schemaName, options,
-      options.filter, options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      callback)
     summary: "Retrieves the list of table valued functions from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -1509,14 +1440,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableValuedFunctionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listTableValuedFunctions(accountName, databaseName, schemaName,
-        options, options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       Catalog.listTableValuedFunctions(accountName, databaseName, schemaName,
-      options, options.filter, options.top, options.skip, options.expand,
-      options.select, options.orderby, options.count, options.customHeaders,
-      callback)
+      options, callback)
     children:
       - 'Catalog#listTableValuedFunctions~client'
       - 'Catalog#listTableValuedFunctions~callback'
@@ -1542,9 +1469,7 @@ items:
   - uid: 'Catalog#getAssembly'
     id: getAssembly
     parent: Catalog
-    name: >-
-      getAssembly(accountName, databaseName, assemblyName, options,
-      options.customHeaders, callback)
+    name: 'getAssembly(accountName, databaseName, assemblyName, options, callback)'
     summary: Retrieves the specified assembly from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -1571,10 +1496,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlAssembly} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getAssembly(accountName, databaseName, assemblyName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Catalog.getAssembly(accountName, databaseName, assemblyName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#getAssembly~client'
       - 'Catalog#getAssembly~callback'
@@ -1593,10 +1518,7 @@ items:
   - uid: 'Catalog#listAssemblies'
     id: listAssemblies
     parent: Catalog
-    name: >-
-      listAssemblies(accountName, databaseName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listAssemblies(accountName, databaseName, options, callback)'
     summary: Retrieves the list of assemblies from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -1639,15 +1561,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlAssemblyList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAssemblies(accountName, databaseName, options,
-        options.filter, options.top, options.skip, options.expand,
-        options.select, options.orderby, options.count, options.customHeaders,
-        callback);
-    fullName: >-
-      Catalog.listAssemblies(accountName, databaseName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      content: 'function listAssemblies(accountName, databaseName, options, callback);'
+    fullName: 'Catalog.listAssemblies(accountName, databaseName, options, callback)'
     children:
       - 'Catalog#listAssemblies~client'
       - 'Catalog#listAssemblies~callback'
@@ -1672,9 +1587,7 @@ items:
   - uid: 'Catalog#getSchema'
     id: getSchema
     parent: Catalog
-    name: >-
-      getSchema(accountName, databaseName, schemaName, options,
-      options.customHeaders, callback)
+    name: 'getSchema(accountName, databaseName, schemaName, options, callback)'
     summary: Retrieves the specified schema from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -1701,10 +1614,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSchema} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getSchema(accountName, databaseName, schemaName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Catalog.getSchema(accountName, databaseName, schemaName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Catalog#getSchema~client'
       - 'Catalog#getSchema~callback'
@@ -1723,10 +1636,7 @@ items:
   - uid: 'Catalog#listSchemas'
     id: listSchemas
     parent: Catalog
-    name: >-
-      listSchemas(accountName, databaseName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+    name: 'listSchemas(accountName, databaseName, options, callback)'
     summary: Retrieves the list of schemas from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -1769,14 +1679,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSchemaList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listSchemas(accountName, databaseName, options, options.filter,
-        options.top, options.skip, options.expand, options.select,
-        options.orderby, options.count, options.customHeaders, callback);
-    fullName: >-
-      Catalog.listSchemas(accountName, databaseName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.customHeaders, callback)
+      content: 'function listSchemas(accountName, databaseName, options, callback);'
+    fullName: 'Catalog.listSchemas(accountName, databaseName, options, callback)'
     children:
       - 'Catalog#listSchemas~client'
       - 'Catalog#listSchemas~callback'
@@ -1801,9 +1705,7 @@ items:
   - uid: 'Catalog#getDatabase'
     id: getDatabase
     parent: Catalog
-    name: >-
-      getDatabase(accountName, databaseName, options, options.customHeaders,
-      callback)
+    name: 'getDatabase(accountName, databaseName, options, callback)'
     summary: Retrieves the specified database from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -1825,12 +1727,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlDatabase} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getDatabase(accountName, databaseName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.getDatabase(accountName, databaseName, options,
-      options.customHeaders, callback)
+      content: 'function getDatabase(accountName, databaseName, options, callback);'
+    fullName: 'Catalog.getDatabase(accountName, databaseName, options, callback)'
     children:
       - 'Catalog#getDatabase~client'
       - 'Catalog#getDatabase~callback'
@@ -1848,10 +1746,7 @@ items:
   - uid: 'Catalog#listDatabases'
     id: listDatabases
     parent: Catalog
-    name: >-
-      listDatabases(accountName, options, options.filter, options.top,
-      options.skip, options.expand, options.select, options.orderby,
-      options.count, options.customHeaders, callback)
+    name: 'listDatabases(accountName, options, callback)'
     summary: Retrieves the list of databases from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -1891,14 +1786,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlDatabaseList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listDatabases(accountName, options, options.filter,
-        options.top, options.skip, options.expand, options.select,
-        options.orderby, options.count, options.customHeaders, callback);
-    fullName: >-
-      Catalog.listDatabases(accountName, options, options.filter, options.top,
-      options.skip, options.expand, options.select, options.orderby,
-      options.count, options.customHeaders, callback)
+      content: 'function listDatabases(accountName, options, callback);'
+    fullName: 'Catalog.listDatabases(accountName, options, callback)'
     children:
       - 'Catalog#listDatabases~client'
       - 'Catalog#listDatabases~callback'
@@ -1922,9 +1811,7 @@ items:
   - uid: 'Catalog#listExternalDataSourcesNext'
     id: listExternalDataSourcesNext
     parent: Catalog
-    name: >-
-      listExternalDataSourcesNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listExternalDataSourcesNext(nextPageLink, options, callback)'
     summary: "Retrieves the list of external data sources from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -1943,12 +1830,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlExternalDataSourceList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listExternalDataSourcesNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.listExternalDataSourcesNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listExternalDataSourcesNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listExternalDataSourcesNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listExternalDataSourcesNext~client'
       - 'Catalog#listExternalDataSourcesNext~callback'
@@ -1962,9 +1845,7 @@ items:
   - uid: 'Catalog#listCredentialsNext'
     id: listCredentialsNext
     parent: Catalog
-    name: >-
-      listCredentialsNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listCredentialsNext(nextPageLink, options, callback)'
     summary: Retrieves the list of credentials from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -1983,12 +1864,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlCredentialList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listCredentialsNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.listCredentialsNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listCredentialsNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listCredentialsNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listCredentialsNext~client'
       - 'Catalog#listCredentialsNext~callback'
@@ -2002,7 +1879,7 @@ items:
   - uid: 'Catalog#listProceduresNext'
     id: listProceduresNext
     parent: Catalog
-    name: 'listProceduresNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listProceduresNext(nextPageLink, options, callback)'
     summary: Retrieves the list of procedures from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -2021,12 +1898,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlProcedureList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listProceduresNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.listProceduresNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listProceduresNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listProceduresNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listProceduresNext~client'
       - 'Catalog#listProceduresNext~callback'
@@ -2040,7 +1913,7 @@ items:
   - uid: 'Catalog#listTablesNext'
     id: listTablesNext
     parent: Catalog
-    name: 'listTablesNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listTablesNext(nextPageLink, options, callback)'
     summary: Retrieves the list of tables from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -2059,12 +1932,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listTablesNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Catalog.listTablesNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listTablesNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listTablesNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listTablesNext~client'
       - 'Catalog#listTablesNext~callback'
@@ -2078,7 +1947,7 @@ items:
   - uid: 'Catalog#listViewsNext'
     id: listViewsNext
     parent: Catalog
-    name: 'listViewsNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listViewsNext(nextPageLink, options, callback)'
     summary: Retrieves the list of views from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -2097,12 +1966,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlViewList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listViewsNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Catalog.listViewsNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listViewsNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listViewsNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listViewsNext~client'
       - 'Catalog#listViewsNext~callback'
@@ -2116,9 +1981,7 @@ items:
   - uid: 'Catalog#listTableStatisticsNext'
     id: listTableStatisticsNext
     parent: Catalog
-    name: >-
-      listTableStatisticsNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listTableStatisticsNext(nextPageLink, options, callback)'
     summary: >-
       Retrieves the list of table statistics from the Data Lake Analytics
       catalog.
@@ -2139,12 +2002,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableStatisticsList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listTableStatisticsNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.listTableStatisticsNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listTableStatisticsNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listTableStatisticsNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listTableStatisticsNext~client'
       - 'Catalog#listTableStatisticsNext~callback'
@@ -2158,9 +2017,7 @@ items:
   - uid: 'Catalog#listTablePartitionsNext'
     id: listTablePartitionsNext
     parent: Catalog
-    name: >-
-      listTablePartitionsNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listTablePartitionsNext(nextPageLink, options, callback)'
     summary: >-
       Retrieves the list of table partitions from the Data Lake Analytics
       catalog.
@@ -2181,12 +2038,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTablePartitionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listTablePartitionsNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.listTablePartitionsNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listTablePartitionsNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listTablePartitionsNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listTablePartitionsNext~client'
       - 'Catalog#listTablePartitionsNext~callback'
@@ -2200,7 +2053,7 @@ items:
   - uid: 'Catalog#listTypesNext'
     id: listTypesNext
     parent: Catalog
-    name: 'listTypesNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listTypesNext(nextPageLink, options, callback)'
     summary: "Retrieves the list of types within the specified database and schema from\rthe Data Lake Analytics catalog."
     type: Method
     syntax:
@@ -2219,12 +2072,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTypeList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listTypesNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Catalog.listTypesNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listTypesNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listTypesNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listTypesNext~client'
       - 'Catalog#listTypesNext~callback'
@@ -2238,9 +2087,7 @@ items:
   - uid: 'Catalog#listTableValuedFunctionsNext'
     id: listTableValuedFunctionsNext
     parent: Catalog
-    name: >-
-      listTableValuedFunctionsNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listTableValuedFunctionsNext(nextPageLink, options, callback)'
     summary: "Retrieves the list of table valued functions from the Data Lake Analytics\rcatalog."
     type: Method
     syntax:
@@ -2259,12 +2106,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlTableValuedFunctionList} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listTableValuedFunctionsNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.listTableValuedFunctionsNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listTableValuedFunctionsNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listTableValuedFunctionsNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listTableValuedFunctionsNext~client'
       - 'Catalog#listTableValuedFunctionsNext~callback'
@@ -2278,7 +2121,7 @@ items:
   - uid: 'Catalog#listAssembliesNext'
     id: listAssembliesNext
     parent: Catalog
-    name: 'listAssembliesNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listAssembliesNext(nextPageLink, options, callback)'
     summary: Retrieves the list of assemblies from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -2297,12 +2140,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlAssemblyList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAssembliesNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Catalog.listAssembliesNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listAssembliesNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listAssembliesNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listAssembliesNext~client'
       - 'Catalog#listAssembliesNext~callback'
@@ -2316,7 +2155,7 @@ items:
   - uid: 'Catalog#listSchemasNext'
     id: listSchemasNext
     parent: Catalog
-    name: 'listSchemasNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listSchemasNext(nextPageLink, options, callback)'
     summary: Retrieves the list of schemas from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -2335,12 +2174,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlSchemaList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listSchemasNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Catalog.listSchemasNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listSchemasNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listSchemasNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listSchemasNext~client'
       - 'Catalog#listSchemasNext~callback'
@@ -2354,7 +2189,7 @@ items:
   - uid: 'Catalog#listDatabasesNext'
     id: listDatabasesNext
     parent: Catalog
-    name: 'listDatabasesNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listDatabasesNext(nextPageLink, options, callback)'
     summary: Retrieves the list of databases from the Data Lake Analytics catalog.
     type: Method
     syntax:
@@ -2373,12 +2208,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link USqlDatabaseList} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listDatabasesNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Catalog.listDatabasesNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listDatabasesNext(nextPageLink, options, callback);'
+    fullName: 'Catalog.listDatabasesNext(nextPageLink, options, callback)'
     children:
       - 'Catalog#listDatabasesNext~client'
       - 'Catalog#listDatabasesNext~callback'

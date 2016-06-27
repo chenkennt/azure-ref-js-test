@@ -92,7 +92,7 @@ items:
     parent: GatewayOperations~GatewayOperations
     name: >-
       beginConnectDisconnectOrTesting(networkName, localNetworkSiteName,
-      parameters, parameters.operation, parameters.iPAddress, callback)
+      parameters, callback)
     summary: "To connect to, disconnect from, or test your connection to a local network\rsite, access the connection resource representing the local network and\rspecify Connect, Disconnect or Test to perform the desired operation.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx\rfor more information)"
     type: Method
     syntax:
@@ -119,12 +119,10 @@ items:
         description: The response stream.
       content: >-
         function beginConnectDisconnectOrTesting(networkName,
-        localNetworkSiteName, parameters, parameters.operation,
-        parameters.iPAddress, callback);
+        localNetworkSiteName, parameters, callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginConnectDisconnectOrTesting(networkName,
-      localNetworkSiteName, parameters, parameters.operation,
-      parameters.iPAddress, callback)
+      localNetworkSiteName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginConnectDisconnectOrTesting~url2'
       - 'GatewayOperations~GatewayOperations#beginConnectDisconnectOrTesting~url2'
@@ -157,9 +155,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginCreating'
     id: beginCreating
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginCreating(networkName, parameters, parameters.gatewaySKU,
-      parameters.gatewayType, callback)
+    name: 'beginCreating(networkName, parameters, callback)'
     summary: "The Begin Creating Virtual network Gateway operation creates a new network\rgateway for the specified virtual network in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx for\rmore information)"
     type: Method
     syntax:
@@ -181,12 +177,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginCreating(networkName, parameters, parameters.gatewaySKU,
-        parameters.gatewayType, callback);
+      content: 'function beginCreating(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.beginCreating(networkName, parameters,
-      parameters.gatewaySKU, parameters.gatewayType, callback)
+      callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginCreating~url2'
       - 'GatewayOperations~GatewayOperations#beginCreating~url2'
@@ -210,11 +204,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginCreatingGatewayConnection'
     id: beginCreatingGatewayConnection
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginCreatingGatewayConnection(parameters, parameters.connectedEntityId,
-      parameters.gatewayConnectionName, parameters.gatewayConnectionType,
-      parameters.virtualNetworkGatewayId, parameters.routingWeight,
-      parameters.sharedKey, parameters.enableBgp, callback)
+    name: 'beginCreatingGatewayConnection(parameters, callback)'
     summary: "The Begin Creating Virtual network Gateway connection operation creates a\rnew network gateway connection."
     type: Method
     syntax:
@@ -248,17 +238,9 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginCreatingGatewayConnection(parameters,
-        parameters.connectedEntityId, parameters.gatewayConnectionName,
-        parameters.gatewayConnectionType, parameters.virtualNetworkGatewayId,
-        parameters.routingWeight, parameters.sharedKey, parameters.enableBgp,
-        callback);
+      content: 'function beginCreatingGatewayConnection(parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.beginCreatingGatewayConnection(parameters,
-      parameters.connectedEntityId, parameters.gatewayConnectionName,
-      parameters.gatewayConnectionType, parameters.virtualNetworkGatewayId,
-      parameters.routingWeight, parameters.sharedKey, parameters.enableBgp,
       callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginCreatingGatewayConnection~url2'
@@ -302,12 +284,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginCreatingVirtualNetworkGateway'
     id: beginCreatingVirtualNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginCreatingVirtualNetworkGateway(networkName, parameters,
-      parameters.gatewayName, parameters.gatewaySKU, parameters.gatewayType,
-      parameters.location, parameters.vnetId, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+    name: 'beginCreatingVirtualNetworkGateway(networkName, parameters, callback)'
     summary: "The Begin Creating Virtual network Gateway operation creates a new network\rgateway."
     type: Method
     syntax:
@@ -352,17 +329,10 @@ items:
         description: The response stream.
       content: >-
         function beginCreatingVirtualNetworkGateway(networkName, parameters,
-        parameters.gatewayName, parameters.gatewaySKU, parameters.gatewayType,
-        parameters.location, parameters.vnetId, parameters.bgpSettings,
-        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-        parameters.bgpSettings.peerWeight, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginCreatingVirtualNetworkGateway(networkName,
-      parameters, parameters.gatewayName, parameters.gatewaySKU,
-      parameters.gatewayType, parameters.location, parameters.vnetId,
-      parameters.bgpSettings, parameters.bgpSettings.asn,
-      parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+      parameters, callback)
     children:
       - >-
         GatewayOperations~GatewayOperations#beginCreatingVirtualNetworkGateway~url2
@@ -568,9 +538,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginGenerateVpnClientPackage'
     id: beginGenerateVpnClientPackage
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginGenerateVpnClientPackage(networkName, parameters,
-      parameters.processorArchitecture, callback)
+    name: 'beginGenerateVpnClientPackage(networkName, parameters, callback)'
     summary: "The Generate VPN Client Package operation creates a VPN client package for\rthe specified virtual network and gateway in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/dn205126.aspx for\rmore information)"
     type: Method
     syntax:
@@ -591,10 +559,10 @@ items:
         description: The response stream.
       content: >-
         function beginGenerateVpnClientPackage(networkName, parameters,
-        parameters.processorArchitecture, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginGenerateVpnClientPackage(networkName,
-      parameters, parameters.processorArchitecture, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginGenerateVpnClientPackage~url2'
       - 'GatewayOperations~GatewayOperations#beginGenerateVpnClientPackage~url2'
@@ -657,7 +625,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginReset'
     id: beginReset
     parent: GatewayOperations~GatewayOperations
-    name: 'beginReset(networkName, parameters, parameters.operation, callback)'
+    name: 'beginReset(networkName, parameters, callback)'
     summary: "The Begin Reset Virtual network Gateway operation resets an existing\rgateway."
     type: Method
     syntax:
@@ -675,12 +643,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginReset(networkName, parameters, parameters.operation,
-        callback);
+      content: 'function beginReset(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.beginReset(networkName, parameters,
-      parameters.operation, callback)
+      callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginReset~url2'
       - 'GatewayOperations~GatewayOperations#beginReset~url2'
@@ -703,9 +669,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginResetSharedKey'
     id: beginResetSharedKey
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginResetSharedKey(networkName, localNetworkName, parameters,
-      parameters.keyLength, callback)
+    name: 'beginResetSharedKey(networkName, localNetworkName, parameters, callback)'
     summary: "The Begin Reset Virtual Network Gateway Shared Key operation resets the\rshared key on the virtual network gateway for the specified virtual\rnetwork connection to the specified local network in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -729,10 +693,10 @@ items:
         description: The response stream.
       content: >-
         function beginResetSharedKey(networkName, localNetworkName, parameters,
-        parameters.keyLength, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginResetSharedKey(networkName,
-      localNetworkName, parameters, parameters.keyLength, callback)
+      localNetworkName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginResetSharedKey~url2'
       - 'GatewayOperations~GatewayOperations#beginResetSharedKey~url2'
@@ -757,9 +721,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginResetSharedKeyV2'
     id: beginResetSharedKeyV2
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginResetSharedKeyV2(gatewayId, connectedentityId, parameters,
-      parameters.keyLength, callback)
+    name: 'beginResetSharedKeyV2(gatewayId, connectedentityId, parameters, callback)'
     summary: "The Begin Reset Virtual Network Gateway Shared Key V2 operation resets the\rshared key used between the gateway and customer vpn."
     type: Method
     syntax:
@@ -783,10 +745,10 @@ items:
         description: The response stream.
       content: >-
         function beginResetSharedKeyV2(gatewayId, connectedentityId, parameters,
-        parameters.keyLength, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginResetSharedKeyV2(gatewayId,
-      connectedentityId, parameters, parameters.keyLength, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginResetSharedKeyV2~url2'
       - 'GatewayOperations~GatewayOperations#beginResetSharedKeyV2~url2'
@@ -812,9 +774,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginResetVirtualNetworkGateway'
     id: beginResetVirtualNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginResetVirtualNetworkGateway(gatewayId, parameters,
-      parameters.operation, callback)
+    name: 'beginResetVirtualNetworkGateway(gatewayId, parameters, callback)'
     summary: "The Begin Reset Virtual network Gateway operation resets an existing\rgateway."
     type: Method
     syntax:
@@ -834,10 +794,10 @@ items:
         description: The response stream.
       content: >-
         function beginResetVirtualNetworkGateway(gatewayId, parameters,
-        parameters.operation, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginResetVirtualNetworkGateway(gatewayId,
-      parameters, parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginResetVirtualNetworkGateway~url2'
       - 'GatewayOperations~GatewayOperations#beginResetVirtualNetworkGateway~url2'
@@ -866,9 +826,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginResize'
     id: beginResize
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginResize(networkName, parameters, parameters.gatewaySKU,
-      parameters.operation, callback)
+    name: 'beginResize(networkName, parameters, callback)'
     summary: "The Begin Resize Virtual network Gateway operation resizes an existing\rgateway to a different GatewaySKU."
     type: Method
     syntax:
@@ -888,12 +846,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginResize(networkName, parameters, parameters.gatewaySKU,
-        parameters.operation, callback);
+      content: 'function beginResize(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.beginResize(networkName, parameters,
-      parameters.gatewaySKU, parameters.operation, callback)
+      callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginResize~url2'
       - 'GatewayOperations~GatewayOperations#beginResize~url2'
@@ -917,9 +873,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginResizeVirtualNetworkGateway'
     id: beginResizeVirtualNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginResizeVirtualNetworkGateway(gatewayId, parameters,
-      parameters.gatewaySKU, parameters.operation, callback)
+    name: 'beginResizeVirtualNetworkGateway(gatewayId, parameters, callback)'
     summary: "The Begin Resize Virtual network Gateway operation resizes an existing\rgateway to a different GatewaySKU."
     type: Method
     syntax:
@@ -941,10 +895,10 @@ items:
         description: The response stream.
       content: >-
         function beginResizeVirtualNetworkGateway(gatewayId, parameters,
-        parameters.gatewaySKU, parameters.operation, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginResizeVirtualNetworkGateway(gatewayId,
-      parameters, parameters.gatewaySKU, parameters.operation, callback)
+      parameters, callback)
     children:
       - >-
         GatewayOperations~GatewayOperations#beginResizeVirtualNetworkGateway~url2
@@ -983,9 +937,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginSetDefaultSites'
     id: beginSetDefaultSites
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginSetDefaultSites(networkName, parameters, parameters.defaultSite,
-      callback)
+    name: 'beginSetDefaultSites(networkName, parameters, callback)'
     summary: "The Begin Set Virtual Network Gateway Shared Key operation sets the\rdefault sites on the virtual network gateway for the specified virtual\rnetwork."
     type: Method
     syntax:
@@ -1004,12 +956,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginSetDefaultSites(networkName, parameters,
-        parameters.defaultSite, callback);
+      content: 'function beginSetDefaultSites(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.beginSetDefaultSites(networkName,
-      parameters, parameters.defaultSite, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginSetDefaultSites~url2'
       - 'GatewayOperations~GatewayOperations#beginSetDefaultSites~url2'
@@ -1034,10 +984,7 @@ items:
     parent: GatewayOperations~GatewayOperations
     name: >-
       beginSetIPsecParameters(networkName, localNetworkName, parameters,
-      parameters.parameters, parameters.parameters.encryptionType,
-      parameters.parameters.pfsGroup, parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+      callback)
     summary: "The Begin Set Virtual Network Gateway IPsec Parameters operation sets the\rIPsec parameters on the virtual network gateway for the specified\rconnection to the specified local network in Azure."
     type: Method
     syntax:
@@ -1072,18 +1019,10 @@ items:
         description: The response stream.
       content: >-
         function beginSetIPsecParameters(networkName, localNetworkName,
-        parameters, parameters.parameters, parameters.parameters.encryptionType,
-        parameters.parameters.pfsGroup,
-        parameters.parameters.sADataSizeKilobytes,
-        parameters.parameters.sALifeTimeSeconds,
-        parameters.parameters.hashAlgorithm, callback);
+        parameters, callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginSetIPsecParameters(networkName,
-      localNetworkName, parameters, parameters.parameters,
-      parameters.parameters.encryptionType, parameters.parameters.pfsGroup,
-      parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+      localNetworkName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginSetIPsecParameters~url2'
       - 'GatewayOperations~GatewayOperations#beginSetIPsecParameters~url2'
@@ -1121,10 +1060,7 @@ items:
     parent: GatewayOperations~GatewayOperations
     name: >-
       beginSetIPsecParametersV2(gatewayId, connectedentityId, parameters,
-      parameters.parameters, parameters.parameters.encryptionType,
-      parameters.parameters.pfsGroup, parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+      callback)
     summary: "The Begin Set Virtual Network Gateway IPsec Parameters V2 operation sets\rthe IPsec parameters on the virtual network gateway connection."
     type: Method
     syntax:
@@ -1159,18 +1095,10 @@ items:
         description: The response stream.
       content: >-
         function beginSetIPsecParametersV2(gatewayId, connectedentityId,
-        parameters, parameters.parameters, parameters.parameters.encryptionType,
-        parameters.parameters.pfsGroup,
-        parameters.parameters.sADataSizeKilobytes,
-        parameters.parameters.sALifeTimeSeconds,
-        parameters.parameters.hashAlgorithm, callback);
+        parameters, callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginSetIPsecParametersV2(gatewayId,
-      connectedentityId, parameters, parameters.parameters,
-      parameters.parameters.encryptionType, parameters.parameters.pfsGroup,
-      parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginSetIPsecParametersV2~url2'
       - 'GatewayOperations~GatewayOperations#beginSetIPsecParametersV2~url2'
@@ -1207,9 +1135,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginSetSharedKey'
     id: beginSetSharedKey
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginSetSharedKey(networkName, localNetworkName, parameters,
-      parameters.value, callback)
+    name: 'beginSetSharedKey(networkName, localNetworkName, parameters, callback)'
     summary: "The Begin Set Virtual Network Gateway Shared Key operation sets the shared\rkey on the virtual network gateway for the specified virtual network\rconnection to the specified local network in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -1233,10 +1159,10 @@ items:
         description: The response stream.
       content: >-
         function beginSetSharedKey(networkName, localNetworkName, parameters,
-        parameters.value, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginSetSharedKey(networkName,
-      localNetworkName, parameters, parameters.value, callback)
+      localNetworkName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginSetSharedKey~url2'
       - 'GatewayOperations~GatewayOperations#beginSetSharedKey~url2'
@@ -1260,9 +1186,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginSetSharedKeyV2'
     id: beginSetSharedKeyV2
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginSetSharedKeyV2(gatewayId, connectedentityId, parameters,
-      parameters.value, callback)
+    name: 'beginSetSharedKeyV2(gatewayId, connectedentityId, parameters, callback)'
     summary: "The Begin Set Virtual Network Gateway Shared Key V2 operation sets the\rshared key used between the gateway and customer vpn for the specified\rsite."
     type: Method
     syntax:
@@ -1286,10 +1210,10 @@ items:
         description: The response stream.
       content: >-
         function beginSetSharedKeyV2(gatewayId, connectedentityId, parameters,
-        parameters.value, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginSetSharedKeyV2(gatewayId,
-      connectedentityId, parameters, parameters.value, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginSetSharedKeyV2~url2'
       - 'GatewayOperations~GatewayOperations#beginSetSharedKeyV2~url2'
@@ -1313,11 +1237,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginStartDiagnostics'
     id: beginStartDiagnostics
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginStartDiagnostics(networkName, parameters,
-      parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+    name: 'beginStartDiagnostics(networkName, parameters, callback)'
     summary: "The Begin Start Diagnostics operation begins an asynchronous operation to\rstarta diagnostics session for the specified virtual network gateway in\rAzure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx for\rmore information)"
     type: Method
     syntax:
@@ -1350,16 +1270,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginStartDiagnostics(networkName, parameters,
-        parameters.captureDurationInSeconds, parameters.containerName,
-        parameters.customerStorageKey, parameters.customerStorageName,
-        parameters.operation, callback);
+      content: 'function beginStartDiagnostics(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.beginStartDiagnostics(networkName,
-      parameters, parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginStartDiagnostics~url2'
       - 'GatewayOperations~GatewayOperations#beginStartDiagnostics~url2'
@@ -1391,11 +1305,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#beginStartDiagnosticsV2'
     id: beginStartDiagnosticsV2
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      beginStartDiagnosticsV2(gatewayId, parameters,
-      parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+    name: 'beginStartDiagnosticsV2(gatewayId, parameters, callback)'
     summary: "The Begin Start Diagnostics V2 operation begins an asynchronous operation\rto starta diagnostics session for the specified virtual network gateway."
     type: Method
     syntax:
@@ -1428,16 +1338,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginStartDiagnosticsV2(gatewayId, parameters,
-        parameters.captureDurationInSeconds, parameters.containerName,
-        parameters.customerStorageKey, parameters.customerStorageName,
-        parameters.operation, callback);
+      content: 'function beginStartDiagnosticsV2(gatewayId, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.beginStartDiagnosticsV2(gatewayId,
-      parameters, parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginStartDiagnosticsV2~url2'
       - 'GatewayOperations~GatewayOperations#beginStartDiagnosticsV2~url2'
@@ -1473,7 +1377,6 @@ items:
     parent: GatewayOperations~GatewayOperations
     name: >-
       beginUpdateGatewayConnection(gatewayId, connectedentityId, parameters,
-      parameters.routingWeight, parameters.sharedKey, parameters.enableBgp,
       callback)
     summary: Operation to update existing gateway connection.
     type: Method
@@ -1504,12 +1407,10 @@ items:
         description: The response stream.
       content: >-
         function beginUpdateGatewayConnection(gatewayId, connectedentityId,
-        parameters, parameters.routingWeight, parameters.sharedKey,
-        parameters.enableBgp, callback);
+        parameters, callback);
     fullName: >-
       GatewayOperations~GatewayOperations.beginUpdateGatewayConnection(gatewayId,
-      connectedentityId, parameters, parameters.routingWeight,
-      parameters.sharedKey, parameters.enableBgp, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#beginUpdateGatewayConnection~url2'
       - 'GatewayOperations~GatewayOperations#beginUpdateGatewayConnection~url2'
@@ -1547,7 +1448,7 @@ items:
     parent: GatewayOperations~GatewayOperations
     name: >-
       connectDisconnectOrTest(networkName, localNetworkSiteName, parameters,
-      parameters.operation, parameters.iPAddress, callback)
+      callback)
     summary: "To connect to, disconnect from, or test your connection to a local network\rsite, access the connection resource representing the local network and\rspecify Connect, Disconnect or Test to perform the desired operation.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx\rfor more information)"
     type: Method
     syntax:
@@ -1574,19 +1475,16 @@ items:
         description: The response stream.
       content: >-
         function connectDisconnectOrTest(networkName, localNetworkSiteName,
-        parameters, parameters.operation, parameters.iPAddress, callback);
+        parameters, callback);
     fullName: >-
       GatewayOperations~GatewayOperations.connectDisconnectOrTest(networkName,
-      localNetworkSiteName, parameters, parameters.operation,
-      parameters.iPAddress, callback)
+      localNetworkSiteName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#connectDisconnectOrTest~client2'
   - uid: 'GatewayOperations~GatewayOperations#create'
     id: create
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      create(networkName, parameters, parameters.gatewaySKU,
-      parameters.gatewayType, callback)
+    name: 'create(networkName, parameters, callback)'
     summary: "The Create Virtual network Gateway operation creates a new network gateway\rfor the specified virtual network in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx for\rmore information)"
     type: Method
     syntax:
@@ -1608,22 +1506,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(networkName, parameters, parameters.gatewaySKU,
-        parameters.gatewayType, callback);
+      content: 'function create(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.create(networkName, parameters,
-      parameters.gatewaySKU, parameters.gatewayType, callback)
+      callback)
     children:
       - 'GatewayOperations~GatewayOperations#create~client2'
   - uid: 'GatewayOperations~GatewayOperations#createGatewayConnection'
     id: createGatewayConnection
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      createGatewayConnection(parameters, parameters.connectedEntityId,
-      parameters.gatewayConnectionName, parameters.gatewayConnectionType,
-      parameters.virtualNetworkGatewayId, parameters.routingWeight,
-      parameters.sharedKey, parameters.enableBgp, callback)
+    name: 'createGatewayConnection(parameters, callback)'
     summary: "The Create Virtual network Gateway Connection operation creates a new\rnetwork gateway."
     type: Method
     syntax:
@@ -1657,28 +1549,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function createGatewayConnection(parameters,
-        parameters.connectedEntityId, parameters.gatewayConnectionName,
-        parameters.gatewayConnectionType, parameters.virtualNetworkGatewayId,
-        parameters.routingWeight, parameters.sharedKey, parameters.enableBgp,
-        callback);
+      content: 'function createGatewayConnection(parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.createGatewayConnection(parameters,
-      parameters.connectedEntityId, parameters.gatewayConnectionName,
-      parameters.gatewayConnectionType, parameters.virtualNetworkGatewayId,
-      parameters.routingWeight, parameters.sharedKey, parameters.enableBgp,
       callback)
     children:
       - 'GatewayOperations~GatewayOperations#createGatewayConnection~client2'
   - uid: 'GatewayOperations~GatewayOperations#createLocalNetworkGateway'
     id: createLocalNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      createLocalNetworkGateway(parameters, parameters.addressSpace,
-      parameters.gatewayName, parameters.ipAddress, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+    name: 'createLocalNetworkGateway(parameters, callback)'
     summary: "The Create Local network Gateway operation creates a new local network\rgateway."
     type: Method
     syntax:
@@ -1712,17 +1592,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function createLocalNetworkGateway(parameters, parameters.addressSpace,
-        parameters.gatewayName, parameters.ipAddress, parameters.bgpSettings,
-        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-        parameters.bgpSettings.peerWeight, callback);
+      content: 'function createLocalNetworkGateway(parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.createLocalNetworkGateway(parameters,
-      parameters.addressSpace, parameters.gatewayName, parameters.ipAddress,
-      parameters.bgpSettings, parameters.bgpSettings.asn,
-      parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+      callback)
     children:
       - 'GatewayOperations~GatewayOperations#createLocalNetworkGateway~url2'
       - 'GatewayOperations~GatewayOperations#createLocalNetworkGateway~url2'
@@ -1769,12 +1642,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#createVirtualNetworkGateway'
     id: createVirtualNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      createVirtualNetworkGateway(networkName, parameters,
-      parameters.gatewayName, parameters.gatewaySKU, parameters.gatewayType,
-      parameters.location, parameters.vnetId, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+    name: 'createVirtualNetworkGateway(networkName, parameters, callback)'
     summary: >-
       The Create Virtual network Gateway operation creates a new network
       gateway.
@@ -1819,19 +1687,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function createVirtualNetworkGateway(networkName, parameters,
-        parameters.gatewayName, parameters.gatewaySKU, parameters.gatewayType,
-        parameters.location, parameters.vnetId, parameters.bgpSettings,
-        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-        parameters.bgpSettings.peerWeight, callback);
+      content: 'function createVirtualNetworkGateway(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.createVirtualNetworkGateway(networkName,
-      parameters, parameters.gatewayName, parameters.gatewaySKU,
-      parameters.gatewayType, parameters.location, parameters.vnetId,
-      parameters.bgpSettings, parameters.bgpSettings.asn,
-      parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#createVirtualNetworkGateway~client2'
   - uid: 'GatewayOperations~GatewayOperations#deleteMethod'
@@ -1962,9 +1821,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#generateVpnClientPackage'
     id: generateVpnClientPackage
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      generateVpnClientPackage(networkName, parameters,
-      parameters.processorArchitecture, callback)
+    name: 'generateVpnClientPackage(networkName, parameters, callback)'
     summary: "The Generate VPN Client Package operation creates a VPN client package for\rthe specified virtual network and gateway in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx for\rmore information)"
     type: Method
     syntax:
@@ -1983,12 +1840,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function generateVpnClientPackage(networkName, parameters,
-        parameters.processorArchitecture, callback);
+      content: 'function generateVpnClientPackage(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.generateVpnClientPackage(networkName,
-      parameters, parameters.processorArchitecture, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#generateVpnClientPackage~client2'
   - uid: 'GatewayOperations~GatewayOperations#get'
@@ -2025,9 +1880,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#getDeviceConfigurationScript'
     id: getDeviceConfigurationScript
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      getDeviceConfigurationScript(networkName, parameters, parameters.vendor,
-      parameters.platform, parameters.oSFamily, callback)
+    name: 'getDeviceConfigurationScript(networkName, parameters, callback)'
     summary: "The Get Device Configuration Script operation returns a script that you\rcan use to configure local VPN devices to connect to the gateway.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154115.aspx for\rmore information)"
     type: Method
     syntax:
@@ -2054,11 +1907,10 @@ items:
         description: The response stream.
       content: >-
         function getDeviceConfigurationScript(networkName, parameters,
-        parameters.vendor, parameters.platform, parameters.oSFamily, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.getDeviceConfigurationScript(networkName,
-      parameters, parameters.vendor, parameters.platform, parameters.oSFamily,
-      callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#getDeviceConfigurationScript~url2'
       - 'GatewayOperations~GatewayOperations#getDeviceConfigurationScript~url2'
@@ -2598,7 +2450,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#reset'
     id: reset
     parent: GatewayOperations~GatewayOperations
-    name: 'reset(networkName, parameters, parameters.operation, callback)'
+    name: 'reset(networkName, parameters, callback)'
     summary: "The Begin Reset Virtual network Gateway operation resets an existing\rgateway."
     type: Method
     syntax:
@@ -2616,18 +2468,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: 'function reset(networkName, parameters, parameters.operation, callback);'
+      content: 'function reset(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.reset(networkName, parameters,
-      parameters.operation, callback)
+      callback)
     children:
       - 'GatewayOperations~GatewayOperations#reset~client2'
   - uid: 'GatewayOperations~GatewayOperations#resetSharedKey'
     id: resetSharedKey
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      resetSharedKey(networkName, localNetworkName, parameters,
-      parameters.keyLength, callback)
+    name: 'resetSharedKey(networkName, localNetworkName, parameters, callback)'
     summary: "The Reset Virtual Network Gateway Shared Key operation resets the shared\rkey on the virtual network gateway for the specified virtual network\rconnection to the specified local network in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -2651,18 +2501,16 @@ items:
         description: The response stream.
       content: >-
         function resetSharedKey(networkName, localNetworkName, parameters,
-        parameters.keyLength, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.resetSharedKey(networkName,
-      localNetworkName, parameters, parameters.keyLength, callback)
+      localNetworkName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#resetSharedKey~client2'
   - uid: 'GatewayOperations~GatewayOperations#resetSharedKeyV2'
     id: resetSharedKeyV2
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      resetSharedKeyV2(gatewayId, connectedentityId, parameters,
-      parameters.keyLength, callback)
+    name: 'resetSharedKeyV2(gatewayId, connectedentityId, parameters, callback)'
     summary: "The Reset Virtual Network Gateway Shared Key V2 operation resets the\rshared key used between the gateway and customer vpn."
     type: Method
     syntax:
@@ -2686,18 +2534,16 @@ items:
         description: The response stream.
       content: >-
         function resetSharedKeyV2(gatewayId, connectedentityId, parameters,
-        parameters.keyLength, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.resetSharedKeyV2(gatewayId,
-      connectedentityId, parameters, parameters.keyLength, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#resetSharedKeyV2~client2'
   - uid: 'GatewayOperations~GatewayOperations#resetVirtualNetworkGateway'
     id: resetVirtualNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      resetVirtualNetworkGateway(gatewayId, parameters, parameters.operation,
-      callback)
+    name: 'resetVirtualNetworkGateway(gatewayId, parameters, callback)'
     summary: "The Begin Reset Virtual network Gateway operation resets an existing\rgateway."
     type: Method
     syntax:
@@ -2715,20 +2561,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function resetVirtualNetworkGateway(gatewayId, parameters,
-        parameters.operation, callback);
+      content: 'function resetVirtualNetworkGateway(gatewayId, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.resetVirtualNetworkGateway(gatewayId,
-      parameters, parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#resetVirtualNetworkGateway~client2'
   - uid: 'GatewayOperations~GatewayOperations#resize'
     id: resize
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      resize(networkName, parameters, parameters.gatewaySKU,
-      parameters.operation, callback)
+    name: 'resize(networkName, parameters, callback)'
     summary: "The Begin Resize Virtual network Gateway operation resizes an existing\rgateway to a different GatewaySKU."
     type: Method
     syntax:
@@ -2748,20 +2590,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function resize(networkName, parameters, parameters.gatewaySKU,
-        parameters.operation, callback);
+      content: 'function resize(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.resize(networkName, parameters,
-      parameters.gatewaySKU, parameters.operation, callback)
+      callback)
     children:
       - 'GatewayOperations~GatewayOperations#resize~client2'
   - uid: 'GatewayOperations~GatewayOperations#resizeVirtualNetworkGateway'
     id: resizeVirtualNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      resizeVirtualNetworkGateway(gatewayId, parameters, parameters.gatewaySKU,
-      parameters.operation, callback)
+    name: 'resizeVirtualNetworkGateway(gatewayId, parameters, callback)'
     summary: "The Begin Resize Virtual network Gateway operation resizes an existing\rgateway to a different GatewaySKU."
     type: Method
     syntax:
@@ -2781,18 +2619,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function resizeVirtualNetworkGateway(gatewayId, parameters,
-        parameters.gatewaySKU, parameters.operation, callback);
+      content: 'function resizeVirtualNetworkGateway(gatewayId, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.resizeVirtualNetworkGateway(gatewayId,
-      parameters, parameters.gatewaySKU, parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#resizeVirtualNetworkGateway~client2'
   - uid: 'GatewayOperations~GatewayOperations#setDefaultSites'
     id: setDefaultSites
     parent: GatewayOperations~GatewayOperations
-    name: 'setDefaultSites(networkName, parameters, parameters.defaultSite, callback)'
+    name: 'setDefaultSites(networkName, parameters, callback)'
     summary: "The Set Virtual Network Gateway Shared Key operation sets the default\rsites on the virtual network gateway for the specified virtual network."
     type: Method
     syntax:
@@ -2811,23 +2647,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function setDefaultSites(networkName, parameters,
-        parameters.defaultSite, callback);
+      content: 'function setDefaultSites(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.setDefaultSites(networkName,
-      parameters, parameters.defaultSite, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#setDefaultSites~client2'
   - uid: 'GatewayOperations~GatewayOperations#setIPsecParameters'
     id: setIPsecParameters
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      setIPsecParameters(networkName, localNetworkName, parameters,
-      parameters.parameters, parameters.parameters.encryptionType,
-      parameters.parameters.pfsGroup, parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+    name: 'setIPsecParameters(networkName, localNetworkName, parameters, callback)'
     summary: "The Begin Set Virtual Network Gateway IPsec Parameters operation sets the\rIPsec parameters on the virtual network gateway for the specified\rconnection to the specified local network in Azure."
     type: Method
     syntax:
@@ -2862,29 +2691,16 @@ items:
         description: The response stream.
       content: >-
         function setIPsecParameters(networkName, localNetworkName, parameters,
-        parameters.parameters, parameters.parameters.encryptionType,
-        parameters.parameters.pfsGroup,
-        parameters.parameters.sADataSizeKilobytes,
-        parameters.parameters.sALifeTimeSeconds,
-        parameters.parameters.hashAlgorithm, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.setIPsecParameters(networkName,
-      localNetworkName, parameters, parameters.parameters,
-      parameters.parameters.encryptionType, parameters.parameters.pfsGroup,
-      parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+      localNetworkName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#setIPsecParameters~client2'
   - uid: 'GatewayOperations~GatewayOperations#setIPsecParametersV2'
     id: setIPsecParametersV2
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      setIPsecParametersV2(gatewayId, connectedentityId, parameters,
-      parameters.parameters, parameters.parameters.encryptionType,
-      parameters.parameters.pfsGroup, parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+    name: 'setIPsecParametersV2(gatewayId, connectedentityId, parameters, callback)'
     summary: "The Begin Set Virtual Network Gateway IPsec Parameters V2 operation sets\rthe IPsec parameters on the virtual network gateway connection."
     type: Method
     syntax:
@@ -2919,26 +2735,16 @@ items:
         description: The response stream.
       content: >-
         function setIPsecParametersV2(gatewayId, connectedentityId, parameters,
-        parameters.parameters, parameters.parameters.encryptionType,
-        parameters.parameters.pfsGroup,
-        parameters.parameters.sADataSizeKilobytes,
-        parameters.parameters.sALifeTimeSeconds,
-        parameters.parameters.hashAlgorithm, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.setIPsecParametersV2(gatewayId,
-      connectedentityId, parameters, parameters.parameters,
-      parameters.parameters.encryptionType, parameters.parameters.pfsGroup,
-      parameters.parameters.sADataSizeKilobytes,
-      parameters.parameters.sALifeTimeSeconds,
-      parameters.parameters.hashAlgorithm, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#setIPsecParametersV2~client2'
   - uid: 'GatewayOperations~GatewayOperations#setSharedKey'
     id: setSharedKey
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      setSharedKey(networkName, localNetworkName, parameters, parameters.value,
-      callback)
+    name: 'setSharedKey(networkName, localNetworkName, parameters, callback)'
     summary: "The Set Virtual Network Gateway Shared Key operation sets the shared key\ron the virtual network gateway for the specified virtual network\rconnection to the specified local network in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx for\rmore information)"
     type: Method
     syntax:
@@ -2962,18 +2768,16 @@ items:
         description: The response stream.
       content: >-
         function setSharedKey(networkName, localNetworkName, parameters,
-        parameters.value, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.setSharedKey(networkName,
-      localNetworkName, parameters, parameters.value, callback)
+      localNetworkName, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#setSharedKey~client2'
   - uid: 'GatewayOperations~GatewayOperations#setSharedKeyV2'
     id: setSharedKeyV2
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      setSharedKeyV2(gatewayId, connectedentityId, parameters, parameters.value,
-      callback)
+    name: 'setSharedKeyV2(gatewayId, connectedentityId, parameters, callback)'
     summary: "The Set Virtual Network Gateway Shared Key V2 operation sets the shared\rkey used between the gateway and customer vpn for the specified site."
     type: Method
     syntax:
@@ -2997,20 +2801,16 @@ items:
         description: The response stream.
       content: >-
         function setSharedKeyV2(gatewayId, connectedentityId, parameters,
-        parameters.value, callback);
+        callback);
     fullName: >-
       GatewayOperations~GatewayOperations.setSharedKeyV2(gatewayId,
-      connectedentityId, parameters, parameters.value, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#setSharedKeyV2~client2'
   - uid: 'GatewayOperations~GatewayOperations#startDiagnostics'
     id: startDiagnostics
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      startDiagnostics(networkName, parameters,
-      parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+    name: 'startDiagnostics(networkName, parameters, callback)'
     summary: "The Start Diagnostics operation starts a diagnostics session for the\rspecified virtual network gateway in Azure.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx for\rmore information)"
     type: Method
     syntax:
@@ -3043,26 +2843,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function startDiagnostics(networkName, parameters,
-        parameters.captureDurationInSeconds, parameters.containerName,
-        parameters.customerStorageKey, parameters.customerStorageName,
-        parameters.operation, callback);
+      content: 'function startDiagnostics(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.startDiagnostics(networkName,
-      parameters, parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#startDiagnostics~client2'
   - uid: 'GatewayOperations~GatewayOperations#startDiagnosticsV2'
     id: startDiagnosticsV2
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      startDiagnosticsV2(gatewayId, parameters,
-      parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+    name: 'startDiagnosticsV2(gatewayId, parameters, callback)'
     summary: "The Start Diagnostics V2 operation starts a diagnostics session for the\rspecified virtual network gateway."
     type: Method
     syntax:
@@ -3095,22 +2885,16 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function startDiagnosticsV2(gatewayId, parameters,
-        parameters.captureDurationInSeconds, parameters.containerName,
-        parameters.customerStorageKey, parameters.customerStorageName,
-        parameters.operation, callback);
+      content: 'function startDiagnosticsV2(gatewayId, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.startDiagnosticsV2(gatewayId,
-      parameters, parameters.captureDurationInSeconds, parameters.containerName,
-      parameters.customerStorageKey, parameters.customerStorageName,
-      parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#startDiagnosticsV2~client2'
   - uid: 'GatewayOperations~GatewayOperations#stopDiagnostics'
     id: stopDiagnostics
     parent: GatewayOperations~GatewayOperations
-    name: 'stopDiagnostics(networkName, parameters, parameters.operation, callback)'
+    name: 'stopDiagnostics(networkName, parameters, callback)'
     summary: "The Stop Diagnostics operation begins an asynchronous operation to stopa\rdiagnostics session for the specified virtual network gateway in Azure.\r(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx\rfor more information)"
     type: Method
     syntax:
@@ -3131,12 +2915,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function stopDiagnostics(networkName, parameters, parameters.operation,
-        callback);
+      content: 'function stopDiagnostics(networkName, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.stopDiagnostics(networkName,
-      parameters, parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#stopDiagnostics~url2'
       - 'GatewayOperations~GatewayOperations#stopDiagnostics~url2'
@@ -3159,7 +2941,7 @@ items:
   - uid: 'GatewayOperations~GatewayOperations#stopDiagnosticsV2'
     id: stopDiagnosticsV2
     parent: GatewayOperations~GatewayOperations
-    name: 'stopDiagnosticsV2(gatewayId, parameters, parameters.operation, callback)'
+    name: 'stopDiagnosticsV2(gatewayId, parameters, callback)'
     summary: "The Stop Diagnostics V2 operation begins an asynchronous operation to\rstopa diagnostics session for the specified virtual network gateway."
     type: Method
     syntax:
@@ -3180,12 +2962,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function stopDiagnosticsV2(gatewayId, parameters, parameters.operation,
-        callback);
+      content: 'function stopDiagnosticsV2(gatewayId, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.stopDiagnosticsV2(gatewayId,
-      parameters, parameters.operation, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#stopDiagnosticsV2~url2'
       - 'GatewayOperations~GatewayOperations#stopDiagnosticsV2~url2'
@@ -3210,7 +2990,6 @@ items:
     parent: GatewayOperations~GatewayOperations
     name: >-
       updateGatewayConnection(gatewayId, connectedentityId, parameters,
-      parameters.routingWeight, parameters.sharedKey, parameters.enableBgp,
       callback)
     summary: Operation to update existing gateway connection.
     type: Method
@@ -3241,22 +3020,16 @@ items:
         description: The response stream.
       content: >-
         function updateGatewayConnection(gatewayId, connectedentityId,
-        parameters, parameters.routingWeight, parameters.sharedKey,
-        parameters.enableBgp, callback);
+        parameters, callback);
     fullName: >-
       GatewayOperations~GatewayOperations.updateGatewayConnection(gatewayId,
-      connectedentityId, parameters, parameters.routingWeight,
-      parameters.sharedKey, parameters.enableBgp, callback)
+      connectedentityId, parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#updateGatewayConnection~client2'
   - uid: 'GatewayOperations~GatewayOperations#updateLocalNetworkGateway'
     id: updateLocalNetworkGateway
     parent: GatewayOperations~GatewayOperations
-    name: >-
-      updateLocalNetworkGateway(gatewayId, parameters, parameters.addressSpace,
-      parameters.bgpSettings, parameters.bgpSettings.asn,
-      parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+    name: 'updateLocalNetworkGateway(gatewayId, parameters, callback)'
     summary: The Update Local Network Gateway operation updates a local network gateway
     type: Method
     syntax:
@@ -3287,16 +3060,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function updateLocalNetworkGateway(gatewayId, parameters,
-        parameters.addressSpace, parameters.bgpSettings,
-        parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-        parameters.bgpSettings.peerWeight, callback);
+      content: 'function updateLocalNetworkGateway(gatewayId, parameters, callback);'
     fullName: >-
       GatewayOperations~GatewayOperations.updateLocalNetworkGateway(gatewayId,
-      parameters, parameters.addressSpace, parameters.bgpSettings,
-      parameters.bgpSettings.asn, parameters.bgpSettings.bgpPeeringAddress,
-      parameters.bgpSettings.peerWeight, callback)
+      parameters, callback)
     children:
       - 'GatewayOperations~GatewayOperations#updateLocalNetworkGateway~url2'
       - 'GatewayOperations~GatewayOperations#updateLocalNetworkGateway~url2'

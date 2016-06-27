@@ -33,9 +33,8 @@ items:
     id: checkAvailability
     parent: NotificationHubs
     name: >-
-      checkAvailability(resourceGroupName, namespaceName, parameters,
-      parameters.name, parameters.location, parameters.tags,
-      parameters.isAvailiable, options, options.customHeaders, callback)
+      checkAvailability(resourceGroupName, namespaceName, parameters, options,
+      callback)
     summary: Checks the availability of the given notificationHub in a namespace.
     type: Method
     syntax:
@@ -74,12 +73,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckAvailabilityResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function checkAvailability(resourceGroupName, namespaceName, parameters,
-        parameters.name, parameters.location, parameters.tags,
-        parameters.isAvailiable, options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       NotificationHubs.checkAvailability(resourceGroupName, namespaceName,
-      parameters, parameters.name, parameters.location, parameters.tags,
-      parameters.isAvailiable, options, options.customHeaders, callback)
+      parameters, options, callback)
     children:
       - 'NotificationHubs#checkAvailability~client'
       - 'NotificationHubs#checkAvailability~callback'
@@ -105,40 +102,7 @@ items:
     parent: NotificationHubs
     name: >-
       createOrUpdate(resourceGroupName, namespaceName, notificationHubName,
-      parameters, parameters.location, parameters.tags, parameters.properties,
-      parameters.properties.name, parameters.properties.registrationTtl,
-      parameters.properties.authorizationRules,
-      parameters.properties.apnsCredential,
-      parameters.properties.apnsCredential.properties,
-      parameters.properties.apnsCredential.properties.apnsCertificate,
-      parameters.properties.apnsCredential.properties.certificateKey,
-      parameters.properties.apnsCredential.properties.endpoint,
-      parameters.properties.apnsCredential.properties.thumbprint,
-      parameters.properties.wnsCredential,
-      parameters.properties.wnsCredential.properties,
-      parameters.properties.wnsCredential.properties.packageSid,
-      parameters.properties.wnsCredential.properties.secretKey,
-      parameters.properties.wnsCredential.properties.windowsLiveEndpoint,
-      parameters.properties.gcmCredential,
-      parameters.properties.gcmCredential.properties,
-      parameters.properties.gcmCredential.properties.gcmEndpoint,
-      parameters.properties.gcmCredential.properties.googleApiKey,
-      parameters.properties.mpnsCredential,
-      parameters.properties.mpnsCredential.properties,
-      parameters.properties.mpnsCredential.properties.mpnsCertificate,
-      parameters.properties.mpnsCredential.properties.certificateKey,
-      parameters.properties.mpnsCredential.properties.thumbprint,
-      parameters.properties.admCredential,
-      parameters.properties.admCredential.properties,
-      parameters.properties.admCredential.properties.clientId,
-      parameters.properties.admCredential.properties.clientSecret,
-      parameters.properties.admCredential.properties.authTokenUrl,
-      parameters.properties.baiduCredential,
-      parameters.properties.baiduCredential.properties,
-      parameters.properties.baiduCredential.properties.baiduApiKey,
-      parameters.properties.baiduCredential.properties.baiduEndPoint,
-      parameters.properties.baiduCredential.properties.baiduSecretKey, options,
-      options.customHeaders, callback)
+      parameters, options, callback)
     summary: Creates/Update a NotificationHub in a namespace.
     type: Method
     syntax:
@@ -276,78 +240,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NotificationHubResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, namespaceName,
-        notificationHubName, parameters, parameters.location, parameters.tags,
-        parameters.properties, parameters.properties.name,
-        parameters.properties.registrationTtl,
-        parameters.properties.authorizationRules,
-        parameters.properties.apnsCredential,
-        parameters.properties.apnsCredential.properties,
-        parameters.properties.apnsCredential.properties.apnsCertificate,
-        parameters.properties.apnsCredential.properties.certificateKey,
-        parameters.properties.apnsCredential.properties.endpoint,
-        parameters.properties.apnsCredential.properties.thumbprint,
-        parameters.properties.wnsCredential,
-        parameters.properties.wnsCredential.properties,
-        parameters.properties.wnsCredential.properties.packageSid,
-        parameters.properties.wnsCredential.properties.secretKey,
-        parameters.properties.wnsCredential.properties.windowsLiveEndpoint,
-        parameters.properties.gcmCredential,
-        parameters.properties.gcmCredential.properties,
-        parameters.properties.gcmCredential.properties.gcmEndpoint,
-        parameters.properties.gcmCredential.properties.googleApiKey,
-        parameters.properties.mpnsCredential,
-        parameters.properties.mpnsCredential.properties,
-        parameters.properties.mpnsCredential.properties.mpnsCertificate,
-        parameters.properties.mpnsCredential.properties.certificateKey,
-        parameters.properties.mpnsCredential.properties.thumbprint,
-        parameters.properties.admCredential,
-        parameters.properties.admCredential.properties,
-        parameters.properties.admCredential.properties.clientId,
-        parameters.properties.admCredential.properties.clientSecret,
-        parameters.properties.admCredential.properties.authTokenUrl,
-        parameters.properties.baiduCredential,
-        parameters.properties.baiduCredential.properties,
-        parameters.properties.baiduCredential.properties.baiduApiKey,
-        parameters.properties.baiduCredential.properties.baiduEndPoint,
-        parameters.properties.baiduCredential.properties.baiduSecretKey,
-        options, options.customHeaders, callback);
+        notificationHubName, parameters, options, callback);
     fullName: >-
       NotificationHubs.createOrUpdate(resourceGroupName, namespaceName,
-      notificationHubName, parameters, parameters.location, parameters.tags,
-      parameters.properties, parameters.properties.name,
-      parameters.properties.registrationTtl,
-      parameters.properties.authorizationRules,
-      parameters.properties.apnsCredential,
-      parameters.properties.apnsCredential.properties,
-      parameters.properties.apnsCredential.properties.apnsCertificate,
-      parameters.properties.apnsCredential.properties.certificateKey,
-      parameters.properties.apnsCredential.properties.endpoint,
-      parameters.properties.apnsCredential.properties.thumbprint,
-      parameters.properties.wnsCredential,
-      parameters.properties.wnsCredential.properties,
-      parameters.properties.wnsCredential.properties.packageSid,
-      parameters.properties.wnsCredential.properties.secretKey,
-      parameters.properties.wnsCredential.properties.windowsLiveEndpoint,
-      parameters.properties.gcmCredential,
-      parameters.properties.gcmCredential.properties,
-      parameters.properties.gcmCredential.properties.gcmEndpoint,
-      parameters.properties.gcmCredential.properties.googleApiKey,
-      parameters.properties.mpnsCredential,
-      parameters.properties.mpnsCredential.properties,
-      parameters.properties.mpnsCredential.properties.mpnsCertificate,
-      parameters.properties.mpnsCredential.properties.certificateKey,
-      parameters.properties.mpnsCredential.properties.thumbprint,
-      parameters.properties.admCredential,
-      parameters.properties.admCredential.properties,
-      parameters.properties.admCredential.properties.clientId,
-      parameters.properties.admCredential.properties.clientSecret,
-      parameters.properties.admCredential.properties.authTokenUrl,
-      parameters.properties.baiduCredential,
-      parameters.properties.baiduCredential.properties,
-      parameters.properties.baiduCredential.properties.baiduApiKey,
-      parameters.properties.baiduCredential.properties.baiduEndPoint,
-      parameters.properties.baiduCredential.properties.baiduSecretKey, options,
-      options.customHeaders, callback)
+      notificationHubName, parameters, options, callback)
     children:
       - 'NotificationHubs#createOrUpdate~client'
       - 'NotificationHubs#createOrUpdate~callback'
@@ -374,7 +270,7 @@ items:
     parent: NotificationHubs
     name: >-
       deleteMethod(resourceGroupName, namespaceName, notificationHubName,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: Deletes a notification hub associated with a namespace.
     type: Method
     syntax:
@@ -401,10 +297,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, namespaceName,
-        notificationHubName, options, options.customHeaders, callback);
+        notificationHubName, options, callback);
     fullName: >-
       NotificationHubs.deleteMethod(resourceGroupName, namespaceName,
-      notificationHubName, options, options.customHeaders, callback)
+      notificationHubName, options, callback)
     children:
       - 'NotificationHubs#deleteMethod~client'
       - 'NotificationHubs#deleteMethod~callback'
@@ -425,7 +321,7 @@ items:
     parent: NotificationHubs
     name: >-
       get(resourceGroupName, namespaceName, notificationHubName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Lists the notification hubs associated with a namespace.
     type: Method
     syntax:
@@ -452,10 +348,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NotificationHubResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, namespaceName, notificationHubName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       NotificationHubs.get(resourceGroupName, namespaceName,
-      notificationHubName, options, options.customHeaders, callback)
+      notificationHubName, options, callback)
     children:
       - 'NotificationHubs#get~client'
       - 'NotificationHubs#get~callback'
@@ -476,13 +372,7 @@ items:
     parent: NotificationHubs
     name: >-
       createOrUpdateAuthorizationRule(resourceGroupName, namespaceName,
-      notificationHubName, authorizationRuleName, parameters,
-      parameters.location, parameters.name, parameters.properties,
-      parameters.properties.primaryKey, parameters.properties.secondaryKey,
-      parameters.properties.keyName, parameters.properties.claimType,
-      parameters.properties.claimValue, parameters.properties.rights,
-      parameters.properties.createdTime, parameters.properties.modifiedTime,
-      parameters.properties.revision, options, options.customHeaders, callback)
+      notificationHubName, authorizationRuleName, parameters, options, callback)
     summary: Creates/Updates an authorization rule for a NotificationHub
     type: Method
     syntax:
@@ -552,22 +442,11 @@ items:
       content: >-
         function createOrUpdateAuthorizationRule(resourceGroupName,
         namespaceName, notificationHubName, authorizationRuleName, parameters,
-        parameters.location, parameters.name, parameters.properties,
-        parameters.properties.primaryKey, parameters.properties.secondaryKey,
-        parameters.properties.keyName, parameters.properties.claimType,
-        parameters.properties.claimValue, parameters.properties.rights,
-        parameters.properties.createdTime, parameters.properties.modifiedTime,
-        parameters.properties.revision, options, options.customHeaders,
-        callback);
+        options, callback);
     fullName: >-
       NotificationHubs.createOrUpdateAuthorizationRule(resourceGroupName,
       namespaceName, notificationHubName, authorizationRuleName, parameters,
-      parameters.location, parameters.name, parameters.properties,
-      parameters.properties.primaryKey, parameters.properties.secondaryKey,
-      parameters.properties.keyName, parameters.properties.claimType,
-      parameters.properties.claimValue, parameters.properties.rights,
-      parameters.properties.createdTime, parameters.properties.modifiedTime,
-      parameters.properties.revision, options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'NotificationHubs#createOrUpdateAuthorizationRule~client'
       - 'NotificationHubs#createOrUpdateAuthorizationRule~callback'
@@ -595,8 +474,7 @@ items:
     parent: NotificationHubs
     name: >-
       deleteAuthorizationRule(resourceGroupName, namespaceName,
-      notificationHubName, authorizationRuleName, options,
-      options.customHeaders, callback)
+      notificationHubName, authorizationRuleName, options, callback)
     summary: Deletes a notificationHub authorization rule
     type: Method
     syntax:
@@ -626,12 +504,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteAuthorizationRule(resourceGroupName, namespaceName,
-        notificationHubName, authorizationRuleName, options,
-        options.customHeaders, callback);
+        notificationHubName, authorizationRuleName, options, callback);
     fullName: >-
       NotificationHubs.deleteAuthorizationRule(resourceGroupName, namespaceName,
-      notificationHubName, authorizationRuleName, options,
-      options.customHeaders, callback)
+      notificationHubName, authorizationRuleName, options, callback)
     children:
       - 'NotificationHubs#deleteAuthorizationRule~client'
       - 'NotificationHubs#deleteAuthorizationRule~callback'
@@ -653,8 +529,7 @@ items:
     parent: NotificationHubs
     name: >-
       getAuthorizationRule(resourceGroupName, namespaceName,
-      notificationHubName, authorizationRuleName, options,
-      options.customHeaders, callback)
+      notificationHubName, authorizationRuleName, options, callback)
     summary: Gets an authorization rule for a NotificationHub by name.
     type: Method
     syntax:
@@ -684,12 +559,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleResource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getAuthorizationRule(resourceGroupName, namespaceName,
-        notificationHubName, authorizationRuleName, options,
-        options.customHeaders, callback);
+        notificationHubName, authorizationRuleName, options, callback);
     fullName: >-
       NotificationHubs.getAuthorizationRule(resourceGroupName, namespaceName,
-      notificationHubName, authorizationRuleName, options,
-      options.customHeaders, callback)
+      notificationHubName, authorizationRuleName, options, callback)
     children:
       - 'NotificationHubs#getAuthorizationRule~client'
       - 'NotificationHubs#getAuthorizationRule~callback'
@@ -709,9 +582,7 @@ items:
   - uid: 'NotificationHubs#list'
     id: list
     parent: NotificationHubs
-    name: >-
-      list(resourceGroupName, namespaceName, options, options.customHeaders,
-      callback)
+    name: 'list(resourceGroupName, namespaceName, options, callback)'
     summary: Lists the notification hubs associated with a namespace.
     type: Method
     syntax:
@@ -733,12 +604,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NotificationHubListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, namespaceName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      NotificationHubs.list(resourceGroupName, namespaceName, options,
-      options.customHeaders, callback)
+      content: 'function list(resourceGroupName, namespaceName, options, callback);'
+    fullName: 'NotificationHubs.list(resourceGroupName, namespaceName, options, callback)'
     children:
       - 'NotificationHubs#list~client'
       - 'NotificationHubs#list~callback'
@@ -758,7 +625,7 @@ items:
     parent: NotificationHubs
     name: >-
       listAuthorizationRules(resourceGroupName, namespaceName,
-      notificationHubName, options, options.customHeaders, callback)
+      notificationHubName, options, callback)
     summary: Gets the authorization rules for a NotificationHub.
     type: Method
     syntax:
@@ -785,10 +652,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listAuthorizationRules(resourceGroupName, namespaceName,
-        notificationHubName, options, options.customHeaders, callback);
+        notificationHubName, options, callback);
     fullName: >-
       NotificationHubs.listAuthorizationRules(resourceGroupName, namespaceName,
-      notificationHubName, options, options.customHeaders, callback)
+      notificationHubName, options, callback)
     children:
       - 'NotificationHubs#listAuthorizationRules~client'
       - 'NotificationHubs#listAuthorizationRules~callback'
@@ -809,7 +676,7 @@ items:
     parent: NotificationHubs
     name: >-
       listKeys(resourceGroupName, namespaceName, notificationHubName,
-      authorizationRuleName, options, options.customHeaders, callback)
+      authorizationRuleName, options, callback)
     summary: Gets the Primary and Secondary ConnectionStrings to the NotificationHub
     type: Method
     syntax:
@@ -839,11 +706,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceListKeys} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listKeys(resourceGroupName, namespaceName, notificationHubName,
-        authorizationRuleName, options, options.customHeaders, callback);
+        authorizationRuleName, options, callback);
     fullName: >-
       NotificationHubs.listKeys(resourceGroupName, namespaceName,
-      notificationHubName, authorizationRuleName, options,
-      options.customHeaders, callback)
+      notificationHubName, authorizationRuleName, options, callback)
     children:
       - 'NotificationHubs#listKeys~client'
       - 'NotificationHubs#listKeys~callback'
@@ -865,7 +731,7 @@ items:
     parent: NotificationHubs
     name: >-
       getPnsCredentials(resourceGroupName, namespaceName, notificationHubName,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: Lists the PNS Credentials associated with a notification hub .
     type: Method
     syntax:
@@ -892,10 +758,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NotificationHubResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getPnsCredentials(resourceGroupName, namespaceName,
-        notificationHubName, options, options.customHeaders, callback);
+        notificationHubName, options, callback);
     fullName: >-
       NotificationHubs.getPnsCredentials(resourceGroupName, namespaceName,
-      notificationHubName, options, options.customHeaders, callback)
+      notificationHubName, options, callback)
     children:
       - 'NotificationHubs#getPnsCredentials~client'
       - 'NotificationHubs#getPnsCredentials~callback'
@@ -914,7 +780,7 @@ items:
   - uid: 'NotificationHubs#listNext'
     id: listNext
     parent: NotificationHubs
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Lists the notification hubs associated with a namespace.
     type: Method
     syntax:
@@ -933,12 +799,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link NotificationHubListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      NotificationHubs.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'NotificationHubs.listNext(nextPageLink, options, callback)'
     children:
       - 'NotificationHubs#listNext~client'
       - 'NotificationHubs#listNext~callback'
@@ -952,9 +814,7 @@ items:
   - uid: 'NotificationHubs#listAuthorizationRulesNext'
     id: listAuthorizationRulesNext
     parent: NotificationHubs
-    name: >-
-      listAuthorizationRulesNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listAuthorizationRulesNext(nextPageLink, options, callback)'
     summary: Gets the authorization rules for a NotificationHub.
     type: Method
     syntax:
@@ -973,12 +833,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SharedAccessAuthorizationRuleListResult}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAuthorizationRulesNext(nextPageLink, options,
-        options.customHeaders, callback);
+      content: 'function listAuthorizationRulesNext(nextPageLink, options, callback);'
     fullName: >-
       NotificationHubs.listAuthorizationRulesNext(nextPageLink, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'NotificationHubs#listAuthorizationRulesNext~client'
       - 'NotificationHubs#listAuthorizationRulesNext~callback'

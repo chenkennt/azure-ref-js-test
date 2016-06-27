@@ -26,9 +26,7 @@ items:
   - uid: 'CustomImageOperations#list'
     id: list
     parent: CustomImageOperations
-    name: >-
-      list(resourceGroupName, labName, options, options.filter, options.top,
-      options.orderBy, options.customHeaders, callback)
+    name: 'list(resourceGroupName, labName, options, callback)'
     summary: List custom images.
     type: Method
     syntax:
@@ -57,13 +55,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCustomImage} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, labName, options, options.filter,
-        options.top, options.orderBy, options.customHeaders, callback);
-    fullName: >-
-      CustomImageOperations.list(resourceGroupName, labName, options,
-      options.filter, options.top, options.orderBy, options.customHeaders,
-      callback)
+      content: 'function list(resourceGroupName, labName, options, callback);'
+    fullName: 'CustomImageOperations.list(resourceGroupName, labName, options, callback)'
     children:
       - 'CustomImageOperations#list~client'
       - 'CustomImageOperations#list~callback'
@@ -84,9 +77,7 @@ items:
   - uid: 'CustomImageOperations#getResource'
     id: getResource
     parent: CustomImageOperations
-    name: >-
-      getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'getResource(resourceGroupName, labName, name, options, callback)'
     summary: Get custom image.
     type: Method
     syntax:
@@ -113,10 +104,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomImage} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       CustomImageOperations.getResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'CustomImageOperations#getResource~client'
       - 'CustomImageOperations#getResource~callback'
@@ -137,14 +128,7 @@ items:
     parent: CustomImageOperations
     name: >-
       createOrUpdateResource(resourceGroupName, labName, name, customImage,
-      customImage.vm, customImage.vm.sourceVmId, customImage.vm.sysPrep,
-      customImage.vm.windowsOsInfo, customImage.vm.windowsOsInfo.windowsOsState,
-      customImage.vm.linuxOsInfo, customImage.vm.linuxOsInfo.linuxOsState,
-      customImage.vhd, customImage.vhd.imageName, customImage.vhd.sysPrep,
-      customImage.description, customImage.osType, customImage.author,
-      customImage.creationDate, customImage.provisioningState, customImage.id,
-      customImage.name, customImage.type, customImage.location,
-      customImage.tags, options, options.customHeaders, callback)
+      options, callback)
     summary: "Create or replace an existing custom image. This operation can take a while\rto complete."
     type: Method
     syntax:
@@ -232,26 +216,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomImage} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateResource(resourceGroupName, labName, name,
-        customImage, customImage.vm, customImage.vm.sourceVmId,
-        customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
-        customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
-        customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
-        customImage.vhd.imageName, customImage.vhd.sysPrep,
-        customImage.description, customImage.osType, customImage.author,
-        customImage.creationDate, customImage.provisioningState, customImage.id,
-        customImage.name, customImage.type, customImage.location,
-        customImage.tags, options, options.customHeaders, callback);
+        customImage, options, callback);
     fullName: >-
       CustomImageOperations.createOrUpdateResource(resourceGroupName, labName,
-      name, customImage, customImage.vm, customImage.vm.sourceVmId,
-      customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
-      customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
-      customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
-      customImage.vhd.imageName, customImage.vhd.sysPrep,
-      customImage.description, customImage.osType, customImage.author,
-      customImage.creationDate, customImage.provisioningState, customImage.id,
-      customImage.name, customImage.type, customImage.location,
-      customImage.tags, options, options.customHeaders, callback)
+      name, customImage, options, callback)
     children:
       - 'CustomImageOperations#createOrUpdateResource~client'
       - 'CustomImageOperations#createOrUpdateResource~callback'
@@ -261,14 +229,7 @@ items:
     parent: CustomImageOperations
     name: >-
       beginCreateOrUpdateResource(resourceGroupName, labName, name, customImage,
-      customImage.vm, customImage.vm.sourceVmId, customImage.vm.sysPrep,
-      customImage.vm.windowsOsInfo, customImage.vm.windowsOsInfo.windowsOsState,
-      customImage.vm.linuxOsInfo, customImage.vm.linuxOsInfo.linuxOsState,
-      customImage.vhd, customImage.vhd.imageName, customImage.vhd.sysPrep,
-      customImage.description, customImage.osType, customImage.author,
-      customImage.creationDate, customImage.provisioningState, customImage.id,
-      customImage.name, customImage.type, customImage.location,
-      customImage.tags, options, options.customHeaders, callback)
+      options, callback)
     summary: "Create or replace an existing custom image. This operation can take a while\rto complete."
     type: Method
     syntax:
@@ -356,26 +317,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CustomImage} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdateResource(resourceGroupName, labName, name,
-        customImage, customImage.vm, customImage.vm.sourceVmId,
-        customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
-        customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
-        customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
-        customImage.vhd.imageName, customImage.vhd.sysPrep,
-        customImage.description, customImage.osType, customImage.author,
-        customImage.creationDate, customImage.provisioningState, customImage.id,
-        customImage.name, customImage.type, customImage.location,
-        customImage.tags, options, options.customHeaders, callback);
+        customImage, options, callback);
     fullName: >-
       CustomImageOperations.beginCreateOrUpdateResource(resourceGroupName,
-      labName, name, customImage, customImage.vm, customImage.vm.sourceVmId,
-      customImage.vm.sysPrep, customImage.vm.windowsOsInfo,
-      customImage.vm.windowsOsInfo.windowsOsState, customImage.vm.linuxOsInfo,
-      customImage.vm.linuxOsInfo.linuxOsState, customImage.vhd,
-      customImage.vhd.imageName, customImage.vhd.sysPrep,
-      customImage.description, customImage.osType, customImage.author,
-      customImage.creationDate, customImage.provisioningState, customImage.id,
-      customImage.name, customImage.type, customImage.location,
-      customImage.tags, options, options.customHeaders, callback)
+      labName, name, customImage, options, callback)
     children:
       - 'CustomImageOperations#beginCreateOrUpdateResource~client'
       - 'CustomImageOperations#beginCreateOrUpdateResource~callback'
@@ -400,9 +345,7 @@ items:
   - uid: 'CustomImageOperations#deleteResource'
     id: deleteResource
     parent: CustomImageOperations
-    name: >-
-      deleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'deleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete custom image. This operation can take a while to complete.
     type: Method
     syntax:
@@ -429,10 +372,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       CustomImageOperations.deleteResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'CustomImageOperations#deleteResource~client'
       - 'CustomImageOperations#deleteResource~callback'
@@ -440,9 +383,7 @@ items:
   - uid: 'CustomImageOperations#beginDeleteResource'
     id: beginDeleteResource
     parent: CustomImageOperations
-    name: >-
-      beginDeleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete custom image. This operation can take a while to complete.
     type: Method
     syntax:
@@ -469,10 +410,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       CustomImageOperations.beginDeleteResource(resourceGroupName, labName,
-      name, options, options.customHeaders, callback)
+      name, options, callback)
     children:
       - 'CustomImageOperations#beginDeleteResource~client'
       - 'CustomImageOperations#beginDeleteResource~callback'
@@ -491,7 +432,7 @@ items:
   - uid: 'CustomImageOperations#listNext'
     id: listNext
     parent: CustomImageOperations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: List custom images.
     type: Method
     syntax:
@@ -510,12 +451,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationCustomImage} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      CustomImageOperations.listNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'CustomImageOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'CustomImageOperations#listNext~client'
       - 'CustomImageOperations#listNext~callback'

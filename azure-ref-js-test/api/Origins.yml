@@ -29,7 +29,7 @@ items:
     parent: Origins
     name: >-
       listByEndpoint(endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -55,10 +55,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link OriginListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listByEndpoint(endpointName, profileName, resourceGroupName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Origins.listByEndpoint(endpointName, profileName, resourceGroupName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Origins#listByEndpoint~client'
       - 'Origins#listByEndpoint~callback'
@@ -79,7 +79,7 @@ items:
     parent: Origins
     name: >-
       get(originName, endpointName, profileName, resourceGroupName, options,
-      options.customHeaders, callback)
+      callback)
     type: Method
     syntax:
       parameters:
@@ -108,10 +108,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(originName, endpointName, profileName, resourceGroupName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Origins.get(originName, endpointName, profileName, resourceGroupName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Origins#get~client'
       - 'Origins#get~callback'
@@ -132,9 +132,8 @@ items:
     id: create
     parent: Origins
     name: >-
-      create(originName, originProperties, originProperties.hostName,
-      originProperties.httpPort, originProperties.httpsPort, endpointName,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      create(originName, originProperties, endpointName, profileName,
+      resourceGroupName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -174,14 +173,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function create(originName, originProperties, originProperties.hostName,
-        originProperties.httpPort, originProperties.httpsPort, endpointName,
-        profileName, resourceGroupName, options, options.customHeaders,
-        callback);
+        function create(originName, originProperties, endpointName, profileName,
+        resourceGroupName, options, callback);
     fullName: >-
-      Origins.create(originName, originProperties, originProperties.hostName,
-      originProperties.httpPort, originProperties.httpsPort, endpointName,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      Origins.create(originName, originProperties, endpointName, profileName,
+      resourceGroupName, options, callback)
     children:
       - 'Origins#create~client'
       - 'Origins#create~callback'
@@ -190,9 +186,8 @@ items:
     id: beginCreate
     parent: Origins
     name: >-
-      beginCreate(originName, originProperties, originProperties.hostName,
-      originProperties.httpPort, originProperties.httpsPort, endpointName,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      beginCreate(originName, originProperties, endpointName, profileName,
+      resourceGroupName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -232,15 +227,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function beginCreate(originName, originProperties,
-        originProperties.hostName, originProperties.httpPort,
-        originProperties.httpsPort, endpointName, profileName,
-        resourceGroupName, options, options.customHeaders, callback);
+        function beginCreate(originName, originProperties, endpointName,
+        profileName, resourceGroupName, options, callback);
     fullName: >-
-      Origins.beginCreate(originName, originProperties,
-      originProperties.hostName, originProperties.httpPort,
-      originProperties.httpsPort, endpointName, profileName, resourceGroupName,
-      options, options.customHeaders, callback)
+      Origins.beginCreate(originName, originProperties, endpointName,
+      profileName, resourceGroupName, options, callback)
     children:
       - 'Origins#beginCreate~client'
       - 'Origins#beginCreate~callback'
@@ -267,9 +258,8 @@ items:
     id: update
     parent: Origins
     name: >-
-      update(originName, originProperties, originProperties.hostName,
-      originProperties.httpPort, originProperties.httpsPort, endpointName,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      update(originName, originProperties, endpointName, profileName,
+      resourceGroupName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -309,14 +299,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function update(originName, originProperties, originProperties.hostName,
-        originProperties.httpPort, originProperties.httpsPort, endpointName,
-        profileName, resourceGroupName, options, options.customHeaders,
-        callback);
+        function update(originName, originProperties, endpointName, profileName,
+        resourceGroupName, options, callback);
     fullName: >-
-      Origins.update(originName, originProperties, originProperties.hostName,
-      originProperties.httpPort, originProperties.httpsPort, endpointName,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      Origins.update(originName, originProperties, endpointName, profileName,
+      resourceGroupName, options, callback)
     children:
       - 'Origins#update~client'
       - 'Origins#update~callback'
@@ -325,9 +312,8 @@ items:
     id: beginUpdate
     parent: Origins
     name: >-
-      beginUpdate(originName, originProperties, originProperties.hostName,
-      originProperties.httpPort, originProperties.httpsPort, endpointName,
-      profileName, resourceGroupName, options, options.customHeaders, callback)
+      beginUpdate(originName, originProperties, endpointName, profileName,
+      resourceGroupName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -367,15 +353,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function beginUpdate(originName, originProperties,
-        originProperties.hostName, originProperties.httpPort,
-        originProperties.httpsPort, endpointName, profileName,
-        resourceGroupName, options, options.customHeaders, callback);
+        function beginUpdate(originName, originProperties, endpointName,
+        profileName, resourceGroupName, options, callback);
     fullName: >-
-      Origins.beginUpdate(originName, originProperties,
-      originProperties.hostName, originProperties.httpPort,
-      originProperties.httpsPort, endpointName, profileName, resourceGroupName,
-      options, options.customHeaders, callback)
+      Origins.beginUpdate(originName, originProperties, endpointName,
+      profileName, resourceGroupName, options, callback)
     children:
       - 'Origins#beginUpdate~client'
       - 'Origins#beginUpdate~callback'
@@ -403,7 +385,7 @@ items:
     parent: Origins
     name: >-
       deleteIfExists(originName, endpointName, profileName, resourceGroupName,
-      options, options.customHeaders, callback)
+      options, callback)
     type: Method
     syntax:
       parameters:
@@ -432,10 +414,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteIfExists(originName, endpointName, profileName,
-        resourceGroupName, options, options.customHeaders, callback);
+        resourceGroupName, options, callback);
     fullName: >-
       Origins.deleteIfExists(originName, endpointName, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      resourceGroupName, options, callback)
     children:
       - 'Origins#deleteIfExists~client'
       - 'Origins#deleteIfExists~callback'
@@ -445,7 +427,7 @@ items:
     parent: Origins
     name: >-
       beginDeleteIfExists(originName, endpointName, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      resourceGroupName, options, callback)
     type: Method
     syntax:
       parameters:
@@ -474,10 +456,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Origin} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteIfExists(originName, endpointName, profileName,
-        resourceGroupName, options, options.customHeaders, callback);
+        resourceGroupName, options, callback);
     fullName: >-
       Origins.beginDeleteIfExists(originName, endpointName, profileName,
-      resourceGroupName, options, options.customHeaders, callback)
+      resourceGroupName, options, callback)
     children:
       - 'Origins#beginDeleteIfExists~client'
       - 'Origins#beginDeleteIfExists~callback'

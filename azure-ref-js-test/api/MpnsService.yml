@@ -144,13 +144,7 @@ items:
   - uid: 'MpnsService#createFlipTileRegistration'
     id: createFlipTileRegistration
     parent: MpnsService
-    name: >-
-      createFlipTileRegistration(channel, tags, template,
-      template.backgroundImage, template.count, template.title,
-      template.backBackgroundImage, template.backTitle, template.backContent,
-      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
-      template.wideBackContent, template.wideBackBackgroundImage, options,
-      options.headers, callback)
+    name: 'createFlipTileRegistration(channel, tags, template, options, callback)'
     summary: >-
       Creates a registration with a FlipTile template (Only Windows Phone
       version 7.8 or later). For more information see
@@ -220,27 +214,15 @@ items:
       return:
         type: undefined
       content: >-
-        function createFlipTileRegistration(channel, tags, template,
-        template.backgroundImage, template.count, template.title,
-        template.backBackgroundImage, template.backTitle, template.backContent,
-        template.id, template.smallBackgroundImage,
-        template.wideBackgroundImage, template.wideBackContent,
-        template.wideBackBackgroundImage, options, options.headers, callback);
+        function createFlipTileRegistration(channel, tags, template, options,
+        callback);
     fullName: >-
-      MpnsService.createFlipTileRegistration(channel, tags, template,
-      template.backgroundImage, template.count, template.title,
-      template.backBackgroundImage, template.backTitle, template.backContent,
-      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
-      template.wideBackContent, template.wideBackBackgroundImage, options,
-      options.headers, callback)
+      MpnsService.createFlipTileRegistration(channel, tags, template, options,
+      callback)
   - uid: 'MpnsService#createTileRegistration'
     id: createTileRegistration
     parent: MpnsService
-    name: >-
-      createTileRegistration(channel, tags, template, template.backgroundImage,
-      template.count, template.title, template.backBackgroundImage,
-      template.backTitle, template.backContent, template.id, options,
-      options.headers, callback)
+    name: 'createTileRegistration(channel, tags, template, options, callback)'
     summary: >-
       Creates a registration with a Tile template. For more information see
       http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
@@ -289,21 +271,15 @@ items:
       return:
         type: undefined
       content: >-
-        function createTileRegistration(channel, tags, template,
-        template.backgroundImage, template.count, template.title,
-        template.backBackgroundImage, template.backTitle, template.backContent,
-        template.id, options, options.headers, callback);
+        function createTileRegistration(channel, tags, template, options,
+        callback);
     fullName: >-
-      MpnsService.createTileRegistration(channel, tags, template,
-      template.backgroundImage, template.count, template.title,
-      template.backBackgroundImage, template.backTitle, template.backContent,
-      template.id, options, options.headers, callback)
+      MpnsService.createTileRegistration(channel, tags, template, options,
+      callback)
   - uid: 'MpnsService#createToastRegistration'
     id: createToastRegistration
     parent: MpnsService
-    name: >-
-      createToastRegistration(channel, tags, template, template.text1,
-      template.text2, template.param, options, options.headers, callback)
+    name: 'createToastRegistration(channel, tags, template, options, callback)'
     summary: >-
       Creates a registration with a Toast template For more information see
       http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
@@ -340,19 +316,15 @@ items:
       return:
         type: undefined
       content: >-
-        function createToastRegistration(channel, tags, template,
-        template.text1, template.text2, template.param, options,
-        options.headers, callback);
+        function createToastRegistration(channel, tags, template, options,
+        callback);
     fullName: >-
-      MpnsService.createToastRegistration(channel, tags, template,
-      template.text1, template.text2, template.param, options, options.headers,
+      MpnsService.createToastRegistration(channel, tags, template, options,
       callback)
   - uid: 'MpnsService#createRawTemplateRegistration'
     id: createRawTemplateRegistration
     parent: MpnsService
-    name: >-
-      createRawTemplateRegistration(channel, tags, template, options,
-      options.headers, callback)
+    name: 'createRawTemplateRegistration(channel, tags, template, options, callback)'
     summary: Creates a raw template registration.
     type: Method
     syntax:
@@ -379,10 +351,10 @@ items:
         type: undefined
       content: >-
         function createRawTemplateRegistration(channel, tags, template, options,
-        options.headers, callback);
+        callback);
     fullName: >-
       MpnsService.createRawTemplateRegistration(channel, tags, template,
-      options, options.headers, callback)
+      options, callback)
     children:
       - 'MpnsService#createRawTemplateRegistration~options'
       - 'MpnsService#createRawTemplateRegistration~registrationXml'
@@ -392,7 +364,7 @@ items:
     parent: MpnsService
     name: >-
       createOrUpdateRawTemplateRegistration(registrationId, channel, tags,
-      template, options, options.headers, callback)
+      template, options, callback)
     summary: Creates a raw template registration.
     type: Method
     syntax:
@@ -422,10 +394,10 @@ items:
         type: undefined
       content: >-
         function createOrUpdateRawTemplateRegistration(registrationId, channel,
-        tags, template, options, options.headers, callback);
+        tags, template, options, callback);
     fullName: >-
       MpnsService.createOrUpdateRawTemplateRegistration(registrationId, channel,
-      tags, template, options, options.headers, callback)
+      tags, template, options, callback)
     children:
       - 'MpnsService#createOrUpdateRawTemplateRegistration~options'
       - 'MpnsService#createOrUpdateRawTemplateRegistration~registrationXml'
@@ -435,11 +407,7 @@ items:
     parent: MpnsService
     name: >-
       updateFlipTileRegistration(registrationId, channel, tags, template,
-      template.backgroundImage, template.count, template.title,
-      template.backBackgroundImage, template.backTitle, template.backContent,
-      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
-      template.wideBackContent, template.wideBackBackgroundImage, options,
-      options.headers, callback)
+      options, callback)
     summary: >-
       Updates a registration with a FlipTile template (Only Windows Phone
       version 7.8 or later). For more information see
@@ -513,26 +481,16 @@ items:
         type: undefined
       content: >-
         function updateFlipTileRegistration(registrationId, channel, tags,
-        template, template.backgroundImage, template.count, template.title,
-        template.backBackgroundImage, template.backTitle, template.backContent,
-        template.id, template.smallBackgroundImage,
-        template.wideBackgroundImage, template.wideBackContent,
-        template.wideBackBackgroundImage, options, options.headers, callback);
+        template, options, callback);
     fullName: >-
       MpnsService.updateFlipTileRegistration(registrationId, channel, tags,
-      template, template.backgroundImage, template.count, template.title,
-      template.backBackgroundImage, template.backTitle, template.backContent,
-      template.id, template.smallBackgroundImage, template.wideBackgroundImage,
-      template.wideBackContent, template.wideBackBackgroundImage, options,
-      options.headers, callback)
+      template, options, callback)
   - uid: 'MpnsService#updateTileRegistration'
     id: updateTileRegistration
     parent: MpnsService
     name: >-
-      updateTileRegistration(registrationId, channel, tags, template,
-      template.backgroundImage, template.count, template.title,
-      template.backBackgroundImage, template.backTitle, template.backContent,
-      template.id, options, options.headers, callback)
+      updateTileRegistration(registrationId, channel, tags, template, options,
+      callback)
     summary: "Updates a registration with a Tile template. For more information see http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.\r\r\n<<<<<<< HEAD"
     type: Method
     syntax:
@@ -583,20 +541,15 @@ items:
         type: undefined
       content: >-
         function updateTileRegistration(registrationId, channel, tags, template,
-        template.backgroundImage, template.count, template.title,
-        template.backBackgroundImage, template.backTitle, template.backContent,
-        template.id, options, options.headers, callback);
+        options, callback);
     fullName: >-
       MpnsService.updateTileRegistration(registrationId, channel, tags,
-      template, template.backgroundImage, template.count, template.title,
-      template.backBackgroundImage, template.backTitle, template.backContent,
-      template.id, options, options.headers, callback)
+      template, options, callback)
   - uid: 'MpnsService#updatesToastRegistration'
     id: updatesToastRegistration
     parent: MpnsService
     name: >-
-      updatesToastRegistration(registrationId, channel, tags, template,
-      template.text1, template.text2, template.param, options, options.headers,
+      updatesToastRegistration(registrationId, channel, tags, template, options,
       callback)
     summary: >-
       Updates a registration with a Toast template. For more information see
@@ -638,18 +591,16 @@ items:
         type: undefined
       content: >-
         function updatesToastRegistration(registrationId, channel, tags,
-        template, template.text1, template.text2, template.param, options,
-        options.headers, callback);
+        template, options, callback);
     fullName: >-
       MpnsService.updatesToastRegistration(registrationId, channel, tags,
-      template, template.text1, template.text2, template.param, options,
-      options.headers, callback)
+      template, options, callback)
   - uid: 'MpnsService#updatesRawTemplateRegistration'
     id: updatesRawTemplateRegistration
     parent: MpnsService
     name: >-
       updatesRawTemplateRegistration(registrationId, channel, tags, template,
-      options, options.headers, options.etag, callback)
+      options, callback)
     summary: Updates a raw template registration.
     type: Method
     syntax:
@@ -682,10 +633,10 @@ items:
         type: undefined
       content: >-
         function updatesRawTemplateRegistration(registrationId, channel, tags,
-        template, options, options.headers, options.etag, callback);
+        template, options, callback);
     fullName: >-
       MpnsService.updatesRawTemplateRegistration(registrationId, channel, tags,
-      template, options, options.headers, options.etag, callback)
+      template, options, callback)
     children:
       - 'MpnsService#updatesRawTemplateRegistration~options'
       - 'MpnsService#updatesRawTemplateRegistration~registrationXml'
@@ -693,9 +644,7 @@ items:
   - uid: 'MpnsService#listRegistrationsByChannel'
     id: listRegistrationsByChannel
     parent: MpnsService
-    name: >-
-      listRegistrationsByChannel(channel, options, options.top, options.skip,
-      callback)
+    name: 'listRegistrationsByChannel(channel, options, callback)'
     summary: Retrieves a registration by channel.
     type: Method
     syntax:
@@ -721,24 +670,15 @@ items:
           description: The callback function.
       return:
         type: undefined
-      content: >-
-        function listRegistrationsByChannel(channel, options, options.top,
-        options.skip, callback);
-    fullName: >-
-      MpnsService.listRegistrationsByChannel(channel, options, options.top,
-      options.skip, callback)
+      content: 'function listRegistrationsByChannel(channel, options, callback);'
+    fullName: 'MpnsService.listRegistrationsByChannel(channel, options, callback)'
     children:
       - 'MpnsService#listRegistrationsByChannel~options'
       - 'MpnsService#listRegistrationsByChannel~webResource'
   - uid: 'MpnsService#sendFlipTile'
     id: sendFlipTile
     parent: MpnsService
-    name: >-
-      sendFlipTile(tags, payload, payload.backgroundImage, payload.count,
-      payload.title, payload.backBackgroundImage, payload.backTitle,
-      payload.backContent, payload.id, payload.smallBackgroundImage,
-      payload.wideBackgroundImage, payload.wideBackContent,
-      payload.wideBackBackgroundImage, options, options.headers, callback)
+    name: 'sendFlipTile(tags, payload, options, callback)'
     summary: >-
       Sends a FlipTile notification (Only Windows Phone version 7.8 or later).
       For more information see
@@ -804,27 +744,12 @@ items:
           description: The callback function.
       return:
         type: undefined
-      content: >-
-        function sendFlipTile(tags, payload, payload.backgroundImage,
-        payload.count, payload.title, payload.backBackgroundImage,
-        payload.backTitle, payload.backContent, payload.id,
-        payload.smallBackgroundImage, payload.wideBackgroundImage,
-        payload.wideBackContent, payload.wideBackBackgroundImage, options,
-        options.headers, callback);
-    fullName: >-
-      MpnsService.sendFlipTile(tags, payload, payload.backgroundImage,
-      payload.count, payload.title, payload.backBackgroundImage,
-      payload.backTitle, payload.backContent, payload.id,
-      payload.smallBackgroundImage, payload.wideBackgroundImage,
-      payload.wideBackContent, payload.wideBackBackgroundImage, options,
-      options.headers, callback)
+      content: 'function sendFlipTile(tags, payload, options, callback);'
+    fullName: 'MpnsService.sendFlipTile(tags, payload, options, callback)'
   - uid: 'MpnsService#sendTile'
     id: sendTile
     parent: MpnsService
-    name: >-
-      sendTile(tags, payload, payload.backgroundImage, payload.count,
-      payload.title, payload.backBackgroundImage, payload.backTitle,
-      payload.backContent, payload.id, options, options.headers, callback)
+    name: 'sendTile(tags, payload, options, callback)'
     summary: >-
       Sends a Tile notification. For more information see
       http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
@@ -869,21 +794,12 @@ items:
           description: The callback function.
       return:
         type: undefined
-      content: >-
-        function sendTile(tags, payload, payload.backgroundImage, payload.count,
-        payload.title, payload.backBackgroundImage, payload.backTitle,
-        payload.backContent, payload.id, options, options.headers, callback);
-    fullName: >-
-      MpnsService.sendTile(tags, payload, payload.backgroundImage,
-      payload.count, payload.title, payload.backBackgroundImage,
-      payload.backTitle, payload.backContent, payload.id, options,
-      options.headers, callback)
+      content: 'function sendTile(tags, payload, options, callback);'
+    fullName: 'MpnsService.sendTile(tags, payload, options, callback)'
   - uid: 'MpnsService#sendToast'
     id: sendToast
     parent: MpnsService
-    name: >-
-      sendToast(tags, payload, payload.text1, payload.text2, payload.param,
-      options, options.headers, callback)
+    name: 'sendToast(tags, payload, options, callback)'
     summary: >-
       Sends a Toast notification. For more information see
       http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
@@ -916,18 +832,12 @@ items:
           description: The callback function.
       return:
         type: undefined
-      content: >-
-        function sendToast(tags, payload, payload.text1, payload.text2,
-        payload.param, options, options.headers, callback);
-    fullName: >-
-      MpnsService.sendToast(tags, payload, payload.text1, payload.text2,
-      payload.param, options, options.headers, callback)
+      content: 'function sendToast(tags, payload, options, callback);'
+    fullName: 'MpnsService.sendToast(tags, payload, options, callback)'
   - uid: 'MpnsService#send'
     id: send
     parent: MpnsService
-    name: >-
-      send(tags, payload, targetName, notificationClass, options,
-      options.headers, callback)
+    name: 'send(tags, payload, targetName, notificationClass, options, callback)'
     summary: >-
       Sends a custom MPNS notification. Use this method if you want to have full
       control on the payload.
@@ -959,10 +869,10 @@ items:
         type: undefined
       content: >-
         function send(tags, payload, targetName, notificationClass, options,
-        options.headers, callback);
+        callback);
     fullName: >-
       MpnsService.send(tags, payload, targetName, notificationClass, options,
-      options.headers, callback)
+      callback)
     children:
       - 'MpnsService#send~options'
       - 'MpnsService#send~headers'
@@ -970,9 +880,7 @@ items:
   - uid: 'MpnsService#_createBody'
     id: _createBody
     parent: MpnsService
-    name: >-
-      _createBody(elementName, channel, tags, template, options,
-      options.pnsCredentialName, options.headers)
+    name: '_createBody(elementName, channel, tags, template, options)'
     summary: Creates a template registration body.
     type: Method
     syntax:
@@ -1000,12 +908,8 @@ items:
           description: The mpns headers to include.
       return:
         type: undefined
-      content: >-
-        function _createBody(elementName, channel, tags, template, options,
-        options.pnsCredentialName, options.headers);
-    fullName: >-
-      MpnsService._createBody(elementName, channel, tags, template, options,
-      options.pnsCredentialName, options.headers)
+      content: 'function _createBody(elementName, channel, tags, template, options);'
+    fullName: 'MpnsService._createBody(elementName, channel, tags, template, options)'
     children:
       - 'MpnsService#_createBody~registration'
       - 'MpnsService#_createBody~tags'
@@ -1015,9 +919,7 @@ items:
   - uid: 'MpnsService#_createTemplateBody'
     id: _createTemplateBody
     parent: MpnsService
-    name: >-
-      _createTemplateBody(channel, tags, template, options,
-      options.pnsCredentialName, options.headers)
+    name: '_createTemplateBody(channel, tags, template, options)'
     summary: Creates a template registration body.
     type: Method
     syntax:
@@ -1042,12 +944,8 @@ items:
           description: The mpns headers to include.
       return:
         type: undefined
-      content: >-
-        function _createTemplateBody(channel, tags, template, options,
-        options.pnsCredentialName, options.headers);
-    fullName: >-
-      MpnsService._createTemplateBody(channel, tags, template, options,
-      options.pnsCredentialName, options.headers)
+      content: 'function _createTemplateBody(channel, tags, template, options);'
+    fullName: 'MpnsService._createTemplateBody(channel, tags, template, options)'
 references:
   - uid: string
     name: string

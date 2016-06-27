@@ -24,11 +24,7 @@ items:
   - uid: 'Applications#create'
     id: create
     parent: Applications
-    name: >-
-      create(parameters, parameters.availableToOtherTenants,
-      parameters.displayName, parameters.homepage, parameters.identifierUris,
-      parameters.replyUrls, parameters.keyCredentials,
-      parameters.passwordCredentials, options, options.customHeaders, callback)
+    name: 'create(parameters, options, callback)'
     summary: "Create a new application. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
     type: Method
     syntax:
@@ -68,17 +64,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Application} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function create(parameters, parameters.availableToOtherTenants,
-        parameters.displayName, parameters.homepage, parameters.identifierUris,
-        parameters.replyUrls, parameters.keyCredentials,
-        parameters.passwordCredentials, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Applications.create(parameters, parameters.availableToOtherTenants,
-      parameters.displayName, parameters.homepage, parameters.identifierUris,
-      parameters.replyUrls, parameters.keyCredentials,
-      parameters.passwordCredentials, options, options.customHeaders, callback)
+      content: 'function create(parameters, options, callback);'
+    fullName: 'Applications.create(parameters, options, callback)'
     children:
       - 'Applications#create~client'
       - 'Applications#create~callback'
@@ -101,7 +88,7 @@ items:
   - uid: 'Applications#list'
     id: list
     parent: Applications
-    name: 'list(options, options.filter, options.customHeaders, callback)'
+    name: 'list(options, callback)'
     summary: "Lists applications by filter parameters. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
     type: Method
     syntax:
@@ -120,10 +107,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ApplicationListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function list(options, options.filter, options.customHeaders, callback);'
-    fullName: >-
-      Applications.list(options, options.filter, options.customHeaders,
-      callback)
+      content: 'function list(options, callback);'
+    fullName: 'Applications.list(options, callback)'
     children:
       - 'Applications#list~client'
       - 'Applications#list~callback'
@@ -141,9 +126,7 @@ items:
   - uid: 'Applications#deleteMethod'
     id: deleteMethod
     parent: Applications
-    name: >-
-      deleteMethod(applicationObjectId, options, options.customHeaders,
-      callback)
+    name: 'deleteMethod(applicationObjectId, options, callback)'
     summary: "Delete an application. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
     type: Method
     syntax:
@@ -162,12 +145,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(applicationObjectId, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Applications.deleteMethod(applicationObjectId, options,
-      options.customHeaders, callback)
+      content: 'function deleteMethod(applicationObjectId, options, callback);'
+    fullName: 'Applications.deleteMethod(applicationObjectId, options, callback)'
     children:
       - 'Applications#deleteMethod~client'
       - 'Applications#deleteMethod~callback'
@@ -185,7 +164,7 @@ items:
   - uid: 'Applications#get'
     id: get
     parent: Applications
-    name: 'get(applicationObjectId, options, options.customHeaders, callback)'
+    name: 'get(applicationObjectId, options, callback)'
     summary: "Get an application by object Id. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
     type: Method
     syntax:
@@ -204,12 +183,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Application} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(applicationObjectId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Applications.get(applicationObjectId, options, options.customHeaders,
-      callback)
+      content: 'function get(applicationObjectId, options, callback);'
+    fullName: 'Applications.get(applicationObjectId, options, callback)'
     children:
       - 'Applications#get~client'
       - 'Applications#get~callback'
@@ -227,11 +202,7 @@ items:
   - uid: 'Applications#patch'
     id: patch
     parent: Applications
-    name: >-
-      patch(applicationObjectId, parameters, parameters.displayName,
-      parameters.homepage, parameters.identifierUris, parameters.replyUrls,
-      parameters.keyCredentials, parameters.passwordCredentials, options,
-      options.customHeaders, callback)
+    name: 'patch(applicationObjectId, parameters, options, callback)'
     summary: "Update existing application. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/hh974476.aspx"
     type: Method
     syntax:
@@ -271,16 +242,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function patch(applicationObjectId, parameters, parameters.displayName,
-        parameters.homepage, parameters.identifierUris, parameters.replyUrls,
-        parameters.keyCredentials, parameters.passwordCredentials, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Applications.patch(applicationObjectId, parameters,
-      parameters.displayName, parameters.homepage, parameters.identifierUris,
-      parameters.replyUrls, parameters.keyCredentials,
-      parameters.passwordCredentials, options, options.customHeaders, callback)
+      content: 'function patch(applicationObjectId, parameters, options, callback);'
+    fullName: 'Applications.patch(applicationObjectId, parameters, options, callback)'
     children:
       - 'Applications#patch~client'
       - 'Applications#patch~callback'

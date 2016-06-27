@@ -23,11 +23,7 @@ items:
   - uid: 'DefinitionOperations~DefinitionOperations#create'
     id: create
     parent: DefinitionOperations~DefinitionOperations
-    name: >-
-      create(profileName, parameters, parameters.dnsOptions,
-      parameters.dnsOptions.timeToLiveInSeconds, parameters.monitors,
-      parameters.policy, parameters.policy.loadBalancingMethod,
-      parameters.policy.endpoints, callback)
+    name: 'create(profileName, parameters, callback)'
     summary: "Creates a new definition for a specified profile.  (see\rhttp://msdn.microsoft.com/en-us/library/hh758257.aspx for more\rinformation)"
     type: Method
     syntax:
@@ -60,16 +56,9 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(profileName, parameters, parameters.dnsOptions,
-        parameters.dnsOptions.timeToLiveInSeconds, parameters.monitors,
-        parameters.policy, parameters.policy.loadBalancingMethod,
-        parameters.policy.endpoints, callback);
+      content: 'function create(profileName, parameters, callback);'
     fullName: >-
       DefinitionOperations~DefinitionOperations.create(profileName, parameters,
-      parameters.dnsOptions, parameters.dnsOptions.timeToLiveInSeconds,
-      parameters.monitors, parameters.policy,
-      parameters.policy.loadBalancingMethod, parameters.policy.endpoints,
       callback)
     children:
       - 'DefinitionOperations~DefinitionOperations#create~loweredIndex1'

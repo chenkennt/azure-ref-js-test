@@ -27,9 +27,7 @@ items:
   - uid: 'Resources#moveResources'
     id: moveResources
     parent: Resources
-    name: >-
-      moveResources(sourceResourceGroupName, parameters, parameters.resources,
-      parameters.targetResourceGroup, options, options.customHeaders, callback)
+    name: 'moveResources(sourceResourceGroupName, parameters, options, callback)'
     summary: "Move resources from one resource group to another. The resources being\rmoved should all be in the same resource group."
     type: Method
     syntax:
@@ -58,13 +56,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function moveResources(sourceResourceGroupName, parameters,
-        parameters.resources, parameters.targetResourceGroup, options,
-        options.customHeaders, callback);
+        function moveResources(sourceResourceGroupName, parameters, options,
+        callback);
     fullName: >-
-      Resources.moveResources(sourceResourceGroupName, parameters,
-      parameters.resources, parameters.targetResourceGroup, options,
-      options.customHeaders, callback)
+      Resources.moveResources(sourceResourceGroupName, parameters, options,
+      callback)
     children:
       - 'Resources#moveResources~client'
       - 'Resources#moveResources~callback'
@@ -72,10 +68,7 @@ items:
   - uid: 'Resources#beginMoveResources'
     id: beginMoveResources
     parent: Resources
-    name: >-
-      beginMoveResources(sourceResourceGroupName, parameters,
-      parameters.resources, parameters.targetResourceGroup, options,
-      options.customHeaders, callback)
+    name: 'beginMoveResources(sourceResourceGroupName, parameters, options, callback)'
     summary: "Move resources from one resource group to another. The resources being\rmoved should all be in the same resource group."
     type: Method
     syntax:
@@ -105,12 +98,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginMoveResources(sourceResourceGroupName, parameters,
-        parameters.resources, parameters.targetResourceGroup, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
-      Resources.beginMoveResources(sourceResourceGroupName, parameters,
-      parameters.resources, parameters.targetResourceGroup, options,
-      options.customHeaders, callback)
+      Resources.beginMoveResources(sourceResourceGroupName, parameters, options,
+      callback)
     children:
       - 'Resources#beginMoveResources~client'
       - 'Resources#beginMoveResources~callback'
@@ -133,9 +124,7 @@ items:
   - uid: 'Resources#list'
     id: list
     parent: Resources
-    name: >-
-      list(options, options.filter, options.top, options.customHeaders,
-      callback)
+    name: 'list(options, callback)'
     summary: Get all of the resources under a subscription.
     type: Method
     syntax:
@@ -157,12 +146,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(options, options.filter, options.top,
-        options.customHeaders, callback);
-    fullName: >-
-      Resources.list(options, options.filter, options.top,
-      options.customHeaders, callback)
+      content: 'function list(options, callback);'
+    fullName: 'Resources.list(options, callback)'
     children:
       - 'Resources#list~client'
       - 'Resources#list~callback'
@@ -183,7 +168,7 @@ items:
     name: >-
       checkExistence(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, apiVersion, options,
-      options.customHeaders, callback)
+      callback)
     summary: Checks whether resource exists.
     type: Method
     syntax:
@@ -219,11 +204,11 @@ items:
       content: >-
         function checkExistence(resourceGroupName, resourceProviderNamespace,
         parentResourcePath, resourceType, resourceName, apiVersion, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Resources.checkExistence(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, apiVersion, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Resources#checkExistence~client'
       - 'Resources#checkExistence~callback'
@@ -247,7 +232,7 @@ items:
     name: >-
       deleteMethod(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, apiVersion, options,
-      options.customHeaders, callback)
+      callback)
     summary: Delete resource and all of its resources.
     type: Method
     syntax:
@@ -283,11 +268,11 @@ items:
       content: >-
         function deleteMethod(resourceGroupName, resourceProviderNamespace,
         parentResourcePath, resourceType, resourceName, apiVersion, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Resources.deleteMethod(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, apiVersion, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Resources#deleteMethod~client'
       - 'Resources#deleteMethod~callback'
@@ -311,10 +296,7 @@ items:
     name: >-
       createOrUpdate(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, apiVersion, parameters,
-      parameters.plan, parameters.plan.name, parameters.plan.publisher,
-      parameters.plan.product, parameters.plan.promotionCode,
-      parameters.properties, parameters.location, parameters.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     summary: Create a resource.
     type: Method
     syntax:
@@ -377,17 +359,11 @@ items:
       content: >-
         function createOrUpdate(resourceGroupName, resourceProviderNamespace,
         parentResourcePath, resourceType, resourceName, apiVersion, parameters,
-        parameters.plan, parameters.plan.name, parameters.plan.publisher,
-        parameters.plan.product, parameters.plan.promotionCode,
-        parameters.properties, parameters.location, parameters.tags, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       Resources.createOrUpdate(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, apiVersion, parameters,
-      parameters.plan, parameters.plan.name, parameters.plan.publisher,
-      parameters.plan.product, parameters.plan.promotionCode,
-      parameters.properties, parameters.location, parameters.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'Resources#createOrUpdate~client'
       - 'Resources#createOrUpdate~callback'
@@ -416,8 +392,7 @@ items:
     parent: Resources
     name: >-
       get(resourceGroupName, resourceProviderNamespace, parentResourcePath,
-      resourceType, resourceName, apiVersion, options, options.customHeaders,
-      callback)
+      resourceType, resourceName, apiVersion, options, callback)
     summary: Returns a resource belonging to a resource group.
     type: Method
     syntax:
@@ -453,11 +428,11 @@ items:
       content: >-
         function get(resourceGroupName, resourceProviderNamespace,
         parentResourcePath, resourceType, resourceName, apiVersion, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Resources.get(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, apiVersion, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Resources#get~client'
       - 'Resources#get~callback'
@@ -478,7 +453,7 @@ items:
   - uid: 'Resources#listNext'
     id: listNext
     parent: Resources
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Get all of the resources under a subscription.
     type: Method
     syntax:
@@ -497,10 +472,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResourceListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: 'Resources.listNext(nextPageLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Resources.listNext(nextPageLink, options, callback)'
     children:
       - 'Resources#listNext~client'
       - 'Resources#listNext~callback'

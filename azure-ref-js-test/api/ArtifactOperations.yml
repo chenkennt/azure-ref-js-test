@@ -23,10 +23,7 @@ items:
   - uid: 'ArtifactOperations#list'
     id: list
     parent: ArtifactOperations
-    name: >-
-      list(resourceGroupName, labName, artifactSourceName, options,
-      options.filter, options.top, options.orderBy, options.customHeaders,
-      callback)
+    name: 'list(resourceGroupName, labName, artifactSourceName, options, callback)'
     summary: List artifacts.
     type: Method
     syntax:
@@ -60,12 +57,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifact} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function list(resourceGroupName, labName, artifactSourceName, options,
-        options.filter, options.top, options.orderBy, options.customHeaders,
         callback);
     fullName: >-
       ArtifactOperations.list(resourceGroupName, labName, artifactSourceName,
-      options, options.filter, options.top, options.orderBy,
-      options.customHeaders, callback)
+      options, callback)
     children:
       - 'ArtifactOperations#list~client'
       - 'ArtifactOperations#list~callback'
@@ -89,7 +84,7 @@ items:
     parent: ArtifactOperations
     name: >-
       getResource(resourceGroupName, labName, artifactSourceName, name, options,
-      options.customHeaders, callback)
+      callback)
     summary: Get artifact.
     type: Method
     syntax:
@@ -119,10 +114,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Artifact} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getResource(resourceGroupName, labName, artifactSourceName,
-        name, options, options.customHeaders, callback);
+        name, options, callback);
     fullName: >-
       ArtifactOperations.getResource(resourceGroupName, labName,
-      artifactSourceName, name, options, options.customHeaders, callback)
+      artifactSourceName, name, options, callback)
     children:
       - 'ArtifactOperations#getResource~client'
       - 'ArtifactOperations#getResource~callback'
@@ -144,10 +139,7 @@ items:
     parent: ArtifactOperations
     name: >-
       generateArmTemplate(resourceGroupName, labName, artifactSourceName, name,
-      generateArmTemplateRequest, generateArmTemplateRequest.virtualMachineName,
-      generateArmTemplateRequest.parameters,
-      generateArmTemplateRequest.location, options, options.customHeaders,
-      callback)
+      generateArmTemplateRequest, options, callback)
     summary: "Generates an ARM template for the given artifact, uploads the required\rfiles to a storage account, and validates the generated artifact."
     type: Method
     syntax:
@@ -188,18 +180,11 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArmTemplateInfo} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function generateArmTemplate(resourceGroupName, labName,
-        artifactSourceName, name, generateArmTemplateRequest,
-        generateArmTemplateRequest.virtualMachineName,
-        generateArmTemplateRequest.parameters,
-        generateArmTemplateRequest.location, options, options.customHeaders,
+        artifactSourceName, name, generateArmTemplateRequest, options,
         callback);
     fullName: >-
       ArtifactOperations.generateArmTemplate(resourceGroupName, labName,
-      artifactSourceName, name, generateArmTemplateRequest,
-      generateArmTemplateRequest.virtualMachineName,
-      generateArmTemplateRequest.parameters,
-      generateArmTemplateRequest.location, options, options.customHeaders,
-      callback)
+      artifactSourceName, name, generateArmTemplateRequest, options, callback)
     children:
       - 'ArtifactOperations#generateArmTemplate~client'
       - 'ArtifactOperations#generateArmTemplate~callback'
@@ -225,7 +210,7 @@ items:
   - uid: 'ArtifactOperations#listNext'
     id: listNext
     parent: ArtifactOperations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: List artifacts.
     type: Method
     syntax:
@@ -244,12 +229,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifact} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ArtifactOperations.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'ArtifactOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'ArtifactOperations#listNext~client'
       - 'ArtifactOperations#listNext~callback'

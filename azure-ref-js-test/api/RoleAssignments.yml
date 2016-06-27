@@ -35,8 +35,7 @@ items:
     parent: RoleAssignments
     name: >-
       listForResource(resourceGroupName, resourceProviderNamespace,
-      parentResourcePath, resourceType, resourceName, options, options.filter,
-      options.customHeaders, callback)
+      parentResourcePath, resourceType, resourceName, options, callback)
     summary: Gets role assignments of the resource.
     type: Method
     syntax:
@@ -72,12 +71,11 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listForResource(resourceGroupName, resourceProviderNamespace,
-        parentResourcePath, resourceType, resourceName, options, options.filter,
-        options.customHeaders, callback);
+        parentResourcePath, resourceType, resourceName, options, callback);
     fullName: >-
       RoleAssignments.listForResource(resourceGroupName,
       resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
-      options, options.filter, options.customHeaders, callback)
+      options, callback)
     children:
       - 'RoleAssignments#listForResource~client'
       - 'RoleAssignments#listForResource~callback'
@@ -99,9 +97,7 @@ items:
   - uid: 'RoleAssignments#listForResourceGroup'
     id: listForResourceGroup
     parent: RoleAssignments
-    name: >-
-      listForResourceGroup(resourceGroupName, options, options.filter,
-      options.customHeaders, callback)
+    name: 'listForResourceGroup(resourceGroupName, options, callback)'
     summary: Gets role assignments of the resource group.
     type: Method
     syntax:
@@ -123,12 +119,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForResourceGroup(resourceGroupName, options,
-        options.filter, options.customHeaders, callback);
-    fullName: >-
-      RoleAssignments.listForResourceGroup(resourceGroupName, options,
-      options.filter, options.customHeaders, callback)
+      content: 'function listForResourceGroup(resourceGroupName, options, callback);'
+    fullName: 'RoleAssignments.listForResourceGroup(resourceGroupName, options, callback)'
     children:
       - 'RoleAssignments#listForResourceGroup~client'
       - 'RoleAssignments#listForResourceGroup~callback'
@@ -146,9 +138,7 @@ items:
   - uid: 'RoleAssignments#deleteMethod'
     id: deleteMethod
     parent: RoleAssignments
-    name: >-
-      deleteMethod(scope, roleAssignmentName, options, options.customHeaders,
-      callback)
+    name: 'deleteMethod(scope, roleAssignmentName, options, callback)'
     summary: Delete role assignment.
     type: Method
     syntax:
@@ -170,12 +160,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(scope, roleAssignmentName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      RoleAssignments.deleteMethod(scope, roleAssignmentName, options,
-      options.customHeaders, callback)
+      content: 'function deleteMethod(scope, roleAssignmentName, options, callback);'
+    fullName: 'RoleAssignments.deleteMethod(scope, roleAssignmentName, options, callback)'
     children:
       - 'RoleAssignments#deleteMethod~client'
       - 'RoleAssignments#deleteMethod~callback'
@@ -192,10 +178,7 @@ items:
   - uid: 'RoleAssignments#create'
     id: create
     parent: RoleAssignments
-    name: >-
-      create(scope, roleAssignmentName, options, options.properties,
-      options.properties.roleDefinitionId, options.properties.principalId,
-      options.customHeaders, callback)
+    name: 'create(scope, roleAssignmentName, options, callback)'
     summary: Create role assignment.
     type: Method
     syntax:
@@ -226,14 +209,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function create(scope, roleAssignmentName, options, options.properties,
-        options.properties.roleDefinitionId, options.properties.principalId,
-        options.customHeaders, callback);
-    fullName: >-
-      RoleAssignments.create(scope, roleAssignmentName, options,
-      options.properties, options.properties.roleDefinitionId,
-      options.properties.principalId, options.customHeaders, callback)
+      content: 'function create(scope, roleAssignmentName, options, callback);'
+    fullName: 'RoleAssignments.create(scope, roleAssignmentName, options, callback)'
     children:
       - 'RoleAssignments#create~client'
       - 'RoleAssignments#create~callback'
@@ -259,7 +236,7 @@ items:
   - uid: 'RoleAssignments#get'
     id: get
     parent: RoleAssignments
-    name: 'get(scope, roleAssignmentName, options, options.customHeaders, callback)'
+    name: 'get(scope, roleAssignmentName, options, callback)'
     summary: Get single role assignment.
     type: Method
     syntax:
@@ -281,12 +258,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(scope, roleAssignmentName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      RoleAssignments.get(scope, roleAssignmentName, options,
-      options.customHeaders, callback)
+      content: 'function get(scope, roleAssignmentName, options, callback);'
+    fullName: 'RoleAssignments.get(scope, roleAssignmentName, options, callback)'
     children:
       - 'RoleAssignments#get~client'
       - 'RoleAssignments#get~callback'
@@ -303,7 +276,7 @@ items:
   - uid: 'RoleAssignments#deleteById'
     id: deleteById
     parent: RoleAssignments
-    name: 'deleteById(roleAssignmentId, options, options.customHeaders, callback)'
+    name: 'deleteById(roleAssignmentId, options, callback)'
     summary: Delete role assignment.
     type: Method
     syntax:
@@ -322,12 +295,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteById(roleAssignmentId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      RoleAssignments.deleteById(roleAssignmentId, options,
-      options.customHeaders, callback)
+      content: 'function deleteById(roleAssignmentId, options, callback);'
+    fullName: 'RoleAssignments.deleteById(roleAssignmentId, options, callback)'
     children:
       - 'RoleAssignments#deleteById~client'
       - 'RoleAssignments#deleteById~callback'
@@ -343,10 +312,7 @@ items:
   - uid: 'RoleAssignments#createById'
     id: createById
     parent: RoleAssignments
-    name: >-
-      createById(roleAssignmentId, options, options.properties,
-      options.properties.roleDefinitionId, options.properties.principalId,
-      options.customHeaders, callback)
+    name: 'createById(roleAssignmentId, options, callback)'
     summary: Create role assignment by Id.
     type: Method
     syntax:
@@ -374,14 +340,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function createById(roleAssignmentId, options, options.properties,
-        options.properties.roleDefinitionId, options.properties.principalId,
-        options.customHeaders, callback);
-    fullName: >-
-      RoleAssignments.createById(roleAssignmentId, options, options.properties,
-      options.properties.roleDefinitionId, options.properties.principalId,
-      options.customHeaders, callback)
+      content: 'function createById(roleAssignmentId, options, callback);'
+    fullName: 'RoleAssignments.createById(roleAssignmentId, options, callback)'
     children:
       - 'RoleAssignments#createById~client'
       - 'RoleAssignments#createById~callback'
@@ -406,7 +366,7 @@ items:
   - uid: 'RoleAssignments#getById'
     id: getById
     parent: RoleAssignments
-    name: 'getById(roleAssignmentId, options, options.customHeaders, callback)'
+    name: 'getById(roleAssignmentId, options, callback)'
     summary: Get single role assignment.
     type: Method
     syntax:
@@ -425,12 +385,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getById(roleAssignmentId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      RoleAssignments.getById(roleAssignmentId, options, options.customHeaders,
-      callback)
+      content: 'function getById(roleAssignmentId, options, callback);'
+    fullName: 'RoleAssignments.getById(roleAssignmentId, options, callback)'
     children:
       - 'RoleAssignments#getById~client'
       - 'RoleAssignments#getById~callback'
@@ -446,7 +402,7 @@ items:
   - uid: 'RoleAssignments#list'
     id: list
     parent: RoleAssignments
-    name: 'list(options, options.filter, options.customHeaders, callback)'
+    name: 'list(options, callback)'
     summary: Gets role assignments of the subscription.
     type: Method
     syntax:
@@ -465,10 +421,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function list(options, options.filter, options.customHeaders, callback);'
-    fullName: >-
-      RoleAssignments.list(options, options.filter, options.customHeaders,
-      callback)
+      content: 'function list(options, callback);'
+    fullName: 'RoleAssignments.list(options, callback)'
     children:
       - 'RoleAssignments#list~client'
       - 'RoleAssignments#list~callback'
@@ -485,9 +439,7 @@ items:
   - uid: 'RoleAssignments#listForScope'
     id: listForScope
     parent: RoleAssignments
-    name: >-
-      listForScope(scope, options, options.filter, options.customHeaders,
-      callback)
+    name: 'listForScope(scope, options, callback)'
     summary: Gets role assignments of the scope.
     type: Method
     syntax:
@@ -509,12 +461,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForScope(scope, options, options.filter,
-        options.customHeaders, callback);
-    fullName: >-
-      RoleAssignments.listForScope(scope, options, options.filter,
-      options.customHeaders, callback)
+      content: 'function listForScope(scope, options, callback);'
+    fullName: 'RoleAssignments.listForScope(scope, options, callback)'
     children:
       - 'RoleAssignments#listForScope~client'
       - 'RoleAssignments#listForScope~callback'
@@ -531,9 +479,7 @@ items:
   - uid: 'RoleAssignments#listForResourceNext'
     id: listForResourceNext
     parent: RoleAssignments
-    name: >-
-      listForResourceNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listForResourceNext(nextPageLink, options, callback)'
     summary: Gets role assignments of the resource.
     type: Method
     syntax:
@@ -552,12 +498,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForResourceNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      RoleAssignments.listForResourceNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listForResourceNext(nextPageLink, options, callback);'
+    fullName: 'RoleAssignments.listForResourceNext(nextPageLink, options, callback)'
     children:
       - 'RoleAssignments#listForResourceNext~client'
       - 'RoleAssignments#listForResourceNext~callback'
@@ -571,9 +513,7 @@ items:
   - uid: 'RoleAssignments#listForResourceGroupNext'
     id: listForResourceGroupNext
     parent: RoleAssignments
-    name: >-
-      listForResourceGroupNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listForResourceGroupNext(nextPageLink, options, callback)'
     summary: Gets role assignments of the resource group.
     type: Method
     syntax:
@@ -592,12 +532,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForResourceGroupNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      RoleAssignments.listForResourceGroupNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listForResourceGroupNext(nextPageLink, options, callback);'
+    fullName: 'RoleAssignments.listForResourceGroupNext(nextPageLink, options, callback)'
     children:
       - 'RoleAssignments#listForResourceGroupNext~client'
       - 'RoleAssignments#listForResourceGroupNext~callback'
@@ -611,7 +547,7 @@ items:
   - uid: 'RoleAssignments#listNext'
     id: listNext
     parent: RoleAssignments
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Gets role assignments of the subscription.
     type: Method
     syntax:
@@ -630,12 +566,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      RoleAssignments.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'RoleAssignments.listNext(nextPageLink, options, callback)'
     children:
       - 'RoleAssignments#listNext~client'
       - 'RoleAssignments#listNext~callback'
@@ -649,7 +581,7 @@ items:
   - uid: 'RoleAssignments#listForScopeNext'
     id: listForScopeNext
     parent: RoleAssignments
-    name: 'listForScopeNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listForScopeNext(nextPageLink, options, callback)'
     summary: Gets role assignments of the scope.
     type: Method
     syntax:
@@ -668,12 +600,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link RoleAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForScopeNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      RoleAssignments.listForScopeNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listForScopeNext(nextPageLink, options, callback);'
+    fullName: 'RoleAssignments.listForScopeNext(nextPageLink, options, callback)'
     children:
       - 'RoleAssignments#listForScopeNext~client'
       - 'RoleAssignments#listForScopeNext~callback'

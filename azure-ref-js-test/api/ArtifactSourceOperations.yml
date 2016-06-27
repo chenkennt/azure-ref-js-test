@@ -25,9 +25,7 @@ items:
   - uid: 'ArtifactSourceOperations#list'
     id: list
     parent: ArtifactSourceOperations
-    name: >-
-      list(resourceGroupName, labName, options, options.filter, options.top,
-      options.orderBy, options.customHeaders, callback)
+    name: 'list(resourceGroupName, labName, options, callback)'
     summary: List artifact sources.
     type: Method
     syntax:
@@ -56,12 +54,9 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifactSource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, labName, options, options.filter,
-        options.top, options.orderBy, options.customHeaders, callback);
+      content: 'function list(resourceGroupName, labName, options, callback);'
     fullName: >-
       ArtifactSourceOperations.list(resourceGroupName, labName, options,
-      options.filter, options.top, options.orderBy, options.customHeaders,
       callback)
     children:
       - 'ArtifactSourceOperations#list~client'
@@ -83,9 +78,7 @@ items:
   - uid: 'ArtifactSourceOperations#getResource'
     id: getResource
     parent: ArtifactSourceOperations
-    name: >-
-      getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'getResource(resourceGroupName, labName, name, options, callback)'
     summary: Get artifact source.
     type: Method
     syntax:
@@ -112,10 +105,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArtifactSource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ArtifactSourceOperations.getResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ArtifactSourceOperations#getResource~client'
       - 'ArtifactSourceOperations#getResource~callback'
@@ -136,12 +129,7 @@ items:
     parent: ArtifactSourceOperations
     name: >-
       createOrUpdateResource(resourceGroupName, labName, name, artifactSource,
-      artifactSource.displayName, artifactSource.uri, artifactSource.sourceType,
-      artifactSource.folderPath, artifactSource.branchRef,
-      artifactSource.securityToken, artifactSource.status,
-      artifactSource.provisioningState, artifactSource.id, artifactSource.name,
-      artifactSource.type, artifactSource.location, artifactSource.tags,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: Create or replace an existing artifact source.
     type: Method
     syntax:
@@ -209,22 +197,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArtifactSource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateResource(resourceGroupName, labName, name,
-        artifactSource, artifactSource.displayName, artifactSource.uri,
-        artifactSource.sourceType, artifactSource.folderPath,
-        artifactSource.branchRef, artifactSource.securityToken,
-        artifactSource.status, artifactSource.provisioningState,
-        artifactSource.id, artifactSource.name, artifactSource.type,
-        artifactSource.location, artifactSource.tags, options,
-        options.customHeaders, callback);
+        artifactSource, options, callback);
     fullName: >-
       ArtifactSourceOperations.createOrUpdateResource(resourceGroupName,
-      labName, name, artifactSource, artifactSource.displayName,
-      artifactSource.uri, artifactSource.sourceType, artifactSource.folderPath,
-      artifactSource.branchRef, artifactSource.securityToken,
-      artifactSource.status, artifactSource.provisioningState,
-      artifactSource.id, artifactSource.name, artifactSource.type,
-      artifactSource.location, artifactSource.tags, options,
-      options.customHeaders, callback)
+      labName, name, artifactSource, options, callback)
     children:
       - 'ArtifactSourceOperations#createOrUpdateResource~client'
       - 'ArtifactSourceOperations#createOrUpdateResource~callback'
@@ -249,9 +225,7 @@ items:
   - uid: 'ArtifactSourceOperations#deleteResource'
     id: deleteResource
     parent: ArtifactSourceOperations
-    name: >-
-      deleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'deleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete artifact source.
     type: Method
     syntax:
@@ -278,10 +252,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ArtifactSourceOperations.deleteResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ArtifactSourceOperations#deleteResource~client'
       - 'ArtifactSourceOperations#deleteResource~callback'
@@ -301,13 +275,8 @@ items:
     id: patchResource
     parent: ArtifactSourceOperations
     name: >-
-      patchResource(resourceGroupName, labName, name, artifactSource,
-      artifactSource.displayName, artifactSource.uri, artifactSource.sourceType,
-      artifactSource.folderPath, artifactSource.branchRef,
-      artifactSource.securityToken, artifactSource.status,
-      artifactSource.provisioningState, artifactSource.id, artifactSource.name,
-      artifactSource.type, artifactSource.location, artifactSource.tags,
-      options, options.customHeaders, callback)
+      patchResource(resourceGroupName, labName, name, artifactSource, options,
+      callback)
     summary: Modify properties of artifact sources.
     type: Method
     syntax:
@@ -375,22 +344,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ArtifactSource} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function patchResource(resourceGroupName, labName, name, artifactSource,
-        artifactSource.displayName, artifactSource.uri,
-        artifactSource.sourceType, artifactSource.folderPath,
-        artifactSource.branchRef, artifactSource.securityToken,
-        artifactSource.status, artifactSource.provisioningState,
-        artifactSource.id, artifactSource.name, artifactSource.type,
-        artifactSource.location, artifactSource.tags, options,
-        options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ArtifactSourceOperations.patchResource(resourceGroupName, labName, name,
-      artifactSource, artifactSource.displayName, artifactSource.uri,
-      artifactSource.sourceType, artifactSource.folderPath,
-      artifactSource.branchRef, artifactSource.securityToken,
-      artifactSource.status, artifactSource.provisioningState,
-      artifactSource.id, artifactSource.name, artifactSource.type,
-      artifactSource.location, artifactSource.tags, options,
-      options.customHeaders, callback)
+      artifactSource, options, callback)
     children:
       - 'ArtifactSourceOperations#patchResource~client'
       - 'ArtifactSourceOperations#patchResource~callback'
@@ -415,7 +372,7 @@ items:
   - uid: 'ArtifactSourceOperations#listNext'
     id: listNext
     parent: ArtifactSourceOperations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: List artifact sources.
     type: Method
     syntax:
@@ -434,12 +391,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationArtifactSource} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ArtifactSourceOperations.listNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'ArtifactSourceOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'ArtifactSourceOperations#listNext~client'
       - 'ArtifactSourceOperations#listNext~callback'

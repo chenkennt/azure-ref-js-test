@@ -36,9 +36,7 @@ items:
     parent: ManagementLocks
     name: >-
       createOrUpdateAtResourceGroupLevel(resourceGroupName, lockName,
-      parameters, parameters.level, parameters.notes, parameters.id,
-      parameters.type, parameters.name, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     summary: Create or update a management lock at the resource group level.
     type: Method
     syntax:
@@ -80,14 +78,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateAtResourceGroupLevel(resourceGroupName, lockName,
-        parameters, parameters.level, parameters.notes, parameters.id,
-        parameters.type, parameters.name, options, options.customHeaders,
-        callback);
+        parameters, options, callback);
     fullName: >-
       ManagementLocks.createOrUpdateAtResourceGroupLevel(resourceGroupName,
-      lockName, parameters, parameters.level, parameters.notes, parameters.id,
-      parameters.type, parameters.name, options, options.customHeaders,
-      callback)
+      lockName, parameters, options, callback)
     children:
       - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~client'
       - 'ManagementLocks#createOrUpdateAtResourceGroupLevel~callback'
@@ -114,9 +108,7 @@ items:
     name: >-
       createOrUpdateAtResourceLevel(resourceGroupName,
       resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
-      lockName, parameters, parameters.level, parameters.notes, parameters.id,
-      parameters.type, parameters.name, options, options.customHeaders,
-      callback)
+      lockName, parameters, options, callback)
     summary: "Create or update a management lock at the resource level or any level below\rresource."
     type: Method
     syntax:
@@ -171,15 +163,11 @@ items:
       content: >-
         function createOrUpdateAtResourceLevel(resourceGroupName,
         resourceProviderNamespace, parentResourcePath, resourceType,
-        resourceName, lockName, parameters, parameters.level, parameters.notes,
-        parameters.id, parameters.type, parameters.name, options,
-        options.customHeaders, callback);
+        resourceName, lockName, parameters, options, callback);
     fullName: >-
       ManagementLocks.createOrUpdateAtResourceLevel(resourceGroupName,
       resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
-      lockName, parameters, parameters.level, parameters.notes, parameters.id,
-      parameters.type, parameters.name, options, options.customHeaders,
-      callback)
+      lockName, parameters, options, callback)
     children:
       - 'ManagementLocks#createOrUpdateAtResourceLevel~client'
       - 'ManagementLocks#createOrUpdateAtResourceLevel~callback'
@@ -210,7 +198,7 @@ items:
     name: >-
       deleteAtResourceLevel(resourceGroupName, resourceProviderNamespace,
       parentResourcePath, resourceType, resourceName, lockName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Deletes the management lock of a resource or any level below resource.
     type: Method
     syntax:
@@ -247,11 +235,11 @@ items:
       content: >-
         function deleteAtResourceLevel(resourceGroupName,
         resourceProviderNamespace, parentResourcePath, resourceType,
-        resourceName, lockName, options, options.customHeaders, callback);
+        resourceName, lockName, options, callback);
     fullName: >-
       ManagementLocks.deleteAtResourceLevel(resourceGroupName,
       resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
-      lockName, options, options.customHeaders, callback)
+      lockName, options, callback)
     children:
       - 'ManagementLocks#deleteAtResourceLevel~client'
       - 'ManagementLocks#deleteAtResourceLevel~callback'
@@ -273,10 +261,7 @@ items:
   - uid: 'ManagementLocks#createOrUpdateAtSubscriptionLevel'
     id: createOrUpdateAtSubscriptionLevel
     parent: ManagementLocks
-    name: >-
-      createOrUpdateAtSubscriptionLevel(lockName, parameters, parameters.level,
-      parameters.notes, parameters.id, parameters.type, parameters.name,
-      options, options.customHeaders, callback)
+    name: 'createOrUpdateAtSubscriptionLevel(lockName, parameters, options, callback)'
     summary: Create or update a management lock at the subscription level.
     type: Method
     syntax:
@@ -315,12 +300,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateAtSubscriptionLevel(lockName, parameters,
-        parameters.level, parameters.notes, parameters.id, parameters.type,
-        parameters.name, options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ManagementLocks.createOrUpdateAtSubscriptionLevel(lockName, parameters,
-      parameters.level, parameters.notes, parameters.id, parameters.type,
-      parameters.name, options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~client'
       - 'ManagementLocks#createOrUpdateAtSubscriptionLevel~callback'
@@ -343,9 +326,7 @@ items:
   - uid: 'ManagementLocks#deleteAtSubscriptionLevel'
     id: deleteAtSubscriptionLevel
     parent: ManagementLocks
-    name: >-
-      deleteAtSubscriptionLevel(lockName, options, options.customHeaders,
-      callback)
+    name: 'deleteAtSubscriptionLevel(lockName, options, callback)'
     summary: Deletes the management lock of a subscription.
     type: Method
     syntax:
@@ -364,12 +345,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteAtSubscriptionLevel(lockName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      ManagementLocks.deleteAtSubscriptionLevel(lockName, options,
-      options.customHeaders, callback)
+      content: 'function deleteAtSubscriptionLevel(lockName, options, callback);'
+    fullName: 'ManagementLocks.deleteAtSubscriptionLevel(lockName, options, callback)'
     children:
       - 'ManagementLocks#deleteAtSubscriptionLevel~client'
       - 'ManagementLocks#deleteAtSubscriptionLevel~callback'
@@ -386,7 +363,7 @@ items:
   - uid: 'ManagementLocks#get'
     id: get
     parent: ManagementLocks
-    name: 'get(lockName, options, options.customHeaders, callback)'
+    name: 'get(lockName, options, callback)'
     summary: Gets the management lock of a scope.
     type: Method
     syntax:
@@ -405,8 +382,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockObject} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function get(lockName, options, options.customHeaders, callback);'
-    fullName: 'ManagementLocks.get(lockName, options, options.customHeaders, callback)'
+      content: 'function get(lockName, options, callback);'
+    fullName: 'ManagementLocks.get(lockName, options, callback)'
     children:
       - 'ManagementLocks#get~client'
       - 'ManagementLocks#get~callback'
@@ -423,9 +400,7 @@ items:
   - uid: 'ManagementLocks#deleteAtResourceGroupLevel'
     id: deleteAtResourceGroupLevel
     parent: ManagementLocks
-    name: >-
-      deleteAtResourceGroupLevel(resourceGroup, lockName, options,
-      options.customHeaders, callback)
+    name: 'deleteAtResourceGroupLevel(resourceGroup, lockName, options, callback)'
     summary: Deletes the management lock of a resource group.
     type: Method
     syntax:
@@ -449,10 +424,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteAtResourceGroupLevel(resourceGroup, lockName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ManagementLocks.deleteAtResourceGroupLevel(resourceGroup, lockName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ManagementLocks#deleteAtResourceGroupLevel~client'
       - 'ManagementLocks#deleteAtResourceGroupLevel~callback'
@@ -470,9 +445,7 @@ items:
   - uid: 'ManagementLocks#listAtResourceGroupLevel'
     id: listAtResourceGroupLevel
     parent: ManagementLocks
-    name: >-
-      listAtResourceGroupLevel(resourceGroupName, options, options.filter,
-      options.customHeaders, callback)
+    name: 'listAtResourceGroupLevel(resourceGroupName, options, callback)'
     summary: Gets all the management locks of a resource group.
     type: Method
     syntax:
@@ -494,12 +467,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAtResourceGroupLevel(resourceGroupName, options,
-        options.filter, options.customHeaders, callback);
+      content: 'function listAtResourceGroupLevel(resourceGroupName, options, callback);'
     fullName: >-
       ManagementLocks.listAtResourceGroupLevel(resourceGroupName, options,
-      options.filter, options.customHeaders, callback)
+      callback)
     children:
       - 'ManagementLocks#listAtResourceGroupLevel~client'
       - 'ManagementLocks#listAtResourceGroupLevel~callback'
@@ -519,8 +490,7 @@ items:
     parent: ManagementLocks
     name: >-
       listAtResourceLevel(resourceGroupName, resourceProviderNamespace,
-      parentResourcePath, resourceType, resourceName, options, options.filter,
-      options.customHeaders, callback)
+      parentResourcePath, resourceType, resourceName, options, callback)
     summary: Gets all the management locks of a resource or any level below resource.
     type: Method
     syntax:
@@ -557,11 +527,11 @@ items:
       content: >-
         function listAtResourceLevel(resourceGroupName,
         resourceProviderNamespace, parentResourcePath, resourceType,
-        resourceName, options, options.filter, options.customHeaders, callback);
+        resourceName, options, callback);
     fullName: >-
       ManagementLocks.listAtResourceLevel(resourceGroupName,
       resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
-      options, options.filter, options.customHeaders, callback)
+      options, callback)
     children:
       - 'ManagementLocks#listAtResourceLevel~client'
       - 'ManagementLocks#listAtResourceLevel~callback'
@@ -583,7 +553,7 @@ items:
   - uid: 'ManagementLocks#listNext'
     id: listNext
     parent: ManagementLocks
-    name: 'listNext(nextLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextLink, options, callback)'
     summary: Get a list of management locks at resource level or below.
     type: Method
     syntax:
@@ -602,10 +572,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listNext(nextLink, options, options.customHeaders, callback);'
-    fullName: >-
-      ManagementLocks.listNext(nextLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextLink, options, callback);'
+    fullName: 'ManagementLocks.listNext(nextLink, options, callback)'
     children:
       - 'ManagementLocks#listNext~client'
       - 'ManagementLocks#listNext~callback'
@@ -622,9 +590,7 @@ items:
   - uid: 'ManagementLocks#listAtSubscriptionLevel'
     id: listAtSubscriptionLevel
     parent: ManagementLocks
-    name: >-
-      listAtSubscriptionLevel(options, options.filter, options.customHeaders,
-      callback)
+    name: 'listAtSubscriptionLevel(options, callback)'
     summary: Gets all the management locks of a subscription.
     type: Method
     syntax:
@@ -643,12 +609,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAtSubscriptionLevel(options, options.filter,
-        options.customHeaders, callback);
-    fullName: >-
-      ManagementLocks.listAtSubscriptionLevel(options, options.filter,
-      options.customHeaders, callback)
+      content: 'function listAtSubscriptionLevel(options, callback);'
+    fullName: 'ManagementLocks.listAtSubscriptionLevel(options, callback)'
     children:
       - 'ManagementLocks#listAtSubscriptionLevel~client'
       - 'ManagementLocks#listAtSubscriptionLevel~callback'
@@ -665,9 +627,7 @@ items:
   - uid: 'ManagementLocks#listAtResourceGroupLevelNext'
     id: listAtResourceGroupLevelNext
     parent: ManagementLocks
-    name: >-
-      listAtResourceGroupLevelNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listAtResourceGroupLevelNext(nextPageLink, options, callback)'
     summary: Gets all the management locks of a resource group.
     type: Method
     syntax:
@@ -686,12 +646,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAtResourceGroupLevelNext(nextPageLink, options,
-        options.customHeaders, callback);
+      content: 'function listAtResourceGroupLevelNext(nextPageLink, options, callback);'
     fullName: >-
       ManagementLocks.listAtResourceGroupLevelNext(nextPageLink, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ManagementLocks#listAtResourceGroupLevelNext~client'
       - 'ManagementLocks#listAtResourceGroupLevelNext~callback'
@@ -705,9 +663,7 @@ items:
   - uid: 'ManagementLocks#listAtResourceLevelNext'
     id: listAtResourceLevelNext
     parent: ManagementLocks
-    name: >-
-      listAtResourceLevelNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listAtResourceLevelNext(nextPageLink, options, callback)'
     summary: Gets all the management locks of a resource or any level below resource.
     type: Method
     syntax:
@@ -726,12 +682,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAtResourceLevelNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      ManagementLocks.listAtResourceLevelNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listAtResourceLevelNext(nextPageLink, options, callback);'
+    fullName: 'ManagementLocks.listAtResourceLevelNext(nextPageLink, options, callback)'
     children:
       - 'ManagementLocks#listAtResourceLevelNext~client'
       - 'ManagementLocks#listAtResourceLevelNext~callback'
@@ -745,7 +697,7 @@ items:
   - uid: 'ManagementLocks#listNextNext'
     id: listNextNext
     parent: ManagementLocks
-    name: 'listNextNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNextNext(nextPageLink, options, callback)'
     summary: Get a list of management locks at resource level or below.
     type: Method
     syntax:
@@ -764,12 +716,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNextNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ManagementLocks.listNextNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNextNext(nextPageLink, options, callback);'
+    fullName: 'ManagementLocks.listNextNext(nextPageLink, options, callback)'
     children:
       - 'ManagementLocks#listNextNext~client'
       - 'ManagementLocks#listNextNext~callback'
@@ -783,9 +731,7 @@ items:
   - uid: 'ManagementLocks#listAtSubscriptionLevelNext'
     id: listAtSubscriptionLevelNext
     parent: ManagementLocks
-    name: >-
-      listAtSubscriptionLevelNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listAtSubscriptionLevelNext(nextPageLink, options, callback)'
     summary: Gets all the management locks of a subscription.
     type: Method
     syntax:
@@ -804,12 +750,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ManagementLockListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAtSubscriptionLevelNext(nextPageLink, options,
-        options.customHeaders, callback);
+      content: 'function listAtSubscriptionLevelNext(nextPageLink, options, callback);'
     fullName: >-
       ManagementLocks.listAtSubscriptionLevelNext(nextPageLink, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ManagementLocks#listAtSubscriptionLevelNext~client'
       - 'ManagementLocks#listAtSubscriptionLevelNext~callback'

@@ -27,12 +27,7 @@ items:
   - uid: 'UserOperations~UserOperations#create'
     id: create
     parent: UserOperations~UserOperations
-    name: >-
-      create(parameters, parameters.userPrincipalName,
-      parameters.accountEnabled, parameters.displayName,
-      parameters.mailNickname, parameters.passwordProfileSettings,
-      parameters.passwordProfileSettings.password,
-      parameters.passwordProfileSettings.forceChangePasswordNextLogin, callback)
+    name: 'create(parameters, callback)'
     summary: "Create a new user.  (see\rhttp://msdn.microsoft.com/en-us/library/azure/dn130117.aspx for more\rinformation)"
     type: Method
     syntax:
@@ -66,20 +61,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(parameters, parameters.userPrincipalName,
-        parameters.accountEnabled, parameters.displayName,
-        parameters.mailNickname, parameters.passwordProfileSettings,
-        parameters.passwordProfileSettings.password,
-        parameters.passwordProfileSettings.forceChangePasswordNextLogin,
-        callback);
-    fullName: >-
-      UserOperations~UserOperations.create(parameters,
-      parameters.userPrincipalName, parameters.accountEnabled,
-      parameters.displayName, parameters.mailNickname,
-      parameters.passwordProfileSettings,
-      parameters.passwordProfileSettings.password,
-      parameters.passwordProfileSettings.forceChangePasswordNextLogin, callback)
+      content: 'function create(parameters, callback);'
+    fullName: 'UserOperations~UserOperations.create(parameters, callback)'
     children:
       - 'UserOperations~UserOperations#create~url2'
       - 'UserOperations~UserOperations#create~url2'
@@ -198,9 +181,7 @@ items:
   - uid: 'UserOperations~UserOperations#getMemberGroups'
     id: getMemberGroups
     parent: UserOperations~UserOperations
-    name: >-
-      getMemberGroups(parameters, parameters.objectId,
-      parameters.securityEnabledOnly, callback)
+    name: 'getMemberGroups(parameters, callback)'
     summary: "Gets a collection that contains the Object IDs of the groups of which the\ruser is a member."
     type: Method
     syntax:
@@ -219,12 +200,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function getMemberGroups(parameters, parameters.objectId,
-        parameters.securityEnabledOnly, callback);
-    fullName: >-
-      UserOperations~UserOperations.getMemberGroups(parameters,
-      parameters.objectId, parameters.securityEnabledOnly, callback)
+      content: 'function getMemberGroups(parameters, callback);'
+    fullName: 'UserOperations~UserOperations.getMemberGroups(parameters, callback)'
     children:
       - 'UserOperations~UserOperations#getMemberGroups~url2'
       - 'UserOperations~UserOperations#getMemberGroups~url2'

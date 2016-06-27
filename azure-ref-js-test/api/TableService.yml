@@ -54,7 +54,7 @@ items:
   - uid: 'TableService#getServiceProperties'
     id: getServiceProperties
     parent: TableService
-    name: 'getServiceProperties(options, options.timeoutIntervalInMs, callback)'
+    name: 'getServiceProperties(options, callback)'
     summary: >-
       Gets the properties of a storage account’s Table service, including
       Microsoft Azure Storage Analytics.
@@ -72,12 +72,8 @@ items:
           description: "`error` will contain information\r                                                             if an error occurs; otherwise `servicePropetiesResult` will contain\r                                                             the propeties.\r                                                             `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function getServiceProperties(options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      TableService.getServiceProperties(options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function getServiceProperties(options, callback);'
+    fullName: 'TableService.getServiceProperties(options, callback)'
     children:
       - 'TableService#getServiceProperties~options'
       - 'TableService#getServiceProperties~webResource'
@@ -85,9 +81,7 @@ items:
   - uid: 'TableService#setServiceProperties'
     id: setServiceProperties
     parent: TableService
-    name: >-
-      setServiceProperties(serviceProperties, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'setServiceProperties(serviceProperties, options, callback)'
     summary: "Sets the properties of a storage account’s Table service, including Microsoft Azure Storage Analytics.\rYou can also use this operation to set the default request version for all incoming requests that do not have a version specified."
     type: Method
     syntax:
@@ -106,12 +100,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function setServiceProperties(serviceProperties, options,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.setServiceProperties(serviceProperties, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function setServiceProperties(serviceProperties, options, callback);'
+    fullName: 'TableService.setServiceProperties(serviceProperties, options, callback)'
     children:
       - 'TableService#setServiceProperties~options'
       - 'TableService#setServiceProperties~servicePropertiesXml'
@@ -120,7 +110,7 @@ items:
   - uid: 'TableService#getTable'
     id: getTable
     parent: TableService
-    name: 'getTable(table, options, options.timeoutIntervalInMs, callback)'
+    name: 'getTable(table, options, callback)'
     summary: Gets a table properties.
     type: Method
     syntax:
@@ -139,12 +129,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `tableResult` will contain\r                                                           the table information.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function getTable(table, options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      TableService.getTable(table, options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function getTable(table, options, callback);'
+    fullName: 'TableService.getTable(table, options, callback)'
     children:
       - 'TableService#getTable~options'
       - 'TableService#getTable~webResource'
@@ -152,7 +138,7 @@ items:
   - uid: 'TableService#createTable'
     id: createTable
     parent: TableService
-    name: 'createTable(table, options, options.timeoutIntervalInMs, callback)'
+    name: 'createTable(table, options, callback)'
     summary: Creates a new table within a storage account.
     type: Method
     syntax:
@@ -171,12 +157,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise tableResult` will contain\r                                                           the new table information.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function createTable(table, options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      TableService.createTable(table, options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function createTable(table, options, callback);'
+    fullName: 'TableService.createTable(table, options, callback)'
     children:
       - 'TableService#createTable~options'
       - 'TableService#createTable~xmlTableDescriptor'
@@ -185,9 +167,7 @@ items:
   - uid: 'TableService#createTableIfNotExists'
     id: createTableIfNotExists
     parent: TableService
-    name: >-
-      createTableIfNotExists(table, options, options.timeoutIntervalInMs,
-      callback)
+    name: 'createTableIfNotExists(table, options, callback)'
     summary: Creates a new table within a storage account if it doesnt exists.
     type: Method
     syntax:
@@ -206,18 +186,14 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `created` will contain\r                                                           the table information.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function createTableIfNotExists(table, options,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.createTableIfNotExists(table, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function createTableIfNotExists(table, options, callback);'
+    fullName: 'TableService.createTableIfNotExists(table, options, callback)'
     children:
       - 'TableService#createTableIfNotExists~options'
   - uid: 'TableService#deleteTable'
     id: deleteTable
     parent: TableService
-    name: 'deleteTable(table, options, options.timeoutIntervalInMs, callback)'
+    name: 'deleteTable(table, options, callback)'
     summary: Deletes a table from a storage account.
     type: Method
     syntax:
@@ -236,12 +212,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `successful` will be `true` if the operation was successful.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function deleteTable(table, options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      TableService.deleteTable(table, options, options.timeoutIntervalInMs,
-      callback)
+      content: 'function deleteTable(table, options, callback);'
+    fullName: 'TableService.deleteTable(table, options, callback)'
     children:
       - 'TableService#deleteTable~options'
       - 'TableService#deleteTable~webResource'
@@ -249,9 +221,7 @@ items:
   - uid: 'TableService#queryTables'
     id: queryTables
     parent: TableService
-    name: >-
-      queryTables(options, options.prefix, options.nextTableName,
-      options.timeoutIntervalInMs, callback)
+    name: 'queryTables(options, callback)'
     summary: Enumerates the tables in a storage account.
     type: Method
     syntax:
@@ -273,12 +243,8 @@ items:
           description: "`error` will contain information\r                                                                                       if an error occurs; otherwise `queryTablesResult` will contain\r                                                                                       the list of tables. If more tables exist, and could not be returned,\r                                                                                       `resultContinuation` will contain a continuation token that can be used\r                                                                                       to retrieve the next set of results.\r                                                                                       `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function queryTables(options, options.prefix, options.nextTableName,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.queryTables(options, options.prefix, options.nextTableName,
-      options.timeoutIntervalInMs, callback)
+      content: 'function queryTables(options, callback);'
+    fullName: 'TableService.queryTables(options, callback)'
     children:
       - 'TableService#queryTables~options'
       - 'TableService#queryTables~webResource'
@@ -288,9 +254,7 @@ items:
   - uid: 'TableService#queryEntity'
     id: queryEntity
     parent: TableService
-    name: >-
-      queryEntity(table, partitionKey, rowKey, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'queryEntity(table, partitionKey, rowKey, options, callback)'
     summary: Queries an entity in a table.
     type: Method
     syntax:
@@ -315,19 +279,15 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `entity` will be the matching entity.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function queryEntity(table, partitionKey, rowKey, options,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.queryEntity(table, partitionKey, rowKey, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function queryEntity(table, partitionKey, rowKey, options, callback);'
+    fullName: 'TableService.queryEntity(table, partitionKey, rowKey, options, callback)'
     children:
       - 'TableService#queryEntity~options'
       - 'TableService#queryEntity~tableQuery'
   - uid: 'TableService#queryEntities'
     id: queryEntities
     parent: TableService
-    name: 'queryEntities(tableQuery, options, options.timeoutIntervalInMs, callback)'
+    name: 'queryEntities(tableQuery, options, callback)'
     summary: Queries data in a table.
     type: Method
     syntax:
@@ -346,12 +306,8 @@ items:
           description: "`error` will contain information\r                                                                                       if an error occurs; otherwise `entities` will contain\r                                                                                       the entities returned by the query. If more matching entities exist, and could not be returned,\r                                                                                       `queryResultContinuation` will contain a continuation token that can be used\r                                                                                       to retrieve the next set of results.\r                                                                                       `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function queryEntities(tableQuery, options, options.timeoutIntervalInMs,
-        callback);
-    fullName: >-
-      TableService.queryEntities(tableQuery, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function queryEntities(tableQuery, options, callback);'
+    fullName: 'TableService.queryEntities(tableQuery, options, callback)'
     children:
       - 'TableService#queryEntities~options'
       - 'TableService#queryEntities~path'
@@ -365,9 +321,7 @@ items:
   - uid: 'TableService#insertEntity'
     id: insertEntity
     parent: TableService
-    name: >-
-      insertEntity(table, entityDescriptor, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'insertEntity(table, entityDescriptor, options, callback)'
     summary: Inserts a new entity into a table.
     type: Method
     syntax:
@@ -389,12 +343,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `entity` will contain\r                                                           the new entity information.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function insertEntity(table, entityDescriptor, options,
-        options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.insertEntity(table, entityDescriptor, options,
-      options.timeoutIntervalInMs, callback)
+      content: 'function insertEntity(table, entityDescriptor, options, callback);'
+    fullName: 'TableService.insertEntity(table, entityDescriptor, options, callback)'
     children:
       - 'TableService#insertEntity~options'
       - 'TableService#insertEntity~self'
@@ -404,9 +354,7 @@ items:
   - uid: 'TableService#insertOrReplaceEntity'
     id: insertOrReplaceEntity
     parent: TableService
-    name: >-
-      insertOrReplaceEntity(table, entityDescriptor, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'insertOrReplaceEntity(table, entityDescriptor, options, callback)'
     summary: Inserts or updates a new entity into a table.
     type: Method
     syntax:
@@ -430,10 +378,10 @@ items:
         type: undefined
       content: >-
         function insertOrReplaceEntity(table, entityDescriptor, options,
-        options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       TableService.insertOrReplaceEntity(table, entityDescriptor, options,
-      options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'TableService#insertOrReplaceEntity~options'
       - 'TableService#insertOrReplaceEntity~self'
@@ -444,9 +392,7 @@ items:
   - uid: 'TableService#updateEntity'
     id: updateEntity
     parent: TableService
-    name: >-
-      updateEntity(table, entityDescriptor, options, options.checkEtag,
-      options.timeoutIntervalInMs, callback)
+    name: 'updateEntity(table, entityDescriptor, options, callback)'
     summary: Updates an existing entity within a table by replacing it.
     type: Method
     syntax:
@@ -471,12 +417,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `entity` will contain\r                                                           the entity information.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function updateEntity(table, entityDescriptor, options,
-        options.checkEtag, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.updateEntity(table, entityDescriptor, options,
-      options.checkEtag, options.timeoutIntervalInMs, callback)
+      content: 'function updateEntity(table, entityDescriptor, options, callback);'
+    fullName: 'TableService.updateEntity(table, entityDescriptor, options, callback)'
     children:
       - 'TableService#updateEntity~options'
       - 'TableService#updateEntity~self'
@@ -487,9 +429,7 @@ items:
   - uid: 'TableService#mergeEntity'
     id: mergeEntity
     parent: TableService
-    name: >-
-      mergeEntity(table, entityDescriptor, options, options.checkEtag,
-      options.timeoutIntervalInMs, callback)
+    name: 'mergeEntity(table, entityDescriptor, options, callback)'
     summary: >-
       Updates an existing entity within a table by merging new property values
       into the entity.
@@ -516,12 +456,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `entity` will contain\r                                                           the entity information.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function mergeEntity(table, entityDescriptor, options,
-        options.checkEtag, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.mergeEntity(table, entityDescriptor, options,
-      options.checkEtag, options.timeoutIntervalInMs, callback)
+      content: 'function mergeEntity(table, entityDescriptor, options, callback);'
+    fullName: 'TableService.mergeEntity(table, entityDescriptor, options, callback)'
     children:
       - 'TableService#mergeEntity~options'
       - 'TableService#mergeEntity~self'
@@ -532,9 +468,7 @@ items:
   - uid: 'TableService#insertOrMergeEntity'
     id: insertOrMergeEntity
     parent: TableService
-    name: >-
-      insertOrMergeEntity(table, entityDescriptor, options,
-      options.timeoutIntervalInMs, callback)
+    name: 'insertOrMergeEntity(table, entityDescriptor, options, callback)'
     summary: >-
       Inserts or updates an existing entity within a table by merging new
       property values into the entity.
@@ -560,10 +494,10 @@ items:
         type: undefined
       content: >-
         function insertOrMergeEntity(table, entityDescriptor, options,
-        options.timeoutIntervalInMs, callback);
+        callback);
     fullName: >-
       TableService.insertOrMergeEntity(table, entityDescriptor, options,
-      options.timeoutIntervalInMs, callback)
+      callback)
     children:
       - 'TableService#insertOrMergeEntity~options'
       - 'TableService#insertOrMergeEntity~self'
@@ -574,9 +508,7 @@ items:
   - uid: 'TableService#deleteEntity'
     id: deleteEntity
     parent: TableService
-    name: >-
-      deleteEntity(table, entityDescriptor, options, options.checkEtag,
-      options.timeoutIntervalInMs, callback)
+    name: 'deleteEntity(table, entityDescriptor, options, callback)'
     summary: Deletes an entity within a table.
     type: Method
     syntax:
@@ -601,12 +533,8 @@ items:
           description: "`error` will contain information\r                                                           if an error occurs; otherwise `successful` will be \r                                                           `true` if the operation was successful.\r                                                           `response` will contain information related to this operation."
       return:
         type: undefined
-      content: >-
-        function deleteEntity(table, entityDescriptor, options,
-        options.checkEtag, options.timeoutIntervalInMs, callback);
-    fullName: >-
-      TableService.deleteEntity(table, entityDescriptor, options,
-      options.checkEtag, options.timeoutIntervalInMs, callback)
+      content: 'function deleteEntity(table, entityDescriptor, options, callback);'
+    fullName: 'TableService.deleteEntity(table, entityDescriptor, options, callback)'
     children:
       - 'TableService#deleteEntity~options'
       - 'TableService#deleteEntity~self'

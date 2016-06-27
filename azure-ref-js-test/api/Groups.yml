@@ -30,9 +30,7 @@ items:
   - uid: 'Groups#isMemberOf'
     id: isMemberOf
     parent: Groups
-    name: >-
-      isMemberOf(parameters, parameters.groupId, parameters.memberId, options,
-      options.customHeaders, callback)
+    name: 'isMemberOf(parameters, options, callback)'
     summary: "Checks whether the specified user, group, contact, or service principal is\ra direct or a transitive member of the specified group."
     type: Method
     syntax:
@@ -57,12 +55,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CheckGroupMembershipResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function isMemberOf(parameters, parameters.groupId, parameters.memberId,
-        options, options.customHeaders, callback);
-    fullName: >-
-      Groups.isMemberOf(parameters, parameters.groupId, parameters.memberId,
-      options, options.customHeaders, callback)
+      content: 'function isMemberOf(parameters, options, callback);'
+    fullName: 'Groups.isMemberOf(parameters, options, callback)'
     children:
       - 'Groups#isMemberOf~client'
       - 'Groups#isMemberOf~callback'
@@ -85,9 +79,7 @@ items:
   - uid: 'Groups#removeMember'
     id: removeMember
     parent: Groups
-    name: >-
-      removeMember(groupObjectId, memberObjectId, options,
-      options.customHeaders, callback)
+    name: 'removeMember(groupObjectId, memberObjectId, options, callback)'
     summary: "Remove a memeber from a group. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/groups-operations#DeleteGroupMember"
     type: Method
     syntax:
@@ -109,12 +101,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function removeMember(groupObjectId, memberObjectId, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Groups.removeMember(groupObjectId, memberObjectId, options,
-      options.customHeaders, callback)
+      content: 'function removeMember(groupObjectId, memberObjectId, options, callback);'
+    fullName: 'Groups.removeMember(groupObjectId, memberObjectId, options, callback)'
     children:
       - 'Groups#removeMember~client'
       - 'Groups#removeMember~callback'
@@ -133,7 +121,7 @@ items:
   - uid: 'Groups#addMember'
     id: addMember
     parent: Groups
-    name: 'addMember(groupObjectId, url, options, options.customHeaders, callback)'
+    name: 'addMember(groupObjectId, url, options, callback)'
     summary: "Add a memeber to a group. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/groups-operations#AddGroupMembers"
     type: Method
     syntax:
@@ -155,12 +143,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function addMember(groupObjectId, url, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Groups.addMember(groupObjectId, url, options, options.customHeaders,
-      callback)
+      content: 'function addMember(groupObjectId, url, options, callback);'
+    fullName: 'Groups.addMember(groupObjectId, url, options, callback)'
     children:
       - 'Groups#addMember~client'
       - 'Groups#addMember~callback'
@@ -186,7 +170,7 @@ items:
   - uid: 'Groups#deleteMethod'
     id: deleteMethod
     parent: Groups
-    name: 'deleteMethod(groupObjectId, options, options.customHeaders, callback)'
+    name: 'deleteMethod(groupObjectId, options, callback)'
     summary: "Delete a group in the directory. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/dn151676.aspx"
     type: Method
     syntax:
@@ -205,12 +189,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(groupObjectId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Groups.deleteMethod(groupObjectId, options, options.customHeaders,
-      callback)
+      content: 'function deleteMethod(groupObjectId, options, callback);'
+    fullName: 'Groups.deleteMethod(groupObjectId, options, callback)'
     children:
       - 'Groups#deleteMethod~client'
       - 'Groups#deleteMethod~callback'
@@ -228,9 +208,7 @@ items:
   - uid: 'Groups#create'
     id: create
     parent: Groups
-    name: >-
-      create(parameters, parameters.displayName, parameters.mailNickname,
-      options, options.customHeaders, callback)
+    name: 'create(parameters, options, callback)'
     summary: "Create a group in the directory. Reference:\rhttp://msdn.microsoft.com/en-us/library/azure/dn151676.aspx"
     type: Method
     syntax:
@@ -255,12 +233,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ADGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function create(parameters, parameters.displayName,
-        parameters.mailNickname, options, options.customHeaders, callback);
-    fullName: >-
-      Groups.create(parameters, parameters.displayName, parameters.mailNickname,
-      options, options.customHeaders, callback)
+      content: 'function create(parameters, options, callback);'
+    fullName: 'Groups.create(parameters, options, callback)'
     children:
       - 'Groups#create~client'
       - 'Groups#create~callback'
@@ -284,7 +258,7 @@ items:
   - uid: 'Groups#list'
     id: list
     parent: Groups
-    name: 'list(options, options.filter, options.customHeaders, callback)'
+    name: 'list(options, callback)'
     summary: Gets list of groups for the current tenant.
     type: Method
     syntax:
@@ -303,8 +277,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function list(options, options.filter, options.customHeaders, callback);'
-    fullName: 'Groups.list(options, options.filter, options.customHeaders, callback)'
+      content: 'function list(options, callback);'
+    fullName: 'Groups.list(options, callback)'
     children:
       - 'Groups#list~client'
       - 'Groups#list~callback'
@@ -322,7 +296,7 @@ items:
   - uid: 'Groups#getGroupMembers'
     id: getGroupMembers
     parent: Groups
-    name: 'getGroupMembers(objectId, options, options.customHeaders, callback)'
+    name: 'getGroupMembers(objectId, options, callback)'
     summary: Gets the members of a group.
     type: Method
     syntax:
@@ -341,10 +315,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GetObjectsResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getGroupMembers(objectId, options, options.customHeaders,
-        callback);
-    fullName: 'Groups.getGroupMembers(objectId, options, options.customHeaders, callback)'
+      content: 'function getGroupMembers(objectId, options, callback);'
+    fullName: 'Groups.getGroupMembers(objectId, options, callback)'
     children:
       - 'Groups#getGroupMembers~client'
       - 'Groups#getGroupMembers~callback'
@@ -362,7 +334,7 @@ items:
   - uid: 'Groups#get'
     id: get
     parent: Groups
-    name: 'get(objectId, options, options.customHeaders, callback)'
+    name: 'get(objectId, options, callback)'
     summary: Gets group information from the directory.
     type: Method
     syntax:
@@ -381,8 +353,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ADGroup} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function get(objectId, options, options.customHeaders, callback);'
-    fullName: 'Groups.get(objectId, options, options.customHeaders, callback)'
+      content: 'function get(objectId, options, callback);'
+    fullName: 'Groups.get(objectId, options, callback)'
     children:
       - 'Groups#get~client'
       - 'Groups#get~callback'
@@ -400,9 +372,7 @@ items:
   - uid: 'Groups#getMemberGroups'
     id: getMemberGroups
     parent: Groups
-    name: >-
-      getMemberGroups(objectId, securityEnabledOnly, options,
-      options.customHeaders, callback)
+    name: 'getMemberGroups(objectId, securityEnabledOnly, options, callback)'
     summary: "Gets a collection that contains the Object IDs of the groups of which the\rgroup is a member."
     type: Method
     syntax:
@@ -426,10 +396,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupGetMemberGroupsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getMemberGroups(objectId, securityEnabledOnly, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Groups.getMemberGroups(objectId, securityEnabledOnly, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Groups.getMemberGroups(objectId, securityEnabledOnly, options, callback)'
     children:
       - 'Groups#getMemberGroups~client'
       - 'Groups#getMemberGroups~callback'
@@ -455,7 +423,7 @@ items:
   - uid: 'Groups#listNext'
     id: listNext
     parent: Groups
-    name: 'listNext(nextLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextLink, options, callback)'
     summary: Gets list of groups for the current tenant.
     type: Method
     syntax:
@@ -474,8 +442,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GroupListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listNext(nextLink, options, options.customHeaders, callback);'
-    fullName: 'Groups.listNext(nextLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextLink, options, callback);'
+    fullName: 'Groups.listNext(nextLink, options, callback)'
     children:
       - 'Groups#listNext~client'
       - 'Groups#listNext~callback'
@@ -493,7 +461,7 @@ items:
   - uid: 'Groups#getGroupMembersNext'
     id: getGroupMembersNext
     parent: Groups
-    name: 'getGroupMembersNext(nextLink, options, options.customHeaders, callback)'
+    name: 'getGroupMembersNext(nextLink, options, callback)'
     summary: Gets the members of a group.
     type: Method
     syntax:
@@ -512,12 +480,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GetObjectsResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getGroupMembersNext(nextLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Groups.getGroupMembersNext(nextLink, options, options.customHeaders,
-      callback)
+      content: 'function getGroupMembersNext(nextLink, options, callback);'
+    fullName: 'Groups.getGroupMembersNext(nextLink, options, callback)'
     children:
       - 'Groups#getGroupMembersNext~client'
       - 'Groups#getGroupMembersNext~callback'

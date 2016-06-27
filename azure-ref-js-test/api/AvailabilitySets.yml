@@ -24,11 +24,7 @@ items:
   - uid: 'AvailabilitySets#createOrUpdate'
     id: createOrUpdate
     parent: AvailabilitySets
-    name: >-
-      createOrUpdate(resourceGroupName, name, parameters,
-      parameters.platformUpdateDomainCount, parameters.platformFaultDomainCount,
-      parameters.virtualMachines, parameters.statuses, parameters.location,
-      parameters.tags, options, options.customHeaders, callback)
+    name: 'createOrUpdate(resourceGroupName, name, parameters, options, callback)'
     summary: The operation to create or update the availability set.
     type: Method
     syntax:
@@ -72,16 +68,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AvailabilitySet} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function createOrUpdate(resourceGroupName, name, parameters,
-        parameters.platformUpdateDomainCount,
-        parameters.platformFaultDomainCount, parameters.virtualMachines,
-        parameters.statuses, parameters.location, parameters.tags, options,
-        options.customHeaders, callback);
+        function createOrUpdate(resourceGroupName, name, parameters, options,
+        callback);
     fullName: >-
       AvailabilitySets.createOrUpdate(resourceGroupName, name, parameters,
-      parameters.platformUpdateDomainCount, parameters.platformFaultDomainCount,
-      parameters.virtualMachines, parameters.statuses, parameters.location,
-      parameters.tags, options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'AvailabilitySets#createOrUpdate~client'
       - 'AvailabilitySets#createOrUpdate~callback'
@@ -106,9 +97,7 @@ items:
   - uid: 'AvailabilitySets#deleteMethod'
     id: deleteMethod
     parent: AvailabilitySets
-    name: >-
-      deleteMethod(resourceGroupName, availabilitySetName, options,
-      options.customHeaders, callback)
+    name: 'deleteMethod(resourceGroupName, availabilitySetName, options, callback)'
     summary: The operation to delete the availability set.
     type: Method
     syntax:
@@ -132,10 +121,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, availabilitySetName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       AvailabilitySets.deleteMethod(resourceGroupName, availabilitySetName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'AvailabilitySets#deleteMethod~client'
       - 'AvailabilitySets#deleteMethod~callback'
@@ -154,9 +143,7 @@ items:
   - uid: 'AvailabilitySets#get'
     id: get
     parent: AvailabilitySets
-    name: >-
-      get(resourceGroupName, availabilitySetName, options,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, availabilitySetName, options, callback)'
     summary: The operation to get the availability set.
     type: Method
     syntax:
@@ -178,12 +165,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AvailabilitySet} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(resourceGroupName, availabilitySetName, options,
-        options.customHeaders, callback);
+      content: 'function get(resourceGroupName, availabilitySetName, options, callback);'
     fullName: >-
       AvailabilitySets.get(resourceGroupName, availabilitySetName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'AvailabilitySets#get~client'
       - 'AvailabilitySets#get~callback'
@@ -202,7 +187,7 @@ items:
   - uid: 'AvailabilitySets#list'
     id: list
     parent: AvailabilitySets
-    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'list(resourceGroupName, options, callback)'
     summary: The operation to list the availability sets.
     type: Method
     syntax:
@@ -221,12 +206,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AvailabilitySetListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      AvailabilitySets.list(resourceGroupName, options, options.customHeaders,
-      callback)
+      content: 'function list(resourceGroupName, options, callback);'
+    fullName: 'AvailabilitySets.list(resourceGroupName, options, callback)'
     children:
       - 'AvailabilitySets#list~client'
       - 'AvailabilitySets#list~callback'
@@ -246,7 +227,7 @@ items:
     parent: AvailabilitySets
     name: >-
       listAvailableSizes(resourceGroupName, availabilitySetName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "Lists all available virtual machine sizes that can be used to create a new\rvirtual machine in an existing availability set."
     type: Method
     syntax:
@@ -270,10 +251,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineSizeListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listAvailableSizes(resourceGroupName, availabilitySetName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       AvailabilitySets.listAvailableSizes(resourceGroupName,
-      availabilitySetName, options, options.customHeaders, callback)
+      availabilitySetName, options, callback)
     children:
       - 'AvailabilitySets#listAvailableSizes~client'
       - 'AvailabilitySets#listAvailableSizes~callback'

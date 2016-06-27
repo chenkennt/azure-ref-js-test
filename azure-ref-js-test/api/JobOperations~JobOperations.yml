@@ -30,40 +30,7 @@ items:
   - uid: 'JobOperations~JobOperations#create'
     id: create
     parent: JobOperations~JobOperations
-    name: >-
-      create(parameters, parameters.startTime, parameters.action,
-      parameters.action.type, parameters.action.retryPolicy,
-      parameters.action.retryPolicy.retryType,
-      parameters.action.retryPolicy.retryInterval,
-      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
-      parameters.action.errorAction.type, parameters.action.errorAction.request,
-      parameters.action.errorAction.request.uri,
-      parameters.action.errorAction.request.method,
-      parameters.action.errorAction.request.headers,
-      parameters.action.errorAction.request.body,
-      parameters.action.errorAction.request.authentication,
-      parameters.action.errorAction.request.authentication.type,
-      parameters.action.errorAction.queueMessage,
-      parameters.action.errorAction.queueMessage.storageAccountName,
-      parameters.action.errorAction.queueMessage.queueName,
-      parameters.action.errorAction.queueMessage.sasToken,
-      parameters.action.errorAction.queueMessage.message,
-      parameters.action.request, parameters.action.request.uri,
-      parameters.action.request.method, parameters.action.request.headers,
-      parameters.action.request.body, parameters.action.request.authentication,
-      parameters.action.request.authentication.type,
-      parameters.action.queueMessage,
-      parameters.action.queueMessage.storageAccountName,
-      parameters.action.queueMessage.queueName,
-      parameters.action.queueMessage.sasToken,
-      parameters.action.queueMessage.message, parameters.recurrence,
-      parameters.recurrence.frequency, parameters.recurrence.interval,
-      parameters.recurrence.count, parameters.recurrence.endTime,
-      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
-      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
-      parameters.recurrence.schedule.months,
-      parameters.recurrence.schedule.monthDays,
-      parameters.recurrence.schedule.monthlyOccurrences, callback)
+    name: 'create(parameters, callback)'
     summary: "Creates a new Job, allowing the service to generate a job id. Use\rCreateOrUpdate if a user-chosen job id is required."
     type: Method
     syntax:
@@ -211,77 +178,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function create(parameters, parameters.startTime, parameters.action,
-        parameters.action.type, parameters.action.retryPolicy,
-        parameters.action.retryPolicy.retryType,
-        parameters.action.retryPolicy.retryInterval,
-        parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
-        parameters.action.errorAction.type,
-        parameters.action.errorAction.request,
-        parameters.action.errorAction.request.uri,
-        parameters.action.errorAction.request.method,
-        parameters.action.errorAction.request.headers,
-        parameters.action.errorAction.request.body,
-        parameters.action.errorAction.request.authentication,
-        parameters.action.errorAction.request.authentication.type,
-        parameters.action.errorAction.queueMessage,
-        parameters.action.errorAction.queueMessage.storageAccountName,
-        parameters.action.errorAction.queueMessage.queueName,
-        parameters.action.errorAction.queueMessage.sasToken,
-        parameters.action.errorAction.queueMessage.message,
-        parameters.action.request, parameters.action.request.uri,
-        parameters.action.request.method, parameters.action.request.headers,
-        parameters.action.request.body,
-        parameters.action.request.authentication,
-        parameters.action.request.authentication.type,
-        parameters.action.queueMessage,
-        parameters.action.queueMessage.storageAccountName,
-        parameters.action.queueMessage.queueName,
-        parameters.action.queueMessage.sasToken,
-        parameters.action.queueMessage.message, parameters.recurrence,
-        parameters.recurrence.frequency, parameters.recurrence.interval,
-        parameters.recurrence.count, parameters.recurrence.endTime,
-        parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
-        parameters.recurrence.schedule.hours,
-        parameters.recurrence.schedule.days,
-        parameters.recurrence.schedule.months,
-        parameters.recurrence.schedule.monthDays,
-        parameters.recurrence.schedule.monthlyOccurrences, callback);
-    fullName: >-
-      JobOperations~JobOperations.create(parameters, parameters.startTime,
-      parameters.action, parameters.action.type, parameters.action.retryPolicy,
-      parameters.action.retryPolicy.retryType,
-      parameters.action.retryPolicy.retryInterval,
-      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
-      parameters.action.errorAction.type, parameters.action.errorAction.request,
-      parameters.action.errorAction.request.uri,
-      parameters.action.errorAction.request.method,
-      parameters.action.errorAction.request.headers,
-      parameters.action.errorAction.request.body,
-      parameters.action.errorAction.request.authentication,
-      parameters.action.errorAction.request.authentication.type,
-      parameters.action.errorAction.queueMessage,
-      parameters.action.errorAction.queueMessage.storageAccountName,
-      parameters.action.errorAction.queueMessage.queueName,
-      parameters.action.errorAction.queueMessage.sasToken,
-      parameters.action.errorAction.queueMessage.message,
-      parameters.action.request, parameters.action.request.uri,
-      parameters.action.request.method, parameters.action.request.headers,
-      parameters.action.request.body, parameters.action.request.authentication,
-      parameters.action.request.authentication.type,
-      parameters.action.queueMessage,
-      parameters.action.queueMessage.storageAccountName,
-      parameters.action.queueMessage.queueName,
-      parameters.action.queueMessage.sasToken,
-      parameters.action.queueMessage.message, parameters.recurrence,
-      parameters.recurrence.frequency, parameters.recurrence.interval,
-      parameters.recurrence.count, parameters.recurrence.endTime,
-      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
-      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
-      parameters.recurrence.schedule.months,
-      parameters.recurrence.schedule.monthDays,
-      parameters.recurrence.schedule.monthlyOccurrences, callback)
+      content: 'function create(parameters, callback);'
+    fullName: 'JobOperations~JobOperations.create(parameters, callback)'
     children:
       - 'JobOperations~JobOperations#create~loweredIndex1'
       - 'JobOperations~JobOperations#create~loweredIndex1'
@@ -361,40 +259,7 @@ items:
   - uid: 'JobOperations~JobOperations#createOrUpdate'
     id: createOrUpdate
     parent: JobOperations~JobOperations
-    name: >-
-      createOrUpdate(jobId, parameters, parameters.startTime, parameters.action,
-      parameters.action.type, parameters.action.retryPolicy,
-      parameters.action.retryPolicy.retryType,
-      parameters.action.retryPolicy.retryInterval,
-      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
-      parameters.action.errorAction.type, parameters.action.errorAction.request,
-      parameters.action.errorAction.request.uri,
-      parameters.action.errorAction.request.method,
-      parameters.action.errorAction.request.headers,
-      parameters.action.errorAction.request.body,
-      parameters.action.errorAction.request.authentication,
-      parameters.action.errorAction.request.authentication.type,
-      parameters.action.errorAction.queueMessage,
-      parameters.action.errorAction.queueMessage.storageAccountName,
-      parameters.action.errorAction.queueMessage.queueName,
-      parameters.action.errorAction.queueMessage.sasToken,
-      parameters.action.errorAction.queueMessage.message,
-      parameters.action.request, parameters.action.request.uri,
-      parameters.action.request.method, parameters.action.request.headers,
-      parameters.action.request.body, parameters.action.request.authentication,
-      parameters.action.request.authentication.type,
-      parameters.action.queueMessage,
-      parameters.action.queueMessage.storageAccountName,
-      parameters.action.queueMessage.queueName,
-      parameters.action.queueMessage.sasToken,
-      parameters.action.queueMessage.message, parameters.recurrence,
-      parameters.recurrence.frequency, parameters.recurrence.interval,
-      parameters.recurrence.count, parameters.recurrence.endTime,
-      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
-      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
-      parameters.recurrence.schedule.months,
-      parameters.recurrence.schedule.monthDays,
-      parameters.recurrence.schedule.monthlyOccurrences, callback)
+    name: 'createOrUpdate(jobId, parameters, callback)'
     summary: "Creates a new Job with a user-provided job id, or updates an existing job,\rreplacing its definition with that specified."
     type: Method
     syntax:
@@ -545,77 +410,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function createOrUpdate(jobId, parameters, parameters.startTime,
-        parameters.action, parameters.action.type,
-        parameters.action.retryPolicy, parameters.action.retryPolicy.retryType,
-        parameters.action.retryPolicy.retryInterval,
-        parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
-        parameters.action.errorAction.type,
-        parameters.action.errorAction.request,
-        parameters.action.errorAction.request.uri,
-        parameters.action.errorAction.request.method,
-        parameters.action.errorAction.request.headers,
-        parameters.action.errorAction.request.body,
-        parameters.action.errorAction.request.authentication,
-        parameters.action.errorAction.request.authentication.type,
-        parameters.action.errorAction.queueMessage,
-        parameters.action.errorAction.queueMessage.storageAccountName,
-        parameters.action.errorAction.queueMessage.queueName,
-        parameters.action.errorAction.queueMessage.sasToken,
-        parameters.action.errorAction.queueMessage.message,
-        parameters.action.request, parameters.action.request.uri,
-        parameters.action.request.method, parameters.action.request.headers,
-        parameters.action.request.body,
-        parameters.action.request.authentication,
-        parameters.action.request.authentication.type,
-        parameters.action.queueMessage,
-        parameters.action.queueMessage.storageAccountName,
-        parameters.action.queueMessage.queueName,
-        parameters.action.queueMessage.sasToken,
-        parameters.action.queueMessage.message, parameters.recurrence,
-        parameters.recurrence.frequency, parameters.recurrence.interval,
-        parameters.recurrence.count, parameters.recurrence.endTime,
-        parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
-        parameters.recurrence.schedule.hours,
-        parameters.recurrence.schedule.days,
-        parameters.recurrence.schedule.months,
-        parameters.recurrence.schedule.monthDays,
-        parameters.recurrence.schedule.monthlyOccurrences, callback);
-    fullName: >-
-      JobOperations~JobOperations.createOrUpdate(jobId, parameters,
-      parameters.startTime, parameters.action, parameters.action.type,
-      parameters.action.retryPolicy, parameters.action.retryPolicy.retryType,
-      parameters.action.retryPolicy.retryInterval,
-      parameters.action.retryPolicy.retryCount, parameters.action.errorAction,
-      parameters.action.errorAction.type, parameters.action.errorAction.request,
-      parameters.action.errorAction.request.uri,
-      parameters.action.errorAction.request.method,
-      parameters.action.errorAction.request.headers,
-      parameters.action.errorAction.request.body,
-      parameters.action.errorAction.request.authentication,
-      parameters.action.errorAction.request.authentication.type,
-      parameters.action.errorAction.queueMessage,
-      parameters.action.errorAction.queueMessage.storageAccountName,
-      parameters.action.errorAction.queueMessage.queueName,
-      parameters.action.errorAction.queueMessage.sasToken,
-      parameters.action.errorAction.queueMessage.message,
-      parameters.action.request, parameters.action.request.uri,
-      parameters.action.request.method, parameters.action.request.headers,
-      parameters.action.request.body, parameters.action.request.authentication,
-      parameters.action.request.authentication.type,
-      parameters.action.queueMessage,
-      parameters.action.queueMessage.storageAccountName,
-      parameters.action.queueMessage.queueName,
-      parameters.action.queueMessage.sasToken,
-      parameters.action.queueMessage.message, parameters.recurrence,
-      parameters.recurrence.frequency, parameters.recurrence.interval,
-      parameters.recurrence.count, parameters.recurrence.endTime,
-      parameters.recurrence.schedule, parameters.recurrence.schedule.minutes,
-      parameters.recurrence.schedule.hours, parameters.recurrence.schedule.days,
-      parameters.recurrence.schedule.months,
-      parameters.recurrence.schedule.monthDays,
-      parameters.recurrence.schedule.monthlyOccurrences, callback)
+      content: 'function createOrUpdate(jobId, parameters, callback);'
+    fullName: 'JobOperations~JobOperations.createOrUpdate(jobId, parameters, callback)'
     children:
       - 'JobOperations~JobOperations#createOrUpdate~loweredIndex1'
       - 'JobOperations~JobOperations#createOrUpdate~loweredIndex1'
@@ -777,7 +573,7 @@ items:
   - uid: 'JobOperations~JobOperations#getHistory'
     id: getHistory
     parent: JobOperations~JobOperations
-    name: 'getHistory(jobId, parameters, parameters.skip, parameters.top, callback)'
+    name: 'getHistory(jobId, parameters, callback)'
     summary: Get the execution history of a Job.
     type: Method
     syntax:
@@ -799,12 +595,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function getHistory(jobId, parameters, parameters.skip, parameters.top,
-        callback);
-    fullName: >-
-      JobOperations~JobOperations.getHistory(jobId, parameters, parameters.skip,
-      parameters.top, callback)
+      content: 'function getHistory(jobId, parameters, callback);'
+    fullName: 'JobOperations~JobOperations.getHistory(jobId, parameters, callback)'
     children:
       - 'JobOperations~JobOperations#getHistory~url2'
       - 'JobOperations~JobOperations#getHistory~url2'
@@ -830,9 +622,7 @@ items:
   - uid: 'JobOperations~JobOperations#getHistoryWithFilter'
     id: getHistoryWithFilter
     parent: JobOperations~JobOperations
-    name: >-
-      getHistoryWithFilter(jobId, parameters, parameters.status,
-      parameters.skip, parameters.top, callback)
+    name: 'getHistoryWithFilter(jobId, parameters, callback)'
     summary: Get the execution history of a Job with a filter on the job Status.
     type: Method
     syntax:
@@ -857,12 +647,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function getHistoryWithFilter(jobId, parameters, parameters.status,
-        parameters.skip, parameters.top, callback);
+      content: 'function getHistoryWithFilter(jobId, parameters, callback);'
     fullName: >-
       JobOperations~JobOperations.getHistoryWithFilter(jobId, parameters,
-      parameters.status, parameters.skip, parameters.top, callback)
+      callback)
     children:
       - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
       - 'JobOperations~JobOperations#getHistoryWithFilter~url2'
@@ -889,7 +677,7 @@ items:
   - uid: 'JobOperations~JobOperations#list'
     id: list
     parent: JobOperations~JobOperations
-    name: 'list(parameters, parameters.skip, parameters.top, callback)'
+    name: 'list(parameters, callback)'
     summary: Get the list of all jobs in a job collection.
     type: Method
     syntax:
@@ -908,10 +696,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: 'function list(parameters, parameters.skip, parameters.top, callback);'
-    fullName: >-
-      JobOperations~JobOperations.list(parameters, parameters.skip,
-      parameters.top, callback)
+      content: 'function list(parameters, callback);'
+    fullName: 'JobOperations~JobOperations.list(parameters, callback)'
     children:
       - 'JobOperations~JobOperations#list~url2'
       - 'JobOperations~JobOperations#list~url2'
@@ -935,9 +721,7 @@ items:
   - uid: 'JobOperations~JobOperations#listWithFilter'
     id: listWithFilter
     parent: JobOperations~JobOperations
-    name: >-
-      listWithFilter(parameters, parameters.state, parameters.skip,
-      parameters.top, callback)
+    name: 'listWithFilter(parameters, callback)'
     summary: Get the list of jobs in a job collection matching a filter on job state.
     type: Method
     syntax:
@@ -959,12 +743,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function listWithFilter(parameters, parameters.state, parameters.skip,
-        parameters.top, callback);
-    fullName: >-
-      JobOperations~JobOperations.listWithFilter(parameters, parameters.state,
-      parameters.skip, parameters.top, callback)
+      content: 'function listWithFilter(parameters, callback);'
+    fullName: 'JobOperations~JobOperations.listWithFilter(parameters, callback)'
     children:
       - 'JobOperations~JobOperations#listWithFilter~url2'
       - 'JobOperations~JobOperations#listWithFilter~url2'
@@ -989,7 +769,7 @@ items:
   - uid: 'JobOperations~JobOperations#updateJobCollectionState'
     id: updateJobCollectionState
     parent: JobOperations~JobOperations
-    name: 'updateJobCollectionState(parameters, parameters.state, callback)'
+    name: 'updateJobCollectionState(parameters, callback)'
     summary: Update the state of all jobs in a job collections.
     type: Method
     syntax:
@@ -1005,12 +785,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function updateJobCollectionState(parameters, parameters.state,
-        callback);
-    fullName: >-
-      JobOperations~JobOperations.updateJobCollectionState(parameters,
-      parameters.state, callback)
+      content: 'function updateJobCollectionState(parameters, callback);'
+    fullName: 'JobOperations~JobOperations.updateJobCollectionState(parameters, callback)'
     children:
       - 'JobOperations~JobOperations#updateJobCollectionState~url2'
       - 'JobOperations~JobOperations#updateJobCollectionState~url2'
@@ -1038,9 +814,7 @@ items:
   - uid: 'JobOperations~JobOperations#updateState'
     id: updateState
     parent: JobOperations~JobOperations
-    name: >-
-      updateState(jobId, parameters, parameters.state,
-      parameters.updateStateReason, callback)
+    name: 'updateState(jobId, parameters, callback)'
     summary: Update the state of a job.
     type: Method
     syntax:
@@ -1062,12 +836,8 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function updateState(jobId, parameters, parameters.state,
-        parameters.updateStateReason, callback);
-    fullName: >-
-      JobOperations~JobOperations.updateState(jobId, parameters,
-      parameters.state, parameters.updateStateReason, callback)
+      content: 'function updateState(jobId, parameters, callback);'
+    fullName: 'JobOperations~JobOperations.updateState(jobId, parameters, callback)'
     children:
       - 'JobOperations~JobOperations#updateState~url2'
       - 'JobOperations~JobOperations#updateState~url2'

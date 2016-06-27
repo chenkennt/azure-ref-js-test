@@ -28,20 +28,7 @@ items:
   - uid: 'Task#add'
     id: add
     parent: Task
-    name: >-
-      add(jobId, task, task.id, task.displayName, task.commandLine,
-      task.resourceFiles, task.environmentSettings, task.affinityInfo,
-      task.affinityInfo.affinityId, task.constraints,
-      task.constraints.maxWallClockTime, task.constraints.retentionTime,
-      task.constraints.maxTaskRetryCount, task.runElevated,
-      task.multiInstanceSettings, task.multiInstanceSettings.numberOfInstances,
-      task.multiInstanceSettings.coordinationCommandLine,
-      task.multiInstanceSettings.commonResourceFiles, task.dependsOn,
-      task.dependsOn.taskIds, task.dependsOn.taskIdRanges, options,
-      options.taskAddOptions, options.taskAddOptions.timeout,
-      options.taskAddOptions.clientRequestId,
-      options.taskAddOptions.returnClientRequestId,
-      options.taskAddOptions.ocpDate, options.customHeaders, callback)
+    name: 'add(jobId, task, options, callback)'
     summary: Adds a task to the specified job.
     type: Method
     syntax:
@@ -135,35 +122,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function add(jobId, task, task.id, task.displayName, task.commandLine,
-        task.resourceFiles, task.environmentSettings, task.affinityInfo,
-        task.affinityInfo.affinityId, task.constraints,
-        task.constraints.maxWallClockTime, task.constraints.retentionTime,
-        task.constraints.maxTaskRetryCount, task.runElevated,
-        task.multiInstanceSettings,
-        task.multiInstanceSettings.numberOfInstances,
-        task.multiInstanceSettings.coordinationCommandLine,
-        task.multiInstanceSettings.commonResourceFiles, task.dependsOn,
-        task.dependsOn.taskIds, task.dependsOn.taskIdRanges, options,
-        options.taskAddOptions, options.taskAddOptions.timeout,
-        options.taskAddOptions.clientRequestId,
-        options.taskAddOptions.returnClientRequestId,
-        options.taskAddOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      Task.add(jobId, task, task.id, task.displayName, task.commandLine,
-      task.resourceFiles, task.environmentSettings, task.affinityInfo,
-      task.affinityInfo.affinityId, task.constraints,
-      task.constraints.maxWallClockTime, task.constraints.retentionTime,
-      task.constraints.maxTaskRetryCount, task.runElevated,
-      task.multiInstanceSettings, task.multiInstanceSettings.numberOfInstances,
-      task.multiInstanceSettings.coordinationCommandLine,
-      task.multiInstanceSettings.commonResourceFiles, task.dependsOn,
-      task.dependsOn.taskIds, task.dependsOn.taskIdRanges, options,
-      options.taskAddOptions, options.taskAddOptions.timeout,
-      options.taskAddOptions.clientRequestId,
-      options.taskAddOptions.returnClientRequestId,
-      options.taskAddOptions.ocpDate, options.customHeaders, callback)
+      content: 'function add(jobId, task, options, callback);'
+    fullName: 'Task.add(jobId, task, options, callback)'
     children:
       - 'Task#add~client'
       - 'Task#add~callback'
@@ -194,13 +154,7 @@ items:
   - uid: 'Task#list'
     id: list
     parent: Task
-    name: >-
-      list(jobId, options, options.taskListOptions,
-      options.taskListOptions.filter, options.taskListOptions.select,
-      options.taskListOptions.expand, options.taskListOptions.maxResults,
-      options.taskListOptions.timeout, options.taskListOptions.clientRequestId,
-      options.taskListOptions.returnClientRequestId,
-      options.taskListOptions.ocpDate, options.customHeaders, callback)
+    name: 'list(jobId, options, callback)'
     summary: Lists all of the tasks that are associated with the specified job.
     type: Method
     syntax:
@@ -246,21 +200,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudTaskListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(jobId, options, options.taskListOptions,
-        options.taskListOptions.filter, options.taskListOptions.select,
-        options.taskListOptions.expand, options.taskListOptions.maxResults,
-        options.taskListOptions.timeout,
-        options.taskListOptions.clientRequestId,
-        options.taskListOptions.returnClientRequestId,
-        options.taskListOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      Task.list(jobId, options, options.taskListOptions,
-      options.taskListOptions.filter, options.taskListOptions.select,
-      options.taskListOptions.expand, options.taskListOptions.maxResults,
-      options.taskListOptions.timeout, options.taskListOptions.clientRequestId,
-      options.taskListOptions.returnClientRequestId,
-      options.taskListOptions.ocpDate, options.customHeaders, callback)
+      content: 'function list(jobId, options, callback);'
+    fullName: 'Task.list(jobId, options, callback)'
     children:
       - 'Task#list~client'
       - 'Task#list~callback'
@@ -293,12 +234,7 @@ items:
   - uid: 'Task#addCollection'
     id: addCollection
     parent: Task
-    name: >-
-      addCollection(jobId, value, options, options.taskAddCollectionOptions,
-      options.taskAddCollectionOptions.timeout,
-      options.taskAddCollectionOptions.clientRequestId,
-      options.taskAddCollectionOptions.returnClientRequestId,
-      options.taskAddCollectionOptions.ocpDate, options.customHeaders, callback)
+    name: 'addCollection(jobId, value, options, callback)'
     summary: Adds a collection of tasks to the specified job.
     type: Method
     syntax:
@@ -335,21 +271,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link TaskAddCollectionResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function addCollection(jobId, value, options,
-        options.taskAddCollectionOptions,
-        options.taskAddCollectionOptions.timeout,
-        options.taskAddCollectionOptions.clientRequestId,
-        options.taskAddCollectionOptions.returnClientRequestId,
-        options.taskAddCollectionOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      Task.addCollection(jobId, value, options,
-      options.taskAddCollectionOptions,
-      options.taskAddCollectionOptions.timeout,
-      options.taskAddCollectionOptions.clientRequestId,
-      options.taskAddCollectionOptions.returnClientRequestId,
-      options.taskAddCollectionOptions.ocpDate, options.customHeaders, callback)
+      content: 'function addCollection(jobId, value, options, callback);'
+    fullName: 'Task.addCollection(jobId, value, options, callback)'
     children:
       - 'Task#addCollection~client'
       - 'Task#addCollection~callback'
@@ -381,17 +304,7 @@ items:
   - uid: 'Task#deleteMethod'
     id: deleteMethod
     parent: Task
-    name: >-
-      deleteMethod(jobId, taskId, options, options.taskDeleteMethodOptions,
-      options.taskDeleteMethodOptions.timeout,
-      options.taskDeleteMethodOptions.clientRequestId,
-      options.taskDeleteMethodOptions.returnClientRequestId,
-      options.taskDeleteMethodOptions.ocpDate,
-      options.taskDeleteMethodOptions.ifMatch,
-      options.taskDeleteMethodOptions.ifNoneMatch,
-      options.taskDeleteMethodOptions.ifModifiedSince,
-      options.taskDeleteMethodOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'deleteMethod(jobId, taskId, options, callback)'
     summary: Deletes a task from the specified job.
     type: Method
     syntax:
@@ -440,29 +353,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(jobId, taskId, options,
-        options.taskDeleteMethodOptions,
-        options.taskDeleteMethodOptions.timeout,
-        options.taskDeleteMethodOptions.clientRequestId,
-        options.taskDeleteMethodOptions.returnClientRequestId,
-        options.taskDeleteMethodOptions.ocpDate,
-        options.taskDeleteMethodOptions.ifMatch,
-        options.taskDeleteMethodOptions.ifNoneMatch,
-        options.taskDeleteMethodOptions.ifModifiedSince,
-        options.taskDeleteMethodOptions.ifUnmodifiedSince,
-        options.customHeaders, callback);
-    fullName: >-
-      Task.deleteMethod(jobId, taskId, options, options.taskDeleteMethodOptions,
-      options.taskDeleteMethodOptions.timeout,
-      options.taskDeleteMethodOptions.clientRequestId,
-      options.taskDeleteMethodOptions.returnClientRequestId,
-      options.taskDeleteMethodOptions.ocpDate,
-      options.taskDeleteMethodOptions.ifMatch,
-      options.taskDeleteMethodOptions.ifNoneMatch,
-      options.taskDeleteMethodOptions.ifModifiedSince,
-      options.taskDeleteMethodOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function deleteMethod(jobId, taskId, options, callback);'
+    fullName: 'Task.deleteMethod(jobId, taskId, options, callback)'
     children:
       - 'Task#deleteMethod~client'
       - 'Task#deleteMethod~callback'
@@ -496,15 +388,7 @@ items:
   - uid: 'Task#get'
     id: get
     parent: Task
-    name: >-
-      get(jobId, taskId, options, options.taskGetOptions,
-      options.taskGetOptions.select, options.taskGetOptions.expand,
-      options.taskGetOptions.timeout, options.taskGetOptions.clientRequestId,
-      options.taskGetOptions.returnClientRequestId,
-      options.taskGetOptions.ocpDate, options.taskGetOptions.ifMatch,
-      options.taskGetOptions.ifNoneMatch,
-      options.taskGetOptions.ifModifiedSince,
-      options.taskGetOptions.ifUnmodifiedSince, options.customHeaders, callback)
+    name: 'get(jobId, taskId, options, callback)'
     summary: Gets information about the specified task.
     type: Method
     syntax:
@@ -559,25 +443,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudTask} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(jobId, taskId, options, options.taskGetOptions,
-        options.taskGetOptions.select, options.taskGetOptions.expand,
-        options.taskGetOptions.timeout, options.taskGetOptions.clientRequestId,
-        options.taskGetOptions.returnClientRequestId,
-        options.taskGetOptions.ocpDate, options.taskGetOptions.ifMatch,
-        options.taskGetOptions.ifNoneMatch,
-        options.taskGetOptions.ifModifiedSince,
-        options.taskGetOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Task.get(jobId, taskId, options, options.taskGetOptions,
-      options.taskGetOptions.select, options.taskGetOptions.expand,
-      options.taskGetOptions.timeout, options.taskGetOptions.clientRequestId,
-      options.taskGetOptions.returnClientRequestId,
-      options.taskGetOptions.ocpDate, options.taskGetOptions.ifMatch,
-      options.taskGetOptions.ifNoneMatch,
-      options.taskGetOptions.ifModifiedSince,
-      options.taskGetOptions.ifUnmodifiedSince, options.customHeaders, callback)
+      content: 'function get(jobId, taskId, options, callback);'
+    fullName: 'Task.get(jobId, taskId, options, callback)'
     children:
       - 'Task#get~client'
       - 'Task#get~callback'
@@ -615,18 +482,7 @@ items:
   - uid: 'Task#update'
     id: update
     parent: Task
-    name: >-
-      update(jobId, taskId, options, options.constraints,
-      options.constraints.maxWallClockTime, options.constraints.retentionTime,
-      options.constraints.maxTaskRetryCount, options.taskUpdateOptions,
-      options.taskUpdateOptions.timeout,
-      options.taskUpdateOptions.clientRequestId,
-      options.taskUpdateOptions.returnClientRequestId,
-      options.taskUpdateOptions.ocpDate, options.taskUpdateOptions.ifMatch,
-      options.taskUpdateOptions.ifNoneMatch,
-      options.taskUpdateOptions.ifModifiedSince,
-      options.taskUpdateOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'update(jobId, taskId, options, callback)'
     summary: Updates the properties of the specified task.
     type: Method
     syntax:
@@ -687,30 +543,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function update(jobId, taskId, options, options.constraints,
-        options.constraints.maxWallClockTime, options.constraints.retentionTime,
-        options.constraints.maxTaskRetryCount, options.taskUpdateOptions,
-        options.taskUpdateOptions.timeout,
-        options.taskUpdateOptions.clientRequestId,
-        options.taskUpdateOptions.returnClientRequestId,
-        options.taskUpdateOptions.ocpDate, options.taskUpdateOptions.ifMatch,
-        options.taskUpdateOptions.ifNoneMatch,
-        options.taskUpdateOptions.ifModifiedSince,
-        options.taskUpdateOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Task.update(jobId, taskId, options, options.constraints,
-      options.constraints.maxWallClockTime, options.constraints.retentionTime,
-      options.constraints.maxTaskRetryCount, options.taskUpdateOptions,
-      options.taskUpdateOptions.timeout,
-      options.taskUpdateOptions.clientRequestId,
-      options.taskUpdateOptions.returnClientRequestId,
-      options.taskUpdateOptions.ocpDate, options.taskUpdateOptions.ifMatch,
-      options.taskUpdateOptions.ifNoneMatch,
-      options.taskUpdateOptions.ifModifiedSince,
-      options.taskUpdateOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function update(jobId, taskId, options, callback);'
+    fullName: 'Task.update(jobId, taskId, options, callback)'
     children:
       - 'Task#update~client'
       - 'Task#update~callback'
@@ -752,13 +586,7 @@ items:
   - uid: 'Task#listSubtasks'
     id: listSubtasks
     parent: Task
-    name: >-
-      listSubtasks(jobId, taskId, options, options.taskListSubtasksOptions,
-      options.taskListSubtasksOptions.select,
-      options.taskListSubtasksOptions.timeout,
-      options.taskListSubtasksOptions.clientRequestId,
-      options.taskListSubtasksOptions.returnClientRequestId,
-      options.taskListSubtasksOptions.ocpDate, options.customHeaders, callback)
+    name: 'listSubtasks(jobId, taskId, options, callback)'
     summary: "Lists all of the subtasks that are associated with the specified\rmulti-instance task."
     type: Method
     syntax:
@@ -798,21 +626,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudTaskListSubtasksResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listSubtasks(jobId, taskId, options,
-        options.taskListSubtasksOptions, options.taskListSubtasksOptions.select,
-        options.taskListSubtasksOptions.timeout,
-        options.taskListSubtasksOptions.clientRequestId,
-        options.taskListSubtasksOptions.returnClientRequestId,
-        options.taskListSubtasksOptions.ocpDate, options.customHeaders,
-        callback);
-    fullName: >-
-      Task.listSubtasks(jobId, taskId, options, options.taskListSubtasksOptions,
-      options.taskListSubtasksOptions.select,
-      options.taskListSubtasksOptions.timeout,
-      options.taskListSubtasksOptions.clientRequestId,
-      options.taskListSubtasksOptions.returnClientRequestId,
-      options.taskListSubtasksOptions.ocpDate, options.customHeaders, callback)
+      content: 'function listSubtasks(jobId, taskId, options, callback);'
+    fullName: 'Task.listSubtasks(jobId, taskId, options, callback)'
     children:
       - 'Task#listSubtasks~client'
       - 'Task#listSubtasks~callback'
@@ -840,17 +655,7 @@ items:
   - uid: 'Task#terminate'
     id: terminate
     parent: Task
-    name: >-
-      terminate(jobId, taskId, options, options.taskTerminateOptions,
-      options.taskTerminateOptions.timeout,
-      options.taskTerminateOptions.clientRequestId,
-      options.taskTerminateOptions.returnClientRequestId,
-      options.taskTerminateOptions.ocpDate,
-      options.taskTerminateOptions.ifMatch,
-      options.taskTerminateOptions.ifNoneMatch,
-      options.taskTerminateOptions.ifModifiedSince,
-      options.taskTerminateOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+    name: 'terminate(jobId, taskId, options, callback)'
     summary: Terminates the specified task.
     type: Method
     syntax:
@@ -899,28 +704,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function terminate(jobId, taskId, options, options.taskTerminateOptions,
-        options.taskTerminateOptions.timeout,
-        options.taskTerminateOptions.clientRequestId,
-        options.taskTerminateOptions.returnClientRequestId,
-        options.taskTerminateOptions.ocpDate,
-        options.taskTerminateOptions.ifMatch,
-        options.taskTerminateOptions.ifNoneMatch,
-        options.taskTerminateOptions.ifModifiedSince,
-        options.taskTerminateOptions.ifUnmodifiedSince, options.customHeaders,
-        callback);
-    fullName: >-
-      Task.terminate(jobId, taskId, options, options.taskTerminateOptions,
-      options.taskTerminateOptions.timeout,
-      options.taskTerminateOptions.clientRequestId,
-      options.taskTerminateOptions.returnClientRequestId,
-      options.taskTerminateOptions.ocpDate,
-      options.taskTerminateOptions.ifMatch,
-      options.taskTerminateOptions.ifNoneMatch,
-      options.taskTerminateOptions.ifModifiedSince,
-      options.taskTerminateOptions.ifUnmodifiedSince, options.customHeaders,
-      callback)
+      content: 'function terminate(jobId, taskId, options, callback);'
+    fullName: 'Task.terminate(jobId, taskId, options, callback)'
     children:
       - 'Task#terminate~client'
       - 'Task#terminate~callback'
@@ -954,11 +739,7 @@ items:
   - uid: 'Task#listNext'
     id: listNext
     parent: Task
-    name: >-
-      listNext(nextPageLink, options, options.taskListNextOptions,
-      options.taskListNextOptions.clientRequestId,
-      options.taskListNextOptions.returnClientRequestId,
-      options.taskListNextOptions.ocpDate, options.customHeaders, callback)
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Lists all of the tasks that are associated with the specified job.
     type: Method
     syntax:
@@ -989,16 +770,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link CloudTaskListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.taskListNextOptions,
-        options.taskListNextOptions.clientRequestId,
-        options.taskListNextOptions.returnClientRequestId,
-        options.taskListNextOptions.ocpDate, options.customHeaders, callback);
-    fullName: >-
-      Task.listNext(nextPageLink, options, options.taskListNextOptions,
-      options.taskListNextOptions.clientRequestId,
-      options.taskListNextOptions.returnClientRequestId,
-      options.taskListNextOptions.ocpDate, options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Task.listNext(nextPageLink, options, callback)'
     children:
       - 'Task#listNext~client'
       - 'Task#listNext~callback'

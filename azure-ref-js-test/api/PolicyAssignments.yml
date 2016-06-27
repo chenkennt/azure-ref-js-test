@@ -35,8 +35,7 @@ items:
     parent: PolicyAssignments
     name: >-
       listForResource(resourceGroupName, resourceProviderNamespace,
-      parentResourcePath, resourceType, resourceName, options, options.filter,
-      options.customHeaders, callback)
+      parentResourcePath, resourceType, resourceName, options, callback)
     summary: Gets policy assignments of the resource.
     type: Method
     syntax:
@@ -72,12 +71,11 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listForResource(resourceGroupName, resourceProviderNamespace,
-        parentResourcePath, resourceType, resourceName, options, options.filter,
-        options.customHeaders, callback);
+        parentResourcePath, resourceType, resourceName, options, callback);
     fullName: >-
       PolicyAssignments.listForResource(resourceGroupName,
       resourceProviderNamespace, parentResourcePath, resourceType, resourceName,
-      options, options.filter, options.customHeaders, callback)
+      options, callback)
     children:
       - 'PolicyAssignments#listForResource~client'
       - 'PolicyAssignments#listForResource~callback'
@@ -99,9 +97,7 @@ items:
   - uid: 'PolicyAssignments#listForResourceGroup'
     id: listForResourceGroup
     parent: PolicyAssignments
-    name: >-
-      listForResourceGroup(resourceGroupName, options, options.filter,
-      options.customHeaders, callback)
+    name: 'listForResourceGroup(resourceGroupName, options, callback)'
     summary: Gets policy assignments of the resource group.
     type: Method
     syntax:
@@ -123,12 +119,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForResourceGroup(resourceGroupName, options,
-        options.filter, options.customHeaders, callback);
+      content: 'function listForResourceGroup(resourceGroupName, options, callback);'
     fullName: >-
       PolicyAssignments.listForResourceGroup(resourceGroupName, options,
-      options.filter, options.customHeaders, callback)
+      callback)
     children:
       - 'PolicyAssignments#listForResourceGroup~client'
       - 'PolicyAssignments#listForResourceGroup~callback'
@@ -146,9 +140,7 @@ items:
   - uid: 'PolicyAssignments#deleteMethod'
     id: deleteMethod
     parent: PolicyAssignments
-    name: >-
-      deleteMethod(scope, policyAssignmentName, options, options.customHeaders,
-      callback)
+    name: 'deleteMethod(scope, policyAssignmentName, options, callback)'
     summary: Delete policy assignment.
     type: Method
     syntax:
@@ -170,12 +162,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(scope, policyAssignmentName, options,
-        options.customHeaders, callback);
+      content: 'function deleteMethod(scope, policyAssignmentName, options, callback);'
     fullName: >-
       PolicyAssignments.deleteMethod(scope, policyAssignmentName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'PolicyAssignments#deleteMethod~client'
       - 'PolicyAssignments#deleteMethod~callback'
@@ -193,11 +183,7 @@ items:
   - uid: 'PolicyAssignments#create'
     id: create
     parent: PolicyAssignments
-    name: >-
-      create(scope, policyAssignmentName, parameters, parameters.properties,
-      parameters.properties.scope, parameters.properties.displayName,
-      parameters.properties.policyDefinitionId, options, options.customHeaders,
-      callback)
+    name: 'create(scope, policyAssignmentName, parameters, options, callback)'
     summary: Create policy assignment.
     type: Method
     syntax:
@@ -235,16 +221,10 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function create(scope, policyAssignmentName, parameters,
-        parameters.properties, parameters.properties.scope,
-        parameters.properties.displayName,
-        parameters.properties.policyDefinitionId, options,
-        options.customHeaders, callback);
+        function create(scope, policyAssignmentName, parameters, options,
+        callback);
     fullName: >-
-      PolicyAssignments.create(scope, policyAssignmentName, parameters,
-      parameters.properties, parameters.properties.scope,
-      parameters.properties.displayName,
-      parameters.properties.policyDefinitionId, options, options.customHeaders,
+      PolicyAssignments.create(scope, policyAssignmentName, parameters, options,
       callback)
     children:
       - 'PolicyAssignments#create~client'
@@ -269,7 +249,7 @@ items:
   - uid: 'PolicyAssignments#get'
     id: get
     parent: PolicyAssignments
-    name: 'get(scope, policyAssignmentName, options, options.customHeaders, callback)'
+    name: 'get(scope, policyAssignmentName, options, callback)'
     summary: Get single policy assignment.
     type: Method
     syntax:
@@ -291,12 +271,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(scope, policyAssignmentName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      PolicyAssignments.get(scope, policyAssignmentName, options,
-      options.customHeaders, callback)
+      content: 'function get(scope, policyAssignmentName, options, callback);'
+    fullName: 'PolicyAssignments.get(scope, policyAssignmentName, options, callback)'
     children:
       - 'PolicyAssignments#get~client'
       - 'PolicyAssignments#get~callback'
@@ -314,7 +290,7 @@ items:
   - uid: 'PolicyAssignments#deleteById'
     id: deleteById
     parent: PolicyAssignments
-    name: 'deleteById(policyAssignmentId, options, options.customHeaders, callback)'
+    name: 'deleteById(policyAssignmentId, options, callback)'
     summary: Delete policy assignment.
     type: Method
     syntax:
@@ -333,12 +309,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteById(policyAssignmentId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PolicyAssignments.deleteById(policyAssignmentId, options,
-      options.customHeaders, callback)
+      content: 'function deleteById(policyAssignmentId, options, callback);'
+    fullName: 'PolicyAssignments.deleteById(policyAssignmentId, options, callback)'
     children:
       - 'PolicyAssignments#deleteById~client'
       - 'PolicyAssignments#deleteById~callback'
@@ -355,11 +327,7 @@ items:
   - uid: 'PolicyAssignments#createById'
     id: createById
     parent: PolicyAssignments
-    name: >-
-      createById(policyAssignmentId, parameters, parameters.properties,
-      parameters.properties.scope, parameters.properties.displayName,
-      parameters.properties.policyDefinitionId, options, options.customHeaders,
-      callback)
+    name: 'createById(policyAssignmentId, parameters, options, callback)'
     summary: Create policy assignment by Id.
     type: Method
     syntax:
@@ -393,17 +361,9 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function createById(policyAssignmentId, parameters,
-        parameters.properties, parameters.properties.scope,
-        parameters.properties.displayName,
-        parameters.properties.policyDefinitionId, options,
-        options.customHeaders, callback);
+      content: 'function createById(policyAssignmentId, parameters, options, callback);'
     fullName: >-
-      PolicyAssignments.createById(policyAssignmentId, parameters,
-      parameters.properties, parameters.properties.scope,
-      parameters.properties.displayName,
-      parameters.properties.policyDefinitionId, options, options.customHeaders,
+      PolicyAssignments.createById(policyAssignmentId, parameters, options,
       callback)
     children:
       - 'PolicyAssignments#createById~client'
@@ -427,7 +387,7 @@ items:
   - uid: 'PolicyAssignments#getById'
     id: getById
     parent: PolicyAssignments
-    name: 'getById(policyAssignmentId, options, options.customHeaders, callback)'
+    name: 'getById(policyAssignmentId, options, callback)'
     summary: Get single policy assignment.
     type: Method
     syntax:
@@ -446,12 +406,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignment} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getById(policyAssignmentId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PolicyAssignments.getById(policyAssignmentId, options,
-      options.customHeaders, callback)
+      content: 'function getById(policyAssignmentId, options, callback);'
+    fullName: 'PolicyAssignments.getById(policyAssignmentId, options, callback)'
     children:
       - 'PolicyAssignments#getById~client'
       - 'PolicyAssignments#getById~callback'
@@ -468,7 +424,7 @@ items:
   - uid: 'PolicyAssignments#list'
     id: list
     parent: PolicyAssignments
-    name: 'list(options, options.filter, options.customHeaders, callback)'
+    name: 'list(options, callback)'
     summary: Gets policy assignments of the subscription.
     type: Method
     syntax:
@@ -487,10 +443,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function list(options, options.filter, options.customHeaders, callback);'
-    fullName: >-
-      PolicyAssignments.list(options, options.filter, options.customHeaders,
-      callback)
+      content: 'function list(options, callback);'
+    fullName: 'PolicyAssignments.list(options, callback)'
     children:
       - 'PolicyAssignments#list~client'
       - 'PolicyAssignments#list~callback'
@@ -507,9 +461,7 @@ items:
   - uid: 'PolicyAssignments#listForScope'
     id: listForScope
     parent: PolicyAssignments
-    name: >-
-      listForScope(scope, options, options.filter, options.customHeaders,
-      callback)
+    name: 'listForScope(scope, options, callback)'
     summary: Gets policy assignments of the scope.
     type: Method
     syntax:
@@ -531,12 +483,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForScope(scope, options, options.filter,
-        options.customHeaders, callback);
-    fullName: >-
-      PolicyAssignments.listForScope(scope, options, options.filter,
-      options.customHeaders, callback)
+      content: 'function listForScope(scope, options, callback);'
+    fullName: 'PolicyAssignments.listForScope(scope, options, callback)'
     children:
       - 'PolicyAssignments#listForScope~client'
       - 'PolicyAssignments#listForScope~callback'
@@ -554,9 +502,7 @@ items:
   - uid: 'PolicyAssignments#listForResourceNext'
     id: listForResourceNext
     parent: PolicyAssignments
-    name: >-
-      listForResourceNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listForResourceNext(nextPageLink, options, callback)'
     summary: Gets policy assignments of the resource.
     type: Method
     syntax:
@@ -575,12 +521,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForResourceNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      PolicyAssignments.listForResourceNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listForResourceNext(nextPageLink, options, callback);'
+    fullName: 'PolicyAssignments.listForResourceNext(nextPageLink, options, callback)'
     children:
       - 'PolicyAssignments#listForResourceNext~client'
       - 'PolicyAssignments#listForResourceNext~callback'
@@ -594,9 +536,7 @@ items:
   - uid: 'PolicyAssignments#listForResourceGroupNext'
     id: listForResourceGroupNext
     parent: PolicyAssignments
-    name: >-
-      listForResourceGroupNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listForResourceGroupNext(nextPageLink, options, callback)'
     summary: Gets policy assignments of the resource group.
     type: Method
     syntax:
@@ -615,12 +555,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForResourceGroupNext(nextPageLink, options,
-        options.customHeaders, callback);
+      content: 'function listForResourceGroupNext(nextPageLink, options, callback);'
     fullName: >-
       PolicyAssignments.listForResourceGroupNext(nextPageLink, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'PolicyAssignments#listForResourceGroupNext~client'
       - 'PolicyAssignments#listForResourceGroupNext~callback'
@@ -634,7 +572,7 @@ items:
   - uid: 'PolicyAssignments#listNext'
     id: listNext
     parent: PolicyAssignments
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Gets policy assignments of the subscription.
     type: Method
     syntax:
@@ -653,12 +591,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PolicyAssignments.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'PolicyAssignments.listNext(nextPageLink, options, callback)'
     children:
       - 'PolicyAssignments#listNext~client'
       - 'PolicyAssignments#listNext~callback'
@@ -672,7 +606,7 @@ items:
   - uid: 'PolicyAssignments#listForScopeNext'
     id: listForScopeNext
     parent: PolicyAssignments
-    name: 'listForScopeNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listForScopeNext(nextPageLink, options, callback)'
     summary: Gets policy assignments of the scope.
     type: Method
     syntax:
@@ -691,12 +625,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PolicyAssignmentListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listForScopeNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PolicyAssignments.listForScopeNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listForScopeNext(nextPageLink, options, callback);'
+    fullName: 'PolicyAssignments.listForScopeNext(nextPageLink, options, callback)'
     children:
       - 'PolicyAssignments#listForScopeNext~client'
       - 'PolicyAssignments#listForScopeNext~callback'

@@ -26,19 +26,7 @@ items:
     parent: VirtualMachineExtensions
     name: >-
       createOrUpdate(resourceGroupName, vmName, vmExtensionName,
-      extensionParameters, extensionParameters.forceUpdateTag,
-      extensionParameters.publisher,
-      extensionParameters.virtualMachineExtensionType,
-      extensionParameters.typeHandlerVersion,
-      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
-      extensionParameters.protectedSettings,
-      extensionParameters.provisioningState, extensionParameters.instanceView,
-      extensionParameters.instanceView.name,
-      extensionParameters.instanceView.type,
-      extensionParameters.instanceView.typeHandlerVersion,
-      extensionParameters.instanceView.substatuses,
-      extensionParameters.instanceView.statuses, extensionParameters.location,
-      extensionParameters.tags, options, options.customHeaders, callback)
+      extensionParameters, options, callback)
     summary: The operation to create or update the extension.
     type: Method
     syntax:
@@ -116,34 +104,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineExtension} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, vmName, vmExtensionName,
-        extensionParameters, extensionParameters.forceUpdateTag,
-        extensionParameters.publisher,
-        extensionParameters.virtualMachineExtensionType,
-        extensionParameters.typeHandlerVersion,
-        extensionParameters.autoUpgradeMinorVersion,
-        extensionParameters.settings, extensionParameters.protectedSettings,
-        extensionParameters.provisioningState, extensionParameters.instanceView,
-        extensionParameters.instanceView.name,
-        extensionParameters.instanceView.type,
-        extensionParameters.instanceView.typeHandlerVersion,
-        extensionParameters.instanceView.substatuses,
-        extensionParameters.instanceView.statuses, extensionParameters.location,
-        extensionParameters.tags, options, options.customHeaders, callback);
+        extensionParameters, options, callback);
     fullName: >-
       VirtualMachineExtensions.createOrUpdate(resourceGroupName, vmName,
-      vmExtensionName, extensionParameters, extensionParameters.forceUpdateTag,
-      extensionParameters.publisher,
-      extensionParameters.virtualMachineExtensionType,
-      extensionParameters.typeHandlerVersion,
-      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
-      extensionParameters.protectedSettings,
-      extensionParameters.provisioningState, extensionParameters.instanceView,
-      extensionParameters.instanceView.name,
-      extensionParameters.instanceView.type,
-      extensionParameters.instanceView.typeHandlerVersion,
-      extensionParameters.instanceView.substatuses,
-      extensionParameters.instanceView.statuses, extensionParameters.location,
-      extensionParameters.tags, options, options.customHeaders, callback)
+      vmExtensionName, extensionParameters, options, callback)
     children:
       - 'VirtualMachineExtensions#createOrUpdate~client'
       - 'VirtualMachineExtensions#createOrUpdate~callback'
@@ -153,19 +117,7 @@ items:
     parent: VirtualMachineExtensions
     name: >-
       beginCreateOrUpdate(resourceGroupName, vmName, vmExtensionName,
-      extensionParameters, extensionParameters.forceUpdateTag,
-      extensionParameters.publisher,
-      extensionParameters.virtualMachineExtensionType,
-      extensionParameters.typeHandlerVersion,
-      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
-      extensionParameters.protectedSettings,
-      extensionParameters.provisioningState, extensionParameters.instanceView,
-      extensionParameters.instanceView.name,
-      extensionParameters.instanceView.type,
-      extensionParameters.instanceView.typeHandlerVersion,
-      extensionParameters.instanceView.substatuses,
-      extensionParameters.instanceView.statuses, extensionParameters.location,
-      extensionParameters.tags, options, options.customHeaders, callback)
+      extensionParameters, options, callback)
     summary: The operation to create or update the extension.
     type: Method
     syntax:
@@ -243,34 +195,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineExtension} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, vmName, vmExtensionName,
-        extensionParameters, extensionParameters.forceUpdateTag,
-        extensionParameters.publisher,
-        extensionParameters.virtualMachineExtensionType,
-        extensionParameters.typeHandlerVersion,
-        extensionParameters.autoUpgradeMinorVersion,
-        extensionParameters.settings, extensionParameters.protectedSettings,
-        extensionParameters.provisioningState, extensionParameters.instanceView,
-        extensionParameters.instanceView.name,
-        extensionParameters.instanceView.type,
-        extensionParameters.instanceView.typeHandlerVersion,
-        extensionParameters.instanceView.substatuses,
-        extensionParameters.instanceView.statuses, extensionParameters.location,
-        extensionParameters.tags, options, options.customHeaders, callback);
+        extensionParameters, options, callback);
     fullName: >-
       VirtualMachineExtensions.beginCreateOrUpdate(resourceGroupName, vmName,
-      vmExtensionName, extensionParameters, extensionParameters.forceUpdateTag,
-      extensionParameters.publisher,
-      extensionParameters.virtualMachineExtensionType,
-      extensionParameters.typeHandlerVersion,
-      extensionParameters.autoUpgradeMinorVersion, extensionParameters.settings,
-      extensionParameters.protectedSettings,
-      extensionParameters.provisioningState, extensionParameters.instanceView,
-      extensionParameters.instanceView.name,
-      extensionParameters.instanceView.type,
-      extensionParameters.instanceView.typeHandlerVersion,
-      extensionParameters.instanceView.substatuses,
-      extensionParameters.instanceView.statuses, extensionParameters.location,
-      extensionParameters.tags, options, options.customHeaders, callback)
+      vmExtensionName, extensionParameters, options, callback)
     children:
       - 'VirtualMachineExtensions#beginCreateOrUpdate~client'
       - 'VirtualMachineExtensions#beginCreateOrUpdate~callback'
@@ -298,7 +226,7 @@ items:
     parent: VirtualMachineExtensions
     name: >-
       deleteMethod(resourceGroupName, vmName, vmExtensionName, options,
-      options.customHeaders, callback)
+      callback)
     summary: The operation to delete the extension.
     type: Method
     syntax:
@@ -325,10 +253,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, vmName, vmExtensionName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       VirtualMachineExtensions.deleteMethod(resourceGroupName, vmName,
-      vmExtensionName, options, options.customHeaders, callback)
+      vmExtensionName, options, callback)
     children:
       - 'VirtualMachineExtensions#deleteMethod~client'
       - 'VirtualMachineExtensions#deleteMethod~callback'
@@ -338,7 +266,7 @@ items:
     parent: VirtualMachineExtensions
     name: >-
       beginDeleteMethod(resourceGroupName, vmName, vmExtensionName, options,
-      options.customHeaders, callback)
+      callback)
     summary: The operation to delete the extension.
     type: Method
     syntax:
@@ -365,10 +293,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, vmName, vmExtensionName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       VirtualMachineExtensions.beginDeleteMethod(resourceGroupName, vmName,
-      vmExtensionName, options, options.customHeaders, callback)
+      vmExtensionName, options, callback)
     children:
       - 'VirtualMachineExtensions#beginDeleteMethod~client'
       - 'VirtualMachineExtensions#beginDeleteMethod~callback'
@@ -388,9 +316,7 @@ items:
   - uid: 'VirtualMachineExtensions#get'
     id: get
     parent: VirtualMachineExtensions
-    name: >-
-      get(resourceGroupName, vmName, vmExtensionName, options, options.expand,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, vmName, vmExtensionName, options, callback)'
     summary: The operation to get the extension.
     type: Method
     syntax:
@@ -420,10 +346,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link VirtualMachineExtension} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, vmName, vmExtensionName, options,
-        options.expand, options.customHeaders, callback);
+        callback);
     fullName: >-
       VirtualMachineExtensions.get(resourceGroupName, vmName, vmExtensionName,
-      options, options.expand, options.customHeaders, callback)
+      options, callback)
     children:
       - 'VirtualMachineExtensions#get~client'
       - 'VirtualMachineExtensions#get~callback'

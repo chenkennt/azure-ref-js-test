@@ -24,7 +24,7 @@ items:
   - uid: 'Provider#getSourceControls'
     id: getSourceControls
     parent: Provider
-    name: 'getSourceControls(options, options.customHeaders, callback)'
+    name: 'getSourceControls(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -39,8 +39,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SourceControlCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function getSourceControls(options, options.customHeaders, callback);'
-    fullName: 'Provider.getSourceControls(options, options.customHeaders, callback)'
+      content: 'function getSourceControls(options, callback);'
+    fullName: 'Provider.getSourceControls(options, callback)'
     children:
       - 'Provider#getSourceControls~client'
       - 'Provider#getSourceControls~callback'
@@ -55,9 +55,7 @@ items:
   - uid: 'Provider#getSourceControl'
     id: getSourceControl
     parent: Provider
-    name: >-
-      getSourceControl(sourceControlType, options, options.customHeaders,
-      callback)
+    name: 'getSourceControl(sourceControlType, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -75,12 +73,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SourceControl} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function getSourceControl(sourceControlType, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Provider.getSourceControl(sourceControlType, options,
-      options.customHeaders, callback)
+      content: 'function getSourceControl(sourceControlType, options, callback);'
+    fullName: 'Provider.getSourceControl(sourceControlType, options, callback)'
     children:
       - 'Provider#getSourceControl~client'
       - 'Provider#getSourceControl~callback'
@@ -96,13 +90,7 @@ items:
   - uid: 'Provider#updateSourceControl'
     id: updateSourceControl
     parent: Provider
-    name: >-
-      updateSourceControl(sourceControlType, requestMessage,
-      requestMessage.sourceControlName, requestMessage.token,
-      requestMessage.tokenSecret, requestMessage.refreshToken,
-      requestMessage.expirationTime, requestMessage.id, requestMessage.name,
-      requestMessage.kind, requestMessage.location, requestMessage.type,
-      requestMessage.tags, options, options.customHeaders, callback)
+    name: 'updateSourceControl(sourceControlType, requestMessage, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -157,19 +145,11 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link SourceControl} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function updateSourceControl(sourceControlType, requestMessage,
-        requestMessage.sourceControlName, requestMessage.token,
-        requestMessage.tokenSecret, requestMessage.refreshToken,
-        requestMessage.expirationTime, requestMessage.id, requestMessage.name,
-        requestMessage.kind, requestMessage.location, requestMessage.type,
-        requestMessage.tags, options, options.customHeaders, callback);
+        function updateSourceControl(sourceControlType, requestMessage, options,
+        callback);
     fullName: >-
-      Provider.updateSourceControl(sourceControlType, requestMessage,
-      requestMessage.sourceControlName, requestMessage.token,
-      requestMessage.tokenSecret, requestMessage.refreshToken,
-      requestMessage.expirationTime, requestMessage.id, requestMessage.name,
-      requestMessage.kind, requestMessage.location, requestMessage.type,
-      requestMessage.tags, options, options.customHeaders, callback)
+      Provider.updateSourceControl(sourceControlType, requestMessage, options,
+      callback)
     children:
       - 'Provider#updateSourceControl~client'
       - 'Provider#updateSourceControl~callback'
@@ -191,7 +171,7 @@ items:
   - uid: 'Provider#getPublishingUser'
     id: getPublishingUser
     parent: Provider
-    name: 'getPublishingUser(options, options.customHeaders, callback)'
+    name: 'getPublishingUser(options, callback)'
     type: Method
     syntax:
       parameters:
@@ -206,8 +186,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function getPublishingUser(options, options.customHeaders, callback);'
-    fullName: 'Provider.getPublishingUser(options, options.customHeaders, callback)'
+      content: 'function getPublishingUser(options, callback);'
+    fullName: 'Provider.getPublishingUser(options, callback)'
     children:
       - 'Provider#getPublishingUser~client'
       - 'Provider#getPublishingUser~callback'
@@ -222,12 +202,7 @@ items:
   - uid: 'Provider#updatePublishingUser'
     id: updatePublishingUser
     parent: Provider
-    name: >-
-      updatePublishingUser(requestMessage, requestMessage.userName,
-      requestMessage.publishingUserName, requestMessage.publishingPassword,
-      requestMessage.scmUri, requestMessage.id, requestMessage.name,
-      requestMessage.kind, requestMessage.location, requestMessage.type,
-      requestMessage.tags, options, options.customHeaders, callback)
+    name: 'updatePublishingUser(requestMessage, options, callback)'
     type: Method
     syntax:
       parameters:
@@ -275,18 +250,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function updatePublishingUser(requestMessage, requestMessage.userName,
-        requestMessage.publishingUserName, requestMessage.publishingPassword,
-        requestMessage.scmUri, requestMessage.id, requestMessage.name,
-        requestMessage.kind, requestMessage.location, requestMessage.type,
-        requestMessage.tags, options, options.customHeaders, callback);
-    fullName: >-
-      Provider.updatePublishingUser(requestMessage, requestMessage.userName,
-      requestMessage.publishingUserName, requestMessage.publishingPassword,
-      requestMessage.scmUri, requestMessage.id, requestMessage.name,
-      requestMessage.kind, requestMessage.location, requestMessage.type,
-      requestMessage.tags, options, options.customHeaders, callback)
+      content: 'function updatePublishingUser(requestMessage, options, callback);'
+    fullName: 'Provider.updatePublishingUser(requestMessage, options, callback)'
     children:
       - 'Provider#updatePublishingUser~client'
       - 'Provider#updatePublishingUser~callback'

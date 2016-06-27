@@ -28,7 +28,7 @@ items:
     parent: ExpressRouteCircuitPeerings
     name: >-
       deleteMethod(resourceGroupName, circuitName, peeringName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "The delete peering operation deletes the specified peering from the\rExpressRouteCircuit."
     type: Method
     syntax:
@@ -55,10 +55,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, circuitName, peeringName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ExpressRouteCircuitPeerings.deleteMethod(resourceGroupName, circuitName,
-      peeringName, options, options.customHeaders, callback)
+      peeringName, options, callback)
     children:
       - 'ExpressRouteCircuitPeerings#deleteMethod~client'
       - 'ExpressRouteCircuitPeerings#deleteMethod~callback'
@@ -68,7 +68,7 @@ items:
     parent: ExpressRouteCircuitPeerings
     name: >-
       beginDeleteMethod(resourceGroupName, circuitName, peeringName, options,
-      options.customHeaders, callback)
+      callback)
     summary: "The delete peering operation deletes the specified peering from the\rExpressRouteCircuit."
     type: Method
     syntax:
@@ -95,10 +95,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, circuitName, peeringName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ExpressRouteCircuitPeerings.beginDeleteMethod(resourceGroupName,
-      circuitName, peeringName, options, options.customHeaders, callback)
+      circuitName, peeringName, options, callback)
     children:
       - 'ExpressRouteCircuitPeerings#beginDeleteMethod~client'
       - 'ExpressRouteCircuitPeerings#beginDeleteMethod~callback'
@@ -117,9 +117,7 @@ items:
   - uid: 'ExpressRouteCircuitPeerings#get'
     id: get
     parent: ExpressRouteCircuitPeerings
-    name: >-
-      get(resourceGroupName, circuitName, peeringName, options,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, circuitName, peeringName, options, callback)'
     summary: "The GET peering operation retrieves the specified authorization from the\rExpressRouteCircuit."
     type: Method
     syntax:
@@ -146,10 +144,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitPeering} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function get(resourceGroupName, circuitName, peeringName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       ExpressRouteCircuitPeerings.get(resourceGroupName, circuitName,
-      peeringName, options, options.customHeaders, callback)
+      peeringName, options, callback)
     children:
       - 'ExpressRouteCircuitPeerings#get~client'
       - 'ExpressRouteCircuitPeerings#get~callback'
@@ -170,24 +168,7 @@ items:
     parent: ExpressRouteCircuitPeerings
     name: >-
       createOrUpdate(resourceGroupName, circuitName, peeringName,
-      peeringParameters, peeringParameters.peeringType, peeringParameters.state,
-      peeringParameters.azureASN, peeringParameters.peerASN,
-      peeringParameters.primaryPeerAddressPrefix,
-      peeringParameters.secondaryPeerAddressPrefix,
-      peeringParameters.primaryAzurePort, peeringParameters.secondaryAzurePort,
-      peeringParameters.sharedKey, peeringParameters.vlanId,
-      peeringParameters.microsoftPeeringConfig,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixes,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixesState,
-      peeringParameters.microsoftPeeringConfig.customerASN,
-      peeringParameters.microsoftPeeringConfig.routingRegistryName,
-      peeringParameters.stats, peeringParameters.stats.primarybytesIn,
-      peeringParameters.stats.primarybytesOut,
-      peeringParameters.stats.secondarybytesIn,
-      peeringParameters.stats.secondarybytesOut,
-      peeringParameters.provisioningState, peeringParameters.name,
-      peeringParameters.etag, peeringParameters.id, options,
-      options.customHeaders, callback)
+      peeringParameters, options, callback)
     summary: "The Put Pering operation creates/updates an peering in the specified\rExpressRouteCircuits"
     type: Method
     syntax:
@@ -290,44 +271,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitPeering} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, circuitName, peeringName,
-        peeringParameters, peeringParameters.peeringType,
-        peeringParameters.state, peeringParameters.azureASN,
-        peeringParameters.peerASN, peeringParameters.primaryPeerAddressPrefix,
-        peeringParameters.secondaryPeerAddressPrefix,
-        peeringParameters.primaryAzurePort,
-        peeringParameters.secondaryAzurePort, peeringParameters.sharedKey,
-        peeringParameters.vlanId, peeringParameters.microsoftPeeringConfig,
-        peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixes,
-        peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixesState,
-        peeringParameters.microsoftPeeringConfig.customerASN,
-        peeringParameters.microsoftPeeringConfig.routingRegistryName,
-        peeringParameters.stats, peeringParameters.stats.primarybytesIn,
-        peeringParameters.stats.primarybytesOut,
-        peeringParameters.stats.secondarybytesIn,
-        peeringParameters.stats.secondarybytesOut,
-        peeringParameters.provisioningState, peeringParameters.name,
-        peeringParameters.etag, peeringParameters.id, options,
-        options.customHeaders, callback);
+        peeringParameters, options, callback);
     fullName: >-
       ExpressRouteCircuitPeerings.createOrUpdate(resourceGroupName, circuitName,
-      peeringName, peeringParameters, peeringParameters.peeringType,
-      peeringParameters.state, peeringParameters.azureASN,
-      peeringParameters.peerASN, peeringParameters.primaryPeerAddressPrefix,
-      peeringParameters.secondaryPeerAddressPrefix,
-      peeringParameters.primaryAzurePort, peeringParameters.secondaryAzurePort,
-      peeringParameters.sharedKey, peeringParameters.vlanId,
-      peeringParameters.microsoftPeeringConfig,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixes,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixesState,
-      peeringParameters.microsoftPeeringConfig.customerASN,
-      peeringParameters.microsoftPeeringConfig.routingRegistryName,
-      peeringParameters.stats, peeringParameters.stats.primarybytesIn,
-      peeringParameters.stats.primarybytesOut,
-      peeringParameters.stats.secondarybytesIn,
-      peeringParameters.stats.secondarybytesOut,
-      peeringParameters.provisioningState, peeringParameters.name,
-      peeringParameters.etag, peeringParameters.id, options,
-      options.customHeaders, callback)
+      peeringName, peeringParameters, options, callback)
     children:
       - 'ExpressRouteCircuitPeerings#createOrUpdate~client'
       - 'ExpressRouteCircuitPeerings#createOrUpdate~callback'
@@ -337,24 +284,7 @@ items:
     parent: ExpressRouteCircuitPeerings
     name: >-
       beginCreateOrUpdate(resourceGroupName, circuitName, peeringName,
-      peeringParameters, peeringParameters.peeringType, peeringParameters.state,
-      peeringParameters.azureASN, peeringParameters.peerASN,
-      peeringParameters.primaryPeerAddressPrefix,
-      peeringParameters.secondaryPeerAddressPrefix,
-      peeringParameters.primaryAzurePort, peeringParameters.secondaryAzurePort,
-      peeringParameters.sharedKey, peeringParameters.vlanId,
-      peeringParameters.microsoftPeeringConfig,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixes,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixesState,
-      peeringParameters.microsoftPeeringConfig.customerASN,
-      peeringParameters.microsoftPeeringConfig.routingRegistryName,
-      peeringParameters.stats, peeringParameters.stats.primarybytesIn,
-      peeringParameters.stats.primarybytesOut,
-      peeringParameters.stats.secondarybytesIn,
-      peeringParameters.stats.secondarybytesOut,
-      peeringParameters.provisioningState, peeringParameters.name,
-      peeringParameters.etag, peeringParameters.id, options,
-      options.customHeaders, callback)
+      peeringParameters, options, callback)
     summary: "The Put Pering operation creates/updates an peering in the specified\rExpressRouteCircuits"
     type: Method
     syntax:
@@ -457,45 +387,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitPeering} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, circuitName,
-        peeringName, peeringParameters, peeringParameters.peeringType,
-        peeringParameters.state, peeringParameters.azureASN,
-        peeringParameters.peerASN, peeringParameters.primaryPeerAddressPrefix,
-        peeringParameters.secondaryPeerAddressPrefix,
-        peeringParameters.primaryAzurePort,
-        peeringParameters.secondaryAzurePort, peeringParameters.sharedKey,
-        peeringParameters.vlanId, peeringParameters.microsoftPeeringConfig,
-        peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixes,
-        peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixesState,
-        peeringParameters.microsoftPeeringConfig.customerASN,
-        peeringParameters.microsoftPeeringConfig.routingRegistryName,
-        peeringParameters.stats, peeringParameters.stats.primarybytesIn,
-        peeringParameters.stats.primarybytesOut,
-        peeringParameters.stats.secondarybytesIn,
-        peeringParameters.stats.secondarybytesOut,
-        peeringParameters.provisioningState, peeringParameters.name,
-        peeringParameters.etag, peeringParameters.id, options,
-        options.customHeaders, callback);
+        peeringName, peeringParameters, options, callback);
     fullName: >-
       ExpressRouteCircuitPeerings.beginCreateOrUpdate(resourceGroupName,
-      circuitName, peeringName, peeringParameters,
-      peeringParameters.peeringType, peeringParameters.state,
-      peeringParameters.azureASN, peeringParameters.peerASN,
-      peeringParameters.primaryPeerAddressPrefix,
-      peeringParameters.secondaryPeerAddressPrefix,
-      peeringParameters.primaryAzurePort, peeringParameters.secondaryAzurePort,
-      peeringParameters.sharedKey, peeringParameters.vlanId,
-      peeringParameters.microsoftPeeringConfig,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixes,
-      peeringParameters.microsoftPeeringConfig.advertisedPublicPrefixesState,
-      peeringParameters.microsoftPeeringConfig.customerASN,
-      peeringParameters.microsoftPeeringConfig.routingRegistryName,
-      peeringParameters.stats, peeringParameters.stats.primarybytesIn,
-      peeringParameters.stats.primarybytesOut,
-      peeringParameters.stats.secondarybytesIn,
-      peeringParameters.stats.secondarybytesOut,
-      peeringParameters.provisioningState, peeringParameters.name,
-      peeringParameters.etag, peeringParameters.id, options,
-      options.customHeaders, callback)
+      circuitName, peeringName, peeringParameters, options, callback)
     children:
       - 'ExpressRouteCircuitPeerings#beginCreateOrUpdate~client'
       - 'ExpressRouteCircuitPeerings#beginCreateOrUpdate~callback'
@@ -520,9 +415,7 @@ items:
   - uid: 'ExpressRouteCircuitPeerings#list'
     id: list
     parent: ExpressRouteCircuitPeerings
-    name: >-
-      list(resourceGroupName, circuitName, options, options.customHeaders,
-      callback)
+    name: 'list(resourceGroupName, circuitName, options, callback)'
     summary: "The List peering operation retrieves all the peerings in an\rExpressRouteCircuit."
     type: Method
     syntax:
@@ -544,12 +437,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitPeeringListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, circuitName, options,
-        options.customHeaders, callback);
+      content: 'function list(resourceGroupName, circuitName, options, callback);'
     fullName: >-
       ExpressRouteCircuitPeerings.list(resourceGroupName, circuitName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'ExpressRouteCircuitPeerings#list~client'
       - 'ExpressRouteCircuitPeerings#list~callback'
@@ -567,7 +458,7 @@ items:
   - uid: 'ExpressRouteCircuitPeerings#listNext'
     id: listNext
     parent: ExpressRouteCircuitPeerings
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "The List peering operation retrieves all the peerings in an\rExpressRouteCircuit."
     type: Method
     syntax:
@@ -586,12 +477,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ExpressRouteCircuitPeeringListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ExpressRouteCircuitPeerings.listNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'ExpressRouteCircuitPeerings.listNext(nextPageLink, options, callback)'
     children:
       - 'ExpressRouteCircuitPeerings#listNext~client'
       - 'ExpressRouteCircuitPeerings#listNext~callback'

@@ -48,9 +48,11 @@
       });
     }
     // set name
-    item.name += "(" + (item.syntax.parameters || []).map(function(p) {
-      return p.id
-    }).join(", ") + ")";
+    var params = [];
+    (item.syntax.parameters || []).forEach(function(p) {
+      if (p.id.indexOf(".") < 0) params.push(p.id);
+    });
+    item.name += "(" + params.join(", ") + ")";
     // set return type
     if (doclet.returns != undefined) {
       item.syntax.return = {

@@ -37,7 +37,7 @@ items:
     parent: Account
     name: >-
       deleteFirewallRule(resourceGroupName, accountName, firewallRuleName,
-      options, options.customHeaders, callback)
+      options, callback)
     summary: "Deletes the specified firewall rule from the specified Data Lake Store\raccount"
     type: Method
     syntax:
@@ -64,10 +64,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteFirewallRule(resourceGroupName, accountName,
-        firewallRuleName, options, options.customHeaders, callback);
+        firewallRuleName, options, callback);
     fullName: >-
       Account.deleteFirewallRule(resourceGroupName, accountName,
-      firewallRuleName, options, options.customHeaders, callback)
+      firewallRuleName, options, callback)
     children:
       - 'Account#deleteFirewallRule~client'
       - 'Account#deleteFirewallRule~callback'
@@ -88,7 +88,7 @@ items:
     parent: Account
     name: >-
       getFirewallRule(resourceGroupName, accountName, firewallRuleName, options,
-      options.customHeaders, callback)
+      callback)
     summary: Gets the specified Data Lake Store firewall rule.
     type: Method
     syntax:
@@ -115,10 +115,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FirewallRule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getFirewallRule(resourceGroupName, accountName,
-        firewallRuleName, options, options.customHeaders, callback);
+        firewallRuleName, options, callback);
     fullName: >-
       Account.getFirewallRule(resourceGroupName, accountName, firewallRuleName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'Account#getFirewallRule~client'
       - 'Account#getFirewallRule~callback'
@@ -137,9 +137,7 @@ items:
   - uid: 'Account#listFirewallRules'
     id: listFirewallRules
     parent: Account
-    name: >-
-      listFirewallRules(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+    name: 'listFirewallRules(resourceGroupName, accountName, options, callback)'
     summary: "Lists the Data Lake Store firewall rules within the specified Data Lake\rStore account."
     type: Method
     syntax:
@@ -163,10 +161,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreFirewallRuleListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function listFirewallRules(resourceGroupName, accountName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Account.listFirewallRules(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Account#listFirewallRules~client'
       - 'Account#listFirewallRules~callback'
@@ -186,10 +184,7 @@ items:
     parent: Account
     name: >-
       createOrUpdateFirewallRule(resourceGroupName, accountName, name,
-      parameters, parameters.name, parameters.id, parameters.location,
-      parameters.properties, parameters.properties.startIpAddress,
-      parameters.properties.endIpAddress, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     summary: Creates or updates the specified firewall rule.
     type: Method
     syntax:
@@ -237,16 +232,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link FirewallRule} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateFirewallRule(resourceGroupName, accountName,
-        name, parameters, parameters.name, parameters.id, parameters.location,
-        parameters.properties, parameters.properties.startIpAddress,
-        parameters.properties.endIpAddress, options, options.customHeaders,
-        callback);
+        name, parameters, options, callback);
     fullName: >-
       Account.createOrUpdateFirewallRule(resourceGroupName, accountName, name,
-      parameters, parameters.name, parameters.id, parameters.location,
-      parameters.properties, parameters.properties.startIpAddress,
-      parameters.properties.endIpAddress, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     children:
       - 'Account#createOrUpdateFirewallRule~client'
       - 'Account#createOrUpdateFirewallRule~callback'
@@ -271,11 +260,7 @@ items:
   - uid: 'Account#create'
     id: create
     parent: Account
-    name: >-
-      create(resourceGroupName, name, parameters, parameters.location,
-      parameters.name, parameters.tags, parameters.properties,
-      parameters.properties.endpoint, parameters.properties.defaultGroup,
-      options, options.customHeaders, callback)
+    name: 'create(resourceGroupName, name, parameters, options, callback)'
     summary: Creates the specified Data Lake Store account.
     type: Method
     syntax:
@@ -318,17 +303,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function create(resourceGroupName, name, parameters,
-        parameters.location, parameters.name, parameters.tags,
-        parameters.properties, parameters.properties.endpoint,
-        parameters.properties.defaultGroup, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Account.create(resourceGroupName, name, parameters, parameters.location,
-      parameters.name, parameters.tags, parameters.properties,
-      parameters.properties.endpoint, parameters.properties.defaultGroup,
-      options, options.customHeaders, callback)
+      content: 'function create(resourceGroupName, name, parameters, options, callback);'
+    fullName: 'Account.create(resourceGroupName, name, parameters, options, callback)'
     children:
       - 'Account#create~client'
       - 'Account#create~callback'
@@ -336,11 +312,7 @@ items:
   - uid: 'Account#beginCreate'
     id: beginCreate
     parent: Account
-    name: >-
-      beginCreate(resourceGroupName, name, parameters, parameters.location,
-      parameters.name, parameters.tags, parameters.properties,
-      parameters.properties.endpoint, parameters.properties.defaultGroup,
-      options, options.customHeaders, callback)
+    name: 'beginCreate(resourceGroupName, name, parameters, options, callback)'
     summary: Creates the specified Data Lake Store account.
     type: Method
     syntax:
@@ -384,16 +356,10 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function beginCreate(resourceGroupName, name, parameters,
-        parameters.location, parameters.name, parameters.tags,
-        parameters.properties, parameters.properties.endpoint,
-        parameters.properties.defaultGroup, options, options.customHeaders,
+        function beginCreate(resourceGroupName, name, parameters, options,
         callback);
     fullName: >-
-      Account.beginCreate(resourceGroupName, name, parameters,
-      parameters.location, parameters.name, parameters.tags,
-      parameters.properties, parameters.properties.endpoint,
-      parameters.properties.defaultGroup, options, options.customHeaders,
+      Account.beginCreate(resourceGroupName, name, parameters, options,
       callback)
     children:
       - 'Account#beginCreate~client'
@@ -418,11 +384,7 @@ items:
   - uid: 'Account#update'
     id: update
     parent: Account
-    name: >-
-      update(resourceGroupName, name, parameters, parameters.location,
-      parameters.name, parameters.tags, parameters.properties,
-      parameters.properties.endpoint, parameters.properties.defaultGroup,
-      options, options.customHeaders, callback)
+    name: 'update(resourceGroupName, name, parameters, options, callback)'
     summary: Updates the specified Data Lake Store account information.
     type: Method
     syntax:
@@ -465,17 +427,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function update(resourceGroupName, name, parameters,
-        parameters.location, parameters.name, parameters.tags,
-        parameters.properties, parameters.properties.endpoint,
-        parameters.properties.defaultGroup, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Account.update(resourceGroupName, name, parameters, parameters.location,
-      parameters.name, parameters.tags, parameters.properties,
-      parameters.properties.endpoint, parameters.properties.defaultGroup,
-      options, options.customHeaders, callback)
+      content: 'function update(resourceGroupName, name, parameters, options, callback);'
+    fullName: 'Account.update(resourceGroupName, name, parameters, options, callback)'
     children:
       - 'Account#update~client'
       - 'Account#update~callback'
@@ -483,11 +436,7 @@ items:
   - uid: 'Account#beginUpdate'
     id: beginUpdate
     parent: Account
-    name: >-
-      beginUpdate(resourceGroupName, name, parameters, parameters.location,
-      parameters.name, parameters.tags, parameters.properties,
-      parameters.properties.endpoint, parameters.properties.defaultGroup,
-      options, options.customHeaders, callback)
+    name: 'beginUpdate(resourceGroupName, name, parameters, options, callback)'
     summary: Updates the specified Data Lake Store account information.
     type: Method
     syntax:
@@ -531,16 +480,10 @@ items:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
-        function beginUpdate(resourceGroupName, name, parameters,
-        parameters.location, parameters.name, parameters.tags,
-        parameters.properties, parameters.properties.endpoint,
-        parameters.properties.defaultGroup, options, options.customHeaders,
+        function beginUpdate(resourceGroupName, name, parameters, options,
         callback);
     fullName: >-
-      Account.beginUpdate(resourceGroupName, name, parameters,
-      parameters.location, parameters.name, parameters.tags,
-      parameters.properties, parameters.properties.endpoint,
-      parameters.properties.defaultGroup, options, options.customHeaders,
+      Account.beginUpdate(resourceGroupName, name, parameters, options,
       callback)
     children:
       - 'Account#beginUpdate~client'
@@ -565,9 +508,7 @@ items:
   - uid: 'Account#deleteMethod'
     id: deleteMethod
     parent: Account
-    name: >-
-      deleteMethod(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+    name: 'deleteMethod(resourceGroupName, accountName, options, callback)'
     summary: Deletes the specified Data Lake Store account.
     type: Method
     syntax:
@@ -591,10 +532,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, accountName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Account.deleteMethod(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Account.deleteMethod(resourceGroupName, accountName, options, callback)'
     children:
       - 'Account#deleteMethod~client'
       - 'Account#deleteMethod~callback'
@@ -602,9 +541,7 @@ items:
   - uid: 'Account#beginDeleteMethod'
     id: beginDeleteMethod
     parent: Account
-    name: >-
-      beginDeleteMethod(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteMethod(resourceGroupName, accountName, options, callback)'
     summary: Deletes the specified Data Lake Store account.
     type: Method
     syntax:
@@ -628,10 +565,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, accountName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       Account.beginDeleteMethod(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'Account#beginDeleteMethod~client'
       - 'Account#beginDeleteMethod~callback'
@@ -649,9 +586,7 @@ items:
   - uid: 'Account#get'
     id: get
     parent: Account
-    name: >-
-      get(resourceGroupName, accountName, options, options.customHeaders,
-      callback)
+    name: 'get(resourceGroupName, accountName, options, callback)'
     summary: Gets the specified Data Lake Store account.
     type: Method
     syntax:
@@ -673,12 +608,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccount} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(resourceGroupName, accountName, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Account.get(resourceGroupName, accountName, options,
-      options.customHeaders, callback)
+      content: 'function get(resourceGroupName, accountName, options, callback);'
+    fullName: 'Account.get(resourceGroupName, accountName, options, callback)'
     children:
       - 'Account#get~client'
       - 'Account#get~callback'
@@ -696,11 +627,7 @@ items:
   - uid: 'Account#listByResourceGroup'
     id: listByResourceGroup
     parent: Account
-    name: >-
-      listByResourceGroup(resourceGroupName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.search, options.format,
-      options.customHeaders, callback)
+    name: 'listByResourceGroup(resourceGroupName, options, callback)'
     summary: "Lists the Data Lake Store accounts within a specific resource group. The\rresponse includes a link to the next page of results, if any."
     type: Method
     syntax:
@@ -746,16 +673,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroup(resourceGroupName, options, options.filter,
-        options.top, options.skip, options.expand, options.select,
-        options.orderby, options.count, options.search, options.format,
-        options.customHeaders, callback);
-    fullName: >-
-      Account.listByResourceGroup(resourceGroupName, options, options.filter,
-      options.top, options.skip, options.expand, options.select,
-      options.orderby, options.count, options.search, options.format,
-      options.customHeaders, callback)
+      content: 'function listByResourceGroup(resourceGroupName, options, callback);'
+    fullName: 'Account.listByResourceGroup(resourceGroupName, options, callback)'
     children:
       - 'Account#listByResourceGroup~client'
       - 'Account#listByResourceGroup~callback'
@@ -781,10 +700,7 @@ items:
   - uid: 'Account#list'
     id: list
     parent: Account
-    name: >-
-      list(options, options.filter, options.top, options.skip, options.expand,
-      options.select, options.orderby, options.count, options.search,
-      options.format, options.customHeaders, callback)
+    name: 'list(options, callback)'
     summary: "Lists the Data Lake Store accounts within the subscription. The response\rincludes a link to the next page of results, if any."
     type: Method
     syntax:
@@ -827,14 +743,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(options, options.filter, options.top, options.skip,
-        options.expand, options.select, options.orderby, options.count,
-        options.search, options.format, options.customHeaders, callback);
-    fullName: >-
-      Account.list(options, options.filter, options.top, options.skip,
-      options.expand, options.select, options.orderby, options.count,
-      options.search, options.format, options.customHeaders, callback)
+      content: 'function list(options, callback);'
+    fullName: 'Account.list(options, callback)'
     children:
       - 'Account#list~client'
       - 'Account#list~callback'
@@ -859,9 +769,7 @@ items:
   - uid: 'Account#listFirewallRulesNext'
     id: listFirewallRulesNext
     parent: Account
-    name: >-
-      listFirewallRulesNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listFirewallRulesNext(nextPageLink, options, callback)'
     summary: "Lists the Data Lake Store firewall rules within the specified Data Lake\rStore account."
     type: Method
     syntax:
@@ -880,12 +788,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreFirewallRuleListResult} for\r                     more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listFirewallRulesNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Account.listFirewallRulesNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listFirewallRulesNext(nextPageLink, options, callback);'
+    fullName: 'Account.listFirewallRulesNext(nextPageLink, options, callback)'
     children:
       - 'Account#listFirewallRulesNext~client'
       - 'Account#listFirewallRulesNext~callback'
@@ -899,9 +803,7 @@ items:
   - uid: 'Account#listByResourceGroupNext'
     id: listByResourceGroupNext
     parent: Account
-    name: >-
-      listByResourceGroupNext(nextPageLink, options, options.customHeaders,
-      callback)
+    name: 'listByResourceGroupNext(nextPageLink, options, callback)'
     summary: "Lists the Data Lake Store accounts within a specific resource group. The\rresponse includes a link to the next page of results, if any."
     type: Method
     syntax:
@@ -920,12 +822,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listByResourceGroupNext(nextPageLink, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Account.listByResourceGroupNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listByResourceGroupNext(nextPageLink, options, callback);'
+    fullName: 'Account.listByResourceGroupNext(nextPageLink, options, callback)'
     children:
       - 'Account#listByResourceGroupNext~client'
       - 'Account#listByResourceGroupNext~callback'
@@ -939,7 +837,7 @@ items:
   - uid: 'Account#listNext'
     id: listNext
     parent: Account
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "Lists the Data Lake Store accounts within the subscription. The response\rincludes a link to the next page of results, if any."
     type: Method
     syntax:
@@ -958,10 +856,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link DataLakeStoreAccountListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: 'Account.listNext(nextPageLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'Account.listNext(nextPageLink, options, callback)'
     children:
       - 'Account#listNext~client'
       - 'Account#listNext~callback'

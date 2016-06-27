@@ -39,9 +39,7 @@ items:
     parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
     name: >-
       beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters,
-      parameters.hostCaching, parameters.label, parameters.name,
-      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
-      parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback)
+      callback)
     summary: "The Create Data Disk operation adds a data disk to a virtual machine.\rThere are three ways to create the data disk using the Add Data Disk\roperation. Option 1 - Attach an empty data disk to the role by specifying\rthe disk label and location of the disk image. Do not include the\rDiskName and SourceMediaLink elements in the request body. Include the\rMediaLink element and reference a blob that is in the same geographical\rregion as the role. You can also omit the MediaLink element. In this\rusage, Azure will create the data disk in the storage account configured\ras default for the role. Option 2 - Attach an existing data disk that is\rin the image repository. Do not include the DiskName and SourceMediaLink\relements in the request body. Specify the data disk to use by including\rthe DiskName element. Note: If included the in the response body, the\rMediaLink and LogicalDiskSizeInGB elements are ignored. Option 3 -\rSpecify the location of a blob in your storage account that contain a\rdisk image to use. Include the SourceMediaLink element. Note: If the\rMediaLink element isincluded, it is ignored.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx for\rmore information)"
     type: Method
     syntax:
@@ -86,15 +84,10 @@ items:
         description: The response stream.
       content: >-
         function beginCreatingDataDisk(serviceName, deploymentName, roleName,
-        parameters, parameters.hostCaching, parameters.label, parameters.name,
-        parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
-        parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback);
+        parameters, callback);
     fullName: >-
       VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginCreatingDataDisk(serviceName,
-      deploymentName, roleName, parameters, parameters.hostCaching,
-      parameters.label, parameters.name, parameters.logicalUnitNumber,
-      parameters.logicalDiskSizeInGB, parameters.mediaLinkUri,
-      parameters.sourceMediaLinkUri, callback)
+      deploymentName, roleName, parameters, callback)
     children:
       - >-
         VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk~url2
@@ -230,10 +223,7 @@ items:
       VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
     id: beginUpdatingDisk
     parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
-    name: >-
-      beginUpdatingDisk(name, parameters, parameters.hasOperatingSystem,
-      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
-      parameters.name, parameters.resizedSizeInGB, callback)
+    name: 'beginUpdatingDisk(name, parameters, callback)'
     summary: "The Add Disk operation adds a disk to the user image repository. The disk\rcan be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
     type: Method
     syntax:
@@ -267,16 +257,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function beginUpdatingDisk(name, parameters,
-        parameters.hasOperatingSystem, parameters.operatingSystemType,
-        parameters.label, parameters.mediaLinkUri, parameters.name,
-        parameters.resizedSizeInGB, callback);
+      content: 'function beginUpdatingDisk(name, parameters, callback);'
     fullName: >-
       VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginUpdatingDisk(name,
-      parameters, parameters.hasOperatingSystem, parameters.operatingSystemType,
-      parameters.label, parameters.mediaLinkUri, parameters.name,
-      parameters.resizedSizeInGB, callback)
+      parameters, callback)
     children:
       - >-
         VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk~url2
@@ -325,9 +309,7 @@ items:
     parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
     name: >-
       createDataDisk(serviceName, deploymentName, roleName, parameters,
-      parameters.hostCaching, parameters.label, parameters.name,
-      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
-      parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback)
+      callback)
     summary: "The Create Data Disk operation adds a data disk to a virtual machine.\rThere are three ways to create the data disk using the Add Data Disk\roperation. Option 1 - Attach an empty data disk to the role by specifying\rthe disk label and location of the disk image. Do not include the\rDiskName and SourceMediaLink elements in the request body. Include the\rMediaLink element and reference a blob that is in the same geographical\rregion as the role. You can also omit the MediaLink element. In this\rusage, Azure will create the data disk in the storage account configured\ras default for the role. Option 2 - Attach an existing data disk that is\rin the image repository. Do not include the DiskName and SourceMediaLink\relements in the request body. Specify the data disk to use by including\rthe DiskName element. Note: If included the in the response body, the\rMediaLink and LogicalDiskSizeInGB elements are ignored. Option 3 -\rSpecify the location of a blob in your storage account that contain a\rdisk image to use. Include the SourceMediaLink element. Note: If the\rMediaLink element isincluded, it is ignored.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx for\rmore information)"
     type: Method
     syntax:
@@ -372,24 +354,17 @@ items:
         description: The response stream.
       content: >-
         function createDataDisk(serviceName, deploymentName, roleName,
-        parameters, parameters.hostCaching, parameters.label, parameters.name,
-        parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
-        parameters.mediaLinkUri, parameters.sourceMediaLinkUri, callback);
+        parameters, callback);
     fullName: >-
       VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDataDisk(serviceName,
-      deploymentName, roleName, parameters, parameters.hostCaching,
-      parameters.label, parameters.name, parameters.logicalUnitNumber,
-      parameters.logicalDiskSizeInGB, parameters.mediaLinkUri,
-      parameters.sourceMediaLinkUri, callback)
+      deploymentName, roleName, parameters, callback)
     children:
       - >-
         VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk~client2
   - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk'
     id: createDisk
     parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
-    name: >-
-      createDisk(parameters, parameters.operatingSystemType, parameters.label,
-      parameters.mediaLinkUri, parameters.name, callback)
+    name: 'createDisk(parameters, callback)'
     summary: "The Create Disk operation adds a disk to the user image repository. The\rdisk can be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
     type: Method
     syntax:
@@ -414,13 +389,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function createDisk(parameters, parameters.operatingSystemType,
-        parameters.label, parameters.mediaLinkUri, parameters.name, callback);
+      content: 'function createDisk(parameters, callback);'
     fullName: >-
       VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDisk(parameters,
-      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
-      parameters.name, callback)
+      callback)
     children:
       - >-
         VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk~url2
@@ -685,9 +657,7 @@ items:
     parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
     name: >-
       updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber,
-      parameters, parameters.hostCaching, parameters.label, parameters.name,
-      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
-      parameters.mediaLinkUri, callback)
+      parameters, callback)
     summary: "The Update Data Disk operation updates the specified data disk attached to\rthe specified virtual machine.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157190.aspx for\rmore information)"
     type: Method
     syntax:
@@ -732,15 +702,10 @@ items:
         description: The response stream.
       content: >-
         function updateDataDisk(serviceName, deploymentName, roleName,
-        logicalUnitNumber, parameters, parameters.hostCaching, parameters.label,
-        parameters.name, parameters.logicalUnitNumber,
-        parameters.logicalDiskSizeInGB, parameters.mediaLinkUri, callback);
+        logicalUnitNumber, parameters, callback);
     fullName: >-
       VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDataDisk(serviceName,
-      deploymentName, roleName, logicalUnitNumber, parameters,
-      parameters.hostCaching, parameters.label, parameters.name,
-      parameters.logicalUnitNumber, parameters.logicalDiskSizeInGB,
-      parameters.mediaLinkUri, callback)
+      deploymentName, roleName, logicalUnitNumber, parameters, callback)
     children:
       - >-
         VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk~url2
@@ -799,10 +764,7 @@ items:
   - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk'
     id: updateDisk
     parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
-    name: >-
-      updateDisk(name, parameters, parameters.hasOperatingSystem,
-      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
-      parameters.name, parameters.resizedSizeInGB, callback)
+    name: 'updateDisk(name, parameters, callback)'
     summary: "The Add Disk operation adds a disk to the user image repository. The disk\rcan be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
     type: Method
     syntax:
@@ -836,16 +798,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function updateDisk(name, parameters, parameters.hasOperatingSystem,
-        parameters.operatingSystemType, parameters.label,
-        parameters.mediaLinkUri, parameters.name, parameters.resizedSizeInGB,
-        callback);
+      content: 'function updateDisk(name, parameters, callback);'
     fullName: >-
       VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDisk(name,
-      parameters, parameters.hasOperatingSystem, parameters.operatingSystemType,
-      parameters.label, parameters.mediaLinkUri, parameters.name,
-      parameters.resizedSizeInGB, callback)
+      parameters, callback)
     children:
       - >-
         VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk~url2
@@ -892,10 +848,7 @@ items:
   - uid: 'VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize'
     id: updateDiskSize
     parent: VirtualMachineDiskOperations~VirtualMachineDiskOperations
-    name: >-
-      updateDiskSize(name, parameters, parameters.hasOperatingSystem,
-      parameters.operatingSystemType, parameters.label, parameters.mediaLinkUri,
-      parameters.name, parameters.resizedSizeInGB, callback)
+    name: 'updateDiskSize(name, parameters, callback)'
     summary: "The Add Disk operation adds a disk to the user image repository. The disk\rcan be an operating system disk or a data disk.  (see\rhttp://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for\rmore information)"
     type: Method
     syntax:
@@ -929,16 +882,10 @@ items:
       return:
         type: Stream
         description: The response stream.
-      content: >-
-        function updateDiskSize(name, parameters, parameters.hasOperatingSystem,
-        parameters.operatingSystemType, parameters.label,
-        parameters.mediaLinkUri, parameters.name, parameters.resizedSizeInGB,
-        callback);
+      content: 'function updateDiskSize(name, parameters, callback);'
     fullName: >-
       VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDiskSize(name,
-      parameters, parameters.hasOperatingSystem, parameters.operatingSystemType,
-      parameters.label, parameters.mediaLinkUri, parameters.name,
-      parameters.resizedSizeInGB, callback)
+      parameters, callback)
     children:
       - >-
         VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize~client2

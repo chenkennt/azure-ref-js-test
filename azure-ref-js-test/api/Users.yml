@@ -26,12 +26,7 @@ items:
   - uid: 'Users#create'
     id: create
     parent: Users
-    name: >-
-      create(parameters, parameters.accountEnabled, parameters.displayName,
-      parameters.passwordProfile, parameters.passwordProfile.password,
-      parameters.passwordProfile.forceChangePasswordNextLogin,
-      parameters.userPrincipalName, parameters.mailNickname,
-      parameters.immutableId, options, options.customHeaders, callback)
+    name: 'create(parameters, options, callback)'
     summary: "Create a new user. Reference:\rhttps://msdn.microsoft.com/library/azure/ad/graph/api/users-operations#CreateUser"
     type: Method
     syntax:
@@ -74,20 +69,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function create(parameters, parameters.accountEnabled,
-        parameters.displayName, parameters.passwordProfile,
-        parameters.passwordProfile.password,
-        parameters.passwordProfile.forceChangePasswordNextLogin,
-        parameters.userPrincipalName, parameters.mailNickname,
-        parameters.immutableId, options, options.customHeaders, callback);
-    fullName: >-
-      Users.create(parameters, parameters.accountEnabled,
-      parameters.displayName, parameters.passwordProfile,
-      parameters.passwordProfile.password,
-      parameters.passwordProfile.forceChangePasswordNextLogin,
-      parameters.userPrincipalName, parameters.mailNickname,
-      parameters.immutableId, options, options.customHeaders, callback)
+      content: 'function create(parameters, options, callback);'
+    fullName: 'Users.create(parameters, options, callback)'
     children:
       - 'Users#create~client'
       - 'Users#create~callback'
@@ -110,7 +93,7 @@ items:
   - uid: 'Users#list'
     id: list
     parent: Users
-    name: 'list(options, options.filter, options.customHeaders, callback)'
+    name: 'list(options, callback)'
     summary: "Gets list of users for the current tenant. Reference\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#GetUsers"
     type: Method
     syntax:
@@ -129,8 +112,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UserListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function list(options, options.filter, options.customHeaders, callback);'
-    fullName: 'Users.list(options, options.filter, options.customHeaders, callback)'
+      content: 'function list(options, callback);'
+    fullName: 'Users.list(options, callback)'
     children:
       - 'Users#list~client'
       - 'Users#list~callback'
@@ -148,7 +131,7 @@ items:
   - uid: 'Users#get'
     id: get
     parent: Users
-    name: 'get(upnOrObjectId, options, options.customHeaders, callback)'
+    name: 'get(upnOrObjectId, options, callback)'
     summary: "Gets user information from the directory. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#GetAUser"
     type: Method
     syntax:
@@ -167,8 +150,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link User} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function get(upnOrObjectId, options, options.customHeaders, callback);'
-    fullName: 'Users.get(upnOrObjectId, options, options.customHeaders, callback)'
+      content: 'function get(upnOrObjectId, options, callback);'
+    fullName: 'Users.get(upnOrObjectId, options, callback)'
     children:
       - 'Users#get~client'
       - 'Users#get~callback'
@@ -186,12 +169,7 @@ items:
   - uid: 'Users#update'
     id: update
     parent: Users
-    name: >-
-      update(upnOrObjectId, parameters, parameters.accountEnabled,
-      parameters.displayName, parameters.passwordProfile,
-      parameters.passwordProfile.password,
-      parameters.passwordProfile.forceChangePasswordNextLogin,
-      parameters.mailNickname, options, options.customHeaders, callback)
+    name: 'update(upnOrObjectId, parameters, options, callback)'
     summary: "Updates an exisitng user. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#UpdateUser"
     type: Method
     syntax:
@@ -231,18 +209,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function update(upnOrObjectId, parameters, parameters.accountEnabled,
-        parameters.displayName, parameters.passwordProfile,
-        parameters.passwordProfile.password,
-        parameters.passwordProfile.forceChangePasswordNextLogin,
-        parameters.mailNickname, options, options.customHeaders, callback);
-    fullName: >-
-      Users.update(upnOrObjectId, parameters, parameters.accountEnabled,
-      parameters.displayName, parameters.passwordProfile,
-      parameters.passwordProfile.password,
-      parameters.passwordProfile.forceChangePasswordNextLogin,
-      parameters.mailNickname, options, options.customHeaders, callback)
+      content: 'function update(upnOrObjectId, parameters, options, callback);'
+    fullName: 'Users.update(upnOrObjectId, parameters, options, callback)'
     children:
       - 'Users#update~client'
       - 'Users#update~callback'
@@ -266,7 +234,7 @@ items:
   - uid: 'Users#deleteMethod'
     id: deleteMethod
     parent: Users
-    name: 'deleteMethod(upnOrObjectId, options, options.customHeaders, callback)'
+    name: 'deleteMethod(upnOrObjectId, options, callback)'
     summary: "Delete a user. Reference:\rhttps://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#DeleteUser"
     type: Method
     syntax:
@@ -285,12 +253,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function deleteMethod(upnOrObjectId, options, options.customHeaders,
-        callback);
-    fullName: >-
-      Users.deleteMethod(upnOrObjectId, options, options.customHeaders,
-      callback)
+      content: 'function deleteMethod(upnOrObjectId, options, callback);'
+    fullName: 'Users.deleteMethod(upnOrObjectId, options, callback)'
     children:
       - 'Users#deleteMethod~client'
       - 'Users#deleteMethod~callback'
@@ -308,9 +272,7 @@ items:
   - uid: 'Users#getMemberGroups'
     id: getMemberGroups
     parent: Users
-    name: >-
-      getMemberGroups(objectId, securityEnabledOnly, options,
-      options.customHeaders, callback)
+    name: 'getMemberGroups(objectId, securityEnabledOnly, options, callback)'
     summary: "Gets a collection that contains the Object IDs of the groups of which the\ruser is a member."
     type: Method
     syntax:
@@ -334,10 +296,8 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UserGetMemberGroupsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getMemberGroups(objectId, securityEnabledOnly, options,
-        options.customHeaders, callback);
-    fullName: >-
-      Users.getMemberGroups(objectId, securityEnabledOnly, options,
-      options.customHeaders, callback)
+        callback);
+    fullName: 'Users.getMemberGroups(objectId, securityEnabledOnly, options, callback)'
     children:
       - 'Users#getMemberGroups~client'
       - 'Users#getMemberGroups~callback'
@@ -363,7 +323,7 @@ items:
   - uid: 'Users#listNext'
     id: listNext
     parent: Users
-    name: 'listNext(nextLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextLink, options, callback)'
     summary: Gets list of users for the current tenant.
     type: Method
     syntax:
@@ -382,8 +342,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link UserListResult} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listNext(nextLink, options, options.customHeaders, callback);'
-    fullName: 'Users.listNext(nextLink, options, options.customHeaders, callback)'
+      content: 'function listNext(nextLink, options, callback);'
+    fullName: 'Users.listNext(nextLink, options, callback)'
     children:
       - 'Users#listNext~client'
       - 'Users#listNext~callback'

@@ -31,7 +31,7 @@ items:
     parent: ApplicationOperations
     name: >-
       activateApplicationPackage(resourceGroupName, accountName, id, version,
-      format, options, options.customHeaders, callback)
+      format, options, callback)
     summary: Activates the specified application package.
     type: Method
     syntax:
@@ -64,11 +64,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function activateApplicationPackage(resourceGroupName, accountName, id,
-        version, format, options, options.customHeaders, callback);
+        version, format, options, callback);
     fullName: >-
       ApplicationOperations.activateApplicationPackage(resourceGroupName,
-      accountName, id, version, format, options, options.customHeaders,
-      callback)
+      accountName, id, version, format, options, callback)
     children:
       - 'ApplicationOperations#activateApplicationPackage~client'
       - 'ApplicationOperations#activateApplicationPackage~callback'
@@ -98,8 +97,7 @@ items:
     parent: ApplicationOperations
     name: >-
       addApplication(resourceGroupName, accountName, applicationId, options,
-      options.parameters, options.parameters.allowUpdates,
-      options.parameters.displayName, options.customHeaders, callback)
+      callback)
     summary: Adds an application to the specified Batch account.
     type: Method
     syntax:
@@ -135,13 +133,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Application} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function addApplication(resourceGroupName, accountName, applicationId,
-        options, options.parameters, options.parameters.allowUpdates,
-        options.parameters.displayName, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ApplicationOperations.addApplication(resourceGroupName, accountName,
-      applicationId, options, options.parameters,
-      options.parameters.allowUpdates, options.parameters.displayName,
-      options.customHeaders, callback)
+      applicationId, options, callback)
     children:
       - 'ApplicationOperations#addApplication~client'
       - 'ApplicationOperations#addApplication~callback'
@@ -169,7 +164,7 @@ items:
     parent: ApplicationOperations
     name: >-
       deleteApplication(resourceGroupName, accountName, applicationId, options,
-      options.customHeaders, callback)
+      callback)
     summary: Deletes an application.
     type: Method
     syntax:
@@ -196,10 +191,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteApplication(resourceGroupName, accountName,
-        applicationId, options, options.customHeaders, callback);
+        applicationId, options, callback);
     fullName: >-
       ApplicationOperations.deleteApplication(resourceGroupName, accountName,
-      applicationId, options, options.customHeaders, callback)
+      applicationId, options, callback)
     children:
       - 'ApplicationOperations#deleteApplication~client'
       - 'ApplicationOperations#deleteApplication~callback'
@@ -220,7 +215,7 @@ items:
     parent: ApplicationOperations
     name: >-
       getApplication(resourceGroupName, accountName, applicationId, options,
-      options.customHeaders, callback)
+      callback)
     summary: Gets information about the specified application.
     type: Method
     syntax:
@@ -247,10 +242,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link Application} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getApplication(resourceGroupName, accountName, applicationId,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       ApplicationOperations.getApplication(resourceGroupName, accountName,
-      applicationId, options, options.customHeaders, callback)
+      applicationId, options, callback)
     children:
       - 'ApplicationOperations#getApplication~client'
       - 'ApplicationOperations#getApplication~callback'
@@ -271,8 +266,7 @@ items:
     parent: ApplicationOperations
     name: >-
       updateApplication(resourceGroupName, accountName, applicationId,
-      parameters, parameters.allowUpdates, parameters.defaultVersion,
-      parameters.displayName, options, options.customHeaders, callback)
+      parameters, options, callback)
     summary: Updates settings for the specified application.
     type: Method
     syntax:
@@ -311,14 +305,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function updateApplication(resourceGroupName, accountName,
-        applicationId, parameters, parameters.allowUpdates,
-        parameters.defaultVersion, parameters.displayName, options,
-        options.customHeaders, callback);
+        applicationId, parameters, options, callback);
     fullName: >-
       ApplicationOperations.updateApplication(resourceGroupName, accountName,
-      applicationId, parameters, parameters.allowUpdates,
-      parameters.defaultVersion, parameters.displayName, options,
-      options.customHeaders, callback)
+      applicationId, parameters, options, callback)
     children:
       - 'ApplicationOperations#updateApplication~client'
       - 'ApplicationOperations#updateApplication~callback'
@@ -345,7 +335,7 @@ items:
     parent: ApplicationOperations
     name: >-
       addApplicationPackage(resourceGroupName, accountName, applicationId,
-      version, options, options.customHeaders, callback)
+      version, options, callback)
     summary: Creates an application package record.
     type: Method
     syntax:
@@ -375,11 +365,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link AddApplicationPackageResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function addApplicationPackage(resourceGroupName, accountName,
-        applicationId, version, options, options.customHeaders, callback);
+        applicationId, version, options, callback);
     fullName: >-
       ApplicationOperations.addApplicationPackage(resourceGroupName,
-      accountName, applicationId, version, options, options.customHeaders,
-      callback)
+      accountName, applicationId, version, options, callback)
     children:
       - 'ApplicationOperations#addApplicationPackage~client'
       - 'ApplicationOperations#addApplicationPackage~callback'
@@ -401,7 +390,7 @@ items:
     parent: ApplicationOperations
     name: >-
       deleteApplicationPackage(resourceGroupName, accountName, applicationId,
-      version, options, options.customHeaders, callback)
+      version, options, callback)
     summary: Deletes an application package record and its associated binary file.
     type: Method
     syntax:
@@ -431,11 +420,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteApplicationPackage(resourceGroupName, accountName,
-        applicationId, version, options, options.customHeaders, callback);
+        applicationId, version, options, callback);
     fullName: >-
       ApplicationOperations.deleteApplicationPackage(resourceGroupName,
-      accountName, applicationId, version, options, options.customHeaders,
-      callback)
+      accountName, applicationId, version, options, callback)
     children:
       - 'ApplicationOperations#deleteApplicationPackage~client'
       - 'ApplicationOperations#deleteApplicationPackage~callback'
@@ -457,7 +445,7 @@ items:
     parent: ApplicationOperations
     name: >-
       getApplicationPackage(resourceGroupName, accountName, applicationId,
-      version, options, options.customHeaders, callback)
+      version, options, callback)
     summary: Gets information about the specified application package.
     type: Method
     syntax:
@@ -487,11 +475,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link GetApplicationPackageResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getApplicationPackage(resourceGroupName, accountName,
-        applicationId, version, options, options.customHeaders, callback);
+        applicationId, version, options, callback);
     fullName: >-
       ApplicationOperations.getApplicationPackage(resourceGroupName,
-      accountName, applicationId, version, options, options.customHeaders,
-      callback)
+      accountName, applicationId, version, options, callback)
     children:
       - 'ApplicationOperations#getApplicationPackage~client'
       - 'ApplicationOperations#getApplicationPackage~callback'
@@ -511,9 +498,7 @@ items:
   - uid: 'ApplicationOperations#list'
     id: list
     parent: ApplicationOperations
-    name: >-
-      list(resourceGroupName, accountName, options, options.maxresults,
-      options.customHeaders, callback)
+    name: 'list(resourceGroupName, accountName, options, callback)'
     summary: Lists all of the applications in the specified account.
     type: Method
     syntax:
@@ -538,12 +523,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ListApplicationsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, accountName, options,
-        options.maxresults, options.customHeaders, callback);
+      content: 'function list(resourceGroupName, accountName, options, callback);'
     fullName: >-
       ApplicationOperations.list(resourceGroupName, accountName, options,
-      options.maxresults, options.customHeaders, callback)
+      callback)
     children:
       - 'ApplicationOperations#list~client'
       - 'ApplicationOperations#list~callback'
@@ -562,7 +545,7 @@ items:
   - uid: 'ApplicationOperations#listNext'
     id: listNext
     parent: ApplicationOperations
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: Lists all of the applications in the specified account.
     type: Method
     syntax:
@@ -581,12 +564,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ListApplicationsResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      ApplicationOperations.listNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'ApplicationOperations.listNext(nextPageLink, options, callback)'
     children:
       - 'ApplicationOperations#listNext~client'
       - 'ApplicationOperations#listNext~callback'

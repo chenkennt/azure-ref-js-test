@@ -28,9 +28,7 @@ items:
   - uid: 'PublicIPAddresses#deleteMethod'
     id: deleteMethod
     parent: PublicIPAddresses
-    name: >-
-      deleteMethod(resourceGroupName, publicIpAddressName, options,
-      options.customHeaders, callback)
+    name: 'deleteMethod(resourceGroupName, publicIpAddressName, options, callback)'
     summary: >-
       The delete publicIpAddress operation deletes the specified
       publicIpAddress.
@@ -56,10 +54,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteMethod(resourceGroupName, publicIpAddressName, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       PublicIPAddresses.deleteMethod(resourceGroupName, publicIpAddressName,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'PublicIPAddresses#deleteMethod~client'
       - 'PublicIPAddresses#deleteMethod~callback'
@@ -69,7 +67,7 @@ items:
     parent: PublicIPAddresses
     name: >-
       beginDeleteMethod(resourceGroupName, publicIpAddressName, options,
-      options.customHeaders, callback)
+      callback)
     summary: >-
       The delete publicIpAddress operation deletes the specified
       publicIpAddress.
@@ -95,10 +93,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteMethod(resourceGroupName, publicIpAddressName,
-        options, options.customHeaders, callback);
+        options, callback);
     fullName: >-
       PublicIPAddresses.beginDeleteMethod(resourceGroupName,
-      publicIpAddressName, options, options.customHeaders, callback)
+      publicIpAddressName, options, callback)
     children:
       - 'PublicIPAddresses#beginDeleteMethod~client'
       - 'PublicIPAddresses#beginDeleteMethod~callback'
@@ -116,9 +114,7 @@ items:
   - uid: 'PublicIPAddresses#get'
     id: get
     parent: PublicIPAddresses
-    name: >-
-      get(resourceGroupName, publicIpAddressName, options, options.expand,
-      options.customHeaders, callback)
+    name: 'get(resourceGroupName, publicIpAddressName, options, callback)'
     summary: "The Get publicIpAddress operation retreives information about the specified\rpubicIpAddress"
     type: Method
     syntax:
@@ -143,12 +139,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddress} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function get(resourceGroupName, publicIpAddressName, options,
-        options.expand, options.customHeaders, callback);
+      content: 'function get(resourceGroupName, publicIpAddressName, options, callback);'
     fullName: >-
       PublicIPAddresses.get(resourceGroupName, publicIpAddressName, options,
-      options.expand, options.customHeaders, callback)
+      callback)
     children:
       - 'PublicIPAddresses#get~client'
       - 'PublicIPAddresses#get~callback'
@@ -169,45 +163,7 @@ items:
     parent: PublicIPAddresses
     name: >-
       createOrUpdate(resourceGroupName, publicIpAddressName, parameters,
-      parameters.publicIPAllocationMethod, parameters.publicIPAddressVersion,
-      parameters.ipConfiguration, parameters.ipConfiguration.privateIPAddress,
-      parameters.ipConfiguration.privateIPAllocationMethod,
-      parameters.ipConfiguration.subnet,
-      parameters.ipConfiguration.subnet.addressPrefix,
-      parameters.ipConfiguration.subnet.networkSecurityGroup,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
-      parameters.ipConfiguration.subnet.routeTable,
-      parameters.ipConfiguration.subnet.routeTable.routes,
-      parameters.ipConfiguration.subnet.routeTable.subnets,
-      parameters.ipConfiguration.subnet.routeTable.provisioningState,
-      parameters.ipConfiguration.subnet.routeTable.etag,
-      parameters.ipConfiguration.subnet.routeTable.id,
-      parameters.ipConfiguration.subnet.routeTable.location,
-      parameters.ipConfiguration.subnet.routeTable.tags,
-      parameters.ipConfiguration.subnet.ipConfigurations,
-      parameters.ipConfiguration.subnet.provisioningState,
-      parameters.ipConfiguration.subnet.name,
-      parameters.ipConfiguration.subnet.etag,
-      parameters.ipConfiguration.subnet.id,
-      parameters.ipConfiguration.publicIPAddress,
-      parameters.ipConfiguration.provisioningState,
-      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
-      parameters.ipConfiguration.id, parameters.dnsSettings,
-      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
-      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
-      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      options, callback)
     summary: "The Put PublicIPAddress operation creates/updates a stable/dynamic PublicIP\raddress"
     type: Method
     syntax:
@@ -379,88 +335,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddress} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdate(resourceGroupName, publicIpAddressName,
-        parameters, parameters.publicIPAllocationMethod,
-        parameters.publicIPAddressVersion, parameters.ipConfiguration,
-        parameters.ipConfiguration.privateIPAddress,
-        parameters.ipConfiguration.privateIPAllocationMethod,
-        parameters.ipConfiguration.subnet,
-        parameters.ipConfiguration.subnet.addressPrefix,
-        parameters.ipConfiguration.subnet.networkSecurityGroup,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.id,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.location,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
-        parameters.ipConfiguration.subnet.routeTable,
-        parameters.ipConfiguration.subnet.routeTable.routes,
-        parameters.ipConfiguration.subnet.routeTable.subnets,
-        parameters.ipConfiguration.subnet.routeTable.provisioningState,
-        parameters.ipConfiguration.subnet.routeTable.etag,
-        parameters.ipConfiguration.subnet.routeTable.id,
-        parameters.ipConfiguration.subnet.routeTable.location,
-        parameters.ipConfiguration.subnet.routeTable.tags,
-        parameters.ipConfiguration.subnet.ipConfigurations,
-        parameters.ipConfiguration.subnet.provisioningState,
-        parameters.ipConfiguration.subnet.name,
-        parameters.ipConfiguration.subnet.etag,
-        parameters.ipConfiguration.subnet.id,
-        parameters.ipConfiguration.publicIPAddress,
-        parameters.ipConfiguration.provisioningState,
-        parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
-        parameters.ipConfiguration.id, parameters.dnsSettings,
-        parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
-        parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
-        parameters.idleTimeoutInMinutes, parameters.resourceGuid,
-        parameters.provisioningState, parameters.etag, parameters.id,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        parameters, options, callback);
     fullName: >-
       PublicIPAddresses.createOrUpdate(resourceGroupName, publicIpAddressName,
-      parameters, parameters.publicIPAllocationMethod,
-      parameters.publicIPAddressVersion, parameters.ipConfiguration,
-      parameters.ipConfiguration.privateIPAddress,
-      parameters.ipConfiguration.privateIPAllocationMethod,
-      parameters.ipConfiguration.subnet,
-      parameters.ipConfiguration.subnet.addressPrefix,
-      parameters.ipConfiguration.subnet.networkSecurityGroup,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
-      parameters.ipConfiguration.subnet.routeTable,
-      parameters.ipConfiguration.subnet.routeTable.routes,
-      parameters.ipConfiguration.subnet.routeTable.subnets,
-      parameters.ipConfiguration.subnet.routeTable.provisioningState,
-      parameters.ipConfiguration.subnet.routeTable.etag,
-      parameters.ipConfiguration.subnet.routeTable.id,
-      parameters.ipConfiguration.subnet.routeTable.location,
-      parameters.ipConfiguration.subnet.routeTable.tags,
-      parameters.ipConfiguration.subnet.ipConfigurations,
-      parameters.ipConfiguration.subnet.provisioningState,
-      parameters.ipConfiguration.subnet.name,
-      parameters.ipConfiguration.subnet.etag,
-      parameters.ipConfiguration.subnet.id,
-      parameters.ipConfiguration.publicIPAddress,
-      parameters.ipConfiguration.provisioningState,
-      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
-      parameters.ipConfiguration.id, parameters.dnsSettings,
-      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
-      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
-      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      parameters, options, callback)
     children:
       - 'PublicIPAddresses#createOrUpdate~client'
       - 'PublicIPAddresses#createOrUpdate~callback'
@@ -470,45 +348,7 @@ items:
     parent: PublicIPAddresses
     name: >-
       beginCreateOrUpdate(resourceGroupName, publicIpAddressName, parameters,
-      parameters.publicIPAllocationMethod, parameters.publicIPAddressVersion,
-      parameters.ipConfiguration, parameters.ipConfiguration.privateIPAddress,
-      parameters.ipConfiguration.privateIPAllocationMethod,
-      parameters.ipConfiguration.subnet,
-      parameters.ipConfiguration.subnet.addressPrefix,
-      parameters.ipConfiguration.subnet.networkSecurityGroup,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
-      parameters.ipConfiguration.subnet.routeTable,
-      parameters.ipConfiguration.subnet.routeTable.routes,
-      parameters.ipConfiguration.subnet.routeTable.subnets,
-      parameters.ipConfiguration.subnet.routeTable.provisioningState,
-      parameters.ipConfiguration.subnet.routeTable.etag,
-      parameters.ipConfiguration.subnet.routeTable.id,
-      parameters.ipConfiguration.subnet.routeTable.location,
-      parameters.ipConfiguration.subnet.routeTable.tags,
-      parameters.ipConfiguration.subnet.ipConfigurations,
-      parameters.ipConfiguration.subnet.provisioningState,
-      parameters.ipConfiguration.subnet.name,
-      parameters.ipConfiguration.subnet.etag,
-      parameters.ipConfiguration.subnet.id,
-      parameters.ipConfiguration.publicIPAddress,
-      parameters.ipConfiguration.provisioningState,
-      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
-      parameters.ipConfiguration.id, parameters.dnsSettings,
-      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
-      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
-      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      options, callback)
     summary: "The Put PublicIPAddress operation creates/updates a stable/dynamic PublicIP\raddress"
     type: Method
     syntax:
@@ -680,88 +520,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddress} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdate(resourceGroupName, publicIpAddressName,
-        parameters, parameters.publicIPAllocationMethod,
-        parameters.publicIPAddressVersion, parameters.ipConfiguration,
-        parameters.ipConfiguration.privateIPAddress,
-        parameters.ipConfiguration.privateIPAllocationMethod,
-        parameters.ipConfiguration.subnet,
-        parameters.ipConfiguration.subnet.addressPrefix,
-        parameters.ipConfiguration.subnet.networkSecurityGroup,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.id,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.location,
-        parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
-        parameters.ipConfiguration.subnet.routeTable,
-        parameters.ipConfiguration.subnet.routeTable.routes,
-        parameters.ipConfiguration.subnet.routeTable.subnets,
-        parameters.ipConfiguration.subnet.routeTable.provisioningState,
-        parameters.ipConfiguration.subnet.routeTable.etag,
-        parameters.ipConfiguration.subnet.routeTable.id,
-        parameters.ipConfiguration.subnet.routeTable.location,
-        parameters.ipConfiguration.subnet.routeTable.tags,
-        parameters.ipConfiguration.subnet.ipConfigurations,
-        parameters.ipConfiguration.subnet.provisioningState,
-        parameters.ipConfiguration.subnet.name,
-        parameters.ipConfiguration.subnet.etag,
-        parameters.ipConfiguration.subnet.id,
-        parameters.ipConfiguration.publicIPAddress,
-        parameters.ipConfiguration.provisioningState,
-        parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
-        parameters.ipConfiguration.id, parameters.dnsSettings,
-        parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
-        parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
-        parameters.idleTimeoutInMinutes, parameters.resourceGuid,
-        parameters.provisioningState, parameters.etag, parameters.id,
-        parameters.location, parameters.tags, options, options.customHeaders,
-        callback);
+        parameters, options, callback);
     fullName: >-
       PublicIPAddresses.beginCreateOrUpdate(resourceGroupName,
-      publicIpAddressName, parameters, parameters.publicIPAllocationMethod,
-      parameters.publicIPAddressVersion, parameters.ipConfiguration,
-      parameters.ipConfiguration.privateIPAddress,
-      parameters.ipConfiguration.privateIPAllocationMethod,
-      parameters.ipConfiguration.subnet,
-      parameters.ipConfiguration.subnet.addressPrefix,
-      parameters.ipConfiguration.subnet.networkSecurityGroup,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.securityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.defaultSecurityRules,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.networkInterfaces,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.subnets,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.resourceGuid,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.provisioningState,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.etag,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.id,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.location,
-      parameters.ipConfiguration.subnet.networkSecurityGroup.tags,
-      parameters.ipConfiguration.subnet.routeTable,
-      parameters.ipConfiguration.subnet.routeTable.routes,
-      parameters.ipConfiguration.subnet.routeTable.subnets,
-      parameters.ipConfiguration.subnet.routeTable.provisioningState,
-      parameters.ipConfiguration.subnet.routeTable.etag,
-      parameters.ipConfiguration.subnet.routeTable.id,
-      parameters.ipConfiguration.subnet.routeTable.location,
-      parameters.ipConfiguration.subnet.routeTable.tags,
-      parameters.ipConfiguration.subnet.ipConfigurations,
-      parameters.ipConfiguration.subnet.provisioningState,
-      parameters.ipConfiguration.subnet.name,
-      parameters.ipConfiguration.subnet.etag,
-      parameters.ipConfiguration.subnet.id,
-      parameters.ipConfiguration.publicIPAddress,
-      parameters.ipConfiguration.provisioningState,
-      parameters.ipConfiguration.name, parameters.ipConfiguration.etag,
-      parameters.ipConfiguration.id, parameters.dnsSettings,
-      parameters.dnsSettings.domainNameLabel, parameters.dnsSettings.fqdn,
-      parameters.dnsSettings.reverseFqdn, parameters.ipAddress,
-      parameters.idleTimeoutInMinutes, parameters.resourceGuid,
-      parameters.provisioningState, parameters.etag, parameters.id,
-      parameters.location, parameters.tags, options, options.customHeaders,
-      callback)
+      publicIpAddressName, parameters, options, callback)
     children:
       - 'PublicIPAddresses#beginCreateOrUpdate~client'
       - 'PublicIPAddresses#beginCreateOrUpdate~callback'
@@ -785,7 +547,7 @@ items:
   - uid: 'PublicIPAddresses#listAll'
     id: listAll
     parent: PublicIPAddresses
-    name: 'listAll(options, options.customHeaders, callback)'
+    name: 'listAll(options, callback)'
     summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rsubscription."
     type: Method
     syntax:
@@ -801,8 +563,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: 'function listAll(options, options.customHeaders, callback);'
-    fullName: 'PublicIPAddresses.listAll(options, options.customHeaders, callback)'
+      content: 'function listAll(options, callback);'
+    fullName: 'PublicIPAddresses.listAll(options, callback)'
     children:
       - 'PublicIPAddresses#listAll~client'
       - 'PublicIPAddresses#listAll~callback'
@@ -818,7 +580,7 @@ items:
   - uid: 'PublicIPAddresses#list'
     id: list
     parent: PublicIPAddresses
-    name: 'list(resourceGroupName, options, options.customHeaders, callback)'
+    name: 'list(resourceGroupName, options, callback)'
     summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rresource group."
     type: Method
     syntax:
@@ -837,12 +599,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PublicIPAddresses.list(resourceGroupName, options, options.customHeaders,
-      callback)
+      content: 'function list(resourceGroupName, options, callback);'
+    fullName: 'PublicIPAddresses.list(resourceGroupName, options, callback)'
     children:
       - 'PublicIPAddresses#list~client'
       - 'PublicIPAddresses#list~callback'
@@ -859,7 +617,7 @@ items:
   - uid: 'PublicIPAddresses#listAllNext'
     id: listAllNext
     parent: PublicIPAddresses
-    name: 'listAllNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listAllNext(nextPageLink, options, callback)'
     summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rsubscription."
     type: Method
     syntax:
@@ -878,12 +636,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listAllNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PublicIPAddresses.listAllNext(nextPageLink, options,
-      options.customHeaders, callback)
+      content: 'function listAllNext(nextPageLink, options, callback);'
+    fullName: 'PublicIPAddresses.listAllNext(nextPageLink, options, callback)'
     children:
       - 'PublicIPAddresses#listAllNext~client'
       - 'PublicIPAddresses#listAllNext~callback'
@@ -897,7 +651,7 @@ items:
   - uid: 'PublicIPAddresses#listNext'
     id: listNext
     parent: PublicIPAddresses
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: "The List publicIpAddress opertion retrieves all the publicIpAddresses in a\rresource group."
     type: Method
     syntax:
@@ -916,12 +670,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link PublicIPAddressListResult} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      PublicIPAddresses.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'PublicIPAddresses.listNext(nextPageLink, options, callback)'
     children:
       - 'PublicIPAddresses#listNext~client'
       - 'PublicIPAddresses#listNext~callback'

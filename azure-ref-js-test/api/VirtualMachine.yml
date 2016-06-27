@@ -33,9 +33,7 @@ items:
   - uid: 'VirtualMachine#list'
     id: list
     parent: VirtualMachine
-    name: >-
-      list(resourceGroupName, labName, options, options.filter, options.top,
-      options.orderBy, options.customHeaders, callback)
+    name: 'list(resourceGroupName, labName, options, callback)'
     summary: List virtual machines.
     type: Method
     syntax:
@@ -64,12 +62,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLabVirtualMachine}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function list(resourceGroupName, labName, options, options.filter,
-        options.top, options.orderBy, options.customHeaders, callback);
-    fullName: >-
-      VirtualMachine.list(resourceGroupName, labName, options, options.filter,
-      options.top, options.orderBy, options.customHeaders, callback)
+      content: 'function list(resourceGroupName, labName, options, callback);'
+    fullName: 'VirtualMachine.list(resourceGroupName, labName, options, callback)'
     children:
       - 'VirtualMachine#list~client'
       - 'VirtualMachine#list~callback'
@@ -90,9 +84,7 @@ items:
   - uid: 'VirtualMachine#getResource'
     id: getResource
     parent: VirtualMachine
-    name: >-
-      getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'getResource(resourceGroupName, labName, name, options, callback)'
     summary: Get virtual machine.
     type: Method
     syntax:
@@ -119,10 +111,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LabVirtualMachine} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function getResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       VirtualMachine.getResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'VirtualMachine#getResource~client'
       - 'VirtualMachine#getResource~callback'
@@ -143,29 +135,7 @@ items:
     parent: VirtualMachine
     name: >-
       createOrUpdateResource(resourceGroupName, labName, name,
-      labVirtualMachine, labVirtualMachine.notes,
-      labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-      labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-      labVirtualMachine.customImageId, labVirtualMachine.osType,
-      labVirtualMachine.size, labVirtualMachine.userName,
-      labVirtualMachine.password, labVirtualMachine.sshKey,
-      labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-      labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      labVirtualMachine, options, callback)
     summary: "Create or replace an existing Virtual Machine. This operation can take a\rwhile to complete."
     type: Method
     syntax:
@@ -293,54 +263,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LabVirtualMachine} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function createOrUpdateResource(resourceGroupName, labName, name,
-        labVirtualMachine, labVirtualMachine.notes,
-        labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-        labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-        labVirtualMachine.customImageId, labVirtualMachine.osType,
-        labVirtualMachine.size, labVirtualMachine.userName,
-        labVirtualMachine.password, labVirtualMachine.sshKey,
-        labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-        labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-        labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-        labVirtualMachine.artifactDeploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-        labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-        labVirtualMachine.galleryImageReference,
-        labVirtualMachine.galleryImageReference.offer,
-        labVirtualMachine.galleryImageReference.publisher,
-        labVirtualMachine.galleryImageReference.sku,
-        labVirtualMachine.galleryImageReference.osType,
-        labVirtualMachine.galleryImageReference.version,
-        labVirtualMachine.provisioningState, labVirtualMachine.id,
-        labVirtualMachine.name, labVirtualMachine.type,
-        labVirtualMachine.location, labVirtualMachine.tags, options,
-        options.customHeaders, callback);
+        labVirtualMachine, options, callback);
     fullName: >-
       VirtualMachine.createOrUpdateResource(resourceGroupName, labName, name,
-      labVirtualMachine, labVirtualMachine.notes,
-      labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-      labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-      labVirtualMachine.customImageId, labVirtualMachine.osType,
-      labVirtualMachine.size, labVirtualMachine.userName,
-      labVirtualMachine.password, labVirtualMachine.sshKey,
-      labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-      labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      labVirtualMachine, options, callback)
     children:
       - 'VirtualMachine#createOrUpdateResource~client'
       - 'VirtualMachine#createOrUpdateResource~callback'
@@ -350,29 +276,7 @@ items:
     parent: VirtualMachine
     name: >-
       beginCreateOrUpdateResource(resourceGroupName, labName, name,
-      labVirtualMachine, labVirtualMachine.notes,
-      labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-      labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-      labVirtualMachine.customImageId, labVirtualMachine.osType,
-      labVirtualMachine.size, labVirtualMachine.userName,
-      labVirtualMachine.password, labVirtualMachine.sshKey,
-      labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-      labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      labVirtualMachine, options, callback)
     summary: "Create or replace an existing Virtual Machine. This operation can take a\rwhile to complete."
     type: Method
     syntax:
@@ -500,54 +404,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LabVirtualMachine} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginCreateOrUpdateResource(resourceGroupName, labName, name,
-        labVirtualMachine, labVirtualMachine.notes,
-        labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-        labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-        labVirtualMachine.customImageId, labVirtualMachine.osType,
-        labVirtualMachine.size, labVirtualMachine.userName,
-        labVirtualMachine.password, labVirtualMachine.sshKey,
-        labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-        labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-        labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-        labVirtualMachine.artifactDeploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-        labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-        labVirtualMachine.galleryImageReference,
-        labVirtualMachine.galleryImageReference.offer,
-        labVirtualMachine.galleryImageReference.publisher,
-        labVirtualMachine.galleryImageReference.sku,
-        labVirtualMachine.galleryImageReference.osType,
-        labVirtualMachine.galleryImageReference.version,
-        labVirtualMachine.provisioningState, labVirtualMachine.id,
-        labVirtualMachine.name, labVirtualMachine.type,
-        labVirtualMachine.location, labVirtualMachine.tags, options,
-        options.customHeaders, callback);
+        labVirtualMachine, options, callback);
     fullName: >-
       VirtualMachine.beginCreateOrUpdateResource(resourceGroupName, labName,
-      name, labVirtualMachine, labVirtualMachine.notes,
-      labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-      labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-      labVirtualMachine.customImageId, labVirtualMachine.osType,
-      labVirtualMachine.size, labVirtualMachine.userName,
-      labVirtualMachine.password, labVirtualMachine.sshKey,
-      labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-      labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      name, labVirtualMachine, options, callback)
     children:
       - 'VirtualMachine#beginCreateOrUpdateResource~client'
       - 'VirtualMachine#beginCreateOrUpdateResource~callback'
@@ -572,9 +432,7 @@ items:
   - uid: 'VirtualMachine#deleteResource'
     id: deleteResource
     parent: VirtualMachine
-    name: >-
-      deleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'deleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete virtual machine. This operation can take a while to complete.
     type: Method
     syntax:
@@ -601,10 +459,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function deleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       VirtualMachine.deleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'VirtualMachine#deleteResource~client'
       - 'VirtualMachine#deleteResource~callback'
@@ -612,9 +470,7 @@ items:
   - uid: 'VirtualMachine#beginDeleteResource'
     id: beginDeleteResource
     parent: VirtualMachine
-    name: >-
-      beginDeleteResource(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'beginDeleteResource(resourceGroupName, labName, name, options, callback)'
     summary: Delete virtual machine. This operation can take a while to complete.
     type: Method
     syntax:
@@ -641,10 +497,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginDeleteResource(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       VirtualMachine.beginDeleteResource(resourceGroupName, labName, name,
-      options, options.customHeaders, callback)
+      options, callback)
     children:
       - 'VirtualMachine#beginDeleteResource~client'
       - 'VirtualMachine#beginDeleteResource~callback'
@@ -665,29 +521,7 @@ items:
     parent: VirtualMachine
     name: >-
       patchResource(resourceGroupName, labName, name, labVirtualMachine,
-      labVirtualMachine.notes, labVirtualMachine.ownerObjectId,
-      labVirtualMachine.createdByUserId, labVirtualMachine.createdByUser,
-      labVirtualMachine.computeId, labVirtualMachine.customImageId,
-      labVirtualMachine.osType, labVirtualMachine.size,
-      labVirtualMachine.userName, labVirtualMachine.password,
-      labVirtualMachine.sshKey, labVirtualMachine.isAuthenticationWithSshKey,
-      labVirtualMachine.fqdn, labVirtualMachine.labSubnetName,
-      labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      options, callback)
     summary: Modify properties of virtual machines.
     type: Method
     syntax:
@@ -815,54 +649,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link LabVirtualMachine} for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function patchResource(resourceGroupName, labName, name,
-        labVirtualMachine, labVirtualMachine.notes,
-        labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-        labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-        labVirtualMachine.customImageId, labVirtualMachine.osType,
-        labVirtualMachine.size, labVirtualMachine.userName,
-        labVirtualMachine.password, labVirtualMachine.sshKey,
-        labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-        labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-        labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-        labVirtualMachine.artifactDeploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-        labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-        labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-        labVirtualMachine.galleryImageReference,
-        labVirtualMachine.galleryImageReference.offer,
-        labVirtualMachine.galleryImageReference.publisher,
-        labVirtualMachine.galleryImageReference.sku,
-        labVirtualMachine.galleryImageReference.osType,
-        labVirtualMachine.galleryImageReference.version,
-        labVirtualMachine.provisioningState, labVirtualMachine.id,
-        labVirtualMachine.name, labVirtualMachine.type,
-        labVirtualMachine.location, labVirtualMachine.tags, options,
-        options.customHeaders, callback);
+        labVirtualMachine, options, callback);
     fullName: >-
       VirtualMachine.patchResource(resourceGroupName, labName, name,
-      labVirtualMachine, labVirtualMachine.notes,
-      labVirtualMachine.ownerObjectId, labVirtualMachine.createdByUserId,
-      labVirtualMachine.createdByUser, labVirtualMachine.computeId,
-      labVirtualMachine.customImageId, labVirtualMachine.osType,
-      labVirtualMachine.size, labVirtualMachine.userName,
-      labVirtualMachine.password, labVirtualMachine.sshKey,
-      labVirtualMachine.isAuthenticationWithSshKey, labVirtualMachine.fqdn,
-      labVirtualMachine.labSubnetName, labVirtualMachine.labVirtualNetworkId,
-      labVirtualMachine.disallowPublicIpAddress, labVirtualMachine.artifacts,
-      labVirtualMachine.artifactDeploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.deploymentStatus,
-      labVirtualMachine.artifactDeploymentStatus.artifactsApplied,
-      labVirtualMachine.artifactDeploymentStatus.totalArtifacts,
-      labVirtualMachine.galleryImageReference,
-      labVirtualMachine.galleryImageReference.offer,
-      labVirtualMachine.galleryImageReference.publisher,
-      labVirtualMachine.galleryImageReference.sku,
-      labVirtualMachine.galleryImageReference.osType,
-      labVirtualMachine.galleryImageReference.version,
-      labVirtualMachine.provisioningState, labVirtualMachine.id,
-      labVirtualMachine.name, labVirtualMachine.type,
-      labVirtualMachine.location, labVirtualMachine.tags, options,
-      options.customHeaders, callback)
+      labVirtualMachine, options, callback)
     children:
       - 'VirtualMachine#patchResource~client'
       - 'VirtualMachine#patchResource~callback'
@@ -889,7 +679,7 @@ items:
     parent: VirtualMachine
     name: >-
       applyArtifacts(resourceGroupName, labName, name, applyArtifactsRequest,
-      applyArtifactsRequest.artifacts, options, options.customHeaders, callback)
+      options, callback)
     summary: Apply artifacts to Lab VM. This operation can take a while to complete.
     type: Method
     syntax:
@@ -921,12 +711,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function applyArtifacts(resourceGroupName, labName, name,
-        applyArtifactsRequest, applyArtifactsRequest.artifacts, options,
-        options.customHeaders, callback);
+        applyArtifactsRequest, options, callback);
     fullName: >-
       VirtualMachine.applyArtifacts(resourceGroupName, labName, name,
-      applyArtifactsRequest, applyArtifactsRequest.artifacts, options,
-      options.customHeaders, callback)
+      applyArtifactsRequest, options, callback)
     children:
       - 'VirtualMachine#applyArtifacts~client'
       - 'VirtualMachine#applyArtifacts~callback'
@@ -936,8 +724,7 @@ items:
     parent: VirtualMachine
     name: >-
       beginApplyArtifacts(resourceGroupName, labName, name,
-      applyArtifactsRequest, applyArtifactsRequest.artifacts, options,
-      options.customHeaders, callback)
+      applyArtifactsRequest, options, callback)
     summary: Apply artifacts to Lab VM. This operation can take a while to complete.
     type: Method
     syntax:
@@ -969,12 +756,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginApplyArtifacts(resourceGroupName, labName, name,
-        applyArtifactsRequest, applyArtifactsRequest.artifacts, options,
-        options.customHeaders, callback);
+        applyArtifactsRequest, options, callback);
     fullName: >-
       VirtualMachine.beginApplyArtifacts(resourceGroupName, labName, name,
-      applyArtifactsRequest, applyArtifactsRequest.artifacts, options,
-      options.customHeaders, callback)
+      applyArtifactsRequest, options, callback)
     children:
       - 'VirtualMachine#beginApplyArtifacts~client'
       - 'VirtualMachine#beginApplyArtifacts~callback'
@@ -999,9 +784,7 @@ items:
   - uid: 'VirtualMachine#start'
     id: start
     parent: VirtualMachine
-    name: >-
-      start(resourceGroupName, labName, name, options, options.customHeaders,
-      callback)
+    name: 'start(resourceGroupName, labName, name, options, callback)'
     summary: Start a Lab VM. This operation can take a while to complete.
     type: Method
     syntax:
@@ -1026,12 +809,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function start(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
-    fullName: >-
-      VirtualMachine.start(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      content: 'function start(resourceGroupName, labName, name, options, callback);'
+    fullName: 'VirtualMachine.start(resourceGroupName, labName, name, options, callback)'
     children:
       - 'VirtualMachine#start~client'
       - 'VirtualMachine#start~callback'
@@ -1039,9 +818,7 @@ items:
   - uid: 'VirtualMachine#beginStart'
     id: beginStart
     parent: VirtualMachine
-    name: >-
-      beginStart(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'beginStart(resourceGroupName, labName, name, options, callback)'
     summary: Start a Lab VM. This operation can take a while to complete.
     type: Method
     syntax:
@@ -1068,10 +845,10 @@ items:
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
       content: >-
         function beginStart(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+        callback);
     fullName: >-
       VirtualMachine.beginStart(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'VirtualMachine#beginStart~client'
       - 'VirtualMachine#beginStart~callback'
@@ -1090,9 +867,7 @@ items:
   - uid: 'VirtualMachine#stop'
     id: stop
     parent: VirtualMachine
-    name: >-
-      stop(resourceGroupName, labName, name, options, options.customHeaders,
-      callback)
+    name: 'stop(resourceGroupName, labName, name, options, callback)'
     summary: Stop a Lab VM. This operation can take a while to complete.
     type: Method
     syntax:
@@ -1117,12 +892,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function stop(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
-    fullName: >-
-      VirtualMachine.stop(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      content: 'function stop(resourceGroupName, labName, name, options, callback);'
+    fullName: 'VirtualMachine.stop(resourceGroupName, labName, name, options, callback)'
     children:
       - 'VirtualMachine#stop~client'
       - 'VirtualMachine#stop~callback'
@@ -1130,9 +901,7 @@ items:
   - uid: 'VirtualMachine#beginStop'
     id: beginStop
     parent: VirtualMachine
-    name: >-
-      beginStop(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+    name: 'beginStop(resourceGroupName, labName, name, options, callback)'
     summary: Stop a Lab VM. This operation can take a while to complete.
     type: Method
     syntax:
@@ -1157,12 +926,10 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {null} [result]   - The deserialized result object.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function beginStop(resourceGroupName, labName, name, options,
-        options.customHeaders, callback);
+      content: 'function beginStop(resourceGroupName, labName, name, options, callback);'
     fullName: >-
       VirtualMachine.beginStop(resourceGroupName, labName, name, options,
-      options.customHeaders, callback)
+      callback)
     children:
       - 'VirtualMachine#beginStop~client'
       - 'VirtualMachine#beginStop~callback'
@@ -1181,7 +948,7 @@ items:
   - uid: 'VirtualMachine#listNext'
     id: listNext
     parent: VirtualMachine
-    name: 'listNext(nextPageLink, options, options.customHeaders, callback)'
+    name: 'listNext(nextPageLink, options, callback)'
     summary: List virtual machines.
     type: Method
     syntax:
@@ -1200,12 +967,8 @@ items:
       return:
         type: function
         description: "callback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object.\r                     See {@link ResponseWithContinuationLabVirtualMachine}\r                     for more information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-      content: >-
-        function listNext(nextPageLink, options, options.customHeaders,
-        callback);
-    fullName: >-
-      VirtualMachine.listNext(nextPageLink, options, options.customHeaders,
-      callback)
+      content: 'function listNext(nextPageLink, options, callback);'
+    fullName: 'VirtualMachine.listNext(nextPageLink, options, callback)'
     children:
       - 'VirtualMachine#listNext~client'
       - 'VirtualMachine#listNext~callback'
